@@ -26,8 +26,7 @@
     "lint": "eslint --ignore-path .gitignore .",
     "precommit": "pretty-quick --staged",
     "prepublishOnly": "yarn run build",
-    "release": "release",
-    "postrelease": "yarn run deploy"
+    "release": "release"
   },
   "dependencies": {
     "styled-components": "^3.2.6",
