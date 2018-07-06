@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { ThemeProvider, injectGlobal } from "styled-components";
+import { fontFamily, lineHeight } from "styled-system";
 import theme from "../theme";
 
 injectGlobal`body {
@@ -7,16 +8,18 @@ injectGlobal`body {
 }`;
 
 export const Base = styled.div`
-  font-family: ${props => props.theme.font.sansSerif};
-  line-height: 1.4;
   * {
     box-sizing: border-box;
   }
+  ${fontFamily};
+  ${lineHeight};
 `;
 
-const Provider = props => (
+const Provider = ({ children }) => (
   <ThemeProvider theme={theme}>
-    <Base {...props} />
+    <Base fontFamily="sansSerif" lineHeight="copy">
+      {children}
+    </Base>
   </ThemeProvider>
 );
 
