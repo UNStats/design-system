@@ -2,6 +2,7 @@ import { css } from "styled-components";
 
 export const anchorStyle = css`
   a {
+    height: 100%;
     display: block;
     color: inherit;
     text-decoration: none;
