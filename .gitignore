@@ -1,3 +1,4 @@
 /dist
 /node_modules
 /storybook-static
+__diff_output__
