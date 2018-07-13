@@ -16,6 +16,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import {
+  alignItems,
   borderColor,
   color,
   display,
@@ -25,35 +26,38 @@ import {
   fontSize,
   height,
   justifyContent,
+  lineHeight,
   space
 } from "styled-system";
 import Box from "../Box";
 import Container from "../Container";
-import { anchorStyle } from "../style";
+import { anchor } from "../style";
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   border-bottom: 3px solid;
-  ${anchorStyle};
+  ${anchor};
   ${borderColor};
   ${color};
   ${fontFamily};
   ${height};
+  ${lineHeight};
 `;
 
 const Flex = styled.div`
   display: flex;
-  align-items: center;
-  ${justifyContent};
   height: 100%;
+  ${alignItems};
+  ${justifyContent};
+  ${space};
 `;
 
 const Navigation = styled.nav`
   display: flex;
   font-weight: bold;
-  align-items: center;
+  ${alignItems};
   ${flex};
   ${flexDirection};
   ${justifyContent};
@@ -85,6 +89,7 @@ const Title = styled.div`
 const Links = styled.div`
   display: flex;
   ${fontSize};
+  ${space};
 `;
 
 const Header = ({ anchor, links }) => (
@@ -93,10 +98,15 @@ const Header = ({ anchor, links }) => (
     color="primary"
     fontFamily="sansSerif"
     height={[64, 80, 96]}
+    lineHeight="title"
   >
     <Container maxWidth={9} px={[2, 3]}>
-      <Flex justifyContent={["center", "flex-start"]}>
-        <Box height="100%" py={[1, 2]}>
+      <Flex
+        justifyContent={["center", "flex-start"]}
+        alignItems={["center", "flex-end"]}
+        py={[1, 2]}
+      >
+        <Box height="100%">
           {anchor(
             "/",
             <svg
@@ -222,25 +232,27 @@ const Header = ({ anchor, links }) => (
           flexDirection={["column", "row"]}
           flex={[0, 1]}
           justifyContent={["center", "space-between"]}
-          pl={3}
-          py={1}
+          alignItems={["center", "flex-end"]}
+          pl={[3, 2]}
         >
           <Box>
             {anchor(
               "/",
               <Head flexDirection={["row", "column"]}>
-                <Organization fontSize={[4, 5, 4]} mr={[2, 0]} mb={[0, -1]}>
+                <Organization fontSize={[4, 5, 4]} mr={[2, 0]}>
                   U<Hide display={["none", "inline"]}>nited </Hide>N<Hide
                     display={["none", "inline"]}
                   >
                     ations
                   </Hide>
                 </Organization>
-                <Title fontSize={[4, 4, 3]}>World Data Forum</Title>
+                <Title fontSize={[4, 4, 3]} mb={[0, -1]}>
+                  World Data Forum
+                </Title>
               </Head>
             )}
           </Box>
-          <Links fontSize={[6, 5, 4]}>
+          <Links fontSize={[6, 5, 4]} mb={[0, -1]}>
             {links.map(({ href, text }) => (
               <Box key={text} ml={[2, 3, 4]} mr={[2, 0]}>
                 {anchor(href, text)}
