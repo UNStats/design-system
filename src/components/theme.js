@@ -8,7 +8,7 @@ const borders = [0, "1px solid", "2px solid", "3px solid"];
 
 const breakpoints = ["30em", "60em"];
 
-const colors = {
+export const colors = {
   primary: "#00609d",
   blue: "#0e6a9c",
   green: "#266f37",
@@ -19,7 +19,7 @@ const colors = {
   white: "#ffffff"
 };
 
-const colorSchemes = {
+export const colorSchemes = {
   primary: {
     backgroundColor: "primary",
     color: "white"

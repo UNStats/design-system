@@ -1,6 +1,6 @@
 import { css } from "styled-components";
 
-export const anchor = css`
+export const anchorStyle = css`
   a {
     height: 100%;
     display: block;

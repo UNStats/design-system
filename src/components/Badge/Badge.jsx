@@ -1,49 +1,42 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { space } from "styled-system";
-import theme from "../theme";
+import { fontSize, space } from "styled-system";
+import { colors, colorSchemes } from "../theme";
+import { anchorStyle } from "../style";
 
-const colorScheme = props => {
-  const { backgroundColor, color } = theme.colorSchemes[props.color];
+const colorScheme = ({ color: id }) => {
+  let backgroundColor, color;
+  try {
+    ({ backgroundColor, color } = colorSchemes[id]);
+  } catch (e) {
+    ({ backgroundColor, color } = colorSchemes["primary"]);
+  }
   return {
-    backgroundColor: theme.colors[backgroundColor],
-    color: theme.colors[color]
+    backgroundColor: colors[backgroundColor],
+    color: colors[color]
   };
 };
 
 const Wrapper = styled.div`
   display: inline-block;
-  a {
-    display: block;
-    height: 100%;
-    text-decoration: none;
-    transition: all 0.5s ease-out;
-    &:hover {
-      opacity: 0.5;
-      transition: all 0.2s ease-in;
-    }
-    &:active {
-      transform: scale(0.9);
-      transition: all 0.2s ease-in;
-    }
-  }
+  ${anchorStyle};
   ${space};
 `;
 
 const Pill = styled.div`
   border-radius: 9999px;
-  font-size: ${props => props.theme.fontSizes[7]};
   font-weight: bold;
   ${colorScheme};
+  ${fontSize};
   ${space};
 `;
 
-const Badge = ({ children, href, color, render, ...props }) => (
+const Badge = ({ anchor, href, color, children, ...props }) => (
   <Wrapper {...props}>
-    {render(
+    {anchor(
       href,
-      <Pill color={color} px={2} py={1}>
+      <Pill color={color} fontSize={7} px={2} py={1}>
         {children}
       </Pill>
     )}
@@ -51,14 +44,14 @@ const Badge = ({ children, href, color, render, ...props }) => (
 );
 
 Badge.propTypes = {
-  color: PropTypes.oneOf(Object.keys(theme.colors)),
+  color: PropTypes.oneOf(Object.keys(colors)),
   href: PropTypes.string.isRequired,
-  render: PropTypes.func
+  anchor: PropTypes.func
 };
 
 Badge.defaultProps = {
   color: "primary",
-  render: (href, text) => <a href={href}>{text}</a>
+  anchor: (href, text) => <a href={href}>{text}</a>
 };
 
 export default Badge;

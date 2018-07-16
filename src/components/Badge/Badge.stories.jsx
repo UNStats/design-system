@@ -2,120 +2,58 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { NavLink, MemoryRouter } from "react-router-dom";
 import Badge from "./Badge";
-
-const render = (href, text) => <NavLink to={href}>{text}</NavLink>;
+import Box from "../Box";
 
 storiesOf("Badge", module)
-  .add("default render prop", () => (
-    <div>
-      <Badge
-        href="/?selectedKind=Badge&selectedStory=default%20render%20prop"
-        m={1}
-      >
-        default color
-      </Badge>
-      <Badge
-        color="primary"
-        href="/?selectedKind=Badge&selectedStory=default%20render%20prop"
-        m={1}
-      >
-        primary color
-      </Badge>
-      <Badge
-        color="blue"
-        href="/?selectedKind=Badge&selectedStory=default%20render%20prop"
-        m={1}
-      >
-        blue
-      </Badge>
-      <Badge
-        color="green"
-        href="/?selectedKind=Badge&selectedStory=default%20render%20prop"
-        m={1}
-      >
-        green
-      </Badge>
-      <Badge
-        color="red"
-        href="/?selectedKind=Badge&selectedStory=default%20render%20prop"
-        m={1}
-      >
-        red
-      </Badge>
-      <Badge
-        color="yellow"
-        href="/?selectedKind=Badge&selectedStory=default%20render%20prop"
-        m={1}
-      >
-        yellow
-      </Badge>
-      <Badge
-        color="gray"
-        href="/?selectedKind=Badge&selectedStory=default%20render%20prop"
-        m={1}
-      >
-        gray
-      </Badge>
-    </div>
+  .addDecorator(story => <Box m={1}>{story()}</Box>)
+  .add("default color", () => <Badge href="#">default color</Badge>)
+  .add("primary color", () => (
+    <Badge color="primary" href="#">
+      primary color
+    </Badge>
   ))
-  .add("custom render prop", () => (
+  .add("blue", () => (
+    <Badge color="blue" href="#">
+      blue
+    </Badge>
+  ))
+  .add("green", () => (
+    <Badge color="green" href="#">
+      green
+    </Badge>
+  ))
+  .add("red", () => (
+    <Badge color="red" href="#">
+      red
+    </Badge>
+  ))
+  .add("yellow", () => (
+    <Badge color="yellow" href="#">
+      yellow
+    </Badge>
+  ))
+  .add("gray", () => (
+    <Badge color="gray" href="#">
+      gray
+    </Badge>
+  ))
+  .add("black", () => (
+    <Badge color="black" href="#">
+      gray
+    </Badge>
+  ))
+  .add("invalid color", () => (
+    <Badge color="purple" href="#">
+      invalid color
+    </Badge>
+  ))
+  .add("custom anchor", () => (
     <MemoryRouter>
-      <div>
-        <Badge
-          href="/?selectedKind=Badge&selectedStory=custom%20render%20prop"
-          render={render}
-          m={1}
-        >
-          default color
-        </Badge>
-        <Badge
-          color="primary"
-          href="/?selectedKind=Badge&selectedStory=custom%20render%20prop"
-          render={render}
-          m={1}
-        >
-          primary color
-        </Badge>
-        <Badge
-          color="blue"
-          href="/?selectedKind=Badge&selectedStory=custom%20render%20prop"
-          render={render}
-          m={1}
-        >
-          blue
-        </Badge>
-        <Badge
-          color="green"
-          href="/?selectedKind=Badge&selectedStory=custom%20render%20prop"
-          render={render}
-          m={1}
-        >
-          green
-        </Badge>
-        <Badge
-          color="red"
-          href="/?selectedKind=Badge&selectedStory=custom%20render%20prop"
-          render={render}
-          m={1}
-        >
-          red
-        </Badge>
-        <Badge
-          color="yellow"
-          href="/?selectedKind=Badge&selectedStory=custom%20render%20prop"
-          render={render}
-          m={1}
-        >
-          yellow
-        </Badge>
-        <Badge
-          color="gray"
-          href="/?selectedKind=Badge&selectedStory=custom%20render%20prop"
-          render={render}
-          m={1}
-        >
-          gray
-        </Badge>
-      </div>
+      <Badge
+        href="#"
+        anchor={(href, text) => <NavLink to={href}>{text}</NavLink>}
+      >
+        custom anchor
+      </Badge>
     </MemoryRouter>
   ));

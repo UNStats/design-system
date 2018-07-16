@@ -31,14 +31,14 @@ import {
 } from "styled-system";
 import Box from "../Box";
 import Container from "../Container";
-import { anchor } from "../style";
+import { anchorStyle } from "../style";
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   border-bottom: 3px solid;
-  ${anchor};
+  ${anchorStyle};
   ${borderColor};
   ${color};
   ${fontFamily};
