@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { ThemeProvider, injectGlobal } from "styled-components";
+import { ThemeProvider, injectGlobal } from "styled-components";
 import { normalize } from "polished";
 import theme from "../theme";
 
@@ -16,8 +16,12 @@ injectGlobal`
   }
 `;
 
+// ThemeProvider can have one child only.
+// With div added, Provider can have multiple children.
 const Provider = ({ children }) => (
-  <ThemeProvider theme={theme}>{children}</ThemeProvider>
+  <ThemeProvider theme={theme}>
+    <div>{children}</div>
+  </ThemeProvider>
 );
 
 export default Provider;
