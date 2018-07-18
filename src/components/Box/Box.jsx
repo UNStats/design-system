@@ -7,4 +7,10 @@ const Box = styled.div`
   ${width};
 `;
 
+Box.propTypes = {
+  ...height.propTypes,
+  ...space.propTypes,
+  ...width.propTypes
+};
+
 export default Box;
