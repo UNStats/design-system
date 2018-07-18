@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { space } from "styled-system";
+import { space, propTypes } from "styled-system";
 import NameTag from "../NameTag";
+import Badge from "../Badge";
 import BadgeList from "../BadgeList";
 
 const Wrapper = styled.div`
@@ -12,10 +13,10 @@ const Wrapper = styled.div`
   ${space};
 `;
 
-const ProfileHeader = ({ name, color, badges, img, ...props }) => (
-  <Wrapper p={1}>
+const ProfileHeader = ({ name, img, color, badges, ...props }) => (
+  <Wrapper {...props}>
     <NameTag name={name} img={img} color={color} mb={[1, 2, 3]} />
-    {badges.length > 0 && <BadgeList badges={badges} />}
+    {badges && <BadgeList values={badges} />}
   </Wrapper>
 );
 
@@ -23,12 +24,13 @@ ProfileHeader.propTypes = {
   name: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   color: NameTag.propTypes.color,
-  badges: BadgeList.propTypes.badges
+  badges: PropTypes.arrayOf(Badge.propTypes),
+  /** Adjust spacing. */
+  ...propTypes.space
 };
 
 ProfileHeader.defaultProps = {
-  color: "primary",
-  badges: []
+  color: "primary"
 };
 
 export default ProfileHeader;

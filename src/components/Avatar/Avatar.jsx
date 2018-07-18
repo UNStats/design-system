@@ -10,6 +10,7 @@ import {
 } from "styled-system";
 import theme from "../theme";
 
+// Set CSS width based on size prop.
 const width = responsiveStyle({
   prop: "size",
   cssProperty: "width",
@@ -17,6 +18,7 @@ const width = responsiveStyle({
   key: "avatarSizes"
 });
 
+// Set CSS min-height based on size prop.
 const minHeight = responsiveStyle({
   prop: "size",
   cssProperty: "min-height",
@@ -50,9 +52,10 @@ Avatar.propTypes = {
   img: PropTypes.string.isRequired,
   /** Border color. */
   color: PropTypes.oneOf(Object.keys(theme.colors)),
+  /** Adjust borders. */
   ...propTypes.borders,
-  ...propTypes.space,
-  ...propTypes.width
+  /** Adjust spacing. */
+  ...propTypes.space
 };
 
 Avatar.defaultProps = {

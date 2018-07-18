@@ -1,9 +1,11 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import ProfileHeader from "./ProfileHeader";
+import Box from "../Box";
 import profiles from "../profiles";
 
 storiesOf("ProfileHeader", module)
+  .addDecorator(story => <Box m={1}>{story()}</Box>)
   .add("default color", () => (
     <ProfileHeader
       name={profiles[0].name}
@@ -27,7 +29,4 @@ storiesOf("ProfileHeader", module)
   ))
   .add("no badges", () => (
     <ProfileHeader name={profiles[2].name} img={profiles[2].img} />
-  ))
-  .add("empty badges", () => (
-    <ProfileHeader name={profiles[2].name} img={profiles[2].img} badges={[]} />
   ));
