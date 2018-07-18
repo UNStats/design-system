@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { space, propTypes } from "styled-system";
+import { space } from "styled-system";
 import NameTag from "../NameTag";
 import Badge from "../Badge";
 import BadgeList from "../BadgeList";
@@ -26,7 +26,7 @@ ProfileHeader.propTypes = {
   color: NameTag.propTypes.color,
   badges: PropTypes.arrayOf(Badge.propTypes),
   /** Adjust spacing. */
-  ...propTypes.space
+  ...space.propTypes
 };
 
 ProfileHeader.defaultProps = {

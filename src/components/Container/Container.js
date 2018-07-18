@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { maxWidth, propTypes, space } from "styled-system";
+import { maxWidth, space } from "styled-system";
 
 const Container = styled.div`
   width: 100%;
@@ -9,8 +9,8 @@ const Container = styled.div`
 `;
 
 Container.propTypes = {
-  ...propTypes.maxWidth,
-  ...propTypes.space
+  ...maxWidth.propTypes,
+  ...space.propTypes
 };
 
 export default Container;

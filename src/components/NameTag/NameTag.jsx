@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { fontSize, propTypes, space } from "styled-system";
+import { fontSize, space } from "styled-system";
 import Avatar from "../Avatar";
 
 const Wrapper = styled.div`
@@ -40,7 +40,7 @@ NameTag.propTypes = {
   img: PropTypes.string.isRequired,
   color: Avatar.propTypes.color,
   /** Adjust spacing. */
-  ...propTypes.space
+  ...space.propTypes
 };
 
 NameTag.defaultProps = {

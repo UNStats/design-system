@@ -1,13 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import {
-  borders,
-  borderColor,
-  space,
-  propTypes,
-  responsiveStyle
-} from "styled-system";
+import { borders, borderColor, space, responsiveStyle } from "styled-system";
 import theme from "../theme";
 
 // Set CSS width based on size prop.
@@ -26,7 +20,7 @@ const minHeight = responsiveStyle({
   key: "avatarSizes"
 });
 
-const Img = styled.img`
+const Image = styled.img`
   display: inline-block;
   ${borders};
   ${borderColor};
@@ -37,7 +31,7 @@ const Img = styled.img`
 `;
 
 const Avatar = ({ alt, img, size, color, ...props }) => (
-  <Img src={img} alt={alt} size={size} borderColor={color} {...props} />
+  <Image src={img} alt={alt} size={size} borderColor={color} {...props} />
 );
 
 Avatar.propTypes = {
@@ -53,9 +47,9 @@ Avatar.propTypes = {
   /** Border color. */
   color: PropTypes.oneOf(Object.keys(theme.colors)),
   /** Adjust borders. */
-  ...propTypes.borders,
+  ...borders.propTypes,
   /** Adjust spacing. */
-  ...propTypes.space
+  ...space.propTypes
 };
 
 Avatar.defaultProps = {
