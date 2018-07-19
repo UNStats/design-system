@@ -33,7 +33,7 @@ const BadgeList = ({ anchor, values, ...props }) => (
 
 BadgeList.propTypes = {
   anchor: PropTypes.func,
-  values: PropTypes.arrayOf(Badge.propTypes).isRequired
+  values: PropTypes.arrayOf(PropTypes.shape({ ...Badge.propTypes })).isRequired
 };
 
 BadgeList.defaultProps = {

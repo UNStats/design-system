@@ -24,7 +24,7 @@ ProfileHeader.propTypes = {
   name: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   color: NameTag.propTypes.color,
-  badges: PropTypes.arrayOf(Badge.propTypes),
+  badges: PropTypes.arrayOf(PropTypes.shape({ ...Badge.propTypes })),
   /** Adjust spacing. */
   ...space.propTypes
 };
