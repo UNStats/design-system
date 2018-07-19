@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { space } from "styled-system";
+import { fontFamily, space } from "styled-system";
 import NameTag from "../NameTag";
 import Badge from "../Badge";
 import BadgeList from "../BadgeList";
@@ -10,11 +10,12 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  ${fontFamily};
   ${space};
 `;
 
 const ProfileHeader = ({ name, img, color, badges, ...props }) => (
-  <Wrapper {...props}>
+  <Wrapper fontFamily="sansSerif" {...props}>
     <NameTag name={name} img={img} color={color} mb={[1, 2, 3]} />
     {badges && <BadgeList values={badges} />}
   </Wrapper>
