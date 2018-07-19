@@ -1,13 +1,13 @@
 import React from "react";
 import { configure, addDecorator } from "@storybook/react";
 import { setOptions } from "@storybook/addon-options";
+import "@storybook/addon-console";
 import Provider from "../src/components/Provider";
 import pkg from "../package.json";
 
 // Set Storybook UI options.
 setOptions({
-  name: `@undataforum/components v${pkg.version}`,
-  showAddonPanel: false
+  name: `@undataforum/components v${pkg.version}`
 });
 
 // Add decorators before require.context:

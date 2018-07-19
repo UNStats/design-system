@@ -43,7 +43,7 @@
     node-fetch "^2.1.1"
     url-template "^2.0.8"
 
-"@storybook/addon-actions@3.4.8":
+"@storybook/addon-actions@3.4.8", "@storybook/addon-actions@^3.4.8":
   version "3.4.8"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-3.4.8.tgz#557bae7c7cc60be9d5199ff972b028de8b574f92"
   dependencies:
@@ -57,6 +57,12 @@
     prop-types "^15.6.1"
     react-inspector "^2.2.2"
     uuid "^3.2.1"
+
+"@storybook/addon-console@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-console/-/addon-console-1.0.4.tgz#726ed87152d0bfe39288885784d7846da914324e"
+  dependencies:
+    global "^4.3.2"
 
 "@storybook/addon-links@3.4.8":
   version "3.4.8"
