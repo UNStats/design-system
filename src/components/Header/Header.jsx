@@ -19,7 +19,6 @@ import {
   alignItems,
   borderColor,
   color,
-  display,
   flex,
   flexDirection,
   fontFamily,
@@ -31,12 +30,10 @@ import {
 } from "styled-system";
 import Box from "../Box";
 import Container from "../Container";
+import DefaultTitle from "../DefaultTitle";
 import { anchorStyle } from "../style";
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   border-bottom: 3px solid;
   ${anchorStyle};
   ${borderColor};
@@ -64,43 +61,21 @@ const Navigation = styled.nav`
   ${space};
 `;
 
-const Head = styled.div`
-  display: flex;
-  align-items: center;
-  ${flexDirection};
-`;
-
-const Organization = styled.div`
-  white-space: nowrap;
-  ${fontSize};
-  ${space};
-`;
-
-const Hide = styled.span`
-  ${display};
-`;
-
-const Title = styled.div`
-  white-space: nowrap;
-  ${fontSize};
-  ${space};
-`;
-
 const Links = styled.div`
   display: flex;
   ${fontSize};
   ${space};
 `;
 
-const Header = ({ anchor, links }) => (
+const Header = ({ anchor, color, links, title }) => (
   <Wrapper
-    borderColor="primary"
-    color="primary"
+    borderColor={color}
+    color={color}
     fontFamily="sansSerif"
     height={[64, 80, 96]}
     lineHeight="title"
   >
-    <Container maxWidth={9} px={[2, 3]}>
+    <Container maxWidth={9}>
       <Flex
         justifyContent={["center", "flex-start"]}
         alignItems={["center", "flex-end"]}
@@ -235,23 +210,7 @@ const Header = ({ anchor, links }) => (
           alignItems={["center", "flex-end"]}
           pl={[3, 2]}
         >
-          <Box>
-            {anchor(
-              "/",
-              <Head flexDirection={["row", "column"]}>
-                <Organization fontSize={[4, 5, 4]} mr={[2, 0]}>
-                  U<Hide display={["none", "inline"]}>nited </Hide>N<Hide
-                    display={["none", "inline"]}
-                  >
-                    ations
-                  </Hide>
-                </Organization>
-                <Title fontSize={[4, 4, 3]} mb={[0, -1]}>
-                  World Data Forum
-                </Title>
-              </Head>
-            )}
-          </Box>
+          <Box mb={[0, -1]}>{anchor("/", title(color))}</Box>
           <Links fontSize={[6, 5, 4]} mb={[0, -1]}>
             {links.map(({ href, text }) => (
               <Box key={text} ml={[2, 3, 4]} mr={[2, 0]}>
@@ -268,16 +227,21 @@ const Header = ({ anchor, links }) => (
 Header.propTypes = {
   /** Render prop for anchors. */
   anchor: PropTypes.func,
+  color: PropTypes.string,
   links: PropTypes.arrayOf(
     PropTypes.shape({
       href: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired
     })
-  ).isRequired
+  ).isRequired,
+  /** Render prop for title. */
+  title: PropTypes.func
 };
 
 Header.defaultProps = {
-  anchor: (href, text) => <a href={href}>{text}</a>
+  anchor: (href, text) => <a href={href}>{text}</a>,
+  color: "primary",
+  title: color => <DefaultTitle color={color} />
 };
 
 export default Header;

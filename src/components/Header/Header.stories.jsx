@@ -2,44 +2,37 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { NavLink, MemoryRouter } from "react-router-dom";
 import Header from "./Header";
+import AlternateTitle from "../AlternateTitle";
+
+const links = [
+  {
+    href: "#",
+    text: "About"
+  },
+  {
+    href: "#",
+    text: "Blog"
+  },
+  {
+    href: "#",
+    text: "Programme"
+  }
+];
 
 storiesOf("Header", module)
-  .add("default anchor", () => (
-    <Header
-      links={[
-        {
-          href: "#",
-          text: "About"
-        },
-        {
-          href: "#",
-          text: "Blog"
-        },
-        {
-          href: "#",
-          text: "Programme"
-        }
-      ]}
-    />
-  ))
+  .add("everything default", () => <Header links={links} />)
+  .add("custom color", () => <Header color="red" links={links} />)
   .add("custom anchor", () => (
     <MemoryRouter>
       <Header
-        links={[
-          {
-            href: "#",
-            text: "About"
-          },
-          {
-            href: "#",
-            text: "Blog"
-          },
-          {
-            href: "#",
-            text: "Programme"
-          }
-        ]}
+        links={links}
         anchor={(href, text) => <NavLink to={href}>{text}</NavLink>}
       />
     </MemoryRouter>
+  ))
+  .add("custom title", () => (
+    <Header
+      links={links}
+      title={color => <AlternateTitle color={color} year={2018} />}
+    />
   ));

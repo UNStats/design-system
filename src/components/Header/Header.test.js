@@ -3,7 +3,7 @@ import path from "path";
 import devices from "../devices";
 
 const url =
-  "http://localhost:9009/?selectedKind=Header&selectedStory=default%20anchor&full=1";
+  "http://localhost:9009/?selectedKind=Header&selectedStory=everything%20default&full=1";
 const platform = process.platform;
 
 describe("Header", () => {
