@@ -7,6 +7,9 @@ import { anchorStyle } from "../style";
 const Wrapper = styled.span`
   ${anchorStyle};
   color: ${({ color }) => themeGet(`colors.${color}`)};
+  a {
+    display: inline;
+  }
 `;
 
 const MarkdownAnchor = ({ anchor, href, children, ...props }) => (
