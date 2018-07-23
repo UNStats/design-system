@@ -1,7 +1,7 @@
 {
   "name": "@undataforum/components",
   "description": "React components for undataforum.org.",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "author": {
     "name": "Thilo Maier",
     "email": "maier@un.org"
