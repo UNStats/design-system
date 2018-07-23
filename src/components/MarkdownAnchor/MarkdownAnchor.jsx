@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { themeGet } from "styled-system";
 import { anchorStyle } from "../style";
 
-const Wrapper = styled.div`
+const Wrapper = styled.span`
   ${anchorStyle};
   color: ${({ color }) => themeGet(`colors.${color}`)};
 `;
