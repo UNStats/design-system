@@ -17,7 +17,7 @@ storiesOf("BadgeList", module)
   .add("custom anchor", () => (
     <MemoryRouter>
       <BadgeList
-        anchor={(href, text) => <NavLink to={href}>{text}</NavLink>}
+        anchor={({ href, children }) => <NavLink to={href}>{children}</NavLink>}
         values={badges}
       />
     </MemoryRouter>

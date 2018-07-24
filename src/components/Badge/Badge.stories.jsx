@@ -51,7 +51,7 @@ storiesOf("Badge", module)
     <MemoryRouter>
       <Badge
         href="#"
-        anchor={(href, text) => <NavLink to={href}>{text}</NavLink>}
+        anchor={({ href, children }) => <NavLink to={href}>{children}</NavLink>}
       >
         custom anchor
       </Badge>

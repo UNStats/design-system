@@ -26,7 +26,7 @@ storiesOf("Header", module)
     <MemoryRouter>
       <Header
         links={links}
-        anchor={(href, text) => <NavLink to={href}>{text}</NavLink>}
+        anchor={({ href, children }) => <NavLink to={href}>{children}</NavLink>}
       />
     </MemoryRouter>
   ))

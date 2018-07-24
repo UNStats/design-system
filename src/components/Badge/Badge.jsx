@@ -34,24 +34,26 @@ const Pill = styled.div`
 
 const Badge = ({ anchor, href, color, children, ...props }) => (
   <Wrapper {...props}>
-    {anchor(
+    {anchor({
       href,
-      <Pill color={color} fontSize={7} px={2} py={1}>
-        {children}
-      </Pill>
-    )}
+      children: (
+        <Pill color={color} fontSize={7} px={2} py={1}>
+          {children}
+        </Pill>
+      )
+    })}
   </Wrapper>
 );
 
 Badge.propTypes = {
-  color: PropTypes.oneOf(Object.keys(colors)),
+  color: PropTypes.string,
   href: PropTypes.string.isRequired,
   anchor: PropTypes.func
 };
 
 Badge.defaultProps = {
   color: "primary",
-  anchor: (href, text) => <a href={href}>{text}</a>
+  anchor: ({ href, children }) => <a href={href}>{children}</a>
 };
 
 export default Badge;

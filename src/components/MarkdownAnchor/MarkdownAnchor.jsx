@@ -13,7 +13,7 @@ const Wrapper = styled.span`
 `;
 
 const MarkdownAnchor = ({ anchor, href, children, ...props }) => (
-  <Wrapper {...props}>{anchor(href, children)}</Wrapper>
+  <Wrapper {...props}>{anchor({ href, children })}</Wrapper>
 );
 
 MarkdownAnchor.propTypes = {
@@ -23,7 +23,7 @@ MarkdownAnchor.propTypes = {
 };
 
 MarkdownAnchor.defaultProps = {
-  anchor: (href, text) => <a href={href}>{text}</a>,
+  anchor: ({ href, children }) => <a href={href}>{children}</a>,
   color: "primary"
 };
 

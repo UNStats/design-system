@@ -37,7 +37,7 @@ BadgeList.propTypes = {
 };
 
 BadgeList.defaultProps = {
-  anchor: (href, text) => <a href={href}>{text}</a>
+  anchor: ({ href, children }) => <a href={href}>{children}</a>
 };
 
 export default BadgeList;

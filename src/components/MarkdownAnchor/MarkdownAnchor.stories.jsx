@@ -17,8 +17,8 @@ storiesOf("MarkdownAnchor", module)
   .add("custom anchor", () => (
     <MemoryRouter>
       <MarkdownAnchor
+        anchor={({ href, children }) => <NavLink to={href}>{children}</NavLink>}
         href="#"
-        anchor={(href, text) => <NavLink to={href}>{text}</NavLink>}
       >
         Test Link
       </MarkdownAnchor>
