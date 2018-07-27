@@ -14,23 +14,25 @@ const Wrapper = styled.div`
   ${space};
 `;
 
-const ProfileHeader = ({ name, img, color, badges, ...props }) => (
+const ProfileHeader = ({ anchor, badges, color, img, name, ...props }) => (
   <Wrapper fontFamily="sansSerif" {...props}>
     <NameTag name={name} img={img} color={color} mb={[1, 2, 3]} />
-    {badges && <BadgeList values={badges} />}
+    {badges && <BadgeList anchor={anchor} values={badges} />}
   </Wrapper>
 );
 
 ProfileHeader.propTypes = {
-  name: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired,
-  color: NameTag.propTypes.color,
+  anchor: PropTypes.func,
   badges: PropTypes.arrayOf(PropTypes.shape({ ...Badge.propTypes })),
+  color: NameTag.propTypes.color,
+  img: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   /** Adjust spacing. */
   ...space.propTypes
 };
 
 ProfileHeader.defaultProps = {
+  anchor: ({ href, children }) => <a href={href}>{children}</a>,
   color: "primary"
 };
 
