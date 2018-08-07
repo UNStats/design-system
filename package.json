@@ -21,13 +21,12 @@
     "start": "start-storybook -p 9009",
     "build": "rimraf ./dist && babel ./src -d ./dist --ignore test.js,stories.jsx,profiles.js",
     "build-storybook": "rimraf ./storybook-static && build-storybook -s ./public",
-    "deploy": "yarn run build-storybook && gh-pages -d ./storybook-static",
+    "deploy": "npm run build-storybook && gh-pages -d ./storybook-static",
     "format": "pretty-quick",
     "inspect": "node --inspect-brk node_modules/.bin/jest --runInBand",
     "lint": "eslint --ignore-path .gitignore .",
     "precommit": "pretty-quick --staged",
-    "prepublishOnly": "yarn run build",
-    "postrelease": "yarn run deploy && npm publish",
+    "prepublishOnly": "npm run deploy && npm run build",
     "test": "jest --watch"
   },
   "dependencies": {
