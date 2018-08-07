@@ -26,16 +26,6 @@ to add package [@undataforum/components](https://github.com/UNDataForum/componen
 import { Provider, Header } from "@undataforum/components";
 ```
 
-## Releases
-
-Releases are done with package [release](https://github.com/zeit/release) by [Zeit](https://zeit.co/dashboard). Run
-
-```bash
-yarn run release
-```
-
-with one of `major`, `minor` and `patch` as argument. This creates the release and release notes.
-
 ## License
 
 This project is licensed under the [MIT license](https://choosealicense.com/licenses/mit/). The United Nations World Data Forum logo is not part of this license. The [Header component](https://github.com/UNDataForum/components/blob/master/src/components/Header/Header.jsx) contains additional information on licensing the logo.
