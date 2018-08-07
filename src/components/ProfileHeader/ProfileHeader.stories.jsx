@@ -16,14 +16,18 @@ storiesOf("components/ProfileHeader", module)
     const { name, img } = profiles[0];
     return <ProfileHeader name={name} img={img} badges={badges} />;
   })
-  .add("custom color", () => {
+  .add("long name", () => {
     const { name, img } = profiles[1];
+    return <ProfileHeader name={name} img={img} badges={badges} />;
+  })
+  .add("custom color", () => {
+    const { name, img } = profiles[2];
     return (
       <ProfileHeader name={name} img={img} color="green" badges={badges} />
     );
   })
   .add("custom anchor", () => {
-    const { name, img } = profiles[2];
+    const { name, img } = profiles[3];
     return (
       <MemoryRouter>
         <ProfileHeader
@@ -38,6 +42,6 @@ storiesOf("components/ProfileHeader", module)
     );
   })
   .add("no badges", () => {
-    const { name, img } = profiles[3];
+    const { name, img } = profiles[4];
     return <ProfileHeader name={name} img={img} />;
   });
