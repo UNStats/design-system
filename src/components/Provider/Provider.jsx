@@ -1,7 +1,7 @@
 import React from "react";
 import { ThemeProvider, injectGlobal } from "styled-components";
 import { normalize } from "polished";
-import theme from "../theme";
+import theme from "../../theme";
 
 // https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 injectGlobal`

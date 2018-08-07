@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { fontSize, space } from "styled-system";
-import { colors, colorSchemes } from "../theme";
-import { anchorStyle } from "../style";
+import { colors, colorSchemes } from "../../theme";
+import { anchorStyle } from "../../style";
 
 const colorScheme = ({ color: id }) => {
   let backgroundColor, color;

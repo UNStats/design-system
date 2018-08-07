@@ -31,7 +31,7 @@ import {
 import Box from "../Box";
 import Container from "../Container";
 import DefaultTitle from "../DefaultTitle";
-import { anchorStyle } from "../style";
+import { anchorStyle } from "../../style";
 
 const Wrapper = styled.div`
   border-bottom: 3px solid;

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { borders, borderColor, space, responsiveStyle } from "styled-system";
-import theme from "../theme";
+import theme from "../../theme";
 
 // Set CSS width based on size prop.
 const width = responsiveStyle({

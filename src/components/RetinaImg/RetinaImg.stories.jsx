@@ -4,7 +4,7 @@ import RetinaImg from "./RetinaImg";
 import img1x from "./guterres_400w.jpg";
 import img2x from "./guterres_800w.jpg";
 
-storiesOf("RetinaImage", module)
+storiesOf("components/RetinaImage", module)
   .add("DPR 1x only", () => (
     <RetinaImg
       images={[img1x]}

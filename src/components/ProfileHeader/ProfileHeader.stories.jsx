@@ -3,14 +3,14 @@ import { storiesOf } from "@storybook/react";
 import { NavLink, MemoryRouter } from "react-router-dom";
 import ProfileHeader from "./ProfileHeader";
 import Box from "../Box";
-import profiles from "../profiles";
+import profiles from "../../profiles";
 
 const badges = [
   { text: "Committee Member", color: "red", href: "#" },
   { text: "Keynote Speaker", color: "yellow", href: "#" }
 ];
 
-storiesOf("ProfileHeader", module)
+storiesOf("components/ProfileHeader", module)
   .addDecorator(story => <Box m={1}>{story()}</Box>)
   .add("everything default", () => {
     const { name, img } = profiles[0];

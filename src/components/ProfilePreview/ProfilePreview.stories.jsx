@@ -2,9 +2,9 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { NavLink, MemoryRouter } from "react-router-dom";
 import ProfilePreview from "./ProfilePreview";
-import profiles from "../profiles";
+import profiles from "../../profiles";
 
-storiesOf("ProfilePreview", module)
+storiesOf("components/ProfilePreview", module)
   .add("with jobtitle and organization", () => (
     <ProfilePreview {...profiles[0]} />
   ))

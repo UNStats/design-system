@@ -4,7 +4,7 @@ import { NavLink, MemoryRouter } from "react-router-dom";
 import Badge from "./Badge";
 import Box from "../Box";
 
-storiesOf("Badge", module)
+storiesOf("components/Badge", module)
   .addDecorator(story => <Box m={1}>{story()}</Box>)
   .add("default color", () => <Badge href="#">default color</Badge>)
   .add("primary color", () => (

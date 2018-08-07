@@ -11,7 +11,7 @@ const badges = [
   { text: "Speaker", href: "#" }
 ];
 
-storiesOf("BadgeList", module)
+storiesOf("components/BadgeList", module)
   .addDecorator(story => <Box p={1}>{story()}</Box>)
   .add("default anchor", () => <BadgeList values={badges} />)
   .add("custom anchor", () => (

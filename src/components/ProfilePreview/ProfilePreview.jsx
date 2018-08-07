@@ -10,7 +10,7 @@ import {
 } from "styled-system";
 import PropTypes from "prop-types";
 import Avatar from "../Avatar";
-import { anchorStyle } from "../style";
+import { anchorStyle } from "../../style";
 
 const Wrapper = styled.article`
   ${anchorStyle};

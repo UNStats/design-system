@@ -19,7 +19,7 @@ const links = [
   }
 ];
 
-storiesOf("Header", module)
+storiesOf("components/Header", module)
   .add("everything default", () => <Header links={links} />)
   .add("custom color", () => <Header color="red" links={links} />)
   .add("custom anchor", () => (

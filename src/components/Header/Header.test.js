@@ -1,9 +1,9 @@
 import * as deviceDescriptors from "puppeteer/DeviceDescriptors";
 import path from "path";
-import devices from "../devices";
+import devices from "../../devices";
 
 const url =
-  "http://localhost:9009/?selectedKind=Header&selectedStory=everything%20default&full=1";
+  "http://localhost:9009/?selectedKind=components%2FHeader&selectedStory=everything%20default&full=1";
 const platform = process.platform;
 
 describe("Header", () => {
