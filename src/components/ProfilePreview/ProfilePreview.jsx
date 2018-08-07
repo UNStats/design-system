@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import {
+  alignItems,
   borders,
   borderColor,
   flexDirection,
   fontSize,
-  alignItems,
-  space
+  space,
+  textAlign
 } from "styled-system";
 import PropTypes from "prop-types";
 import Avatar from "../Avatar";
@@ -41,17 +42,20 @@ const Description = styled.div`
 const Name = styled.h1`
   ${fontSize};
   ${space};
+  ${textAlign};
 `;
 
 const Jobtitle = styled.h2`
   font-weight: normal;
   ${fontSize};
   ${space};
+  ${textAlign};
 `;
 
 const Organization = styled.h2`
   ${fontSize};
   ${space};
+  ${textAlign};
 `;
 
 const ProfilePreview = ({
@@ -77,16 +81,21 @@ const ProfilePreview = ({
             mr={[0, 3]}
           />
           <Description alignItems={["center", "flex-start"]}>
-            <Name fontSize={3} mt={0} mb={2}>
+            <Name fontSize={3} textAlign={["center", "left"]} mt={0} mb={2}>
               {name}
             </Name>
             {jobtitle && (
-              <Jobtitle fontSize={5} mt={0} mb={1}>
+              <Jobtitle
+                fontSize={5}
+                textAlign={["center", "left"]}
+                mt={0}
+                mb={1}
+              >
                 {jobtitle}
               </Jobtitle>
             )}
             {organization && (
-              <Organization fontSize={5} my={0}>
+              <Organization fontSize={5} textAlign={["center", "left"]} my={0}>
                 {organization}
               </Organization>
             )}

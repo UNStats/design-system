@@ -7,9 +7,12 @@ const profiles = [
     href: "#"
   },
   {
-    name: "Evonne Reason",
-    jobtitle: "Desktop Support Technician",
-    organization: "McKenzie, Brown and Bernier",
+    name:
+      "Really really really really really really really really really really long name",
+    jobtitle:
+      "Really really really really really really really really really really long jobtitle",
+    organization:
+      "Really really really really really really really really really really long organization",
     img: "https://robohash.org/oditfacilisnostrum.png?size=500x500&bgset=bg1",
     href: "#"
   },
