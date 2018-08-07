@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { themeGet } from "styled-system";
-import { anchorStyle } from "../style";
+import { anchorStyle } from "../../style";
 
 const Wrapper = styled.span`
   ${anchorStyle};
@@ -12,19 +12,19 @@ const Wrapper = styled.span`
   }
 `;
 
-const MarkdownAnchor = ({ anchor, href, children, ...props }) => (
+const A = ({ anchor, href, children, ...props }) => (
   <Wrapper {...props}>{anchor({ href, children })}</Wrapper>
 );
 
-MarkdownAnchor.propTypes = {
+A.propTypes = {
   anchor: PropTypes.func,
   color: PropTypes.string,
   href: PropTypes.string.isRequired
 };
 
-MarkdownAnchor.defaultProps = {
+A.defaultProps = {
   anchor: ({ href, children }) => <a href={href}>{children}</a>,
   color: "primary"
 };
 
-export default MarkdownAnchor;
+export default A;

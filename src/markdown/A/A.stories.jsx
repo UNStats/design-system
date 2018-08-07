@@ -1,27 +1,25 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { NavLink, MemoryRouter } from "react-router-dom";
-import MarkdownAnchor from "../MarkdownAnchor";
-import Box from "../Box";
+import A from "../A";
+import Box from "../../components/Box";
 
-storiesOf("MarkdownAnchor", module)
+storiesOf("markdown/A", module)
   .addDecorator(story => <Box m={3}>{story()}</Box>)
-  .add("everything default", () => (
-    <MarkdownAnchor href="#">Test Link</MarkdownAnchor>
-  ))
+  .add("everything default", () => <A href="#">Test Link</A>)
   .add("custom color", () => (
-    <MarkdownAnchor href="#" color="green">
+    <A href="#" color="green">
       Test Link
-    </MarkdownAnchor>
+    </A>
   ))
   .add("custom anchor", () => (
     <MemoryRouter>
-      <MarkdownAnchor
+      <A
         anchor={({ href, children }) => <NavLink to={href}>{children}</NavLink>}
         href="#"
       >
         Test Link
-      </MarkdownAnchor>
+      </A>
     </MemoryRouter>
     //
   ));

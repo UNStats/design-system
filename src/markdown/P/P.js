@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { space, themeGet } from "styled-system";
 
-const MarkdownParagraph = styled.p`
+const P = styled.p`
   font-family: ${themeGet("fonts.serif")};
   line-height: ${themeGet("lineHeights.copy")};
   margin-top: 0;
@@ -11,12 +11,12 @@ const MarkdownParagraph = styled.p`
   ${space};
 `;
 
-MarkdownParagraph.propTypes = {
+P.propTypes = {
   mb: space.propTypes.mb
 };
 
-MarkdownParagraph.defaultProps = {
+P.defaultProps = {
   mb: 3
 };
 
-export default MarkdownParagraph;
+export default P;
