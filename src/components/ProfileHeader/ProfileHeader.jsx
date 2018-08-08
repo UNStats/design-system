@@ -41,7 +41,13 @@ const ProfileHeader = ({ anchor, badges, color, img, name, ...props }) => (
 
 ProfileHeader.propTypes = {
   anchor: PropTypes.func,
-  badges: PropTypes.arrayOf(PropTypes.shape({ ...Badge.propTypes })),
+  badges: PropTypes.arrayOf(
+    PropTypes.shape({
+      href: Badge.propTypes.href,
+      text: PropTypes.string,
+      color: Badge.propTypes.color
+    })
+  ),
   color: Avatar.propTypes.color,
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
@@ -50,7 +56,9 @@ ProfileHeader.propTypes = {
 };
 
 ProfileHeader.defaultProps = {
+  // eslint-disable-next-line react/prop-types
   anchor: ({ href, children }) => <a href={href}>{children}</a>,
+  badges: undefined,
   color: "primary"
 };
 

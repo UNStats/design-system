@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { borders, borderColor, space, responsiveStyle } from "styled-system";
-import theme from "../../theme";
+import { colors } from "../../theme";
 
 // Set CSS width based on size prop.
 const width = responsiveStyle({
@@ -45,9 +45,9 @@ Avatar.propTypes = {
   /** Image URL. Use 500px x 500px, which is fine for DPR 2.0+.  */
   img: PropTypes.string.isRequired,
   /** Border color. */
-  color: PropTypes.oneOf(Object.keys(theme.colors)),
+  color: PropTypes.oneOf(Object.keys(colors)),
   /** Adjust borders. */
-  ...borders.propTypes,
+  border: borders.propTypes.border,
   /** Adjust spacing. */
   ...space.propTypes
 };

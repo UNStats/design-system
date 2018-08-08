@@ -14,6 +14,7 @@ const Page = ({ children, description, pageTitle, siteTitle }) => (
 );
 
 Page.propTypes = {
+  children: PropTypes.node.isRequired,
   description: PropTypes.string.isRequired,
   pageTitle: PropTypes.string.isRequired,
   siteTitle: PropTypes.string.isRequired

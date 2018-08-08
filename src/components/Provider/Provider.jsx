@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { ThemeProvider, injectGlobal } from "styled-components";
 import { normalize } from "polished";
 import theme from "../../theme";
@@ -23,5 +24,9 @@ const Provider = ({ children }) => (
     <div>{children}</div>
   </ThemeProvider>
 );
+
+Provider.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
 export default Provider;

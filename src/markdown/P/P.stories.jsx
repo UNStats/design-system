@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import P from "../P";
+import P from "./P";
 import Box from "../../components/Box";
 
 const firstParagraph =
@@ -17,11 +17,9 @@ storiesOf("markdown/P", module)
       <P>{secondParagraph}</P>
     </div>
   ))
-  .add("custom margin-bottom", () => {
-    return (
-      <div>
-        <P mb={5}>{firstParagraph}</P>
-        <P>{secondParagraph}</P>
-      </div>
-    );
-  });
+  .add("custom margin-bottom", () => (
+    <div>
+      <P mb={5}>{firstParagraph}</P>
+      <P>{secondParagraph}</P>
+    </div>
+  ));

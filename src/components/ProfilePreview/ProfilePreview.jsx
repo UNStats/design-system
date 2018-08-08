@@ -118,8 +118,11 @@ ProfilePreview.propTypes = {
 };
 
 ProfilePreview.defaultProps = {
+  // eslint-disable-next-line react/prop-types
+  anchor: ({ href, children }) => <a href={href}>{children}</a>,
   color: "primary",
-  anchor: ({ href, children }) => <a href={href}>{children}</a>
+  jobtitle: "",
+  organization: ""
 };
 
 export default ProfilePreview;

@@ -21,8 +21,8 @@ const Hashtag = styled.div`
   ${fontSize};
 `;
 
-const Title = ({ color, year }) => (
-  <Wrapper color={color} flexDirection={["row", "column"]}>
+const Title = ({ color: clr, year }) => (
+  <Wrapper color={clr} flexDirection={["row", "column"]}>
     <Year fontSize={[4, 3, 2]} mr={[2, 0]}>
       {year}
     </Year>

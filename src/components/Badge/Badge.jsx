@@ -6,11 +6,12 @@ import { colors, colorSchemes } from "../../theme";
 import { anchorStyle } from "../../style";
 
 const colorScheme = ({ color: id }) => {
-  let backgroundColor, color;
+  let backgroundColor;
+  let color;
   try {
     ({ backgroundColor, color } = colorSchemes[id]);
   } catch (e) {
-    ({ backgroundColor, color } = colorSchemes["primary"]);
+    ({ backgroundColor, color } = colorSchemes.primary);
   }
   return {
     backgroundColor: colors[backgroundColor],
@@ -46,14 +47,16 @@ const Badge = ({ anchor, href, color, children, ...props }) => (
 );
 
 Badge.propTypes = {
+  children: PropTypes.node.isRequired,
   color: PropTypes.string,
   href: PropTypes.string.isRequired,
   anchor: PropTypes.func
 };
 
 Badge.defaultProps = {
-  color: "primary",
-  anchor: ({ href, children }) => <a href={href}>{children}</a>
+  // eslint-disable-next-line react/prop-types
+  anchor: ({ href, children }) => <a href={href}>{children}</a>,
+  color: "primary"
 };
 
 export default Badge;

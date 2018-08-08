@@ -23,12 +23,15 @@ List.propTypes = {
   item: PropTypes.func.isRequired,
   mt: space.propTypes.mt,
   mb: space.propTypes.mb,
-  values: PropTypes.arrayOf(PropTypes.object)
+  values: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 List.defaultProps = {
+  // eslint-disable-next-line react/prop-types
   anchor: ({ href, children }) => <a href={href}>{children}</a>,
-  color: "primary"
+  color: "primary",
+  mt: 3,
+  mb: 3
 };
 
 export default List;

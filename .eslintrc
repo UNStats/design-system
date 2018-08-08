@@ -1,6 +1,24 @@
 {
-  "extends": "react-app",
+  "extends": ["airbnb", "prettier"],
+  "env": {
+    "jest": true
+  },
   "globals": {
     "page": true
+  },
+  "rules": {
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowTaggedTemplates": true
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/*.test.js", "**/*.stories.jsx", "jest-setup.js"]
+      }
+    ],
+    "react/jsx-one-expression-per-line": "off"
   }
 }

@@ -17,9 +17,9 @@ const Limiter = styled.div`
   ${space};
 `;
 
-const Container = ({ children, maxWidth, mt, mb, pt, pb, px }) => (
+const Container = ({ children, maxWidth: mxWidth, mt, mb, pt, pb, px }) => (
   <Wrapper mt={mt} mb={mb}>
-    <Limiter maxWidth={maxWidth} px={px} pt={pt} pb={pb}>
+    <Limiter maxWidth={mxWidth} px={px} pt={pt} pb={pb}>
       {children}
     </Limiter>
   </Wrapper>

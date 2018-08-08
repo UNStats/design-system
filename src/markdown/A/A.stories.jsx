@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { NavLink, MemoryRouter } from "react-router-dom";
-import A from "../A";
+import A from "./A";
 import Box from "../../components/Box";
 
 storiesOf("markdown/A", module)

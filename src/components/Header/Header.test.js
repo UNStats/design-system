@@ -4,7 +4,7 @@ import devices from "../../devices";
 
 const url =
   "http://localhost:9009/?selectedKind=components%2FHeader&selectedStory=everything%20default&full=1";
-const platform = process.platform;
+const { platform } = process;
 
 describe("Header", () => {
   devices.forEach(device => {

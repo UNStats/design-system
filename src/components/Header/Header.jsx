@@ -67,10 +67,10 @@ const Links = styled.div`
   ${space};
 `;
 
-const Header = ({ anchor, color, links, title }) => (
+const Header = ({ anchor, color: clr, links, title }) => (
   <Wrapper
-    borderColor={color}
-    color={color}
+    borderColor={clr}
+    color={clr}
     fontFamily="sansSerif"
     height={[64, 80, 96]}
     lineHeight="title"
@@ -212,9 +212,7 @@ const Header = ({ anchor, color, links, title }) => (
           alignItems={["center", "flex-end"]}
           pl={[3, 2]}
         >
-          <Box mb={[0, -1]}>
-            {anchor({ href: "/", children: title(color) })}
-          </Box>
+          <Box mb={[0, -1]}>{anchor({ href: "/", children: title(clr) })}</Box>
           <Links fontSize={[6, 5, 4]} mb={[0, -1]}>
             {links.map(({ href, text }) => (
               <Box key={text} ml={[2, 3, 4]} mr={[2, 0]}>
@@ -243,9 +241,10 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
+  // eslint-disable-next-line react/prop-types
   anchor: ({ href, children }) => <a href={href}>{children}</a>,
   color: "primary",
-  title: color => <DefaultTitle color={color} />
+  title: c => <DefaultTitle color={c} />
 };
 
 export default Header;

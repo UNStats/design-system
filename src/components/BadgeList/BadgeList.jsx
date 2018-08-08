@@ -16,15 +16,8 @@ const List = styled.div`
 
 const BadgeList = ({ anchor, values, ...props }) => (
   <List {...props}>
-    {values.map(({ color, href, text }, index) => (
-      <Badge
-        anchor={anchor}
-        color={color}
-        href={href}
-        mb={2}
-        mr={2}
-        key={index}
-      >
+    {values.map(({ color, href, text }) => (
+      <Badge anchor={anchor} color={color} href={href} mb={2} mr={2} key={text}>
         {text}
       </Badge>
     ))}
@@ -33,10 +26,17 @@ const BadgeList = ({ anchor, values, ...props }) => (
 
 BadgeList.propTypes = {
   anchor: PropTypes.func,
-  values: PropTypes.arrayOf(PropTypes.shape({ ...Badge.propTypes })).isRequired
+  values: PropTypes.arrayOf(
+    PropTypes.shape({
+      color: Badge.propTypes.color,
+      href: Badge.propTypes.href,
+      text: PropTypes.string.isRequired
+    })
+  ).isRequired
 };
 
 BadgeList.defaultProps = {
+  // eslint-disable-next-line react/prop-types
   anchor: ({ href, children }) => <a href={href}>{children}</a>
 };
 

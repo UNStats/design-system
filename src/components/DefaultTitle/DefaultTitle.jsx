@@ -27,14 +27,11 @@ const Event = styled.div`
   ${fontSize};
 `;
 
-const Title = ({ color }) => (
-  <Wrapper color={color} flexDirection={["row", "column"]}>
+const Title = ({ color: clr }) => (
+  <Wrapper color={clr} flexDirection={["row", "column"]}>
     <Organization fontSize={[4, 5, 4]} mr={[2, 0]}>
-      U<Hide display={["none", "inline"]}>nited </Hide>N<Hide
-        display={["none", "inline"]}
-      >
-        ations
-      </Hide>
+      U<Hide display={["none", "inline"]}>nited </Hide>N
+      <Hide display={["none", "inline"]}>ations</Hide>
     </Organization>
     <Event fontSize={[4, 4, 3]}>World Data Forum</Event>
   </Wrapper>

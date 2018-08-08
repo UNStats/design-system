@@ -1,5 +1,6 @@
 import { css } from "styled-components";
 
+// eslint-disable-next-line import/prefer-default-export
 export const anchorStyle = css`
   a {
     height: 100%;

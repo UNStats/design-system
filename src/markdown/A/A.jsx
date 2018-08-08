@@ -18,11 +18,13 @@ const A = ({ anchor, href, children, ...props }) => (
 
 A.propTypes = {
   anchor: PropTypes.func,
+  children: PropTypes.node.isRequired,
   color: PropTypes.string,
   href: PropTypes.string.isRequired
 };
 
 A.defaultProps = {
+  // eslint-disable-next-line react/prop-types
   anchor: ({ href, children }) => <a href={href}>{children}</a>,
   color: "primary"
 };
