@@ -25,7 +25,7 @@
     "format": "pretty-quick",
     "inspect": "node --inspect-brk node_modules/.bin/jest --runInBand",
     "lint": "eslint --ext .jsx,.js --ignore-path .gitignore .",
-    "precommit": "pretty-quick --staged",
+    "precommit": "npm run lint && pretty-quick --staged",
     "prepublishOnly": "npm run deploy && npm run build",
     "test": "jest --watch"
   },
@@ -40,6 +40,7 @@
     "react": "^16.0.0"
   },
   "devDependencies": {
+    "@mdotasia/eslint-config": "^0.1.0",
     "@storybook/addon-actions": "^3.4.8",
     "@storybook/addon-console": "^1.0.4",
     "@storybook/addon-options": "^3.4.8",
@@ -53,11 +54,6 @@
     "babel-preset-stage-3": "^6.24.1",
     "babel-runtime": "^6.26.0",
     "eslint": "^4.1.1",
-    "eslint-config-airbnb": "^17.0.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.9.1",
     "gh-pages": "^1.2.0",
     "husky": "^0.14.3",
     "jest": "^23.3.0",
