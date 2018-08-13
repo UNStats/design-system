@@ -4,6 +4,7 @@ import DefaultTitle from "./DefaultTitle";
 import Head from "./Head";
 import Header from "./Header";
 import List from "./List";
+import OpenInNewTabAnchor from "./OpenInNewTabAnchor";
 import ProfileHeader from "./ProfileHeader";
 import ProfilePreview from "./ProfilePreview";
 import Provider from "./Provider";
@@ -15,6 +16,7 @@ export {
   Head,
   Header,
   List,
+  OpenInNewTabAnchor,
   ProfileHeader,
   ProfilePreview,
   Provider
