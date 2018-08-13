@@ -24,8 +24,12 @@ const StyledAnchor = ({ Anchor, children, display, href }) => {
 StyledAnchor.propTypes = {
   Anchor: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
-  display: PropTypes.oneOf(["block", "inline"]).isRequired,
+  display: PropTypes.oneOf(["block", "inline"]),
   href: PropTypes.string.isRequired
+};
+
+StyledAnchor.defaultProps = {
+  display: "block"
 };
 
 export default StyledAnchor;
