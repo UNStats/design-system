@@ -1,8 +1,8 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { NavLink, MemoryRouter } from "react-router-dom";
 import BadgeList from "./BadgeList";
 import Box from "../Box";
+import OpenInNewTabAnchor from "../../components/OpenInNewTabAnchor";
 
 const badges = [
   { text: "Design Engineer", href: "#", color: "red" },
@@ -23,15 +23,10 @@ const badges = [
   { text: "Assistant Manager", href: "#" }
 ];
 
-storiesOf("components/BadgeList", module)
+storiesOf("helpers/BadgeList", module)
   .addDecorator(story => <Box p={1}>{story()}</Box>)
   .add("default anchor", () => <BadgeList values={badges.slice(0, 4)} />)
   .add("custom anchor", () => (
-    <MemoryRouter>
-      <BadgeList
-        anchor={({ href, children }) => <NavLink to={href}>{children}</NavLink>}
-        values={badges.slice(0, 4)}
-      />
-    </MemoryRouter>
+    <BadgeList Anchor={OpenInNewTabAnchor} values={badges.slice(0, 4)} />
   ))
   .add("many badges", () => <BadgeList values={badges} />);

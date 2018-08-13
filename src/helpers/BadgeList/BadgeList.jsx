@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { space } from "styled-system";
 import Badge from "../Badge";
+import DefaultAnchor from "../../components/DefaultAnchor";
 
 const List = styled.div`
   div:last-child {
@@ -14,10 +15,10 @@ const List = styled.div`
   ${space};
 `;
 
-const BadgeList = ({ anchor, values, ...props }) => (
+const BadgeList = ({ Anchor, values, ...props }) => (
   <List {...props}>
     {values.map(({ color, href, text }) => (
-      <Badge anchor={anchor} color={color} href={href} mb={2} mr={2} key={text}>
+      <Badge Anchor={Anchor} color={color} href={href} mb={2} mr={2} key={text}>
         {text}
       </Badge>
     ))}
@@ -25,7 +26,7 @@ const BadgeList = ({ anchor, values, ...props }) => (
 );
 
 BadgeList.propTypes = {
-  anchor: PropTypes.func,
+  Anchor: PropTypes.func,
   values: PropTypes.arrayOf(
     PropTypes.shape({
       color: Badge.propTypes.color,
@@ -36,8 +37,7 @@ BadgeList.propTypes = {
 };
 
 BadgeList.defaultProps = {
-  // eslint-disable-next-line react/prop-types
-  anchor: ({ href, children }) => <a href={href}>{children}</a>
+  Anchor: DefaultAnchor
 };
 
 export default BadgeList;
