@@ -1,6 +1,6 @@
-import AlternateTitle from "./AlternateTitle";
+import AlternateHeaderTitle from "./AlternateHeaderTitle";
 import DefaultAnchor from "./DefaultAnchor";
-import DefaultTitle from "./DefaultTitle";
+import DefaultHeaderTitle from "./DefaultHeaderTitle";
 import Head from "./Head";
 import Header from "./Header";
 import List from "./List";
@@ -10,9 +10,9 @@ import ProfilePreview from "./ProfilePreview";
 import Provider from "./Provider";
 
 export {
-  AlternateTitle,
+  AlternateHeaderTitle,
   DefaultAnchor,
-  DefaultTitle,
+  DefaultHeaderTitle,
   Head,
   Header,
   List,

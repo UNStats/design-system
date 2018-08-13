@@ -21,7 +21,7 @@ const Hashtag = styled.div`
   ${fontSize};
 `;
 
-const Title = ({ color: clr, year }) => (
+const AlternateHeaderTitle = ({ color: clr, year }) => (
   <Wrapper color={clr} flexDirection={["row", "column"]}>
     <Year fontSize={[4, 3, 2]} mr={[2, 0]}>
       {year}
@@ -30,13 +30,13 @@ const Title = ({ color: clr, year }) => (
   </Wrapper>
 );
 
-Title.propTypes = {
+AlternateHeaderTitle.propTypes = {
   color: PropTypes.string,
   year: PropTypes.number.isRequired
 };
 
-Title.defaultProps = {
+AlternateHeaderTitle.defaultProps = {
   color: "primary"
 };
 
-export default Title;
+export default AlternateHeaderTitle;
