@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import Container from "../../components/Container";
+import Container from "../../helpers/Container";
 
 const Page = ({ children, description, pageTitle, siteTitle }) => (
   <Container maxWidth={7} mt={[3, 4]} mb={[3, 4]}>
