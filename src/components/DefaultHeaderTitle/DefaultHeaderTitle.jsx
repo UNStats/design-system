@@ -27,7 +27,7 @@ const Event = styled.div`
   ${fontSize};
 `;
 
-const Title = ({ color: clr }) => (
+const DefaultHeaderTitle = ({ color: clr }) => (
   <Wrapper color={clr} flexDirection={["row", "column"]}>
     <Organization fontSize={[4, 5, 4]} mr={[2, 0]}>
       U<Hide display={["none", "inline"]}>nited </Hide>N
@@ -37,12 +37,12 @@ const Title = ({ color: clr }) => (
   </Wrapper>
 );
 
-Title.propTypes = {
+DefaultHeaderTitle.propTypes = {
   color: PropTypes.string
 };
 
-Title.defaultProps = {
+DefaultHeaderTitle.defaultProps = {
   color: "primary"
 };
 
-export default Title;
+export default DefaultHeaderTitle;
