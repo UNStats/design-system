@@ -1,9 +1,9 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { NavLink, MemoryRouter } from "react-router-dom";
 import ProfileHeader from "./ProfileHeader";
-import Box from "../Box";
+import Box from "../../helpers/Box";
 import profiles from "../../profiles";
+import OpenInNewTabAnchor from "../OpenInNewTabAnchor";
 
 const badges = [
   { text: "Committee Member", color: "red", href: "#" },
@@ -29,16 +29,12 @@ storiesOf("components/ProfileHeader", module)
   .add("custom anchor", () => {
     const { name, img } = profiles[3];
     return (
-      <MemoryRouter>
-        <ProfileHeader
-          anchor={({ href, children }) => (
-            <NavLink to={href}>{children}</NavLink>
-          )}
-          name={name}
-          img={img}
-          badges={badges}
-        />
-      </MemoryRouter>
+      <ProfileHeader
+        Anchor={OpenInNewTabAnchor}
+        name={name}
+        img={img}
+        badges={badges}
+      />
     );
   })
   .add("no badges", () => {

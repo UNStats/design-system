@@ -2,9 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { fontFamily, fontSize, space } from "styled-system";
-import Avatar from "../Avatar";
-import Badge from "../Badge";
-import BadgeList from "../BadgeList";
+import DefaultAnchor from "../DefaultAnchor";
+import Avatar from "../../helpers/Avatar";
+import Badge from "../../helpers/Badge";
+import BadgeList from "../../helpers/BadgeList";
 
 const Wrapper = styled.div`
   display: flex;
@@ -21,7 +22,7 @@ const Name = styled.h1`
   ${space};
 `;
 
-const ProfileHeader = ({ anchor, badges, color, img, name, ...props }) => (
+const ProfileHeader = ({ Anchor, badges, color, img, name, ...props }) => (
   <Wrapper fontFamily="sansSerif" {...props}>
     <Avatar
       alt={name}
@@ -35,12 +36,12 @@ const ProfileHeader = ({ anchor, badges, color, img, name, ...props }) => (
     <Name fontSize={[5, 4, 3]} mt={0} mb={[1, 2, 3]}>
       {name}
     </Name>
-    {badges && <BadgeList anchor={anchor} values={badges} />}
+    {badges && <BadgeList Anchor={Anchor} values={badges} />}
   </Wrapper>
 );
 
 ProfileHeader.propTypes = {
-  anchor: PropTypes.func,
+  Anchor: PropTypes.func,
   badges: PropTypes.arrayOf(
     PropTypes.shape({
       href: Badge.propTypes.href,
@@ -51,13 +52,11 @@ ProfileHeader.propTypes = {
   color: Avatar.propTypes.color,
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  /** Adjust spacing. */
   ...space.propTypes
 };
 
 ProfileHeader.defaultProps = {
-  // eslint-disable-next-line react/prop-types
-  anchor: ({ href, children }) => <a href={href}>{children}</a>,
+  Anchor: DefaultAnchor,
   badges: undefined,
   color: "primary"
 };
