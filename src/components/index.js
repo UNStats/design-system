@@ -1,4 +1,5 @@
 import AlternateTitle from "./AlternateTitle";
+import DefaultAnchor from "./DefaultAnchor";
 import DefaultTitle from "./DefaultTitle";
 import Head from "./Head";
 import Header from "./Header";
@@ -9,6 +10,7 @@ import Provider from "./Provider";
 
 export {
   AlternateTitle,
+  DefaultAnchor,
   DefaultTitle,
   Head,
   Header,
