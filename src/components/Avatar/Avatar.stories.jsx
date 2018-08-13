@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import Avatar from "./Avatar";
-import Box from "../Box";
+import Box from "../../helpers/Box";
 import profiles from "../../profiles";
 
 storiesOf("components/Avatar", module)

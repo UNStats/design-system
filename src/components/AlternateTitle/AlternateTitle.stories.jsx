@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import AlternateTitle from "./AlternateTitle";
-import Box from "../Box";
+import Box from "../../helpers/Box";
 
 storiesOf("components/AlternateTitle", module)
   .addDecorator(story => <Box m={1}>{story()}</Box>)
