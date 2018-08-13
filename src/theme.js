@@ -21,35 +21,35 @@ export const colors = {
 
 export const colorSchemes = {
   primary: {
-    backgroundColor: "primary",
+    bgColor: "primary",
     color: "white"
   },
   blue: {
-    backgroundColor: "blue",
+    bgColor: "blue",
     color: "white"
   },
   green: {
-    backgroundColor: "green",
+    bgColor: "green",
     color: "white"
   },
   red: {
-    backgroundColor: "red",
+    bgColor: "red",
     color: "white"
   },
   yellow: {
-    backgroundColor: "yellow",
+    bgColor: "yellow",
     color: "black"
   },
   gray: {
-    backgroundColor: "gray",
+    bgColor: "gray",
     color: "black"
   },
   black: {
-    backgroundColor: "black",
+    bgColor: "black",
     color: "white"
   },
   white: {
-    backgroundColor: "white",
+    bgColor: "white",
     color: "black"
   }
 };

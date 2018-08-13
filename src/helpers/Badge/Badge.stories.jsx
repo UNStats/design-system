@@ -1,10 +1,10 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { NavLink, MemoryRouter } from "react-router-dom";
 import Badge from "./Badge";
 import Box from "../Box";
+import OpenInNewTabAnchor from "../../components/OpenInNewTabAnchor";
 
-storiesOf("components/Badge", module)
+storiesOf("helpers/Badge", module)
   .addDecorator(story => <Box m={1}>{story()}</Box>)
   .add("default color", () => <Badge href="#">default color</Badge>)
   .add("primary color", () => (
@@ -42,18 +42,8 @@ storiesOf("components/Badge", module)
       gray
     </Badge>
   ))
-  .add("invalid color", () => (
-    <Badge color="purple" href="#">
-      invalid color
-    </Badge>
-  ))
   .add("custom anchor", () => (
-    <MemoryRouter>
-      <Badge
-        href="#"
-        anchor={({ href, children }) => <NavLink to={href}>{children}</NavLink>}
-      >
-        custom anchor
-      </Badge>
-    </MemoryRouter>
+    <Badge href="#" Anchor={OpenInNewTabAnchor}>
+      custom anchor
+    </Badge>
   ));
