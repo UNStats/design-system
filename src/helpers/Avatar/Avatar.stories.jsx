@@ -1,10 +1,10 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import Avatar from "./Avatar";
-import Box from "../../helpers/Box";
+import Box from "../Box";
 import profiles from "../../profiles";
 
-storiesOf("components/Avatar", module)
+storiesOf("helpers/Avatar", module)
   .addDecorator(story => <Box m={1}>{story()}</Box>)
   .add("default size", () => (
     <Avatar alt={profiles[0].name} img={profiles[0].img} />
