@@ -23,7 +23,7 @@ const Pill = styled.div`
 
 const Badge = ({ Anchor, href, color, children, ...props }) => (
   <Wrapper {...props}>
-    <StyledAnchor Anchor={Anchor} display="inline" href={href}>
+    <StyledAnchor Anchor={Anchor} display="block" href={href}>
       <Pill color={color} fontSize={7} px={2} py={1}>
         {children}
       </Pill>

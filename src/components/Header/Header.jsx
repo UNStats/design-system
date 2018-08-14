@@ -83,7 +83,7 @@ const Header = ({ Anchor, color, links, Title }) => (
         py={[1, 2]}
       >
         <Box height="100%">
-          <StyledAnchor Anchor={Anchor} href="/">
+          <StyledAnchor Anchor={Anchor} display="block" href="/">
             <svg
               height="100%"
               viewBox="0 0 173 192"
@@ -211,7 +211,7 @@ const Header = ({ Anchor, color, links, Title }) => (
           pl={[3, 2]}
         >
           <Box mb={[0, -1]}>
-            <StyledAnchor Anchor={Anchor} href="/">
+            <StyledAnchor Anchor={Anchor} display="block" href="/">
               <Title color={color} />
             </StyledAnchor>
           </Box>
