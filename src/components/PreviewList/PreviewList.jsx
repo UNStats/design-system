@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   ${space};
 `;
 
-const Separator = styled.div`
+const Divider = styled.div`
   ${borders};
   ${borderColor};
   ${space};
@@ -21,39 +21,54 @@ const Separator = styled.div`
   }
 `;
 
-const PreviewList = ({ Anchor, color, Preview, mt, mb, values }) => (
+const PreviewList = ({
+  Anchor,
+  dividerColor,
+  mt,
+  mb,
+  Preview,
+  textColor,
+  values
+}) => (
   <Wrapper mt={mt} mb={mb}>
     {values.map(({ href, ...value }) => (
-      <Separator
-        borderColor={color}
+      <Divider
+        borderColor={dividerColor}
         borderBottom="2px solid"
         pb={3}
         mb={3}
         px={[0, 2]}
         key={href}
       >
-        <StyledAnchor Anchor={Anchor} href={href}>
-          <Preview color={color} {...value} />
+        <StyledAnchor
+          Anchor={Anchor}
+          color={textColor}
+          display="block"
+          href={href}
+        >
+          <Preview {...value} />
         </StyledAnchor>
-      </Separator>
+      </Divider>
     ))}
   </Wrapper>
 );
 
 PreviewList.propTypes = {
   Anchor: PropTypes.func,
-  color: PropTypes.oneOf(Object.keys(colors)),
-  Preview: PropTypes.func.isRequired,
+  dividerColor: PropTypes.oneOf(Object.keys(colors)),
   mt: space.propTypes.mt,
   mb: space.propTypes.mb,
+  Preview: PropTypes.func.isRequired,
+  textColor: PropTypes.oneOf(Object.keys(colors)),
   values: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 PreviewList.defaultProps = {
   Anchor: DefaultAnchor,
-  color: "primary",
+  dividerColor: "primary",
   mt: 3,
-  mb: 3
+  mb: 3,
+  textColor: "black"
 };
 
 export default PreviewList;

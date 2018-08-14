@@ -18,6 +18,14 @@ storiesOf("components/PreviewList", module)
   .add("many items", () => (
     <PreviewList Preview={ProfilePreview} values={profiles} />
   ))
+  .add("custom colors", () => (
+    <PreviewList
+      dividerColor="red"
+      Preview={ProfilePreview}
+      textColor="green"
+      values={profiles}
+    />
+  ))
   .add("custom anchor", () => (
     <PreviewList
       Anchor={OpenInNewTabAnchor}
