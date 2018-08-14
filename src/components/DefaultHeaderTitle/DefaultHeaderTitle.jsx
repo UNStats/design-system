@@ -1,14 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { color, display, flexDirection, fontSize, space } from "styled-system";
+import {
+  color as colorUtility,
+  display,
+  flexDirection,
+  fontSize,
+  space
+} from "styled-system";
+import { colors } from "../../theme";
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  ${color};
+  ${colorUtility};
   ${flexDirection};
 `;
 
@@ -27,8 +34,8 @@ const Event = styled.div`
   ${fontSize};
 `;
 
-const DefaultHeaderTitle = ({ color: clr }) => (
-  <Wrapper color={clr} flexDirection={["row", "column"]}>
+const DefaultHeaderTitle = ({ color }) => (
+  <Wrapper color={color} flexDirection={["row", "column"]}>
     <Organization fontSize={[4, 5, 4]} mr={[2, 0]}>
       U<Hide display={["none", "inline"]}>nited </Hide>N
       <Hide display={["none", "inline"]}>ations</Hide>
@@ -38,7 +45,7 @@ const DefaultHeaderTitle = ({ color: clr }) => (
 );
 
 DefaultHeaderTitle.propTypes = {
-  color: PropTypes.string
+  color: PropTypes.oneOf(Object.keys(colors))
 };
 
 DefaultHeaderTitle.defaultProps = {

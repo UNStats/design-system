@@ -4,8 +4,8 @@ import styled from "styled-components";
 import { fontFamily, fontSize, space } from "styled-system";
 import DefaultAnchor from "../DefaultAnchor";
 import Avatar from "../../helpers/Avatar";
-import Badge from "../../helpers/Badge";
 import BadgeList from "../../helpers/BadgeList";
+import { colors } from "../../theme";
 
 const Wrapper = styled.div`
   display: flex;
@@ -44,12 +44,12 @@ ProfileHeader.propTypes = {
   Anchor: PropTypes.func,
   badges: PropTypes.arrayOf(
     PropTypes.shape({
-      href: Badge.propTypes.href,
-      text: PropTypes.string,
-      color: Badge.propTypes.color
+      color: PropTypes.oneOf(Object.keys(colors)),
+      href: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired
     })
   ),
-  color: Avatar.propTypes.color,
+  color: PropTypes.oneOf(Object.keys(colors)),
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   ...space.propTypes

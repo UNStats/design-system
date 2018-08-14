@@ -18,7 +18,7 @@ import styled from "styled-components";
 import {
   alignItems,
   borderColor,
-  color,
+  color as colorUtility,
   flex,
   flexDirection,
   fontFamily,
@@ -33,11 +33,12 @@ import Container from "../../helpers/Container";
 import StyledAnchor from "../../helpers/StyledAnchor";
 import DefaultHeaderTitle from "../DefaultHeaderTitle";
 import DefaultAnchor from "../DefaultAnchor";
+import { colors } from "../../theme";
 
 const Wrapper = styled.div`
   border-bottom: 3px solid;
   ${borderColor};
-  ${color};
+  ${colorUtility};
   ${fontFamily};
   ${height};
   ${lineHeight};
@@ -67,10 +68,10 @@ const Links = styled.div`
   ${space};
 `;
 
-const Header = ({ Anchor, color: clr, links, Title }) => (
+const Header = ({ Anchor, color, links, Title }) => (
   <Wrapper
-    borderColor={clr}
-    color={clr}
+    borderColor={color}
+    color={color}
     fontFamily="sansSerif"
     height={[64, 80, 96]}
     lineHeight="title"
@@ -211,7 +212,7 @@ const Header = ({ Anchor, color: clr, links, Title }) => (
         >
           <Box mb={[0, -1]}>
             <StyledAnchor Anchor={Anchor} href="/">
-              <Title color={clr} />
+              <Title color={color} />
             </StyledAnchor>
           </Box>
           <Links fontSize={[6, 5, 4]} mb={[0, -1]}>
@@ -231,7 +232,7 @@ const Header = ({ Anchor, color: clr, links, Title }) => (
 
 Header.propTypes = {
   Anchor: PropTypes.func,
-  color: PropTypes.string,
+  color: PropTypes.oneOf(Object.keys(colors)),
   links: PropTypes.arrayOf(
     PropTypes.shape({
       href: PropTypes.string.isRequired,

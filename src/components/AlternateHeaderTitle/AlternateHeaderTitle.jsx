@@ -1,14 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { color, flexDirection, fontSize, space } from "styled-system";
+import {
+  color as colorUtility,
+  flexDirection,
+  fontSize,
+  space
+} from "styled-system";
+import { colors } from "../../theme";
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  ${color};
+  ${colorUtility};
   ${flexDirection};
 `;
 
@@ -21,8 +27,8 @@ const Hashtag = styled.div`
   ${fontSize};
 `;
 
-const AlternateHeaderTitle = ({ color: clr, year }) => (
-  <Wrapper color={clr} flexDirection={["row", "column"]}>
+const AlternateHeaderTitle = ({ color, year }) => (
+  <Wrapper color={color} flexDirection={["row", "column"]}>
     <Year fontSize={[4, 3, 2]} mr={[2, 0]}>
       {year}
     </Year>
@@ -31,7 +37,7 @@ const AlternateHeaderTitle = ({ color: clr, year }) => (
 );
 
 AlternateHeaderTitle.propTypes = {
-  color: PropTypes.string,
+  color: PropTypes.oneOf(Object.keys(colors)),
   year: PropTypes.number.isRequired
 };
 

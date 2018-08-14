@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { borders, borderColor, space } from "styled-system";
 import DefaultAnchor from "../DefaultAnchor";
 import StyledAnchor from "../../helpers/StyledAnchor";
+import { colors } from "../../theme";
 
 const Wrapper = styled.div`
   ${space};
@@ -41,7 +42,7 @@ const PreviewList = ({ Anchor, color, Preview, mt, mb, values }) => (
 
 PreviewList.propTypes = {
   Anchor: PropTypes.func,
-  color: PropTypes.string,
+  color: PropTypes.oneOf(Object.keys(colors)),
   Preview: PropTypes.func.isRequired,
   mt: space.propTypes.mt,
   mb: space.propTypes.mb,

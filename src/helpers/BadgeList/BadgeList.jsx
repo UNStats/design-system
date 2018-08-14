@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { space } from "styled-system";
 import Badge from "../Badge";
 import DefaultAnchor from "../../components/DefaultAnchor";
+import { colors } from "../../theme";
 
 const List = styled.div`
   div:last-child {
@@ -29,8 +30,8 @@ BadgeList.propTypes = {
   Anchor: PropTypes.func,
   values: PropTypes.arrayOf(
     PropTypes.shape({
-      color: Badge.propTypes.color,
-      href: Badge.propTypes.href,
+      color: PropTypes.oneOf(Object.keys(colors)),
+      href: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired
     })
   ).isRequired

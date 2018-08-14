@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { fontSize, space } from "styled-system";
 import DefaultAnchor from "../../components/DefaultAnchor";
 import StyledAnchor from "../StyledAnchor";
+import { colors } from "../../theme";
 
 const Wrapper = styled.div`
   display: inline-block;
@@ -33,7 +34,7 @@ const Badge = ({ Anchor, href, color, children, ...props }) => (
 Badge.propTypes = {
   Anchor: PropTypes.func,
   children: PropTypes.node.isRequired,
-  color: PropTypes.string,
+  color: PropTypes.oneOf(Object.keys(colors)),
   href: PropTypes.string.isRequired
 };
 
