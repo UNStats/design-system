@@ -1,31 +1,21 @@
 import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
-import { themeGet } from "styled-system";
-import { anchorStyle } from "../../style";
+import OpenInNewTabAnchor from "../../components/OpenInNewTabAnchor";
+import StyledAnchor from "../../helpers/StyledAnchor";
 
-const Wrapper = styled.span`
-  ${anchorStyle};
-  color: ${({ color }) => themeGet(`colors.${color}`)};
-  a {
-    display: inline;
-  }
-`;
-
-const A = ({ anchor, href, children, ...props }) => (
-  <Wrapper {...props}>{anchor({ href, children })}</Wrapper>
+const A = ({ href, children, color }) => (
+  <StyledAnchor Anchor={OpenInNewTabAnchor} color={color} href={href}>
+    {children}
+  </StyledAnchor>
 );
 
 A.propTypes = {
-  anchor: PropTypes.func,
   children: PropTypes.node.isRequired,
   color: PropTypes.string,
   href: PropTypes.string.isRequired
 };
 
 A.defaultProps = {
-  // eslint-disable-next-line react/prop-types
-  anchor: ({ href, children }) => <a href={href}>{children}</a>,
   color: "primary"
 };
 
