@@ -29,8 +29,7 @@
     "inspect": "node --inspect-brk node_modules/.bin/jest --runInBand",
     "lint": "eslint --ext .jsx,.js --ignore-path .gitignore .",
     "precommit": "lint-staged && pretty-quick --staged",
-    "prepublishOnly": "npm run deploy && npm run build",
-    "test": "jest --watch"
+    "prepublishOnly": "npm run deploy && npm run build"
   },
   "dependencies": {
     "polished": "^1.9.3",
@@ -59,20 +58,12 @@
     "eslint": "^5.3.0",
     "gh-pages": "^1.2.0",
     "husky": "^0.14.3",
-    "jest": "^23.3.0",
-    "jest-image-snapshot": "^2.4.3",
-    "jest-puppeteer": "^3.2.1",
     "lint-staged": "^7.2.2",
     "prettier": "^1.13.6",
     "pretty-quick": "^1.6.0",
-    "puppeteer": "^1.7.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-test-renderer": "^16.3.2",
     "rimraf": "^2.6.2"
-  },
-  "jest": {
-    "preset": "jest-puppeteer",
-    "setupTestFrameworkScriptFile": "<rootDir>/jest-setup.js"
   }
 }
