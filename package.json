@@ -21,9 +21,9 @@
     "*.{js,jsx}": "eslint"
   },
   "scripts": {
-    "start": "start-storybook -p 9009",
+    "start": "start-storybook -p 9009 -c config/storybook",
     "build": "rimraf ./dist && babel ./src -d ./dist --ignore test.js,stories.jsx,profiles.js",
-    "build-storybook": "rimraf ./storybook-static && build-storybook -s ./public",
+    "build-storybook": "rimraf ./storybook-static && build-storybook -s ./public -c config/storybook",
     "deploy": "npm run build-storybook && gh-pages -d ./storybook-static",
     "format": "pretty-quick",
     "inspect": "node --inspect-brk node_modules/.bin/jest --runInBand",
@@ -43,7 +43,7 @@
     "react": "^16.0.0"
   },
   "devDependencies": {
-    "@mdotasia/eslint-config": "^0.1.0",
+    "@mdotasia/eslint-config": "^0.4.0",
     "@storybook/addon-actions": "^3.4.8",
     "@storybook/addon-console": "^1.0.4",
     "@storybook/addon-options": "^3.4.8",
@@ -56,7 +56,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
     "babel-runtime": "^6.26.0",
-    "eslint": "^4.1.1",
+    "eslint": "^5.3.0",
     "gh-pages": "^1.2.0",
     "husky": "^0.14.3",
     "jest": "^23.3.0",
