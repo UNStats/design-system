@@ -9,7 +9,7 @@ storiesOf("helpers/Badge", module)
   .addWithPercyOptions("default color", { skip: true }, () => (
     <Badge href="#">default color</Badge>
   ))
-  .addWithPercyOptions("primary color", () => (
+  .addWithPercyOptions("primary color", { skip: true }, () => (
     <Badge color="primary" href="#">
       primary color
     </Badge>

@@ -11,13 +11,13 @@ const secondParagraph =
 
 storiesOf("markdown/P", module)
   .addDecorator(story => <Box m={3}>{story()}</Box>)
-  .add("default margin-bottom", () => (
+  .addWithPercyOptions("default margin-bottom", { skip: true }, () => (
     <React.Fragment>
       <P>{firstParagraph}</P>
       <P>{secondParagraph}</P>
     </React.Fragment>
   ))
-  .add("custom margin-bottom", () => (
+  .addWithPercyOptions("custom margin-bottom", { skip: true }, () => (
     <React.Fragment>
       <P mb={5}>{firstParagraph}</P>
       <P>{secondParagraph}</P>
