@@ -28,6 +28,7 @@
     "inspect": "node --inspect-brk node_modules/.bin/jest --runInBand",
     "lint": "eslint --ext .jsx,.js --ignore-path .gitignore .",
     "precommit": "lint-staged && pretty-quick --staged",
+    "prepublishOnly": "npm run build",
     "snapshot": "npm run build-storybook && percy-storybook --widths=375,667,414,736,768,1024,1366"
   },
   "dependencies": {

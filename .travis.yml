@@ -2,20 +2,18 @@ language: node_js
 cache:
   directories:
     - "node_modules"
-script:
-  - npm run snapshot
-  - npm run build
+script: npm run snapshot
 deploy:
-  - provider: npm
+  - provider: pages
+    local-dir: storybook-static
     skip_cleanup: true
-    email: $NPM_EMAIL_ADDRESS
-    api_key: $NPM_AUTH_TOKEN
+    github-token: $GITHUB_TOKEN
     on:
       branch: master
       tags: true
-  - provider: pages
-    skip_cleanup: true
-    github-token: $GITHUB_TOKEN
+  - provider: npm
+    email: $NPM_EMAIL_ADDRESS
+    api_key: $NPM_AUTH_TOKEN
     on:
       branch: master
       tags: true
