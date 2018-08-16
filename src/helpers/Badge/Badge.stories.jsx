@@ -6,43 +6,45 @@ import OpenInNewTabAnchor from "../../components/OpenInNewTabAnchor";
 
 storiesOf("helpers/Badge", module)
   .addDecorator(story => <Box m={1}>{story()}</Box>)
-  .add("default color", () => <Badge href="#">default color</Badge>)
-  .add("primary color", () => (
+  .addWithPercyOptions("default color", { skip: true }, () => (
+    <Badge href="#">default color</Badge>
+  ))
+  .addWithPercyOptions("primary color", () => (
     <Badge color="primary" href="#">
       primary color
     </Badge>
   ))
-  .add("blue", () => (
+  .addWithPercyOptions("blue", { skip: true }, () => (
     <Badge color="blue" href="#">
       blue
     </Badge>
   ))
-  .add("green", () => (
+  .addWithPercyOptions("green", { skip: true }, () => (
     <Badge color="green" href="#">
       green
     </Badge>
   ))
-  .add("red", () => (
+  .addWithPercyOptions("red", { skip: true }, () => (
     <Badge color="red" href="#">
       red
     </Badge>
   ))
-  .add("yellow", () => (
+  .addWithPercyOptions("yellow", { skip: true }, () => (
     <Badge color="yellow" href="#">
       yellow
     </Badge>
   ))
-  .add("gray", () => (
+  .addWithPercyOptions("gray", { skip: true }, () => (
     <Badge color="gray" href="#">
       gray
     </Badge>
   ))
-  .add("black", () => (
+  .addWithPercyOptions("black", { skip: true }, () => (
     <Badge color="black" href="#">
       gray
     </Badge>
   ))
-  .add("custom anchor", () => (
+  .addWithPercyOptions("custom anchor", { skip: true }, () => (
     <Badge href="#" Anchor={OpenInNewTabAnchor}>
       custom anchor
     </Badge>

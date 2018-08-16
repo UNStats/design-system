@@ -6,15 +6,17 @@ import rawProfiles from "../../profiles";
 const profiles = rawProfiles.map(({ href, ...profile }) => ({ ...profile }));
 
 storiesOf("components/ProfilePreview", module)
-  .add("with jobtitle and organization", () => (
+  .addWithPercyOptions("with jobtitle and organization", { skip: true }, () => (
     <ProfilePreview {...profiles[0]} />
   ))
-  .add("really long strings", () => <ProfilePreview {...profiles[1]} />)
-  .add("no jobtitle", () => {
+  .addWithPercyOptions("really long strings", { skip: true }, () => (
+    <ProfilePreview {...profiles[1]} />
+  ))
+  .addWithPercyOptions("no jobtitle", { skip: true }, () => {
     const { jobtitle, ...profile } = profiles[2];
     return <ProfilePreview {...profile} />;
   })
-  .add("no organization", () => {
+  .addWithPercyOptions("no organization", { skip: true }, () => {
     const { organization, ...profile } = profiles[3];
     return <ProfilePreview {...profile} />;
   });

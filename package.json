@@ -29,7 +29,8 @@
     "inspect": "node --inspect-brk node_modules/.bin/jest --runInBand",
     "lint": "eslint --ext .jsx,.js --ignore-path .gitignore .",
     "precommit": "lint-staged && pretty-quick --staged",
-    "prepublishOnly": "npm run deploy && npm run build"
+    "prepublishOnly": "npm run deploy && npm run build",
+    "snapshot": "build-storybook -c config/storybook && percy-storybook --widths=375,667,414,736,768,1024,1366"
   },
   "dependencies": {
     "polished": "^1.9.3",
@@ -43,6 +44,7 @@
   },
   "devDependencies": {
     "@mdotasia/eslint-config": "^0.4.0",
+    "@percy-io/percy-storybook": "^2.0.0",
     "@storybook/addon-actions": "^3.4.8",
     "@storybook/addon-console": "^1.0.4",
     "@storybook/addon-options": "^3.4.8",

@@ -6,15 +6,15 @@ import Box from "../Box";
 
 storiesOf("helpers/StyledAnchor", module)
   .addDecorator(story => <Box m={1}>{story()}</Box>)
-  .add("everything default", () => (
+  .addWithPercyOptions("everything default", { skip: true }, () => (
     <StyledAnchor href="#">StyledAnchor with everything default</StyledAnchor>
   ))
-  .add("custom color", () => (
+  .addWithPercyOptions("custom color", { skip: true }, () => (
     <StyledAnchor color="green" href="#">
       StyledAnchor with custom color
     </StyledAnchor>
   ))
-  .add("custom anchor", () => (
+  .addWithPercyOptions("custom anchor", { skip: true }, () => (
     <StyledAnchor Anchor={OpenInNewDefaultAnchor} href="#">
       StyledAnchor with custom anchor
     </StyledAnchor>

@@ -6,19 +6,19 @@ import profiles from "../../profiles";
 import OpenInNewTabAnchor from "../OpenInNewTabAnchor";
 
 storiesOf("components/PreviewList", module)
-  .add("1 item", () => (
+  .addWithPercyOptions("1 item", { skip: true }, () => (
     <PreviewList Preview={ProfilePreview} values={profiles.slice(0, 1)} />
   ))
-  .add("2 items", () => (
+  .addWithPercyOptions("2 items", { skip: true }, () => (
     <PreviewList Preview={ProfilePreview} values={profiles.slice(0, 2)} />
   ))
-  .add("3 items", () => (
+  .addWithPercyOptions("3 items", { skip: true }, () => (
     <PreviewList Preview={ProfilePreview} values={profiles.slice(0, 3)} />
   ))
-  .add("many items", () => (
+  .addWithPercyOptions("many items", { skip: true }, () => (
     <PreviewList Preview={ProfilePreview} values={profiles} />
   ))
-  .add("custom colors", () => (
+  .addWithPercyOptions("custom colors", { skip: true }, () => (
     <PreviewList
       dividerColor="red"
       Preview={ProfilePreview}
@@ -26,7 +26,7 @@ storiesOf("components/PreviewList", module)
       values={profiles}
     />
   ))
-  .add("custom anchor", () => (
+  .addWithPercyOptions("custom anchor", { skip: true }, () => (
     <PreviewList
       Anchor={OpenInNewTabAnchor}
       Preview={ProfilePreview}

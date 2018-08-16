@@ -5,7 +5,9 @@ import Box from "../../helpers/Box";
 
 storiesOf("components/AlternateHeaderTitle", module)
   .addDecorator(story => <Box m={1}>{story()}</Box>)
-  .add("default color", () => <AlternateHeaderTitle year={2018} />)
-  .add("custom color", () => (
+  .addWithPercyOptions("default color", { skip: true }, () => (
+    <AlternateHeaderTitle year={2018} />
+  ))
+  .addWithPercyOptions("custom color", { skip: true }, () => (
     <AlternateHeaderTitle color="green" year={2017} />
   ));

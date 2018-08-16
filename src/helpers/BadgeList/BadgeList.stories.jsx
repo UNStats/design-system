@@ -25,8 +25,12 @@ const badges = [
 
 storiesOf("helpers/BadgeList", module)
   .addDecorator(story => <Box p={1}>{story()}</Box>)
-  .add("default anchor", () => <BadgeList values={badges.slice(0, 4)} />)
-  .add("custom anchor", () => (
+  .addWithPercyOptions("default anchor", { skip: true }, () => (
+    <BadgeList values={badges.slice(0, 4)} />
+  ))
+  .addWithPercyOptions("custom anchor", { skip: true }, () => (
     <BadgeList Anchor={OpenInNewTabAnchor} values={badges.slice(0, 4)} />
   ))
-  .add("many badges", () => <BadgeList values={badges} />);
+  .addWithPercyOptions("many badges", { skip: true }, () => (
+    <BadgeList values={badges} />
+  ));

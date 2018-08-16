@@ -32,28 +32,20 @@ This project is licensed under the [MIT license](https://choosealicense.com/lice
 
 ## Documentation
 
-A common use of [render props](https://reactjs.org/docs/render-props.html) in this library is the `anchor` prop. When components have links normally they use the [HTML `<a>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a). In some contexts like [Gatsby](https://www.gatsbyjs.org/) or, more generally, [React Router](https://reacttraining.com/react-router/) you may want to use a specific component for links. The `anchor` prop allows you to determine, which link component is used for links.
+A common use of [render props](https://reactjs.org/docs/render-props.html) in this library is the `Anchor` prop. Components with links normally simply use `<a>`. In some contexts like [Gatsby](https://www.gatsbyjs.org/) or apps using [React Router](https://reacttraining.com/react-router/) or [Reach Router](https://reach.tech/router), you may want to use a custom component for links. The `Anchor` prop allows you provide such custom component.
 
-The default `anchor` render prop is always
-
-```jsx
-({ href, children }) => <a href={href}>{children}</a>;
-```
-
-which means that a component would use the HTML `<a>` element for links with the link target being the current browser tab. If you want links to open in a new tab, you should provide this `anchor` prop:
+The default for `Anchor` is always `DefaultAnchor`, which is basically this:
 
 ```jsx
-({ href, children }) => (
-  <a href={href} target="_blank">
-    {children}
-  </a>
-);
+({ children, children }) => <a href={href}>{children}</a>;
 ```
 
-Within a Gatsby website for internal links you should provide this `anchor` prop using Gatsby's `Link` component:
+Notice that the signature of any `Anchor` render prop must be `children` and `href`. Alternatively, there is also `OpenInNewTabAnchor` with the same singature, but which opens link targets in a new tab.
+
+Within Gatsby, you normally use its `Link` component for internal links. Since the `Link` component has a different signature, you need to map it to the required signature
 
 ```jsx
-({ href, children }) => <Link to={href}>{children}</Link>;
+({ children, href }) => <Link to={href}>{children}</Link>;
 ```
 
-The render prop pattern gives you the flexibility to use components in different contexts.
+and then provide this derived static funcitonal component to the `Anchor` prop.

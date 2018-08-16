@@ -1,7 +1,13 @@
 import React from "react";
-import { configure, addDecorator } from "@storybook/react";
+import {
+  addDecorator,
+  configure,
+  getStorybook,
+  setAddon
+} from "@storybook/react";
 import { setOptions } from "@storybook/addon-options";
 import "@storybook/addon-console";
+import createPercyAddon from "@percy-io/percy-storybook";
 import Provider from "../../src/components/Provider";
 import pkg from "../../package.json";
 
@@ -9,6 +15,10 @@ import pkg from "../../package.json";
 setOptions({
   name: `@undataforum/components v${pkg.version}`
 });
+
+// Percy visual regression testing.
+const { percyAddon, serializeStories } = createPercyAddon();
+setAddon(percyAddon);
 
 // Add decorators before require.context:
 // https://github.com/storybooks/storybook/issues/3246
@@ -23,3 +33,5 @@ function loadStories() {
 }
 
 configure(loadStories, module);
+
+serializeStories(getStorybook);

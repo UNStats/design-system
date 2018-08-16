@@ -12,21 +12,21 @@ const badges = [
 
 storiesOf("components/ProfileHeader", module)
   .addDecorator(story => <Box m={1}>{story()}</Box>)
-  .add("everything default", () => {
+  .addWithPercyOptions("everything default", { skip: true }, () => {
     const { name, img } = profiles[0];
     return <ProfileHeader name={name} img={img} badges={badges} />;
   })
-  .add("long name", () => {
+  .addWithPercyOptions("long name", { skip: true }, () => {
     const { name, img } = profiles[1];
     return <ProfileHeader name={name} img={img} badges={badges} />;
   })
-  .add("custom color", () => {
+  .addWithPercyOptions("custom color", { skip: true }, () => {
     const { name, img } = profiles[2];
     return (
       <ProfileHeader name={name} img={img} color="green" badges={badges} />
     );
   })
-  .add("custom anchor", () => {
+  .addWithPercyOptions("custom anchor", { skip: true }, () => {
     const { name, img } = profiles[3];
     return (
       <ProfileHeader
@@ -37,7 +37,7 @@ storiesOf("components/ProfileHeader", module)
       />
     );
   })
-  .add("no badges", () => {
+  .addWithPercyOptions("no badges", { skip: true }, () => {
     const { name, img } = profiles[4];
     return <ProfileHeader name={name} img={img} />;
   });

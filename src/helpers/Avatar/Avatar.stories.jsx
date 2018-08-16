@@ -6,26 +6,26 @@ import profiles from "../../profiles";
 
 storiesOf("helpers/Avatar", module)
   .addDecorator(story => <Box m={1}>{story()}</Box>)
-  .add("default size", () => (
+  .addWithPercyOptions("default size", { skip: true }, () => (
     <Avatar alt={profiles[0].name} img={profiles[0].img} />
   ))
-  .add("small", () => (
+  .addWithPercyOptions("small", { skip: true }, () => (
     <Avatar alt={profiles[1].name} img={profiles[1].img} size="sm" />
   ))
-  .add("medium", () => (
+  .addWithPercyOptions("medium", { skip: true }, () => (
     <Avatar alt={profiles[2].name} img={profiles[2].img} size="md" />
   ))
-  .add("large", () => (
+  .addWithPercyOptions("large", { skip: true }, () => (
     <Avatar alt={profiles[3].name} img={profiles[3].img} size="lg" />
   ))
-  .add("responsive size", () => (
+  .addWithPercyOptions("responsive size", { skip: true }, () => (
     <Avatar
       alt={profiles[4].name}
       img={profiles[4].img}
       size={["sm", "md", "lg"]}
     />
   ))
-  .add("padding", () => (
+  .addWithPercyOptions("padding", { skip: true }, () => (
     <div>
       <Avatar
         alt={profiles[5].name}
@@ -57,7 +57,7 @@ storiesOf("helpers/Avatar", module)
       />
     </div>
   ))
-  .add("border width", () => (
+  .addWithPercyOptions("border width", { skip: true }, () => (
     <div>
       <Avatar
         alt={profiles[9].name}
@@ -89,7 +89,7 @@ storiesOf("helpers/Avatar", module)
       />
     </div>
   ))
-  .add("border color", () => (
+  .addWithPercyOptions("border color", { skip: true }, () => (
     <div>
       <Avatar
         alt={profiles[13].name}
