@@ -30,7 +30,7 @@ import { Provider, Header } from "@undataforum/components";
 
 This project is licensed under the [MIT license](https://choosealicense.com/licenses/mit/). The United Nations World Data Forum logo is not part of this license. The [Header component](https://github.com/UNDataForum/components/blob/master/src/components/Header/Header.jsx) contains additional information on licensing the logo.
 
-## Documentation
+## Render Props
 
 A common use of [render props](https://reactjs.org/docs/render-props.html) in this library is the `Anchor` prop. Components with links normally simply use `<a>`. In some contexts like [Gatsby](https://www.gatsbyjs.org/) or apps using [React Router](https://reacttraining.com/react-router/) or [Reach Router](https://reach.tech/router), you may want to use a custom component for links. The `Anchor` prop allows you provide such custom component.
 
@@ -49,3 +49,16 @@ Within Gatsby, you normally use its `Link` component for internal links. Since t
 ```
 
 and then provide this derived static funcitonal component to the `Anchor` prop.
+
+## Release and Deploy
+
+Releases are done with [Zeit release](https://github.com/zeit/release), which needs to be installed globally. You need to run
+
+    release <type>
+
+as described in the documentation of Zeit release.
+
+This triggers a push to master that triggers a [Travis CI](https://travis-ci.com/) build. This build
+
+- runs `npm run snapshot` and deploys the Storybook to [GitHub Pages](https://pages.github.com/) and
+- runs `npm run build` and publishes package `@undataforum/components` to [npm](https://www.npmjs.com/).
