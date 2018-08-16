@@ -6,14 +6,15 @@ script: npm run snapshot
 deploy:
   - provider: pages
     local-dir: storybook-static
-    skip_cleanup: true
     github-token: $GITHUB_TOKEN
+    skip_cleanup: true
     on:
       branch: master
       tags: true
   - provider: npm
     email: $NPM_EMAIL_ADDRESS
     api_key: $NPM_AUTH_TOKEN
+    skip_cleanup: true
     on:
       branch: master
       tags: true
