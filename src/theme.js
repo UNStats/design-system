@@ -8,15 +8,27 @@ const borders = [0, "1px solid", "2px solid", "3px solid"];
 
 const breakpoints = ["30em", "60em"];
 
+// Color palette.
+const primary = "#00609d";
+const blue = "#0e6a9c";
+const green = "#266f37";
+const red = "#a21723";
+const yellow = "#c59b25";
+const gray = "#909090";
+const black = "#000000";
+const white = "#ffffff";
+
 export const colors = {
-  primary: "#00609d",
-  blue: "#0e6a9c",
-  green: "#266f37",
-  red: "#a21723",
-  yellow: "#c59b25",
-  gray: "#909090",
-  black: "#000000",
-  white: "#ffffff"
+  primary,
+  blue,
+  green,
+  red,
+  yellow,
+  gray,
+  black,
+  white,
+  text: black,
+  background: white
 };
 
 export const colorSchemes = {
@@ -54,7 +66,7 @@ export const colorSchemes = {
   }
 };
 
-const fonts = {
+export const fonts = {
   sansSerif:
     "-apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif",
   serif: "georgia, times, serif"
@@ -75,7 +87,7 @@ const fontSizes = [
 // https://tachyons.io/docs/layout/heights/
 const heights = [0, "1rem", "2rem", "4rem", "8rem"];
 
-const lineHeights = {
+export const lineHeights = {
   solid: 1,
   title: 1.25,
   copy: 1.5
