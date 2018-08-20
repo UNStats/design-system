@@ -84,6 +84,11 @@ const fontSizes = [
   ".75rem"
 ];
 
+const fontWeights = {
+  bold: "bold",
+  normal: "normal"
+};
+
 // https://tachyons.io/docs/layout/heights/
 const heights = [0, "1rem", "2rem", "4rem", "8rem"];
 
@@ -121,6 +126,7 @@ const theme = {
   colorSchemes,
   fonts,
   fontSizes,
+  fontWeights,
   heights,
   lineHeights,
   maxWidths,

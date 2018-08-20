@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import {
   color,
@@ -7,7 +8,7 @@ import {
   space,
   textAlign
 } from "styled-system";
-import theme from "../../theme";
+import theme, { colors } from "../../theme";
 
 const Text = styled.div`
   ${color};
@@ -19,10 +20,11 @@ const Text = styled.div`
 `;
 
 Text.propTypes = {
-  color: color.propTypes,
-  fontFamily: fontFamily.propTypes,
+  color: PropTypes.oneOf(Object.keys(colors)),
+  fontFamily: PropTypes.oneOf(["sansSerif", "serif"]),
   fontSize: fontSize.propTypes,
-  lineHeight: lineHeight.propTypes,
+  fontWeight: PropTypes.oneOf(["bold", "normal"]),
+  lineHeight: PropTypes.oneOf(["copy", "solid", "title"]),
   m: space.propTypes.m,
   mt: space.propTypes.mt,
   mr: space.propTypes.mr,
