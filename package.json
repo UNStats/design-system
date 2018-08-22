@@ -32,7 +32,8 @@
     "snapshot": "npm run build-storybook && percy-storybook --widths=375,667,414,736,768,1024,1366"
   },
   "dependencies": {
-    "polished": "^1.9.3",
+    "grid-styled": "^5.0.2",
+    "polished": "^2.0.2",
     "prop-types": "^15.6.2",
     "react-helmet": "^5.2.0",
     "styled-components": "^3.2.6",

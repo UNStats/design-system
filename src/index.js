@@ -1,3 +1,6 @@
-export * from "./components";
-export * from "./markdown";
-export * from "./templates";
+import Anchor from "./primitives/Anchor";
+import NewTabAnchor from "./primitives/NewTabAnchor";
+import Provider from "./helpers/Provider";
+import SiteTitle from "./primitives/SiteTitle";
+
+export { Anchor, NewTabAnchor, Provider, SiteTitle };

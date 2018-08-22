@@ -3616,6 +3616,12 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.4:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
+grid-styled@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/grid-styled/-/grid-styled-5.0.2.tgz#1e81d7d5bde50a9b43d81cf111b81399126fe595"
+  dependencies:
+    system-components "^3.0.0"
+
 gzip-size@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/gzip-size/-/gzip-size-3.0.0.tgz#546188e9bdc337f673772f81660464b389dce520"
@@ -5537,9 +5543,9 @@ pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
 
-polished@^1.9.3:
-  version "1.9.3"
-  resolved "https://registry.yarnpkg.com/polished/-/polished-1.9.3.tgz#d61b8a0c4624efe31e2583ff24a358932b6b75e1"
+polished@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-2.0.2.tgz#968aa98a86a51d611ccbfe23d3593afea7184b90"
 
 posix-character-classes@^0.1.0:
   version "0.1.1"
@@ -7073,8 +7079,8 @@ style-loader@^0.20.3:
     schema-utils "^0.4.5"
 
 styled-components@^3.2.6:
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-3.4.2.tgz#8f518419932327e47fe9144824e3184b3e2da95d"
+  version "3.4.4"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-3.4.4.tgz#dbd2ea6338fb050b5b56783e189434fd7f18eda5"
   dependencies:
     buffer "^5.0.3"
     css-to-react-native "^2.0.3"
@@ -7161,6 +7167,12 @@ symbol.prototype.description@^1.0.0:
   resolved "https://registry.yarnpkg.com/symbol.prototype.description/-/symbol.prototype.description-1.0.0.tgz#6e355660eb1e44ca8ad53a68fdb72ef131ca4b12"
   dependencies:
     has-symbols "^1.0.0"
+
+system-components@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/system-components/-/system-components-3.0.0.tgz#073e7c6712012c3c17375bae3ae986cb81866347"
+  dependencies:
+    styled-system "^3.0.1"
 
 table@^4.0.3:
   version "4.0.3"
