@@ -1,23 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { space } from "styled-system";
+import { Flex } from "grid-styled";
 import Badge from "../Badge";
 import Anchor from "../Anchor/Anchor";
 import { colors } from "../../theme";
 
-const List = styled.div`
+const List = styled(Flex)`
   div:last-child {
     margin-right: 0;
   }
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  ${space};
 `;
 
 const BadgeList = ({ Anchor: A, values, ...props }) => (
-  <List {...props}>
+  <List flexWrap="wrap" justifyContent="center" {...props}>
     {values.map(({ color, href, text }) => (
       <Badge Anchor={A} color={color} href={href} mb={2} mr={2} key={text}>
         {text}

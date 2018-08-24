@@ -1,6 +1,5 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Box } from "grid-styled";
 import BadgeList from "./BadgeList";
 import NewTabAnchor from "../NewTabAnchor";
 
@@ -24,13 +23,12 @@ const badges = [
 ];
 
 storiesOf("Primitives/BadgeList", module)
-  .addDecorator(story => <Box p={1}>{story()}</Box>)
   .addWithPercyOptions("default anchor", { skip: true }, () => (
-    <BadgeList values={badges.slice(0, 4)} />
+    <BadgeList values={badges.slice(0, 4)} m={1} />
   ))
   .addWithPercyOptions("custom anchor", { skip: true }, () => (
-    <BadgeList Anchor={NewTabAnchor} values={badges.slice(0, 4)} />
+    <BadgeList Anchor={NewTabAnchor} values={badges.slice(0, 4)} m={1} />
   ))
   .addWithPercyOptions("many badges", { skip: true }, () => (
-    <BadgeList values={badges} />
+    <BadgeList values={badges} m={1} />
   ));
