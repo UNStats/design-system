@@ -30,7 +30,7 @@ import {
 } from "styled-system";
 import { Box } from "grid-styled";
 import Container from "../../helpers/Container";
-import StyledAnchor from "../../primitives/StyledAnchor";
+import Link from "../../primitives/Link";
 import SiteTitle from "../../primitives/SiteTitle";
 import Anchor from "../../primitives/Anchor";
 import { colors } from "../../theme";
@@ -87,7 +87,7 @@ const Header = ({ Anchor: A, color, links, Title }) => (
         py={[1, 2]}
       >
         <Logo>
-          <StyledAnchor Anchor={A} display="block" href="/">
+          <Link Anchor={A} display="block" href="/">
             <svg
               height="100%"
               viewBox="0 0 173 192"
@@ -205,7 +205,7 @@ const Header = ({ Anchor: A, color, links, Title }) => (
                 fill="#A21723"
               />
             </svg>
-          </StyledAnchor>
+          </Link>
         </Logo>
         <Navigation
           flexDirection={["column", "row"]}
@@ -215,16 +215,16 @@ const Header = ({ Anchor: A, color, links, Title }) => (
           pl={[3, 2]}
         >
           <Box mb={[0, -1]}>
-            <StyledAnchor Anchor={A} display="block" href="/">
+            <Link Anchor={A} display="block" href="/">
               <Title color={color} />
-            </StyledAnchor>
+            </Link>
           </Box>
           <Links fontSize={[6, 5, 4]} mb={[0, -1]}>
             {links.map(({ href, text }) => (
               <Box key={text} ml={[2, 3, 4]} mr={[2, 0]}>
-                <StyledAnchor Anchor={A} href={href}>
+                <Link Anchor={A} href={href}>
                   {text}
-                </StyledAnchor>
+                </Link>
               </Box>
             ))}
           </Links>

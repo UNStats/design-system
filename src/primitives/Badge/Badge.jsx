@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { fontFamily, fontSize, fontWeight, space } from "styled-system";
 import Anchor from "../Anchor/Anchor";
-import StyledAnchor from "../StyledAnchor";
+import Link from "../Link";
 import { colors } from "../../theme";
 
 const Wrapper = styled.div`
@@ -24,7 +24,7 @@ const Pill = styled.div`
 
 const Badge = ({ Anchor: A, href, color, children, ...props }) => (
   <Wrapper {...props}>
-    <StyledAnchor Anchor={A} display="block" href={href}>
+    <Link Anchor={A} display="block" href={href}>
       <Pill
         color={color}
         fontFamily="sansSerif"
@@ -35,7 +35,7 @@ const Badge = ({ Anchor: A, href, color, children, ...props }) => (
       >
         {children}
       </Pill>
-    </StyledAnchor>
+    </Link>
   </Wrapper>
 );
 

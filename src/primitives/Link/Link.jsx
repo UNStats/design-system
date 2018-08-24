@@ -1,14 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { color as colorUtility } from "styled-system";
+import { color, display, space } from "styled-system";
 import Anchor from "../Anchor/Anchor";
 import { colors } from "../../theme";
 
-const StyledAnchor = ({ Anchor: A, children, color, display, href }) => {
-  const Styled = styled(A)`
-    display: ${({ display: d }) => d};
-    ${colorUtility};
+const Link = ({
+  Anchor: A,
+  children,
+  color: c,
+  display: d,
+  href,
+  ...props
+}) => {
+  const StyledAnchor = styled(A)`
+    ${color};
+    ${display};
+    ${space};
     height: 100%;
     text-decoration: none;
     transition: all 0.2s ease-out;
@@ -18,25 +26,24 @@ const StyledAnchor = ({ Anchor: A, children, color, display, href }) => {
     }
   `;
   return (
-    <Styled color={color} display={display} href={href}>
+    <StyledAnchor color={c} display={d} href={href} {...props}>
       {children}
-    </Styled>
+    </StyledAnchor>
   );
 };
 
-StyledAnchor.propTypes = {
+Link.propTypes = {
   Anchor: PropTypes.func,
   children: PropTypes.node.isRequired,
   color: PropTypes.oneOf(Object.keys(colors)),
-  display: PropTypes.oneOf(["block", "inline"]),
+  display: PropTypes.oneOf(["block", "inline", "inline-block"]),
   href: PropTypes.string.isRequired
 };
 
-StyledAnchor.defaultProps = {
+Link.defaultProps = {
   Anchor,
   color: "primary",
-  /** Sets width to 100% and ensures that large clickable areas work. */
   display: "inline"
 };
 
-export default StyledAnchor;
+export default Link;

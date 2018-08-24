@@ -1,21 +1,21 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Box } from "grid-styled";
-import StyledAnchor from "./StyledAnchor";
+import Link from "./Link";
 import NewTabAnchor from "../NewTabAnchor";
 
-storiesOf("Primitives/StyledAnchor", module)
+storiesOf("Primitives/Link", module)
   .addDecorator(story => <Box m={1}>{story()}</Box>)
   .addWithPercyOptions("everything default", { skip: true }, () => (
-    <StyledAnchor href="#">StyledAnchor with everything default</StyledAnchor>
+    <Link href="#anchor">Link with everything default</Link>
   ))
   .addWithPercyOptions("custom color", { skip: true }, () => (
-    <StyledAnchor color="green" href="#">
-      StyledAnchor with custom color
-    </StyledAnchor>
+    <Link color="green" href="#anchor">
+      Link with custom color
+    </Link>
   ))
   .addWithPercyOptions("custom anchor", { skip: true }, () => (
-    <StyledAnchor Anchor={NewTabAnchor} href="#">
-      StyledAnchor with custom anchor
-    </StyledAnchor>
+    <Link Anchor={NewTabAnchor} href="#anchor">
+      Link with custom anchor
+    </Link>
   ));

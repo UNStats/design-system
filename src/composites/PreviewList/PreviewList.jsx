@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { borders, borderColor, space } from "styled-system";
 import Anchor from "../../primitives/Anchor";
-import StyledAnchor from "../../primitives/StyledAnchor";
+import Link from "../../primitives/Link";
 import { colors } from "../../theme";
 
 const Wrapper = styled.div`
@@ -40,9 +40,9 @@ const PreviewList = ({
         px={[0, 2]}
         key={href}
       >
-        <StyledAnchor Anchor={A} color={textColor} display="block" href={href}>
+        <Link Anchor={A} color={textColor} display="block" href={href}>
           <Preview {...value} />
-        </StyledAnchor>
+        </Link>
       </Divider>
     ))}
   </Wrapper>
