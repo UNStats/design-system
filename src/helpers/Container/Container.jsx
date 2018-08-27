@@ -1,28 +1,34 @@
 import React from "react";
 import styled from "styled-components";
 import { maxWidth, space } from "styled-system";
+import { Flex } from "grid-styled";
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+const Outer = styled(Flex)`
   height: 100%;
-  ${space};
 `;
 
-const Limiter = styled.div`
+const Inner = styled.div`
   width: 100%;
   height: 100%;
   ${maxWidth};
   ${space};
 `;
 
-const Container = ({ children, maxWidth: mxWidth, mt, mb, pt, pb, px }) => (
-  <Wrapper mt={mt} mb={mb}>
-    <Limiter maxWidth={mxWidth} px={px} pt={pt} pb={pb}>
+const Container = ({
+  children,
+  maxWidth: mxWidth,
+  mt,
+  mb,
+  pt,
+  pb,
+  px,
+  ...props
+}) => (
+  <Outer flexDirection="column" alignItems="center" mt={mt} mb={mb} {...props}>
+    <Inner maxWidth={mxWidth} px={px} pt={pt} pb={pb}>
       {children}
-    </Limiter>
-  </Wrapper>
+    </Inner>
+  </Outer>
 );
 
 Container.propTypes = {
