@@ -2,13 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { borders, borderColor, space } from "styled-system";
+import { Box } from "grid-styled";
 import Anchor from "../../primitives/Anchor";
 import Link from "../../primitives/Link";
 import { colors } from "../../theme";
-
-const Wrapper = styled.div`
-  ${space};
-`;
 
 const Divider = styled.div`
   ${borders};
@@ -30,7 +27,7 @@ const PreviewList = ({
   textColor,
   values
 }) => (
-  <Wrapper mt={mt} mb={mb}>
+  <Box mt={mt} mb={mb}>
     {values.map(({ href, ...value }) => (
       <Divider
         borderColor={dividerColor}
@@ -45,7 +42,7 @@ const PreviewList = ({
         </Link>
       </Divider>
     ))}
-  </Wrapper>
+  </Box>
 );
 
 PreviewList.propTypes = {
