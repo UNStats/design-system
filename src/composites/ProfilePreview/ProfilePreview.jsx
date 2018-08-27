@@ -1,74 +1,61 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import {
-  alignItems,
-  flexDirection,
-  fontSize,
-  space,
-  textAlign
-} from "styled-system";
+import { space } from "styled-system";
+import { Flex } from "grid-styled";
 import Avatar from "../../primitives/Avatar";
+import Heading from "../../primitives/Heading";
+import Text from "../../primitives/Text";
 
-const Wrapper = styled.article`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  ${flexDirection};
-  ${alignItems};
-`;
-
-const Description = styled.div`
-  display: flex;
-  flex-direction: column;
-  ${alignItems};
-`;
-
-const Name = styled.h1`
-  ${fontSize};
-  ${space};
-  ${textAlign};
-`;
-
-const Jobtitle = styled.h2`
-  font-weight: normal;
-  ${fontSize};
-  ${space};
-  ${textAlign};
-`;
-
-const Organization = styled.h2`
-  ${fontSize};
-  ${space};
-  ${textAlign};
-`;
-
-const ProfilePreview = ({ img, jobtitle, name, organization }) => (
-  <Wrapper flexDirection={["column", "row"]} pb={3}>
+const ProfilePreview = ({ img, jobtitle, name, organization, ...props }) => (
+  <Flex
+    flexDirection={["column", "row"]}
+    justifyContent="flex-start"
+    alignItems="center"
+    {...props}
+  >
     <Avatar alt={name} img={img} size={["md", "md", "lg"]} mb={2} mr={[0, 3]} />
-    <Description alignItems={["center", "flex-start"]}>
-      <Name fontSize={3} textAlign={["center", "left"]} mt={0} mb={2}>
+    <Flex flexDirection="column" alignItems={["center", "flex-start"]}>
+      <Heading.h1
+        fontFamily="sansSerif"
+        fontSize={3}
+        textAlign={["center", "left"]}
+        mt={0}
+        mb={2}
+      >
         {name}
-      </Name>
+      </Heading.h1>
       {jobtitle && (
-        <Jobtitle fontSize={5} textAlign={["center", "left"]} mt={0} mb={1}>
+        <Text
+          fontFamily="sansSerif"
+          fontSize={5}
+          textAlign={["center", "left"]}
+          mt={0}
+          mb={1}
+        >
           {jobtitle}
-        </Jobtitle>
+        </Text>
       )}
       {organization && (
-        <Organization fontSize={5} textAlign={["center", "left"]} my={0}>
+        <Text
+          fontFamily="sansSerif"
+          fontSize={5}
+          fontWeight="bold"
+          textAlign={["center", "left"]}
+          my={0}
+        >
           {organization}
-        </Organization>
+        </Text>
       )}
-    </Description>
-  </Wrapper>
+    </Flex>
+  </Flex>
 );
 
 ProfilePreview.propTypes = {
+  name: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   jobtitle: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  organization: PropTypes.string
+  organization: PropTypes.string,
+  ...space.propTypes
 };
 
 ProfilePreview.defaultProps = {
