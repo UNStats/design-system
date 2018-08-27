@@ -1,6 +1,5 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Box } from "grid-styled";
 import ProfileHeader from "./ProfileHeader";
 import profiles from "../../profiles";
 import NewTabAnchor from "../../primitives/NewTabAnchor";
@@ -11,19 +10,24 @@ const badges = [
 ];
 
 storiesOf("Composites/ProfileHeader", module)
-  .addDecorator(story => <Box m={1}>{story()}</Box>)
   .addWithPercyOptions("everything default", { skip: true }, () => {
     const { name, img } = profiles[0];
-    return <ProfileHeader name={name} img={img} badges={badges} />;
+    return <ProfileHeader name={name} img={img} badges={badges} m={2} />;
   })
   .addWithPercyOptions("long name", { skip: true }, () => {
     const { name, img } = profiles[1];
-    return <ProfileHeader name={name} img={img} badges={badges} />;
+    return <ProfileHeader name={name} img={img} badges={badges} m={2} />;
   })
   .addWithPercyOptions("custom color", { skip: true }, () => {
     const { name, img } = profiles[2];
     return (
-      <ProfileHeader name={name} img={img} color="green" badges={badges} />
+      <ProfileHeader
+        name={name}
+        img={img}
+        color="green"
+        badges={badges}
+        m={2}
+      />
     );
   })
   .addWithPercyOptions("custom anchor", { skip: true }, () => {
@@ -34,10 +38,11 @@ storiesOf("Composites/ProfileHeader", module)
         name={name}
         img={img}
         badges={badges}
+        m={2}
       />
     );
   })
   .addWithPercyOptions("no badges", { skip: true }, () => {
     const { name, img } = profiles[4];
-    return <ProfileHeader name={name} img={img} />;
+    return <ProfileHeader name={name} img={img} m={2} />;
   });

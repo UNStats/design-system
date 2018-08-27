@@ -1,43 +1,38 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import { fontFamily, fontSize, space } from "styled-system";
+import { space } from "styled-system";
+import { Flex } from "grid-styled";
 import Anchor from "../../primitives/Anchor/Anchor";
 import Avatar from "../../primitives/Avatar";
 import BadgeList from "../../primitives/BadgeList";
+import Heading from "../../primitives/Heading";
 import { colors } from "../../theme";
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  ${fontFamily};
-  ${space};
-`;
-
-const Name = styled.h1`
-  text-align: center;
-  ${fontSize};
-  ${space};
-`;
-
 const ProfileHeader = ({ Anchor: A, badges, color, img, name, ...props }) => (
-  <Wrapper fontFamily="sansSerif" {...props}>
+  <Flex
+    flexDirection="column"
+    justifyContent="flex-start"
+    alignItems="center"
+    {...props}
+  >
     <Avatar
       alt={name}
       img={img}
       size={["md", "lg", "lg"]}
-      border={3}
-      borderColor={color}
-      p={2}
+      pb={2}
       mb={[1, 2, 2]}
     />
-    <Name fontSize={[5, 4, 3]} mt={0} mb={[1, 2, 3]}>
+    <Heading.h1
+      fontFamily="sansSerif"
+      fontSize={[5, 4, 3]}
+      mt={0}
+      mb={[1, 2, 3]}
+      textAlign="center"
+    >
       {name}
-    </Name>
+    </Heading.h1>
     {badges && <BadgeList Anchor={A} values={badges} />}
-  </Wrapper>
+  </Flex>
 );
 
 ProfileHeader.propTypes = {
