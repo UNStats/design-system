@@ -1,12 +1,10 @@
 import Text from "../Text";
-import theme from "../../theme";
 
 const Heading = Text.withComponent("div");
 Heading.defaultProps = {
   fontWeight: "normal",
   fontSize: 4,
-  m: 0,
-  theme
+  m: 0
 };
 
 Heading.h1 = Heading.withComponent("h1");
