@@ -20,7 +20,7 @@ deploy:
       tags: true
 branches:
   only:
-    - /^([0-9]+)\.([0-9]+)\.([0-9]+)$/
+    - master
 notifications:
   email:
     on_success: never
