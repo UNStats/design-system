@@ -1,9 +1,3 @@
-const avatarSizes = {
-  sm: "2rem",
-  md: "4rem",
-  lg: "8rem"
-};
-
 const borders = [0, "1px solid", "2px solid", "3px solid"];
 
 const breakpoints = ["30em", "60em"];
@@ -119,7 +113,6 @@ const space = [0, ".25rem", ".5rem", "1rem", "2rem", "4rem", "8rem", "16rem"];
 const widths = [0, "1rem", "2rem", "4rem", "8rem", "16rem"];
 
 const theme = {
-  avatarSizes,
   borders,
   breakpoints,
   colors,

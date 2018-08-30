@@ -1,134 +1,58 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { storiesOf } from "@storybook/react";
-import { Box } from "grid-styled";
+import styled from "styled-components";
+import { display } from "styled-system";
 import Avatar from "./Avatar";
 import profiles from "../../profiles";
 
+const Image = styled.img`
+  ${display};
+`;
+
 storiesOf("Primitives/Avatar", module)
-  .addDecorator(story => <Box m={1}>{story()}</Box>)
-  .addWithPercyOptions("default size", { skip: true }, () => (
-    <Avatar alt={profiles[0].name} img={profiles[0].img} />
-  ))
-  .addWithPercyOptions("small", { skip: true }, () => (
-    <Avatar alt={profiles[1].name} img={profiles[1].img} size="sm" />
-  ))
-  .addWithPercyOptions("medium", { skip: true }, () => (
-    <Avatar alt={profiles[2].name} img={profiles[2].img} size="md" />
-  ))
-  .addWithPercyOptions("large", { skip: true }, () => (
-    <Avatar alt={profiles[3].name} img={profiles[3].img} size="lg" />
+  .addWithPercyOptions("fixed size", { skip: true }, () => (
+    <Avatar m={2}>
+      {({ className }) => (
+        <Image
+          display="inline-block"
+          alt={profiles[0].name}
+          className={className}
+          height={128}
+          width={128}
+          src={profiles[0].img}
+        />
+      )}
+    </Avatar>
   ))
   .addWithPercyOptions("responsive size", { skip: true }, () => (
-    <Avatar
-      alt={profiles[4].name}
-      img={profiles[4].img}
-      size={["sm", "md", "lg"]}
-    />
-  ))
-  .addWithPercyOptions("padding", { skip: true }, () => (
-    <div>
-      <Avatar
-        alt={profiles[5].name}
-        img={profiles[5].img}
-        border={1}
-        p={0}
-        m={1}
-      />
-      <Avatar
-        alt={profiles[6].name}
-        img={profiles[6].img}
-        border={1}
-        p={1}
-        m={1}
-      />
-      <Avatar
-        alt={profiles[7].name}
-        img={profiles[7].img}
-        border={1}
-        p={2}
-        m={1}
-      />
-      <Avatar
-        alt={profiles[8].name}
-        img={profiles[8].img}
-        border={1}
-        p={3}
-        m={1}
-      />
-    </div>
-  ))
-  .addWithPercyOptions("border width", { skip: true }, () => (
-    <div>
-      <Avatar
-        alt={profiles[9].name}
-        img={profiles[9].img}
-        border={0}
-        p={2}
-        m={1}
-      />
-      <Avatar
-        alt={profiles[10].name}
-        img={profiles[10].img}
-        border={1}
-        p={2}
-        m={1}
-      />
-      <Avatar
-        alt={profiles[11].name}
-        img={profiles[11].img}
-        border={2}
-        p={2}
-        m={1}
-      />
-      <Avatar
-        alt={profiles[12].name}
-        img={profiles[12].img}
-        border={3}
-        p={2}
-        m={1}
-      />
-    </div>
-  ))
-  .addWithPercyOptions("border color", { skip: true }, () => (
-    <div>
-      <Avatar
-        alt={profiles[13].name}
-        img={profiles[13].img}
-        border={3}
-        p={2}
-        m={1}
-      />
-      <Avatar
-        alt={profiles[14].name}
-        img={profiles[14].img}
-        color="blue"
-        border={3}
-        p={2}
-        m={1}
-      />
-      <Avatar
-        alt={profiles[15].name}
-        img={profiles[15].img}
-        color="green"
-        border={3}
-        p={2}
-        m={1}
-      />
-      <Avatar
-        alt={profiles[16].name}
-        img={profiles[16].img}
-        color="red"
-        border={3}
-        p={2}
-        m={1}
-      />
-      <Avatar
-        alt={profiles[17].name}
-        img={profiles[17].img}
-        color="yellow"
-        border={3}
-        p={2}
-        m={1}
-      />
-    </div>
+    <Avatar m={2}>
+      {({ className }) => (
+        <Fragment>
+          <Image
+            display={["inline-block", "none"]}
+            alt={profiles[1].name}
+            className={className}
+            height={32}
+            width={32}
+            src={profiles[1].img}
+          />
+          <Image
+            display={["none", "inline-block", "none"]}
+            alt={profiles[1].name}
+            className={className}
+            height={64}
+            width={64}
+            src={profiles[1].img}
+          />
+          <Image
+            display={["none", "none", "inline-block"]}
+            alt={profiles[1].name}
+            className={className}
+            height={128}
+            width={128}
+            src={profiles[1].img}
+          />
+        </Fragment>
+      )}
+    </Avatar>
   ));
