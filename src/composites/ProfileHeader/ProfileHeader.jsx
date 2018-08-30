@@ -8,20 +8,14 @@ import BadgeList from "../../primitives/BadgeList";
 import Heading from "../../primitives/Heading";
 import { colors } from "../../theme";
 
-const ProfileHeader = ({ Anchor: A, badges, color, img, name, ...props }) => (
+const ProfileHeader = ({ children, name, badges, Anchor: A, ...props }) => (
   <Flex
     flexDirection="column"
     justifyContent="flex-start"
     alignItems="center"
     {...props}
   >
-    <Avatar
-      alt={name}
-      img={img}
-      size={["md", "lg", "lg"]}
-      pb={2}
-      mb={[1, 2, 2]}
-    />
+    <Avatar mb={[1, 2, 2]}>{children}</Avatar>
     <Heading.h1
       fontFamily="sansSerif"
       fontSize={[5, 4, 3]}
@@ -36,7 +30,8 @@ const ProfileHeader = ({ Anchor: A, badges, color, img, name, ...props }) => (
 );
 
 ProfileHeader.propTypes = {
-  Anchor: PropTypes.func,
+  children: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
   badges: PropTypes.arrayOf(
     PropTypes.shape({
       color: PropTypes.oneOf(Object.keys(colors)),
@@ -44,16 +39,13 @@ ProfileHeader.propTypes = {
       text: PropTypes.string.isRequired
     })
   ),
-  color: PropTypes.oneOf(Object.keys(colors)),
-  img: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  Anchor: PropTypes.func,
   ...space.propTypes
 };
 
 ProfileHeader.defaultProps = {
   Anchor,
-  badges: undefined,
-  color: "primary"
+  badges: undefined
 };
 
 export default ProfileHeader;

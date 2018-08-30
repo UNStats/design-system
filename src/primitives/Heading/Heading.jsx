@@ -4,6 +4,7 @@ const Heading = Text.withComponent("div");
 Heading.defaultProps = {
   fontWeight: "normal",
   fontSize: 4,
+  lineHeight: "title",
   m: 0
 };
 
