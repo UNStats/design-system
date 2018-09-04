@@ -7,16 +7,6 @@ const profiles = [
     href: "/profiles/nance-macfadin"
   },
   {
-    name:
-      "Really really really really really really really really really really long name",
-    jobtitle:
-      "Really really really really really really really really really really long jobtitle",
-    organization:
-      "Really really really really really really really really really really long organization",
-    img: "https://robohash.org/oditfacilisnostrum.png?size=500x500&bgset=bg1",
-    href: "/profiles/really-really-long"
-  },
-  {
     name: "Clerc Edis",
     jobtitle: "Staff Scientist",
     organization: "Ritchie Inc",
@@ -217,6 +207,16 @@ const profiles = [
     organization: "Leuschke, Okuneva and Heaney",
     img: "https://robohash.org/hiccumquenumquam.png?size=500x500&bgset=bg1",
     href: "/profiles/vladimir-parres"
+  },
+  {
+    name:
+      "Really really really really really really really really really really long name",
+    jobtitle:
+      "Really really really really really really really really really really long jobtitle",
+    organization:
+      "Really really really really really really really really really really long organization",
+    img: "https://robohash.org/oditfacilisnostrum.png?size=500x500&bgset=bg1",
+    href: "/profiles/really-really-long"
   }
 ];
 
