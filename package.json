@@ -21,7 +21,7 @@
     "*.{js,jsx}": "eslint"
   },
   "scripts": {
-    "start": "start-storybook -p 9009 -c config/storybook",
+    "start": "start-storybook -p 8000 -c config/storybook",
     "build": "rimraf ./dist && babel ./src -d ./dist --ignore test.js,stories.jsx,profiles.js",
     "build-storybook": "rimraf ./storybook-static && build-storybook -s ./public -c config/storybook",
     "format": "pretty-quick",
