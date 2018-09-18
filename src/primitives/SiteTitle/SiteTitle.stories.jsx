@@ -3,9 +3,5 @@ import { storiesOf } from "@storybook/react";
 import SiteTitle from "./SiteTitle";
 
 storiesOf("Primitives/SiteTitle", module)
-  .addWithPercyOptions("default color", { skip: true }, () => (
-    <SiteTitle m={1} />
-  ))
-  .addWithPercyOptions("custom color", { skip: true }, () => (
-    <SiteTitle color="green" m={1} />
-  ));
+  .add("default color", () => <SiteTitle m={1} />)
+  .add("custom color", () => <SiteTitle color="green" m={1} />);

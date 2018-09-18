@@ -6,15 +6,15 @@ import NewTabAnchor from "../NewTabAnchor";
 
 storiesOf("Primitives/Link", module)
   .addDecorator(story => <Box m={1}>{story()}</Box>)
-  .addWithPercyOptions("everything default", { skip: true }, () => (
+  .add("everything default", () => (
     <Link href="#anchor">Link with everything default</Link>
   ))
-  .addWithPercyOptions("custom color", { skip: true }, () => (
+  .add("custom color", () => (
     <Link color="green" href="#anchor">
       Link with custom color
     </Link>
   ))
-  .addWithPercyOptions("custom anchor", { skip: true }, () => (
+  .add("custom anchor", () => (
     <Link Anchor={NewTabAnchor} href="#anchor">
       Link with custom anchor
     </Link>

@@ -21,15 +21,14 @@
     "*.{js,jsx}": "eslint"
   },
   "scripts": {
-    "start": "start-storybook -p 8000 -c config/storybook",
+    "start": "start-storybook -p 9009 -c config/storybook",
     "build": "rimraf ./dist && babel ./src -d ./dist --ignore test.js,stories.jsx,profiles.js",
     "build-storybook": "rimraf ./storybook-static && build-storybook -s ./public -c config/storybook",
     "format": "pretty-quick",
     "inspect": "node --inspect-brk node_modules/.bin/jest --runInBand",
     "lint": "eslint --ext .jsx,.js --ignore-path .gitignore .",
     "precommit": "lint-staged && pretty-quick --staged",
-    "prepublishOnly": "npm run build",
-    "snapshot": "npm run build-storybook && percy-storybook --widths=375,667,414,736,768,1024,1366"
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "grid-styled": "^5.0.2",
@@ -44,7 +43,6 @@
   },
   "devDependencies": {
     "@mdotasia/eslint-config": "^0.4.0",
-    "@percy-io/percy-storybook": "^2.0.0",
     "@storybook/addon-actions": "^3.4.8",
     "@storybook/addon-console": "^1.0.4",
     "@storybook/addon-options": "^3.4.8",

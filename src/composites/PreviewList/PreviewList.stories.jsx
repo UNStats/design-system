@@ -6,19 +6,19 @@ import profiles from "../../profiles";
 import NewTabAnchor from "../../primitives/NewTabAnchor";
 
 storiesOf("Composites/PreviewList", module)
-  .addWithPercyOptions("1 item", { skip: true }, () => (
+  .add("1 item", () => (
     <PreviewList Preview={ProfilePreview} values={profiles.slice(0, 1)} />
   ))
-  .addWithPercyOptions("2 items", { skip: true }, () => (
+  .add("2 items", () => (
     <PreviewList Preview={ProfilePreview} values={profiles.slice(0, 2)} />
   ))
-  .addWithPercyOptions("3 items", { skip: true }, () => (
+  .add("3 items", () => (
     <PreviewList Preview={ProfilePreview} values={profiles.slice(0, 3)} />
   ))
-  .addWithPercyOptions("many items", { skip: true }, () => (
+  .add("many items", () => (
     <PreviewList Preview={ProfilePreview} values={profiles} />
   ))
-  .addWithPercyOptions("custom colors", { skip: true }, () => (
+  .add("custom colors", () => (
     <PreviewList
       dividerColor="red"
       Preview={ProfilePreview}
@@ -26,7 +26,7 @@ storiesOf("Composites/PreviewList", module)
       values={profiles}
     />
   ))
-  .addWithPercyOptions("custom anchor", { skip: true }, () => (
+  .add("custom anchor", () => (
     <PreviewList
       Anchor={NewTabAnchor}
       Preview={ProfilePreview}

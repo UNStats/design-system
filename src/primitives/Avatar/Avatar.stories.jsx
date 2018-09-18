@@ -10,7 +10,7 @@ const Image = styled.img`
 `;
 
 storiesOf("Primitives/Avatar", module)
-  .addWithPercyOptions("fixed size", { skip: true }, () => (
+  .add("fixed size", () => (
     <Avatar m={2}>
       {({ className }) => (
         <Image
@@ -24,7 +24,7 @@ storiesOf("Primitives/Avatar", module)
       )}
     </Avatar>
   ))
-  .addWithPercyOptions("responsive size", { skip: true }, () => (
+  .add("responsive size", () => (
     <Avatar m={2}>
       {({ className }) => (
         <Fragment>

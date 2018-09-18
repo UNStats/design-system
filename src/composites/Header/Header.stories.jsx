@@ -21,13 +21,9 @@ const links = [
 
 storiesOf("Composites/Header", module)
   .add("everything default", () => <Header links={links} />)
-  .addWithPercyOptions("custom color", { skip: true }, () => (
-    <Header color="red" links={links} />
-  ))
-  .addWithPercyOptions("custom anchor", { skip: true }, () => (
-    <Header links={links} Anchor={NewTabAnchor} />
-  ))
-  .addWithPercyOptions("custom title", { skip: true }, () => (
+  .add("custom color", () => <Header color="red" links={links} />)
+  .add("custom anchor", () => <Header links={links} Anchor={NewTabAnchor} />)
+  .add("custom title", () => (
     <Header
       links={links}
       title={color => <AlternateSiteTitle color={color} year={2018} />}

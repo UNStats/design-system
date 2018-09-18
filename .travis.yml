@@ -2,7 +2,7 @@ language: node_js
 cache:
   directories:
     - "node_modules"
-script: npm run snapshot
+# script: npm run snapshot
 deploy:
   - provider: pages
     local-dir: storybook-static
@@ -20,7 +20,7 @@ deploy:
       tags: true
 branches:
   only:
-    - /^([0-9]+)\.([0-9]+)\.([0-9]+)$/
+    - master
 notifications:
   email:
     on_success: never

@@ -4,47 +4,47 @@ import Badge from "./Badge";
 import NewTabAnchor from "../NewTabAnchor";
 
 storiesOf("Primitives/Badge", module)
-  .addWithPercyOptions("default color", { skip: true }, () => (
+  .add("default color", () => (
     <Badge href="#" m={2}>
       default color
     </Badge>
   ))
-  .addWithPercyOptions("primary color", { skip: true }, () => (
+  .add("primary color", () => (
     <Badge color="primary" href="#" m={2}>
       primary color
     </Badge>
   ))
-  .addWithPercyOptions("blue", { skip: true }, () => (
+  .add("blue", () => (
     <Badge color="blue" href="#" m={2}>
       blue
     </Badge>
   ))
-  .addWithPercyOptions("green", { skip: true }, () => (
+  .add("green", () => (
     <Badge color="green" href="#" m={2}>
       green
     </Badge>
   ))
-  .addWithPercyOptions("red", { skip: true }, () => (
+  .add("red", () => (
     <Badge color="red" href="#" m={2}>
       red
     </Badge>
   ))
-  .addWithPercyOptions("yellow", { skip: true }, () => (
+  .add("yellow", () => (
     <Badge color="yellow" href="#" m={2}>
       yellow
     </Badge>
   ))
-  .addWithPercyOptions("gray", { skip: true }, () => (
+  .add("gray", () => (
     <Badge color="gray" href="#" m={2}>
       gray
     </Badge>
   ))
-  .addWithPercyOptions("black", { skip: true }, () => (
+  .add("black", () => (
     <Badge color="black" href="#" m={2}>
       gray
     </Badge>
   ))
-  .addWithPercyOptions("custom anchor", { skip: true }, () => (
+  .add("custom anchor", () => (
     <Badge href="#" Anchor={NewTabAnchor} m={2}>
       custom anchor
     </Badge>

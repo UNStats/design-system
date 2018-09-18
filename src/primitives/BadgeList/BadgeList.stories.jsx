@@ -23,12 +23,8 @@ const badges = [
 ];
 
 storiesOf("Primitives/BadgeList", module)
-  .addWithPercyOptions("default anchor", { skip: true }, () => (
-    <BadgeList values={badges.slice(0, 4)} m={1} />
+  .add("default anchor", () => <BadgeList values={badges.slice(0, 4)} m={2} />)
+  .add("custom anchor", () => (
+    <BadgeList Anchor={NewTabAnchor} values={badges.slice(0, 4)} m={2} />
   ))
-  .addWithPercyOptions("custom anchor", { skip: true }, () => (
-    <BadgeList Anchor={NewTabAnchor} values={badges.slice(0, 4)} m={1} />
-  ))
-  .addWithPercyOptions("many badges", { skip: true }, () => (
-    <BadgeList values={badges} m={1} />
-  ));
+  .add("many badges", () => <BadgeList values={badges} m={2} />);
