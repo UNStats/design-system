@@ -1,13 +1,16 @@
 import React from "react";
-import { addDecorator, configure } from "@storybook/react";
+import { addDecorator, configure, setAddon } from "@storybook/react";
 import { setOptions } from "@storybook/addon-options";
-import "@storybook/addon-console";
+import JSXAddon from "storybook-addon-jsx";
+import { withKnobs } from "@storybook/addon-knobs/react";
 import Provider from "../../src/helpers/Provider";
 import pkg from "../../package.json";
 
 // Set Storybook UI options.
 setOptions({
-  name: `@undataforum/components v${pkg.version}`
+  // name: `${pkg.name} v${pkg.version}`,
+  name: `components v${pkg.version}`,
+  addonPanelInRight: true
 });
 
 // Add decorators before require.context:
@@ -15,6 +18,9 @@ setOptions({
 
 // eslint-disable-next-line react/jsx-filename-extension
 addDecorator(story => <Provider>{story()}</Provider>);
+addDecorator(withKnobs);
+
+setAddon(JSXAddon);
 
 function loadStories() {
   // Sort order of nested stories is determined by loading order.
