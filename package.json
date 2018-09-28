@@ -36,7 +36,7 @@
     "prop-types": "^15.6.2",
     "react-helmet": "^5.2.0",
     "rebass": "^3.0.0-8",
-    "styled-components": "^3.2.6",
+    "styled-components": "^4.0.0-beta.8-unpure",
     "styled-system": "^3.0.1"
   },
   "peerDependencies": {
