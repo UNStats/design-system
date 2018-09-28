@@ -8,7 +8,6 @@ import pkg from "../../package.json";
 
 // Set Storybook UI options.
 setOptions({
-  // name: `${pkg.name} v${pkg.version}`,
   name: `components v${pkg.version}`,
   addonPanelInRight: true
 });
@@ -16,7 +15,7 @@ setOptions({
 // Add decorators before require.context:
 // https://github.com/storybooks/storybook/issues/3246
 
-// eslint-disable-next-line react/jsx-filename-extension
+// eslint-disable-next-line
 addDecorator(story => <Provider>{story()}</Provider>);
 addDecorator(withKnobs);
 

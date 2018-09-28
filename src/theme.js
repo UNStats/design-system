@@ -1,7 +1,3 @@
-const borders = [0, "1px solid", "2px solid", "3px solid"];
-
-const breakpoints = ["30em", "60em"];
-
 // Color palette.
 const primary = "#00609d";
 const blue = "#0e6a9c";
@@ -12,7 +8,13 @@ const gray = "#909090";
 const black = "#000000";
 const white = "#ffffff";
 
+const borders = [0, "1px solid", "2px solid", "3px solid"];
+
+const breakpoints = ["30em", "60em"];
+
 export const colors = {
+  text: black,
+  background: white,
   primary,
   blue,
   green,
@@ -20,9 +22,7 @@ export const colors = {
   yellow,
   gray,
   black,
-  white,
-  text: black,
-  background: white
+  white
 };
 
 export const colorSchemes = {
@@ -61,9 +61,8 @@ export const colorSchemes = {
 };
 
 export const fonts = {
-  sansSerif:
-    "-apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif",
-  serif: "georgia, times, serif"
+  sans: "Nunito, sans-serif",
+  serif: "Lora, serif"
 };
 
 // http://tachyons.io/docs/typography/scale/
@@ -79,8 +78,8 @@ const fontSizes = [
 ];
 
 const fontWeights = {
-  bold: "bold",
-  normal: "normal"
+  normal: 400,
+  bold: 700
 };
 
 // https://tachyons.io/docs/layout/heights/
