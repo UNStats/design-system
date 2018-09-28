@@ -1,18 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Flex } from "grid-styled";
-import Text from "../Text";
-import { colors } from "../../theme";
+import { Flex, Text } from "rebass";
 
-const AlternateSiteTitle = ({ color, year }) => (
+const AlternateSiteTitle = ({ color, year, ...props }) => (
   <Flex
+    {...props}
     flexDirection={["row", "column"]}
     justifyContent="center"
     alignItems="center"
   >
     <Text
       color={color}
-      fontFamily="sansSerif"
+      fontFamily="sans"
       fontSize={[4, 3, 2]}
       fontWeight="bold"
       mr={[2, 0]}
@@ -21,7 +20,7 @@ const AlternateSiteTitle = ({ color, year }) => (
     </Text>
     <Text
       color={color}
-      fontFamily="sansSerif"
+      fontFamily="sans"
       fontSize={[4, 4, 3]}
       fontWeight="bold"
     >
@@ -31,7 +30,7 @@ const AlternateSiteTitle = ({ color, year }) => (
 );
 
 AlternateSiteTitle.propTypes = {
-  color: PropTypes.oneOf(Object.keys(colors)),
+  color: PropTypes.string,
   year: PropTypes.number.isRequired
 };
 
