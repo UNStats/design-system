@@ -2,57 +2,60 @@ import React, { Fragment } from "react";
 import { storiesOf } from "@storybook/react";
 import styled from "styled-components";
 import { display } from "styled-system";
+import { Box, Image } from "rebass";
 import Avatar from "./Avatar";
 import profiles from "../../profiles";
 
-const Image = styled.img`
-  ${display};
-`;
+const Img = styled(Image)(display);
 
 storiesOf("Primitives/Avatar", module)
-  .add("fixed size", () => (
-    <Avatar m={2}>
-      {({ className }) => (
-        <Image
-          display="inline-block"
-          alt={profiles[0].name}
-          className={className}
-          height={128}
-          width={128}
-          src={profiles[0].img}
-        />
-      )}
-    </Avatar>
-  ))
-  .add("responsive size", () => (
-    <Avatar m={2}>
-      {({ className }) => (
-        <Fragment>
-          <Image
-            display={["inline-block", "none"]}
-            alt={profiles[1].name}
-            className={className}
-            height={32}
-            width={32}
-            src={profiles[1].img}
-          />
-          <Image
-            display={["none", "inline-block", "none"]}
-            alt={profiles[1].name}
-            className={className}
-            height={64}
-            width={64}
-            src={profiles[1].img}
-          />
-          <Image
-            display={["none", "none", "inline-block"]}
-            alt={profiles[1].name}
-            className={className}
+  .addWithJSX("fixed size", () => (
+    <Box m={2}>
+      <Avatar>
+        {() => (
+          <Img
+            display="block"
+            alt={profiles[0].name}
+            borderRadius="circle"
             height={128}
             width={128}
-            src={profiles[1].img}
+            src={profiles[0].img}
           />
-        </Fragment>
-      )}
-    </Avatar>
+        )}
+      </Avatar>
+    </Box>
+  ))
+  .addWithJSX("responsive size", () => (
+    <Box m={2}>
+      <Avatar>
+        {() => (
+          <Fragment>
+            <Img
+              display={["block", "none"]}
+              alt={profiles[1].name}
+              borderRadius="circle"
+              height={32}
+              width={32}
+              src={profiles[1].img}
+            />
+            <Img
+              display={["none", "block", "none"]}
+              alt={profiles[1].name}
+              borderRadius="circle"
+              height={64}
+              width={64}
+              src={profiles[1].img}
+            />
+            <Img
+              display={["none", "none", "block"]}
+              alt={profiles[1].name}
+              borderRadius="circle"
+              height={128}
+              width={128}
+              src={profiles[1].img}
+            />
+          </Fragment>
+        )}
+      </Avatar>
+    </Box>
   ));

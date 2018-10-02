@@ -1,19 +1,9 @@
-import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
-import { space } from "styled-system";
 
-const Avatar = ({ children, ...props }) => {
-  const StyledImage = styled(children)`
-    border-radius: 50%;
-    ${space};
-  `;
-  return <StyledImage {...props} />;
-};
+const Avatar = ({ children }) => children();
 
 Avatar.propTypes = {
-  children: PropTypes.func.isRequired,
-  ...space.propTypes
+  children: PropTypes.func.isRequired
 };
 
 export default Avatar;

@@ -105,6 +105,13 @@ const maxWidths = [
   "96rem"
 ];
 
+const radii = {
+  none: 0,
+  circle: "100%",
+  pill: "9999px",
+  rounded: "1rem"
+};
+
 // http://tachyons.io/docs/layout/spacing/
 const space = [0, ".25rem", ".5rem", "1rem", "2rem", "4rem", "8rem", "16rem"];
 
@@ -122,6 +129,7 @@ const theme = {
   heights,
   lineHeights,
   maxWidths,
+  radii,
   space,
   widths
 };

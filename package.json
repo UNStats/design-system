@@ -20,6 +20,11 @@
   "lint-staged": {
     "*.{js,jsx}": "eslint"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && pretty-quick --staged"
+    }
+  },
   "scripts": {
     "start": "start-storybook -p 9009 -c config/storybook",
     "build": "rimraf ./dist && babel ./src -d ./dist --ignore test.js,stories.jsx,profiles.js",
@@ -27,7 +32,6 @@
     "format": "pretty-quick",
     "inspect": "node --inspect-brk node_modules/.bin/jest --runInBand",
     "lint": "eslint --ext .jsx,.js --ignore-path .gitignore .",
-    "precommit": "lint-staged && pretty-quick --staged",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
