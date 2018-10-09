@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const NewTabAnchor = ({ className, children, href }) => (
+const NewTabLink = ({ children, href, className }) => (
   <a
     className={className}
     href={href}
@@ -12,14 +12,14 @@ const NewTabAnchor = ({ className, children, href }) => (
   </a>
 );
 
-NewTabAnchor.propTypes = {
-  className: PropTypes.string,
+NewTabLink.propTypes = {
   children: PropTypes.node.isRequired,
-  href: PropTypes.string.isRequired
+  href: PropTypes.string.isRequired,
+  className: PropTypes.string
 };
 
-NewTabAnchor.defaultProps = {
+NewTabLink.defaultProps = {
   className: ""
 };
 
-export default NewTabAnchor;
+export default NewTabLink;
