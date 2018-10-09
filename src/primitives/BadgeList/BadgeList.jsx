@@ -1,32 +1,32 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import { Flex } from "grid-styled";
+import { Flex } from "rebass";
 import Badge from "../Badge";
-import Anchor from "../Anchor/Anchor";
-import { colors } from "../../theme";
 
-const List = styled(Flex)`
-  div:last-child {
-    margin-right: 0;
-  }
-`;
-
-const BadgeList = ({ Anchor: A, values, ...props }) => (
-  <List flexWrap="wrap" justifyContent="center" {...props}>
+const BadgeList = ({ link, values, ...props }) => (
+  <Flex
+    {...props}
+    css={{
+      "div:last-child": {
+        "margin-right": 0
+      }
+    }}
+    flexWrap="wrap"
+    justifyContent="center"
+  >
     {values.map(({ color, href, text }) => (
-      <Badge Anchor={A} color={color} href={href} mb={2} mr={2} key={text}>
+      <Badge color={color} href={href} link={link} mb={2} mr={2} key={text}>
         {text}
       </Badge>
     ))}
-  </List>
+  </Flex>
 );
 
 BadgeList.propTypes = {
-  Anchor: PropTypes.func,
+  link: PropTypes.func,
   values: PropTypes.arrayOf(
     PropTypes.shape({
-      color: PropTypes.oneOf(Object.keys(colors)),
+      color: PropTypes.string,
       href: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired
     })
@@ -34,7 +34,7 @@ BadgeList.propTypes = {
 };
 
 BadgeList.defaultProps = {
-  Anchor
+  link: undefined
 };
 
 export default BadgeList;

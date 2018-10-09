@@ -1,24 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import Anchor from "../Anchor/Anchor";
-import Link from "../Link";
-import Text from "../Text";
-import { colors } from "../../theme";
+import styled, { withTheme } from "styled-components";
+import { borderRadius } from "styled-system";
+import { Text, Link } from "rebass";
 
-const Pill = styled(Text.span)`
-  display: inline-block;
-  border-radius: 9999px;
-  color: ${({ theme, color }) => theme.colors[theme.colorSchemes[color].color]};
-  background-color: ${({ theme, color }) =>
-    theme.colors[theme.colorSchemes[color].bgColor]};
-`;
+const Pill = styled(Text)(borderRadius);
 
-const Badge = ({ Anchor: A, href, color, children, ...props }) => (
-  <Link Anchor={A} display="inline-block" href={href} {...props}>
+const Badge = ({
+  children,
+  color,
+  href,
+  link,
+  theme: { colorSchemes },
+  ...props
+}) => (
+  <Link {...props} as={link} css={{ display: "inline-block" }} href={href}>
     <Pill
-      color={color}
-      fontFamily="sansSerif"
+      borderRadius="pill"
+      {...colorSchemes[color]}
+      fontFamily="sans"
       fontSize={7}
       fontWeight="bold"
       px={2}
@@ -30,15 +30,15 @@ const Badge = ({ Anchor: A, href, color, children, ...props }) => (
 );
 
 Badge.propTypes = {
-  Anchor: PropTypes.func,
   children: PropTypes.string.isRequired,
-  color: PropTypes.oneOf(Object.keys(colors)),
-  href: PropTypes.string.isRequired
+  color: PropTypes.string,
+  href: PropTypes.string.isRequired,
+  link: PropTypes.func
 };
 
 Badge.defaultProps = {
-  Anchor,
-  color: "primary"
+  color: "primary",
+  link: undefined
 };
 
-export default Badge;
+export default withTheme(Badge);

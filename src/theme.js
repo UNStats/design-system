@@ -27,35 +27,35 @@ export const colors = {
 
 export const colorSchemes = {
   primary: {
-    bgColor: "primary",
+    bg: "primary",
     color: "white"
   },
   blue: {
-    bgColor: "blue",
+    bg: "blue",
     color: "white"
   },
   green: {
-    bgColor: "green",
+    bg: "green",
     color: "white"
   },
   red: {
-    bgColor: "red",
+    bg: "red",
     color: "white"
   },
   yellow: {
-    bgColor: "yellow",
+    bg: "yellow",
     color: "black"
   },
   gray: {
-    bgColor: "gray",
+    bg: "gray",
     color: "black"
   },
   black: {
-    bgColor: "black",
+    bg: "black",
     color: "white"
   },
   white: {
-    bgColor: "white",
+    bg: "white",
     color: "black"
   }
 };
@@ -118,6 +118,16 @@ const space = [0, ".25rem", ".5rem", "1rem", "2rem", "4rem", "8rem", "16rem"];
 // http://tachyons.io/docs/layout/widths/
 const widths = [0, "1rem", "2rem", "4rem", "8rem", "16rem"];
 
+const Link = {
+  height: "100%",
+  "text-decoration": "none",
+  transition: "all 0.2s ease-out",
+  "&:hover": {
+    opacity: "0.5",
+    transition: "all 0.2s ease-in"
+  }
+};
+
 const theme = {
   borders,
   breakpoints,
@@ -131,7 +141,8 @@ const theme = {
   maxWidths,
   radii,
   space,
-  widths
+  widths,
+  Link
 };
 
 export default theme;

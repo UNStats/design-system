@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import BadgeList from "./BadgeList";
-import NewTabAnchor from "../NewTabAnchor";
+import NewTabLink from "../NewTabLink";
 
 const badges = [
   { text: "Design Engineer", href: "#", color: "red" },
@@ -23,8 +23,10 @@ const badges = [
 ];
 
 storiesOf("Primitives/BadgeList", module)
-  .add("default anchor", () => <BadgeList values={badges.slice(0, 4)} m={2} />)
-  .add("custom anchor", () => (
-    <BadgeList Anchor={NewTabAnchor} values={badges.slice(0, 4)} m={2} />
+  .addWithJSX("default anchor", () => (
+    <BadgeList values={badges.slice(0, 4)} m={2} />
   ))
-  .add("many badges", () => <BadgeList values={badges} m={2} />);
+  .addWithJSX("custom anchor", () => (
+    <BadgeList link={NewTabLink} values={badges.slice(0, 4)} m={2} />
+  ))
+  .addWithJSX("many badges", () => <BadgeList values={badges} m={2} />);
