@@ -2,47 +2,48 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { display } from "styled-system";
-import { Flex } from "grid-styled";
-import Text from "../Text";
-import { colors } from "../../theme";
+import { Flex, Text } from "rebass";
 
-const NoWrapText = styled(Text)`
-  white-space: nowrap;
-`;
+const Hide = styled(Text)(display);
 
-const Hide = styled.span`
-  ${display};
-`;
-
-const SiteTitle = ({ color }) => (
+const SiteTitle = ({ color, ...props }) => (
   <Flex
+    {...props}
     flexDirection={["row", "column"]}
     justifyContent="center"
     alignItems="center"
   >
-    <NoWrapText
+    <Text
+      css={{ "white-space": "nowrap" }}
       color={color}
-      fontFamily="sansSerif"
+      fontFamily="sans"
       fontSize={[4, 5, 4]}
       fontWeight="bold"
       mr={[2, 0]}
     >
-      U<Hide display={["none", "inline"]}>nited </Hide>N
-      <Hide display={["none", "inline"]}>ations</Hide>
-    </NoWrapText>
-    <NoWrapText
+      U
+      <Hide as="span" display={["none", "inline"]}>
+        nited{" "}
+      </Hide>
+      N
+      <Hide as="span" display={["none", "inline"]}>
+        ations
+      </Hide>
+    </Text>
+    <Text
+      css={{ "white-space": "nowrap" }}
       color={color}
-      fontFamily="sansSerif"
+      fontFamily="sans"
       fontSize={[4, 4, 3]}
       fontWeight="bold"
     >
       World Data Forum
-    </NoWrapText>
+    </Text>
   </Flex>
 );
 
 SiteTitle.propTypes = {
-  color: PropTypes.oneOf(Object.keys(colors))
+  color: PropTypes.string
 };
 
 SiteTitle.defaultProps = {
