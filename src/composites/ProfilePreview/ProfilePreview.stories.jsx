@@ -1,155 +1,162 @@
 import React, { Fragment } from "react";
 import { storiesOf } from "@storybook/react";
 import styled from "styled-components";
+import { Image } from "rebass";
 import { display } from "styled-system";
-import BadgeList from "../../primitives/BadgeList";
 import ProfilePreview from "./ProfilePreview";
+import NewTabLink from "../../primitives/NewTabLink";
 import rawProfiles from "../../profiles";
 
 // Remove href from profiles.
 const profiles = rawProfiles.map(({ href, ...profile }) => ({ ...profile }));
 
-const Image = styled.img`
-  ${display};
-`;
+const Img = styled(Image)(display);
 
-const badges = () => (
-  <BadgeList
-    mt={[1, 2, 3]}
-    mb={0}
-    values={[
-      { text: "Committee Member", color: "red", href: "#" },
-      { text: "Keynote Speaker", color: "yellow", href: "#" }
-    ]}
-  />
-);
+const badges = [
+  { text: "Committee Member", color: "red", href: "/committee" },
+  { text: "Keynote Speaker", color: "yellow", href: "/keynotes" }
+];
 
 storiesOf("Composites/ProfilePreview", module)
-  .add("complete profile with fixed image", () => (
+  .addWithJSX("complete profile", () => (
     <ProfilePreview
-      name={profiles[0].name}
-      jobtitle={profiles[0].jobtitle}
-      organization={profiles[0].organization}
-      badges={badges}
-      m={2}
-    >
-      {({ className }) => (
-        <Image
-          display="inline-block"
+      avatar={() => (
+        <Img
+          display="block"
           alt={profiles[0].name}
+          borderRadius="circle"
           height={128}
           width={128}
           src={profiles[0].img}
-          className={className}
         />
       )}
-    </ProfilePreview>
-  ))
-  .add("no jobtitle", () => (
-    <ProfilePreview
-      name={profiles[1].name}
-      organization={profiles[1].organization}
+      name={profiles[0].name}
+      affiliation={{
+        jobtitle: profiles[0].jobtitle,
+        organization: profiles[0].organization
+      }}
+      badges={badges}
       m={2}
-    >
-      {({ className }) => (
-        <Image
-          display="inline-block"
+    />
+  ))
+  .addWithJSX("avatar only", () => (
+    <ProfilePreview
+      avatar={() => (
+        <Img
+          display="block"
           alt={profiles[1].name}
-          height={128}
-          width={128}
+          borderRadius="circle"
+          height={64}
+          width={64}
           src={profiles[1].img}
-          className={className}
         />
       )}
-    </ProfilePreview>
-  ))
-  .add("no organization", () => (
-    <ProfilePreview
-      name={profiles[2].name}
-      jobtitle={profiles[2].jobtitle}
       m={2}
-    >
-      {({ className }) => (
-        <Image
-          display="inline-block"
+    />
+  ))
+  .addWithJSX("avatar and name only", () => (
+    <ProfilePreview
+      avatar={() => (
+        <Img
+          display="block"
           alt={profiles[2].name}
+          borderRadius="circle"
           height={128}
           width={128}
           src={profiles[2].img}
-          className={className}
         />
       )}
-    </ProfilePreview>
-  ))
-  .add("really long strings", () => (
-    <ProfilePreview
-      name={profiles[29].name}
-      jobtitle={profiles[29].jobtitle}
-      organization={profiles[29].organization}
+      name={profiles[2].name}
       m={2}
-    >
-      {({ className }) => (
-        <Image
-          display="inline-block"
-          alt={profiles[29].name}
-          height={128}
-          width={128}
-          src={profiles[29].img}
-          className={className}
-        />
-      )}
-    </ProfilePreview>
+    />
   ))
-  .add("responsive image", () => (
+  .addWithJSX("responsive image", () => (
     <ProfilePreview
-      name={profiles[3].name}
-      jobtitle={profiles[3].jobtitle}
-      organization={profiles[3].organization}
-      m={2}
-    >
-      {({ className }) => (
+      avatar={() => (
         <Fragment>
-          <Image
-            display={["inline-block", "none"]}
+          <Img
+            display={["block", "none"]}
             alt={profiles[3].name}
+            borderRadius="circle"
+            height={32}
+            width={32}
+            src={profiles[3].img}
+          />
+          <Img
+            display={["none", "block", "none"]}
+            alt={profiles[3].name}
+            borderRadius="circle"
             height={64}
             width={64}
             src={profiles[3].img}
-            className={className}
           />
-          <Image
-            display={["none", "inline-block"]}
+          <Img
+            display={["none", "none", "block"]}
             alt={profiles[3].name}
+            borderRadius="circle"
             height={128}
             width={128}
             src={profiles[3].img}
-            className={className}
           />
         </Fragment>
       )}
-    </ProfilePreview>
+      name={profiles[3].name}
+      m={2}
+    />
   ))
-  .add("name only with custom font size", () => (
-    <ProfilePreview name={profiles[4].name} fontSize={[7, 6]} m={2}>
-      {({ className }) => (
-        <Fragment>
-          <Image
-            display={["inline-block", "none"]}
-            alt={profiles[4].name}
-            height={32}
-            width={32}
-            src={profiles[4].img}
-            className={className}
-          />
-          <Image
-            display={["none", "inline-block"]}
-            alt={profiles[4].name}
-            height={64}
-            width={64}
-            src={profiles[4].img}
-            className={className}
-          />
-        </Fragment>
+  .addWithJSX("custom font size", () => (
+    <ProfilePreview
+      avatar={() => (
+        <Img
+          display="block"
+          alt={profiles[4].name}
+          borderRadius="circle"
+          height={128}
+          width={128}
+          src={profiles[4].img}
+        />
       )}
-    </ProfilePreview>
+      name={profiles[4].name}
+      fontSize={[5, 3]}
+      m={2}
+    />
+  ))
+  .addWithJSX("custom link", () => (
+    <ProfilePreview
+      avatar={() => (
+        <Img
+          display="block"
+          alt={profiles[5].name}
+          borderRadius="circle"
+          height={128}
+          width={128}
+          src={profiles[5].img}
+        />
+      )}
+      name={profiles[5].name}
+      badges={badges}
+      link={NewTabLink}
+      m={2}
+    />
+  ))
+  .addWithJSX("really long strings", () => (
+    <ProfilePreview
+      avatar={() => (
+        <Img
+          display="block"
+          alt={profiles[29].name}
+          borderRadius="circle"
+          height={128}
+          width={128}
+          src={profiles[29].img}
+        />
+      )}
+      name={profiles[29].name}
+      affiliation={{
+        jobtitle: profiles[29].jobtitle,
+        organization: profiles[29].organization
+      }}
+      badges={badges}
+      m={2}
+    />
   ));

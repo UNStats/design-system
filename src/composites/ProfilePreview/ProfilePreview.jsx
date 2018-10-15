@@ -1,75 +1,79 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { fontSize, space } from "styled-system";
-import { Flex } from "grid-styled";
-import Avatar from "../../primitives/Avatar";
-import Heading from "../../primitives/Heading";
-import Text from "../../primitives/Text";
+import { Flex, Text } from "rebass";
+import BadgeList from "../../primitives/BadgeList";
 
 const ProfilePreview = ({
+  avatar,
   name,
-  fontSize: size,
-  jobtitle,
-  organization,
+  affiliation,
   badges,
-  children,
+  fontSize,
+  link,
   ...props
 }) => (
-  <Flex flexDirection="column" alignItems="center" {...props}>
-    <Avatar mb={[1, 2]}>{children}</Avatar>
-    <Heading.h1
-      fontFamily="sansSerif"
-      fontSize={size}
-      textAlign={["center", "left"]}
+  <Flex {...props} flexDirection="column" alignItems="center">
+    {avatar()}
+    <Text
+      as="h1"
+      fontFamily="sans"
+      fontSize={fontSize}
+      textAlign="center"
       mt={0}
+      mb={0}
     >
       {name}
-    </Heading.h1>
-    {jobtitle && (
-      <Text
-        fontFamily="sansSerif"
-        fontSize={5}
-        textAlign="center"
-        mt={[1, 2, 3]}
-        mb={0}
-      >
-        {jobtitle}
-      </Text>
+    </Text>
+    {affiliation && (
+      <Flex flexDirection="column" mt={3}>
+        <Text fontFamily="sans" fontSize={5} textAlign="center">
+          {affiliation.jobtitle}
+        </Text>
+        <Text
+          fontFamily="sans"
+          fontSize={5}
+          fontWeight="bold"
+          textAlign="center"
+          mt={1}
+        >
+          {affiliation.organization}
+        </Text>
+      </Flex>
     )}
-    {organization && (
-      <Text
-        fontFamily="sansSerif"
-        fontSize={5}
-        fontWeight="bold"
-        textAlign="center"
-        mt={1}
-        mb={0}
-      >
-        {organization}
-      </Text>
-    )}
-    {badges && badges()}
+    {badges && <BadgeList link={link} values={badges} mt={3} />}
   </Flex>
 );
 
 ProfilePreview.propTypes = {
-  /** Image render prop. */
-  children: PropTypes.func.isRequired,
-  name: PropTypes.string.isRequired,
-  /** Responsive font size for name. */
-  fontSize: fontSize.propTypes.fontSize,
-  jobtitle: PropTypes.string,
-  organization: PropTypes.string,
-  /** Badges render prop. */
-  badges: PropTypes.func,
-  ...space.propTypes
+  /** Render prop. */
+  avatar: PropTypes.func.isRequired,
+  name: PropTypes.string,
+  affiliation: PropTypes.shape({
+    jobtitle: PropTypes.string.isRequired,
+    organization: PropTypes.string.isRequired
+  }),
+  badges: PropTypes.arrayOf(
+    PropTypes.shape({
+      color: PropTypes.string,
+      href: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired
+    })
+  ),
+  /** Responsive font-size for name. */
+  fontSize: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+    PropTypes.array
+  ]),
+  link: PropTypes.func
 };
 
 ProfilePreview.defaultProps = {
+  name: undefined,
+  affiliation: undefined,
+  badges: undefined,
   fontSize: [4, 3],
-  jobtitle: "",
-  organization: "",
-  badges: undefined
+  link: undefined
 };
 
 export default ProfilePreview;
