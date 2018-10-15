@@ -22,7 +22,8 @@ Head.propTypes = {
 };
 
 Head.defaultProps = {
-  href: "https://fonts.googleapis.com/css?family=Lora:400,700|Nunito:400,700",
+  href:
+    "https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:400,700",
   noRobots: false,
   url: ""
 };

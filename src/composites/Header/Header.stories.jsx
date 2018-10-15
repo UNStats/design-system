@@ -1,8 +1,9 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import { select } from "@storybook/addon-knobs/react";
 import Header from "./Header";
 import AlternateSiteTitle from "../../primitives/AlternateSiteTitle";
-import NewTabAnchor from "../../primitives/NewTabAnchor";
+import NewTabLink from "../../primitives/NewTabLink";
 
 const links = [
   {
@@ -20,9 +21,24 @@ const links = [
 ];
 
 storiesOf("Composites/Header", module)
-  .add("everything default", () => <Header links={links} />)
-  .add("custom color", () => <Header color="red" links={links} />)
-  .add("custom anchor", () => <Header links={links} Anchor={NewTabAnchor} />)
+  .addWithJSX("knobs", () => (
+    <Header
+      color={select(
+        "color",
+        {
+          primary: "primary",
+          blue: "blue",
+          green: "green",
+          red: "red",
+          yellow: "yellow"
+        },
+        "primary"
+      )}
+      links={links}
+    />
+  ))
+  .addWithJSX("default color", () => <Header links={links} />)
+  .add("custom link", () => <Header link={NewTabLink} links={links} />)
   .add("custom title", () => (
     <Header
       links={links}

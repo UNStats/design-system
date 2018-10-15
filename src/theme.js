@@ -61,8 +61,8 @@ export const colorSchemes = {
 };
 
 export const fonts = {
-  sans: "Nunito, sans-serif",
-  serif: "Lora, serif"
+  sans: "Lato, sans-serif",
+  serif: "Merriweather, serif"
 };
 
 // http://tachyons.io/docs/typography/scale/
@@ -90,20 +90,6 @@ export const lineHeights = {
   title: 1.25,
   copy: 1.5
 };
-
-// http://tachyons.io/docs/layout/max-widths/
-const maxWidths = [
-  0,
-  "1rem",
-  "2rem",
-  "4rem",
-  "8rem",
-  "16rem",
-  "32rem",
-  "48rem",
-  "64rem",
-  "96rem"
-];
 
 const radii = {
   none: 0,
@@ -138,7 +124,6 @@ const theme = {
   fontWeights,
   heights,
   lineHeights,
-  maxWidths,
   radii,
   space,
   widths,

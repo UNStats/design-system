@@ -15,47 +15,40 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { borderColor, color, height, lineHeight } from "styled-system";
-import { Box, Flex } from "grid-styled";
-import Anchor from "../../primitives/Anchor";
-import Container from "../../helpers/Container";
-import Link from "../../primitives/Link";
+import { borderColor, height } from "styled-system";
+import { Box, Flex, Link, Text } from "rebass";
 import SiteTitle from "../../primitives/SiteTitle";
-import Text from "../../primitives/Text";
-import { colors } from "../../theme";
 
-// Filter borderColor and lineHeight to avoid that it is passed on to DOM element.
+// Filter borderColor and lineHeight to avoid that it is passed on to DOM
 // See https://github.com/styled-components/styled-components/issues/439.
-const Wrapper = styled(
-  ({ borderColor: c, children, lineHeight: lh, ...props }) => (
-    <Container {...props}>{children}</Container>
-  )
-)`
-  border-bottom: 3px solid;
-  ${borderColor};
-  ${color};
-  ${height};
-  ${lineHeight};
-`;
 
+const Wrapper = styled(Box)(borderColor, height);
+
+/*
 const Content = styled(Flex)`
   height: 100%;
 `;
+*/
 
-const Header = ({ Anchor: A, color: c, links, Title }) => (
+// lineHeight="title"
+// maxWidth={9}
+
+const Header = ({ color, link, links, title, ...props }) => (
   <Wrapper
-    is="header"
-    borderColor={c}
+    {...props}
+    as="header"
+    css={{ "border-bottom": "3px solid", "box-sizing": "content-box" }}
+    borderColor={color}
     height={[64, 80, 96]}
-    lineHeight="title"
-    maxWidth={9}
   >
-    <Content
+    <Flex
+      css={{ "box-sizing": "border-box", height: "100%", maxWidth: "96rem" }}
       justifyContent={["center", "flex-start"]}
       alignItems={["center", "flex-end"]}
-      py={[1, 2]}
+      mx="auto"
+      p={[1, 2]}
     >
-      <Link Anchor={A} display="block" href="/">
+      <Link css={{ display: "block" }} link={link} href="/">
         <svg
           height="100%"
           viewBox="0 0 173 192"
@@ -175,55 +168,52 @@ const Header = ({ Anchor: A, color: c, links, Title }) => (
         </svg>
       </Link>
       <Flex
-        is="nav"
+        as="nav"
         flexDirection={["column", "row"]}
         flex={[0, 1]}
         justifyContent={["center", "space-between"]}
         alignItems={["center", "flex-end"]}
         pl={[3, 2]}
       >
-        <Box mb={[0, -1]}>
-          <Link Anchor={A} display="block" href="/">
-            <Title color={c} />
-          </Link>
-        </Box>
+        <Link css={{ display: "block" }} link={link} href="/" mb={[0, -1]}>
+          {title(color)}
+        </Link>
         <Flex mb={[0, -1]}>
           {links.map(({ href, text }) => (
-            <Box key={text} ml={[2, 3, 4]} mr={[2, 0]}>
-              <Link Anchor={A} href={href}>
-                <Text.span
-                  color={c}
-                  fontFamily="sansSerif"
-                  fontSize={[6, 5, 4]}
-                  fontWeight="bold"
-                >
-                  {text}
-                </Text.span>
-              </Link>
-            </Box>
+            <Link key={href} link={link} href={href} ml={[2, 3, 4]} mr={[2, 0]}>
+              <Text
+                as="span"
+                color={color}
+                fontFamily="sans"
+                fontSize={[5, 4, 3]}
+                fontWeight="bold"
+              >
+                {text}
+              </Text>
+            </Link>
           ))}
         </Flex>
       </Flex>
-    </Content>
+    </Flex>
   </Wrapper>
 );
 
 Header.propTypes = {
-  Anchor: PropTypes.func,
-  color: PropTypes.oneOf(Object.keys(colors)),
+  color: PropTypes.string,
+  link: PropTypes.func,
   links: PropTypes.arrayOf(
     PropTypes.shape({
       href: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired
     })
   ).isRequired,
-  Title: PropTypes.func
+  title: PropTypes.func
 };
 
 Header.defaultProps = {
-  Anchor,
   color: "primary",
-  Title: SiteTitle
+  link: undefined,
+  title: color => <SiteTitle color={color} />
 };
 
 export default Header;
