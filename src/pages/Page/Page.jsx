@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Container from "../../helpers/Container";
+import { Box } from "rebass";
 import Head from "../../helpers/Head";
 
 const Page = ({ title, description, children }) => (
-  <Container maxWidth={7} mt={[3, 4]} mb={[3, 4]}>
+  <Box mt={[3, 4]} mb={[3, 4]}>
     <Head title={title} description={description} />
     {children}
-  </Container>
+  </Box>
 );
 
 Page.propTypes = {
