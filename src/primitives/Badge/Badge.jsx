@@ -19,7 +19,7 @@ const Badge = ({
       borderRadius="pill"
       {...colorSchemes[color]}
       fontFamily="sans"
-      fontSize={7}
+      fontSize={0}
       fontWeight="bold"
       px={2}
       py={1}

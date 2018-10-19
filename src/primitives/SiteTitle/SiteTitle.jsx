@@ -17,7 +17,7 @@ const SiteTitle = ({ color, ...props }) => (
       css={{ "white-space": "nowrap" }}
       color={color}
       fontFamily="sans"
-      fontSize={3}
+      fontSize={4}
       fontWeight="bold"
       mr={[2, 0]}
     >
@@ -34,7 +34,7 @@ const SiteTitle = ({ color, ...props }) => (
       css={{ "white-space": "nowrap" }}
       color={color}
       fontFamily="sans"
-      fontSize={[3, 3, 2]}
+      fontSize={[4, 4, 5]}
       fontWeight="bold"
     >
       World Data Forum

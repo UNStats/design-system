@@ -185,7 +185,7 @@ const Header = ({ color, link, links, title, ...props }) => (
                 as="span"
                 color={color}
                 fontFamily="sans"
-                fontSize={[5, 4, 3]}
+                fontSize={[2, 3, 4]}
                 fontWeight="bold"
               >
                 {text}

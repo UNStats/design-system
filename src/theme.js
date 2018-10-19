@@ -65,25 +65,21 @@ export const fonts = {
   serif: "Merriweather, serif"
 };
 
-// http://tachyons.io/docs/typography/scale/
+// http://tachyons.io/docs/typography/scale/ (reversed)
 const fontSizes = [
-  0,
-  "3rem",
-  "2.25rem",
-  "1.5rem",
-  "1.25rem",
-  "1rem",
+  ".75rem",
   ".875rem",
-  ".75rem"
+  "1rem",
+  "1.25rem",
+  "1.5rem",
+  "2.25rem",
+  "3rem"
 ];
 
 const fontWeights = {
   normal: 400,
   bold: 700
 };
-
-// https://tachyons.io/docs/layout/heights/
-const heights = [0, "1rem", "2rem", "4rem", "8rem"];
 
 export const lineHeights = {
   solid: 1,
@@ -122,7 +118,6 @@ const theme = {
   fonts,
   fontSizes,
   fontWeights,
-  heights,
   lineHeights,
   radii,
   space,

@@ -26,12 +26,12 @@ const ProfilePreview = ({
     </Text>
     {affiliation && (
       <Flex flexDirection="column" mt={3}>
-        <Text fontFamily="sans" fontSize={5} textAlign="center">
+        <Text fontFamily="sans" fontSize={2} textAlign="center">
           {affiliation.jobtitle}
         </Text>
         <Text
           fontFamily="sans"
-          fontSize={5}
+          fontSize={2}
           fontWeight="bold"
           textAlign="center"
           mt={1}
@@ -72,7 +72,7 @@ ProfilePreview.defaultProps = {
   name: undefined,
   affiliation: undefined,
   badges: undefined,
-  fontSize: [4, 3],
+  fontSize: [3, 4],
   link: undefined
 };
 

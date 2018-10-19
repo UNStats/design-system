@@ -117,7 +117,7 @@ storiesOf("Composites/ProfilePreview", module)
         />
       )}
       name={profiles[4].name}
-      fontSize={[5, 3]}
+      fontSize={[2, 4]}
       m={2}
     />
   ))
