@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Flex, Text } from "rebass";
-import BadgeList from "../../primitives/BadgeList";
+import { Flex, Link, Text } from "rebass";
+import Badge from "../../primitives/Badge";
+import FlexList from "../FlexList";
 
 const ProfilePreview = ({
   avatar,
@@ -40,7 +41,17 @@ const ProfilePreview = ({
         </Text>
       </Flex>
     )}
-    {badges && <BadgeList link={link} values={badges} mt={3} />}
+    {badges && (
+      <FlexList
+        mt={3}
+        render={({ color, href, text }) => (
+          <Link as={link} href={href} key={href} m={1}>
+            <Badge color={color}>{text}</Badge>
+          </Link>
+        )}
+        values={badges}
+      />
+    )}
   </Flex>
 );
 
