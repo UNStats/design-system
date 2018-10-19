@@ -35,7 +35,6 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "grid-styled": "^5.0.2",
     "polished": "^2.0.2",
     "prop-types": "^15.6.2",
     "react-helmet": "^5.2.0",

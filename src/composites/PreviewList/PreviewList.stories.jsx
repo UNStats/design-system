@@ -4,7 +4,7 @@ import { number, select, text } from "@storybook/addon-knobs/react";
 import { Image } from "rebass";
 import PreviewList from "./PreviewList";
 import ProfilePreview from "../ProfilePreview";
-import profiles from "../../profiles";
+import profiles from "../../../test/profiles";
 import NewTabLink from "../../primitives/NewTabLink";
 
 storiesOf("Composites/PreviewList", module)

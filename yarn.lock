@@ -4021,13 +4021,6 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.4:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
   integrity sha1-Dovf5NHduIVNZOBOp8AOKgJuVlg=
 
-grid-styled@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/grid-styled/-/grid-styled-5.0.2.tgz#1e81d7d5bde50a9b43d81cf111b81399126fe595"
-  integrity sha512-kM3kewM77sBifQLZUZD9meoMSXOZE9ArxxM9XZ6qtwb4B2ylHYHH9Ylkt96hDMHA32J+LoEeYoHAvn6+j4fn9Q==
-  dependencies:
-    system-components "^3.0.0"
-
 gzip-size@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/gzip-size/-/gzip-size-3.0.0.tgz#546188e9bdc337f673772f81660464b389dce520"
@@ -8035,13 +8028,6 @@ symbol.prototype.description@^1.0.0:
   integrity sha512-I9mrbZ5M96s7QeJDv95toF1svkUjeBybe8ydhY7foPaBmr0SPJMFupArmMkDrOKTTj0sJVr+nvQNxWLziQ7nDQ==
   dependencies:
     has-symbols "^1.0.0"
-
-system-components@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/system-components/-/system-components-3.0.1.tgz#a4e7d8a7b184aa0612245a4f1bd54b408132e0c0"
-  integrity sha512-9awqnq7esNnqgmOOqU4i0w/9/YsJFm+1IS9lAyuk6a52IrcdToFqH7vFJmnr56FNLsXjOFohonmeHs0QOmvWeQ==
-  dependencies:
-    styled-system "^3.0.1"
 
 table@^5.0.2:
   version "5.1.0"

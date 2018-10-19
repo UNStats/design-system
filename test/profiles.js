@@ -1,4 +1,4 @@
-import avatar from "../test/avatar.png";
+import avatar from "./avatar.png";
 
 const profiles = [
   {

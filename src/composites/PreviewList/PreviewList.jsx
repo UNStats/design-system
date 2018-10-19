@@ -25,7 +25,13 @@ const PreviewList = ({
       justifyContent="center"
     >
       {values.map(({ href, ...value }) => (
-        <Link as={link} css={{ display: "block" }} color={color} href={href}>
+        <Link
+          as={link}
+          css={{ display: "block" }}
+          color={color}
+          href={href}
+          key={href}
+        >
           {preview(value)}
         </Link>
       ))}
