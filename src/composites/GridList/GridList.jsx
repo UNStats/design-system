@@ -2,19 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { gridGap, gridTemplateColumns, justifyContent } from "styled-system";
-import { Box, Link } from "rebass";
+import { Box } from "rebass";
 
 const Grid = styled(Box)(gridGap, gridTemplateColumns, justifyContent);
 
-const PreviewList = ({
-  color,
-  gap,
-  link,
-  preview,
-  values,
-  width,
-  ...props
-}) => {
+const GridList = ({ gap, render, values, width, ...props }) => {
   const repeat = `repeat(auto-fit, ${width})`;
   return (
     <Grid
@@ -24,38 +16,24 @@ const PreviewList = ({
       gridTemplateColumns={repeat}
       justifyContent="center"
     >
-      {values.map(({ href, ...value }) => (
-        <Link
-          as={link}
-          css={{ display: "block" }}
-          color={color}
-          href={href}
-          key={href}
-        >
-          {preview(value)}
-        </Link>
-      ))}
+      {values.map(value => render(value))}
     </Grid>
   );
 };
 
-PreviewList.propTypes = {
-  color: PropTypes.string,
+GridList.propTypes = {
   gap: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string,
     PropTypes.array
   ]),
-  link: PropTypes.func,
-  preview: PropTypes.func.isRequired,
+  render: PropTypes.func.isRequired,
   values: PropTypes.arrayOf(PropTypes.object).isRequired,
   width: PropTypes.string.isRequired
 };
 
-PreviewList.defaultProps = {
-  color: "primary",
-  gap: 3,
-  link: undefined
+GridList.defaultProps = {
+  gap: 3
 };
 
-export default PreviewList;
+export default GridList;
