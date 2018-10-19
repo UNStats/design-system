@@ -1,35 +1,180 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import { number, select, text } from "@storybook/addon-knobs/react";
+import { Image } from "rebass";
 import PreviewList from "./PreviewList";
 import ProfilePreview from "../ProfilePreview";
 import profiles from "../../profiles";
-import NewTabAnchor from "../../primitives/NewTabAnchor";
+import NewTabLink from "../../primitives/NewTabLink";
 
 storiesOf("Composites/PreviewList", module)
-  .add("1 item", () => (
-    <PreviewList Preview={ProfilePreview} values={profiles.slice(0, 1)} />
-  ))
-  .add("2 items", () => (
-    <PreviewList Preview={ProfilePreview} values={profiles.slice(0, 2)} />
-  ))
-  .add("3 items", () => (
-    <PreviewList Preview={ProfilePreview} values={profiles.slice(0, 3)} />
-  ))
-  .add("many items", () => (
-    <PreviewList Preview={ProfilePreview} values={profiles} />
-  ))
-  .add("custom colors", () => (
+  .addWithJSX("avatar example", () => (
     <PreviewList
-      dividerColor="red"
-      Preview={ProfilePreview}
-      textColor="green"
-      values={profiles}
+      preview={ProfilePreview}
+      gap={number("gap", 2)}
+      width={text("width", "64px")}
+      values={profiles.map(({ name, img, href }) => ({
+        avatar: () => (
+          <Image
+            css={{ display: "block" }}
+            alt={name}
+            borderRadius="circle"
+            height={64}
+            width={64}
+            src={img}
+          />
+        ),
+        href
+      }))}
+      m={2}
     />
   ))
-  .add("custom anchor", () => (
+  .addWithJSX("profile example", () => (
     <PreviewList
-      Anchor={NewTabAnchor}
-      Preview={ProfilePreview}
-      values={profiles}
+      color={select(
+        "color",
+        {
+          primary: "primary",
+          blue: "blue",
+          green: "green",
+          red: "red",
+          yellow: "yellow",
+          black: "black"
+        },
+        "black"
+      )}
+      gap={number("gap", 3)}
+      width={text("width", "256px")}
+      preview={ProfilePreview}
+      values={profiles.map(({ name, jobtitle, organization, img, href }) => ({
+        avatar: () => (
+          <Image
+            css={{ display: "block" }}
+            alt={name}
+            borderRadius="circle"
+            height={128}
+            width={128}
+            src={img}
+          />
+        ),
+        name,
+        affiliation: {
+          jobtitle,
+          organization
+        },
+        href
+      }))}
+      m={2}
+    />
+  ))
+  .addWithJSX("1 item", () => (
+    <PreviewList
+      color="black"
+      width="256px"
+      preview={ProfilePreview}
+      values={profiles
+        .slice(0, 1)
+        .map(({ name, jobtitle, organization, img, href }) => ({
+          avatar: () => (
+            <Image
+              css={{ display: "block" }}
+              alt={name}
+              borderRadius="circle"
+              height={128}
+              width={128}
+              src={img}
+            />
+          ),
+          name,
+          affiliation: {
+            jobtitle,
+            organization
+          },
+          href
+        }))}
+      m={2}
+    />
+  ))
+  .addWithJSX("2 items", () => (
+    <PreviewList
+      color="black"
+      width="256px"
+      preview={ProfilePreview}
+      values={profiles
+        .slice(0, 2)
+        .map(({ name, jobtitle, organization, img, href }) => ({
+          avatar: () => (
+            <Image
+              css={{ display: "block" }}
+              alt={name}
+              borderRadius="circle"
+              height={128}
+              width={128}
+              src={img}
+            />
+          ),
+          name,
+          affiliation: {
+            jobtitle,
+            organization
+          },
+          href
+        }))}
+      m={2}
+    />
+  ))
+  .addWithJSX("3 items", () => (
+    <PreviewList
+      color="black"
+      width="256px"
+      preview={ProfilePreview}
+      values={profiles
+        .slice(0, 3)
+        .map(({ name, jobtitle, organization, img, href }) => ({
+          avatar: () => (
+            <Image
+              css={{ display: "block" }}
+              alt={name}
+              borderRadius="circle"
+              height={128}
+              width={128}
+              src={img}
+            />
+          ),
+          name,
+          affiliation: {
+            jobtitle,
+            organization
+          },
+          href
+        }))}
+      m={2}
+    />
+  ))
+  .addWithJSX("custom link", () => (
+    <PreviewList
+      color="black"
+      width="256px"
+      preview={ProfilePreview}
+      values={profiles.map(({ name, jobtitle, organization, img, href }) => ({
+        avatar: () => (
+          <Image
+            css={{ display: "block" }}
+            alt={name}
+            borderRadius="circle"
+            height={128}
+            width={128}
+            src={img}
+          />
+        ),
+        name,
+        affiliation: {
+          jobtitle,
+          organization
+        },
+        href
+      }))}
+      link={NewTabLink}
+      m={2}
     />
   ));
