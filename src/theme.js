@@ -97,9 +97,6 @@ const radii = {
 // http://tachyons.io/docs/layout/spacing/
 const space = [0, ".25rem", ".5rem", "1rem", "2rem", "4rem", "8rem", "16rem"];
 
-// http://tachyons.io/docs/layout/widths/
-const widths = [0, "1rem", "2rem", "4rem", "8rem", "16rem"];
-
 const Link = {
   height: "100%",
   "text-decoration": "none",
@@ -121,7 +118,6 @@ const theme = {
   lineHeights,
   radii,
   space,
-  widths,
   Link
 };
 

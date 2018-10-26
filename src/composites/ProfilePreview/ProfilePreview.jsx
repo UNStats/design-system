@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { propTypes } from "styled-system";
 import { Flex, Link, Text } from "rebass";
 import Badge from "../../primitives/Badge";
 import FlexList from "../FlexList";
@@ -42,6 +43,7 @@ const ProfilePreview = ({
     {avatar()}
     <Text
       as="h1"
+      color="text"
       fontFamily="sans"
       fontSize={fontSize}
       textAlign={align}
@@ -52,10 +54,11 @@ const ProfilePreview = ({
     </Text>
     {affiliation && (
       <Flex flexDirection="column" mt={3}>
-        <Text fontFamily="sans" fontSize={2} textAlign={align}>
+        <Text color="text" fontFamily="sans" fontSize={2} textAlign={align}>
           {affiliation.jobtitle}
         </Text>
         <Text
+          color="text"
           fontFamily="sans"
           fontSize={2}
           fontWeight="bold"
@@ -104,20 +107,16 @@ ProfilePreview.propTypes = {
   ),
   align: PropTypes.oneOf(["left", "center", "right"]),
   /** Responsive font-size for name. */
-  fontSize: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string,
-    PropTypes.array
-  ]),
+  fontSize: propTypes.responsive,
   /** Use this link to link badges. */
   link: PropTypes.func
 };
 
 ProfilePreview.defaultProps = {
+  align: "center",
   name: undefined,
   affiliation: undefined,
   badges: undefined,
-  align: "center",
   fontSize: [3, 4],
   link: undefined
 };

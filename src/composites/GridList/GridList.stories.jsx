@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { number, text } from "@storybook/addon-knobs/react";
+import { number } from "@storybook/addon-knobs/react";
 import { Image, Link } from "rebass";
 import GridList from "./GridList";
 import ProfilePreview from "../ProfilePreview";
@@ -28,7 +28,7 @@ storiesOf("Composites/GridList", module)
         ),
         href
       }))}
-      width={text("width", "64px")}
+      width={number("width", 64)}
     />
   ))
   .addWithJSX("profile example", () => (
@@ -61,13 +61,12 @@ storiesOf("Composites/GridList", module)
         },
         href
       }))}
-      width={text("width", "256px")}
+      width={number("width", 256)}
     />
   ))
   .addWithJSX("1 item", () => (
     <GridList
-      m={2}
-      render={ProfilePreview}
+      render={({ key, ...props }) => <ProfilePreview key={key} {...props} />}
       values={profiles
         .slice(0, 1)
         .map(({ name, jobtitle, organization, img, href }) => ({
@@ -85,16 +84,17 @@ storiesOf("Composites/GridList", module)
             jobtitle,
             organization
           },
-          href
+          key: href
         }))}
-      width="256px"
+      width={256}
+      m={2}
     />
   ))
   .addWithJSX("2 items", () => (
     <GridList
       color="black"
       m={2}
-      render={ProfilePreview}
+      render={props => <ProfilePreview {...props} />}
       values={profiles
         .slice(0, 2)
         .map(({ name, jobtitle, organization, img, href }) => ({
@@ -112,16 +112,16 @@ storiesOf("Composites/GridList", module)
             jobtitle,
             organization
           },
-          href
+          key: href
         }))}
-      width="256px"
+      width={256}
     />
   ))
   .addWithJSX("3 items", () => (
     <GridList
       color="black"
       m={2}
-      render={ProfilePreview}
+      render={props => <ProfilePreview {...props} />}
       values={profiles
         .slice(0, 3)
         .map(({ name, jobtitle, organization, img, href }) => ({
@@ -139,8 +139,8 @@ storiesOf("Composites/GridList", module)
             jobtitle,
             organization
           },
-          href
+          key: href
         }))}
-      width="256px"
+      width={256}
     />
   ));
