@@ -1,10 +1,10 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { select } from "@storybook/addon-knobs/react";
+import { select } from "@storybook/addon-knobs";
 import SiteTitle from "./SiteTitle";
 
 storiesOf("Primitives/SiteTitle", module)
-  .addWithJSX("knobs", () => (
+  .add("knobs", () => (
     <SiteTitle
       color={select(
         "color",
@@ -20,4 +20,4 @@ storiesOf("Primitives/SiteTitle", module)
       m={2}
     />
   ))
-  .addWithJSX("default color", () => <SiteTitle m={2} />);
+  .add("default color", () => <SiteTitle m={2} />);

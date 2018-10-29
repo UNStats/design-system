@@ -8,7 +8,7 @@ import badges from "../../../test/badges";
 import profiles from "../../../test/profiles";
 
 storiesOf("Composites/FlexList", module)
-  .addWithJSX("few avatars example", () => (
+  .add("few avatars example", () => (
     <FlexList
       render={({ avatar, href }) => (
         <Link href={href} key={href} m={2}>
@@ -29,7 +29,7 @@ storiesOf("Composites/FlexList", module)
       }))}
     />
   ))
-  .addWithJSX("many avatars example", () => (
+  .add("many avatars example", () => (
     <FlexList
       render={({ avatar, href }) => (
         <Link href={href} key={href} m={2}>
@@ -50,7 +50,7 @@ storiesOf("Composites/FlexList", module)
       }))}
     />
   ))
-  .addWithJSX("few badges example", () => (
+  .add("few badges example", () => (
     <FlexList
       render={({ color, href, text }) => (
         <Link href={href} key={href} m={1}>
@@ -60,7 +60,7 @@ storiesOf("Composites/FlexList", module)
       values={badges.slice(0, 4)}
     />
   ))
-  .addWithJSX("many badges example", () => (
+  .add("many badges example", () => (
     <FlexList
       render={({ color, href, text }) => (
         <Link href={href} key={href} m={1}>

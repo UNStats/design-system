@@ -8,7 +8,7 @@ import rawPosts from "../../../test/posts";
 const posts = rawPosts.map(({ href, ...post }) => ({ ...post }));
 
 storiesOf("Composites/PostPreview", module)
-  .addWithJSX("1 author", () => {
+  .add("1 author", () => {
     const { authors, title, date, lead } = posts[0];
     return (
       <PostPreview
@@ -32,7 +32,7 @@ storiesOf("Composites/PostPreview", module)
       />
     );
   })
-  .addWithJSX("2 authors", () => {
+  .add("2 authors", () => {
     const { authors, title, date, lead } = posts[1];
     return (
       <PostPreview
@@ -56,7 +56,7 @@ storiesOf("Composites/PostPreview", module)
       />
     );
   })
-  .addWithJSX("many authors", () => {
+  .add("many authors", () => {
     const { authors, title, date } = posts[2];
     return (
       <PostPreview

@@ -14,7 +14,7 @@ const badges = [
 ];
 
 storiesOf("Composites/ProfilePreview", module)
-  .addWithJSX("complete profile", () => {
+  .add("complete profile", () => {
     const { name, jobtitle, organization, img } = profiles[0];
     return (
       <ProfilePreview
@@ -37,7 +37,7 @@ storiesOf("Composites/ProfilePreview", module)
       />
     );
   })
-  .addWithJSX("align left", () => {
+  .add("align left", () => {
     const { name, jobtitle, organization, img } = profiles[1];
     return (
       <ProfilePreview
@@ -61,7 +61,7 @@ storiesOf("Composites/ProfilePreview", module)
       />
     );
   })
-  .addWithJSX("align right", () => {
+  .add("align right", () => {
     const { name, jobtitle, organization, img } = profiles[2];
     return (
       <ProfilePreview
@@ -85,7 +85,7 @@ storiesOf("Composites/ProfilePreview", module)
       />
     );
   })
-  .addWithJSX("avatar only", () => {
+  .add("avatar only", () => {
     const { name, img } = profiles[3];
     return (
       <ProfilePreview
@@ -102,7 +102,7 @@ storiesOf("Composites/ProfilePreview", module)
       />
     );
   })
-  .addWithJSX("avatar and name only", () => {
+  .add("avatar and name only", () => {
     const { name, img } = profiles[4];
     return (
       <ProfilePreview
@@ -120,7 +120,7 @@ storiesOf("Composites/ProfilePreview", module)
       />
     );
   })
-  .addWithJSX("responsive image", () => {
+  .add("responsive image", () => {
     const { name, img } = profiles[5];
     return (
       <ProfilePreview
@@ -138,7 +138,7 @@ storiesOf("Composites/ProfilePreview", module)
       />
     );
   })
-  .addWithJSX("custom font size", () => {
+  .add("custom font size", () => {
     const { name, img } = profiles[6];
     return (
       <ProfilePreview
@@ -157,7 +157,7 @@ storiesOf("Composites/ProfilePreview", module)
       />
     );
   })
-  .addWithJSX("custom link", () => {
+  .add("custom link", () => {
     const { name, img } = profiles[7];
     return (
       <ProfilePreview
@@ -177,7 +177,7 @@ storiesOf("Composites/ProfilePreview", module)
       />
     );
   })
-  .addWithJSX("really long strings", () => {
+  .add("really long strings", () => {
     const { name, jobtitle, organization, img } = profiles[29];
     return (
       <ProfilePreview

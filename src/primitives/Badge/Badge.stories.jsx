@@ -1,10 +1,10 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { select, text } from "@storybook/addon-knobs/react";
+import { select, text } from "@storybook/addon-knobs";
 import Badge from "./Badge";
 
 storiesOf("Primitives/Badge", module)
-  .addWithJSX("knobs", () => (
+  .add("knobs", () => (
     <Badge
       color={select(
         "color",
@@ -23,7 +23,7 @@ storiesOf("Primitives/Badge", module)
       {text("text", "badge")}
     </Badge>
   ))
-  .addWithJSX("default color", () => (
+  .add("default color", () => (
     <Badge href="#" m={2}>
       default color
     </Badge>

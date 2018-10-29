@@ -1,10 +1,10 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { number, select } from "@storybook/addon-knobs/react";
+import { number, select } from "@storybook/addon-knobs";
 import AlternateSiteTitle from "./AlternateSiteTitle";
 
 storiesOf("Primitives/AlternateSiteTitle", module)
-  .addWithJSX("knobs", () => (
+  .add("knobs", () => (
     <AlternateSiteTitle
       color={select(
         "color",
@@ -21,4 +21,4 @@ storiesOf("Primitives/AlternateSiteTitle", module)
       m={2}
     />
   ))
-  .addWithJSX("default color", () => <AlternateSiteTitle year={2018} m={2} />);
+  .add("default color", () => <AlternateSiteTitle year={2018} m={2} />);

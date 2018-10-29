@@ -19,24 +19,24 @@ const defaultProfileMap = ({
 });
 
 storiesOf("Composites/ProfileList", module)
-  .addWithJSX("1 profile", () => (
+  .add("1 profile", () => (
     <ProfileList
       values={profiles.slice(0, 1).map(defaultProfileMap)}
       width={96}
       m={2}
     />
   ))
-  .addWithJSX("2 profiles", () => (
+  .add("2 profiles", () => (
     <ProfileList
       values={profiles.slice(0, 2).map(defaultProfileMap)}
       width={96}
       m={2}
     />
   ))
-  .addWithJSX("many profiles", () => (
+  .add("many profiles", () => (
     <ProfileList values={profiles.map(defaultProfileMap)} width={96} m={2} />
   ))
-  .addWithJSX("align left", () => (
+  .add("align left", () => (
     <ProfileList
       align="left"
       values={profiles.map(defaultProfileMap)}
@@ -44,7 +44,7 @@ storiesOf("Composites/ProfileList", module)
       m={2}
     />
   ))
-  .addWithJSX("align right", () => (
+  .add("align right", () => (
     <ProfileList
       align="right"
       values={profiles.map(defaultProfileMap)}
@@ -52,7 +52,7 @@ storiesOf("Composites/ProfileList", module)
       m={2}
     />
   ))
-  .addWithJSX("full profiles", () => (
+  .add("full profiles", () => (
     <ProfileList
       fontSize={[3, 4]}
       gap={4}

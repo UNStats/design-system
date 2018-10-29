@@ -1,13 +1,13 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { number } from "@storybook/addon-knobs/react";
+import { number } from "@storybook/addon-knobs";
 import { Image, Link } from "rebass";
 import GridList from "./GridList";
 import ProfilePreview from "../ProfilePreview";
 import profiles from "../../../test/profiles";
 
 storiesOf("Composites/GridList", module)
-  .addWithJSX("avatar example", () => (
+  .add("avatar example", () => (
     <GridList
       gap={number("gap", 2)}
       m={2}
@@ -31,7 +31,7 @@ storiesOf("Composites/GridList", module)
       width={number("width", 64)}
     />
   ))
-  .addWithJSX("profile example", () => (
+  .add("profile example", () => (
     <GridList
       gap={number("gap", 3)}
       m={2}
@@ -64,7 +64,7 @@ storiesOf("Composites/GridList", module)
       width={number("width", 256)}
     />
   ))
-  .addWithJSX("1 item", () => (
+  .add("1 item", () => (
     <GridList
       render={({ key, ...props }) => <ProfilePreview key={key} {...props} />}
       values={profiles
@@ -90,7 +90,7 @@ storiesOf("Composites/GridList", module)
       m={2}
     />
   ))
-  .addWithJSX("2 items", () => (
+  .add("2 items", () => (
     <GridList
       color="black"
       m={2}
@@ -117,7 +117,7 @@ storiesOf("Composites/GridList", module)
       width={256}
     />
   ))
-  .addWithJSX("3 items", () => (
+  .add("3 items", () => (
     <GridList
       color="black"
       m={2}
