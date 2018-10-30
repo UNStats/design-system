@@ -1,24 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Box, Flex, Text } from "rebass";
+import { Flex, Text } from "rebass";
 import ProfileList from "../ProfileList";
 
 const PostPreview = ({ title, date, authors, lead, link, ...props }) => (
   <Flex {...props} flexDirection="column">
+    <Text as="h1" fontFamily="sans" lineHeight="title" mt={0} mb={3}>
+      {title}
+    </Text>
     <ProfileList align="left" link={link} values={authors} width={96} mb={3} />
-    <Box>
-      <Text as="h1" fontFamily="sans" lineHeight="title" mt={0} mb={3}>
-        {title}
+    <Text as="time" css={{ display: "block" }} fontFamily="sans" mb={3}>
+      {date}
+    </Text>
+    {lead && (
+      <Text as="p" fontFamily="serif" lineHeight="copy" my={0}>
+        {lead}
       </Text>
-      <Text as="time" css={{ display: "block" }} fontFamily="sans" mb={3}>
-        {date}
-      </Text>
-      {lead && (
-        <Text as="p" fontFamily="serif" lineHeight="copy" my={0}>
-          {lead}
-        </Text>
-      )}
-    </Box>
+    )}
   </Flex>
 );
 
