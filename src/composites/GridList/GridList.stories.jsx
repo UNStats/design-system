@@ -1,16 +1,26 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { number } from "@storybook/addon-knobs";
+import { number, select } from "@storybook/addon-knobs";
 import { Image, Link } from "rebass";
 import GridList from "./GridList";
+import PostPreview from "../PostPreview";
 import ProfilePreview from "../ProfilePreview";
+import posts from "../../../test/posts";
 import profiles from "../../../test/profiles";
 
 storiesOf("Composites/GridList", module)
   .add("avatar example", () => (
     <GridList
+      align={select(
+        "align",
+        {
+          left: "left",
+          center: "center",
+          right: "right"
+        },
+        "center"
+      )}
       gap={number("gap", 2)}
-      m={2}
       render={({ avatar, href }) => (
         <Link href={href} key={href}>
           <ProfilePreview avatar={avatar} />
@@ -29,12 +39,21 @@ storiesOf("Composites/GridList", module)
         href
       }))}
       width={number("width", 64)}
+      m={2}
     />
   ))
   .add("profile example", () => (
     <GridList
+      align={select(
+        "align",
+        {
+          left: "left",
+          center: "center",
+          right: "right"
+        },
+        "center"
+      )}
       gap={number("gap", 3)}
-      m={2}
       render={({ avatar, name, affiliation, href }) => (
         <Link color="text" href={href} key={href}>
           <ProfilePreview
@@ -62,10 +81,61 @@ storiesOf("Composites/GridList", module)
         href
       }))}
       width={number("width", 256)}
+      m={2}
+    />
+  ))
+  .add("post example", () => (
+    <GridList
+      align={select(
+        "align",
+        {
+          left: "left",
+          center: "center",
+          right: "right"
+        },
+        "center"
+      )}
+      gap={number("gap", 4)}
+      render={({ href, ...post }) => (
+        <Link color="text" href={href} key={href}>
+          <PostPreview {...post} />
+        </Link>
+      )}
+      values={posts.map(({ authors, ...post }) => ({
+        // Remove href from authors to ensure they are not linked in PostPreview.
+        // Entire PostPreview is linked instead.
+        authors: authors.map(({ name, img, href, ...author }) => ({
+          avatar: () => (
+            <Image
+              alt={name}
+              borderRadius="circle"
+              height={64}
+              width={64}
+              src={img}
+            />
+          ),
+          key: href,
+          name,
+          ...author
+        })),
+        ...post
+      }))}
+      width={number("width", 512)}
+      m={2}
     />
   ))
   .add("1 item", () => (
     <GridList
+      align={select(
+        "align",
+        {
+          left: "left",
+          center: "center",
+          right: "right"
+        },
+        "center"
+      )}
+      gap={number("gap", 3)}
       render={({ key, ...props }) => <ProfilePreview key={key} {...props} />}
       values={profiles
         .slice(0, 1)
@@ -86,14 +156,23 @@ storiesOf("Composites/GridList", module)
           },
           key: href
         }))}
-      width={256}
+      width={number("width", 256)}
       m={2}
     />
   ))
   .add("2 items", () => (
     <GridList
+      align={select(
+        "align",
+        {
+          left: "left",
+          center: "center",
+          right: "right"
+        },
+        "center"
+      )}
+      gap={number("gap", 3)}
       color="black"
-      m={2}
       render={props => <ProfilePreview {...props} />}
       values={profiles
         .slice(0, 2)
@@ -114,13 +193,23 @@ storiesOf("Composites/GridList", module)
           },
           key: href
         }))}
-      width={256}
+      width={number("width", 256)}
+      m={2}
     />
   ))
   .add("3 items", () => (
     <GridList
+      align={select(
+        "align",
+        {
+          left: "left",
+          center: "center",
+          right: "right"
+        },
+        "center"
+      )}
+      gap={number("gap", 3)}
       color="black"
-      m={2}
       render={props => <ProfilePreview {...props} />}
       values={profiles
         .slice(0, 3)
@@ -141,6 +230,7 @@ storiesOf("Composites/GridList", module)
           },
           key: href
         }))}
-      width={256}
+      width={number("width", 256)}
+      m={2}
     />
   ));

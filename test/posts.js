@@ -36,7 +36,6 @@ const posts = [
   },
   {
     title: "Vestibulum proin eu mi nulla ac enim in tempor turpis",
-    author: "Orin Sissons",
     date: "May 31, 2018",
     authors: [
       {
@@ -97,88 +96,139 @@ const posts = [
   {
     title:
       "Vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat",
-    author: "Knox Simes",
+    authors: [
+      {
+        name: "Gustavus Splevings",
+        img: avatar,
+        href: "/profiles/gustavus-splevings"
+      },
+      {
+        name: "Cristi Tale",
+        img: avatar,
+        href: "/profiles/cristi-tale"
+      }
+    ],
     date: "May 15, 2018",
     lead:
       "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-    href: "/2018/05/15/slug",
-    image: {
-      alt: "Structure.",
-      src: "https://source.unsplash.com/AU1rKyKPJco/900x600"
-    }
+    href: "/2018/05/15/slug"
   },
   {
     title: "Primis in faucibus orci luctus est",
-    author: "Adelaida Hurndall",
+    authors: [
+      {
+        name: "Gae Phinn",
+        img: avatar,
+        href: "/profiles/gae-phinn"
+      },
+      {
+        name: "Leoline Hacaud",
+        img: avatar,
+        href: "/profiles/leoline-hacaud"
+      },
+      {
+        name: "Rufe Rockhill",
+        img: avatar,
+        href: "/profiles/rufe-rockhill"
+      }
+    ],
     date: "May 2, 2018",
     lead:
       "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
-    href: "/2018/05/02/slug",
-    image: {
-      alt: "Tiger.",
-      src: "https://source.unsplash.com/Yju1DCmp39I/900x600"
-    }
+    href: "/2018/05/02/slug"
   },
   {
     title: "Suscipit ligula in lacus curabitur at ipsum",
-    author: "Jeff Holsall",
+    authors: [
+      {
+        name: "Bernadene Van der Velden",
+        img: avatar,
+        href: "/profiles/bernadene-van-der-velden"
+      },
+      {
+        name: "Edithe Densell",
+        img: avatar,
+        href: "/profiles/edithe-densell"
+      }
+    ],
     date: "April 20, 2018",
     lead:
       "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
-    href: "/2018/04/20/slug",
-    image: {
-      alt: "Code.",
-      src: "https://source.unsplash.com/466ENaLuhLY/900x600"
-    }
+    href: "/2018/04/20/slug"
   },
   {
     title: "Orci eget orci vehicula condimentum curabitur in",
     date: "April 5, 2018",
-    author: "Chaddie Bordes",
+    authors: [
+      {
+        name: "Emmalynne Sone",
+        jobtitle: "Accountant II",
+        organization: "Hansen-Keebler",
+        img: avatar,
+        href: "/profiles/emmalynne-sone"
+      }
+    ],
     lead:
       "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
-    href: "/2018/04/05/slug",
-    image: {
-      alt: "Apples.",
-      src: "https://source.unsplash.com/f-cuZblcILc/900x600"
-    }
+    href: "/2018/04/05/slug"
   },
   {
     title: "Quam pede lobortis ligula sit",
-    author: "Ruthi Kunat",
+    authors: [
+      {
+        name: "Ardella Sapir",
+        img: avatar,
+        href: "/profiles/ardella-sapir"
+      }
+    ],
     date: "March 14, 2018",
     lead:
       "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
-    href: "/2018/03/14/slug",
-    image: {
-      alt: "Colors.",
-      src: "https://source.unsplash.com/8UeQgz9Wazw/900x600"
-    }
+    href: "/2018/03/14/slug"
   },
   {
     title:
       "Diam cras pellentesque volutpat dui maecenas tristique est et tempus",
-    author: "Deanna Effnert",
+    authors: [
+      {
+        name: "Ilise Sailor",
+        img: avatar,
+        href: "/profiles/ilise-aailor"
+      },
+      {
+        name: "Anita Olander",
+        img: avatar,
+        href: "/profiles/anita-olander"
+      }
+    ],
     date: "February 28, 2018",
     lead:
       "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
-    href: "/2018/02/28/slug",
-    image: {
-      alt: "Road.",
-      src: "https://source.unsplash.com/bciXX0xjcwc/900x600"
-    }
+    href: "/2018/02/28/slug"
   },
   {
     title: "Metus sapien ut nunc vestibulum ante",
-    author: "Carr Missenden",
+    authors: [
+      {
+        name: "Gerik Frisby",
+        img: avatar,
+        href: "/profiles/gerik-frisby"
+      },
+      {
+        name: "Rayshell Marmion",
+        img: avatar,
+        href: "/profiles/rayshell-marmion"
+      },
+      {
+        name: "Brooks Grene",
+        img: avatar,
+        href: "/profiles/brooks-grene"
+      }
+    ],
     date: "February 13, 2018",
     lead:
       "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
-    href: "/2018/02/13/slug",
-    image: {
-      alt: "Architecture.",
-      src: "https://source.unsplash.com/FK0RhfEeY0w/900x600"
-    }
+    href: "/2018/02/13/slug"
   }
 ];
 
