@@ -3,11 +3,12 @@ import GridList from "./composites/GridList";
 import Head from "./helpers/Head";
 import Header from "./composites/Header";
 import HeadingPage from "./pages/HeadingPage";
-import NewTabAnchor from "./primitives/NewTabLink";
+import NewTabLink from "./primitives/NewTabLink";
 import Page from "./pages/Page";
 import ProfilePreview from "./composites/ProfilePreview";
 import Provider from "./helpers/Provider";
-import SiteTitle from "./primitives/SiteTitle";
+import TextPage from "./pages/TextPage";
+import mdComponents from "./helpers/mdComponents";
 
 export {
   AlternateSiteTitle,
@@ -15,9 +16,10 @@ export {
   Head,
   Header,
   HeadingPage,
-  NewTabAnchor,
+  NewTabLink,
   Page,
   ProfilePreview,
   Provider,
-  SiteTitle
+  TextPage,
+  mdComponents
 };

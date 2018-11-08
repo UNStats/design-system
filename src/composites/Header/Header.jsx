@@ -19,19 +19,7 @@ import { borderColor, height } from "styled-system";
 import { Box, Flex, Link, Text } from "rebass";
 import SiteTitle from "../../primitives/SiteTitle";
 
-// Filter borderColor and lineHeight to avoid that it is passed on to DOM
-// See https://github.com/styled-components/styled-components/issues/439.
-
 const Wrapper = styled(Box)(borderColor, height);
-
-/*
-const Content = styled(Flex)`
-  height: 100%;
-`;
-*/
-
-// lineHeight="title"
-// maxWidth={9}
 
 const Header = ({ color, link, links, title, ...props }) => (
   <Wrapper
