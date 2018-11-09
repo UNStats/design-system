@@ -2,6 +2,7 @@ import avatar from "./avatar.png";
 
 const profiles = [
   {
+    id: "nance-macfadin",
     name: "Nance MacFadin",
     jobtitle: "Help Desk Operator",
     organization: "Schuster-Senger",
@@ -9,6 +10,7 @@ const profiles = [
     href: "/profiles/nance-macfadin"
   },
   {
+    id: "clerc-edis",
     name: "Clerc Edis",
     jobtitle: "Staff Scientist",
     organization: "Ritchie Inc",
@@ -16,6 +18,7 @@ const profiles = [
     href: "/profiles/clerc-edis"
   },
   {
+    id: "clifford-skipperbottom",
     name: "Clifford Skipperbottom",
     jobtitle: "Senior Financial Analyst",
     organization: "Block, Bruen and Gerlach",
@@ -23,6 +26,7 @@ const profiles = [
     href: "/profiles/clifford-skipperbottom"
   },
   {
+    id: "willow-rangall",
     name: "Willow Rangall",
     jobtitle: "Human Resources Assistant",
     organization: "Corkery LLC",
@@ -30,6 +34,7 @@ const profiles = [
     href: "/profiles/willow-rangall"
   },
   {
+    id: "suzy-cahan",
     name: "Suzy Cahan",
     jobtitle: "Research Assistant",
     organization: "Hickle-Emmerich",
@@ -37,20 +42,23 @@ const profiles = [
     href: "/profiles/suzy-cahan"
   },
   {
+    id: "sandra-abramovici",
     name: "Sandra Abramovici",
     jobtitle: "Help Desk Operator",
     organization: "Kunze, Lehner and Kutch",
     img: avatar,
-    href: "/profiles/"
+    href: "/profiles/sandra-abramovici"
   },
   {
+    id: "jan-mckea",
     name: "Jan McKea",
     jobtitle: "Civil Engineer",
     organization: "Corkery-Grady",
     img: avatar,
-    href: "/profiles/sandra-abramovici"
+    href: "/profiles/jan-mckea"
   },
   {
+    id: "ola-brunger",
     name: "Ola Brunger",
     jobtitle: "Nurse Practicioner",
     organization: "Gottlieb Inc",
@@ -58,6 +66,7 @@ const profiles = [
     href: "/profiles/ola-brunger"
   },
   {
+    id: "ivette-rowlinson",
     name: "Ivette Rowlinson",
     jobtitle: "Research Nurse",
     organization: "Purdy and Sons",
@@ -65,6 +74,7 @@ const profiles = [
     href: "/profiles/ivette-rowlinson"
   },
   {
+    id: "madeleine-stredwick",
     name: "Madeleine Stredwick",
     jobtitle: "Staff Scientist",
     organization: "Gaylord, Stoltenberg and Haag",
@@ -72,6 +82,7 @@ const profiles = [
     href: "/profiles/madeleine-stredwick"
   },
   {
+    id: "lin-billson",
     name: "Lin Billson",
     jobtitle: "Database Administrator",
     organization: "Legros and Sons",
@@ -79,6 +90,7 @@ const profiles = [
     href: "/profiles/lin-billson"
   },
   {
+    id: "alfie-piborn",
     name: "Alfie Piborn",
     jobtitle: "Mechanical Systems Engineer",
     organization: "Rosenbaum and Sons",
@@ -86,6 +98,7 @@ const profiles = [
     href: "/profiles/alfie-piborn"
   },
   {
+    id: "garvy-bartlomiej",
     name: "Garvy Bartlomiej",
     jobtitle: "Research Associate",
     organization: "Tillman LLC",
@@ -93,6 +106,7 @@ const profiles = [
     href: "/profiles/garvy-bartlomiej"
   },
   {
+    id: "gustavus-splevings",
     name: "Gustavus Splevings",
     jobtitle: "Structural Analysis Engineer",
     organization: "Farrell, Veum and Daugherty",
@@ -100,6 +114,7 @@ const profiles = [
     href: "/profiles/gustavus-splevings"
   },
   {
+    id: "cristi-tale",
     name: "Cristi Tale",
     jobtitle: "Desktop Support Technician",
     organization: "Eichmann LLC",
@@ -107,6 +122,7 @@ const profiles = [
     href: "/profiles/cristi-tale"
   },
   {
+    id: "gae-phinn",
     name: "Gae Phinn",
     jobtitle: "Associate Professor",
     organization: "Cronin-Homenick",
@@ -114,6 +130,7 @@ const profiles = [
     href: "/profiles/gae-phinn"
   },
   {
+    id: "leoline-hacaud",
     name: "Leoline Hacaud",
     jobtitle: "Occupational Therapist",
     organization: "Bosco and Sons",
@@ -121,6 +138,7 @@ const profiles = [
     href: "/profiles/leoline-hacaud"
   },
   {
+    id: "rufe-rockhill",
     name: "Rufe Rockhill",
     jobtitle: "Operator",
     organization: "Champlin, Heller and Mante",
@@ -128,6 +146,7 @@ const profiles = [
     href: "/profiles/rufe-rockhill"
   },
   {
+    id: "bernadene-van-der-velden",
     name: "Bernadene Van der Velden",
     jobtitle: "Sales Representative",
     organization: "Schimmel-Pollich",
@@ -135,6 +154,7 @@ const profiles = [
     href: "/profiles/bernadene-van-der-velden"
   },
   {
+    id: "edithe-densell",
     name: "Edithe Densell",
     jobtitle: "Dental Hygienist",
     organization: "Turcotte-Greenholt",
@@ -142,6 +162,7 @@ const profiles = [
     href: "/profiles/edithe-densell"
   },
   {
+    id: "emmalynne-sone",
     name: "Emmalynne Sone",
     jobtitle: "Accountant II",
     organization: "Hansen-Keebler",
@@ -149,6 +170,7 @@ const profiles = [
     href: "/profiles/emmalynne-sone"
   },
   {
+    id: "ardella-sapir",
     name: "Ardella Sapir",
     jobtitle: "Geological Engineer",
     organization: "Cassin-Kirlin",
@@ -156,13 +178,15 @@ const profiles = [
     href: "/profiles/ardella-sapir"
   },
   {
+    id: "ilise-sailor",
     name: "Ilise Sailor",
     jobtitle: "Technical Writer",
     organization: "Grimes, Gleichner and Gleason",
     img: avatar,
-    href: "/profiles/ilise-aailor"
+    href: "/profiles/ilise-sailor"
   },
   {
+    id: "anita-olander",
     name: "Anita Olander",
     jobtitle: "Help Desk Operator",
     organization: "Halvorson Group",
@@ -170,6 +194,7 @@ const profiles = [
     href: "/profiles/anita-olander"
   },
   {
+    id: "gerik-frisby",
     name: "Gerik Frisby",
     jobtitle: "Analyst Programmer",
     organization: "Ullrich, Jakubowski and Doyle",
@@ -177,6 +202,7 @@ const profiles = [
     href: "/profiles/gerik-frisby"
   },
   {
+    id: "rayshell-marmion",
     name: "Rayshell Marmion",
     jobtitle: "Human Resources Manager",
     organization: "Hane Group",
@@ -184,6 +210,7 @@ const profiles = [
     href: "/profiles/rayshell-marmion"
   },
   {
+    id: "brooks-grene",
     name: "Brooks Grene",
     jobtitle: "Paralegal",
     organization: "Swift, Bogan and Jones",
@@ -191,6 +218,7 @@ const profiles = [
     href: "/profiles/brooks-grene"
   },
   {
+    id: "bev-dorey",
     name: "Bev Dorey",
     jobtitle: "Community Outreach Specialist",
     organization: "D'Amore-Kassulke",
@@ -198,6 +226,7 @@ const profiles = [
     href: "/profiles/bev-dorey"
   },
   {
+    id: "vladimir-parres",
     name: "Vladimir Parres",
     jobtitle: "Community Outreach Specialist",
     organization: "Leuschke, Okuneva and Heaney",
@@ -205,6 +234,7 @@ const profiles = [
     href: "/profiles/vladimir-parres"
   },
   {
+    id: "really-really-long-name",
     name:
       "Really really really really really really really really really really long name",
     jobtitle:
@@ -212,7 +242,7 @@ const profiles = [
     organization:
       "Really really really really really really really really really really long organization",
     img: avatar,
-    href: "/profiles/really-really-long"
+    href: "/profiles/really-really-long-name"
   }
 ];
 

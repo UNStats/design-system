@@ -18,15 +18,23 @@ const ProfileList = ({
     {...props}
     align={align}
     gap={gap}
-    render={({ href, ...profile }) => {
+    render={({ id, href, ...profile }) => {
       if (href) {
         return (
-          <Link as={link} href={href}>
+          <Link as={link} href={href} key={id}>
             <ProfilePreview {...profile} align={align} fontSize={fontSize} />
           </Link>
         );
       }
-      return <ProfilePreview {...profile} align={align} fontSize={fontSize} />;
+
+      return (
+        <ProfilePreview
+          {...profile}
+          align={align}
+          fontSize={fontSize}
+          key={id}
+        />
+      );
     }}
     values={values}
     width={width}
@@ -43,6 +51,7 @@ ProfileList.propTypes = {
   values: PropTypes.arrayOf(
     PropTypes.shape({
       ...ProfilePreview.propTypes,
+      id: PropTypes.string,
       href: PropTypes.string
     })
   ).isRequired,

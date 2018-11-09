@@ -4,6 +4,7 @@ import { Image } from "rebass";
 import ProfileList from "./ProfileList";
 import profiles from "../../../test/profiles";
 
+// Default profile map removes jobtitle and organization.
 const defaultProfileMap = ({
   name,
   jobtitle,
