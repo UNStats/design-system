@@ -25,6 +25,7 @@ PostPreview.propTypes = {
   date: PropTypes.string.isRequired,
   authors: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.string,
       avatar: PropTypes.func.isRequired,
       name: PropTypes.string.isRequired,
       href: PropTypes.string

@@ -5,6 +5,7 @@ import Header from "./composites/Header";
 import HeadingPage from "./pages/HeadingPage";
 import NewTabLink from "./primitives/NewTabLink";
 import Page from "./pages/Page";
+import PostPreview from "./composites/PostPreview";
 import ProfileList from "./composites/ProfileList";
 import ProfilePreview from "./composites/ProfilePreview";
 import Provider from "./helpers/Provider";
@@ -19,6 +20,7 @@ export {
   HeadingPage,
   NewTabLink,
   Page,
+  PostPreview,
   ProfileList,
   ProfilePreview,
   Provider,
