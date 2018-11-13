@@ -5,7 +5,7 @@ import Page from "../Page";
 
 const TextPage = ({ title, description, children }) => (
   <Page title={title} description={description}>
-    <Box as="main" css={{ maxWidth: "48rem" }} mx="auto">
+    <Box as="main" css={{ maxWidth: "48rem" }} mx="auto" px={[2, 3, 0]}>
       {children}
     </Box>
   </Page>

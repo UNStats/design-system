@@ -1,15 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Text } from "rebass";
-import Page from "../Page";
+import { Heading } from "rebass";
+import TextPage from "../TextPage";
 
 const HeadingPage = ({ title, description, children }) => (
-  <Page title={title} description={description}>
-    <Text as="h1" mb={4}>
+  <TextPage title={title} description={description}>
+    <Heading
+      as="h1"
+      fontFamily="sans"
+      fontSize={[4, 5]}
+      lineHeight="solid"
+      mb={[2, 3]}
+    >
       {title}
-    </Text>
+    </Heading>
     {children}
-  </Page>
+  </TextPage>
 );
 
 HeadingPage.propTypes = {
