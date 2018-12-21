@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Image } from "rebass";
 import PostPreview from "./PostPreview";
-import rawPosts from "../../../test/posts";
+import rawPosts from "../../../../test/posts";
 
 // Remove href from posts.
 const posts = rawPosts.map(({ href, ...post }) => ({ ...post }));

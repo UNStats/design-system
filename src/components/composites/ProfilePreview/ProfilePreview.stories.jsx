@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { Image } from "rebass";
 import ProfilePreview from "./ProfilePreview";
 import NewTabLink from "../../primitives/NewTabLink";
-import rawProfiles from "../../../test/profiles";
+import rawProfiles from "../../../../test/profiles";
 
 // Remove href from profiles.
 const profiles = rawProfiles.map(({ href, ...profile }) => ({ ...profile }));

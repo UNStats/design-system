@@ -4,8 +4,8 @@ import { Image, Link } from "rebass";
 import FlexList from "./FlexList";
 import Badge from "../../primitives/Badge";
 import ProfilePreview from "../ProfilePreview";
-import badges from "../../../test/badges";
-import profiles from "../../../test/profiles";
+import badges from "../../../../test/badges";
+import profiles from "../../../../test/profiles";
 
 storiesOf("Composites/FlexList", module)
   .add("few avatars example", () => (

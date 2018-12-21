@@ -5,8 +5,8 @@ import { Image, Link } from "rebass";
 import GridList from "./GridList";
 import PostPreview from "../PostPreview";
 import ProfilePreview from "../ProfilePreview";
-import posts from "../../../test/posts";
-import profiles from "../../../test/profiles";
+import posts from "../../../../test/posts";
+import profiles from "../../../../test/profiles";
 
 storiesOf("Composites/GridList", module)
   .add("avatar example", () => (
