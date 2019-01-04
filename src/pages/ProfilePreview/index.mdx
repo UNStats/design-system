@@ -1,0 +1,95 @@
+import Helmet from "react-helmet";
+import CompleteProfileExample from "./complete-profile-example.mdx";
+import AlignLeftExample from "./align-left-example.mdx";
+import AlignRightExample from "./align-right-example.mdx";
+import AvatarOnlyExample from "./avatar-only-example.mdx";
+import AvatarAndNameOnlyExample from "./avatar-and-name-only-example.mdx";
+import ResponsiveAvatarExample from "./responsive-avatar-example.mdx";
+import CustomFontSizeExample from "./custom-font-size-example.mdx";
+import ReallyLongStringsExample from "./really-long-strings-example.mdx";
+
+<Helmet
+  title="@undataforum/components - ProfilePreview"
+  meta={[{ name: "description", content: "A preview for a post." }]}
+/>
+
+# ProfilePreview
+
+Preview for a profile.
+
+## Props
+
+`ProfilePreview` includes all props from type [profile](/types/profile/) except `id` and `href`. It also includes the following props:
+
+| Prop       | Description                   | Type                                     | Required | Default  |
+| :--------- | :---------------------------- | :--------------------------------------- | :------- | :------- |
+| `align`    | `ProfilePreview` alignment.   | `oneOf(["left", "center", "right"])`     | `false`  | `center` |
+| `fontSize` | Font size for profile `name`. | `oneOfType([numeric, arrayOf(numeric)])` | `false`  | `[3, 4]` |
+
+In addition `ProfilePreview` accepts [margin and padding props](https://rebassjs.org/props/#margin-and-padding).
+
+## Examples
+
+### Complete profile
+
+In this example we render a complete profile. If `profile` does not containe `href`, the `ProfilePreview` is not linked.
+
+<CompleteProfileExample />
+
+[Fullscreen](./complete-profile-example)
+
+### Align left
+
+In this example we align the `ProfilePreview` left.
+
+<AlignLeftExample />
+
+[Fullscreen](./align-left-example)
+
+### Align right
+
+In this example we align the `ProfilePreview` right.
+
+<AlignRightExample />
+
+[Fullscreen](./align-right-example)
+
+### Avatar only
+
+In this example we render the `ProfilePreview` as avatar only.
+
+<AvatarOnlyExample />
+
+[Fullscreen](./avatar-only-example)
+
+### Avatar and name only
+
+In this example we render the `ProfilePreview` as avatar with name.
+
+<AvatarAndNameOnlyExample />
+
+[Fullscreen](./avatar-and-name-only-example)
+
+### Responsive avatar
+
+In this example we make the avatar's image responsive.
+
+<ResponsiveAvatarExample />
+
+[Fullscreen](./responsive-avatar-example)
+
+### Custom font size
+
+In this example we set a custom font size for the name.
+
+<CustomFontSizeExample />
+
+[Fullscreen](./custom-font-size-example)
+
+### Really long strings
+
+In this example we render a profile with really long strings.
+
+<ReallyLongStringsExample />
+
+[Fullscreen](./really-long-strings-example)

@@ -1,0 +1,143 @@
+```jsx
+<GridList
+  align="center"
+  gap={2}
+  render={profile => <ProfilePreview profile={profile} key={profile.id} />}
+  values={[
+    {
+      id: "1",
+      name: "Berenice Feldmus"
+    },
+    {
+      id: "2",
+      name: "Sidonnie Halbeard"
+    },
+    {
+      id: "3",
+      name: "Jacenta Busch"
+    },
+    {
+      id: "4",
+      name: "Mercie Kuban"
+    },
+    {
+      id: "5",
+      name: "Candis Ruggs"
+    },
+    {
+      id: "6",
+      name: "Pippa Rawkesby"
+    },
+    {
+      id: "7",
+      name: "Issie Kisby"
+    },
+    {
+      id: "8",
+      name: "Josee Lyven"
+    },
+    {
+      id: "9",
+      name: "Barton Pentecost"
+    },
+    {
+      id: "10",
+      name: "Grier Dorman"
+    },
+    {
+      id: "11",
+      name: "Rodolph Yarrington"
+    },
+    {
+      id: "12",
+      name: "Nicola Cobbledick"
+    },
+    {
+      id: "13",
+      name: "De Pick"
+    },
+    {
+      id: "14",
+      name: "Christian Dowsing"
+    },
+    {
+      id: "15",
+      name: "Aggy Ethridge"
+    },
+    {
+      id: "16",
+      name: "Nada Genike"
+    },
+    {
+      id: "17",
+      name: "Kimmie Sowte"
+    },
+    {
+      id: "18",
+      name: "Irena Lamplugh"
+    },
+    {
+      id: "19",
+      name: "Dolph De Goey"
+    },
+    {
+      id: "20",
+      name: "Ertha Langfield"
+    },
+    {
+      id: "21",
+      name: "Consuelo Chasteau"
+    },
+    {
+      id: "22",
+      name: "Averil Ongin"
+    },
+    {
+      id: "23",
+      name: "Drucill Grishinov"
+    },
+    {
+      id: "24",
+      name: "Nessie Galletley"
+    },
+    {
+      id: "25",
+      name: "Marcellina Palmer"
+    },
+    {
+      id: "26",
+      name: "Christabella Shann"
+    },
+    {
+      id: "27",
+      name: "Tawsha Fruish"
+    },
+    {
+      id: "28",
+      name: "Odessa Munns"
+    },
+    {
+      id: "29",
+      name: "Conni McNickle"
+    },
+    {
+      id: "30",
+      name: "Clerc Edis"
+    }
+  ].map(({ id, name }) => ({
+    id,
+    avatar: () => (
+      <Image
+        alt={name}
+        borderRadius="circle"
+        height={64}
+        width={64}
+        src={`/avatar${id % 10}.png`}
+      />
+    ),
+    href: `/profiles/${id}`
+  }))}
+  width={64}
+  m={2}
+/>
+```

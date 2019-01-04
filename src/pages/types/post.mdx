@@ -1,0 +1,17 @@
+import Helmet from "react-helmet";
+
+<Helmet
+  title="@undataforum/components - post"
+  meta={[{ name: "description", content: "Type post." }]}
+/>
+
+# Type post
+
+| Prop      | Description                                                         | Type                                 | Required |
+| :-------- | :------------------------------------------------------------------ | :----------------------------------- | :------- |
+| `id`      | Unique author ID that is used for the `key` prop in lists of posts. | `string`                             | `true`   |
+| `title`   | Post title.                                                         | `string`                             | `true`   |
+| `date`    | Formatted post date.                                                | `string`                             | `true`   |
+| `authors` | Post authors.                                                       | [`arrayOf(profile)`](/types/profile) | `true`   |
+| `lead`    | Post lead.                                                          | `string`                             | `false`  |
+| `href`    | Link to post `href` if provided.                                    | `string`                             | `false`  |

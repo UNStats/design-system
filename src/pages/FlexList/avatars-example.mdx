@@ -1,0 +1,61 @@
+```jsx
+<FlexList
+  render={profile => (
+    <ProfilePreview profile={profile} key={profile.id} m={2} />
+  )}
+  values={[
+    {
+      id: "nance-macfadin",
+      avatar: () => (
+        <Image
+          alt={"Nance MacFadin"}
+          borderRadius="circle"
+          height={64}
+          width={64}
+          src="/avatar0.png"
+        />
+      ),
+      href: "/profiles/nance-macfadin"
+    },
+    {
+      id: "clerc-edis",
+      avatar: () => (
+        <Image
+          alt={"Clerc Edis"}
+          borderRadius="circle"
+          height={64}
+          width={64}
+          src="/avatar1.png"
+        />
+      ),
+      href: "/profiles/clerc-edis"
+    },
+    {
+      id: "clifford-skipperbottom",
+      avatar: () => (
+        <Image
+          alt={"Clifford Skipperbottom"}
+          borderRadius="circle"
+          height={64}
+          width={64}
+          src="/avatar2.png"
+        />
+      ),
+      href: "/profiles/clifford-skipperbottom"
+    },
+    {
+      id: "willow-rangall",
+      avatar: () => (
+        <Image
+          alt={"Willow Rangall"}
+          borderRadius="circle"
+          height={64}
+          width={64}
+          src="/avatar3.png"
+        />
+      ),
+      href: "/profiles/willow-rangall"
+    }
+  ]}
+/>
+```

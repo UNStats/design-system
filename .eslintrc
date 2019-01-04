@@ -1,6 +1,11 @@
 {
   "extends": ["@mdotasia"],
-  "globals": {
-    "page": true
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["gatsby-node.js"]
+      }
+    ]
   }
 }

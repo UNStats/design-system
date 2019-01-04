@@ -1,0 +1,78 @@
+import Helmet from "react-helmet";
+import AvatarsExample from "./avatars-example.mdx";
+import PostsExample from "./posts-example.mdx";
+import ProfilesExample from "./profiles-example.mdx";
+import OneListItemExample from "./one-list-item-example.mdx";
+import TwoListItemsExample from "./two-list-items-example.mdx";
+import ThreeListItemsExample from "./three-list-items-example.mdx";
+
+<Helmet
+  title="@undataforum/components - GridList"
+  meta={[{ name: "description", content: "A list based on CSS Grid." }]}
+/>
+
+# GridList
+
+A list based on [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid) to render components in a grid.
+
+## Props
+
+| Prop     | Description                                   | Type                                                            | Required | Default  |
+| :------- | :-------------------------------------------- | :-------------------------------------------------------------- | :------- | :------- |
+| `align`  | Alignment of entire grid.                     | `oneOf(["left", "center", "right"])`                            | `false`  | `center` |
+| `gap`    | Grid gap (horizontal and vertical)            | `oneOfType([number, arrayOf(number )])`                         | `false`  | `3`      |
+| `render` | Render prop for what the grid should display. | `func`                                                          | `true`   |          |
+| `values` | Values to be rendered with `GridList`.        | `arrayOf(object)`                                               | `true`   |          |
+| `width`  | Width of grid values.                         | `oneOfType([number, arrayOf(number), string, arrayOf(string)])` | `true`   |          |
+
+In addition `GridList` accepts [margin and padding props](https://rebassjs.org/props/#margin-and-padding).
+
+## Examples
+
+### Avatars example
+
+`GridList` delegates rendering of `values` to its `render` prop. This provides full control over what `GridList` can render. Objects in `values` must match destructured values of the `render` prop function argument, in this example `avatar` and `href`. We provide a `profiles` array to `values` and transform it with [`.map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) to the format required by the `render` prop.
+
+<AvatarsExample />
+
+[Fullscreen](./avatars-example)
+
+### Profiles example
+
+In this example we render profiles instead of avatars. Note that the signature of the `render` prop is different and so is the `.map` transformation of `values`.
+
+<ProfilesExample />
+
+[Fullscreen](./profiles-example)
+
+### Posts example
+
+In this example we render posts.
+
+<PostsExample />
+
+[Fullscreen](./posts-example)
+
+### One list item
+
+`GridList` with one item.
+
+<OneListItemExample />
+
+[Fullscreen](./one-list-item-example)
+
+### Two list items
+
+`GridList` with two items.
+
+<TwoListItemsExample />
+
+[Fullscreen](./two-list-items-example)
+
+### Three list items
+
+`GridList` with three items.
+
+<ThreeListItemsExample />
+
+[Fullscreen](./three-list-items-example)

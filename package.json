@@ -14,9 +14,9 @@
     "styled-components",
     "styled-system"
   ],
-  "main": "index.js",
+  "main": "dist/index.js",
   "files": [
-    "src/components"
+    "dist"
   ],
   "husky": {
     "hooks": {
@@ -29,15 +29,18 @@
   "scripts": {
     "start": "gatsby develop",
     "build": "gatsby build",
+    "babel": "rm -rf ./dist && babel ./src -d ./dist",
     "deploy": "npm run build &&  gh-pages -d public -m 'Deploy to GitHub Pages'",
     "format": "pretty-quick",
     "inspect": "node --inspect-brk node_modules/.bin/gatsby develop",
-    "lint": "eslint --ext .jsx,.js --ignore-path .gitignore ."
+    "lint": "eslint --ext .jsx,.js --ignore-path .gitignore .",
+    "prepublishOnly": "npm run babel"
   },
   "dependencies": {
     "polished": "^2.0.2",
     "prop-types": "^15.6.2",
     "react-helmet": "^5.2.0",
+    "react-live": "^1.12.0",
     "rebass": "^3.0.0-9",
     "styled-components": "^4.0.0-beta.8-unpure",
     "styled-system": "^3.1.11"
@@ -46,12 +49,16 @@
     "react": "^16.0.0"
   },
   "devDependencies": {
-    "@mdotasia/eslint-config": "^0.5.0",
-    "@mdx-js/mdx": "^0.15.0",
-    "@mdx-js/tag": "^0.15.0",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@mdotasia/eslint-config": "^0.6.0",
+    "@mdx-js/mdx": "^0.16.6",
+    "@mdx-js/tag": "^0.16.6",
+    "babel-plugin-styled-components": "^1.10.0",
+    "babel-preset-gatsby": "^0.1.6",
     "eslint": "^5.3.0",
     "gatsby": "^2.0.75",
-    "gatsby-mdx": "^0.2.0",
+    "gatsby-mdx": "^0.3.2",
     "gatsby-source-filesystem": "^2.0.12",
     "gh-pages": "^2.0.1",
     "husky": "^1.0.1",

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Text } from "rebass";
-import NewTabLink from "../primitives/NewTabLink";
+import NewTabLink from "../NewTabLink";
 
 export default {
   // eslint-disable-next-line react/prop-types

@@ -1,0 +1,27 @@
+```jsx
+<ProfilePreview
+  profile={{
+    id: "clerc-edis",
+    avatar: () => (
+      <Image
+        alt="Clerc Edis"
+        borderRadius="circle"
+        height={128}
+        width={128}
+        src="/avatar1.png"
+      />
+    ),
+    name: "Clerc Edis",
+    affiliation: {
+      jobtitle: "Staff Scientist",
+      organization: "Ritchie Inc"
+    },
+    badges: [
+      { text: "Committee Member", color: "red", href: "/committee" },
+      { text: "Keynote Speaker", color: "yellow", href: "/keynotes" }
+    ]
+  }}
+  align="left"
+  m={2}
+/>
+```

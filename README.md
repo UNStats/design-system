@@ -19,3 +19,7 @@ import { Provider, Header } from "@undataforum/components";
 ## License
 
 This project is licensed under the [MIT license](https://choosealicense.com/licenses/mit/). The United Nations World Data Forum logo is not part of this license. The [Header component](https://github.com/UNDataForum/components/blob/master/src/components/Header/Header.jsx) contains additional information on licensing the logo.
+
+## Credits
+
+Avatar images for testing created with [Robohash](https://robohash.org/). Licensing information is available on the [Robohash GitHub page](https://github.com/e1ven/Robohash).

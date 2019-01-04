@@ -1,0 +1,219 @@
+```jsx
+<GridList
+  align="center"
+  gap={4}
+  render={post => <PostPreview post={post} key={post.id} />}
+  values={[
+    {
+      id: "1",
+      title: "Aliquet maecenas leo odio condimentum id luctus nec molestie",
+      date: "July 4, 2018",
+      authors: [
+        {
+          id: "1",
+          name: "Nance MacFadin"
+        }
+      ],
+      href: "/2018/07/04/slug"
+    },
+    {
+      id: "2",
+      title: "Pretium iaculis justo in hac habitasse platea",
+      date: "June 12, 2018",
+      authors: [
+        {
+          id: "2",
+          name: "Clerc Edis"
+        },
+        {
+          id: "3",
+          name: "Clifford Skipperbottom"
+        }
+      ],
+      href: "/2018/06/12/slug"
+    },
+    {
+      id: "3",
+      title: "Vestibulum proin eu mi nulla ac enim in tempor turpis",
+      date: "May 31, 2018",
+      authors: [
+        {
+          id: "4",
+          name: "Willow Rangall"
+        },
+        {
+          id: "5",
+          name: "Suzy Cahan"
+        },
+        {
+          id: "6",
+          name: "Sandra Abramovici"
+        },
+        {
+          id: "7",
+          name: "Jan McKea"
+        },
+        {
+          id: "8",
+          name: "Ola Brunger"
+        },
+        {
+          id: "9",
+          name: "Ivette Rowlinson"
+        },
+        {
+          id: "10",
+          name: "Madeleine Stredwick"
+        },
+        {
+          id: "11",
+          name: "Lin Billson"
+        },
+        {
+          id: "12",
+          name: "Alfie Piborn"
+        },
+        {
+          id: "13",
+          name: "Garvy Bartlomiej"
+        }
+      ],
+      href: "/2018/05/31/slug"
+    },
+    {
+      id: "4",
+      title:
+        "Vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat",
+      authors: [
+        {
+          id: "14",
+          name: "Gustavus Splevings"
+        },
+        {
+          id: "15",
+          name: "Cristi Tale"
+        }
+      ],
+      date: "May 15, 2018",
+      href: "/2018/05/15/slug"
+    },
+    {
+      id: "5",
+      title: "Primis in faucibus orci luctus est",
+      authors: [
+        {
+          id: "16",
+          name: "Gae Phinn"
+        },
+        {
+          id: "17",
+          name: "Leoline Hacaud"
+        },
+        {
+          id: "18",
+          name: "Rufe Rockhill"
+        }
+      ],
+      date: "May 2, 2018",
+      href: "/2018/05/02/slug"
+    },
+    {
+      id: "6",
+      title: "Suscipit ligula in lacus curabitur at ipsum",
+      authors: [
+        {
+          id: "19",
+          name: "Bernadene Van der Velden"
+        },
+        {
+          id: "20",
+          name: "Edithe Densell"
+        }
+      ],
+      date: "April 20, 2018",
+      href: "/2018/04/20/slug"
+    },
+    {
+      id: "7",
+      title: "Orci eget orci vehicula condimentum curabitur in",
+      date: "April 5, 2018",
+      authors: [
+        {
+          id: "21",
+          name: "Emmalynne Sone"
+        }
+      ],
+      href: "/2018/04/05/slug"
+    },
+    {
+      id: "8",
+      title: "Quam pede lobortis ligula sit",
+      authors: [
+        {
+          id: "22",
+          name: "Ardella Sapir"
+        }
+      ],
+      date: "March 14, 2018",
+      href: "/2018/03/14/slug"
+    },
+    {
+      id: "9",
+      title:
+        "Diam cras pellentesque volutpat dui maecenas tristique est et tempus",
+      authors: [
+        {
+          id: "23",
+          name: "Ilise Sailor"
+        },
+        {
+          id: "24",
+          name: "Anita Olander"
+        }
+      ],
+      date: "February 28, 2018",
+      href: "/2018/02/28/slug"
+    },
+    {
+      id: "10",
+      title: "Metus sapien ut nunc vestibulum ante",
+      authors: [
+        {
+          id: "26",
+          name: "Gerik Frisby"
+        },
+        {
+          id: "27",
+          name: "Rayshell Marmion"
+        },
+        {
+          id: "28",
+          name: "Brooks Grene"
+        }
+      ],
+      date: "February 13, 2018",
+      href: "/2018/02/13/slug"
+    }
+  ].map(({ id: postId, title, authors, date, href }) => ({
+    id: postId,
+    title,
+    date,
+    authors: authors.map(({ id: authorId, name }) => ({
+      id: authorId,
+      avatar: () => (
+        <Image
+          alt={name}
+          borderRadius="circle"
+          height={64}
+          width={64}
+          src={`/avatar${authorId % 10}.png`}
+        />
+      ),
+      name
+    })),
+    href
+  }))}
+  width={512}
+  m={2}
+/>
+```

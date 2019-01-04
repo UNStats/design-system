@@ -1,0 +1,49 @@
+import Helmet from "react-helmet";
+import DefaultColorExample from "./default-color-example.mdx";
+import CustomColorExample from "./custom-color-example.mdx";
+import CustomTitleExample from "./custom-title-example.mdx";
+
+<Helmet
+  title="@undataforum/components - Header"
+  meta={[{ name: "description", content: "Site Header." }]}
+/>
+
+# Header
+
+Header with site title and navigation.
+
+## Props
+
+| Prop    | Description                                                         | Type                            | Required | Default                                |
+| :------ | :------------------------------------------------------------------ | :------------------------------ | :------- | :------------------------------------- |
+| `title` | Render prop that gives you full control over how title is rendered. | `func`                          | `false`  | `color => <SiteTitle color={color} />` |
+| `color` | Color of font and border.                                           | `string`                        | `false`  | `primary`                              |
+| `links` | Navigation links.                                                   | [`arrayOf(link)`](/types/link/) | `true`   |                                        |
+
+In addition `Header` accepts [margin and padding props](https://rebassjs.org/props/#margin-and-padding).
+
+## Examples
+
+### Default color
+
+If you do not provide a `color` prop to `Header`, it uses the default color.
+
+<DefaultColorExample />
+
+[Fullscreen](./default-color-example)
+
+### Custom color
+
+In this example we provide a `color` prop to `Header`.
+
+<CustomColorExample />
+
+[Fullscreen](./custom-color-example)
+
+### Custom title
+
+In this example we replace the default header title with a custom header title. Note that the `title` function has a `color` prop to ensure that the `Header`'s `color` prop is applied to the custom title as well.
+
+<CustomTitleExample />
+
+[Fullscreen](./custom-title-example)

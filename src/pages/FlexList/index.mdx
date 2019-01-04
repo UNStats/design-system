@@ -1,0 +1,57 @@
+import Helmet from "react-helmet";
+import AvatarsExample from "./avatars-example.mdx";
+import ManyAvatarsExample from "./many-avatars-example.mdx";
+import BadgesExample from "./badges-example.mdx";
+import ManyBadgesExample from "./many-badges-example.mdx";
+
+<Helmet
+  title="@undataforum/components - FlexList"
+  meta={[{ name: "description", content: "A list based on Flexbox." }]}
+/>
+
+# FlexList
+
+A list based on [Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) to render components horizontally.
+
+## Props
+
+| Prop     | Type              | Required |
+| :------- | :---------------- | :------- |
+| `render` | `func`            | `true`   |
+| `values` | `arrayOf(object)` | `true`   |
+
+In addition `FlexList` accepts [margin and padding props](https://rebassjs.org/props/#margin-and-padding).
+
+## Examples
+
+### Avatars Example
+
+`FlexList` delegates rendering of `values` to `render` prop. This gives us full control over what `FlexList` can render. Objects in `values` must match destructured values of the `render` prop function argument, in this example `avatar` and `href`.
+
+<AvatarsExample />
+
+[Fullscreen](./avatars-example)
+
+### Many avatars example
+
+In this example we pass a `profiles` array into `values` an transform it with [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map). The resulting objects must have `avatar` and `href` like in the previous example. It looks like the avatars are rendered in a grid, but they are not. Avatars are simply wrapping into a new line when the line is full an because they all have the same size it looks like a grid.
+
+<ManyAvatarsExample />
+
+[Fullscreen](./many-avatars-example)
+
+### Badges example
+
+In this example we render badges instead of avatars. The `render` prop expects `color`, `href` and `text` with `color` being optional as noted in the [documentation for `Badge`](/Badge). Note that the last value in `values` does not contain `color`.
+
+<BadgesExample />
+
+[Fullscreen](./badges-example)
+
+### Many badges example
+
+In this example we provide a `badges` to `values`. Each value has `color`, `href` and `text` to match the `render` prop. Badges have different sizes and this is why the wrapping nature of `FlexList` is more visible in this example.
+
+<ManyBadgesExample />
+
+[Fullscreen](./many-badges-example)

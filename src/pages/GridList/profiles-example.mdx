@@ -1,0 +1,211 @@
+```jsx
+<GridList
+  align="center"
+  gap={3}
+  render={profile => <ProfilePreview profile={profile} key={profile.id} />}
+  values={[
+    {
+      id: "1",
+      name: "Nance MacFadin",
+      jobtitle: "Help Desk Operator",
+      organization: "Schuster-Senger"
+    },
+    {
+      id: "2",
+      name: "Clerc Edis",
+      jobtitle: "Staff Scientist",
+      organization: "Ritchie Inc"
+    },
+    {
+      id: "3",
+      name: "Clifford Skipperbottom",
+      jobtitle: "Senior Financial Analyst",
+      organization: "Block, Bruen and Gerlach"
+    },
+    {
+      id: "4",
+      name: "Willow Rangall",
+      jobtitle: "Human Resources Assistant",
+      organization: "Corkery LLC"
+    },
+    {
+      id: "5",
+      name: "Suzy Cahan",
+      jobtitle: "Research Assistant",
+      organization: "Hickle-Emmerich"
+    },
+    {
+      id: "6",
+      name: "Sandra Abramovici",
+      jobtitle: "Help Desk Operator",
+      organization: "Kunze, Lehner and Kutch"
+    },
+    {
+      id: "7",
+      name: "Jan McKea",
+      jobtitle: "Civil Engineer",
+      organization: "Corkery-Grady"
+    },
+    {
+      id: "8",
+      name: "Ola Brunger",
+      jobtitle: "Nurse Practicioner",
+      organization: "Gottlieb Inc"
+    },
+    {
+      id: "9",
+      name: "Ivette Rowlinson",
+      jobtitle: "Research Nurse",
+      organization: "Purdy and Sons"
+    },
+    {
+      id: "10",
+      name: "Madeleine Stredwick",
+      jobtitle: "Staff Scientist",
+      organization: "Gaylord, Stoltenberg and Haag"
+    },
+    {
+      id: "11",
+      name: "Lin Billson",
+      jobtitle: "Database Administrator",
+      organization: "Legros and Sons"
+    },
+    {
+      id: "12",
+      name: "Alfie Piborn",
+      jobtitle: "Mechanical Systems Engineer",
+      organization: "Rosenbaum and Sons"
+    },
+    {
+      id: "13",
+      name: "Garvy Bartlomiej",
+      jobtitle: "Research Associate",
+      organization: "Tillman LLC"
+    },
+    {
+      id: "14",
+      name: "Gustavus Splevings",
+      jobtitle: "Structural Analysis Engineer",
+      organization: "Farrell, Veum and Daugherty"
+    },
+    {
+      id: "15",
+      name: "Cristi Tale",
+      jobtitle: "Desktop Support Technician",
+      organization: "Eichmann LLC"
+    },
+    {
+      id: "16",
+      name: "Gae Phinn",
+      jobtitle: "Associate Professor",
+      organization: "Cronin-Homenick"
+    },
+    {
+      id: "17",
+      name: "Leoline Hacaud",
+      jobtitle: "Occupational Therapist",
+      organization: "Bosco and Sons"
+    },
+    {
+      id: "18",
+      name: "Rufe Rockhill",
+      jobtitle: "Operator",
+      organization: "Champlin, Heller and Mante"
+    },
+    {
+      id: "19",
+      name: "Bernadene Van der Velden",
+      jobtitle: "Sales Representative",
+      organization: "Schimmel-Pollich"
+    },
+    {
+      id: "20",
+      name: "Edithe Densell",
+      jobtitle: "Dental Hygienist",
+      organization: "Turcotte-Greenholt"
+    },
+    {
+      id: "21",
+      name: "Emmalynne Sone",
+      jobtitle: "Accountant II",
+      organization: "Hansen-Keebler"
+    },
+    {
+      id: "22",
+      name: "Ardella Sapir",
+      jobtitle: "Geological Engineer",
+      organization: "Cassin-Kirlin"
+    },
+    {
+      id: "23",
+      name: "Ilise Sailor",
+      jobtitle: "Technical Writer",
+      organization: "Grimes, Gleichner and Gleason"
+    },
+    {
+      id: "24",
+      name: "Anita Olander",
+      jobtitle: "Help Desk Operator",
+      organization: "Halvorson Group"
+    },
+    {
+      id: "25",
+      name: "Gerik Frisby",
+      jobtitle: "Analyst Programmer",
+      organization: "Ullrich, Jakubowski and Doyle"
+    },
+    {
+      id: "26",
+      name: "Rayshell Marmion",
+      jobtitle: "Human Resources Manager",
+      organization: "Hane Group"
+    },
+    {
+      id: "27",
+      name: "Brooks Grene",
+      jobtitle: "Paralegal",
+      organization: "Swift, Bogan and Jones"
+    },
+    {
+      id: "28",
+      name: "Bev Dorey",
+      jobtitle: "Community Outreach Specialist",
+      organization: "D'Amore-Kassulke"
+    },
+    {
+      id: "29",
+      name: "Vladimir Parres",
+      jobtitle: "Community Outreach Specialist",
+      organization: "Leuschke, Okuneva and Heaney"
+    },
+    {
+      id: "30",
+      name:
+        "Really really really really really really really really really really long name",
+      jobtitle:
+        "Really really really really really really really really really really long jobtitle",
+      organization:
+        "Really really really really really really really really really really long organization"
+    }
+  ].map(({ id, name, jobtitle, organization }) => ({
+    id,
+    avatar: () => (
+      <Image
+        alt={name}
+        borderRadius="circle"
+        height={128}
+        width={128}
+        src={`/avatar${id % 10}.png`}
+      />
+    ),
+    name,
+    affiliation: {
+      jobtitle,
+      organization
+    },
+    href: `/profiles/${id}`
+  }))}
+  width={256}
+  m={2}
+/>
+```

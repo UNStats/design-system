@@ -1,0 +1,19 @@
+import Helmet from "react-helmet";
+
+<Helmet
+  title="@undataforum/components - profile"
+  meta={[{ name: "description", content: "Type profile." }]}
+/>
+
+# Type profile
+
+A profile describes a person.
+
+| Prop          | Description                                                                  | Type                                 | Required |
+| :------------ | :--------------------------------------------------------------------------- | :----------------------------------- | :------- |
+| `id`          | Unique profile ID that is used for the `key` prop in lists of profiles.      | `string`                             | `true`   |
+| `avatar`      | A render prop that gives you control over how a profile's image is rendered. | `func`                               | `true`   |
+| `name`        | Profile name.                                                                | `string`                             | `false`  |
+| `affiliation` | Profile affiliation.                                                         | [`affiliation`](/types/affiliation/) | `false`  |
+| `badges`      | Profile badges.                                                              | [`arrayOf(badge)`](/types/badge/)    | `false`  |
+| `href`        | Link profile to `href` if provided.                                          | `string`                             | `false`  |

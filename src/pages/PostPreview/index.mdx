@@ -1,0 +1,43 @@
+import Helmet from "react-helmet";
+import OneAuthorExample from "./one-author-example.mdx";
+import TwoAuthorsExample from "./two-authors-example.mdx";
+import ManyAuthorsExample from "./many-authors-example.mdx";
+
+<Helmet
+  title="@undataforum/components - PostPreview"
+  meta={[{ name: "description", content: "A preview for a post." }]}
+/>
+
+# PostPreview
+
+Preview for a post.
+
+## Props
+
+`PostPreview` includes all props from type [post](/types/post/). In addition it accepts [margin and padding props](https://rebassjs.org/props/#margin-and-padding).
+
+## Examples
+
+### One author
+
+In this example we render a `PostPreview` with one author. Note that if you provide a `href` prop to an author inside the `author` array, it will be linked. If you link the entire `PostPreview`, do not provide `href` props for authors to avoid links inside a link.
+
+<OneAuthorExample />
+
+[Fullscreen](./one-author-example)
+
+### Two authors
+
+In this example we render a `PostPreview` with two authors and do not provide `href` props to authors. This results in the authors not being linked.
+
+<TwoAuthorsExample />
+
+[Fullscreen](./two-authors-example)
+
+### Many authors
+
+In this example we render a `PostPreview` with many authors that wrap on smaller screens. This example shows how to map an authors array. In this case we remove `href` and create the `avatar` render prop.
+
+<ManyAuthorsExample />
+
+[Fullscreen](./many-authors-example)
