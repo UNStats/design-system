@@ -6,6 +6,7 @@
     "name": "Thilo Maier",
     "email": "maier@un.org"
   },
+  "homepage": "https://components.undataforum.org",
   "license": "MIT",
   "keywords": [
     "react",
@@ -13,9 +14,9 @@
     "styled-components",
     "styled-system"
   ],
-  "main": "dist/index.js",
+  "main": "index.js",
   "files": [
-    "dist"
+    "src/components"
   ],
   "husky": {
     "hooks": {
@@ -26,14 +27,12 @@
     "*.{js,jsx}": "eslint"
   },
   "scripts": {
-    "start": "start-storybook -p 9009 -s ./public -c config/storybook",
-    "build": "rm -rf ./dist && babel ./src -d ./dist --ignore src/**/*.stories.jsx",
-    "build-storybook": "rm -rf ./storybook-static && build-storybook -s ./public -c config/storybook",
-    "deploy": "npm run build-storybook &&  gh-pages -d storybook-static -m 'Deploy to GitHub Pages'",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "deploy": "npm run build &&  gh-pages -d public -m 'Deploy to GitHub Pages'",
     "format": "pretty-quick",
-    "inspect": "node --inspect-brk node_modules/.bin/jest --runInBand",
-    "lint": "eslint --ext .jsx,.js --ignore-path .gitignore .",
-    "prepublishOnly": "npm run build"
+    "inspect": "node --inspect-brk node_modules/.bin/gatsby develop",
+    "lint": "eslint --ext .jsx,.js --ignore-path .gitignore ."
   },
   "dependencies": {
     "polished": "^2.0.2",
@@ -47,17 +46,13 @@
     "react": "^16.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0",
     "@mdotasia/eslint-config": "^0.5.0",
-    "@storybook/addon-knobs": "^4.0.0",
-    "@storybook/addon-options": "^4.0.0",
-    "@storybook/addons": "^4.0.0",
-    "@storybook/react": "^4.0.0",
-    "babel-loader": "^8.0.4",
+    "@mdx-js/mdx": "^0.15.0",
+    "@mdx-js/tag": "^0.15.0",
     "eslint": "^5.3.0",
+    "gatsby": "^2.0.75",
+    "gatsby-mdx": "^0.2.0",
+    "gatsby-source-filesystem": "^2.0.12",
     "gh-pages": "^2.0.1",
     "husky": "^1.0.1",
     "lint-staged": "^8.0.4",
