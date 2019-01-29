@@ -7,7 +7,7 @@ A library of React components for the new UN World Data Forum Website. Built wit
 Run
 
 ```bash
-yarn add @undataforum/components
+npm add @undataforum/components
 ```
 
 to add package [@undataforum/components](https://github.com/UNDataForum/components) to your dependencies. Import components like this

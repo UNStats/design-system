@@ -34,9 +34,11 @@
     "format": "pretty-quick",
     "inspect": "node --inspect-brk node_modules/.bin/gatsby develop",
     "lint": "eslint --ext .jsx,.js --ignore-path .gitignore .",
-    "prepublishOnly": "npm run babel"
+    "prepublishOnly": "npm run babel",
+    "upgrade-interactive": "npm-check --update"
   },
   "dependencies": {
+    "npm-check": "^5.9.0",
     "polished": "^2.0.2",
     "prop-types": "^15.6.2",
     "react-helmet": "^5.2.0",
