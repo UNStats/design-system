@@ -18,7 +18,7 @@ import styled, { withTheme } from "styled-components";
 import { height } from "styled-system";
 import { Card, Flex, Link, Text } from "rebass";
 import SiteTitle from "./SiteTitle";
-import { colorType, linkType } from "../types";
+import { colorType, linkType, themeType } from "../types";
 
 const Wrapper = styled(Card)(height);
 
@@ -202,7 +202,8 @@ const Header = ({ title, color, links, theme, ...props }) => (
 Header.propTypes = {
   title: PropTypes.func,
   color: colorType,
-  links: PropTypes.arrayOf(linkType).isRequired
+  links: PropTypes.arrayOf(linkType).isRequired,
+  theme: themeType.isRequired
 };
 
 Header.defaultProps = {

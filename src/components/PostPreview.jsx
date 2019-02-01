@@ -3,7 +3,7 @@ import { Flex, Link, Text } from "rebass";
 import { withTheme } from "styled-components";
 import GridList from "./GridList";
 import ProfilePreview from "./ProfilePreview";
-import { postType } from "../types";
+import { postType, themeType } from "../types";
 
 const UnlinkedPostPreview = ({ post, ...props }) => (
   <Flex {...props} flexDirection="column">
@@ -43,6 +43,10 @@ const UnlinkedPostPreview = ({ post, ...props }) => (
   </Flex>
 );
 
+UnlinkedPostPreview.propTypes = {
+  post: postType.isRequired
+};
+
 const PostPreview = ({ post, theme, ...props }) => {
   if (post.href) {
     return (
@@ -55,7 +59,8 @@ const PostPreview = ({ post, theme, ...props }) => {
 };
 
 PostPreview.propTypes = {
-  post: postType.isRequired
+  post: postType.isRequired,
+  theme: themeType.isRequired
 };
 
 export default withTheme(PostPreview);

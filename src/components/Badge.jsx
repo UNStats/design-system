@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled, { withTheme } from "styled-components";
 import { borderRadius } from "styled-system";
 import { Link, Text } from "rebass";
-import { badgeType } from "../types";
+import { badgeType, colorType, themeType } from "../types";
 
 const Pill = styled(Text)(borderRadius);
 
@@ -21,6 +22,12 @@ const UnlinkedBadge = ({ color, text, theme, ...props }) => (
     {text}
   </Pill>
 );
+
+UnlinkedBadge.propTypes = {
+  color: colorType,
+  text: PropTypes.string.isRequired,
+  theme: themeType.isRequired
+};
 
 UnlinkedBadge.defaultProps = {
   color: "primary"
@@ -50,7 +57,8 @@ const Badge = ({ badge, theme, ...props }) => {
 };
 
 Badge.propTypes = {
-  badge: badgeType.isRequired
+  badge: badgeType.isRequired,
+  theme: themeType.isRequired
 };
 
 export default withTheme(Badge);
