@@ -1,9 +1,8 @@
-import Box from "rebass";
+import { Box, Heading, Text } from "rebass";
 import AlternateSiteTitle from "./components/AlternateSiteTitle";
 import GridList from "./components/GridList";
 import Head from "./components/Head";
 import Header from "./components/Header";
-import HeadingPage from "./components/pages/HeadingPage";
 import NewTabLink from "./components/NewTabLink";
 import PostPreview from "./components/PostPreview";
 import ProfilePreview from "./components/ProfilePreview";
@@ -16,9 +15,10 @@ export {
   GridList,
   Head,
   Header,
-  HeadingPage,
+  Heading,
   NewTabLink,
   PostPreview,
   ProfilePreview,
-  Provider
+  Provider,
+  Text
 };
