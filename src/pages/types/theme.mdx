@@ -1,0 +1,13 @@
+import Helmet from "react-helmet";
+
+<Helmet
+  title="@undataforum/components - theme"
+  meta={[{ name: "description", content: "Type theme." }]}
+/>
+
+# Type theme
+
+| Prop           | Description                                                        | Type   | Default      |
+| :------------- | :----------------------------------------------------------------- | :----- | :----------- |
+| `internalLink` | Render prop to render internal links. `undefined` means use `<a>`. | `func` | `undefined`  |
+| `externalLink` | Render prop to render external links.                              | `func` | `NewTabLink` |

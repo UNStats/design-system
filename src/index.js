@@ -3,6 +3,7 @@ import AlternateSiteTitle from "./components/AlternateSiteTitle";
 import GridList from "./components/GridList";
 import Head from "./components/Head";
 import Header from "./components/Header";
+import Link from "./components/Link";
 import NewTabLink from "./components/NewTabLink";
 import PostPreview from "./components/PostPreview";
 import ProfilePreview from "./components/ProfilePreview";
@@ -16,6 +17,7 @@ export {
   Head,
   Header,
   Heading,
+  Link,
   NewTabLink,
   PostPreview,
   ProfilePreview,

@@ -1,0 +1,41 @@
+import Helmet from "react-helmet";
+import InternalLinkExample from "./internal-link-example.mdx";
+import ExternalLinkExample from "./external-link-example.mdx";
+
+<Helmet
+  title="@undataforum/components - Link"
+  meta={[
+    {
+      name: "description",
+      content: "Link that can render external and internal links differently."
+    }
+  ]}
+/>
+
+# Link
+
+The `Link` component checks if a link is internal (starting with `/`) or not and uses the `internlLink` and `externalLink` render props from the theme to render them. The default is [`<a>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) for internal links and [`<a target="_blank" rel="noreferrer noopener">`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#Attributes) for external links.
+
+## Props
+
+| Prop       | Description                   | Type                     | Required |
+| :--------- | :---------------------------- | :----------------------- | :------- |
+| `children` | Node to be linked.            | `node`                   | `true`   |
+| `href`     | Link target.                  | `string`                 | `true`   |
+| `theme`    | Theme applied via `Provider`. | [`theme`](/types/theme/) | `true`   |
+
+In addition `Link` accepts [margin and padding props](https://rebassjs.org/props/#margin-and-padding).
+
+## Examples
+
+### Internal Link
+
+Internal link opens in same tab:
+
+<InternalLinkExample />
+
+### External Link
+
+External link opens in new tab:
+
+<ExternalLinkExample />
