@@ -1,26 +1,10 @@
-import { Box, Heading, Text } from "rebass";
-import AlternateSiteTitle from "./components/AlternateSiteTitle";
-import GridList from "./components/GridList";
-import Head from "./components/Head";
-import Header from "./components/Header";
-import Link from "./components/Link";
-import NewTabLink from "./components/NewTabLink";
-import PostPreview from "./components/PostPreview";
-import ProfilePreview from "./components/ProfilePreview";
-import Provider from "./components/Provider";
-
-// All components that comprise the library's public API.
-export {
-  AlternateSiteTitle,
-  Box,
-  GridList,
-  Head,
-  Header,
-  Heading,
-  Link,
-  NewTabLink,
-  PostPreview,
-  ProfilePreview,
-  Provider,
-  Text
-};
+export { Box, Heading, Text } from "rebass";
+export { default as AlternateSiteTitle } from "./components/AlternateSiteTitle";
+export { default as GridList } from "./components/GridList";
+export { default as Head } from "./components/Head";
+export { default as Header } from "./components/Header";
+export { default as Link } from "./components/Link";
+export { default as NewTabLink } from "./components/NewTabLink";
+export { default as PostPreview } from "./components/PostPreview";
+export { default as ProfilePreview } from "./components/ProfilePreview";
+export { default as Provider } from "./components/Provider";

@@ -1,9 +1,9 @@
 import React from "react";
-import { Flex, Link, Text } from "rebass";
-import { withTheme } from "styled-components";
+import { Flex, Text } from "rebass";
 import Badge from "./Badge";
 import FlexList from "./FlexList";
-import { alignType, fontSizeType, profileType, themeType } from "../types";
+import Link from "./Link";
+import { alignType, fontSizeType, profileType } from "../types";
 
 const style = {
   left: {
@@ -29,13 +29,7 @@ const style = {
   }
 };
 
-const UnlinkedProfilePreview = ({
-  profile,
-  align,
-  fontSize,
-  theme,
-  ...props
-}) => (
+const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => (
   <Flex {...props} flexDirection="column" alignItems={style[align].alignItems}>
     {profile.avatar()}
     <Text
@@ -87,30 +81,27 @@ const UnlinkedProfilePreview = ({
 UnlinkedProfilePreview.propTypes = {
   profile: profileType.isRequired,
   align: alignType.isRequired,
-  fontSize: fontSizeType.isRequired,
-  theme: themeType.isRequired
+  fontSize: fontSizeType.isRequired
 };
 
-const ProfilePreview = ({ profile, align, fontSize, theme, ...props }) => {
+const ProfilePreview = ({ profile, align, fontSize, ...other }) => {
   if (profile.href) {
     return (
-      <Link {...props} as={theme.internalLink} href={profile.href}>
+      <Link {...other} href={profile.href}>
         <UnlinkedProfilePreview
           profile={profile}
           align={align}
           fontSize={fontSize}
-          theme={theme}
         />
       </Link>
     );
   }
   return (
     <UnlinkedProfilePreview
-      {...props}
+      {...other}
       profile={profile}
       align={align}
       fontSize={fontSize}
-      theme={theme}
     />
   );
 };
@@ -118,8 +109,7 @@ const ProfilePreview = ({ profile, align, fontSize, theme, ...props }) => {
 ProfilePreview.propTypes = {
   profile: profileType.isRequired,
   align: alignType,
-  fontSize: fontSizeType,
-  theme: themeType.isRequired
+  fontSize: fontSizeType
 };
 
 ProfilePreview.defaultProps = {
@@ -127,4 +117,4 @@ ProfilePreview.defaultProps = {
   fontSize: [3, 4]
 };
 
-export default withTheme(ProfilePreview);
+export default ProfilePreview;

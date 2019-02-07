@@ -1,9 +1,9 @@
 import React from "react";
-import { Flex, Link, Text } from "rebass";
-import { withTheme } from "styled-components";
+import { Flex, Text } from "rebass";
 import GridList from "./GridList";
+import Link from "./Link";
 import ProfilePreview from "./ProfilePreview";
-import { postType, themeType } from "../types";
+import { postType } from "../types";
 
 const UnlinkedPostPreview = ({ post, ...props }) => (
   <Flex {...props} flexDirection="column">
@@ -47,20 +47,19 @@ UnlinkedPostPreview.propTypes = {
   post: postType.isRequired
 };
 
-const PostPreview = ({ post, theme, ...props }) => {
+const PostPreview = ({ post, ...other }) => {
   if (post.href) {
     return (
-      <Link {...props} as={theme.internalLink} href={post.href}>
+      <Link {...other} href={post.href}>
         <UnlinkedPostPreview post={post} />
       </Link>
     );
   }
-  return <UnlinkedPostPreview {...props} post={post} />;
+  return <UnlinkedPostPreview {...other} post={post} />;
 };
 
 PostPreview.propTypes = {
-  post: postType.isRequired,
-  theme: themeType.isRequired
+  post: postType.isRequired
 };
 
-export default withTheme(PostPreview);
+export default PostPreview;

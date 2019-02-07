@@ -14,17 +14,18 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { withTheme } from "styled-components";
+import styled from "styled-components";
 import { height } from "styled-system";
-import { Card, Flex, Link, Text } from "rebass";
+import { Card, Flex, Text } from "rebass";
+import Link from "./Link";
 import SiteTitle from "./SiteTitle";
-import { colorType, linkType, themeType } from "../types";
+import { colorType, linkType } from "../types";
 
 const Wrapper = styled(Card)(height);
 
-const Header = ({ title, color, links, theme, ...props }) => (
+const Header = ({ title, color, links, ...other }) => (
   <Wrapper
-    {...props}
+    {...other}
     as="header"
     css="box-sizing: content-box;"
     borderBottom="3px solid"
@@ -38,7 +39,7 @@ const Header = ({ title, color, links, theme, ...props }) => (
       mx="auto"
       p={[1, 2]}
     >
-      <Link css="display: block;" as={theme.internalLink} href="/">
+      <Link css="display: block;" href="/">
         <svg
           height="100%"
           viewBox="0 0 173 192"
@@ -165,23 +166,12 @@ const Header = ({ title, color, links, theme, ...props }) => (
         alignItems={["center", "flex-end"]}
         pl={[3, 2]}
       >
-        <Link
-          css="display: block;"
-          as={theme.internalLink}
-          href="/"
-          mb={[0, -1]}
-        >
+        <Link css="display: block;" href="/" mb={[0, -1]}>
           {title(color)}
         </Link>
         <Flex mb={[0, -1]}>
           {links.map(({ href, text }) => (
-            <Link
-              key={href}
-              as={theme.internalLink}
-              href={href}
-              ml={[2, 3, 4]}
-              mr={[2, 0]}
-            >
+            <Link key={href} href={href} ml={[2, 3, 4]} mr={[2, 0]}>
               <Text
                 as="span"
                 color={color}
@@ -202,8 +192,7 @@ const Header = ({ title, color, links, theme, ...props }) => (
 Header.propTypes = {
   title: PropTypes.func,
   color: colorType,
-  links: PropTypes.arrayOf(linkType).isRequired,
-  theme: themeType.isRequired
+  links: PropTypes.arrayOf(linkType).isRequired
 };
 
 Header.defaultProps = {
@@ -211,4 +200,4 @@ Header.defaultProps = {
   color: "primary"
 };
 
-export default withTheme(Header);
+export default Header;

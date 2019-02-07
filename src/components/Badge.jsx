@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled, { withTheme } from "styled-components";
 import { borderRadius } from "styled-system";
-import { Link, Text } from "rebass";
+import { Text } from "rebass";
+import Link from "./Link";
 import { badgeType, colorType, themeType } from "../types";
 
 const Pill = styled(Text)(borderRadius);
@@ -33,22 +34,17 @@ UnlinkedBadge.defaultProps = {
   color: "primary"
 };
 
-const Badge = ({ badge, theme, ...props }) => {
+const Badge = ({ badge, theme, ...other }) => {
   if (badge.href) {
     return (
-      <Link
-        {...props}
-        as={theme.internalLink}
-        href={badge.href}
-        key={badge.href}
-      >
+      <Link {...other} href={badge.href}>
         <UnlinkedBadge color={badge.color} text={badge.text} theme={theme} />
       </Link>
     );
   }
   return (
     <UnlinkedBadge
-      {...props}
+      {...other}
       color={badge.color}
       text={badge.text}
       theme={theme}
