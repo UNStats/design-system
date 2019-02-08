@@ -60,7 +60,7 @@
     "babel-plugin-styled-components": "^1.10.0",
     "babel-preset-gatsby": "^0.1.7",
     "eslint": "^5.13.0",
-    "gatsby": "^2.0.116",
+    "gatsby": "^2.0.118",
     "gatsby-mdx": "^0.3.2",
     "gatsby-source-filesystem": "^2.0.20",
     "gh-pages": "^2.0.1",
