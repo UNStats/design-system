@@ -42,7 +42,6 @@
     "styled-system"
   ],
   "dependencies": {
-    "gatsby-theme-undataforum": "file:.yalc/gatsby-theme-undataforum",
     "polished": "^2.0.2",
     "prism-react-renderer": "^0.1.5",
     "prop-types": "^15.7.2",
