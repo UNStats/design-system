@@ -1,6 +1,6 @@
 {
   "name": "@undataforum/components",
-  "description": "React components for undataforum.org.",
+  "description": "React components for UN World Data Forum websites.",
   "version": "0.21.0",
   "author": {
     "name": "Thilo Maier",
@@ -8,25 +8,10 @@
   },
   "homepage": "https://components.undataforum.org",
   "license": "MIT",
-  "repository": "github:undataforum/components",
-  "keywords": [
-    "react",
-    "components",
-    "styled-components",
-    "styled-system"
-  ],
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && pretty-quick --staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx}": "eslint"
-  },
   "scripts": {
     "start": "gatsby develop",
     "build": "gatsby build",
@@ -38,11 +23,30 @@
     "prepublishOnly": "npm run babel",
     "upgrade-interactive": "npm-check --update"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && pretty-quick --staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/undataforum/components.git"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "styled-components",
+    "styled-system"
+  ],
   "dependencies": {
+    "gatsby-theme-undataforum": "file:.yalc/gatsby-theme-undataforum",
     "polished": "^2.0.2",
-    "prop-types": "^15.6.2",
+    "prism-react-renderer": "^0.1.5",
+    "prop-types": "^15.7.2",
     "react-helmet": "^5.2.0",
-    "react-live": "^1.12.0",
     "rebass": "^3.0.1",
     "styled-components": "^4.1.3",
     "styled-system": "^3.1.11"
@@ -55,22 +59,19 @@
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
     "@mdotasia/eslint-config": "^0.6.0",
-    "@mdx-js/mdx": "^0.16.6",
-    "@mdx-js/tag": "^0.16.6",
     "babel-plugin-styled-components": "^1.10.0",
     "babel-preset-gatsby": "^0.1.7",
     "eslint": "^5.13.0",
-    "gatsby": "^2.0.118",
-    "gatsby-mdx": "^0.3.2",
+    "gatsby": "^2.1.4",
     "gatsby-source-filesystem": "^2.0.20",
     "gh-pages": "^2.0.1",
     "husky": "^1.0.1",
-    "lint-staged": "^8.1.3",
+    "lint-staged": "^8.1.4",
     "npm-check": "^5.9.0",
     "prettier": "^1.16.4",
     "pretty-quick": "^1.6.0",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "react-test-renderer": "^16.8.1"
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "react-test-renderer": "^16.8.2"
   }
 }

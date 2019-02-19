@@ -2,7 +2,6 @@ import {
   arrayOf,
   func,
   number,
-  object,
   oneOf,
   oneOfType,
   shape,
@@ -57,8 +56,6 @@ export const postType = shape({
   lead: string,
   href: string
 });
-
-export const scopeType = object;
 
 export const themeType = shape({
   externalLink: func,

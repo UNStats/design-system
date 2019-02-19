@@ -1,4 +1,6 @@
-.cache/
-dist/
-node_modules/
-public/
+.cache
+.yalc
+dist
+node_modules
+public
+yalc.lock

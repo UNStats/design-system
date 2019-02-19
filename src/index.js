@@ -1,5 +1,6 @@
 export { Box, Heading, Text } from "rebass";
 export { default as AlternateSiteTitle } from "./components/AlternateSiteTitle";
+export { default as Code } from "./components/Code";
 export { default as GridList } from "./components/GridList";
 export { default as Head } from "./components/Head";
 export { default as Header } from "./components/Header";

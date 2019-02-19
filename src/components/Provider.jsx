@@ -2,7 +2,8 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { normalize } from "polished";
-import theme from "../theme";
+import defaultTheme from "../defaultTheme";
+import { themeType } from "../types";
 
 // https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 const GlobalStyle = createGlobalStyle`
@@ -17,8 +18,8 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const Provider = ({ children }) => (
-  <ThemeProvider theme={theme}>
+const Provider = ({ children, theme }) => (
+  <ThemeProvider theme={{ ...defaultTheme, ...theme }}>
     <Fragment>
       <GlobalStyle />
       {children}
@@ -27,7 +28,12 @@ const Provider = ({ children }) => (
 );
 
 Provider.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  theme: themeType
+};
+
+Provider.defaultProps = {
+  theme: {}
 };
 
 export default Provider;
