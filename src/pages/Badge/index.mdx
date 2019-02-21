@@ -29,7 +29,16 @@ If you do not provide a `color` prop to `Badge`, it uses the default color `prim
 
 <DefaultColorExample />
 
-[Fullscreen](./default-color-example)
+[Fullscreen](/Badge/default-color-example/)
+
+```jsx
+<Badge
+  badge={{
+    text: "Badge"
+  }}
+  m={2}
+/>
+```
 
 ### Custom color
 
@@ -37,4 +46,8 @@ In this example we provide a `color` prop to `Badge`.
 
 <CustomColorExample />
 
-[Fullscreen](./custom-color-example)
+[Fullscreen](/Badge/custom-color-example/)
+
+```jsx
+<Badge badge={{ color: "red", text: "Badge" }} m={2} />
+```

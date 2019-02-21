@@ -24,7 +24,36 @@ In this example we render a `PostPreview` with one author. Note that if you prov
 
 <OneAuthorExample />
 
-[Fullscreen](./one-author-example)
+[Fullscreen](/PostPreview/one-author-example/)
+
+```jsx
+<PostPreview
+  post={{
+    id: "1",
+    title: "Aliquet maecenas leo odio condimentum id luctus nec molestie",
+    date: "July 4, 2018",
+    authors: [
+      {
+        id: "nance-macfadin",
+        avatar: () => (
+          <Image
+            alt="Nance MacFadin"
+            borderRadius="circle"
+            height={64}
+            width={64}
+            src="/avatar0.png"
+          />
+        ),
+        name: "Nance MacFadin",
+        href: "/profiles/nance-macfadin"
+      }
+    ],
+    lead:
+      "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
+  }}
+  m={2}
+/>
+```
 
 ### Two authors
 
@@ -32,7 +61,48 @@ In this example we render a `PostPreview` with two authors and do not provide `h
 
 <TwoAuthorsExample />
 
-[Fullscreen](./two-authors-example)
+[Fullscreen](/PostPreview/two-authors-example/)
+
+```jsx
+<PostPreview
+  post={{
+    id: "1",
+    title: "Pretium iaculis justo in hac habitasse platea",
+    date: "June 12, 2018",
+    authors: [
+      {
+        id: "cleric-edis",
+        name: "Clerc Edis",
+        avatar: () => (
+          <Image
+            alt={name}
+            borderRadius="circle"
+            height={64}
+            width={64}
+            src="/avatar1.png"
+          />
+        )
+      },
+      {
+        id: "clifford-skipperbottom",
+        name: "Clifford Skipperbottom",
+        avatar: () => (
+          <Image
+            alt={name}
+            borderRadius="circle"
+            height={64}
+            width={64}
+            src="/avatar2.png"
+          />
+        )
+      }
+    ],
+    lead:
+      "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est."
+  }}
+  m={2}
+/>
+```
 
 ### Many authors
 
@@ -40,4 +110,90 @@ In this example we render a `PostPreview` with many authors that wrap on smaller
 
 <ManyAuthorsExample />
 
-[Fullscreen](./many-authors-example)
+[Fullscreen](/PostPreview/many-authors-example/)
+
+```jsx
+<PostPreview
+  post={{
+    id: "1",
+    title: "Vestibulum proin eu mi nulla ac enim in tempor turpis",
+    date: "May 31, 2018",
+    authors: [
+      {
+        id: "willow-rangall",
+        name: "Willow Rangall",
+        img: "/avatar0.png",
+        href: "/profiles/willow-rangall"
+      },
+      {
+        id: "suzy-cahan",
+        name: "Suzy Cahan",
+        img: "/avatar1.png",
+        href: "/profiles/suzy-cahan"
+      },
+      {
+        id: "sandra-abramovici",
+        name: "Sandra Abramovici",
+        img: "/avatar2.png",
+        href: "/profiles/sandra-abramovici"
+      },
+      {
+        id: "jan-mckea",
+        name: "Jan McKea",
+        img: "/avatar3.png",
+        href: "/profiles/sandra-abramovici"
+      },
+      {
+        id: "ola-brunger",
+        name: "Ola Brunger",
+        img: "/avatar4.png",
+        href: "/profiles/ola-brunger"
+      },
+      {
+        id: "ivette-rowlinson",
+        name: "Ivette Rowlinson",
+        img: "/avatar5.png",
+        href: "/profiles/ivette-rowlinson"
+      },
+      {
+        id: "madeleine-stredwick",
+        name: "Madeleine Stredwick",
+        img: "/avatar6.png",
+        href: "/profiles/madeleine-stredwick"
+      },
+      {
+        id: "lin-billson",
+        name: "Lin Billson",
+        img: "/avatar7.png",
+        href: "/profiles/lin-billson"
+      },
+      {
+        id: "alfie-piborn",
+        name: "Alfie Piborn",
+        img: "/avatar8.png",
+        href: "/profiles/alfie-piborn"
+      },
+      {
+        id: "garvy-bartlomiej",
+        name: "Garvy Bartlomiej",
+        img: "/avatar9.png",
+        href: "/profiles/garvy-bartlomiej"
+      }
+    ].map(({ id, name, img }) => ({
+      id,
+      name,
+      avatar: () => (
+        <Image
+          alt={name}
+          borderRadius="circle"
+          height={64}
+          width={64}
+          src={img}
+        />
+      )
+    }))
+  }}
+  lead="Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo."
+  m={2}
+/>
+```

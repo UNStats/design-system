@@ -30,7 +30,26 @@ If you do not provide a `color` prop to `Header`, it uses the default color.
 
 <DefaultColorExample />
 
-[Fullscreen](./default-color-example)
+[Fullscreen](/Header/default-color-example/)
+
+```jsx
+<Header
+  links={[
+    {
+      href: "/about",
+      text: "About"
+    },
+    {
+      href: "/blog",
+      text: "Blog"
+    },
+    {
+      href: "/programme",
+      text: "Programme"
+    }
+  ]}
+/>
+```
 
 ### Custom color
 
@@ -38,7 +57,27 @@ In this example we provide a `color` prop to `Header`.
 
 <CustomColorExample />
 
-[Fullscreen](./custom-color-example)
+[Fullscreen](/Header/custom-color-example/)
+
+```jsx
+<Header
+  color="green"
+  links={[
+    {
+      href: "/about",
+      text: "About"
+    },
+    {
+      href: "/blog",
+      text: "Blog"
+    },
+    {
+      href: "/programme",
+      text: "Programme"
+    }
+  ]}
+/>
+```
 
 ### Custom title
 
@@ -46,4 +85,24 @@ In this example we replace the default header title with a custom header title. 
 
 <CustomTitleExample />
 
-[Fullscreen](./custom-title-example)
+[Fullscreen](/Header/custom-title-example)
+
+```jsx
+<Header
+  links={[
+    {
+      href: "/about",
+      text: "About"
+    },
+    {
+      href: "/blog",
+      text: "Blog"
+    },
+    {
+      href: "/programme",
+      text: "Programme"
+    }
+  ]}
+  title={color => <AlternateSiteTitle color={color} year={2018} />}
+/>
+```

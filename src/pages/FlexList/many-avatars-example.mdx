@@ -1,4 +1,10 @@
-```jsx
+import { PreviewLayout } from "gatsby-theme-undataforum";
+import { Image } from "rebass";
+import FlexList from "../../components/FlexList";
+import ProfilePreview from "../../components/ProfilePreview";
+
+export default PreviewLayout;
+
 <FlexList
   render={profile => (
     <ProfilePreview profile={profile} key={profile.id} m={2} />
@@ -169,4 +175,3 @@
     href
   }))}
 />
-```

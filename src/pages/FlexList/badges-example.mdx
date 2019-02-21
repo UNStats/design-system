@@ -1,4 +1,9 @@
-```jsx
+import { PreviewLayout } from "gatsby-theme-undataforum";
+import FlexList from "../../components/FlexList";
+import Badge from "../../components/Badge";
+
+export default PreviewLayout;
+
 <FlexList
   render={badge => <Badge badge={badge} key={badge.text} m={1} />}
   values={[
@@ -8,4 +13,3 @@
     { text: "Environmental Specialist", href: "/environmental-specialist" }
   ]}
 />
-```

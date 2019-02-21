@@ -35,7 +35,151 @@ In addition `GridList` accepts [margin and padding props](https://rebassjs.org/p
 
 <AvatarsExample />
 
-[Fullscreen](./avatars-example)
+[Fullscreen](/GridList/avatars-example/)
+
+```jsx
+<GridList
+  align="center"
+  gap={2}
+  render={profile => <ProfilePreview profile={profile} key={profile.id} />}
+  values={[
+    {
+      id: "1",
+      name: "Berenice Feldmus"
+    },
+    {
+      id: "2",
+      name: "Sidonnie Halbeard"
+    },
+    {
+      id: "3",
+      name: "Jacenta Busch"
+    },
+    {
+      id: "4",
+      name: "Mercie Kuban"
+    },
+    {
+      id: "5",
+      name: "Candis Ruggs"
+    },
+    {
+      id: "6",
+      name: "Pippa Rawkesby"
+    },
+    {
+      id: "7",
+      name: "Issie Kisby"
+    },
+    {
+      id: "8",
+      name: "Josee Lyven"
+    },
+    {
+      id: "9",
+      name: "Barton Pentecost"
+    },
+    {
+      id: "10",
+      name: "Grier Dorman"
+    },
+    {
+      id: "11",
+      name: "Rodolph Yarrington"
+    },
+    {
+      id: "12",
+      name: "Nicola Cobbledick"
+    },
+    {
+      id: "13",
+      name: "De Pick"
+    },
+    {
+      id: "14",
+      name: "Christian Dowsing"
+    },
+    {
+      id: "15",
+      name: "Aggy Ethridge"
+    },
+    {
+      id: "16",
+      name: "Nada Genike"
+    },
+    {
+      id: "17",
+      name: "Kimmie Sowte"
+    },
+    {
+      id: "18",
+      name: "Irena Lamplugh"
+    },
+    {
+      id: "19",
+      name: "Dolph De Goey"
+    },
+    {
+      id: "20",
+      name: "Ertha Langfield"
+    },
+    {
+      id: "21",
+      name: "Consuelo Chasteau"
+    },
+    {
+      id: "22",
+      name: "Averil Ongin"
+    },
+    {
+      id: "23",
+      name: "Drucill Grishinov"
+    },
+    {
+      id: "24",
+      name: "Nessie Galletley"
+    },
+    {
+      id: "25",
+      name: "Marcellina Palmer"
+    },
+    {
+      id: "26",
+      name: "Christabella Shann"
+    },
+    {
+      id: "27",
+      name: "Tawsha Fruish"
+    },
+    {
+      id: "28",
+      name: "Odessa Munns"
+    },
+    {
+      id: "29",
+      name: "Conni McNickle"
+    },
+    {
+      id: "30",
+      name: "Clerc Edis"
+    }
+  ].map(({ id, name }) => ({
+    id,
+    avatar: () => (
+      <Image
+        alt={name}
+        borderRadius="circle"
+        height={64}
+        width={64}
+        src={`/avatar${id % 10}.png`}
+      />
+    ),
+    href: `/profiles/${id}`
+  }))}
+  width={64}
+  m={2}
+/>
+```
 
 ### Profiles example
 
@@ -43,7 +187,219 @@ In this example we render profiles instead of avatars. Note that the signature o
 
 <ProfilesExample />
 
-[Fullscreen](./profiles-example)
+[Fullscreen](/GridList/profiles-example/)
+
+```jsx
+<GridList
+  align="center"
+  gap={3}
+  render={profile => <ProfilePreview profile={profile} key={profile.id} />}
+  values={[
+    {
+      id: "1",
+      name: "Nance MacFadin",
+      jobtitle: "Help Desk Operator",
+      organization: "Schuster-Senger"
+    },
+    {
+      id: "2",
+      name: "Clerc Edis",
+      jobtitle: "Staff Scientist",
+      organization: "Ritchie Inc"
+    },
+    {
+      id: "3",
+      name: "Clifford Skipperbottom",
+      jobtitle: "Senior Financial Analyst",
+      organization: "Block, Bruen and Gerlach"
+    },
+    {
+      id: "4",
+      name: "Willow Rangall",
+      jobtitle: "Human Resources Assistant",
+      organization: "Corkery LLC"
+    },
+    {
+      id: "5",
+      name: "Suzy Cahan",
+      jobtitle: "Research Assistant",
+      organization: "Hickle-Emmerich"
+    },
+    {
+      id: "6",
+      name: "Sandra Abramovici",
+      jobtitle: "Help Desk Operator",
+      organization: "Kunze, Lehner and Kutch"
+    },
+    {
+      id: "7",
+      name: "Jan McKea",
+      jobtitle: "Civil Engineer",
+      organization: "Corkery-Grady"
+    },
+    {
+      id: "8",
+      name: "Ola Brunger",
+      jobtitle: "Nurse Practicioner",
+      organization: "Gottlieb Inc"
+    },
+    {
+      id: "9",
+      name: "Ivette Rowlinson",
+      jobtitle: "Research Nurse",
+      organization: "Purdy and Sons"
+    },
+    {
+      id: "10",
+      name: "Madeleine Stredwick",
+      jobtitle: "Staff Scientist",
+      organization: "Gaylord, Stoltenberg and Haag"
+    },
+    {
+      id: "11",
+      name: "Lin Billson",
+      jobtitle: "Database Administrator",
+      organization: "Legros and Sons"
+    },
+    {
+      id: "12",
+      name: "Alfie Piborn",
+      jobtitle: "Mechanical Systems Engineer",
+      organization: "Rosenbaum and Sons"
+    },
+    {
+      id: "13",
+      name: "Garvy Bartlomiej",
+      jobtitle: "Research Associate",
+      organization: "Tillman LLC"
+    },
+    {
+      id: "14",
+      name: "Gustavus Splevings",
+      jobtitle: "Structural Analysis Engineer",
+      organization: "Farrell, Veum and Daugherty"
+    },
+    {
+      id: "15",
+      name: "Cristi Tale",
+      jobtitle: "Desktop Support Technician",
+      organization: "Eichmann LLC"
+    },
+    {
+      id: "16",
+      name: "Gae Phinn",
+      jobtitle: "Associate Professor",
+      organization: "Cronin-Homenick"
+    },
+    {
+      id: "17",
+      name: "Leoline Hacaud",
+      jobtitle: "Occupational Therapist",
+      organization: "Bosco and Sons"
+    },
+    {
+      id: "18",
+      name: "Rufe Rockhill",
+      jobtitle: "Operator",
+      organization: "Champlin, Heller and Mante"
+    },
+    {
+      id: "19",
+      name: "Bernadene Van der Velden",
+      jobtitle: "Sales Representative",
+      organization: "Schimmel-Pollich"
+    },
+    {
+      id: "20",
+      name: "Edithe Densell",
+      jobtitle: "Dental Hygienist",
+      organization: "Turcotte-Greenholt"
+    },
+    {
+      id: "21",
+      name: "Emmalynne Sone",
+      jobtitle: "Accountant II",
+      organization: "Hansen-Keebler"
+    },
+    {
+      id: "22",
+      name: "Ardella Sapir",
+      jobtitle: "Geological Engineer",
+      organization: "Cassin-Kirlin"
+    },
+    {
+      id: "23",
+      name: "Ilise Sailor",
+      jobtitle: "Technical Writer",
+      organization: "Grimes, Gleichner and Gleason"
+    },
+    {
+      id: "24",
+      name: "Anita Olander",
+      jobtitle: "Help Desk Operator",
+      organization: "Halvorson Group"
+    },
+    {
+      id: "25",
+      name: "Gerik Frisby",
+      jobtitle: "Analyst Programmer",
+      organization: "Ullrich, Jakubowski and Doyle"
+    },
+    {
+      id: "26",
+      name: "Rayshell Marmion",
+      jobtitle: "Human Resources Manager",
+      organization: "Hane Group"
+    },
+    {
+      id: "27",
+      name: "Brooks Grene",
+      jobtitle: "Paralegal",
+      organization: "Swift, Bogan and Jones"
+    },
+    {
+      id: "28",
+      name: "Bev Dorey",
+      jobtitle: "Community Outreach Specialist",
+      organization: "D'Amore-Kassulke"
+    },
+    {
+      id: "29",
+      name: "Vladimir Parres",
+      jobtitle: "Community Outreach Specialist",
+      organization: "Leuschke, Okuneva and Heaney"
+    },
+    {
+      id: "30",
+      name:
+        "Really really really really really really really really really really long name",
+      jobtitle:
+        "Really really really really really really really really really really long jobtitle",
+      organization:
+        "Really really really really really really really really really really long organization"
+    }
+  ].map(({ id, name, jobtitle, organization }) => ({
+    id,
+    avatar: () => (
+      <Image
+        alt={name}
+        borderRadius="circle"
+        height={128}
+        width={128}
+        src={`/avatar${id % 10}.png`}
+      />
+    ),
+    name,
+    affiliation: {
+      jobtitle,
+      organization
+    },
+    href: `/profiles/${id}`
+  }))}
+  width={256}
+  m={2}
+/>
+```
 
 ### Posts example
 
@@ -51,7 +407,227 @@ In this example we render posts.
 
 <PostsExample />
 
-[Fullscreen](./posts-example)
+[Fullscreen](/GridList/posts-example/)
+
+```jsx
+<GridList
+  align="center"
+  gap={4}
+  render={post => <PostPreview post={post} key={post.id} />}
+  values={[
+    {
+      id: "1",
+      title: "Aliquet maecenas leo odio condimentum id luctus nec molestie",
+      date: "July 4, 2018",
+      authors: [
+        {
+          id: "1",
+          name: "Nance MacFadin"
+        }
+      ],
+      href: "/2018/07/04/slug"
+    },
+    {
+      id: "2",
+      title: "Pretium iaculis justo in hac habitasse platea",
+      date: "June 12, 2018",
+      authors: [
+        {
+          id: "2",
+          name: "Clerc Edis"
+        },
+        {
+          id: "3",
+          name: "Clifford Skipperbottom"
+        }
+      ],
+      href: "/2018/06/12/slug"
+    },
+    {
+      id: "3",
+      title: "Vestibulum proin eu mi nulla ac enim in tempor turpis",
+      date: "May 31, 2018",
+      authors: [
+        {
+          id: "4",
+          name: "Willow Rangall"
+        },
+        {
+          id: "5",
+          name: "Suzy Cahan"
+        },
+        {
+          id: "6",
+          name: "Sandra Abramovici"
+        },
+        {
+          id: "7",
+          name: "Jan McKea"
+        },
+        {
+          id: "8",
+          name: "Ola Brunger"
+        },
+        {
+          id: "9",
+          name: "Ivette Rowlinson"
+        },
+        {
+          id: "10",
+          name: "Madeleine Stredwick"
+        },
+        {
+          id: "11",
+          name: "Lin Billson"
+        },
+        {
+          id: "12",
+          name: "Alfie Piborn"
+        },
+        {
+          id: "13",
+          name: "Garvy Bartlomiej"
+        }
+      ],
+      href: "/2018/05/31/slug"
+    },
+    {
+      id: "4",
+      title:
+        "Vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat",
+      authors: [
+        {
+          id: "14",
+          name: "Gustavus Splevings"
+        },
+        {
+          id: "15",
+          name: "Cristi Tale"
+        }
+      ],
+      date: "May 15, 2018",
+      href: "/2018/05/15/slug"
+    },
+    {
+      id: "5",
+      title: "Primis in faucibus orci luctus est",
+      authors: [
+        {
+          id: "16",
+          name: "Gae Phinn"
+        },
+        {
+          id: "17",
+          name: "Leoline Hacaud"
+        },
+        {
+          id: "18",
+          name: "Rufe Rockhill"
+        }
+      ],
+      date: "May 2, 2018",
+      href: "/2018/05/02/slug"
+    },
+    {
+      id: "6",
+      title: "Suscipit ligula in lacus curabitur at ipsum",
+      authors: [
+        {
+          id: "19",
+          name: "Bernadene Van der Velden"
+        },
+        {
+          id: "20",
+          name: "Edithe Densell"
+        }
+      ],
+      date: "April 20, 2018",
+      href: "/2018/04/20/slug"
+    },
+    {
+      id: "7",
+      title: "Orci eget orci vehicula condimentum curabitur in",
+      date: "April 5, 2018",
+      authors: [
+        {
+          id: "21",
+          name: "Emmalynne Sone"
+        }
+      ],
+      href: "/2018/04/05/slug"
+    },
+    {
+      id: "8",
+      title: "Quam pede lobortis ligula sit",
+      authors: [
+        {
+          id: "22",
+          name: "Ardella Sapir"
+        }
+      ],
+      date: "March 14, 2018",
+      href: "/2018/03/14/slug"
+    },
+    {
+      id: "9",
+      title:
+        "Diam cras pellentesque volutpat dui maecenas tristique est et tempus",
+      authors: [
+        {
+          id: "23",
+          name: "Ilise Sailor"
+        },
+        {
+          id: "24",
+          name: "Anita Olander"
+        }
+      ],
+      date: "February 28, 2018",
+      href: "/2018/02/28/slug"
+    },
+    {
+      id: "10",
+      title: "Metus sapien ut nunc vestibulum ante",
+      authors: [
+        {
+          id: "26",
+          name: "Gerik Frisby"
+        },
+        {
+          id: "27",
+          name: "Rayshell Marmion"
+        },
+        {
+          id: "28",
+          name: "Brooks Grene"
+        }
+      ],
+      date: "February 13, 2018",
+      href: "/2018/02/13/slug"
+    }
+  ].map(({ id: postId, title, authors, date, href }) => ({
+    id: postId,
+    title,
+    date,
+    authors: authors.map(({ id: authorId, name }) => ({
+      id: authorId,
+      avatar: () => (
+        <Image
+          alt={name}
+          borderRadius="circle"
+          height={64}
+          width={64}
+          src={`/avatar${authorId % 10}.png`}
+        />
+      ),
+      name
+    })),
+    href
+  }))}
+  width={512}
+  m={2}
+/>
+```
 
 ### One list item
 
@@ -59,7 +635,36 @@ In this example we render posts.
 
 <OneListItemExample />
 
-[Fullscreen](./one-list-item-example)
+[Fullscreen](/GridList/one-list-item-example/)
+
+```jsx
+<GridList
+  align="center"
+  gap={3}
+  render={profile => <ProfilePreview profile={profile} key={profile.id} />}
+  values={[
+    {
+      id: "1",
+      avatar: () => (
+        <Image
+          alt="Nance MacFadin"
+          borderRadius="circle"
+          height={128}
+          width={128}
+          src="/avatar0.png"
+        />
+      ),
+      name: "Nance MacFadin",
+      affiliation: {
+        jobtitle: "Help Desk Operator",
+        organization: "Schuster-Senger"
+      }
+    }
+  ]}
+  width={256}
+  m={2}
+/>
+```
 
 ### Two list items
 
@@ -67,7 +672,53 @@ In this example we render posts.
 
 <TwoListItemsExample />
 
-[Fullscreen](./two-list-items-example)
+[Fullscreen](/GridList/two-list-items-example/)
+
+```jsx
+<GridList
+  align="center"
+  gap={3}
+  render={profile => <ProfilePreview profile={profile} key={profile.id} />}
+  values={[
+    {
+      id: "1",
+      avatar: () => (
+        <Image
+          alt="Nance MacFadin"
+          borderRadius="circle"
+          height={128}
+          width={128}
+          src="/avatar0.png"
+        />
+      ),
+      name: "Nance MacFadin",
+      affiliation: {
+        jobtitle: "Help Desk Operator",
+        organization: "Schuster-Senger"
+      }
+    },
+    {
+      id: "2",
+      avatar: () => (
+        <Image
+          alt="Clerc Edis"
+          borderRadius="circle"
+          height={128}
+          width={128}
+          src="/avatar1.png"
+        />
+      ),
+      name: "Clerc Edis",
+      affiliation: {
+        jobtitle: "Staff Scientist",
+        organization: "Ritchie Inc"
+      }
+    }
+  ]}
+  width={256}
+  m={2}
+/>
+```
 
 ### Three list items
 
@@ -75,4 +726,67 @@ In this example we render posts.
 
 <ThreeListItemsExample />
 
-[Fullscreen](./three-list-items-example)
+[Fullscreen](/GridList/three-list-items-example/)
+
+```jsx
+<GridList
+  align="center"
+  gap={3}
+  render={profile => <ProfilePreview profile={profile} key={profile.id} />}
+  values={[
+    {
+      id: "1",
+      avatar: () => (
+        <Image
+          alt="Nance MacFadin"
+          borderRadius="circle"
+          height={128}
+          width={128}
+          src="/avatar0.png"
+        />
+      ),
+      name: "Nance MacFadin",
+      affiliation: {
+        jobtitle: "Help Desk Operator",
+        organization: "Schuster-Senger"
+      }
+    },
+    {
+      id: "2",
+      avatar: () => (
+        <Image
+          alt="Clerc Edis"
+          borderRadius="circle"
+          height={128}
+          width={128}
+          src="/avatar1.png"
+        />
+      ),
+      name: "Clerc Edis",
+      affiliation: {
+        jobtitle: "Staff Scientist",
+        organization: "Ritchie Inc"
+      }
+    },
+    {
+      id: "3",
+      avatar: () => (
+        <Image
+          alt="Clifford Skipperbottom"
+          borderRadius="circle"
+          height={128}
+          width={128}
+          src="/avatar2.png"
+        />
+      ),
+      name: "Clifford Skipperbottom",
+      affiliation: {
+        jobtitle: "Senior Financial Analyst",
+        organization: "Block, Bruen and Gerlach"
+      }
+    }
+  ]}
+  width={256}
+  m={2}
+/>
+```

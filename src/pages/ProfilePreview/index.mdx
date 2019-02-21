@@ -36,7 +36,34 @@ In this example we render a complete profile. If `profile` does not containe `hr
 
 <CompleteProfileExample />
 
-[Fullscreen](./complete-profile-example)
+[Fullscreen](/ProfilePreview/complete-profile-example/)
+
+```jsx
+<ProfilePreview
+  profile={{
+    id: "nance-mcfadin",
+    avatar: () => (
+      <Image
+        alt="Nance MacFadin"
+        borderRadius="circle"
+        height={128}
+        width={128}
+        src="/avatar0.png"
+      />
+    ),
+    name: "Nance MacFadin",
+    affiliation: {
+      jobtitle: "Help Desk Operator",
+      organization: "Schuster-Senger"
+    },
+    badges: [
+      { text: "Committee Member", color: "red", href: "/committee" },
+      { text: "Keynote Speaker", color: "yellow", href: "/keynote-speakers" }
+    ]
+  }}
+  m={2}
+/>
+```
 
 ### Align left
 
@@ -44,7 +71,35 @@ In this example we align the `ProfilePreview` left.
 
 <AlignLeftExample />
 
-[Fullscreen](./align-left-example)
+[Fullscreen](/ProfilePreview/align-left-example/)
+
+```jsx
+<ProfilePreview
+  profile={{
+    id: "clerc-edis",
+    avatar: () => (
+      <Image
+        alt="Clerc Edis"
+        borderRadius="circle"
+        height={128}
+        width={128}
+        src="/avatar1.png"
+      />
+    ),
+    name: "Clerc Edis",
+    affiliation: {
+      jobtitle: "Staff Scientist",
+      organization: "Ritchie Inc"
+    },
+    badges: [
+      { text: "Committee Member", color: "red", href: "/committee" },
+      { text: "Keynote Speaker", color: "yellow", href: "/keynotes" }
+    ]
+  }}
+  align="left"
+  m={2}
+/>
+```
 
 ### Align right
 
@@ -52,7 +107,35 @@ In this example we align the `ProfilePreview` right.
 
 <AlignRightExample />
 
-[Fullscreen](./align-right-example)
+[Fullscreen](/ProfilePreview/align-right-example/)
+
+```jsx
+<ProfilePreview
+  profile={{
+    id: "clifford-skipperbottom",
+    avatar: () => (
+      <Image
+        alt="Clifford Skipperbottom"
+        borderRadius="circle"
+        height={128}
+        width={128}
+        src="/avatar2.png"
+      />
+    ),
+    name: "Clifford Skipperbottom",
+    affiliation: {
+      jobtitle: "Senior Financial Analyst",
+      organization: "Block, Bruen and Gerlach"
+    },
+    badges: [
+      { text: "Committee Member", color: "red", href: "/committee" },
+      { text: "Keynote Speaker", color: "yellow", href: "/keynotes" }
+    ]
+  }}
+  align="right"
+  m={2}
+/>
+```
 
 ### Avatar only
 
@@ -60,7 +143,25 @@ In this example we render the `ProfilePreview` as avatar only.
 
 <AvatarOnlyExample />
 
-[Fullscreen](./avatar-only-example)
+[Fullscreen](/ProfilePreview/avatar-only-example/)
+
+```jsx
+<ProfilePreview
+  profile={{
+    id: "willow-rangall",
+    avatar: () => (
+      <Image
+        alt="Willow Rangall"
+        borderRadius="circle"
+        height={64}
+        width={64}
+        src="/avatar3.png"
+      />
+    )
+  }}
+  m={2}
+/>
+```
 
 ### Avatar and name only
 
@@ -68,7 +169,26 @@ In this example we render the `ProfilePreview` as avatar with name.
 
 <AvatarAndNameOnlyExample />
 
-[Fullscreen](./avatar-and-name-only-example)
+[Fullscreen](/ProfilePreview/avatar-and-name-only-example/)
+
+```jsx
+<ProfilePreview
+  profile={{
+    id: "suzy-cahan",
+    avatar: () => (
+      <Image
+        alt="Suzy Cahan"
+        borderRadius="circle"
+        height={128}
+        width={128}
+        src="/avatar4.png"
+      />
+    ),
+    name: "Suzy Cahan"
+  }}
+  m={2}
+/>
+```
 
 ### Responsive avatar
 
@@ -76,7 +196,26 @@ In this example we make the avatar's image responsive.
 
 <ResponsiveAvatarExample />
 
-[Fullscreen](./responsive-avatar-example)
+[Fullscreen](/ProfilePreview/responsive-avatar-example/)
+
+```jsx
+<ProfilePreview
+  profile={{
+    id: "sandra-abramovici",
+    avatar: () => (
+      <Image
+        alt="Sandra Abramovici"
+        borderRadius="circle"
+        height={[32, 64, 128]}
+        width={[32, 64, 128]}
+        src="/avatar5.png"
+      />
+    ),
+    name: "Sandra Abramovici"
+  }}
+  m={2}
+/>
+```
 
 ### Custom font size
 
@@ -84,7 +223,27 @@ In this example we set a custom font size for the name.
 
 <CustomFontSizeExample />
 
-[Fullscreen](./custom-font-size-example)
+[Fullscreen](/ProfilePreview/custom-font-size-example/)
+
+```jsx
+<ProfilePreview
+  profile={{
+    id: "jan-mckea",
+    avatar: () => (
+      <Image
+        alt="Jan McKea"
+        borderRadius="circle"
+        height={128}
+        width={128}
+        src="/avatar6.png"
+      />
+    ),
+    name: "Jan McKea",
+    fontSize: [5, 6]
+  }}
+  m={2}
+/>
+```
 
 ### Really long strings
 
@@ -92,4 +251,35 @@ In this example we render a profile with really long strings.
 
 <ReallyLongStringsExample />
 
-[Fullscreen](./really-long-strings-example)
+[Fullscreen](/ProfilePreview/really-long-strings-example/)
+
+```jsx
+<ProfilePreview
+  profile={{
+    id:
+      "really-really-really-really-really-really-really-really-really-really-long-name",
+    avatar: () => (
+      <Image
+        alt="Really really really really really really really really really really long name"
+        borderRadius="circle"
+        height={128}
+        width={128}
+        src="/avatar7.png"
+      />
+    ),
+    name:
+      "Really really really really really really really really really really long name",
+    affiliation: {
+      jobtitle:
+        "Really really really really really really really really really really long jobtitle",
+      organization:
+        "Really really really really really really really really really really long organization"
+    },
+    badges: [
+      { text: "Committee Member", color: "red", href: "/committee" },
+      { text: "Keynote Speaker", color: "yellow", href: "/keynote-speakers" }
+    ]
+  }}
+  m={2}
+/>
+```
