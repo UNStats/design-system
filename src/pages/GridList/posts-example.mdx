@@ -7,7 +7,9 @@ export default PreviewLayout;
 
 <GridList
   align="center"
-  gap={4}
+  gridTemplateColumns={["1fr", "512px", "repeat(auto-fit, minmax(512px, 1fr))"]}
+  gridAutoRows="auto"
+  m={2}
   render={post => <PostPreview post={post} key={post.id} />}
   values={[
     {
@@ -219,6 +221,4 @@ export default PreviewLayout;
     })),
     href
   }))}
-  width={512}
-  m={2}
 />

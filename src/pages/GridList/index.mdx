@@ -40,7 +40,8 @@ In addition `GridList` accepts [margin and padding props](https://rebassjs.org/p
 ```jsx
 <GridList
   align="center"
-  gap={2}
+  gridGap={2}
+  gridTemplateColumns="repeat(auto-fit, minmax(64px, 1fr))"
   render={profile => <ProfilePreview profile={profile} key={profile.id} />}
   values={[
     {
@@ -176,7 +177,6 @@ In addition `GridList` accepts [margin and padding props](https://rebassjs.org/p
     ),
     href: `/profiles/${id}`
   }))}
-  width={64}
   m={2}
 />
 ```
@@ -192,7 +192,8 @@ In this example we render profiles instead of avatars. Note that the signature o
 ```jsx
 <GridList
   align="center"
-  gap={3}
+  gridGap={3}
+  gridTemplateColumns="repeat(auto-fit, 256px)"
   render={profile => <ProfilePreview profile={profile} key={profile.id} />}
   values={[
     {
@@ -396,7 +397,6 @@ In this example we render profiles instead of avatars. Note that the signature o
     },
     href: `/profiles/${id}`
   }))}
-  width={256}
   m={2}
 />
 ```
@@ -412,7 +412,9 @@ In this example we render posts.
 ```jsx
 <GridList
   align="center"
-  gap={4}
+  gridTemplateColumns={["1fr", "512px", "repeat(auto-fit, minmax(512px, 1fr))"]}
+  gridAutoRows="auto"
+  m={2}
   render={post => <PostPreview post={post} key={post.id} />}
   values={[
     {
@@ -624,8 +626,6 @@ In this example we render posts.
     })),
     href
   }))}
-  width={512}
-  m={2}
 />
 ```
 
@@ -640,7 +640,8 @@ In this example we render posts.
 ```jsx
 <GridList
   align="center"
-  gap={3}
+  gridGap={3}
+  gridTemplateColumns="repeat(auto-fit, 256px)"
   render={profile => <ProfilePreview profile={profile} key={profile.id} />}
   values={[
     {
@@ -661,7 +662,6 @@ In this example we render posts.
       }
     }
   ]}
-  width={256}
   m={2}
 />
 ```
@@ -677,7 +677,8 @@ In this example we render posts.
 ```jsx
 <GridList
   align="center"
-  gap={3}
+  gridGap={3}
+  gridTemplateColumns="repeat(auto-fit, 256px)"
   render={profile => <ProfilePreview profile={profile} key={profile.id} />}
   values={[
     {
@@ -715,7 +716,6 @@ In this example we render posts.
       }
     }
   ]}
-  width={256}
   m={2}
 />
 ```
@@ -731,7 +731,8 @@ In this example we render posts.
 ```jsx
 <GridList
   align="center"
-  gap={3}
+  gridGap={3}
+  gridTemplateColumns="repeat(auto-fit, 256px)"
   render={profile => <ProfilePreview profile={profile} key={profile.id} />}
   values={[
     {
@@ -786,7 +787,6 @@ In this example we render posts.
       }
     }
   ]}
-  width={256}
   m={2}
 />
 ```

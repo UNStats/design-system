@@ -7,7 +7,8 @@ export default PreviewLayout;
 
 <GridList
   align="center"
-  gap={2}
+  gridGap={2}
+  gridTemplateColumns="repeat(auto-fit, minmax(64px, 1fr))"
   render={profile => <ProfilePreview profile={profile} key={profile.id} />}
   values={[
     {
@@ -143,6 +144,5 @@ export default PreviewLayout;
     ),
     href: `/profiles/${id}`
   }))}
-  width={64}
   m={2}
 />

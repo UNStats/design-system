@@ -8,6 +8,21 @@ import {
   string
 } from "prop-types";
 
+// Generic types.
+
+export const responsiveNumberType = oneOfType([number, arrayOf(number)]);
+
+export const responsiveStringType = oneOfType([string, arrayOf(string)]);
+
+export const responsiveNumberOrStringType = oneOfType([
+  number,
+  arrayOf(number),
+  string,
+  arrayOf(string)
+]);
+
+// Specific types.
+
 const affiliationType = shape({
   jobtitle: string.isRequired,
   organization: string.isRequired
@@ -31,8 +46,6 @@ export const badgeType = shape({
   text: string.isRequired,
   href: string
 });
-
-export const fontSizeType = oneOfType([number, arrayOf(number)]);
 
 export const linkType = shape({
   text: string.isRequired,

@@ -19,7 +19,8 @@ const UnlinkedPostPreview = ({ post, ...props }) => (
     </Text>
     <GridList
       align="left"
-      gap={2}
+      gridGap={2}
+      gridTemplateColumns="repeat(auto-fit, 96px)"
       render={author => (
         <ProfilePreview
           profile={author}
@@ -29,7 +30,6 @@ const UnlinkedPostPreview = ({ post, ...props }) => (
         />
       )}
       values={post.authors}
-      width={96}
       mb={3}
     />
     <Text as="time" color="text" css="display: block;" fontFamily="sans" mb={3}>

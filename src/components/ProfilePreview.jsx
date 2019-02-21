@@ -3,7 +3,7 @@ import { Flex, Text } from "rebass";
 import Badge from "./Badge";
 import FlexList from "./FlexList";
 import Link from "./Link";
-import { alignType, fontSizeType, profileType } from "../types";
+import { alignType, profileType, responsiveNumberType } from "../types";
 
 const style = {
   left: {
@@ -81,7 +81,7 @@ const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => (
 UnlinkedProfilePreview.propTypes = {
   profile: profileType.isRequired,
   align: alignType.isRequired,
-  fontSize: fontSizeType.isRequired
+  fontSize: responsiveNumberType.isRequired
 };
 
 const ProfilePreview = ({ profile, align, fontSize, ...other }) => {
@@ -109,7 +109,7 @@ const ProfilePreview = ({ profile, align, fontSize, ...other }) => {
 ProfilePreview.propTypes = {
   profile: profileType.isRequired,
   align: alignType,
-  fontSize: fontSizeType
+  fontSize: responsiveNumberType
 };
 
 ProfilePreview.defaultProps = {
