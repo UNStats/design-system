@@ -42,13 +42,13 @@
     "styled-system"
   ],
   "dependencies": {
-    "polished": "^3.0.0",
-    "prism-react-renderer": "^0.1.5",
+    "polished": "^3.0.3",
+    "prism-react-renderer": "^0.1.6",
     "prop-types": "^15.7.2",
     "react-helmet": "^5.2.0",
     "rebass": "^3.0.1",
     "styled-components": "^4.1.3",
-    "styled-system": "^3.1.11"
+    "styled-system": "^4.0.4"
   },
   "peerDependencies": {
     "react": "^16.8.1",
@@ -56,21 +56,21 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.3.3",
-    "@mdotasia/eslint-config": "^0.6.0",
+    "@babel/core": "^7.3.4",
+    "@mdotasia/eslint-config": "^0.7.0",
     "babel-plugin-styled-components": "^1.10.0",
-    "babel-preset-gatsby": "^0.1.8",
-    "eslint": "^5.14.1",
-    "gatsby": "^2.1.17",
+    "babel-preset-gatsby": "^0.1.9",
+    "eslint": "^5.15.1",
+    "gatsby": "^2.1.30",
     "gatsby-theme-undataforum": "^0.1.0",
     "gh-pages": "^2.0.1",
     "husky": "^1.0.1",
-    "lint-staged": "^8.1.4",
+    "lint-staged": "^8.1.5",
     "npm-check": "^5.9.0",
     "prettier": "^1.16.4",
     "pretty-quick": "^1.6.0",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "react-test-renderer": "^16.8.3"
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-test-renderer": "^16.8.4"
   }
 }
