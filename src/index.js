@@ -1,4 +1,4 @@
-export { Box, Heading, Text } from "rebass";
+export { Flex, Box, Heading, Text } from "rebass";
 export { default as AlternateSiteTitle } from "./components/AlternateSiteTitle";
 export { default as Code } from "./components/Code";
 export { default as GridList } from "./components/GridList";
