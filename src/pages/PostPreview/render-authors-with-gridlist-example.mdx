@@ -1,66 +1,11 @@
-import Helmet from "react-helmet";
-import RenderAuthorsWithTextExample from "./render-authors-with-text-example.mdx";
-import RenderAuthorsWithGridListExample from "./render-authors-with-gridlist-example.mdx";
+import { PreviewLayout } from "gatsby-theme-undataforum";
+import { Image } from "rebass";
+import GridList from "../../components/GridList";
+import PostPreview from "../../components/PostPreview";
+import ProfilePreview from "../../components/ProfilePreview";
 
-<Helmet
-  title="@undataforum/components - PostPreview"
-  meta={[{ name: "description", content: "A preview for a post." }]}
-/>
+export default PreviewLayout;
 
-# PostPreview
-
-Preview for a post.
-
-## Props
-
-`PostPreview` includes all props from type [post](/types/post/). In addition it accepts [margin and padding props](https://rebassjs.org/props/#margin-and-padding).
-
-## Examples
-
-### Render authors with Text
-
-In this example we render a post's authors with a simple `Text` component. We omit the `href` prop which results in the `PostPreview` not being linked.
-
-<RenderAuthorsWithTextExample />
-
-[Fullscreen](/PostPreview/render-authors-with-text-example/)
-
-```jsx
-<PostPreview
-  post={{
-    id: "1",
-    title: "Vestibulum proin eu mi nulla ac enim in tempor turpis",
-    date: "May 31, 2018",
-    authors: () => (
-      <Text as="div" fontFamily="sans" lineHeight="title" mb={3}>
-        {[
-          "Willow Rangall",
-          "Suzy Cahan",
-          "Sandra Abramovici",
-          "Jan McKea",
-          "Ola Brunger",
-          "Ivette Rowlinson",
-          "Madeleine Stredwick",
-          "Lin Billson",
-          "Alfie Piborn",
-          "Garvy Bartlomiej"
-        ].join(", ")}
-      </Text>
-    )
-  }}
-  m={2}
-/>
-```
-
-### Render authors with GridList
-
-In this example we render a posts's authors with a [`GridList`](/GridList). Note that since we omit the `href` prop in `ProfilePreview`, individual authors do not get linked. But since we provide an `href` prop to `PostPreview`, the entire preview is linked. To avoid nested links, you should provide the `href` prop to either `ProfilePreview` or `PostPreview`, not both.
-
-<RenderAuthorsWithGridListExample />
-
-[Fullscreen](/PostPreview/render-authors-with-gridlist-example/)
-
-```jsx
 <PostPreview
   post={{
     id: "1",
@@ -153,4 +98,3 @@ In this example we render a posts's authors with a [`GridList`](/GridList). Note
   }}
   m={2}
 />
-```

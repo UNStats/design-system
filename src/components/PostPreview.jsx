@@ -1,8 +1,6 @@
 import React from "react";
 import { Flex, Text } from "rebass";
-import GridList from "./GridList";
 import Link from "./Link";
-import ProfilePreview from "./ProfilePreview";
 import { postType } from "../types";
 
 const UnlinkedPostPreview = ({ post, ...props }) => (
@@ -17,21 +15,7 @@ const UnlinkedPostPreview = ({ post, ...props }) => (
     >
       {post.title}
     </Text>
-    <GridList
-      align="left"
-      gridGap={2}
-      gridTemplateColumns="repeat(auto-fit, 96px)"
-      render={author => (
-        <ProfilePreview
-          profile={author}
-          align="left"
-          fontSize={1}
-          key={author.id}
-        />
-      )}
-      values={post.authors}
-      mb={3}
-    />
+    {post.authors()}
     <Text as="time" color="text" css="display: block;" fontFamily="sans" mb={3}>
       {post.date}
     </Text>
@@ -47,15 +31,15 @@ UnlinkedPostPreview.propTypes = {
   post: postType.isRequired
 };
 
-const PostPreview = ({ post, ...other }) => {
+const PostPreview = ({ post, ...props }) => {
   if (post.href) {
     return (
-      <Link {...other} href={post.href}>
+      <Link css="display: block;" {...props} href={post.href}>
         <UnlinkedPostPreview post={post} />
       </Link>
     );
   }
-  return <UnlinkedPostPreview {...other} post={post} />;
+  return <UnlinkedPostPreview {...props} post={post} />;
 };
 
 PostPreview.propTypes = {

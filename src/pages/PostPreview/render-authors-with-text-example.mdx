@@ -1,0 +1,30 @@
+import { PreviewLayout } from "gatsby-theme-undataforum";
+import { Text } from "rebass";
+import PostPreview from "../../components/PostPreview";
+
+export default PreviewLayout;
+
+<PostPreview
+  post={{
+    id: "1",
+    title: "Vestibulum proin eu mi nulla ac enim in tempor turpis",
+    date: "May 31, 2018",
+    authors: () => (
+      <Text as="div" fontFamily="sans" lineHeight="title" mb={3}>
+        {[
+          "Willow Rangall",
+          "Suzy Cahan",
+          "Sandra Abramovici",
+          "Jan McKea",
+          "Ola Brunger",
+          "Ivette Rowlinson",
+          "Madeleine Stredwick",
+          "Lin Billson",
+          "Alfie Piborn",
+          "Garvy Bartlomiej"
+        ].join(", ")}
+      </Text>
+    )
+  }}
+  m={2}
+/>

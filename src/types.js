@@ -65,7 +65,7 @@ export const postType = shape({
   id: string.isRequired,
   title: string.isRequired,
   date: string.isRequired,
-  authors: arrayOf(profileType).isRequired,
+  authors: func.isRequired,
   lead: string,
   href: string
 });

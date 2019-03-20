@@ -7,11 +7,11 @@ import Helmet from "react-helmet";
 
 # Type post
 
-| Prop      | Description                                                         | Type                                 | Required |
-| :-------- | :------------------------------------------------------------------ | :----------------------------------- | :------- |
-| `id`      | Unique author ID that is used for the `key` prop in lists of posts. | `string`                             | `true`   |
-| `title`   | Post title.                                                         | `string`                             | `true`   |
-| `date`    | Formatted post date.                                                | `string`                             | `true`   |
-| `authors` | Post authors.                                                       | [`arrayOf(profile)`](/types/profile) | `true`   |
-| `lead`    | Post lead.                                                          | `string`                             | `false`  |
-| `href`    | Link to post `href` if provided.                                    | `string`                             | `false`  |
+| Prop      | Description                                                         | Type     | Required |
+| :-------- | :------------------------------------------------------------------ | :------- | :------- |
+| `id`      | Unique author ID that is used for the `key` prop in lists of posts. | `string` | `true`   |
+| `title`   | Post title.                                                         | `string` | `true`   |
+| `date`    | Formatted post date.                                                | `string` | `true`   |
+| `authors` | Render prop to display post authors.                                | `func`   | `true`   |
+| `lead`    | Post lead.                                                          | `string` | `false`  |
+| `href`    | Link to post `href` if provided.                                    | `string` | `false`  |
