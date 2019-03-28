@@ -13,7 +13,7 @@ npm add @undataforum/components
 to add package [@undataforum/components](https://github.com/UNDataForum/components) to your dependencies. Import components like this
 
 ```jsx
-import { Provider, Header } from "@undataforum/components";
+import { PostPreview, ProfilePreview } from "@undataforum/components";
 ```
 
 ## License

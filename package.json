@@ -42,17 +42,16 @@
     "styled-system"
   ],
   "dependencies": {
-    "polished": "^3.0.3",
     "prism-react-renderer": "^0.1.6",
     "prop-types": "^15.7.2",
     "react-helmet": "^5.2.0",
     "rebass": "^3.0.1",
-    "styled-components": "^4.1.3",
     "styled-system": "^4.0.4"
   },
   "peerDependencies": {
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1"
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -66,11 +65,10 @@
     "gh-pages": "^2.0.1",
     "husky": "^1.0.1",
     "lint-staged": "^8.1.5",
-    "npm-check": "^5.9.0",
     "prettier": "^1.16.4",
     "pretty-quick": "^1.6.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-test-renderer": "^16.8.4"
+    "styled-components": "^4.2.0"
   }
 }

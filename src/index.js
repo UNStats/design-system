@@ -8,4 +8,4 @@ export { default as Link } from "./components/Link";
 export { default as NewTabLink } from "./components/NewTabLink";
 export { default as PostPreview } from "./components/PostPreview";
 export { default as ProfilePreview } from "./components/ProfilePreview";
-export { default as Provider } from "./components/Provider";
+export { default as theme } from "./defaultTheme";
