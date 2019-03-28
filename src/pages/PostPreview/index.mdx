@@ -28,11 +28,10 @@ In this example we render a post's authors with a simple `Text` component. We om
 ```jsx
 <PostPreview
   post={{
-    id: "1",
     title: "Vestibulum proin eu mi nulla ac enim in tempor turpis",
     date: "May 31, 2018",
     authors: () => (
-      <Text as="div" fontFamily="sans" lineHeight="title" mb={3}>
+      <Text as="div" fontFamily="sans" lineHeight="copy" mb={3}>
         {[
           "Willow Rangall",
           "Suzy Cahan",
@@ -54,7 +53,7 @@ In this example we render a post's authors with a simple `Text` component. We om
 
 ### Render authors with GridList
 
-In this example we render a posts's authors with a [`GridList`](/GridList). Note that since we omit the `href` prop in `ProfilePreview`, individual authors do not get linked. But since we provide an `href` prop to `PostPreview`, the entire preview is linked. To avoid nested links, you should provide the `href` prop to either `ProfilePreview` or `PostPreview`, not both.
+In this example we render a posts's authors with a [`GridList`](/GridList). Note that since we omit the `href` prop in `ProfilePreview`, individual authors do not get linked. But since we provide an `href` prop to `PostPreview`, the entire preview is linked. To avoid nested links, you should provide the `href` prop to either `PostPreview` or all `ProfilePreview`s, not both.
 
 <RenderAuthorsWithGridListExample />
 
@@ -63,7 +62,6 @@ In this example we render a posts's authors with a [`GridList`](/GridList). Note
 ```jsx
 <PostPreview
   post={{
-    id: "1",
     title: "Vestibulum proin eu mi nulla ac enim in tempor turpis",
     date: "May 31, 2018",
     authors: () =>
@@ -72,62 +70,62 @@ In this example we render a posts's authors with a [`GridList`](/GridList). Note
           align="left"
           gridGap={2}
           gridTemplateColumns="repeat(auto-fit, 96px)"
-          render={author => (
+          render={({ id, ...author }) => (
             <ProfilePreview
               profile={author}
               align="left"
               fontSize={1}
-              key={author.id}
+              key={id}
             />
           )}
           values={[
             {
-              id: "willow-rangall",
+              id: "a6b4babd-6b11-4b81-8ac0-73cefb040cb7",
               name: "Willow Rangall",
               img: "/avatar0.png"
             },
             {
-              id: "suzy-cahan",
+              id: "561285d3-4eed-473c-baba-6b3564f4e6a7",
               name: "Suzy Cahan",
               img: "/avatar1.png"
             },
             {
-              id: "sandra-abramovici",
+              id: "453d9d8a-b1e6-4cac-9fdd-b6c354fa3262",
               name: "Sandra Abramovici",
               img: "/avatar2.png"
             },
             {
-              id: "jan-mckea",
+              id: "dfea2476-e3de-4b63-863e-a1c69af90138",
               name: "Jan McKea",
               img: "/avatar3.png"
             },
             {
-              id: "ola-brunger",
+              id: "15469d6c-cb5d-4750-8a0c-27a3b1beb187",
               name: "Ola Brunger",
               img: "/avatar4.png"
             },
             {
-              id: "ivette-rowlinson",
+              id: "f4ee9708-9045-40e7-a899-b46841af488b",
               name: "Ivette Rowlinson",
               img: "/avatar5.png"
             },
             {
-              id: "madeleine-stredwick",
+              id: "9946a2cf-0774-41da-830e-bffe1259360f",
               name: "Madeleine Stredwick",
               img: "/avatar6.png"
             },
             {
-              id: "lin-billson",
+              id: "d2e5b557-bf07-4e77-94f3-16bc1cd26a38",
               name: "Lin Billson",
               img: "/avatar7.png"
             },
             {
-              id: "alfie-piborn",
+              id: "9008c43d-49ab-4907-bdaa-28cb59f0596b",
               name: "Alfie Piborn",
               img: "/avatar8.png"
             },
             {
-              id: "garvy-bartlomiej",
+              id: "bfba8e8e-e052-4386-a781-5bc42eeb98b9",
               name: "Garvy Bartlomiej",
               img: "/avatar9.png"
             }

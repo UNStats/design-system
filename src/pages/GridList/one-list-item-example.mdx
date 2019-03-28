@@ -9,10 +9,10 @@ export default PreviewLayout;
   align="center"
   gridGap={3}
   gridTemplateColumns="repeat(auto-fit, 256px)"
-  render={profile => <ProfilePreview profile={profile} key={profile.id} />}
+  render={({ id, ...profile }) => <ProfilePreview profile={profile} key={id} />}
   values={[
     {
-      id: "1",
+      id: "1b0abeea-9c71-446c-9cda-a2ce977b0e78",
       avatar: () => (
         <Image
           alt="Nance MacFadin"

@@ -6,12 +6,12 @@ import ProfilePreview from "../../components/ProfilePreview";
 export default PreviewLayout;
 
 <FlexList
-  render={profile => (
-    <ProfilePreview profile={profile} key={profile.id} m={2} />
+  render={({ id, ...profile }) => (
+    <ProfilePreview profile={profile} key={id} m={2} />
   )}
   values={[
     {
-      id: "nance-macfadin",
+      id: "7e3fbdf3-e724-4e7d-b007-da7a1db3925e",
       avatar: () => (
         <Image
           alt={"Nance MacFadin"}
@@ -24,7 +24,7 @@ export default PreviewLayout;
       href: "/profiles/nance-macfadin"
     },
     {
-      id: "clerc-edis",
+      id: "de10c4e6-037f-414b-bf94-9a229393402b",
       avatar: () => (
         <Image
           alt={"Clerc Edis"}
@@ -37,7 +37,7 @@ export default PreviewLayout;
       href: "/profiles/clerc-edis"
     },
     {
-      id: "clifford-skipperbottom",
+      id: "51e2a815-db3d-43d8-b710-581970e37685",
       avatar: () => (
         <Image
           alt={"Clifford Skipperbottom"}
@@ -50,7 +50,7 @@ export default PreviewLayout;
       href: "/profiles/clifford-skipperbottom"
     },
     {
-      id: "willow-rangall",
+      id: "084b03f9-ec30-4089-b51a-5672aae49ece",
       avatar: () => (
         <Image
           alt={"Willow Rangall"}

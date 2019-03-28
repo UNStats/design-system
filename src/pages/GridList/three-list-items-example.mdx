@@ -9,10 +9,10 @@ export default PreviewLayout;
   align="center"
   gridGap={3}
   gridTemplateColumns="repeat(auto-fit, 256px)"
-  render={profile => <ProfilePreview profile={profile} key={profile.id} />}
+  render={({ id, ...profile }) => <ProfilePreview profile={profile} key={id} />}
   values={[
     {
-      id: "1",
+      id: "981e7e1d-1825-4e23-9f43-77b3645fd0b3",
       avatar: () => (
         <Image
           alt="Nance MacFadin"
@@ -29,7 +29,7 @@ export default PreviewLayout;
       }
     },
     {
-      id: "2",
+      id: "6317e7ec-480a-486a-b65f-37a8253664d6",
       avatar: () => (
         <Image
           alt="Clerc Edis"
@@ -46,7 +46,7 @@ export default PreviewLayout;
       }
     },
     {
-      id: "3",
+      id: "65da9cba-793f-4b85-ad57-a58a52f8ff71",
       avatar: () => (
         <Image
           alt="Clifford Skipperbottom"

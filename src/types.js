@@ -53,7 +53,6 @@ export const linkType = shape({
 });
 
 export const profileType = shape({
-  id: string.isRequired,
   avatar: func.isRequired,
   name: string,
   affiliation: affiliationType,
@@ -62,7 +61,6 @@ export const profileType = shape({
 });
 
 export const postType = shape({
-  id: string.isRequired,
   title: string.isRequired,
   date: string.isRequired,
   authors: func.isRequired,

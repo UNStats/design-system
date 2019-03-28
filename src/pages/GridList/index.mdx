@@ -16,15 +16,15 @@ A list based on [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid
 
 ## Props
 
-| Prop     | Description                                   | Type                                                            | Required | Default  |
-| :------- | :-------------------------------------------- | :-------------------------------------------------------------- | :------- | :------- |
-| `align`  | Alignment of entire grid.                     | `oneOf(["left", "center", "right"])`                            | `false`  | `center` |
-| `gap`    | Grid gap (horizontal and vertical)            | `oneOfType([number, arrayOf(number )])`                         | `false`  | `3`      |
-| `render` | Render prop for what the grid should display. | `func`                                                          | `true`   |          |
-| `values` | Values to be rendered with `GridList`.        | `arrayOf(object)`                                               | `true`   |          |
-| `width`  | Width of grid values.                         | `oneOfType([number, arrayOf(number), string, arrayOf(string)])` | `true`   |          |
+| Prop     | Description                             | Type                                                            | Required | Default  |
+| :------- | :-------------------------------------- | :-------------------------------------------------------------- | :------- | :------- |
+| `align`  | Alignment of entire grid.               | `oneOf(["left", "center", "right"])`                            | `false`  | `center` |
+| `gap`    | Grid gap (horizontal and vertical)      | `oneOfType([number, arrayOf(number )])`                         | `false`  | `3`      |
+| `render` | Render prop to render `values`.         | `func`                                                          | `true`   |          |
+| `values` | Values to be displayed with `GridList`. | `arrayOf(object)`                                               | `true`   |          |
+| `width`  | Width of grid values.                   | `oneOfType([number, arrayOf(number), string, arrayOf(string)])` | `true`   |          |
 
-In addition `GridList` accepts [margin and padding props](https://rebassjs.org/props/#margin-and-padding).
+In addition `GridList` accepts [margin and padding props](https://rebassjs.org/props/#margin-and-padding). Each value in `values` needs to include an ID that is assigned to the `key` prop of the component used with `render`.
 
 ## Examples
 
@@ -41,129 +41,189 @@ In addition `GridList` accepts [margin and padding props](https://rebassjs.org/p
   align="center"
   gridGap={2}
   gridTemplateColumns="repeat(auto-fit, minmax(64px, 1fr))"
-  render={profile => <ProfilePreview profile={profile} key={profile.id} />}
+  render={({ id, ...profile }) => <ProfilePreview profile={profile} key={id} />}
   values={[
     {
-      id: "1",
-      name: "Berenice Feldmus"
+      id: "44494dbe-5262-4d8c-bc90-34c5e820e3aa",
+      avatar: "avatar0.png",
+      name: "Berenice Feldmus",
+      slug: "berenice-feldmus"
     },
     {
-      id: "2",
-      name: "Sidonnie Halbeard"
+      id: "8a9036f7-7d44-4080-a44a-ec6626654764",
+      avatar: "avatar1.png",
+      name: "Sidonnie Halbeard",
+      slug: "sidonnie-halbeard"
     },
     {
-      id: "3",
-      name: "Jacenta Busch"
+      id: "b1bf65d0-887e-492c-986f-a23c10843b1b",
+      avatar: "avatar2.png",
+      name: "Jacenta Busch",
+      slug: "jacenta-busch"
     },
     {
-      id: "4",
-      name: "Mercie Kuban"
+      id: "365ad4ac-3a6e-448a-88b2-af1c6b99c0ca",
+      avatar: "avatar3.png",
+      name: "Mercie Kuban",
+      slug: "mercie-kuban"
     },
     {
-      id: "5",
-      name: "Candis Ruggs"
+      id: "05f4fbf0-5724-4fb5-8d37-265046d2a463",
+      avatar: "avatar4.png",
+      name: "Candis Ruggs",
+      slug: "candis-ruggs"
     },
     {
-      id: "6",
-      name: "Pippa Rawkesby"
+      id: "50efe1ed-5639-4b43-a118-b9caf1a9e719",
+      avatar: "avatar5.png",
+      name: "Pippa Rawkesby",
+      slug: "pippa-rawkesby"
     },
     {
-      id: "7",
-      name: "Issie Kisby"
+      id: "b6846de6-6ccb-4d12-a994-67dc7b7606f3",
+      avatar: "avatar6.png",
+      name: "Issie Kisby",
+      slug: "issie-kisby"
     },
     {
-      id: "8",
-      name: "Josee Lyven"
+      id: "98487ed0-f1e5-4da6-9d81-2a5ed257d5d7",
+      avatar: "avatar7.png",
+      name: "Josee Lyven",
+      slug: "josee-lyven"
     },
     {
-      id: "9",
-      name: "Barton Pentecost"
+      id: "11c7c6e5-2af1-4005-8a14-d9b7cdf9b6d0xx",
+      avatar: "avatar8.png",
+      name: "Barton Pentecost",
+      slug: "barton-pentecost"
     },
     {
-      id: "10",
-      name: "Grier Dorman"
+      id: "574afbf7-4e72-4f61-bfe2-320efd4a06eb",
+      avatar: "avatar9.png",
+      name: "Grier Dorman",
+      slug: "grier-dorman"
     },
     {
-      id: "11",
-      name: "Rodolph Yarrington"
+      id: "ecb372a7-3c52-4530-8fae-e3f5b53b9e2c",
+      avatar: "avatar0.png",
+      name: "Rodolph Yarrington",
+      slug: "rodolph-yarrington"
     },
     {
-      id: "12",
-      name: "Nicola Cobbledick"
+      id: "89c0b261-21bd-4b51-81c9-9bd3848d59f2",
+      avatar: "avatar1.png",
+      name: "Nicola Cobbledick",
+      slug: "nicola-cobbledick"
     },
     {
-      id: "13",
-      name: "De Pick"
+      id: "c2271a4d-4b35-4524-8520-e39345ad6a5f",
+      avatar: "avatar2.png",
+      name: "De Pick",
+      slug: "de-pick"
     },
     {
-      id: "14",
-      name: "Christian Dowsing"
+      id: "4555e083-1638-4a0d-ad7b-06a2ff48510a",
+      avatar: "avatar3.png",
+      name: "Christian Dowsing",
+      slug: "christian-dowsing"
     },
     {
-      id: "15",
-      name: "Aggy Ethridge"
+      id: "ddb2bde3-05c1-4662-af56-b525be8eaa48",
+      avatar: "avatar4.png",
+      name: "Aggy Ethridge",
+      slug: "aggy-ethridge"
     },
     {
-      id: "16",
-      name: "Nada Genike"
+      id: "05ac4c16-46e2-4aec-ad7c-610cf09da2e8",
+      avatar: "avatar5.png",
+      name: "Nada Genike",
+      slug: "nada-genike"
     },
     {
-      id: "17",
-      name: "Kimmie Sowte"
+      id: "3fdf81b9-ae4a-482a-b7f8-63ab9945912b",
+      avatar: "avatar6.png",
+      name: "Kimmie Sowte",
+      slug: "kimmie-sowte"
     },
     {
-      id: "18",
-      name: "Irena Lamplugh"
+      id: "4cccaace-cc90-4a16-81a5-ac9a6ace8267",
+      avatar: "avatar7.png",
+      name: "Irena Lamplugh",
+      name: "irena-lamplugh"
     },
     {
-      id: "19",
-      name: "Dolph De Goey"
+      id: "47fa45eb-b65e-4aa0-9ebb-c0038ffdca7c",
+      avatar: "avatar8.png",
+      name: "Dolph De Goey",
+      slug: "dolph-de-goey"
     },
     {
-      id: "20",
-      name: "Ertha Langfield"
+      id: "1e225699-f08e-48e5-884a-b5ffa0889182",
+      avatar: "avatar9.png",
+      name: "Ertha Langfield",
+      slug: "ertha-langfield"
     },
     {
-      id: "21",
-      name: "Consuelo Chasteau"
+      id: "c790461d-ca84-4ec1-95a0-b8b655f3a530",
+      avatar: "avatar0.png",
+      name: "Consuelo Chasteau",
+      name: "consuelo-chasteau"
     },
     {
-      id: "22",
-      name: "Averil Ongin"
+      id: "e319d9d7-87e5-45a8-93db-ee8d33f72f6b",
+      avatar: "avatar1.png",
+      name: "Averil Ongin",
+      slug: "averil-ongin"
     },
     {
-      id: "23",
-      name: "Drucill Grishinov"
+      id: "1ecffed6-5a23-483c-a692-3442965b08d6",
+      avatar: "avatar2.png",
+      name: "Drucill Grishinov",
+      slug: "drucill-grishinov"
     },
     {
-      id: "24",
-      name: "Nessie Galletley"
+      id: "09daa2cb-b6ab-452a-afc9-ddac954744b9",
+      avatar: "avatar3.png",
+      name: "Nessie Galletley",
+      slug: "nessie-galletley"
     },
     {
-      id: "25",
-      name: "Marcellina Palmer"
+      id: "e8a54954-8bb6-46e1-8c57-036d1970620a",
+      avatar: "avatar4.png",
+      name: "Marcellina Palmer",
+      slug: "marcellina-palmer"
     },
     {
-      id: "26",
-      name: "Christabella Shann"
+      id: "9e867245-8bfd-4c31-b8c0-619d49af5f44",
+      avatar: "avatar5.png",
+      name: "Christabella Shann",
+      slug: "christabella-shann"
     },
     {
-      id: "27",
-      name: "Tawsha Fruish"
+      id: "22ac3f6a-0d58-45b0-8069-f0bfbc23d827",
+      avatar: "avatar6.png",
+      name: "Tawsha Fruish",
+      slug: "tawsha-fruish"
     },
     {
-      id: "28",
-      name: "Odessa Munns"
+      id: "d9e9fc81-cbe7-47ce-b11f-ae226b0fa5e6",
+      avatar: "avatar7.png",
+      name: "Odessa Munns",
+      slug: "odessa-munns"
     },
     {
-      id: "29",
-      name: "Conni McNickle"
+      id: "8d147fc3-8b4c-4e6f-8a63-b10cc59fb203",
+      avatar: "avatar8.png",
+      name: "Conni McNickle",
+      slug: "conni-mcnickle"
     },
     {
-      id: "30",
-      name: "Clerc Edis"
+      id: "01a4ede7-3183-4d11-8b7f-0831fcd81a44",
+      avatar: "avatar9.png",
+      name: "Clerc Edis",
+      slug: "clerc-edis"
     }
-  ].map(({ id, name }) => ({
+  ].map(({ id, avatar, name, slug }) => ({
     id,
     avatar: () => (
       <Image
@@ -171,10 +231,10 @@ In addition `GridList` accepts [margin and padding props](https://rebassjs.org/p
         borderRadius="circle"
         height={64}
         width={64}
-        src={`/avatar${id % 10}.png`}
+        src={`/${avatar}`}
       />
     ),
-    href: `/profiles/${id}`
+    href: `/profiles/${slug}`
   }))}
   m={2}
 />
@@ -193,192 +253,253 @@ In this example we render profiles instead of avatars. Note that the signature o
   align="center"
   gridGap={3}
   gridTemplateColumns="repeat(auto-fit, 256px)"
-  render={profile => <ProfilePreview profile={profile} key={profile.id} />}
+  render={({ id, ...profile }) => <ProfilePreview profile={profile} key={id} />}
   values={[
     {
-      id: "1",
+      id: "a6b4babd-6b11-4b81-8ac0-73cefb040cb7",
+      avatar: "avatar0.png",
       name: "Nance MacFadin",
       jobtitle: "Help Desk Operator",
-      organization: "Schuster-Senger"
+      organization: "Schuster-Senger",
+      slug: "nance-macfadin"
     },
     {
-      id: "2",
+      id: "a8775e61-4238-4083-8eb2-66bccf27b111",
+      avatar: "avatar1.png",
       name: "Clerc Edis",
       jobtitle: "Staff Scientist",
-      organization: "Ritchie Inc"
+      organization: "Ritchie Inc",
+      slug: "clerc-edis"
     },
     {
-      id: "3",
+      id: "da80ba06-3a45-4236-8ff5-aac4e8bf2d8a",
+      avatar: "avatar2.png",
       name: "Clifford Skipperbottom",
       jobtitle: "Senior Financial Analyst",
-      organization: "Block, Bruen and Gerlach"
+      organization: "Block, Bruen and Gerlach",
+      slug: "clifford-skipperbottom"
     },
     {
-      id: "4",
+      id: "5654392c-d5e7-423f-bb77-06d8070a0028",
+      avatar: "avatar3.png",
       name: "Willow Rangall",
       jobtitle: "Human Resources Assistant",
-      organization: "Corkery LLC"
+      organization: "Corkery LLC",
+      slug: "willow-rangall"
     },
     {
-      id: "5",
+      id: "cea2aaa3-7f0f-48be-bf18-f61f3e1be01a",
+      avatar: "avatar4.png",
       name: "Suzy Cahan",
       jobtitle: "Research Assistant",
-      organization: "Hickle-Emmerich"
+      organization: "Hickle-Emmerich",
+      slug: "suzy-cahan"
     },
     {
-      id: "6",
+      id: "b57056c5-f697-4c33-b0fe-790d8c2576b2",
+      avatar: "avatar5.png",
       name: "Sandra Abramovici",
       jobtitle: "Help Desk Operator",
-      organization: "Kunze, Lehner and Kutch"
+      organization: "Kunze, Lehner and Kutch",
+      slug: "sandra-abramovici"
     },
     {
-      id: "7",
+      id: "9dc6a800-57fe-4c1b-b9bb-ad087ea214e1",
+      avatar: "avatar6.png",
       name: "Jan McKea",
       jobtitle: "Civil Engineer",
-      organization: "Corkery-Grady"
+      organization: "Corkery-Grady",
+      slug: "jan-mckea"
     },
     {
-      id: "8",
+      id: "636d2929-6caf-4c6c-9267-ba15822a170f",
+      avatar: "avatar7.png",
       name: "Ola Brunger",
       jobtitle: "Nurse Practicioner",
-      organization: "Gottlieb Inc"
+      organization: "Gottlieb Inc",
+      slug: "ola-brunger"
     },
     {
-      id: "9",
+      id: "a7d9cc5b-7762-47de-b746-e68ce5b5151b",
+      avatar: "avatar8.png",
       name: "Ivette Rowlinson",
       jobtitle: "Research Nurse",
-      organization: "Purdy and Sons"
+      organization: "Purdy and Sons",
+      slug: "ivette-rowlinson"
     },
     {
-      id: "10",
+      id: "2e22fbc2-db89-42cd-986c-0d4809635449",
+      avatar: "avatar9.png",
       name: "Madeleine Stredwick",
       jobtitle: "Staff Scientist",
-      organization: "Gaylord, Stoltenberg and Haag"
+      organization: "Gaylord, Stoltenberg and Haag",
+      slug: "madeleine-stredwick"
     },
     {
-      id: "11",
+      id: "14e56706-c567-472f-9078-5142adeea906",
+      avatar: "avatar0.png",
       name: "Lin Billson",
       jobtitle: "Database Administrator",
-      organization: "Legros and Sons"
+      organization: "Legros and Sons",
+      slug: "lin-billson"
     },
     {
-      id: "12",
+      id: "a4138865-be2e-41e3-9974-dfcbfaae2f6c",
+      avatar: "avatar1.png",
       name: "Alfie Piborn",
       jobtitle: "Mechanical Systems Engineer",
-      organization: "Rosenbaum and Sons"
+      organization: "Rosenbaum and Sons",
+      slug: "alfie-piborn"
     },
     {
-      id: "13",
+      id: "ac1c8eaa-afb2-4fb9-8f6b-bc6276248790",
+      avatar: "avatar2.png",
       name: "Garvy Bartlomiej",
       jobtitle: "Research Associate",
-      organization: "Tillman LLC"
+      organization: "Tillman LLC",
+      slug: "garvy-bartlomiej"
     },
     {
-      id: "14",
+      id: "520da4f5-7165-4be2-8b6d-1d74173dacff",
+      avatar: "avatar3.png",
       name: "Gustavus Splevings",
       jobtitle: "Structural Analysis Engineer",
-      organization: "Farrell, Veum and Daugherty"
+      organization: "Farrell, Veum and Daugherty",
+      slug: "gustavus-splevings"
     },
     {
-      id: "15",
+      id: "0b28e099-819a-433e-a015-72a63adafd81",
+      avatar: "avatar4.png",
       name: "Cristi Tale",
       jobtitle: "Desktop Support Technician",
-      organization: "Eichmann LLC"
+      organization: "Eichmann LLC",
+      slug: "cristi-tale"
     },
     {
-      id: "16",
+      id: "541e3d17-279d-4acc-81a7-68f542f1814d",
+      avatar: "avatar5.png",
       name: "Gae Phinn",
       jobtitle: "Associate Professor",
-      organization: "Cronin-Homenick"
+      organization: "Cronin-Homenick",
+      slug: "gae-phinn"
     },
     {
-      id: "17",
+      id: "6c7d0920-33df-49c0-bc39-085b9e80bbf4",
+      avatar: "avatar6.png",
       name: "Leoline Hacaud",
       jobtitle: "Occupational Therapist",
-      organization: "Bosco and Sons"
+      organization: "Bosco and Sons",
+      slug: "leoline-hacaud"
     },
     {
-      id: "18",
+      id: "35fdc85e-d1e0-4ba2-a3aa-24eda7064a76",
+      avatar: "avatar7.png",
       name: "Rufe Rockhill",
       jobtitle: "Operator",
-      organization: "Champlin, Heller and Mante"
+      organization: "Champlin, Heller and Mante",
+      slug: "rufe-rockhill"
     },
     {
-      id: "19",
+      id: "80ce8ec0-96c6-4f6c-86b0-e14932385e34",
+      avatar: "avatar8.png",
       name: "Bernadene Van der Velden",
       jobtitle: "Sales Representative",
-      organization: "Schimmel-Pollich"
+      organization: "Schimmel-Pollich",
+      slug: "bernadene-van-der-velden"
     },
     {
-      id: "20",
+      id: "c085d0ed-0992-4e0b-92c4-81a76a0c6995",
+      avatar: "avatar9.png",
       name: "Edithe Densell",
       jobtitle: "Dental Hygienist",
-      organization: "Turcotte-Greenholt"
+      organization: "Turcotte-Greenholt",
+      slug: "edithe-densell"
     },
     {
-      id: "21",
+      id: "f4a0d64a-c31b-4a6e-a522-6ac84511ab27",
+      avatar: "avatar0.png",
       name: "Emmalynne Sone",
       jobtitle: "Accountant II",
-      organization: "Hansen-Keebler"
+      organization: "Hansen-Keebler",
+      slug: "emmalynne-sone"
     },
     {
-      id: "22",
+      id: "6006aaa1-d8a0-480a-a30f-d9d3a4230dcf",
+      avatar: "avatar1.png",
       name: "Ardella Sapir",
       jobtitle: "Geological Engineer",
-      organization: "Cassin-Kirlin"
+      organization: "Cassin-Kirlin",
+      slug: "ardella-sapir"
     },
     {
-      id: "23",
+      id: "6960355a-8070-44c5-b4d8-788db6366194",
+      avatar: "avatar2.png",
       name: "Ilise Sailor",
       jobtitle: "Technical Writer",
-      organization: "Grimes, Gleichner and Gleason"
+      organization: "Grimes, Gleichner and Gleason",
+      slug: "ilise-sailor"
     },
     {
-      id: "24",
+      id: "03b3a3b4-e54a-412c-919f-1c9d38a886fe",
+      avatar: "avatar3.png",
       name: "Anita Olander",
       jobtitle: "Help Desk Operator",
-      organization: "Halvorson Group"
+      organization: "Halvorson Group",
+      slug: "anita-olander"
     },
     {
-      id: "25",
+      id: "99bb24bc-c161-4c32-ab27-4cdec75ae665",
+      avatar: "avatar4.png",
       name: "Gerik Frisby",
       jobtitle: "Analyst Programmer",
-      organization: "Ullrich, Jakubowski and Doyle"
+      organization: "Ullrich, Jakubowski and Doyle",
+      slug: "gerik-frisby"
     },
     {
-      id: "26",
+      id: "cfc32174-6b52-4c31-a706-348caf9488c8",
+      avatar: "avatar5.png",
       name: "Rayshell Marmion",
       jobtitle: "Human Resources Manager",
-      organization: "Hane Group"
+      organization: "Hane Group",
+      slug: "rayshell-marmion"
     },
     {
-      id: "27",
+      id: "760cbce9-c2a0-40d2-9094-44cf8f1073e3",
+      avatar: "avatar6.png",
       name: "Brooks Grene",
       jobtitle: "Paralegal",
-      organization: "Swift, Bogan and Jones"
+      organization: "Swift, Bogan and Jones",
+      slug: "brooks-grene"
     },
     {
-      id: "28",
+      id: "b68c850e-a78b-4955-8bc0-7f19ea90d704",
+      avatar: "avatar7.png",
       name: "Bev Dorey",
       jobtitle: "Community Outreach Specialist",
-      organization: "D'Amore-Kassulke"
+      organization: "D'Amore-Kassulke",
+      slug: "bev-dorey"
     },
     {
-      id: "29",
+      id: "8b7c529f-c10b-49c3-b9a1-203b2f954e83",
+      avatar: "avatar8.png",
       name: "Vladimir Parres",
       jobtitle: "Community Outreach Specialist",
-      organization: "Leuschke, Okuneva and Heaney"
+      organization: "Leuschke, Okuneva and Heaney",
+      slug: "vladimir-parres"
     },
     {
-      id: "30",
+      id: "fb8ac1ee-42a8-4a9b-b66a-d24340554b32",
+      avatar: "avatar9.png",
       name:
         "Really really really really really really really really really really long name",
       jobtitle:
         "Really really really really really really really really really really long jobtitle",
       organization:
-        "Really really really really really really really really really really long organization"
+        "Really really really really really really really really really really long organization",
+      slug:
+        "really-really-really-really-really-really-really-really-really-really-long-name"
     }
-  ].map(({ id, name, jobtitle, organization }) => ({
+  ].map(({ id, avatar, name, jobtitle, organization, slug }) => ({
     id,
     avatar: () => (
       <Image
@@ -386,7 +507,7 @@ In this example we render profiles instead of avatars. Note that the signature o
         borderRadius="circle"
         height={128}
         width={128}
-        src={`/avatar${id % 10}.png`}
+        src={`/${avatar}`}
       />
     ),
     name,
@@ -394,7 +515,7 @@ In this example we render profiles instead of avatars. Note that the signature o
       jobtitle,
       organization
     },
-    href: `/profiles/${id}`
+    href: `/profiles/${slug}`
   }))}
   m={2}
 />
@@ -413,10 +534,10 @@ In this example we render profiles instead of avatars. Note that the signature o
   align="center"
   gridGap={3}
   gridTemplateColumns="repeat(auto-fit, 256px)"
-  render={profile => <ProfilePreview profile={profile} key={profile.id} />}
+  render={({ id, ...profile }) => <ProfilePreview profile={profile} key={id} />}
   values={[
     {
-      id: "1",
+      id: "1b0abeea-9c71-446c-9cda-a2ce977b0e78",
       avatar: () => (
         <Image
           alt="Nance MacFadin"
@@ -450,10 +571,10 @@ In this example we render profiles instead of avatars. Note that the signature o
   align="center"
   gridGap={3}
   gridTemplateColumns="repeat(auto-fit, 256px)"
-  render={profile => <ProfilePreview profile={profile} key={profile.id} />}
+  render={({ id, ...profile }) => <ProfilePreview profile={profile} key={id} />}
   values={[
     {
-      id: "1",
+      id: "40c9a80a-deba-4d46-8143-585d45239426",
       avatar: () => (
         <Image
           alt="Nance MacFadin"
@@ -470,7 +591,7 @@ In this example we render profiles instead of avatars. Note that the signature o
       }
     },
     {
-      id: "2",
+      id: "e9d9c770-debe-4f1b-915a-e91a7a630534",
       avatar: () => (
         <Image
           alt="Clerc Edis"
@@ -504,10 +625,10 @@ In this example we render profiles instead of avatars. Note that the signature o
   align="center"
   gridGap={3}
   gridTemplateColumns="repeat(auto-fit, 256px)"
-  render={profile => <ProfilePreview profile={profile} key={profile.id} />}
+  render={({ id, ...profile }) => <ProfilePreview profile={profile} key={id} />}
   values={[
     {
-      id: "1",
+      id: "981e7e1d-1825-4e23-9f43-77b3645fd0b3",
       avatar: () => (
         <Image
           alt="Nance MacFadin"
@@ -524,7 +645,7 @@ In this example we render profiles instead of avatars. Note that the signature o
       }
     },
     {
-      id: "2",
+      id: "6317e7ec-480a-486a-b65f-37a8253664d6",
       avatar: () => (
         <Image
           alt="Clerc Edis"
@@ -541,7 +662,7 @@ In this example we render profiles instead of avatars. Note that the signature o
       }
     },
     {
-      id: "3",
+      id: "65da9cba-793f-4b85-ad57-a58a52f8ff71",
       avatar: () => (
         <Image
           alt="Clifford Skipperbottom"
