@@ -1,20 +1,21 @@
 import React from 'react';
-import { Flex, Text } from 'rebass';
+import { Flex, Heading, Text } from 'rebass';
 import Link from './Link';
-import { postType } from '../types';
+import { postType, responsiveNumberType } from '../types';
 
-const UnlinkedPostPreview = ({ post, ...props }) => (
+const UnlinkedPostPreview = ({ post, fontSize, ...props }) => (
   <Flex {...props} flexDirection="column">
-    <Text
+    <Heading
       as="h1"
       color="text"
       fontFamily="sans"
+      fontSize={fontSize}
       lineHeight="title"
       mt={0}
       mb={3}
     >
       {post.title}
-    </Text>
+    </Heading>
     {post.authors()}
     <Text as="time" color="text" css="display: block;" fontFamily="sans" mb={3}>
       {post.date}
@@ -29,21 +30,23 @@ const UnlinkedPostPreview = ({ post, ...props }) => (
 
 UnlinkedPostPreview.propTypes = {
   post: postType.isRequired,
+  fontSize: responsiveNumberType.isRequired,
 };
 
-const PostPreview = ({ post, ...props }) => {
+const PostPreview = ({ post, fontSize = [3, 4], ...props }) => {
   if (post.href) {
     return (
       <Link css="display: block;" {...props} href={post.href}>
-        <UnlinkedPostPreview post={post} />
+        <UnlinkedPostPreview post={post} fontSize={fontSize} />
       </Link>
     );
   }
-  return <UnlinkedPostPreview {...props} post={post} />;
+  return <UnlinkedPostPreview {...props} post={post} fontSize={fontSize} />;
 };
 
 PostPreview.propTypes = {
   post: postType.isRequired,
+  fontSize: responsiveNumberType,
 };
 
 export default PostPreview;

@@ -1,5 +1,6 @@
 import Helmet from "react-helmet";
 import RenderAuthorsWithTextExample from "./render-authors-with-text-example.mdx";
+import LargeFontSizeExample from "./large-font-size-example.mdx";
 import RenderAuthorsWithGridListExample from "./render-authors-with-gridlist-example.mdx";
 
 <Helmet
@@ -47,6 +48,41 @@ In this example we render a post's authors with a simple `Text` component. We om
       </Text>
     )
   }}
+  m={2}
+/>
+```
+
+### Large font size
+
+In this example we provide a `fontSize` prop.
+
+<LargeFontSizeExample />
+
+[Fullscreen](/PostPreview/large-font-size-example/)
+
+```jsx
+<PostPreview
+  post={{
+    title: "Vestibulum proin eu mi nulla ac enim in tempor turpis",
+    date: "May 31, 2018",
+    authors: () => (
+      <Text as="div" fontFamily="sans" lineHeight="copy" mb={3}>
+        {[
+          "Willow Rangall",
+          "Suzy Cahan",
+          "Sandra Abramovici",
+          "Jan McKea",
+          "Ola Brunger",
+          "Ivette Rowlinson",
+          "Madeleine Stredwick",
+          "Lin Billson",
+          "Alfie Piborn",
+          "Garvy Bartlomiej"
+        ].join(", ")}
+      </Text>
+    )
+  }}
+  fontSize={[5, 6]}
   m={2}
 />
 ```
