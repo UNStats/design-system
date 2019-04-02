@@ -17,7 +17,13 @@ const UnlinkedPostPreview = ({ post, fontSize, ...props }) => (
       {post.title}
     </Heading>
     {post.authors()}
-    <Text as="time" color="text" css="display: block;" fontFamily="sans" mb={3}>
+    <Text
+      as="time"
+      color="text"
+      css="display: block;"
+      fontFamily="sans"
+      mb={post.lead ? 3 : 0}
+    >
       {post.date}
     </Text>
     {post.lead && (
