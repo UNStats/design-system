@@ -1,11 +1,3 @@
 {
-  "extends": ["@mdotasia"],
-  "rules": {
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": ["gatsby-node.js"]
-      }
-    ]
-  }
+  "extends": ["wesbos"]
 }

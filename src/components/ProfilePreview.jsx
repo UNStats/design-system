@@ -1,32 +1,32 @@
-import React from "react";
-import { Flex, Text } from "rebass";
-import Badge from "./Badge";
-import FlexList from "./FlexList";
-import Link from "./Link";
-import { alignType, profileType, responsiveNumberType } from "../types";
+import React from 'react';
+import { Flex, Text } from 'rebass';
+import Badge from './Badge';
+import FlexList from './FlexList';
+import Link from './Link';
+import { alignType, profileType, responsiveNumberType } from '../types';
 
 const style = {
   left: {
-    alignItems: "flex-start",
-    css: { "a:last-child": { "margin-right": 0 } },
+    alignItems: 'flex-start',
+    css: { 'a:last-child': { 'margin-right': 0 } },
     ml: 0,
-    mr: 2
+    mr: 2,
   },
   center: {
-    alignItems: "center",
+    alignItems: 'center',
     css: {
-      "a:first-child": { "margin-left": 0 },
-      "a:last-child": { "margin-right": 0 }
+      'a:first-child': { 'margin-left': 0 },
+      'a:last-child': { 'margin-right': 0 },
     },
     ml: 1,
-    mr: 1
+    mr: 1,
   },
   right: {
-    alignItems: "flex-end",
-    css: { "a:first-child": { "margin-left": 0 } },
+    alignItems: 'flex-end',
+    css: { 'a:first-child': { 'margin-left': 0 } },
     ml: 2,
-    mr: 0
-  }
+    mr: 0,
+  },
 };
 
 const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => (
@@ -81,13 +81,18 @@ const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => (
 UnlinkedProfilePreview.propTypes = {
   profile: profileType.isRequired,
   align: alignType.isRequired,
-  fontSize: responsiveNumberType.isRequired
+  fontSize: responsiveNumberType.isRequired,
 };
 
-const ProfilePreview = ({ profile, align, fontSize, ...other }) => {
+const ProfilePreview = ({
+  profile,
+  align = 'center',
+  fontSize = [3, 4],
+  ...props
+}) => {
   if (profile.href) {
     return (
-      <Link {...other} href={profile.href}>
+      <Link {...props} href={profile.href}>
         <UnlinkedProfilePreview
           profile={profile}
           align={align}
@@ -98,7 +103,7 @@ const ProfilePreview = ({ profile, align, fontSize, ...other }) => {
   }
   return (
     <UnlinkedProfilePreview
-      {...other}
+      {...props}
       profile={profile}
       align={align}
       fontSize={fontSize}
@@ -109,12 +114,7 @@ const ProfilePreview = ({ profile, align, fontSize, ...other }) => {
 ProfilePreview.propTypes = {
   profile: profileType.isRequired,
   align: alignType,
-  fontSize: responsiveNumberType
-};
-
-ProfilePreview.defaultProps = {
-  align: "center",
-  fontSize: [3, 4]
+  fontSize: responsiveNumberType,
 };
 
 export default ProfilePreview;

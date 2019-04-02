@@ -1,15 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import { display } from "styled-system";
-import { Flex, Text } from "rebass";
-import { colorType } from "../types";
+import React from 'react';
+import styled from 'styled-components';
+import { display } from 'styled-system';
+import { Flex, Text } from 'rebass';
+import { colorType } from '../types';
 
 const Hide = styled(Text)(display);
 
-const SiteTitle = ({ color, ...props }) => (
+const SiteTitle = ({ color = 'primary', ...props }) => (
   <Flex
     {...props}
-    flexDirection={["row", "column"]}
+    flexDirection={['row', 'column']}
     justifyContent="center"
     alignItems="center"
   >
@@ -22,11 +22,11 @@ const SiteTitle = ({ color, ...props }) => (
       mr={[2, 0]}
     >
       U
-      <Hide as="span" display={["none", "inline"]}>
-        nited{" "}
+      <Hide as="span" display={['none', 'inline']}>
+        nited{' '}
       </Hide>
       N
-      <Hide as="span" display={["none", "inline"]}>
+      <Hide as="span" display={['none', 'inline']}>
         ations
       </Hide>
     </Text>
@@ -43,11 +43,7 @@ const SiteTitle = ({ color, ...props }) => (
 );
 
 SiteTitle.propTypes = {
-  color: colorType
-};
-
-SiteTitle.defaultProps = {
-  color: "primary"
+  color: colorType,
 };
 
 export default SiteTitle;

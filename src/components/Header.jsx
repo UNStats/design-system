@@ -12,18 +12,25 @@
  * If you believe you have a legitimate use case to use this component including the logo,
  * please send your request to dataforum@un.org for approval.
  */
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { height } from "styled-system";
-import { Card, Flex, Text } from "rebass";
-import Link from "./Link";
-import SiteTitle from "./SiteTitle";
-import { colorType, linkType } from "../types";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { height } from 'styled-system';
+import { Card, Flex, Text } from 'rebass';
+import Link from './Link';
+import SiteTitle from './SiteTitle';
+import { colorType, linkType } from '../types';
 
 const Wrapper = styled(Card)(height);
 
-const Header = ({ title, color, links, ...other }) => (
+const Header = ({
+  title = function Title(c) {
+    return <SiteTitle color={c} />;
+  },
+  color = 'primary',
+  links,
+  ...other
+}) => (
   <Wrapper
     {...other}
     as="header"
@@ -34,8 +41,8 @@ const Header = ({ title, color, links, ...other }) => (
   >
     <Flex
       css="box-sizing: border-box; height: 100%; maxWidth: 96rem;"
-      justifyContent={["center", "flex-start"]}
-      alignItems={["center", "flex-end"]}
+      justifyContent={['center', 'flex-start']}
+      alignItems={['center', 'flex-end']}
       mx="auto"
       p={[1, 2]}
     >
@@ -160,10 +167,10 @@ const Header = ({ title, color, links, ...other }) => (
       </Link>
       <Flex
         as="nav"
-        flexDirection={["column", "row"]}
+        flexDirection={['column', 'row']}
         flex={[0, 1]}
-        justifyContent={["center", "space-between"]}
-        alignItems={["center", "flex-end"]}
+        justifyContent={['center', 'space-between']}
+        alignItems={['center', 'flex-end']}
         pl={[3, 2]}
       >
         <Link css="display: block;" href="/" mb={[0, -1]}>
@@ -192,12 +199,7 @@ const Header = ({ title, color, links, ...other }) => (
 Header.propTypes = {
   title: PropTypes.func,
   color: colorType,
-  links: PropTypes.arrayOf(linkType).isRequired
-};
-
-Header.defaultProps = {
-  title: color => <SiteTitle color={color} />,
-  color: "primary"
+  links: PropTypes.arrayOf(linkType).isRequired,
 };
 
 export default Header;

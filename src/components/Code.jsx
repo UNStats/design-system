@@ -1,9 +1,9 @@
-import React from "react";
-import { node } from "prop-types";
-import styled from "styled-components";
-import { Text } from "rebass";
-import Highlight, { defaultProps } from "prism-react-renderer";
-import theme from "prism-react-renderer/themes/duotoneLight";
+import React from 'react';
+import { node } from 'prop-types';
+import styled from 'styled-components';
+import { Text } from 'rebass';
+import Highlight, { defaultProps } from 'prism-react-renderer';
+import theme from 'prism-react-renderer/themes/duotoneLight';
 
 export const LineNo = styled.span`
   display: inline-block;
@@ -13,7 +13,7 @@ export const LineNo = styled.span`
 `;
 
 const Code = ({ children, ...other }) =>
-  children.props.props && children.props.props.className === "language-jsx" ? (
+  children.props.props && children.props.props.className === 'language-jsx' ? (
     <Highlight
       {...defaultProps}
       theme={theme}
@@ -47,7 +47,7 @@ const Code = ({ children, ...other }) =>
   );
 
 Code.propTypes = {
-  children: node.isRequired
+  children: node.isRequired,
 };
 
 export default Code;

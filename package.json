@@ -17,19 +17,21 @@
     "build": "gatsby build",
     "babel": "rm -rf ./dist && babel ./src -d ./dist",
     "deploy": "npm run build &&  gh-pages -d public -m 'Deploy to GitHub Pages'",
-    "format": "pretty-quick",
+    "lint": "eslint --ext .js,.jsx,.html --ignore-path .gitignore .",
+    "fix": "eslint --ext .js,.jsx,.html --ignore-path .gitignore --fix .",
     "inspect": "node --inspect-brk node_modules/.bin/gatsby develop",
-    "lint": "eslint --ext .jsx,.js --ignore-path .gitignore .",
-    "prepublishOnly": "npm run babel",
-    "upgrade-interactive": "npm-check --update"
+    "prepublishOnly": "npm run babel"
+  },
+  "lint-staged": {
+    "*.{js,jsx,html}": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && pretty-quick --staged"
+      "pre-commit": "lint-staged"
     }
-  },
-  "lint-staged": {
-    "*.{js,jsx}": "eslint"
   },
   "repository": {
     "type": "git",
@@ -56,17 +58,25 @@
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
-    "@mdotasia/eslint-config": "^0.7.0",
+    "babel-eslint": "^9.0.0",
     "babel-plugin-styled-components": "^1.10.0",
     "babel-preset-gatsby": "^0.1.9",
     "eslint": "^5.15.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-config-wesbos": "^0.0.19",
+    "eslint-plugin-html": "^5.0.3",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.6.0",
     "gatsby": "^2.1.30",
     "gatsby-theme-undataforum": "^0.1.0",
     "gh-pages": "^2.0.1",
     "husky": "^1.0.1",
     "lint-staged": "^8.1.5",
     "prettier": "^1.16.4",
-    "pretty-quick": "^1.6.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "styled-components": "^4.2.0"

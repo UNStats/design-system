@@ -1,7 +1,7 @@
-import React from "react";
-import { Flex, Text } from "rebass";
-import Link from "./Link";
-import { postType } from "../types";
+import React from 'react';
+import { Flex, Text } from 'rebass';
+import Link from './Link';
+import { postType } from '../types';
 
 const UnlinkedPostPreview = ({ post, ...props }) => (
   <Flex {...props} flexDirection="column">
@@ -28,7 +28,7 @@ const UnlinkedPostPreview = ({ post, ...props }) => (
 );
 
 UnlinkedPostPreview.propTypes = {
-  post: postType.isRequired
+  post: postType.isRequired,
 };
 
 const PostPreview = ({ post, ...props }) => {
@@ -43,7 +43,7 @@ const PostPreview = ({ post, ...props }) => {
 };
 
 PostPreview.propTypes = {
-  post: postType.isRequired
+  post: postType.isRequired,
 };
 
 export default PostPreview;

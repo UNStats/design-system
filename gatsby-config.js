@@ -1,9 +1,9 @@
-const pkg = require("./package.json");
+const pkg = require('./package.json');
 
 module.exports = {
-  __experimentalThemes: ["gatsby-theme-undataforum"],
+  __experimentalThemes: ['gatsby-theme-undataforum'],
   siteMetadata: {
     title: pkg.name,
-    description: pkg.description
-  }
+    description: pkg.description,
+  },
 };

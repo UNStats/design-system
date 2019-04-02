@@ -1,8 +1,14 @@
-import React from "react";
-import Helmet from "react-helmet";
-import PropTypes from "prop-types";
+import React from 'react';
+import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 
-const Head = ({ title, description, href, noRobots, url }) => (
+const Head = ({
+  title,
+  description,
+  href = 'https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:400,700',
+  noRobots = false,
+  url = '',
+}) => (
   <Helmet title={title}>
     <meta property="og:title" content={title} />
     <meta property="og:type" content="website" />
@@ -18,14 +24,7 @@ Head.propTypes = {
   description: PropTypes.string.isRequired,
   href: PropTypes.string,
   noRobots: PropTypes.bool,
-  url: PropTypes.string
-};
-
-Head.defaultProps = {
-  href:
-    "https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:400,700",
-  noRobots: false,
-  url: ""
+  url: PropTypes.string,
 };
 
 export default Head;

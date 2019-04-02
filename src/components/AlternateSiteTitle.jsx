@@ -1,12 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Flex, Text } from "rebass";
-import { colorType } from "../types";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Flex, Text } from 'rebass';
+import { colorType } from '../types';
 
-const AlternateSiteTitle = ({ color, year, ...props }) => (
+const AlternateSiteTitle = ({ color = 'primary', year, ...props }) => (
   <Flex
     {...props}
-    flexDirection={["row", "column"]}
+    flexDirection={['row', 'column']}
     justifyContent="center"
     alignItems="center"
   >
@@ -32,11 +32,7 @@ const AlternateSiteTitle = ({ color, year, ...props }) => (
 
 AlternateSiteTitle.propTypes = {
   color: colorType,
-  year: PropTypes.number.isRequired
-};
-
-AlternateSiteTitle.defaultProps = {
-  color: "primary"
+  year: PropTypes.number.isRequired,
 };
 
 export default AlternateSiteTitle;

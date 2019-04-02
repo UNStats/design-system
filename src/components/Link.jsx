@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withTheme } from "styled-components";
-import { Link as RebassLink } from "rebass";
-import { themeType } from "../types";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withTheme } from 'styled-components';
+import { Link as RebassLink } from 'rebass';
+import { themeType } from '../types';
 
 const Link = ({ children, href, theme, ...other }) => {
   const internal = /^\/(?!\/)/.test(href);
@@ -23,7 +23,7 @@ const Link = ({ children, href, theme, ...other }) => {
 Link.propTypes = {
   children: PropTypes.node.isRequired,
   href: PropTypes.string.isRequired,
-  theme: themeType.isRequired
+  theme: themeType.isRequired,
 };
 
 export default withTheme(Link);
