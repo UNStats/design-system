@@ -78,18 +78,14 @@ const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => (
   </Flex>
 );
 
+// Internal component requires all props because we have control over what props it receives.
 UnlinkedProfilePreview.propTypes = {
   profile: profileType.isRequired,
   align: alignType.isRequired,
   fontSize: responsiveNumberType.isRequired,
 };
 
-const ProfilePreview = ({
-  profile,
-  align = 'center',
-  fontSize = [3, 4],
-  ...props
-}) => {
+const ProfilePreview = ({ profile, align, fontSize, ...props }) => {
   if (profile.href) {
     return (
       <Link {...props} href={profile.href}>
@@ -115,6 +111,11 @@ ProfilePreview.propTypes = {
   profile: profileType.isRequired,
   align: alignType,
   fontSize: responsiveNumberType,
+};
+
+ProfilePreview.defaultProps = {
+  align: 'center',
+  fontSize: [3, 4],
 };
 
 export default ProfilePreview;

@@ -1,5 +1,9 @@
 {
-  "extends": ["plugin:shopify/react", "plugin:shopify/prettier"],
+  "extends": [
+    "plugin:shopify/react",
+    "plugin:shopify/node",
+    "plugin:shopify/prettier"
+  ],
   "settings": {
     "react": {
       "version": "detect"

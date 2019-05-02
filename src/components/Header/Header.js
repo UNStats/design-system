@@ -23,9 +23,9 @@ import SiteTitle from '../SiteTitle';
 
 const Wrapper = styled(Card)(height);
 
-const Header = ({ title, color, links, ...other }) => (
+const Header = ({ title, color, links, ...props }) => (
   <Wrapper
-    {...other}
+    {...props}
     as="header"
     css="box-sizing: content-box;"
     borderBottom="3px solid"
@@ -39,7 +39,7 @@ const Header = ({ title, color, links, ...other }) => (
       mx="auto"
       p={[1, 2]}
     >
-      <Link css="display: block;" href="/">
+      <Link style={{ display: 'block' }} href="/">
         <svg
           height="100%"
           viewBox="0 0 173 192"
@@ -158,6 +158,7 @@ const Header = ({ title, color, links, ...other }) => (
           />
         </svg>
       </Link>
+
       <Flex
         as="nav"
         flexDirection={['column', 'row']}
@@ -196,8 +197,8 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  title: function title(clr) {
-    return <SiteTitle color={clr} />;
+  title: function title(color) {
+    return <SiteTitle color={color} />;
   },
   color: 'primary',
 };
