@@ -1,9 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { number } from 'prop-types';
 import { Flex, Text } from 'rebass';
 import { colorType } from '../../types';
 
-const AlternateSiteTitle = ({ color = 'primary', year, ...props }) => (
+const AlternateSiteTitle = ({ color, year, ...props }) => (
   <Flex
     {...props}
     flexDirection={['row', 'column']}
@@ -32,7 +32,11 @@ const AlternateSiteTitle = ({ color = 'primary', year, ...props }) => (
 
 AlternateSiteTitle.propTypes = {
   color: colorType,
-  year: PropTypes.number.isRequired,
+  year: number.isRequired,
+};
+
+AlternateSiteTitle.defaultProps = {
+  color: 'primary',
 };
 
 export default AlternateSiteTitle;

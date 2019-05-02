@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { arrayOf, func, object } from 'prop-types';
 import { Flex } from 'rebass';
 
 const FlexList = ({ render, values, ...props }) => (
@@ -9,8 +9,8 @@ const FlexList = ({ render, values, ...props }) => (
 );
 
 FlexList.propTypes = {
-  render: PropTypes.func.isRequired,
-  values: PropTypes.arrayOf(PropTypes.object).isRequired,
+  render: func.isRequired,
+  values: arrayOf(object).isRequired,
 };
 
 export default FlexList;

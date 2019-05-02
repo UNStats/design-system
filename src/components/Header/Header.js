@@ -13,7 +13,7 @@
  * please send your request to dataforum@un.org for approval.
  */
 import React from 'react';
-import PropTypes from 'prop-types';
+import { arrayOf, func } from 'prop-types';
 import styled from 'styled-components';
 import { height } from 'styled-system';
 import { Card, Flex, Text } from 'rebass';
@@ -23,14 +23,7 @@ import SiteTitle from '../SiteTitle';
 
 const Wrapper = styled(Card)(height);
 
-const Header = ({
-  title = function Title(clr) {
-    return <SiteTitle color={clr} />;
-  },
-  color = 'primary',
-  links,
-  ...other
-}) => (
+const Header = ({ title, color, links, ...other }) => (
   <Wrapper
     {...other}
     as="header"
@@ -197,9 +190,16 @@ const Header = ({
 );
 
 Header.propTypes = {
-  title: PropTypes.func,
+  title: func,
   color: colorType,
-  links: PropTypes.arrayOf(linkType).isRequired,
+  links: arrayOf(linkType).isRequired,
+};
+
+Header.defaultProps = {
+  title: function title(clr) {
+    return <SiteTitle color={clr} />;
+  },
+  color: 'primary',
 };
 
 export default Header;
