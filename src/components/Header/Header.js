@@ -17,15 +17,15 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { height } from 'styled-system';
 import { Card, Flex, Text } from 'rebass';
-import Link from './Link';
-import SiteTitle from './SiteTitle';
-import { colorType, linkType } from '../types';
+import { colorType, linkType } from '../../types';
+import Link from '../Link';
+import SiteTitle from '../SiteTitle';
 
 const Wrapper = styled(Card)(height);
 
 const Header = ({
-  title = function Title(c) {
-    return <SiteTitle color={c} />;
+  title = function Title(clr) {
+    return <SiteTitle color={clr} />;
   },
   color = 'primary',
   links,

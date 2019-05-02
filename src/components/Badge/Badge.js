@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import styled, { withTheme } from 'styled-components';
 import { borderRadius } from 'styled-system';
 import { Text } from 'rebass';
-import Link from './Link';
-import { badgeType, colorType, themeType } from '../types';
+import { badgeType, colorType, themeType } from '../../types';
+import Link from '../Link';
 
 const Pill = styled(Text)(borderRadius);
 

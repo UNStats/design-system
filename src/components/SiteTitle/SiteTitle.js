@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { display } from 'styled-system';
 import { Flex, Text } from 'rebass';
-import { colorType } from '../types';
+import { colorType } from '../../types';
 
 const Hide = styled(Text)(display);
 

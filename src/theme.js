@@ -1,4 +1,4 @@
-import NewTabLink from './components/NewTabLink';
+import { NewTabLink } from './components';
 
 // Color palette.
 const primary = '#00609d';

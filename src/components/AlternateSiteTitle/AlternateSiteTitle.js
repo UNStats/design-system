@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Flex, Text } from 'rebass';
-import { colorType } from '../types';
+import { colorType } from '../../types';
 
 const AlternateSiteTitle = ({ color = 'primary', year, ...props }) => (
   <Flex

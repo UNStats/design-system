@@ -2,6 +2,8 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 
+/* eslint-disable jsx-a11y/control-has-associated-label */
+
 const Head = ({
   title,
   description,
@@ -18,6 +20,8 @@ const Head = ({
     <link href={href} rel="stylesheet" />
   </Helmet>
 );
+
+/* eslint-enable jsx-a11y/control-has-associated-label */
 
 Head.propTypes = {
   title: PropTypes.string.isRequired,

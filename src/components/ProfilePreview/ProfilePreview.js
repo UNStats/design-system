@@ -1,9 +1,9 @@
 import React from 'react';
 import { Flex, Text } from 'rebass';
-import Badge from './Badge';
-import FlexList from './FlexList';
-import Link from './Link';
-import { alignType, profileType, responsiveNumberType } from '../types';
+import { alignType, profileType, responsiveNumberType } from '../../types';
+import Badge from '../Badge';
+import FlexList from '../FlexList';
+import Link from '../Link';
 
 const style = {
   left: {

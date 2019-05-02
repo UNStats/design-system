@@ -3,7 +3,7 @@ import { arrayOf, func, object, oneOf } from 'prop-types';
 import styled from 'styled-components';
 import { gridGap, gridTemplateColumns, justifyContent } from 'styled-system';
 import { Box } from 'rebass';
-import { responsiveNumberType, responsiveStringType } from '../types';
+import { responsiveNumberType, responsiveStringType } from '../../types';
 
 const Grid = styled(Box)(gridGap, gridTemplateColumns, justifyContent);
 
