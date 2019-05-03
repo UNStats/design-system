@@ -4,7 +4,7 @@ import styled, { withTheme } from 'styled-components';
 import { borderRadius } from 'styled-system';
 import { Text } from 'rebass';
 import { badgeType, colorType, themeType } from '../../types';
-import Link from '../Link';
+import SmartLink from '../SmartLink';
 
 const Pill = styled(Text)(borderRadius);
 
@@ -37,9 +37,9 @@ UnlinkedBadge.defaultProps = {
 const Badge = ({ badge, theme, ...props }) => {
   if (badge.href) {
     return (
-      <Link {...props} href={badge.href}>
+      <SmartLink {...props} href={badge.href}>
         <UnlinkedBadge color={badge.color} text={badge.text} theme={theme} />
-      </Link>
+      </SmartLink>
     );
   }
   return (

@@ -3,7 +3,7 @@ import { Flex, Text } from 'rebass';
 import { alignType, profileType, responsiveNumberType } from '../../types';
 import Badge from '../Badge';
 import FlexList from '../FlexList';
-import Link from '../Link';
+import SmartLink from '../SmartLink';
 
 const style = {
   left: {
@@ -88,13 +88,13 @@ UnlinkedProfilePreview.propTypes = {
 const ProfilePreview = ({ profile, align, fontSize, ...props }) => {
   if (profile.href) {
     return (
-      <Link {...props} href={profile.href}>
+      <SmartLink {...props} href={profile.href}>
         <UnlinkedProfilePreview
           profile={profile}
           align={align}
           fontSize={fontSize}
         />
-      </Link>
+      </SmartLink>
     );
   }
   return (

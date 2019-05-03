@@ -1,7 +1,7 @@
 import React from 'react';
 import { Flex, Heading, Text } from 'rebass';
 import { postType, responsiveNumberType } from '../../types';
-import Link from '../Link';
+import SmartLink from '../SmartLink';
 
 const UnlinkedPostPreview = ({ post, fontSize, ...props }) => {
   const mb = post.lead ? 3 : 0;
@@ -45,9 +45,9 @@ UnlinkedPostPreview.propTypes = {
 const PostPreview = ({ post, fontSize = [3, 4], ...props }) => {
   if (post.href) {
     return (
-      <Link css="display: block;" {...props} href={post.href}>
+      <SmartLink css="display: block;" {...props} href={post.href}>
         <UnlinkedPostPreview post={post} fontSize={fontSize} />
-      </Link>
+      </SmartLink>
     );
   }
   return <UnlinkedPostPreview {...props} post={post} fontSize={fontSize} />;

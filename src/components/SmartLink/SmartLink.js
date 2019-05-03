@@ -4,7 +4,7 @@ import { withTheme } from 'styled-components';
 import { Link as RebassLink } from 'rebass';
 import { themeType } from '../../types';
 
-const Link = ({ children, href, theme, ...props }) => {
+const SmartLink = ({ children, href, theme, ...props }) => {
   const internal = /^\/(?!\/)/.test(href);
   if (internal) {
     return (
@@ -20,10 +20,10 @@ const Link = ({ children, href, theme, ...props }) => {
   );
 };
 
-Link.propTypes = {
+SmartLink.propTypes = {
   children: node.isRequired,
   href: string.isRequired,
   theme: themeType.isRequired,
 };
 
-export default withTheme(Link);
+export default withTheme(SmartLink);

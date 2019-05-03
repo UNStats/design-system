@@ -18,7 +18,7 @@ import styled from 'styled-components';
 import { height } from 'styled-system';
 import { Card, Flex, Text } from 'rebass';
 import { colorType, linkType } from '../../types';
-import Link from '../Link';
+import SmartLink from '../SmartLink';
 import SiteTitle from '../SiteTitle';
 
 const Wrapper = styled(Card)(height);
@@ -39,7 +39,7 @@ const Header = ({ title, color, links, ...props }) => (
       mx="auto"
       p={[1, 2]}
     >
-      <Link style={{ display: 'block' }} href="/">
+      <SmartLink style={{ display: 'block' }} href="/">
         <svg
           height="100%"
           viewBox="0 0 173 192"
@@ -157,7 +157,7 @@ const Header = ({ title, color, links, ...props }) => (
             fill="#A21723"
           />
         </svg>
-      </Link>
+      </SmartLink>
 
       <Flex
         as="nav"
@@ -167,12 +167,12 @@ const Header = ({ title, color, links, ...props }) => (
         alignItems={['center', 'flex-end']}
         pl={[3, 2]}
       >
-        <Link css="display: block;" href="/" mb={[0, -1]}>
+        <SmartLink css="display: block;" href="/" mb={[0, -1]}>
           {title(color)}
-        </Link>
+        </SmartLink>
         <Flex mb={[0, -1]}>
           {links.map(({ href, text }) => (
-            <Link key={href} href={href} ml={[2, 3, 4]} mr={[2, 0]}>
+            <SmartLink key={href} href={href} ml={[2, 3, 4]} mr={[2, 0]}>
               <Text
                 as="span"
                 color={color}
@@ -182,7 +182,7 @@ const Header = ({ title, color, links, ...props }) => (
               >
                 {text}
               </Text>
-            </Link>
+            </SmartLink>
           ))}
         </Flex>
       </Flex>

@@ -4,7 +4,7 @@ export {
   GridList,
   Head,
   Header,
-  Link,
+  SmartLink,
   NewTabLink,
   PostPreview,
   ProfilePreview,

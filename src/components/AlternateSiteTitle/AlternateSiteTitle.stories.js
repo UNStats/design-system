@@ -8,7 +8,7 @@ storiesOf('AlternateSiteTitle', module)
   .add('default color', () => (
     <AlternateSiteTitle year={number('year', 2019)} m={2} />
   ))
-  .add('knobs', () => (
+  .add('custom color', () => (
     <AlternateSiteTitle
       color={text('color', 'red')}
       year={number('year', 2019)}

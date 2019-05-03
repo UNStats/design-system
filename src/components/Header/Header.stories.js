@@ -6,9 +6,8 @@ import Header from './Header';
 
 storiesOf('Header', module)
   .addDecorator(withKnobs)
-  .add('custom color', () => (
+  .add('default color', () => (
     <Header
-      color={text('color', 'green')}
       links={object('links', [
         {
           href: '/about',
@@ -25,8 +24,9 @@ storiesOf('Header', module)
       ])}
     />
   ))
-  .add('default color', () => (
+  .add('custom color', () => (
     <Header
+      color={text('color', 'green')}
       links={object('links', [
         {
           href: '/about',
