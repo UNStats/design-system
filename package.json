@@ -24,7 +24,7 @@
     "build": "rm -rf ./storybook-static && build-storybook -c ./config/storybook -s ./static",
     "babel": "rm -rf ./dist && cross-env NODE_ENV=production babel ./src -d ./dist --ignore 'src/**/*.stories.js'",
     "clean": "rm -rf ./node_modules",
-    "deploy": "npm run build &&  gh-pages -d public -m 'Deploy to GitHub Pages'",
+    "deploy": "npm run build &&  gh-pages -d storybook-static -m 'Deploy to GitHub Pages'",
     "lint": "eslint . --ignore-path .gitignore --fix",
     "format": "pretty-quick",
     "prepublishOnly": "npm run babel"
