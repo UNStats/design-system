@@ -5,14 +5,18 @@ import Badge from './Badge';
 
 storiesOf('Badge', module)
   .addDecorator(withKnobs)
-  .add('default color', () => (
+  .add('unlinked', () => (
+    <Badge badge={object('badge', { text: 'Unlinked Badge' })} m={2} />
+  ))
+  .add('linked', () => (
     <Badge
-      badge={object('badge', {
-        text: 'Badge',
-      })}
+      badge={object('badge', { text: 'Linked Badge', href: '/linked-badge' })}
       m={2}
     />
   ))
   .add('custom color', () => (
-    <Badge badge={object('badge', { color: 'red', text: 'Badge' })} m={2} />
+    <Badge
+      badge={object('badge', { color: 'red', text: 'Custom Color' })}
+      m={2}
+    />
   ));
