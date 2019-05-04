@@ -74,6 +74,7 @@
     "pretty-quick": "^1.10.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "release": "^6.0.1",
     "styled-components": "^4.2.0"
   }
 }
