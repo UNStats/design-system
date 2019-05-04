@@ -32,13 +32,11 @@ export const alignType = oneOf(['left', 'center', 'right']);
 
 export const colorType = oneOf([
   'primary',
+  'secondary',
   'blue',
   'green',
   'red',
   'yellow',
-  'gray',
-  'black',
-  'white',
 ]);
 
 export const badgeType = shape({
