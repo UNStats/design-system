@@ -16,7 +16,7 @@ const SiteTitle = ({ color = 'primary', ...props }) => (
     <Text
       css="white-space: nowrap;"
       color={color}
-      fontFamily="sans"
+      fontFamily="body"
       fontSize={4}
       fontWeight="bold"
       mr={[2, 0]}
@@ -33,7 +33,7 @@ const SiteTitle = ({ color = 'primary', ...props }) => (
     <Text
       css="white-space: nowrap;"
       color={color}
-      fontFamily="sans"
+      fontFamily="body"
       fontSize={[4, 4, 5]}
       fontWeight="bold"
     >

@@ -10,7 +10,7 @@ const UnlinkedPostPreview = ({ post, fontSize, ...props }) => {
       <Heading
         as="h1"
         color="text"
-        fontFamily="sans"
+        fontFamily="body"
         fontSize={fontSize}
         lineHeight="title"
         mt={0}
@@ -23,13 +23,13 @@ const UnlinkedPostPreview = ({ post, fontSize, ...props }) => {
         as="time"
         color="text"
         css="display: block;"
-        fontFamily="sans"
+        fontFamily="body"
         mb={mb}
       >
         {post.date}
       </Text>
       {post.lead && (
-        <Text as="p" color="text" fontFamily="serif" lineHeight="copy" my={0}>
+        <Text as="p" color="text" fontFamily="body" lineHeight="copy" my={0}>
           {post.lead}
         </Text>
       )}

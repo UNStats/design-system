@@ -6,8 +6,8 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     margin: 0;
-    fontFamily: ${({ theme }) => theme.fonts.serif};
-    lineHeight: ${({ theme }) => theme.lineHeights.copy};
+    font-family: ${({ theme }) => theme.fonts.body};
+    line-height: ${({ theme }) => theme.lineHeights.copy};
     color: ${({ theme }) => theme.colors.text};
     backgroundColor: ${({ theme }) => theme.colors.backgroundColor}
   }

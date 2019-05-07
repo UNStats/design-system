@@ -12,7 +12,7 @@ const AlternateSiteTitle = ({ color, year, ...props }) => (
   >
     <Text
       color={color}
-      fontFamily="sans"
+      fontFamily="body"
       fontSize={[3, 4, 5]}
       fontWeight="bold"
       mr={[2, 0]}
@@ -21,7 +21,7 @@ const AlternateSiteTitle = ({ color, year, ...props }) => (
     </Text>
     <Text
       color={color}
-      fontFamily="sans"
+      fontFamily="body"
       fontSize={[3, 3, 4]}
       fontWeight="bold"
     >

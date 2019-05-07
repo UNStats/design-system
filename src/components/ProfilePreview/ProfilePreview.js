@@ -35,7 +35,7 @@ const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => (
     <Text
       as="h1"
       color="text"
-      fontFamily="sans"
+      fontFamily="body"
       fontSize={fontSize}
       textAlign={align}
       mt={0}
@@ -45,12 +45,12 @@ const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => (
     </Text>
     {profile.affiliation && (
       <Flex flexDirection="column" mt={3}>
-        <Text color="text" fontFamily="sans" fontSize={2} textAlign={align}>
+        <Text color="text" fontFamily="body" fontSize={2} textAlign={align}>
           {profile.affiliation.jobtitle}
         </Text>
         <Text
           color="text"
-          fontFamily="sans"
+          fontFamily="body"
           fontSize={2}
           fontWeight="bold"
           textAlign={align}

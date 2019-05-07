@@ -13,7 +13,7 @@ storiesOf('Components/PostPreview', module)
         date: 'May 31, 2018',
         authors: function authors() {
           return (
-            <Text as="div" fontFamily="sans" lineHeight="copy" mb={3}>
+            <Text as="div" fontFamily="body" lineHeight="copy" mb={3}>
               {[
                 'Willow Rangall',
                 'Suzy Cahan',
@@ -221,7 +221,7 @@ storiesOf('Components/PostPreview', module)
         date: 'May 31, 2018',
         authors: function authors() {
           return (
-            <Text as="div" fontFamily="sans" lineHeight="copy" mb={3}>
+            <Text as="div" fontFamily="body" lineHeight="copy" mb={3}>
               {[
                 'Willow Rangall',
                 'Suzy Cahan',

@@ -12,8 +12,8 @@ const theme = {
 
   // Typography.
   fonts: {
-    sans: 'Lato, sans-serif',
-    serif: 'Merriweather, serif',
+    body: 'system-ui, sans-serif',
+    monospace: 'Menlo, monospace',
   },
   // http://tachyons.io/docs/typography/scale/ (reversed)
   fontSizes: [

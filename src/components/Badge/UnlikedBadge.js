@@ -14,7 +14,7 @@ const UnlinkedBadge = ({ color, text, ...props }) => (
     color={themeGet(`colors.modes.${color}.text`)(props)}
     bg={themeGet(`colors.modes.${color}.background`)(props)}
     borderRadius="pill"
-    fontFamily="sans"
+    fontFamily="body"
     fontSize={0}
     fontWeight="bold"
     px={2}

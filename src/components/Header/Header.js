@@ -45,7 +45,7 @@ const Header = ({ title, color, links, ...props }) => (
               <Text
                 as="span"
                 color={color}
-                fontFamily="sans"
+                fontFamily="body"
                 fontSize={[2, 3, 4]}
                 fontWeight="bold"
               >
