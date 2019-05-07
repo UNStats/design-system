@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, object } from '@storybook/addon-knobs';
 import Badge from './Badge';
 
-storiesOf('Badge', module)
+storiesOf('Components/Badge', module)
   .addDecorator(withKnobs)
   .add('unlinked', () => (
     <Badge badge={object('badge', { text: 'Unlinked Badge' })} m={2} />

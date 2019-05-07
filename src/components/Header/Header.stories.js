@@ -4,7 +4,7 @@ import { withKnobs, object, text } from '@storybook/addon-knobs';
 import AlternateSiteTitle from '../AlternateSiteTitle';
 import Header from './Header';
 
-storiesOf('Header', module)
+storiesOf('Components/Header', module)
   .addDecorator(withKnobs)
   .add('default color', () => (
     <Header

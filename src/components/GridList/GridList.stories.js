@@ -4,7 +4,7 @@ import { Image } from 'rebass';
 import ProfilePreview from '../ProfilePreview';
 import GridList from './GridList';
 
-storiesOf('GridList', module)
+storiesOf('Components/GridList', module)
   .add('avatars', () => (
     <GridList
       align="center"

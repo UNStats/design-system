@@ -5,7 +5,7 @@ import Badge from '../Badge';
 import ProfilePreview from '../ProfilePreview';
 import FlexList from './FlexList';
 
-storiesOf('FlexList', module)
+storiesOf('Components/FlexList', module)
   .add('avatars', () => (
     <FlexList
       render={({ id, ...profile }) => (

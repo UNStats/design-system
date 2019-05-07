@@ -5,7 +5,7 @@ import GridList from '../GridList';
 import ProfilePreview from '../ProfilePreview';
 import PostPreview from './PostPreview';
 
-storiesOf('PostPreview', module)
+storiesOf('Components/PostPreview', module)
   .add('render authors with Text', () => (
     <PostPreview
       post={{

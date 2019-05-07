@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { Image } from 'rebass';
 import ProfilePreview from './ProfilePreview';
 
-storiesOf('ProfilePreview', module)
+storiesOf('Components/ProfilePreview', module)
   .add('complete profile', () => (
     <ProfilePreview
       profile={{

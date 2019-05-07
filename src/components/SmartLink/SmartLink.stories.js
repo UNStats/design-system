@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import SmartLink from './SmartLink';
 
-storiesOf('SmartLink', module)
+storiesOf('Components/SmartLink', module)
   .addDecorator(withKnobs)
   .add('internal link', () => (
     <SmartLink href={text('href', '/internal-link')}>
