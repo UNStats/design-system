@@ -1,6 +1,7 @@
 export { default as AlternateSiteTitle } from './AlternateSiteTitle';
 export { default as Badge } from './Badge';
 export { default as FlexList } from './FlexList';
+export { default as GlobalStyle } from './GlobalStyle';
 export { default as GridList } from './GridList';
 export { default as Head } from './Head';
 export { default as Header } from './Header';
