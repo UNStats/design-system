@@ -15,7 +15,12 @@ addParameters({
 addDecorator(story => <ThemeProvider theme={theme}>{story()}</ThemeProvider>);
 
 function loadStories() {
-  const req = require.context('../../src/components', true, /\.stories\.js$/);
+  // Components.
+  let req = require.context('../../src/components', true, /\.stories\.js$/);
+  req.keys().forEach(filename => req(filename));
+
+  // Tokens.
+  req = require.context('../../src/tokens', true, /\.stories\.js$/);
   req.keys().forEach(filename => req(filename));
 }
 
