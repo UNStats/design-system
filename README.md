@@ -13,12 +13,14 @@ npm add @undataforum/components
 to add package [@undataforum/components](https://github.com/UNDataForum/components) to your dependencies. Import components like this
 
 ```jsx
-import { PostPreview, ProfilePreview } from "@undataforum/components";
+import { PostPreview, ProfilePreview } from '@undataforum/components';
 ```
 
 ## License
 
-This project is licensed under the [MIT license](https://choosealicense.com/licenses/mit/). The United Nations World Data Forum logo is not part of this license. The [Header component](https://github.com/UNDataForum/components/blob/master/src/components/Header/Header.jsx) contains additional information on licensing the logo.
+This project is licensed under the [MIT license](https://choosealicense.com/licenses/mit/).
+
+Any components located in the [`tokens` folder](https://github.com/UNDataForum/components/tree/master/src/tokens) are excluded from this license and are copyright United Nations. If you want to use the UN World Data Forum logo on your website or in any other context, you need to request permission in writing from dataforum@un.org.
 
 ## Credits
 
