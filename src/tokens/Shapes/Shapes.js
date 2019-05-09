@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { withTheme } from 'styled-components';
 import { height as styledHeight } from 'styled-system';
 import { Box } from 'rebass';
-import { colorType, responsiveNumberOrStringType } from '../../types';
+import { colorType, responsiveType } from '../../types';
 import {
   blueByDefault,
   lightBlueByDefault,
@@ -117,8 +117,8 @@ const Shapes = ({ color, height, width, ...props }) => {
 
 Shapes.propTypes = {
   color: colorType,
-  height: responsiveNumberOrStringType,
-  width: responsiveNumberOrStringType,
+  height: responsiveType,
+  width: responsiveType,
 };
 
 export default withTheme(Shapes);

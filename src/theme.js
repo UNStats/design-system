@@ -1,5 +1,5 @@
 import { NewTabLink } from './components';
-import colors from './tokens/colors';
+import { colors } from './tokens';
 
 const theme = {
   // Colors.

@@ -8,6 +8,7 @@ storiesOf('Components/Header', module)
   .addDecorator(withKnobs)
   .add('default color', () => (
     <Header
+      title="Header Title"
       links={object('links', [
         {
           href: '/about',
@@ -22,6 +23,7 @@ storiesOf('Components/Header', module)
           text: 'Programme',
         },
       ])}
+      button={{ text: 'Register', href: '/register' }}
     />
   ))
   .add('custom color', () => (

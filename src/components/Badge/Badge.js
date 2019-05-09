@@ -6,11 +6,7 @@ import UnlinkedBadge from './UnlikedBadge';
 const Badge = ({ badge, ...props }) => {
   if (badge.href) {
     return (
-      <SmartLink
-        {...props}
-        style={{ display: 'inline-block' }}
-        href={badge.href}
-      >
+      <SmartLink {...props} css="display: inline-block;" href={badge.href}>
         <UnlinkedBadge color={badge.color} text={badge.text} />
       </SmartLink>
     );

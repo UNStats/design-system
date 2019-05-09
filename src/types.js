@@ -9,12 +9,9 @@ import {
 } from 'prop-types';
 
 // Generic types.
-
 export const responsiveNumberType = oneOfType([number, arrayOf(number)]);
-
 export const responsiveStringType = oneOfType([string, arrayOf(string)]);
-
-export const responsiveNumberOrStringType = oneOfType([
+export const responsiveType = oneOfType([
   number,
   arrayOf(number),
   string,
@@ -31,6 +28,8 @@ const affiliationType = shape({
 export const alignType = oneOf(['left', 'center', 'right']);
 
 export const colorType = oneOf([
+  'text',
+  'background',
   'primary',
   'secondary',
   'blue',
