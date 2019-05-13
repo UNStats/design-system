@@ -1,77 +1,82 @@
 import React, { useState } from 'react';
-import { arrayOf, func } from 'prop-types';
-import { Box, Button, Flex, Heading, Text } from 'rebass';
+import { arrayOf, func, string } from 'prop-types';
+import { display, height } from 'styled-system';
+import { Button, Flex, Heading } from 'rebass';
 import { colorType, linkType } from '../../types';
-import SiteTitle from '../SiteTitle';
-import SmartLink from '../SmartLink';
+import { MenuIcon } from '../../tokens';
+import { Context } from './context';
+import Navigation from './Navigation';
 
-const Header = ({ title, color, bg, links, button, ...props }) => {
+const Header = ({ logo, title, color, bg, links, button, ...props }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  // No logo and no title: move menu button to right with flex-end.
+  // Otherwise use space-between to move logo and/or title left and menu button right.
+  const justifyContent = !logo && !title ? 'flex-end' : 'space-between';
+  // no logo and no title => flex-end
+  // otherwise space-between
   return (
-    <Flex {...props} as="header" color={color} bg={bg} p={2}>
-      <Heading flex={1} color={color}>
-        {title}
-      </Heading>
-      <Box
+    <Context.Provider value={{ menuOpen, setMenuOpen }}>
+      <Flex
+        {...props}
+        as="header"
         css={`
-          display: ${menuOpen ? 'block' : 'none'};
-          position: fixed;
-          top: 0;
-          left: 0;
+          ${height}
         `}
+        flexDirection="row"
+        justifyContent={justifyContent}
+        alignItems="center"
+        height={[64, 80, 96]}
+        width="100%"
+        color={color}
         bg={bg}
+        p={[2, 3]}
       >
-        <Flex
-          as="ul"
-          css="list-style: none; min-height: 100vh;"
-          flexDirection="column"
-          alignItems="center"
-          width="100vw"
-          py={5}
-          px={0}
-        >
-          {links.map(({ href, text }) => (
-            <li key={href}>
-              <SmartLink href={href}>
-                <Text as="span" color={color}>
-                  {text}
-                </Text>
-              </SmartLink>
-            </li>
-          ))}
-          {button && button.text && (
-            <li>
-              <Button as={SmartLink} href={button.href}>
-                {button.text}
-              </Button>
-            </li>
-          )}
-        </Flex>
+        {logo && logo()}
+        {title && (
+          <Heading
+            css="
+              display: flex;
+              white-space: nowrap;
+            "
+            flex={[1, 0]}
+            color={color}
+            fontSize={[4, 5, 6]}
+            mr={[0, 4, 5]}
+          >
+            {title}
+          </Heading>
+        )}
+        <Navigation
+          flex={1}
+          links={links}
+          button={button}
+          open={menuOpen}
+          color={color}
+          bg={bg}
+        />
         <Button
-          css={{ display: 'block', position: 'fixed', top: 0, right: 0 }}
+          css={`
+            ${display}
+          `}
+          display={['inline-block', 'none']}
+          color={color}
+          bg="transparent"
           onClick={() => {
-            setMenuOpen(false);
+            setMenuOpen(true);
           }}
-          p={3}
+          px={1}
+          py={0}
         >
-          Close
+          <MenuIcon width={24} />
         </Button>
-      </Box>
-      <Button
-        color={bg}
-        bg={color}
-        onClick={() => {
-          setMenuOpen(true);
-        }}
-      >
-        Menu
-      </Button>
-    </Flex>
+      </Flex>
+    </Context.Provider>
   );
 };
 
 Header.propTypes = {
-  title: func,
+  logo: func,
+  title: string,
   color: colorType,
   bg: colorType,
   links: arrayOf(linkType).isRequired,
@@ -79,60 +84,8 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  title: function title(color) {
-    return <SiteTitle color={color} />;
-  },
-  color: 'background',
-  bg: 'primary',
+  color: 'primary',
+  bg: 'background',
 };
 
 export default Header;
-
-/*
-    <Wrapper
-      {...props}
-      as="header"
-      borderBottom="3px solid"
-      borderColor={color}
-      height={[64, 80, 96]}
-    >
-      <Flex
-        css="box-sizing: border-box; height: 100%; maxWidth: 96rem;"
-        justifyContent={['center', 'flex-start']}
-        alignItems={['center', 'flex-end']}
-        mx="auto"
-        p={[1, 2]}
-      >
-        <SmartLink style={{ display: 'block' }} href="/">
-          <Shapes height="100%" />
-        </SmartLink>
-        <Flex
-          as="nav"
-          flexDirection={['column', 'row']}
-          flex={[0, 1]}
-          justifyContent={['center', 'space-between']}
-          alignItems={['center', 'flex-end']}
-          pl={[3, 2]}
-        >
-          <SmartLink css="display: block;" href="/" mb={[0, -1]}>
-            {title(color)}
-          </SmartLink>
-          <Flex mb={[0, -1]}>
-            {links.map(({ href, text }) => (
-              <SmartLink key={href} href={href} ml={[2, 3, 4]} mr={[2, 0]}>
-                <Text
-                  as="span"
-                  color={color}
-                  fontFamily="body"
-                  fontSize={[2, 3, 4]}
-                  fontWeight="bold"
-                >
-                  {text}
-                </Text>
-              </SmartLink>
-            ))}
-          </Flex>
-        </Flex>
-      </Flex>
-    </Wrapper>
-*/

@@ -1,13 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Shapes } from '../../tokens';
-import Header from './Header';
+import { withKnobs, select } from '@storybook/addon-knobs';
+import Navigation from './Navigation';
 
-storiesOf('Components/Header', module)
-  .add('logo and title', () => (
-    <Header
-      logo={() => <Shapes height="100%" mr={[2, 3]} />}
-      title="Header Title"
+storiesOf('Components/Navigation', module)
+  .addDecorator(withKnobs)
+  .add('with button', () => (
+    <Navigation
       links={[
         {
           href: '/about',
@@ -23,11 +22,13 @@ storiesOf('Components/Header', module)
         },
       ]}
       button={{ text: 'Register', href: '/register' }}
+      open={select('open', { true: true, false: false }, true)}
+      color="primary"
+      bg="background"
     />
   ))
-  .add('logo only', () => (
-    <Header
-      logo={() => <Shapes height="100%" mr={[2, 3]} />}
+  .add('without button', () => (
+    <Navigation
       links={[
         {
           href: '/about',
@@ -42,73 +43,13 @@ storiesOf('Components/Header', module)
           text: '2020',
         },
       ]}
-      button={{ text: 'Register', href: '/register' }}
-    />
-  ))
-  .add('title only', () => (
-    <Header
-      title="Header Title"
-      links={[
-        {
-          href: '/about',
-          text: 'About',
-        },
-        {
-          href: '/blog',
-          text: 'Blog',
-        },
-        {
-          href: '/2020',
-          text: '2020',
-        },
-      ]}
-      button={{ text: 'Register', href: '/register' }}
-    />
-  ))
-  .add('no logo and no title', () => (
-    <Header
-      links={[
-        {
-          href: '/about',
-          text: 'About',
-        },
-        {
-          href: '/blog',
-          text: 'Blog',
-        },
-        {
-          href: '/2020',
-          text: '2020',
-        },
-      ]}
-      button={{ text: 'Register', href: '/register' }}
-    />
-  ))
-
-  .add('no button', () => (
-    <Header
-      logo={() => <Shapes height="100%" mr={[2, 3]} />}
-      title="Header Title"
-      links={[
-        {
-          href: '/about',
-          text: 'About',
-        },
-        {
-          href: '/blog',
-          text: 'Blog',
-        },
-        {
-          href: '/2020',
-          text: '2020',
-        },
-      ]}
+      open={select('open', { true: true, false: false }, true)}
+      color="primary"
+      bg="background"
     />
   ))
   .add('many links with button', () => (
-    <Header
-      logo={() => <Shapes height="100%" mr={[2, 3]} />}
-      title="Header Title"
+    <Navigation
       links={[
         { text: 'One', href: '/1' },
         { text: 'Two', href: '/2' },
@@ -127,11 +68,13 @@ storiesOf('Components/Header', module)
         { text: 'Fifteen', href: '/15' },
       ]}
       button={{ text: 'Register', href: '/register' }}
+      open={select('open', { true: true, false: false }, true)}
+      color="primary"
+      bg="background"
     />
   ))
   .add('many links without button', () => (
-    <Header
-      logo={() => <Shapes height="100%" mr={[2, 3]} />}
+    <Navigation
       title="Header Title"
       links={[
         { text: 'One', href: '/1' },
@@ -150,12 +93,13 @@ storiesOf('Components/Header', module)
         { text: 'Fourteen', href: '/14' },
         { text: 'Fifteen', href: '/15' },
       ]}
+      open={select('open', { true: true, false: false }, true)}
+      color="primary"
+      bg="background"
     />
   ))
-  .add('custom color', () => (
-    <Header
-      logo={() => <Shapes color="background" height="100%" mr={[2, 3]} />}
-      title="Header Title"
+  .add('another color', () => (
+    <Navigation
       links={[
         {
           href: '/about',
@@ -171,7 +115,8 @@ storiesOf('Components/Header', module)
         },
       ]}
       button={{ text: 'Register', href: '/register' }}
+      open={select('open', { true: true, false: false }, true)}
       color="background"
-      bg="green"
+      bg="red"
     />
   ));

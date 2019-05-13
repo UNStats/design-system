@@ -45,7 +45,6 @@ const theme = {
   },
   // Rebass.
   Link: {
-    height: '100%',
     'text-decoration': 'none',
     transition: 'all 0.2s ease-out',
     '&:hover': {
