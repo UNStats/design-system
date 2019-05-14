@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
+import { Box } from 'rebass';
 import Navigation from './Navigation';
 
 storiesOf('Components/Navigation', module)
@@ -98,7 +99,7 @@ storiesOf('Components/Navigation', module)
       bg="background"
     />
   ))
-  .add('another color', () => (
+  .add('custom color', () => (
     <Navigation
       links={[
         {
@@ -119,4 +120,29 @@ storiesOf('Components/Navigation', module)
       color="background"
       bg="red"
     />
+  ))
+  .add('transparent background', () => (
+    <Box bg="gray">
+      <Navigation
+        links={[
+          {
+            href: '/about',
+            text: 'About',
+          },
+          {
+            href: '/blog',
+            text: 'Blog',
+          },
+          {
+            href: '/2020',
+            text: '2020',
+          },
+        ]}
+        button={{ text: 'Register', href: '/register' }}
+        open={select('open', { true: true, false: false }, true)}
+        color="primary"
+        bg="background"
+        transparent={select('transparent', { true: true, false: false }, true)}
+      />
+    </Box>
   ));

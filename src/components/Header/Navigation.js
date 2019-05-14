@@ -7,8 +7,24 @@ import { CloseIcon } from '../../tokens';
 import SmartLink from '../SmartLink';
 import { useHeaderContext } from './context';
 
-const Navigation = ({ links, button, open, color, bg, ...props }) => {
+const Navigation = ({
+  links,
+  button,
+  open,
+  color,
+  bg,
+  transparent,
+  ...props
+}) => {
   const { setMenuOpen } = useHeaderContext();
+  let background;
+  // open: never transparent.
+  if (open) {
+    background = bg;
+  } else {
+    // Transparent only if flag is set.
+    background = transparent ? 'transparent' : bg;
+  }
   return (
     <Flex
       {...props}
@@ -29,7 +45,7 @@ const Navigation = ({ links, button, open, color, bg, ...props }) => {
       justifyContent={['flex-start', 'flex-end']}
       alignItems="center"
       color={color}
-      bg={bg}
+      bg={background}
       maxHeight={['100vh', 80, 96]}
       position={['fixed', 'static']}
       overflow="auto"
@@ -97,6 +113,7 @@ Navigation.propTypes = {
   open: bool.isRequired,
   color: colorType.isRequired,
   bg: colorType.isRequired,
+  transparent: bool.isRequired,
 };
 
 export default Navigation;
