@@ -68,6 +68,7 @@ const Header = ({
         <Button
           css={`
             ${display}
+            z-index: 1;
           `}
           display={['inline-block', 'none']}
           color={color}

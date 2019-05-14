@@ -38,7 +38,7 @@ const Navigation = ({
         right: 0;
         bottom: 0;
         left: 0;
-        z-index: 1;
+        z-index: 2;
       `}
       display={[open ? 'flex' : 'none', 'flex']}
       flexDirection={['column', 'row']}
@@ -66,7 +66,7 @@ const Navigation = ({
       >
         {links.map(({ href, text }) => (
           <SmartLink key={href} href={href} mb={[3, 0]} mr={[0, 3, 4]}>
-            <Text color={color} fontSize={4} fontWeight="bold">
+            <Text color={color} fontSize={[4, 3, 4]} fontWeight="bold">
               {text}
             </Text>
           </SmartLink>
@@ -82,7 +82,7 @@ const Navigation = ({
           mr={[4, 0]}
           ml={4}
         >
-          <Text fontSize={4}>{button.text}</Text>
+          <Text fontSize={[4, 3, 4]}>{button.text}</Text>
         </Button>
       )}
       <Button
