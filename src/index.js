@@ -9,4 +9,5 @@ export {
   PostPreview,
   ProfilePreview,
 } from './components';
+export { Shapes } from './tokens';
 export { default as theme } from './theme';
