@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "alias": "components.undataforum.org",
   "builds": [
     {
       "src": "package.json",
