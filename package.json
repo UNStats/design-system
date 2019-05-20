@@ -22,7 +22,7 @@
   "scripts": {
     "start": "start-storybook -p 8000 -c ./config/storybook -s ./static",
     "build": "rm -rf ./storybook-static && build-storybook -c ./config/storybook -s ./static",
-    "now-build": "npm run build",
+    "now-build": "eslint . && npm run build",
     "babel": "rm -rf ./dist && cross-env NODE_ENV=production babel ./src -d ./dist --ignore 'src/**/*.stories.js'",
     "clean": "rm -rf ./node_modules",
     "lint": "eslint . --ignore-path .gitignore --fix",
@@ -32,7 +32,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint --ignore-path .gitignore --fix",
+      "npm run fix",
       "git add"
     ]
   },
