@@ -91,6 +91,7 @@ const Navigation = ({
           position: absolute;
           top: 0;
           right: 0;
+          -webkit-tap-highlight-color: transparent;
         `}
         display={['inline-block', 'none']}
         onClick={() => {

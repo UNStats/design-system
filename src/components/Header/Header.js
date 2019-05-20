@@ -69,6 +69,7 @@ const Header = ({
           css={`
             ${display}
             z-index: 1;
+            -webkit-tap-highlight-color: transparent;
           `}
           display={['inline-block', 'none']}
           color={color}
