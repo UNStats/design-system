@@ -7,7 +7,7 @@ import Header from './Header';
 storiesOf('Components/Header', module)
   .add('logo and title', () => (
     <Header
-      logo={() => <Shapes height="100%" mr={[2, 3]} />}
+      logo={() => <Shapes height="100%" />}
       title="Header Title"
       links={[
         {
@@ -28,7 +28,7 @@ storiesOf('Components/Header', module)
   ))
   .add('logo only', () => (
     <Header
-      logo={() => <Shapes height="100%" mr={[2, 3]} />}
+      logo={() => <Shapes height="100%" />}
       links={[
         {
           href: '/about',
@@ -88,7 +88,7 @@ storiesOf('Components/Header', module)
 
   .add('no button', () => (
     <Header
-      logo={() => <Shapes height="100%" mr={[2, 3]} />}
+      logo={() => <Shapes height="100%" />}
       title="Header Title"
       links={[
         {
@@ -108,7 +108,7 @@ storiesOf('Components/Header', module)
   ))
   .add('many links with button', () => (
     <Header
-      logo={() => <Shapes height="100%" mr={[2, 3]} />}
+      logo={() => <Shapes height="100%" />}
       title="Header Title"
       links={[
         { text: 'One', href: '/1' },
@@ -132,7 +132,7 @@ storiesOf('Components/Header', module)
   ))
   .add('many links without button', () => (
     <Header
-      logo={() => <Shapes height="100%" mr={[2, 3]} />}
+      logo={() => <Shapes height="100%" />}
       title="Header Title"
       links={[
         { text: 'One', href: '/1' },
@@ -155,7 +155,7 @@ storiesOf('Components/Header', module)
   ))
   .add('custom color', () => (
     <Header
-      logo={() => <Shapes color="background" height="100%" mr={[2, 3]} />}
+      logo={() => <Shapes color="background" height="100%" />}
       title="Header Title"
       links={[
         {
@@ -179,7 +179,7 @@ storiesOf('Components/Header', module)
   .add('transparent background', () => (
     <Box bg="gray">
       <Header
-        logo={() => <Shapes height="100%" mr={[2, 3]} />}
+        logo={() => <Shapes height="100%" />}
         title="Header Title"
         links={[
           {
