@@ -27,7 +27,8 @@
     "clean": "rm -rf ./node_modules",
     "lint": "eslint . --ignore-path .gitignore --fix",
     "format": "pretty-quick",
-    "prepublishOnly": "npm run babel"
+    "prepublishOnly": "npm run babel",
+    "postpublish": "npx now --target production"
   },
   "lint-staged": {
     "*.js": [

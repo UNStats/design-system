@@ -1,6 +1,9 @@
 {
   "version": 2,
-  "alias": "components.undataforum.org",
+  "alias": ["components.undataforum.org"],
+  "github": {
+    "autoAlias": false
+  },
   "builds": [
     {
       "src": "package.json",
