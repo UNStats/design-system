@@ -3,10 +3,12 @@ import { configure, addDecorator, addParameters } from '@storybook/react';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle, theme } from '../../src';
 import '@storybook/addon-console';
+import storybookTheme from './theme';
 
 addParameters({
   options: {
     panelPosition: 'bottom',
+    theme: storybookTheme,
   },
 });
 
