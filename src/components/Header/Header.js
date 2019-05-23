@@ -26,9 +26,8 @@ const Header = ({
   const background = transparent ? 'transparent' : bg;
   return (
     <Context.Provider value={{ menuOpen, setMenuOpen }}>
-      <Container maxWidth={9}>
+      <Container {...props} maxWidth={9}>
         <Flex
-          {...props}
           as="header"
           css={`
             ${height}
