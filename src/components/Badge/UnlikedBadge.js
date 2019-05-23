@@ -1,16 +1,17 @@
 import React from 'react';
 import { string } from 'prop-types';
-import styled, { withTheme } from 'styled-components';
+import { withTheme } from 'styled-components';
 import { Text } from 'rebass';
 import { borderRadius, themeGet } from 'styled-system';
 import { colorType } from '../../types';
 
-const Pill = styled(Text)(borderRadius);
-
 const UnlinkedBadge = ({ color, text, ...props }) => (
-  <Pill
+  <Text
     {...props}
-    css="display: inline-block;"
+    css={`
+      ${borderRadius}
+      display: inline-block;
+    `}
     color={themeGet(`colors.modes.${color}.text`)(props)}
     bg={themeGet(`colors.modes.${color}.background`)(props)}
     borderRadius="pill"
@@ -21,7 +22,7 @@ const UnlinkedBadge = ({ color, text, ...props }) => (
     py={1}
   >
     {text}
-  </Pill>
+  </Text>
 );
 
 UnlinkedBadge.propTypes = {

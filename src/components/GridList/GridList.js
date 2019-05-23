@@ -1,11 +1,8 @@
 import React from 'react';
 import { arrayOf, func, object, oneOf } from 'prop-types';
-import styled from 'styled-components';
 import { gridGap, gridTemplateColumns, justifyContent } from 'styled-system';
 import { Box } from 'rebass';
 import { responsiveNumberType, responsiveStringType } from '../../types';
-
-const Grid = styled(Box)(gridGap, gridTemplateColumns, justifyContent);
 
 const lookup = {
   left: 'start',
@@ -21,15 +18,20 @@ const GridList = ({
   values,
   ...props
 }) => (
-  <Grid
+  <Box
     {...props}
-    css="display: grid;"
+    css={`
+      ${gridGap}
+      ${gridTemplateColumns}
+      ${justifyContent}
+      display: grid;
+    `}
     gridGap={gap}
     gridTemplateColumns={columns}
     justifyContent={lookup[align]}
   >
     {values.map(value => render(value))}
-  </Grid>
+  </Box>
 );
 
 GridList.propTypes = {

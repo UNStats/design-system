@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { withTheme } from 'styled-components';
+import { withTheme } from 'styled-components';
 import { height as styledHeight } from 'styled-system';
 import { Box } from 'rebass';
 import { colorType, responsiveType } from '../../types';
@@ -14,17 +14,20 @@ import {
   lightYellowByDefault,
 } from '../colors';
 
-const Wrapper = styled(Box)`
-  display: inline-block;
-  ${styledHeight}
-`;
-
 const Shapes = ({ color, height, width, ...props }) => {
   // Determine if height and width should be set on SVG.
   const svgHeight = height ? '100%' : undefined;
   const svgWidth = width ? '100%' : undefined;
   return (
-    <Wrapper {...props} height={height} width={width}>
+    <Box
+      {...props}
+      css={`
+        ${styledHeight}
+        display: inline-block;
+      `}
+      height={height}
+      width={width}
+    >
       <svg viewBox="0 0 173 192" height={svgHeight} width={svgWidth}>
         <path
           d="M53.829 157.58h-33.49v33.49h33.49v-33.49z"
@@ -111,7 +114,7 @@ const Shapes = ({ color, height, width, ...props }) => {
           fill={redByDefault(color, props)}
         />
       </svg>
-    </Wrapper>
+    </Box>
   );
 };
 
