@@ -1,4 +1,5 @@
 export { default as Badge } from './Badge';
+export { default as Container } from './Container';
 export { default as FlexList } from './FlexList';
 export { default as GlobalStyle } from './GlobalStyle';
 export { default as GridList } from './GridList';

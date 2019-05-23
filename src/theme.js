@@ -9,6 +9,19 @@ const theme = {
   breakpoints: ['30em', '60em'],
   // http://tachyons.io/docs/layout/spacing/
   space: [0, '.25rem', '.5rem', '1rem', '2rem', '4rem', '8rem', '16rem'],
+  // http://tachyons.io/docs/layout/max-widths/
+  maxWidths: [
+    0,
+    '1rem',
+    '2rem',
+    '4rem',
+    '8rem',
+    '16rem',
+    '32rem',
+    '48rem',
+    '64rem',
+    '96rem',
+  ],
 
   // Typography.
   fonts: {

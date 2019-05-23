@@ -1,11 +1,11 @@
 export { Flex, Box, Heading, Text } from 'rebass';
 export {
+  Container,
   GlobalStyle,
   GridList,
   Head,
   Header,
   SmartLink,
-  NewTabLink,
   PostPreview,
   ProfilePreview,
 } from './components';
