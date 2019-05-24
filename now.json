@@ -1,14 +1,16 @@
 {
   "version": 2,
+  "name": "components",
   "alias": ["components.undataforum.org"],
   "github": {
     "autoAlias": false
   },
   "builds": [
     {
-      "src": "package.json",
+      "src": "packages/components/package.json",
       "use": "@now/static-build",
       "config": { "distDir": "storybook-static" }
     }
-  ]
+  ],
+  "routes": [{ "src": "/(.*)", "dest": "/packages/components/$1" }]
 }
