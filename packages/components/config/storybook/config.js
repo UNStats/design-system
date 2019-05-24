@@ -28,8 +28,8 @@ function loadStories() {
   let req = require.context('../../src/components', true, /\.stories\.js$/);
   req.keys().forEach(filename => req(filename));
 
-  // Tokens.
-  req = require.context('../../src/tokens', true, /\.stories\.js$/);
+  // Icons.
+  req = require.context('../../src/icons', true, /\.stories\.js$/);
   req.keys().forEach(filename => req(filename));
 }
 

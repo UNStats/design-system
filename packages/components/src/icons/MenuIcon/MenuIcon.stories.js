@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { Text } from 'rebass';
 import MenuIcon from './MenuIcon';
 
-storiesOf('Tokens/MenuIcon', module)
+storiesOf('Icons/MenuIcon', module)
   .add('display inline', () => (
     <Text m={2}>
       This icon <MenuIcon width={32} /> is rendered inline.

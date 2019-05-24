@@ -3,7 +3,7 @@ import { arrayOf, bool } from 'prop-types';
 import { display, maxHeight, overflow, position } from 'styled-system';
 import { Button, Flex, Text } from 'rebass';
 import { colorType, linkType } from '../../types';
-import { CloseIcon } from '../../tokens';
+import { CloseIcon } from '../../icons';
 import SmartLink from '../SmartLink';
 import { useHeaderContext } from './context';
 

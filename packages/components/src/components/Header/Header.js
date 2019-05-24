@@ -3,7 +3,7 @@ import { arrayOf, bool, func, string } from 'prop-types';
 import { display, height } from 'styled-system';
 import { Button, Flex, Heading } from 'rebass';
 import { colorType, linkType } from '../../types';
-import { MenuIcon } from '../../tokens';
+import { MenuIcon } from '../../icons';
 import Container from '../Container';
 import SmartLink from '../SmartLink';
 import { Context } from './context';
@@ -47,6 +47,7 @@ const Header = ({
                 height: 100%;
               "
               href="/"
+              color={color}
               mr={[2, 3]}
             >
               {logo()}
