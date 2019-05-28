@@ -27,19 +27,8 @@ const affiliationType = shape({
 
 export const alignType = oneOf(['left', 'center', 'right']);
 
-export const colorType = oneOf([
-  'text',
-  'background',
-  'primary',
-  'secondary',
-  'blue',
-  'green',
-  'red',
-  'yellow',
-]);
-
 export const badgeType = shape({
-  color: colorType,
+  color: string,
   text: string.isRequired,
   href: string,
 });

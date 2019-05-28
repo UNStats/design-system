@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { arrayOf, bool, func, string } from 'prop-types';
 import { display, height } from 'styled-system';
 import { Button, Flex, Heading } from 'rebass';
-import { colorType, linkType } from '../../types';
+import { linkType } from '../../types';
 import { MenuIcon } from '../../icons';
 import Container from '../Container';
 import SmartLink from '../SmartLink';
@@ -103,8 +103,8 @@ Header.propTypes = {
   title: string,
   links: arrayOf(linkType).isRequired,
   button: linkType,
-  color: colorType,
-  bg: colorType,
+  color: string,
+  bg: string,
   transparent: bool,
 };
 

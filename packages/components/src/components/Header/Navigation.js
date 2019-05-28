@@ -1,8 +1,8 @@
 import React from 'react';
-import { arrayOf, bool } from 'prop-types';
+import { arrayOf, bool, string } from 'prop-types';
 import { display, maxHeight, overflow, position } from 'styled-system';
 import { Button, Flex, Text } from 'rebass';
-import { colorType, linkType } from '../../types';
+import { linkType } from '../../types';
 import { CloseIcon } from '../../icons';
 import SmartLink from '../SmartLink';
 import { useHeaderContext } from './context';
@@ -112,8 +112,8 @@ Navigation.propTypes = {
   links: arrayOf(linkType).isRequired,
   button: linkType,
   open: bool.isRequired,
-  color: colorType.isRequired,
-  bg: colorType.isRequired,
+  color: string.isRequired,
+  bg: string.isRequired,
   transparent: bool.isRequired,
 };
 

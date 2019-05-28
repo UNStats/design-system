@@ -3,7 +3,6 @@ import { string } from 'prop-types';
 import { withTheme } from 'styled-components';
 import { Text } from 'rebass';
 import { borderRadius, themeGet } from 'styled-system';
-import { colorType } from '../../types';
 
 const UnlinkedBadge = ({ color, text, ...props }) => (
   <Text
@@ -26,7 +25,7 @@ const UnlinkedBadge = ({ color, text, ...props }) => (
 );
 
 UnlinkedBadge.propTypes = {
-  color: colorType,
+  color: string,
   text: string.isRequired,
 };
 
