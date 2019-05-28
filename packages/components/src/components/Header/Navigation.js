@@ -114,7 +114,11 @@ Navigation.propTypes = {
   open: bool.isRequired,
   color: string.isRequired,
   bg: string.isRequired,
-  transparent: bool.isRequired,
+  transparent: bool,
+};
+
+Navigation.defaultProps = {
+  transparent: false,
 };
 
 export default Navigation;
