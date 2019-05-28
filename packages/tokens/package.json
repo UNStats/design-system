@@ -2,7 +2,7 @@
   "private": true,
   "name": "@undataforum/tokens",
   "description": "Design tokens for United Nations World Data Forum websites.",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Thilo Maier <maier@un.org>",
   "license": "SEE LICENSE IN visual-guidelines.pdf",
   "main": "dist/index.js",
