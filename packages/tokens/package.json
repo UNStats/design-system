@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "@undataforum/tokens",
   "description": "Design tokens for United Nations World Data Forum websites.",
   "version": "0.1.0",
