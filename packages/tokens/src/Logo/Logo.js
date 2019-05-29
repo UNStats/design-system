@@ -1,10 +1,7 @@
 import React from 'react';
 import { bool } from 'prop-types';
-import styled from 'styled-components';
-import { height as systemHeight, space } from 'styled-system';
 import { responsiveType } from '../types';
-
-const Svg = styled.svg(space, systemHeight);
+import Svg from './Svg';
 
 const Logo = ({ monochrome, height, width, ...props }) => {
   // Branding colors.
@@ -201,6 +198,7 @@ const Logo = ({ monochrome, height, width, ...props }) => {
   );
 };
 
+// One of height or width is required.
 Logo.propTypes = {
   monochrome: bool,
   height: responsiveType,
