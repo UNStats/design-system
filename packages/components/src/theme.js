@@ -10,7 +10,7 @@ const theme = {
   // http://tachyons.io/docs/layout/spacing/
   space: [0, '.25rem', '.5rem', '1rem', '2rem', '4rem', '8rem', '16rem'],
   // http://tachyons.io/docs/layout/max-widths/
-  maxWidths: [
+  sizes: [
     0,
     '1rem',
     '2rem',

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { arrayOf, bool, func, string } from 'prop-types';
-import { display, height } from 'styled-system';
+import { layout } from 'styled-system';
 import { Button, Flex, Heading } from 'rebass';
 import { linkType } from '../../types';
 import { MenuIcon } from '../../icons';
@@ -30,7 +30,7 @@ const Header = ({
         <Flex
           as="header"
           css={`
-            ${height}
+            ${layout}
           `}
           flexDirection="row"
           justifyContent={justifyContent}
@@ -77,7 +77,7 @@ const Header = ({
           />
           <Button
             css={`
-              ${display}
+              ${layout}
               z-index: 1;
               -webkit-tap-highlight-color: transparent;
             `}

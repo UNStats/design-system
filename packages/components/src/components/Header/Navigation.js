@@ -1,6 +1,6 @@
 import React from 'react';
 import { arrayOf, bool, string } from 'prop-types';
-import { display, maxHeight, overflow, position } from 'styled-system';
+import { compose, layout, position } from 'styled-system';
 import { Button, Flex, Text } from 'rebass';
 import { linkType } from '../../types';
 import { CloseIcon } from '../../icons';
@@ -30,10 +30,10 @@ const Navigation = ({
       {...props}
       as="nav"
       css={`
-        ${display}
-        ${maxHeight}
-        ${overflow}
-        ${position}
+        ${compose(
+          layout,
+          position
+        )}
         top: 0;
         right: 0;
         bottom: 0;
@@ -52,7 +52,7 @@ const Navigation = ({
     >
       <Flex
         css={`
-          ${overflow}
+          ${layout}
           a:last-child {
             margin-right: 0;
           }
@@ -87,7 +87,7 @@ const Navigation = ({
       )}
       <Button
         css={`
-          ${display}
+          ${layout}
           position: absolute;
           top: 0;
           right: 0;

@@ -1,10 +1,15 @@
 import React from 'react';
 import { bool } from 'prop-types';
 import styled from 'styled-components';
-import { height, width, space } from 'styled-system';
+import { compose, layout, space } from 'styled-system';
 import { responsiveType } from '../types';
 
-const Box = styled.div(height, width, space);
+const Box = styled.div(
+  compose(
+    layout,
+    space
+  )
+);
 
 const Logo = ({ monochrome, height: h, width: w, ...props }) => {
   // Determine width and height props for <svg />.

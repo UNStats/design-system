@@ -1,6 +1,6 @@
 import React from 'react';
 import { arrayOf, func, object, oneOf } from 'prop-types';
-import { gridGap, gridTemplateColumns, justifyContent } from 'styled-system';
+import { compose, grid, flexbox } from 'styled-system';
 import { Box } from 'rebass';
 import { responsiveNumberType, responsiveStringType } from '../../types';
 
@@ -21,9 +21,10 @@ const GridList = ({
   <Box
     {...props}
     css={`
-      ${gridGap}
-      ${gridTemplateColumns}
-      ${justifyContent}
+      ${compose(
+        grid,
+        flexbox
+      )}
       display: grid;
     `}
     gridGap={gap}

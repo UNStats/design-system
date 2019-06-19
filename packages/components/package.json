@@ -27,16 +27,17 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
+    "@styled-system/theme-get": "^5.0.6",
     "prism-react-renderer": "^0.1.6",
     "prop-types": "^15.7.2",
     "react-helmet": "^5.2.0",
-    "rebass": "^3.0.1",
-    "styled-system": "^4.0.4"
+    "rebass": "^3.1.1",
+    "styled-system": "^5.0.6"
   },
   "peerDependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.3.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -50,11 +51,11 @@
     "@storybook/react": "^5.0.11",
     "@storybook/theming": "^5.0.11",
     "babel-loader": "^8.0.5",
-    "babel-plugin-styled-components": "^1.10.0",
+    "babel-plugin-styled-components": "^1.10.1",
     "cross-env": "^5.2.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.3.1"
   },
   "publishConfig": {
     "access": "public"

@@ -1,15 +1,15 @@
 import React from 'react';
 import { node, number } from 'prop-types';
-import { maxWidth } from 'styled-system';
+import { layout } from 'styled-system';
 import { Box } from 'rebass';
 
-const Container = ({ children, maxWidth: width, ...props }) => (
+const Container = ({ children, maxWidth, ...props }) => (
   <Box
     {...props}
     css={`
-      ${maxWidth}
+      ${layout}
     `}
-    maxWidth={width}
+    maxWidth={maxWidth}
     mx="auto"
   >
     {children}

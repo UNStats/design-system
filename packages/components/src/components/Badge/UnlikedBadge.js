@@ -2,13 +2,14 @@ import React from 'react';
 import { string } from 'prop-types';
 import { withTheme } from 'styled-components';
 import { Text } from 'rebass';
-import { borderRadius, themeGet } from 'styled-system';
+import { border } from 'styled-system';
+import { themeGet } from '@styled-system/theme-get';
 
 const UnlinkedBadge = ({ color, text, ...props }) => (
   <Text
     {...props}
     css={`
-      ${borderRadius}
+      ${border}
       display: inline-block;
     `}
     color={themeGet(`colors.modes.${color}.text`)(props)}
