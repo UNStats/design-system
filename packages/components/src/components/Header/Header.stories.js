@@ -1,13 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Box } from 'rebass';
+import { DummyLogo } from '../../helpers';
 import Header from './Header';
-import Logo from './Logo';
 
 storiesOf('Components/Header', module)
   .add('logo and title', () => (
     <Header
-      logo={() => <Logo />}
+      logo={() => <DummyLogo height="100%" />}
       title="Header Title"
       links={[
         {
@@ -28,7 +28,7 @@ storiesOf('Components/Header', module)
   ))
   .add('logo only', () => (
     <Header
-      logo={() => <Logo />}
+      logo={() => <DummyLogo height="100%" />}
       links={[
         {
           href: '/about',
@@ -88,7 +88,7 @@ storiesOf('Components/Header', module)
 
   .add('no button', () => (
     <Header
-      logo={() => <Logo />}
+      logo={() => <DummyLogo height="100%" />}
       title="Header Title"
       links={[
         {
@@ -108,7 +108,7 @@ storiesOf('Components/Header', module)
   ))
   .add('many links with button', () => (
     <Header
-      logo={() => <Logo />}
+      logo={() => <DummyLogo height="100%" />}
       title="Header Title"
       links={[
         { text: 'One', href: '/1' },
@@ -132,7 +132,7 @@ storiesOf('Components/Header', module)
   ))
   .add('many links without button', () => (
     <Header
-      logo={() => <Logo />}
+      logo={() => <DummyLogo height="100%" />}
       title="Header Title"
       links={[
         { text: 'One', href: '/1' },
@@ -155,7 +155,7 @@ storiesOf('Components/Header', module)
   ))
   .add('custom color', () => (
     <Header
-      logo={() => <Logo />}
+      logo={() => <DummyLogo height="100%" />}
       title="Header Title"
       links={[
         {
@@ -179,7 +179,7 @@ storiesOf('Components/Header', module)
   .add('transparent background', () => (
     <Box bg="gray">
       <Header
-        logo={() => <Logo />}
+        logo={() => <DummyLogo height="100%" />}
         title="Header Title"
         links={[
           {
