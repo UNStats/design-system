@@ -38,19 +38,28 @@ export const linkType = shape({
   href: string.isRequired,
 });
 
-export const profileType = shape({
-  avatar: func.isRequired,
-  name: string,
-  affiliation: affiliationType,
-  badges: arrayOf(badgeType),
-  href: string,
-});
+export const modeType = oneOf([
+  'primary',
+  'secondary',
+  'blue',
+  'green',
+  'red',
+  'yellow',
+]);
 
 export const postType = shape({
   title: string.isRequired,
   date: string.isRequired,
   authors: func.isRequired,
   lead: string,
+  href: string,
+});
+
+export const profileType = shape({
+  avatar: func.isRequired,
+  name: string,
+  affiliation: affiliationType,
+  badges: arrayOf(badgeType),
   href: string,
 });
 
