@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { arrayOf, bool, func, string } from 'prop-types';
 import { layout } from 'styled-system';
 import { Button, Flex, Heading } from 'rebass';
-import { linkType } from '../../types';
+import { linkType, responsiveType } from '../../types';
 import { MenuIcon } from '../../icons';
 import Container from '../Container';
 import SmartLink from '../SmartLink';
@@ -14,6 +14,7 @@ const Header = ({
   title,
   links,
   button,
+  height,
   color,
   bg,
   transparent,
@@ -35,7 +36,7 @@ const Header = ({
           flexDirection="row"
           justifyContent={justifyContent}
           alignItems="center"
-          height={[64, 80, 96]}
+          height={height}
           width="100%"
           color={color}
           bg={background}
@@ -103,6 +104,7 @@ Header.propTypes = {
   title: string,
   links: arrayOf(linkType).isRequired,
   button: linkType,
+  height: responsiveType.isRequired,
   color: string,
   bg: string,
   transparent: bool,

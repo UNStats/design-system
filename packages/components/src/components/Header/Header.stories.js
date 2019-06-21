@@ -24,6 +24,7 @@ storiesOf('Components/Header', module)
         },
       ]}
       button={{ text: 'Register', href: '/register' }}
+      height={[64, 80, 96]}
     />
   ))
   .add('logo only', () => (
@@ -44,6 +45,7 @@ storiesOf('Components/Header', module)
         },
       ]}
       button={{ text: 'Register', href: '/register' }}
+      height={[64, 80, 96]}
     />
   ))
   .add('title only', () => (
@@ -64,6 +66,7 @@ storiesOf('Components/Header', module)
         },
       ]}
       button={{ text: 'Register', href: '/register' }}
+      height={[64, 80, 96]}
     />
   ))
   .add('no logo and no title', () => (
@@ -83,9 +86,9 @@ storiesOf('Components/Header', module)
         },
       ]}
       button={{ text: 'Register', href: '/register' }}
+      height={[64, 80, 96]}
     />
   ))
-
   .add('no button', () => (
     <Header
       logo={() => <DummyLogo height="100%" />}
@@ -104,6 +107,7 @@ storiesOf('Components/Header', module)
           text: '2020',
         },
       ]}
+      height={[64, 80, 96]}
     />
   ))
   .add('many links with button', () => (
@@ -128,6 +132,7 @@ storiesOf('Components/Header', module)
         { text: 'Fifteen', href: '/15' },
       ]}
       button={{ text: 'Register', href: '/register' }}
+      height={[64, 80, 96]}
     />
   ))
   .add('many links without button', () => (
@@ -151,6 +156,7 @@ storiesOf('Components/Header', module)
         { text: 'Fourteen', href: '/14' },
         { text: 'Fifteen', href: '/15' },
       ]}
+      height={[64, 80, 96]}
     />
   ))
   .add('custom color', () => (
@@ -172,6 +178,7 @@ storiesOf('Components/Header', module)
         },
       ]}
       button={{ text: 'Register', href: '/register' }}
+      height={[64, 80, 96]}
       color="background"
       bg="green"
     />
@@ -196,7 +203,33 @@ storiesOf('Components/Header', module)
           },
         ]}
         button={{ text: 'Register', href: '/register' }}
+        height={[64, 80, 96]}
         transparent
+      />
+    </Box>
+  ))
+  .add('adjust height', () => (
+    <Box>
+      <Header
+        logo={() => <DummyLogo height="100%" />}
+        links={[
+          {
+            href: '/about',
+            text: 'About',
+          },
+          {
+            href: '/blog',
+            text: 'Blog',
+          },
+          {
+            href: '/2020',
+            text: '2020',
+          },
+        ]}
+        button={{ text: 'Register', href: '/register' }}
+        height={[64, 128, 256]}
+        color="background"
+        bg="red"
       />
     </Box>
   ));
