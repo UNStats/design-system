@@ -64,6 +64,20 @@ const Navigation = ({
         my={0}
         overflow="auto"
       >
+        <SmartLink
+          css={`
+            ${layout}
+          `}
+          display={['flex', 'none']}
+          key="/"
+          href="/"
+          mb={[3, 0]}
+          mr={[0, 3, 4]}
+        >
+          <Text color={color} fontSize={[4, 3, 4]} fontWeight="bold">
+            Home
+          </Text>
+        </SmartLink>
         {links.map(({ href, text }) => (
           <SmartLink key={href} href={href} mb={[3, 0]} mr={[0, 3, 4]}>
             <Text color={color} fontSize={[4, 3, 4]} fontWeight="bold">
