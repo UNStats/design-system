@@ -1,4 +1,12 @@
 {
+  "command": {
+    "publish": {
+      "allowBranch": "master",
+      "conventionalCommits": true,
+      "createRelease": "github",
+      "message": "chore(release): Publish"
+    }
+  },
   "packages": ["packages/*"],
   "npmClient": "yarn",
   "useWorkspaces": true,
