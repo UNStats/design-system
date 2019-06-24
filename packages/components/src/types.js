@@ -27,12 +27,6 @@ const affiliationType = shape({
 
 export const alignType = oneOf(['left', 'center', 'right']);
 
-export const badgeType = shape({
-  color: string,
-  text: string.isRequired,
-  href: string,
-});
-
 export const linkType = shape({
   text: string.isRequired,
   href: string.isRequired,
@@ -59,7 +53,12 @@ export const profileType = shape({
   avatar: func.isRequired,
   name: string,
   affiliation: affiliationType,
-  badges: arrayOf(badgeType),
+  badges: arrayOf(
+    shape({
+      link: linkType.isRequired,
+      mode: modeType,
+    })
+  ),
   href: string,
 });
 

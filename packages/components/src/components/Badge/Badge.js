@@ -1,21 +1,39 @@
 import React from 'react';
-import { badgeType } from '../../types';
+import { Text } from 'rebass';
+import { border } from 'styled-system';
+import { themeGet } from '@styled-system/theme-get';
+import { withTheme } from 'styled-components';
 import SmartLink from '../SmartLink';
-import UnlinkedBadge from './UnlikedBadge';
+import { linkType, modeType } from '../../types';
 
-const Badge = ({ badge, ...props }) => {
-  if (badge.href) {
-    return (
-      <SmartLink {...props} css="display: inline-block;" href={badge.href}>
-        <UnlinkedBadge color={badge.color} text={badge.text} />
-      </SmartLink>
-    );
-  }
-  return <UnlinkedBadge {...props} color={badge.color} text={badge.text} />;
-};
+const Badge = ({ link, mode, ...props }) => (
+  <SmartLink {...props} css="display: inline-block;" href={link.href}>
+    <Text
+      css={`
+        ${border}
+        display: inline-block;
+      `}
+      color={themeGet(`colors.modes.${mode}.text`)(props)}
+      bg={themeGet(`colors.modes.${mode}.background`)(props)}
+      borderRadius="pill"
+      fontFamily="body"
+      fontSize={0}
+      fontWeight="bold"
+      px={2}
+      py={1}
+    >
+      {link.text}
+    </Text>
+  </SmartLink>
+);
 
 Badge.propTypes = {
-  badge: badgeType.isRequired,
+  link: linkType.isRequired,
+  mode: modeType,
 };
 
-export default Badge;
+Badge.defaultProps = {
+  mode: 'primary',
+};
+
+export default withTheme(Badge);

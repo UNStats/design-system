@@ -536,59 +536,119 @@ storiesOf('Components/FlexList', module)
   ))
   .add('badges', () => (
     <FlexList
-      render={badge => <Badge badge={badge} key={badge.text} m={1} />}
+      render={badge => (
+        <Badge
+          link={badge.link}
+          mode={badge.mode}
+          key={badge.link.text}
+          m={1}
+        />
+      )}
       values={[
-        { text: 'Design Engineer', href: '/design-engineer', color: 'red' },
-        { text: 'Recruiter', href: '/recruiter', color: 'green' },
-        { text: 'Teacher', href: '/teacher', color: 'yellow' },
-        { text: 'Environmental Specialist', href: '/environmental-specialist' },
+        {
+          link: { text: 'Design Engineer', href: '/design-engineer' },
+          mode: 'red',
+        },
+        { link: { text: 'Recruiter', href: '/recruiter' }, mode: 'green' },
+        { link: { text: 'Teacher', href: '/teacher' }, mode: 'yellow' },
+        {
+          link: {
+            text: 'Environmental Specialist',
+            href: '/environmental-specialist',
+          },
+        },
       ]}
     />
   ))
   .add('many badges', () => (
     <FlexList
-      render={badge => <Badge badge={badge} key={badge.text} m={1} />}
+      render={badge => (
+        <Badge
+          link={badge.link}
+          mode={badge.mode}
+          key={badge.link.text}
+          m={1}
+        />
+      )}
       values={[
-        { text: 'Design Engineer', href: '/design-engineer', color: 'red' },
-        { text: 'Recruiter', href: '/recruiter', color: 'green' },
-        { text: 'Teacher', href: '/teacher', color: 'yellow' },
-        { text: 'Environmental Specialist', href: '/environmental-specialist' },
         {
-          text: 'Nuclear Power Engineer',
-          href: '/nuclear-power-engineer',
-          color: 'red',
+          link: {
+            text: 'Design Engineer',
+            href: '/design-engineer',
+          },
         },
-        { text: 'Cost Accountant', href: '/cost-accountant', color: 'green' },
-        { text: 'VP Marketing', href: '/vp-marketing', color: 'yellow' },
-        { text: 'Automation Specialist', href: '/automation-specialist' },
+        { link: { text: 'Recruiter', href: '/recruiter' }, mode: 'secondary' },
+        { link: { text: 'Teacher', href: '/teacher' }, mode: 'blue' },
         {
-          text: 'Analog Circuit Design Manager',
-          href: '/analog-circuit-design-manager',
-          color: 'red',
+          link: {
+            text: 'Environmental Specialist',
+            href: '/environmental-specialist',
+          },
+          mode: 'green',
         },
         {
-          text: 'Senior Cost Accountant',
-          href: '/senior-cost-accountant',
-          color: 'green',
+          link: {
+            text: 'Nuclear Power Engineer',
+            href: '/nuclear-power-engineer',
+          },
+          mode: 'red',
         },
         {
-          text: 'Desktop Support Technician',
-          href: '/desktop-tupport-technician',
-          color: 'yellow',
+          link: { text: 'Cost Accountant', href: '/cost-accountant' },
+          mode: 'yellow',
         },
-        { text: 'Web Developer', href: '/web-developer' },
-        { text: 'Technical Writer', href: '/technical-writer', color: 'red' },
+        { link: { text: 'VP Marketing', href: '/vp-marketing' } },
         {
-          text: 'Database Administrator',
-          href: 'database-administrator',
-          color: 'green',
+          link: {
+            text: 'Automation Specialist',
+            href: '/automation-specialist',
+          },
+          mode: 'secondary',
         },
         {
-          text: 'Systems Administrator',
-          href: '/systems-administrator',
-          color: 'yellow',
+          link: {
+            text: 'Analog Circuit Design Manager',
+            href: '/analog-circuit-design-manager',
+          },
+          mode: 'blue',
         },
-        { text: 'Assistant Manager', href: '/assistant-manager' },
+        {
+          link: {
+            text: 'Senior Cost Accountant',
+            href: '/senior-cost-accountant',
+          },
+          mode: 'green',
+        },
+        {
+          link: {
+            text: 'Desktop Support Technician',
+            href: '/desktop-tupport-technician',
+          },
+          mode: 'red',
+        },
+        {
+          link: { text: 'Web Developer', href: '/web-developer' },
+          mode: 'yellow',
+        },
+        { link: { text: 'Technical Writer', href: '/technical-writer' } },
+        {
+          link: {
+            text: 'Database Administrator',
+            href: 'database-administrator',
+          },
+          mode: 'secondary',
+        },
+        {
+          link: {
+            text: 'Systems Administrator',
+            href: '/systems-administrator',
+          },
+          mode: 'blue',
+        },
+        {
+          link: { text: 'Assistant Manager', href: '/assistant-manager' },
+          mode: 'green',
+        },
       ]}
     />
   ));

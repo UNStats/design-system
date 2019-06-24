@@ -1,22 +1,30 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, object } from '@storybook/addon-knobs';
+import { withKnobs, select } from '@storybook/addon-knobs';
 import Badge from './Badge';
+
+export const modes = {
+  primary: 'primary',
+  secondary: 'secondary',
+  blue: 'blue',
+  green: 'green',
+  red: 'red',
+  yellow: 'yellow',
+};
 
 storiesOf('Components/Badge', module)
   .addDecorator(withKnobs)
-  .add('unlinked', () => (
-    <Badge badge={object('badge', { text: 'Unlinked Badge' })} m={2} />
-  ))
-  .add('linked', () => (
+  .add('default mode', () => (
     <Badge
-      badge={object('badge', { text: 'Linked Badge', href: '/linked-badge' })}
+      link={{ text: 'Default mode', href: '/default-mode' }}
+      mode={select('mode', modes, 'primary')}
       m={2}
     />
   ))
-  .add('custom color', () => (
+  .add('custom mode', () => (
     <Badge
-      badge={object('badge', { color: 'red', text: 'Custom Color' })}
+      link={{ text: 'Custom mode', href: '/custom-mode' }}
+      mode={select('mode', modes, 'yellow')}
       m={2}
     />
   ));

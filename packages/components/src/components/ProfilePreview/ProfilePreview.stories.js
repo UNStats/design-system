@@ -24,11 +24,16 @@ storiesOf('Components/ProfilePreview', module)
           organization: 'Schuster-Senger',
         },
         badges: [
-          { text: 'Committee Member', color: 'red', href: '/committee' },
           {
-            text: 'Keynote Speaker',
-            color: 'yellow',
-            href: '/keynote-speakers',
+            link: { text: 'Committee Member', href: '/committee' },
+            mode: 'red',
+          },
+          {
+            link: {
+              text: 'Keynote Speaker',
+              href: '/keynote-speakers',
+            },
+            mode: 'yellow',
           },
         ],
       }}
@@ -55,8 +60,17 @@ storiesOf('Components/ProfilePreview', module)
           organization: 'Ritchie Inc',
         },
         badges: [
-          { text: 'Committee Member', color: 'red', href: '/committee' },
-          { text: 'Keynote Speaker', color: 'yellow', href: '/keynotes' },
+          {
+            link: { text: 'Committee Member', href: '/committee' },
+            mode: 'red',
+          },
+          {
+            link: {
+              text: 'Keynote Speaker',
+              href: '/keynotes',
+            },
+            mode: 'yellow',
+          },
         ],
       }}
       align="left"
@@ -83,8 +97,14 @@ storiesOf('Components/ProfilePreview', module)
           organization: 'Block, Bruen and Gerlach',
         },
         badges: [
-          { text: 'Committee Member', color: 'red', href: '/committee' },
-          { text: 'Keynote Speaker', color: 'yellow', href: '/keynotes' },
+          {
+            link: { text: 'Committee Member', href: '/committee' },
+            mode: 'red',
+          },
+          {
+            link: { text: 'Keynote Speaker', href: '/keynotes' },
+            mode: 'yellow',
+          },
         ],
       }}
       align="right"
@@ -190,11 +210,16 @@ storiesOf('Components/ProfilePreview', module)
             'Really really really really really really really really really really long organization',
         },
         badges: [
-          { text: 'Committee Member', color: 'red', href: '/committee' },
           {
-            text: 'Keynote Speaker',
-            color: 'yellow',
-            href: '/keynote-speakers',
+            link: { text: 'Committee Member', href: '/committee' },
+            mode: 'red',
+          },
+          {
+            link: {
+              text: 'Keynote Speaker',
+              href: '/keynote-speakers',
+            },
+            mode: 'yellow',
           },
         ],
       }}
