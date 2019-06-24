@@ -46,6 +46,7 @@ export const postType = shape({
 
 export const profileType = shape({
   avatar: func.isRequired,
+  title: string,
   name: string,
   jobtitle: string,
   organization: string,
