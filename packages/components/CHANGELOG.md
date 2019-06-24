@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.35.0](https://github.com/undataforum/components/compare/@undataforum/components@0.34.0...@undataforum/components@0.35.0) (2019-06-24)
+
+- Make jobtitle & organization optional (closes #43) ([ca6b038](https://github.com/undataforum/components/commit/ca6b038)), closes [#43](https://github.com/undataforum/components/issues/43)
+
+### Bug Fixes
+
+- Remove Navigation stories (closes [#38](https://github.com/undataforum/components/issues/38)) ([d96daa8](https://github.com/undataforum/components/commit/d96daa8))
+
+### Code Refactoring
+
+- Change API of Badge (closes [#51](https://github.com/undataforum/components/issues/51)) ([ff2b321](https://github.com/undataforum/components/commit/ff2b321))
+
+### Features
+
+- Add title prop to ProfilePreview ([2789538](https://github.com/undataforum/components/commit/2789538)), closes [#39](https://github.com/undataforum/components/issues/39)
+
+### BREAKING CHANGES
+
+- props change
+- property names and types change
+
 # [0.34.0](https://github.com/undataforum/components/compare/@undataforum/components@0.33.1...@undataforum/components@0.34.0) (2019-06-21)
 
 ### Bug Fixes
