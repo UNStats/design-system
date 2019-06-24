@@ -43,22 +43,21 @@ const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => (
     >
       {profile.name}
     </Text>
-    {profile.affiliation && (
-      <Flex flexDirection="column" mt={3}>
-        <Text color="text" fontFamily="body" fontSize={2} textAlign={align}>
-          {profile.affiliation.jobtitle}
-        </Text>
-        <Text
-          color="text"
-          fontFamily="body"
-          fontSize={2}
-          fontWeight="bold"
-          textAlign={align}
-          mt={1}
-        >
-          {profile.affiliation.organization}
-        </Text>
-      </Flex>
+    {profile.jobtitle && (
+      <Text color="text" fontFamily="body" fontSize={2} textAlign={align}>
+        {profile.jobtitle}
+      </Text>
+    )}
+    {profile.organization && (
+      <Text
+        color="text"
+        fontFamily="body"
+        fontSize={2}
+        fontWeight="bold"
+        textAlign={align}
+      >
+        {profile.organization}
+      </Text>
     )}
     {profile.badges && (
       <FlexList

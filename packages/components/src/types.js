@@ -20,11 +20,6 @@ export const responsiveType = oneOfType([
 
 // Specific types.
 
-const affiliationType = shape({
-  jobtitle: string.isRequired,
-  organization: string.isRequired,
-});
-
 export const alignType = oneOf(['left', 'center', 'right']);
 
 export const linkType = shape({
@@ -52,7 +47,8 @@ export const postType = shape({
 export const profileType = shape({
   avatar: func.isRequired,
   name: string,
-  affiliation: affiliationType,
+  jobtitle: string,
+  organization: string,
   badges: arrayOf(
     shape({
       link: linkType.isRequired,

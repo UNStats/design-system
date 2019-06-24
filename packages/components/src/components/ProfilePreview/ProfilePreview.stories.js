@@ -19,10 +19,106 @@ storiesOf('Components/ProfilePreview', module)
           );
         },
         name: 'Nance MacFadin',
-        affiliation: {
-          jobtitle: 'Help Desk Operator',
-          organization: 'Schuster-Senger',
+        jobtitle: 'Help Desk Operator',
+        organization: 'Schuster-Senger',
+        badges: [
+          {
+            link: { text: 'Committee Member', href: '/committee' },
+            mode: 'red',
+          },
+          {
+            link: {
+              text: 'Keynote Speaker',
+              href: '/keynote-speakers',
+            },
+            mode: 'yellow',
+          },
+        ],
+      }}
+      m={2}
+    />
+  ))
+  .add('no jobtitle', () => (
+    <ProfilePreview
+      profile={{
+        avatar: function avatar() {
+          return (
+            <Image
+              alt="Nance MacFadin"
+              borderRadius="circle"
+              height={128}
+              width={128}
+              src="/avatar0.png"
+            />
+          );
         },
+        name: 'Nance MacFadin',
+        organization: 'Schuster-Senger',
+        badges: [
+          {
+            link: { text: 'Committee Member', href: '/committee' },
+            mode: 'red',
+          },
+          {
+            link: {
+              text: 'Keynote Speaker',
+              href: '/keynote-speakers',
+            },
+            mode: 'yellow',
+          },
+        ],
+      }}
+      m={2}
+    />
+  ))
+  .add('no organization', () => (
+    <ProfilePreview
+      profile={{
+        avatar: function avatar() {
+          return (
+            <Image
+              alt="Nance MacFadin"
+              borderRadius="circle"
+              height={128}
+              width={128}
+              src="/avatar0.png"
+            />
+          );
+        },
+        name: 'Nance MacFadin',
+        jobtitle: 'Help Desk Operator',
+        badges: [
+          {
+            link: { text: 'Committee Member', href: '/committee' },
+            mode: 'red',
+          },
+          {
+            link: {
+              text: 'Keynote Speaker',
+              href: '/keynote-speakers',
+            },
+            mode: 'yellow',
+          },
+        ],
+      }}
+      m={2}
+    />
+  ))
+  .add('no jobtitle and no organization', () => (
+    <ProfilePreview
+      profile={{
+        avatar: function avatar() {
+          return (
+            <Image
+              alt="Nance MacFadin"
+              borderRadius="circle"
+              height={128}
+              width={128}
+              src="/avatar0.png"
+            />
+          );
+        },
+        name: 'Nance MacFadin',
         badges: [
           {
             link: { text: 'Committee Member', href: '/committee' },
@@ -55,10 +151,8 @@ storiesOf('Components/ProfilePreview', module)
           );
         },
         name: 'Clerc Edis',
-        affiliation: {
-          jobtitle: 'Staff Scientist',
-          organization: 'Ritchie Inc',
-        },
+        jobtitle: 'Staff Scientist',
+        organization: 'Ritchie Inc',
         badges: [
           {
             link: { text: 'Committee Member', href: '/committee' },
@@ -92,10 +186,8 @@ storiesOf('Components/ProfilePreview', module)
           );
         },
         name: 'Clifford Skipperbottom',
-        affiliation: {
-          jobtitle: 'Senior Financial Analyst',
-          organization: 'Block, Bruen and Gerlach',
-        },
+        jobtitle: 'Senior Financial Analyst',
+        organization: 'Block, Bruen and Gerlach',
         badges: [
           {
             link: { text: 'Committee Member', href: '/committee' },
@@ -203,12 +295,10 @@ storiesOf('Components/ProfilePreview', module)
         },
         name:
           'Really really really really really really really really really really long name',
-        affiliation: {
-          jobtitle:
-            'Really really really really really really really really really really long jobtitle',
-          organization:
-            'Really really really really really really really really really really long organization',
-        },
+        jobtitle:
+          'Really really really really really really really really really really long jobtitle',
+        organization:
+          'Really really really really really really really really really really long organization',
         badges: [
           {
             link: { text: 'Committee Member', href: '/committee' },
