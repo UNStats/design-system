@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.35.1](https://github.com/undataforum/components/compare/@undataforum/components@0.35.0...@undataforum/components@0.35.1) (2019-06-26)
+
+### Bug Fixes
+
+- Export Footer ([756c447](https://github.com/undataforum/components/commit/756c447))
+
 # [0.35.0](https://github.com/undataforum/components/compare/@undataforum/components@0.34.0...@undataforum/components@0.35.0) (2019-06-24)
 
 - Make jobtitle & organization optional (closes #43) ([ca6b038](https://github.com/undataforum/components/commit/ca6b038)), closes [#43](https://github.com/undataforum/components/issues/43)
