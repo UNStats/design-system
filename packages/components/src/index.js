@@ -5,6 +5,7 @@ export {
   GridList,
   Head,
   Header,
+  Footer,
   SmartLink,
   PostPreview,
   ProfilePreview,
