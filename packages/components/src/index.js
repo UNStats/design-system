@@ -1,6 +1,7 @@
 export { Flex, Box, Heading, Text } from 'rebass';
 export {
   Container,
+  FlexList,
   GlobalStyle,
   GridList,
   Head,
