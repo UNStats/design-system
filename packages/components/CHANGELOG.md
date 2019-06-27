@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.35.2](https://github.com/undataforum/components/compare/@undataforum/components@0.35.1...@undataforum/components@0.35.2) (2019-06-27)
+
+### Bug Fixes
+
+- Container does not expand within Flexbox ([8d95e6e](https://github.com/undataforum/components/commit/8d95e6e)), closes [#55](https://github.com/undataforum/components/issues/55)
+- Export social icons ([617b6fe](https://github.com/undataforum/components/commit/617b6fe))
+
 ## [0.35.1](https://github.com/undataforum/components/compare/@undataforum/components@0.35.0...@undataforum/components@0.35.1) (2019-06-26)
 
 ### Bug Fixes
