@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.36.1](https://github.com/undataforum/components/compare/@undataforum/components@0.36.0...@undataforum/components@0.36.1) (2019-06-27)
+
+### Bug Fixes
+
+- Console errors in Footer ([5bfc81d](https://github.com/undataforum/components/commit/5bfc81d)), closes [#58](https://github.com/undataforum/components/issues/58)
+
 # [0.36.0](https://github.com/undataforum/components/compare/@undataforum/components@0.35.2...@undataforum/components@0.36.0) (2019-06-27)
 
 ### Features
