@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.36.0](https://github.com/undataforum/components/compare/@undataforum/components@0.35.2...@undataforum/components@0.36.0) (2019-06-27)
+
+### Features
+
+- Export FlexList ([c74060c](https://github.com/undataforum/components/commit/c74060c))
+
 ## [0.35.2](https://github.com/undataforum/components/compare/@undataforum/components@0.35.1...@undataforum/components@0.35.2) (2019-06-27)
 
 ### Bug Fixes
