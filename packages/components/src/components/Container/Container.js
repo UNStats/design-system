@@ -8,6 +8,7 @@ const Container = ({ children, maxWidth, ...props }) => (
     {...props}
     css={`
       ${layout}
+      width: 100%;
     `}
     maxWidth={maxWidth}
     mx="auto"
