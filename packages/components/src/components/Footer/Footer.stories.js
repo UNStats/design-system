@@ -17,13 +17,17 @@ const modes = {
 };
 
 const renderGitHubIcon = () => (
-  <SmartLink href="https://github.com/UNDataForum" color="inherit">
+  <SmartLink href="https://github.com/UNDataForum" color="inherit" key="github">
     <GitHubIcon width={[32, 48]} p={[1, 2]} />
   </SmartLink>
 );
 
 const renderTwitterIcon = () => (
-  <SmartLink href="https://twitter.com/UNDataForum" color="inherit">
+  <SmartLink
+    href="https://twitter.com/UNDataForum"
+    color="inherit"
+    key="twitter"
+  >
     <TwitterIcon width={[32, 48]} p={[1, 2]} />
   </SmartLink>
 );
@@ -36,17 +40,16 @@ storiesOf('Components/Footer', module)
       title="Footer Title"
       social={() => (
         <FlexList
-          render={renderIcon => renderIcon()}
-          values={[renderTwitterIcon, renderGitHubIcon]}
+          render={icon => icon.render()}
+          values={[{ render: renderTwitterIcon }, { render: renderGitHubIcon }]}
           mb={[1, 2]}
         />
       )}
       links={[
         { text: 'Contact', href: '/contact' },
         { text: 'Copyright', href: '/copyright' },
-        { text: 'Fraud Alert', href: '/fraud-alert' },
-        { text: 'Privacy Notice', href: '/privacy-notice' },
-        { text: 'Terms of Use', href: '/terms-of-use' },
+        { text: 'Privacy Notice', href: '/privacy' },
+        { text: 'Terms of Use', href: '/terms' },
       ]}
       mode={select('mode', modes, 'primary')}
     />

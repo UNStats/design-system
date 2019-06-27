@@ -44,7 +44,7 @@ const Footer = ({ logo, title, social, links, mode, ...props }) => {
             <SmartLink
               color={color}
               href={link.href}
-              key={link}
+              key={link.href}
               py={[1, 2]}
               px={[2, 3]}
             >
