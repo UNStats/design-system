@@ -10,4 +10,5 @@ export {
   PostPreview,
   ProfilePreview,
 } from './components';
+export { GitHubIcon, TwitterIcon } from './icons';
 export { default as theme } from './theme';
