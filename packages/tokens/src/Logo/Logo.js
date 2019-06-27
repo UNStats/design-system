@@ -18,7 +18,7 @@ const Logo = ({ monochrome, height, width, ...props }) => {
 
   // Branding colors.
   const unBlue = monochrome ? 'currentColor' : '#0098DD';
-  const forumBlue = monochrome ? 'curentColor' : '#00609D';
+  const forumBlue = monochrome ? 'currentColor' : '#00609D';
 
   // Shapes colors.
   const blue = monochrome ? 'currentColor' : '#0E6A9C';
