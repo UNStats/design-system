@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.37.0](https://github.com/undataforum/components/compare/@undataforum/components@0.36.2...@undataforum/components@0.37.0) (2019-07-19)
+
+### Features
+
+- **components:** Export DummyLogo ([9e948d1](https://github.com/undataforum/components/commit/9e948d1)), closes [#65](https://github.com/undataforum/components/issues/65)
+
 ## [0.36.2](https://github.com/undataforum/components/compare/@undataforum/components@0.36.1...@undataforum/components@0.36.2) (2019-06-27)
 
 **Note:** Version bump only for package @undataforum/components
