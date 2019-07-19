@@ -13,3 +13,4 @@ export {
 } from './components';
 export { GitHubIcon, TwitterIcon } from './icons';
 export { default as theme } from './theme';
+export { DummyLogo } from './helpers';
