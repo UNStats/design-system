@@ -12,7 +12,11 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/undataforum/components.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/undataforum/components.git",
+    "directory": "packages/components"
+  },
   "keywords": [
     "react",
     "components",
@@ -58,6 +62,6 @@
     "styled-components": "^4.3.1"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com/"
   }
 }

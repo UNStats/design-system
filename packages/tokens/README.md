@@ -8,7 +8,13 @@ This package is not licensed under the MIT license. Read the license information
 
 ## Install
 
-In order to use package `@undataforum/tokens` in your project run
+In order to use package `@undataforum/tokens` in your project create a file `.npmrc` in your project root and add the following line:
+
+```
+@undataforum:registry=https://npm.pkg.github.com/
+```
+
+Then run
 
 ```bash
 yarn add @undataforum/tokens
