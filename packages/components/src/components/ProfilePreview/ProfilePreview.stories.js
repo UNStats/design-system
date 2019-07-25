@@ -18,7 +18,7 @@ storiesOf('Components/ProfilePreview', module)
             />
           );
         },
-        title: 'His Excellency',
+        honorific: 'His Excellency',
         name: 'Nance MacFadin',
         jobtitle: 'Help Desk Operator',
         organization: 'Schuster-Senger',
