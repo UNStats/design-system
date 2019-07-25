@@ -4,7 +4,6 @@ export { default as FlexList } from './FlexList';
 export { default as Footer } from './Footer';
 export { default as GlobalStyle } from './GlobalStyle';
 export { default as GridList } from './GridList';
-export { default as Head } from './Head';
 export { default as Header } from './Header';
 export { default as SmartLink } from './SmartLink';
 export { default as NewTabLink } from './NewTabLink';

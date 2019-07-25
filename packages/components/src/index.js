@@ -4,7 +4,6 @@ export {
   FlexList,
   GlobalStyle,
   GridList,
-  Head,
   Header,
   Footer,
   SmartLink,
