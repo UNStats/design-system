@@ -2,8 +2,6 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { bool, string } from 'prop-types';
 
-/* eslint-disable jsx-a11y/control-has-associated-label */
-
 const Head = ({ title, description, href, noRobots, url }) => (
   <Helmet title={title}>
     <meta property="og:title" content={title} />
@@ -14,8 +12,6 @@ const Head = ({ title, description, href, noRobots, url }) => (
     <link href={href} rel="stylesheet" />
   </Helmet>
 );
-
-/* eslint-enable jsx-a11y/control-has-associated-label */
 
 Head.propTypes = {
   title: string.isRequired,

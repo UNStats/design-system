@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "clean": "rm -rf ./node_modules && yarn workspaces run clean",
+    "purge": "rm -rf ./node_modules && yarn workspaces run purge",
     "lint": "eslint . --ignore-path .gitignore",
     "format": "pretty-quick"
   },
@@ -20,8 +20,8 @@
     "packages/*"
   ],
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-plugin-shopify": "^29.0.2",
+    "eslint": "^6.1.0",
+    "eslint-plugin-shopify": "^30.0.1",
     "husky": "^3.0.1",
     "lerna": "^3.16.0",
     "lint-staged": "^9.2.0",
