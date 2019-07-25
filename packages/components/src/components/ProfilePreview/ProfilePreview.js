@@ -33,7 +33,7 @@ const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => (
   <Flex {...props} flexDirection="column" alignItems={style[align].alignItems}>
     {profile.avatar()}
     {profile.honorific && (
-      <Text fontSize={1} textAlign={align}>
+      <Text color="text" fontSize={1} textAlign={align}>
         {profile.honorific}
       </Text>
     )}
