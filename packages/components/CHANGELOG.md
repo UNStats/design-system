@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.38.0](https://github.com/undataforum/components/compare/@undataforum/components@0.37.0...@undataforum/components@0.38.0) (2019-07-25)
+
+# 0.37.0 (2019-07-25)
+
+### Bug Fixes
+
+- Wrong color for honorific in ProfilePreview ([9fd39fa](https://github.com/undataforum/components/commit/9fd39fa)), closes [#69](https://github.com/undataforum/components/issues/69)
+
+### Code Refactoring
+
+- Remove Head component ([1ff6c2c](https://github.com/undataforum/components/commit/1ff6c2c)), closes [#71](https://github.com/undataforum/components/issues/71)
+- Rename title prop to honorific ([2bb0554](https://github.com/undataforum/components/commit/2bb0554)), closes [#68](https://github.com/undataforum/components/issues/68)
+
+### BREAKING CHANGES
+
+- Head component removed
+- ProfilePreview profileType has changed
+
 # [0.37.0](https://github.com/undataforum/components/compare/@undataforum/components@0.36.2...@undataforum/components@0.37.0) (2019-07-19)
 
 ### Features
