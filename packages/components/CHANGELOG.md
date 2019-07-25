@@ -5,8 +5,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.38.0](https://github.com/undataforum/components/compare/@undataforum/components@0.37.0...@undataforum/components@0.38.0) (2019-07-25)
 
-# 0.37.0 (2019-07-25)
-
 ### Bug Fixes
 
 - Wrong color for honorific in ProfilePreview ([9fd39fa](https://github.com/undataforum/components/commit/9fd39fa)), closes [#69](https://github.com/undataforum/components/issues/69)
