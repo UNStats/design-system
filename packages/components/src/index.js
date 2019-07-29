@@ -6,9 +6,10 @@ export {
   GridList,
   Header,
   Footer,
-  SmartLink,
   PostPreview,
   ProfilePreview,
+  SmartLink,
+  SocialIcon,
 } from './components';
 export { GitHubIcon, TwitterIcon } from './icons';
 export { default as theme } from './theme';
