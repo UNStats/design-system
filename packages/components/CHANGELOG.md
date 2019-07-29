@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.39.0](https://github.com/undataforum/components/compare/@undataforum/components@0.38.0...@undataforum/components@0.39.0) (2019-07-29)
+
+### Features
+
+- **components:** Add SocialIcon ([6938117](https://github.com/undataforum/components/commit/6938117)), closes [#72](https://github.com/undataforum/components/issues/72)
+
 # [0.38.0](https://github.com/undataforum/components/compare/@undataforum/components@0.37.0...@undataforum/components@0.38.0) (2019-07-25)
 
 ### Bug Fixes
