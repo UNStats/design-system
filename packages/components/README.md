@@ -4,13 +4,7 @@ A library of React components for the United Nations World Data Forum Website. B
 
 ## Install
 
-In order to use package `@undataforum/components` in your project create a file `.npmrc` in your project root and add the following line:
-
-```
-@undataforum:registry=https://npm.pkg.github.com/
-```
-
-Then run
+In order to install package `@undataforum/components` run
 
 ```bash
 yarn add @undataforum/components
