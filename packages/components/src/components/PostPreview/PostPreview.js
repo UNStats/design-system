@@ -5,6 +5,7 @@ import SmartLink from '../SmartLink';
 
 const UnlinkedPostPreview = ({ post, fontSize, ...props }) => {
   const mb = post.lead ? 3 : 0;
+  // Set m={0} in Heading due to https://github.com/styled-system/styled-system/issues/644.
   return (
     <Flex {...props} flexDirection="column">
       <Heading
@@ -13,6 +14,7 @@ const UnlinkedPostPreview = ({ post, fontSize, ...props }) => {
         fontFamily="body"
         fontSize={fontSize}
         lineHeight="title"
+        m={0}
         mt={0}
         mb={3}
       >
