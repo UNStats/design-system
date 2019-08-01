@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.39.4](https://github.com/undataforum/components/compare/@undataforum/components@0.39.3...@undataforum/components@0.39.4) (2019-08-01)
+
+**Note:** Version bump only for package @undataforum/components
+
 ## [0.39.3](https://github.com/undataforum/components/compare/@undataforum/components@0.39.2...@undataforum/components@0.39.3) (2019-08-01)
 
 ### Bug Fixes
