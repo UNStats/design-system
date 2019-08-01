@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "prop-types": "^15.7.2",
-    "styled-system": "^5.0.6"
+    "styled-system": "5.0.16"
   },
   "peerDependencies": {
     "react": "^16.8.4",
