@@ -1,7 +1,7 @@
 {
   "name": "@undataforum/components",
   "description": "React components for United Nations World Data Forum websites.",
-  "version": "0.39.2",
+  "version": "0.39.3",
   "author": {
     "name": "Thilo Maier",
     "email": "maier@un.org"

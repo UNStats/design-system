@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.39.3](https://github.com/undataforum/components/compare/@undataforum/components@0.39.2...@undataforum/components@0.39.3) (2019-08-01)
+
+### Bug Fixes
+
+- **components:** Fix bottom margin in PostPreview ([caee7e5](https://github.com/undataforum/components/commit/caee7e5)), closes [#74](https://github.com/undataforum/components/issues/74)
+
 ## [0.39.2](https://github.com/undataforum/components/compare/@undataforum/components@0.39.1...@undataforum/components@0.39.2) (2019-08-01)
 
 **Note:** Version bump only for package @undataforum/components
