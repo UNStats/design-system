@@ -6,17 +6,13 @@
     "name": "Thilo Maier",
     "email": "maier@un.org"
   },
-  "homepage": "https://components.undataforum.org",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/undataforum/components.git",
-    "directory": "packages/components"
-  },
+  "homepage": "https://github.com/UNDataForum/components/tree/master/packages/components#readme",
+  "repository": "https://github.com/UNDataForum/components/tree/master/packages/components",
   "keywords": [
     "react",
     "components",
