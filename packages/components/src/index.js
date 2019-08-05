@@ -7,6 +7,7 @@ export {
   Header,
   Footer,
   PostPreview,
+  ProfileList,
   ProfilePreview,
   SmartLink,
   SocialIcon,

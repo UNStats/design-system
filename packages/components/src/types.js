@@ -44,7 +44,7 @@ export const postType = shape({
   href: string,
 });
 
-export const profileType = shape({
+const profile = {
   avatar: func.isRequired,
   honorific: string,
   name: string,
@@ -57,7 +57,11 @@ export const profileType = shape({
     })
   ),
   href: string,
-});
+};
+
+export const profileType = shape({ ...profile });
+
+export const profileWithIdType = shape({ id: string.isRequired, ...profile });
 
 export const themeType = shape({
   externalLink: func,

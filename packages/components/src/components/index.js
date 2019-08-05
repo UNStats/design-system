@@ -7,6 +7,7 @@ export { default as GridList } from './GridList';
 export { default as Header } from './Header';
 export { default as NewTabLink } from './NewTabLink';
 export { default as PostPreview } from './PostPreview';
+export { default as ProfileList } from './ProfileList';
 export { default as ProfilePreview } from './ProfilePreview';
 export { default as SmartLink } from './SmartLink';
 export { default as SocialIcon } from './SocialIcon';

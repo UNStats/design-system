@@ -55,7 +55,7 @@ storiesOf('Components/PostPreview', module)
               values={[
                 {
                   id: 'a6b4babd-6b11-4b81-8ac0-73cefb040cb7',
-                  avatar: function avatar() {
+                  avatar() {
                     return (
                       <Image
                         alt="Willow Rangall"
@@ -70,7 +70,7 @@ storiesOf('Components/PostPreview', module)
                 },
                 {
                   id: '561285d3-4eed-473c-baba-6b3564f4e6a7',
-                  avatar: function avatar() {
+                  avatar() {
                     return (
                       <Image
                         alt="Suzy Cahan"
@@ -85,7 +85,7 @@ storiesOf('Components/PostPreview', module)
                 },
                 {
                   id: '453d9d8a-b1e6-4cac-9fdd-b6c354fa3262',
-                  avatar: function avatar() {
+                  avatar() {
                     return (
                       <Image
                         alt="Sandra Abramovici"
@@ -100,7 +100,7 @@ storiesOf('Components/PostPreview', module)
                 },
                 {
                   id: 'dfea2476-e3de-4b63-863e-a1c69af90138',
-                  avatar: function avatar() {
+                  avatar() {
                     return (
                       <Image
                         alt="Jan McKea"
@@ -115,7 +115,7 @@ storiesOf('Components/PostPreview', module)
                 },
                 {
                   id: '15469d6c-cb5d-4750-8a0c-27a3b1beb187',
-                  avatar: function avatar() {
+                  avatar() {
                     return (
                       <Image
                         alt="Ola Brunger"
@@ -130,7 +130,7 @@ storiesOf('Components/PostPreview', module)
                 },
                 {
                   id: 'f4ee9708-9045-40e7-a899-b46841af488b',
-                  avatar: function avatar() {
+                  avatar() {
                     return (
                       <Image
                         alt="Ivette Rowlinson"
@@ -145,7 +145,7 @@ storiesOf('Components/PostPreview', module)
                 },
                 {
                   id: '9946a2cf-0774-41da-830e-bffe1259360f',
-                  avatar: function avatar() {
+                  avatar() {
                     return (
                       <Image
                         alt="Madeleine Stredwick"
@@ -160,7 +160,7 @@ storiesOf('Components/PostPreview', module)
                 },
                 {
                   id: 'd2e5b557-bf07-4e77-94f3-16bc1cd26a38',
-                  avatar: function avatar() {
+                  avatar() {
                     return (
                       <Image
                         alt="Lin Billson"
@@ -175,7 +175,7 @@ storiesOf('Components/PostPreview', module)
                 },
                 {
                   id: '9008c43d-49ab-4907-bdaa-28cb59f0596b',
-                  avatar: function avatar() {
+                  avatar() {
                     return (
                       <Image
                         alt="Alfie Piborn"
@@ -190,7 +190,7 @@ storiesOf('Components/PostPreview', module)
                 },
                 {
                   id: 'bfba8e8e-e052-4386-a781-5bc42eeb98b9',
-                  avatar: function avatar() {
+                  avatar() {
                     return (
                       <Image
                         alt="Garvy Bartlomiej"

@@ -14,7 +14,7 @@ storiesOf('Components/FlexList', module)
       values={[
         {
           id: '7e3fbdf3-e724-4e7d-b007-da7a1db3925e',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Nance MacFadin"
@@ -29,7 +29,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: 'de10c4e6-037f-414b-bf94-9a229393402b',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Clerc Edis"
@@ -44,7 +44,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: '51e2a815-db3d-43d8-b710-581970e37685',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Clifford Skipperbottom"
@@ -59,7 +59,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: '084b03f9-ec30-4089-b51a-5672aae49ece',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Willow Rangall"
@@ -83,7 +83,7 @@ storiesOf('Components/FlexList', module)
       values={[
         {
           id: '28a18fec-eb4d-468f-b370-14435d810631',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Nance MacFadin"
@@ -98,7 +98,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: 'fb826af2-557a-46cc-ad46-cdba00d06070',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Clerc Edis"
@@ -113,7 +113,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: 'e1a864e7-2ae0-440b-9dbf-bd49f64f3c1b',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Clifford Skipperbottom"
@@ -128,7 +128,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: 'ac0323a9-ac38-4afd-86db-ddc2f450530c',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Willow Rangall"
@@ -143,7 +143,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: '080d8ec4-0f4f-4d54-912e-50debb40328d',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Suzy Cahan"
@@ -158,7 +158,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: 'ebfa6771-7737-44ca-8203-16a32638bd36',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Sandra Abramovici"
@@ -173,7 +173,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: '5037a33b-5f67-48fe-b813-1b0ee3812dca',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Jan McKea"
@@ -188,7 +188,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: 'fd2744aa-269c-4790-9165-b78594594967',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Ola Brunger"
@@ -203,7 +203,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: '4abe113d-225d-4524-af73-329391ac34ad',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Ivette Rowlinson"
@@ -218,7 +218,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: 'aaf5e634-30a5-4d76-979a-d00a1fe48b52',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Madeleine Stredwick"
@@ -233,7 +233,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: '83e8e72a-fbb1-4cc1-9759-f78a804393c2',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Lin Billson"
@@ -248,7 +248,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: '2e25002b-aa42-4689-8424-ffea4cc64490',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Alfie Piborn"
@@ -263,7 +263,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: '3b3f0d96-def7-4fd5-b821-5eaea96dafb1',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Garvy Bartlomiej"
@@ -278,7 +278,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: 'b7e23d6f-9617-4517-9ded-651e27c5e154',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Gustavus Splevings"
@@ -293,7 +293,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: '83f34164-c963-4d48-8f52-2071bfa4cefb',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Cristi Tale"
@@ -308,7 +308,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: 'fa083843-d783-4e1b-82cb-3373c02e445d',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Gae Phinn"
@@ -323,7 +323,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: '62e58fe0-c981-4a0c-bc00-ff9594195254',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Leoline Hacaud"
@@ -338,7 +338,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: 'ded84491-05bc-454f-a702-79c081702a07',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Rufe Rockhill"
@@ -353,7 +353,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: '24049a27-537d-4751-ad3d-27d276755a3c',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Bernadene van der Velden"
@@ -368,7 +368,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: 'c60da4d6-cbc9-4121-9fe3-1c8be9498c23',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Edithe Densell"
@@ -383,7 +383,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: '2f4f2bc6-f4bf-4f49-a05a-0e89b248aef5',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Emmalynne Sone"
@@ -398,7 +398,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: '73384c21-2c66-466f-a472-f61184476df2',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Ardella Sapir"
@@ -413,7 +413,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: '320fc82c-b6f9-4153-9570-00ead021b595',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Ilise Sailor"
@@ -428,7 +428,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: '6079826c-636a-4d04-95c2-e1d5a71bdd99',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Anita Olander"
@@ -443,7 +443,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: '7ea27273-6136-4768-8f9a-b5a954918e03',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Gerik Frisby"
@@ -458,7 +458,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: '4992e294-8d97-4a19-8e38-3acffb7ca787',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Rayshell Marmion"
@@ -473,7 +473,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: 'fd743b4d-d518-4f56-9f0a-6ffa48551cee',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Brooks Grene"
@@ -488,7 +488,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: '31f794f6-9eae-491c-806a-e5363f5009dc',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Bev Dorey"
@@ -503,7 +503,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: '4aea155f-3138-47be-9556-d82ad9ff818c',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Vladimir Parres"
@@ -518,7 +518,7 @@ storiesOf('Components/FlexList', module)
         },
         {
           id: 'ecc87491-0f66-46f2-8d4c-addeb810d5fe',
-          avatar: function avatar() {
+          avatar() {
             return (
               <Image
                 alt="Really really really really really really really really really really long name"

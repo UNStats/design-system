@@ -7,7 +7,7 @@ storiesOf('Components/ProfilePreview', module)
   .add('complete profile', () => (
     <ProfilePreview
       profile={{
-        avatar: function avatar() {
+        avatar() {
           return (
             <Image
               alt="Nance MacFadin"
@@ -42,7 +42,7 @@ storiesOf('Components/ProfilePreview', module)
   .add('no jobtitle', () => (
     <ProfilePreview
       profile={{
-        avatar: function avatar() {
+        avatar() {
           return (
             <Image
               alt="Nance MacFadin"
@@ -75,7 +75,7 @@ storiesOf('Components/ProfilePreview', module)
   .add('no organization', () => (
     <ProfilePreview
       profile={{
-        avatar: function avatar() {
+        avatar() {
           return (
             <Image
               alt="Nance MacFadin"
@@ -108,7 +108,7 @@ storiesOf('Components/ProfilePreview', module)
   .add('no jobtitle and no organization', () => (
     <ProfilePreview
       profile={{
-        avatar: function avatar() {
+        avatar() {
           return (
             <Image
               alt="Nance MacFadin"
@@ -140,7 +140,7 @@ storiesOf('Components/ProfilePreview', module)
   .add('align left', () => (
     <ProfilePreview
       profile={{
-        avatar: function avatar() {
+        avatar() {
           return (
             <Image
               alt="Clerc Edis"
@@ -175,7 +175,7 @@ storiesOf('Components/ProfilePreview', module)
   .add('align right', () => (
     <ProfilePreview
       profile={{
-        avatar: function avatar() {
+        avatar() {
           return (
             <Image
               alt="Clifford Skipperbottom"
@@ -207,7 +207,7 @@ storiesOf('Components/ProfilePreview', module)
   .add('avatar only', () => (
     <ProfilePreview
       profile={{
-        avatar: function avatar() {
+        avatar() {
           return (
             <Image
               alt="Willow Rangall"
@@ -225,7 +225,7 @@ storiesOf('Components/ProfilePreview', module)
   .add('avatar and name only', () => (
     <ProfilePreview
       profile={{
-        avatar: function avatar() {
+        avatar() {
           return (
             <Image
               alt="Suzy Cahan"
@@ -244,7 +244,7 @@ storiesOf('Components/ProfilePreview', module)
   .add('responsive avatar', () => (
     <ProfilePreview
       profile={{
-        avatar: function avatar() {
+        avatar() {
           return (
             <Image
               alt="Sandra Abramovici"
@@ -263,7 +263,7 @@ storiesOf('Components/ProfilePreview', module)
   .add('custom font size', () => (
     <ProfilePreview
       profile={{
-        avatar: function avatar() {
+        avatar() {
           return (
             <Image
               alt="Jan McKea"
@@ -283,7 +283,7 @@ storiesOf('Components/ProfilePreview', module)
   .add('really long strings', () => (
     <ProfilePreview
       profile={{
-        avatar: function avatar() {
+        avatar() {
           return (
             <Image
               alt="Really really really really really really really really really really long name"
