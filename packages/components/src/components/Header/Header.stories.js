@@ -25,6 +25,7 @@ storiesOf('Components/Header', module)
       ]}
       button={{ text: 'Register', href: '/register' }}
       height={[64, 80, 96]}
+      pathname="/"
     />
   ))
   .add('logo only', () => (

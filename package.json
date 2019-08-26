@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "start": "yarn workspace @undataforum/components start",
     "purge": "rm -rf ./node_modules && yarn workspaces run purge",
     "lint": "eslint . --ignore-path .gitignore",
     "format": "pretty-quick"

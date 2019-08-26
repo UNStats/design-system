@@ -11,6 +11,7 @@ const Navigation = ({
   links,
   button,
   open,
+  pathname,
   color,
   bg,
   transparent,
@@ -71,6 +72,7 @@ const Navigation = ({
           display={['flex', 'none']}
           key="/"
           href="/"
+          pathname={pathname}
           mb={[3, 0]}
           mr={[0, 3, 4]}
         >
@@ -79,7 +81,13 @@ const Navigation = ({
           </Text>
         </SmartLink>
         {links.map(({ href, text }) => (
-          <SmartLink key={href} href={href} mb={[3, 0]} mr={[0, 3, 4]}>
+          <SmartLink
+            key={href}
+            href={href}
+            pathname={pathname}
+            mb={[3, 0]}
+            mr={[0, 3, 4]}
+          >
             <Text color={color} fontSize={[4, 3, 4]} fontWeight="bold">
               {text}
             </Text>
@@ -92,6 +100,7 @@ const Navigation = ({
           color={bg}
           bg={color}
           href={button.href}
+          pathname={pathname}
           my={[4, 0]}
           mr={[4, 0]}
           ml={4}
@@ -126,6 +135,7 @@ Navigation.propTypes = {
   links: arrayOf(linkType).isRequired,
   button: linkType,
   open: bool.isRequired,
+  pathname: string,
   color: string.isRequired,
   bg: string.isRequired,
   transparent: bool,

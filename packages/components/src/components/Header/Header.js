@@ -15,6 +15,7 @@ const Header = ({
   links,
   button,
   height,
+  pathname,
   color,
   bg,
   transparent,
@@ -72,6 +73,7 @@ const Header = ({
             links={links}
             button={button}
             open={menuOpen}
+            pathname={pathname}
             color={color}
             bg={bg}
             transparent={transparent}
@@ -105,6 +107,7 @@ Header.propTypes = {
   links: arrayOf(linkType).isRequired,
   button: linkType,
   height: responsiveType.isRequired,
+  pathname: string,
   color: string,
   bg: string,
   transparent: bool,
