@@ -1,5 +1,6 @@
 export { default as Badge } from './Badge';
 export { default as Container } from './Container';
+export { default as EventPreview } from './EventPreview';
 export { default as FlexList } from './FlexList';
 export { default as Footer } from './Footer';
 export { default as GlobalStyle } from './GlobalStyle';

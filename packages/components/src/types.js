@@ -36,6 +36,17 @@ export const modeType = oneOf([
   'yellow',
 ]);
 
+export const eventType = shape({
+  type: string.isRequired,
+  title: func.isRequired,
+  start: string.isRequired,
+  duration: string.isRequired,
+  timezone: string.isRequired,
+  speakers: func.isRequired,
+  description: func,
+  href: string,
+});
+
 export const postType = shape({
   title: string.isRequired,
   date: string.isRequired,
@@ -52,7 +63,8 @@ const profile = {
   organization: string,
   badges: arrayOf(
     shape({
-      link: linkType.isRequired,
+      text: string.isRequired,
+      href: string,
       mode: modeType,
     })
   ),

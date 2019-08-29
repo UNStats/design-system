@@ -1,11 +1,13 @@
 export { Flex, Box, Heading, Text } from 'rebass';
 export {
+  Badge,
   Container,
+  EventPreview,
   FlexList,
+  Footer,
   GlobalStyle,
   GridList,
   Header,
-  Footer,
   PostPreview,
   ProfileList,
   ProfilePreview,
