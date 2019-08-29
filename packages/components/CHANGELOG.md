@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.42.0](https://github.com/UNDataForum/components/tree/master/packages/components/compare/@undataforum/components@0.41.0...@undataforum/components@0.42.0) (2019-08-29)
+
+### Code Refactoring
+
+- Simplify API of EventPreview ([b73f260](https://github.com/UNDataForum/components/tree/master/packages/components/commit/b73f260))
+
+### BREAKING CHANGES
+
+- `start` prop renamed to date, `timezone` prop removed
+
 # [0.41.0](https://github.com/UNDataForum/components/tree/master/packages/components/compare/@undataforum/components@0.40.0...@undataforum/components@0.41.0) (2019-08-29)
 
 ### Features
