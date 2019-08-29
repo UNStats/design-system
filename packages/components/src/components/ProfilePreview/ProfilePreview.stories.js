@@ -23,15 +23,10 @@ storiesOf('Components/ProfilePreview', module)
         jobtitle: 'Help Desk Operator',
         organization: 'Schuster-Senger',
         badges: [
+          { text: 'Committee Member', href: '/committee', mode: 'red' },
           {
-            link: { text: 'Committee Member', href: '/committee' },
-            mode: 'red',
-          },
-          {
-            link: {
-              text: 'Keynote Speaker',
-              href: '/keynote-speakers',
-            },
+            text: 'Keynote Speaker',
+            href: '/keynote-speakers',
             mode: 'yellow',
           },
         ],
@@ -56,15 +51,10 @@ storiesOf('Components/ProfilePreview', module)
         name: 'Nance MacFadin',
         organization: 'Schuster-Senger',
         badges: [
+          { text: 'Committee Member', href: '/committee', mode: 'red' },
           {
-            link: { text: 'Committee Member', href: '/committee' },
-            mode: 'red',
-          },
-          {
-            link: {
-              text: 'Keynote Speaker',
-              href: '/keynote-speakers',
-            },
+            text: 'Keynote Speaker',
+            href: '/keynote-speakers',
             mode: 'yellow',
           },
         ],
@@ -89,15 +79,10 @@ storiesOf('Components/ProfilePreview', module)
         name: 'Nance MacFadin',
         jobtitle: 'Help Desk Operator',
         badges: [
+          { text: 'Committee Member', href: '/committee', mode: 'red' },
           {
-            link: { text: 'Committee Member', href: '/committee' },
-            mode: 'red',
-          },
-          {
-            link: {
-              text: 'Keynote Speaker',
-              href: '/keynote-speakers',
-            },
+            text: 'Keynote Speaker',
+            href: '/keynote-speakers',
             mode: 'yellow',
           },
         ],
@@ -121,15 +106,10 @@ storiesOf('Components/ProfilePreview', module)
         },
         name: 'Nance MacFadin',
         badges: [
+          { text: 'Committee Member', href: '/committee', mode: 'red' },
           {
-            link: { text: 'Committee Member', href: '/committee' },
-            mode: 'red',
-          },
-          {
-            link: {
-              text: 'Keynote Speaker',
-              href: '/keynote-speakers',
-            },
+            text: 'Keynote Speaker',
+            href: '/keynote-speakers',
             mode: 'yellow',
           },
         ],
@@ -155,15 +135,10 @@ storiesOf('Components/ProfilePreview', module)
         jobtitle: 'Staff Scientist',
         organization: 'Ritchie Inc',
         badges: [
+          { text: 'Committee Member', href: '/committee', mode: 'red' },
           {
-            link: { text: 'Committee Member', href: '/committee' },
-            mode: 'red',
-          },
-          {
-            link: {
-              text: 'Keynote Speaker',
-              href: '/keynotes',
-            },
+            text: 'Keynote Speaker',
+            href: '/keynotes',
             mode: 'yellow',
           },
         ],
@@ -190,12 +165,10 @@ storiesOf('Components/ProfilePreview', module)
         jobtitle: 'Senior Financial Analyst',
         organization: 'Block, Bruen and Gerlach',
         badges: [
+          { text: 'Committee Member', href: '/committee', mode: 'red' },
           {
-            link: { text: 'Committee Member', href: '/committee' },
-            mode: 'red',
-          },
-          {
-            link: { text: 'Keynote Speaker', href: '/keynotes' },
+            text: 'Keynote Speaker',
+            href: '/keynotes',
             mode: 'yellow',
           },
         ],
@@ -301,15 +274,10 @@ storiesOf('Components/ProfilePreview', module)
         organization:
           'Really really really really really really really really really really long organization',
         badges: [
+          { text: 'Committee Member', href: '/committee', mode: 'red' },
           {
-            link: { text: 'Committee Member', href: '/committee' },
-            mode: 'red',
-          },
-          {
-            link: {
-              text: 'Keynote Speaker',
-              href: '/keynote-speakers',
-            },
+            text: 'Keynote Speaker',
+            href: '/keynote-speakers',
             mode: 'yellow',
           },
         ],

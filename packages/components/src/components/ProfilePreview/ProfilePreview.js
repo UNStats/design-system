@@ -70,12 +70,14 @@ const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => (
         mt={3}
         render={badge => (
           <Badge
-            link={badge.link}
+            href={badge.href}
             mode={badge.mode}
-            key={badge.link.text}
+            key={badge.text}
             ml={style[align].ml}
             mr={style[align].mr}
-          />
+          >
+            {badge.text}
+          </Badge>
         )}
         values={profile.badges}
       />
