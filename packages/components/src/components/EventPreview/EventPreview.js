@@ -20,7 +20,7 @@ const UnlinkedEventPreview = ({ event, ...props }) => {
         fontFamily="body"
         mb={mb}
       >
-        {`${event.start} ${event.timezone} (${event.duration})`}
+        {`${event.date} (${event.duration})`}
       </Text>
       {event.description && event.description()}
     </Flex>

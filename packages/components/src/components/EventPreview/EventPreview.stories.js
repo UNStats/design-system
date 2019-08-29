@@ -17,9 +17,8 @@ storiesOf('Components/EventPreview', module)
             </Heading>
           );
         },
-        start: '31 May 2018, 9:00',
-        duration: '1 hour',
-        timezone: 'America/New_York',
+        date: 'October 14, 1983, 1:30 PM EDT',
+        duration: '60 minutes',
         speakers() {
           return (
             <Text as="div" fontFamily="body" lineHeight="copy" mb={3}>
@@ -42,9 +41,8 @@ storiesOf('Components/EventPreview', module)
             </Heading>
           );
         },
-        start: '31 May 2018, 9:00',
-        duration: '1 hour',
-        timezone: 'America/New_York',
+        date: 'October 14, 1983, 1:30 PM EDT',
+        duration: '90 minutes',
         speakers() {
           return (
             <GridList
