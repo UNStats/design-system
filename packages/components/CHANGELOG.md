@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.41.0](https://github.com/UNDataForum/components/tree/master/packages/components/compare/@undataforum/components@0.40.0...@undataforum/components@0.41.0) (2019-08-29)
+
+### Features
+
+- Add EventPreview ([6fed6e4](https://github.com/UNDataForum/components/tree/master/packages/components/commit/6fed6e4)), closes [#86](https://github.com/UNDataForum/components/tree/master/packages/components/issues/86)
+
 # [0.40.0](https://github.com/UNDataForum/components/tree/master/packages/components/compare/@undataforum/components@0.39.4...@undataforum/components@0.40.0) (2019-08-26)
 
 ### Features
