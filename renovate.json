@@ -1,7 +1,7 @@
 {
   "extends": ["config:base"],
   "automerge": false,
-  "labels": ["renovate"],
+  "labels": ["dependencies"],
   "reviewers": ["454de6e"],
   "semanticCommits": false
 }
