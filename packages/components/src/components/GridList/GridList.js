@@ -1,42 +1,46 @@
 import React from 'react';
-import { arrayOf, func, object, oneOf } from 'prop-types';
-import { compose, grid, flexbox } from 'styled-system';
+import { arrayOf, func, object } from 'prop-types';
 import { Box } from 'rebass';
-import { responsiveNumberType, responsiveStringType } from '../../types';
-
-const lookup = {
-  left: 'start',
-  center: 'center',
-  right: 'end',
-};
+import {
+  alignType,
+  responsiveNumberType,
+  responsiveStringType,
+} from '../../types';
 
 const GridList = ({
   align = 'center',
-  gridGap: gap = 3,
-  gridTemplateColumns: columns,
+  gridGap = 3,
+  gridTemplateColumns,
   render,
   values,
   ...props
-}) => (
-  <Box
-    {...props}
-    css={`
-      ${compose(
-        grid,
-        flexbox
-      )}
-      display: grid;
-    `}
-    gridGap={gap}
-    gridTemplateColumns={columns}
-    justifyContent={lookup[align]}
-  >
-    {values.map(value => render(value))}
-  </Box>
-);
+}) => {
+  // Map align prop to justifyContent.
+  let justifyContent;
+  if (align === 'left') {
+    justifyContent = 'start';
+  } else if (align === 'right') {
+    justifyContent = 'end';
+  } else {
+    justifyContent = 'center';
+  }
+  return (
+    <Box
+      {...props}
+      sx={{
+        display: 'grid',
+        gridGap,
+        gridTemplateColumns,
+        justifyContent,
+      }}
+    >
+      {values.map(value => render(value))}
+    </Box>
+  );
+};
 
 GridList.propTypes = {
-  align: oneOf(['left', 'center', 'right']),
+  align: alignType,
   gridGap: responsiveNumberType,
   gridTemplateColumns: responsiveStringType.isRequired,
   render: func.isRequired,

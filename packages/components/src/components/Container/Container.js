@@ -1,16 +1,13 @@
 import React from 'react';
-import { node, number } from 'prop-types';
-import { layout } from 'styled-system';
+import { node, oneOf } from 'prop-types';
 import { Box } from 'rebass';
 
-const Container = ({ children, maxWidth, ...props }) => (
+const Container = ({ maxWidth = 'default', children, ...props }) => (
   <Box
+    px={[2, 3, 0]}
     {...props}
-    css={`
-      ${layout}
-      width: 100%;
-    `}
-    maxWidth={maxWidth}
+    css={{ width: '100%' }}
+    maxWidth={`width.${maxWidth}`}
     mx="auto"
   >
     {children}
@@ -18,8 +15,8 @@ const Container = ({ children, maxWidth, ...props }) => (
 );
 
 Container.propTypes = {
+  maxWidth: oneOf(['narrow', 'default', 'wide']),
   children: node.isRequired,
-  maxWidth: number.isRequired,
 };
 
 export default Container;

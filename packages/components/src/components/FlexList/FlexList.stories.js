@@ -18,9 +18,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Nance MacFadin"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar0.png"
               />
             );
@@ -33,9 +31,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Clerc Edis"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar1.png"
               />
             );
@@ -48,9 +44,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Clifford Skipperbottom"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar2.png"
               />
             );
@@ -63,9 +57,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Willow Rangall"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar3.png"
               />
             );
@@ -87,9 +79,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Nance MacFadin"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar0.png"
               />
             );
@@ -102,9 +92,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Clerc Edis"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar1.png"
               />
             );
@@ -117,9 +105,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Clifford Skipperbottom"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar2.png"
               />
             );
@@ -132,9 +118,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Willow Rangall"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar3.png"
               />
             );
@@ -147,9 +131,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Suzy Cahan"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar4.png"
               />
             );
@@ -162,9 +144,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Sandra Abramovici"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar5.png"
               />
             );
@@ -177,9 +157,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Jan McKea"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar6.png"
               />
             );
@@ -192,9 +170,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Ola Brunger"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar7.png"
               />
             );
@@ -207,9 +183,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Ivette Rowlinson"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar8.png"
               />
             );
@@ -222,9 +196,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Madeleine Stredwick"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar9.png"
               />
             );
@@ -237,9 +209,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Lin Billson"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar0.png"
               />
             );
@@ -252,9 +222,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Alfie Piborn"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar1.png"
               />
             );
@@ -267,9 +235,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Garvy Bartlomiej"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar2.png"
               />
             );
@@ -282,9 +248,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Gustavus Splevings"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar3.png"
               />
             );
@@ -297,9 +261,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Cristi Tale"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar4.png"
               />
             );
@@ -312,9 +274,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Gae Phinn"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar5.png"
               />
             );
@@ -327,9 +287,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Leoline Hacaud"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar6.png"
               />
             );
@@ -342,9 +300,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Rufe Rockhill"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar7.png"
               />
             );
@@ -357,9 +313,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Bernadene van der Velden"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar8.png"
               />
             );
@@ -372,9 +326,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Edithe Densell"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar9.png"
               />
             );
@@ -387,9 +339,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Emmalynne Sone"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar0.png"
               />
             );
@@ -402,9 +352,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Ardella Sapir"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar1.png"
               />
             );
@@ -417,9 +365,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Ilise Sailor"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar2.png"
               />
             );
@@ -432,9 +378,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Anita Olander"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar3.png"
               />
             );
@@ -447,9 +391,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Gerik Frisby"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar4.png"
               />
             );
@@ -462,9 +404,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Rayshell Marmion"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar5.png"
               />
             );
@@ -477,9 +417,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Brooks Grene"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar6.png"
               />
             );
@@ -492,9 +430,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Bev Dorey"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar7.png"
               />
             );
@@ -507,9 +443,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Vladimir Parres"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar8.png"
               />
             );
@@ -522,9 +456,7 @@ storiesOf('Components/FlexList', module)
             return (
               <Image
                 alt="Really really really really really really really really really really long name"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar9.png"
               />
             );
@@ -536,43 +468,49 @@ storiesOf('Components/FlexList', module)
   ))
   .add('badges', () => (
     <FlexList
-      render={badge => (
-        <Badge mode={badge.mode} key={badge.text} m={1}>
-          {badge.text}
-        </Badge>
+      render={value => (
+        <Badge
+          text={value.text}
+          variant={value.variant}
+          key={value.text}
+          m={1}
+        />
       )}
       values={[
-        { text: 'Design Engineer', mode: 'red' },
-        { text: 'Recruiter', mode: 'green' },
-        { text: 'Teacher', mode: 'yellow' },
-        { text: 'Environmental Specialist' },
+        { text: 'Design Engineer' },
+        { text: 'Recruiter', variant: 'secondary' },
+        { text: 'Teacher', variant: 'accent' },
+        { text: 'Scientist', variant: 'inverse' },
       ]}
     />
   ))
   .add('many badges', () => (
     <FlexList
-      render={badge => (
-        <Badge mode={badge.mode} key={badge.text} m={1}>
-          {badge.text}
-        </Badge>
+      render={value => (
+        <Badge
+          text={value.text}
+          variant={value.variant}
+          key={value.text}
+          m={1}
+        />
       )}
       values={[
         { text: 'Design Engineer' },
-        { text: 'Recruiter', mode: 'secondary' },
-        { text: 'Teacher', mode: 'blue' },
-        { text: 'Environmental Specialist', mode: 'green' },
-        { text: 'Nuclear Power Engineer', mode: 'red' },
-        { text: 'Cost Accountant', mode: 'yellow' },
-        { text: 'VP Marketing' },
-        { text: 'Automation Specialist', mode: 'secondary' },
-        { text: 'Analog Circuit Design Manager', mode: 'blue' },
-        { text: 'Senior Cost Accountant', mode: 'green' },
-        { text: 'Desktop Support Technician', mode: 'red' },
-        { text: 'Web Developer', mode: 'yellow' },
+        { text: 'Recruiter', variant: 'secondary' },
+        { text: 'Teacher', variant: 'accent' },
+        { text: 'Environmental Specialist', variant: 'inverse' },
+        { text: 'Nuclear Power Engineer' },
+        { text: 'Cost Accountant', variant: 'secondary' },
+        { text: 'VP Marketing', variant: 'accent' },
+        { text: 'Automation Specialist', variant: 'inverse' },
+        { text: 'Analog Circuit Design Manager' },
+        { text: 'Senior Cost Accountant', variant: 'secondary' },
+        { text: 'Desktop Support Technician', variant: 'accent' },
+        { text: 'Web Developer', variant: 'inverse' },
         { text: 'Technical Writer' },
-        { text: 'Database Administrator', mode: 'secondary' },
-        { text: 'Systems Administrator', mode: 'blue' },
-        { text: 'Assistant Manager', mode: 'green' },
+        { text: 'Database Administrator', variant: 'secondary' },
+        { text: 'Systems Administrator', variant: 'accent' },
+        { text: 'Assistant Manager', variant: 'inverse' },
       ]}
     />
   ));

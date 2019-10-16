@@ -1,1 +1,1 @@
-export { default } from './PostPreview';
+export { default, postType } from './PostPreview';

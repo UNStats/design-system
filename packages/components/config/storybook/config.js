@@ -1,7 +1,8 @@
 import React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
-import { ThemeProvider } from 'styled-components';
-import { GlobalStyle, theme } from '../../src';
+import { Global } from '@emotion/core';
+import { ThemeProvider } from 'emotion-theming';
+import { theme } from '../../src';
 import '@storybook/addon-console';
 import storybookTheme from './theme';
 
@@ -17,7 +18,11 @@ addParameters({
 addDecorator(story => (
   <ThemeProvider theme={theme}>
     <>
-      <GlobalStyle />
+      <Global
+        styles={{
+          body: { margin: 0 },
+        }}
+      />
       {story()}
     </>
   </ThemeProvider>

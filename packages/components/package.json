@@ -27,17 +27,16 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@styled-system/theme-get": "^5.0.6",
-    "compare-urls": "^2.0.0",
+    "@emotion/core": "^10.0.15",
+    "@rebass/preset": "^4.0.0",
+    "emotion-theming": "^10.0.14",
+    "lodash.merge": "^4.6.2",
     "prop-types": "^15.7.2",
-    "react-helmet": "^5.2.0",
-    "rebass": "^3.1.1",
-    "styled-system": "^5.0.16"
+    "rebass": "^4.0.1"
   },
   "peerDependencies": {
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "styled-components": "^4.3.1"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@babel/cli": "7.6.2",
@@ -51,11 +50,9 @@
     "@storybook/react": "5.2.1",
     "@storybook/theming": "5.2.1",
     "babel-loader": "8.0.6",
-    "babel-plugin-styled-components": "1.10.6",
     "cross-env": "6.0.3",
     "react": "16.10.2",
-    "react-dom": "16.10.2",
-    "styled-components": "4.3.2"
+    "react-dom": "16.10.2"
   },
   "publishConfig": {
     "access": "public"

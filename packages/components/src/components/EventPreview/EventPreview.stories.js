@@ -21,7 +21,7 @@ storiesOf('Components/EventPreview', module)
         duration: '60 minutes',
         speakers() {
           return (
-            <Text as="div" fontFamily="body" lineHeight="copy" mb={3}>
+            <Text as="div" fontFamily="body" lineHeight="body" mb={3}>
               {['Willow Rangall', 'Suzy Cahan'].join(', ')}
             </Text>
           );
@@ -46,6 +46,7 @@ storiesOf('Components/EventPreview', module)
         speakers() {
           return (
             <GridList
+              alignSelf="stretch"
               align="left"
               gridGap={2}
               gridTemplateColumns="repeat(auto-fit, 96px)"
@@ -64,9 +65,7 @@ storiesOf('Components/EventPreview', module)
                     return (
                       <Image
                         alt="Willow Rangall"
-                        borderRadius="circle"
-                        height={64}
-                        width={64}
+                        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar0.png"
                       />
                     );
@@ -79,9 +78,7 @@ storiesOf('Components/EventPreview', module)
                     return (
                       <Image
                         alt="Suzy Cahan"
-                        borderRadius="circle"
-                        height={64}
-                        width={64}
+                        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar1.png"
                       />
                     );
@@ -94,9 +91,7 @@ storiesOf('Components/EventPreview', module)
                     return (
                       <Image
                         alt="Sandra Abramovici"
-                        borderRadius="circle"
-                        height={64}
-                        width={64}
+                        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar2.png"
                       />
                     );
@@ -110,7 +105,10 @@ storiesOf('Components/EventPreview', module)
         },
         description() {
           return (
-            <Text as="p" color="text">
+            <Text
+              as="p"
+              sx={{ color: 'text', fontFamily: 'body', lineHeight: 'body' }}
+            >
               Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed
               interdum venenatis, turpis enim blandit mi, in porttitor pede
               justo eu massa. Donec dapibus. Duis at velit eu est congue

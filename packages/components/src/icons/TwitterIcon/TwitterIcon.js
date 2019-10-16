@@ -5,10 +5,10 @@ import { responsiveType } from '../../types';
 const TwitterIcon = ({ ...props }) => (
   <Box
     {...props}
-    css={`
-      vertical-align: middle;
-      display: inline-block;
-    `}
+    css={{
+      verticalAlign: 'middle',
+      display: 'inline-block',
+    }}
   >
     <svg viewBox="0 0 24 24" width="100%" fill="currentColor" role="img">
       <title>Twitter icon</title>

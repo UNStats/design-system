@@ -4,19 +4,19 @@ import { Text } from 'rebass';
 import GitHubIcon from './GitHubIcon';
 
 storiesOf('Icons/GitHubIcon', module)
-  .add('display inline', () => (
-    <Text m={2}>
+  .add('default', () => (
+    <Text sx={{ fontFamily: 'body', m: 2 }}>
       This icon <GitHubIcon width={32} /> is rendered inline.
     </Text>
   ))
-  .add('add color and spacing', () => (
-    <Text color="green" m={2}>
+  .add('custom color and spacing', () => (
+    <Text sx={{ color: 'green', fontFamily: 'body', m: 2 }}>
       This icon <GitHubIcon width={32} mx={2} /> is rendered inline with color
       and spacing.
     </Text>
   ))
   .add('responsive', () => (
-    <Text color="green" m={2}>
+    <Text sx={{ color: 'green', fontFamily: 'body', m: 2 }}>
       This icon&apos;s <GitHubIcon width={[32, 64]} mx={2} /> width increases on
       large screens.
     </Text>

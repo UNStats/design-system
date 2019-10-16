@@ -1,89 +1,136 @@
 import React from 'react';
+import { arrayOf, func, shape, string } from 'prop-types';
 import { Flex, Text } from 'rebass';
-import { alignType, profileType, responsiveNumberType } from '../../types';
-import Badge from '../Badge';
+import { alignType, responsiveNumberType } from '../../types';
 import FlexList from '../FlexList';
 import SmartLink from '../SmartLink';
+import Badge, { variantType as badgeVariantType } from '../Badge';
 
-const style = {
-  left: {
-    alignItems: 'flex-start',
-    css: { 'a:last-child': { 'margin-right': 0 } },
-    ml: 0,
-    mr: 2,
-  },
-  center: {
-    alignItems: 'center',
-    css: {
-      'a:first-child': { 'margin-left': 0 },
-      'a:last-child': { 'margin-right': 0 },
-    },
-    ml: 1,
-    mr: 1,
-  },
-  right: {
-    alignItems: 'flex-end',
-    css: { 'a:first-child': { 'margin-left': 0 } },
-    ml: 2,
-    mr: 0,
-  },
-};
+export const profileType = shape({
+  avatar: func.isRequired,
+  honorific: string,
+  name: string,
+  jobtitle: string,
+  organization: string,
+  badges: arrayOf(
+    shape({
+      text: string.isRequired,
+      href: string,
+      variant: badgeVariantType,
+    })
+  ),
+  href: string,
+});
 
-const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => (
-  <Flex {...props} flexDirection="column" alignItems={style[align].alignItems}>
-    {profile.avatar()}
-    {profile.honorific && (
-      <Text color="text" fontSize={1} textAlign={align}>
-        {profile.honorific}
-      </Text>
-    )}
-    <Text
-      as="h1"
-      color="text"
-      fontFamily="body"
-      fontSize={fontSize}
-      textAlign={align}
-      mt={0}
-      mb={0}
-    >
-      {profile.name}
-    </Text>
-    {profile.jobtitle && (
-      <Text color="text" fontFamily="body" fontSize={2} textAlign={align}>
-        {profile.jobtitle}
-      </Text>
-    )}
-    {profile.organization && (
+const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => {
+  // Map align prop to alignItems.
+  let alignItems;
+  if (align === 'left') {
+    alignItems = 'flex-start';
+  } else if (align === 'right') {
+    alignItems = 'flex-end';
+  } else {
+    alignItems = 'center';
+  }
+
+  return (
+    <Flex {...props} flexDirection="column" alignItems={alignItems}>
+      {profile.avatar()}
+      {profile.honorific && (
+        <Text
+          sx={{
+            color: 'text',
+            fontFamily: 'body',
+            fontSize: 1,
+            lineHeight: 'body',
+            textAlign: align,
+          }}
+        >
+          {profile.honorific}
+        </Text>
+      )}
       <Text
-        color="text"
-        fontFamily="body"
-        fontSize={2}
-        fontWeight="bold"
-        textAlign={align}
+        as="h1"
+        sx={{
+          color: 'text',
+          fontFamily: 'body',
+          fontSize,
+          lineHeight: 'heading',
+          textAlign: align,
+          mt: 0,
+          mb: 0,
+        }}
       >
-        {profile.organization}
+        {profile.name}
       </Text>
-    )}
-    {profile.badges && (
-      <FlexList
-        css={style[align].css}
-        mt={3}
-        render={badge => (
-          <Badge
-            href={badge.href}
-            mode={badge.mode}
-            key={badge.text}
-            ml={style[align].ml}
-            mr={style[align].mr}
-          >
-            {badge.text}
-          </Badge>
-        )}
-        values={profile.badges}
-      />
-    )}
-  </Flex>
-);
+      {profile.jobtitle && (
+        <Text
+          sx={{
+            color: 'text',
+            fontFamily: 'body',
+            fontSize: 2,
+            lineHeight: 'body',
+            textAlign: align,
+          }}
+        >
+          {profile.jobtitle}
+        </Text>
+      )}
+      {profile.organization && (
+        <Text
+          sx={{
+            color: 'text',
+            fontFamily: 'body',
+            fontSize: 2,
+            fontWeight: 'bold',
+            lineHeight: 'body',
+            textAlign: align,
+          }}
+        >
+          {profile.organization}
+        </Text>
+      )}
+      {profile.badges && (
+        <FlexList
+          sx={{ mt: 3 }}
+          render={badge => {
+            // If entire ProfilePreview is linked already, do not link badges.
+            if (profile.href || !badge.href) {
+              return (
+                <Badge
+                  key={badge.text}
+                  text={badge.text}
+                  variant={badge.variant}
+                  mx={1}
+                />
+              );
+            }
+
+            // Margins for badges depend on alignment.
+            let ml;
+            let mr;
+            if (align === 'left') {
+              ml = 0;
+              mr = 2;
+            } else if (align === 'right') {
+              ml = 2;
+              mr = 0;
+            } else {
+              ml = 1;
+              mr = 1;
+            }
+            return (
+              <SmartLink key={badge.text} href={badge.href} ml={ml} mr={mr}>
+                <Badge text={badge.text} variant={badge.variant} />
+              </SmartLink>
+            );
+          }}
+          values={profile.badges}
+        />
+      )}
+    </Flex>
+  );
+};
 
 // Internal component requires all props because we have control over what props it receives.
 UnlinkedProfilePreview.propTypes = {
@@ -92,7 +139,12 @@ UnlinkedProfilePreview.propTypes = {
   fontSize: responsiveNumberType.isRequired,
 };
 
-const ProfilePreview = ({ profile, align, fontSize, ...props }) => {
+const ProfilePreview = ({
+  profile,
+  align = 'center',
+  fontSize = [3, 4],
+  ...props
+}) => {
   if (profile.href) {
     return (
       <SmartLink {...props} href={profile.href}>
@@ -118,11 +170,6 @@ ProfilePreview.propTypes = {
   profile: profileType.isRequired,
   align: alignType,
   fontSize: responsiveNumberType,
-};
-
-ProfilePreview.defaultProps = {
-  align: 'center',
-  fontSize: [3, 4],
 };
 
 export default ProfilePreview;

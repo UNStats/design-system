@@ -1,20 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
-import { compose, layout, space } from 'styled-system';
+import { Box } from 'rebass';
 import { responsiveType } from '../../types';
-
-const Box = styled.div(
-  compose(
-    layout,
-    space
-  )
-);
 
 const DummyLogo = ({ height, width, ...props }) => {
   const svgHeight = height ? '100%' : undefined;
   const svgWidth = width ? '100%' : undefined;
   return (
-    <Box {...props} height={height} width={width}>
+    <Box {...props} sx={{ height, width }}>
       <svg
         viewBox="0 0 24 24"
         height={svgHeight}

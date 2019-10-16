@@ -1,13 +1,15 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withKnobs, select } from '@storybook/addon-knobs';
 import { Image } from 'rebass';
 import ProfilePreview from '../ProfilePreview';
 import GridList from './GridList';
 
 storiesOf('Components/GridList', module)
+  .addDecorator(withKnobs)
   .add('avatars', () => (
     <GridList
-      align="center"
+      align={select('align', ['left', 'center', 'right'], 'center')}
       gridGap={2}
       gridTemplateColumns="repeat(auto-fit, minmax(64px, 1fr))"
       render={({ id, ...profile }) => (
@@ -20,9 +22,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Berenice Feldmus"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar0.png"
               />
             );
@@ -35,9 +35,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Sidonnie Halbeard"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar1.png"
               />
             );
@@ -50,9 +48,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Jacenta Busch"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar2.png"
               />
             );
@@ -65,9 +61,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Mercie Kuban"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar3.png"
               />
             );
@@ -80,9 +74,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Candis Ruggs"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar4.png"
               />
             );
@@ -95,9 +87,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Pippa Rawkesby"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar5.png"
               />
             );
@@ -110,9 +100,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Issie Kisby"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar6.png"
               />
             );
@@ -125,9 +113,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Josee Lyven"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar7.png"
               />
             );
@@ -140,9 +126,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Barton Pentecost"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar8.png"
               />
             );
@@ -155,9 +139,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Grier Dorman"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar9.png"
               />
             );
@@ -170,9 +152,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Rodolph Yarrington"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar0.png"
               />
             );
@@ -185,9 +165,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Nicola Cobbledick"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar1.png"
               />
             );
@@ -200,9 +178,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="De Pick"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar2.png"
               />
             );
@@ -215,9 +191,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Christian Dowsing"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar3.png"
               />
             );
@@ -230,9 +204,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Aggy Ethridge"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar4.png"
               />
             );
@@ -245,9 +217,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Nada Genike"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar5.png"
               />
             );
@@ -260,9 +230,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Kimmie Sowte"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar6.png"
               />
             );
@@ -275,9 +243,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Irena Lamplugh"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar7.png"
               />
             );
@@ -290,9 +256,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Dolph de Goey"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar8.png"
               />
             );
@@ -305,9 +269,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Ertha Langfield"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar9.png"
               />
             );
@@ -320,9 +282,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Consuelo Chasteau"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar0.png"
               />
             );
@@ -335,9 +295,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Averil Ongin"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar1.png"
               />
             );
@@ -350,9 +308,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Drucill Grishinov"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar2.png"
               />
             );
@@ -365,9 +321,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Nessie Galletley"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar3.png"
               />
             );
@@ -380,9 +334,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Marcellina Palmer"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar4.png"
               />
             );
@@ -395,9 +347,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Christabella Shann"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar5.png"
               />
             );
@@ -410,9 +360,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Tawsha Fruish"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar6.png"
               />
             );
@@ -425,9 +373,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Odessa Munns"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar7.png"
               />
             );
@@ -440,9 +386,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Conni McNickle"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar8.png"
               />
             );
@@ -455,9 +399,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Cleric Edis"
-                borderRadius="circle"
-                height={64}
-                width={64}
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                 src="/avatar9.png"
               />
             );
@@ -470,7 +412,7 @@ storiesOf('Components/GridList', module)
   ))
   .add('profiles', () => (
     <GridList
-      align="center"
+      align={select('align', ['left', 'center', 'right'], 'center')}
       gridGap={3}
       gridTemplateColumns="repeat(auto-fit, 256px)"
       render={({ id, ...profile }) => (
@@ -483,9 +425,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Nance MacFadin"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar0.png"
               />
             );
@@ -499,18 +439,12 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Cleric Edis"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar1.png"
               />
             );
           },
           name: 'Cleric Edis',
-          affiliation: {
-            jobtitle: 'Staff Scientist',
-            organization: 'Ritchie Inc',
-          },
           href: '/profiles/cleric-edis/',
         },
         {
@@ -519,9 +453,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Clifford Skipperbottom"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar2.png"
               />
             );
@@ -536,9 +468,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Willow Rangall"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar3.png"
               />
             );
@@ -552,9 +482,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Suzy Cahan"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar4.png"
               />
             );
@@ -569,9 +497,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Sandra Abramovici"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar5.png"
               />
             );
@@ -585,9 +511,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Jan McKea"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar6.png"
               />
             );
@@ -602,9 +526,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Ola Brunger"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar7.png"
               />
             );
@@ -618,9 +540,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Ivette Rowlinson"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar8.png"
               />
             );
@@ -634,9 +554,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Madeleine Stredwick"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar9.png"
               />
             );
@@ -650,9 +568,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Lin Billson"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar0.png"
               />
             );
@@ -666,9 +582,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Alfie Piborn"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar1.png"
               />
             );
@@ -682,9 +596,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Garvy Bartlomiej"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar2.png"
               />
             );
@@ -698,9 +610,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Gustavus Splevings"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar3.png"
               />
             );
@@ -714,9 +624,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Cristi Tale"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar4.png"
               />
             );
@@ -730,9 +638,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Gae Phinn"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar5.png"
               />
             );
@@ -746,9 +652,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Gae Phinn"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar6.png"
               />
             );
@@ -762,9 +666,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Rufe Rockhill"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar7.png"
               />
             );
@@ -778,9 +680,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Bernadene van der Velden"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar8.png"
               />
             );
@@ -794,9 +694,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Edithe Densell"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar9.png"
               />
             );
@@ -810,9 +708,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Emmalynne Sone"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar0.png"
               />
             );
@@ -826,9 +722,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Ardella Sapir"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar1.png"
               />
             );
@@ -842,9 +736,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Ilise Sailor"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar2.png"
               />
             );
@@ -858,9 +750,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Anita Olander"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar3.png"
               />
             );
@@ -874,9 +764,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Gerik Frisby"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar4.png"
               />
             );
@@ -890,9 +778,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Rayshell Marmion"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar5.png"
               />
             );
@@ -906,9 +792,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Brooks Grene"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar6.png"
               />
             );
@@ -922,9 +806,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Bev Dorey"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar7.png"
               />
             );
@@ -938,9 +820,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Vladimir Parres"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar8.png"
               />
             );
@@ -954,9 +834,7 @@ storiesOf('Components/GridList', module)
             return (
               <Image
                 alt="Really really really really really really really really really really long name"
-                borderRadius="circle"
-                height={128}
-                width={128}
+                sx={{ borderRadius: 'circle', height: 128, width: 128 }}
                 src="/avatar9.png"
               />
             );
