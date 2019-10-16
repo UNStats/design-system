@@ -1,24 +1,29 @@
 import React from 'react';
-import { Box, Flex, Text } from 'rebass';
-import { eventType } from '../../types';
+import { func, shape, string } from 'prop-types';
+import { Flex, Text } from 'rebass';
 import SmartLink from '../SmartLink';
 import Badge from '../Badge';
+
+export const eventType = shape({
+  type: string.isRequired,
+  title: func.isRequired,
+  date: string.isRequired,
+  duration: string.isRequired,
+  speakers: func.isRequired,
+  description: func,
+  href: string,
+});
 
 const UnlinkedEventPreview = ({ event, ...props }) => {
   const mb = event.description ? 3 : 0;
   return (
-    <Flex {...props} flexDirection="column">
-      <Box mb={2}>
-        <Badge>{event.type}</Badge>
-      </Box>
+    <Flex {...props} sx={{ flexDirection: 'column', alignItems: 'flex-start' }}>
+      <Badge text={event.type} mb={2} />
       {event.title()}
       {event.speakers()}
       <Text
         as="time"
-        color="text"
-        css="display: block;"
-        fontFamily="body"
-        mb={mb}
+        sx={{ color: 'text', display: 'block', fontFamily: 'body', mb }}
       >
         {`${event.date} (${event.duration})`}
       </Text>
@@ -34,7 +39,7 @@ UnlinkedEventPreview.propTypes = {
 const EventPreview = ({ event, ...props }) => {
   if (event.href) {
     return (
-      <SmartLink css="display: block;" {...props} href={event.href}>
+      <SmartLink css={{ display: 'block' }} {...props} href={event.href}>
         <UnlinkedEventPreview event={event} />
       </SmartLink>
     );

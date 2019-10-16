@@ -1,1 +1,1 @@
-export { default } from './EventPreview';
+export { default, eventType } from './EventPreview';

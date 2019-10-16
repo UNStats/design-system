@@ -13,7 +13,10 @@ storiesOf('Components/PostPreview', module)
         date: 'May 31, 2018',
         authors: function authors() {
           return (
-            <Text as="div" fontFamily="body" lineHeight="copy" mb={3}>
+            <Text
+              as="div"
+              sx={{ fontFamily: 'body', lineHeight: 'body', mb: 3 }}
+            >
               {[
                 'Willow Rangall',
                 'Suzy Cahan',
@@ -59,9 +62,7 @@ storiesOf('Components/PostPreview', module)
                     return (
                       <Image
                         alt="Willow Rangall"
-                        borderRadius="circle"
-                        height={64}
-                        width={64}
+                        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar0.png"
                       />
                     );
@@ -74,9 +75,7 @@ storiesOf('Components/PostPreview', module)
                     return (
                       <Image
                         alt="Suzy Cahan"
-                        borderRadius="circle"
-                        height={64}
-                        width={64}
+                        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar1.png"
                       />
                     );
@@ -89,9 +88,7 @@ storiesOf('Components/PostPreview', module)
                     return (
                       <Image
                         alt="Sandra Abramovici"
-                        borderRadius="circle"
-                        height={64}
-                        width={64}
+                        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar2.png"
                       />
                     );
@@ -104,9 +101,7 @@ storiesOf('Components/PostPreview', module)
                     return (
                       <Image
                         alt="Jan McKea"
-                        borderRadius="circle"
-                        height={64}
-                        width={64}
+                        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar3.png"
                       />
                     );
@@ -119,9 +114,7 @@ storiesOf('Components/PostPreview', module)
                     return (
                       <Image
                         alt="Ola Brunger"
-                        borderRadius="circle"
-                        height={64}
-                        width={64}
+                        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar4.png"
                       />
                     );
@@ -134,9 +127,7 @@ storiesOf('Components/PostPreview', module)
                     return (
                       <Image
                         alt="Ivette Rowlinson"
-                        borderRadius="circle"
-                        height={64}
-                        width={64}
+                        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar5.png"
                       />
                     );
@@ -149,9 +140,7 @@ storiesOf('Components/PostPreview', module)
                     return (
                       <Image
                         alt="Madeleine Stredwick"
-                        borderRadius="circle"
-                        height={64}
-                        width={64}
+                        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar6.png"
                       />
                     );
@@ -164,9 +153,7 @@ storiesOf('Components/PostPreview', module)
                     return (
                       <Image
                         alt="Lin Billson"
-                        borderRadius="circle"
-                        height={64}
-                        width={64}
+                        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar7.png"
                       />
                     );
@@ -179,9 +166,7 @@ storiesOf('Components/PostPreview', module)
                     return (
                       <Image
                         alt="Alfie Piborn"
-                        borderRadius="circle"
-                        height={64}
-                        width={64}
+                        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar8.png"
                       />
                     );
@@ -194,9 +179,7 @@ storiesOf('Components/PostPreview', module)
                     return (
                       <Image
                         alt="Garvy Bartlomiej"
-                        borderRadius="circle"
-                        height={64}
-                        width={64}
+                        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar9.png"
                       />
                     );
@@ -221,7 +204,10 @@ storiesOf('Components/PostPreview', module)
         date: 'May 31, 2018',
         authors: function authors() {
           return (
-            <Text as="div" fontFamily="body" lineHeight="copy" mb={3}>
+            <Text
+              as="div"
+              sx={{ fontFamily: 'body', lineHeight: 'body', mb: 3 }}
+            >
               {[
                 'Willow Rangall',
                 'Suzy Cahan',

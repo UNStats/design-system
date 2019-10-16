@@ -1,24 +1,40 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withKnobs, select } from '@storybook/addon-knobs';
+import { colors as themeColors } from '../../theme';
 import SmartLink from './SmartLink';
 
+// Add `inherit` to colors.
+const colors = [...Object.keys(themeColors), 'inherit'];
+
 storiesOf('Components/SmartLink', module)
-  .add('internal link', () => (
-    <SmartLink href="/internal-link">internal link</SmartLink>
-  ))
-  .add('external link', () => (
-    <SmartLink href="https://github.com/undataforum">external link</SmartLink>
-  ))
-  .add('matching pathname', () => (
-    <SmartLink href="/path/to/internal/page/" pathname="/path/to/internal/page">
-      internal link with matching pathname (not linked)
+  .addDecorator(withKnobs)
+  .add('default color', () => (
+    <SmartLink
+      sx={{ fontFamily: 'body' }}
+      href="https://github.com/undataforum"
+    >
+      default color
     </SmartLink>
   ))
-  .add('mismatching pathname', () => (
+  .add('custom color', () => (
     <SmartLink
-      href="/path/to/internal/page"
-      pathname="/path/to/another/internal/page"
+      sx={{ color: select('color', colors, 'secondary'), fontFamily: 'body' }}
+      href="https://github.com/undataforum"
     >
-      internal link with mismatching pathname (linked)
+      custom color
+    </SmartLink>
+  ))
+  .add('internal link', () => (
+    <SmartLink sx={{ fontFamily: 'body' }} href="/internal-link">
+      internal link
+    </SmartLink>
+  ))
+  .add('external link', () => (
+    <SmartLink
+      sx={{ fontFamily: 'body' }}
+      href="https://github.com/undataforum"
+    >
+      external link
     </SmartLink>
   ));

@@ -11,9 +11,7 @@ storiesOf('Components/ProfilePreview', module)
           return (
             <Image
               alt="Nance MacFadin"
-              borderRadius="circle"
-              height={128}
-              width={128}
+              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
               src="/avatar0.png"
             />
           );
@@ -23,11 +21,14 @@ storiesOf('Components/ProfilePreview', module)
         jobtitle: 'Help Desk Operator',
         organization: 'Schuster-Senger',
         badges: [
-          { text: 'Committee Member', href: '/committee', mode: 'red' },
+          {
+            text: 'Committee Member',
+            href: '/committee',
+          },
           {
             text: 'Keynote Speaker',
             href: '/keynote-speakers',
-            mode: 'yellow',
+            variant: 'secondary',
           },
         ],
       }}
@@ -41,9 +42,7 @@ storiesOf('Components/ProfilePreview', module)
           return (
             <Image
               alt="Nance MacFadin"
-              borderRadius="circle"
-              height={128}
-              width={128}
+              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
               src="/avatar0.png"
             />
           );
@@ -51,11 +50,14 @@ storiesOf('Components/ProfilePreview', module)
         name: 'Nance MacFadin',
         organization: 'Schuster-Senger',
         badges: [
-          { text: 'Committee Member', href: '/committee', mode: 'red' },
+          {
+            text: 'Committee Member',
+            href: '/committee',
+          },
           {
             text: 'Keynote Speaker',
             href: '/keynote-speakers',
-            mode: 'yellow',
+            variant: 'secondary',
           },
         ],
       }}
@@ -69,9 +71,7 @@ storiesOf('Components/ProfilePreview', module)
           return (
             <Image
               alt="Nance MacFadin"
-              borderRadius="circle"
-              height={128}
-              width={128}
+              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
               src="/avatar0.png"
             />
           );
@@ -79,11 +79,14 @@ storiesOf('Components/ProfilePreview', module)
         name: 'Nance MacFadin',
         jobtitle: 'Help Desk Operator',
         badges: [
-          { text: 'Committee Member', href: '/committee', mode: 'red' },
+          {
+            text: 'Committee Member',
+            href: '/committee',
+          },
           {
             text: 'Keynote Speaker',
             href: '/keynote-speakers',
-            mode: 'yellow',
+            variant: 'secondary',
           },
         ],
       }}
@@ -97,20 +100,21 @@ storiesOf('Components/ProfilePreview', module)
           return (
             <Image
               alt="Nance MacFadin"
-              borderRadius="circle"
-              height={128}
-              width={128}
+              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
               src="/avatar0.png"
             />
           );
         },
         name: 'Nance MacFadin',
         badges: [
-          { text: 'Committee Member', href: '/committee', mode: 'red' },
+          {
+            text: 'Committee Member',
+            href: '/committee',
+          },
           {
             text: 'Keynote Speaker',
             href: '/keynote-speakers',
-            mode: 'yellow',
+            variant: 'secondary',
           },
         ],
       }}
@@ -124,9 +128,7 @@ storiesOf('Components/ProfilePreview', module)
           return (
             <Image
               alt="Clerc Edis"
-              borderRadius="circle"
-              height={128}
-              width={128}
+              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
               src="/avatar1.png"
             />
           );
@@ -135,11 +137,11 @@ storiesOf('Components/ProfilePreview', module)
         jobtitle: 'Staff Scientist',
         organization: 'Ritchie Inc',
         badges: [
-          { text: 'Committee Member', href: '/committee', mode: 'red' },
+          { text: 'Committee Member', href: '/committee' },
           {
             text: 'Keynote Speaker',
             href: '/keynotes',
-            mode: 'yellow',
+            variant: 'secondary',
           },
         ],
       }}
@@ -154,9 +156,7 @@ storiesOf('Components/ProfilePreview', module)
           return (
             <Image
               alt="Clifford Skipperbottom"
-              borderRadius="circle"
-              height={128}
-              width={128}
+              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
               src="/avatar2.png"
             />
           );
@@ -165,11 +165,11 @@ storiesOf('Components/ProfilePreview', module)
         jobtitle: 'Senior Financial Analyst',
         organization: 'Block, Bruen and Gerlach',
         badges: [
-          { text: 'Committee Member', href: '/committee', mode: 'red' },
+          { text: 'Committee Member', href: '/committee' },
           {
             text: 'Keynote Speaker',
             href: '/keynotes',
-            mode: 'yellow',
+            variant: 'secondary',
           },
         ],
       }}
@@ -184,9 +184,7 @@ storiesOf('Components/ProfilePreview', module)
           return (
             <Image
               alt="Willow Rangall"
-              borderRadius="circle"
-              height={64}
-              width={64}
+              sx={{ borderRadius: 'circle', height: 64, width: 64 }}
               src="/avatar3.png"
             />
           );
@@ -202,9 +200,7 @@ storiesOf('Components/ProfilePreview', module)
           return (
             <Image
               alt="Suzy Cahan"
-              borderRadius="circle"
-              height={128}
-              width={128}
+              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
               src="/avatar4.png"
             />
           );
@@ -221,9 +217,11 @@ storiesOf('Components/ProfilePreview', module)
           return (
             <Image
               alt="Sandra Abramovici"
-              borderRadius="circle"
-              height={[32, 64, 128]}
-              width={[32, 64, 128]}
+              sx={{
+                borderRadius: 'circle',
+                height: [32, 64, 128],
+                width: [32, 64, 128],
+              }}
               src="/avatar5.png"
             />
           );
@@ -240,9 +238,7 @@ storiesOf('Components/ProfilePreview', module)
           return (
             <Image
               alt="Jan McKea"
-              borderRadius="circle"
-              height={128}
-              width={128}
+              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
               src="/avatar6.png"
             />
           );
@@ -260,9 +256,7 @@ storiesOf('Components/ProfilePreview', module)
           return (
             <Image
               alt="Really really really really really really really really really really long name"
-              borderRadius="circle"
-              height={128}
-              width={128}
+              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
               src="/avatar7.png"
             />
           );
@@ -274,11 +268,11 @@ storiesOf('Components/ProfilePreview', module)
         organization:
           'Really really really really really really really really really really long organization',
         badges: [
-          { text: 'Committee Member', href: '/committee', mode: 'red' },
+          { text: 'Committee Member', href: '/committee' },
           {
             text: 'Keynote Speaker',
             href: '/keynote-speakers',
-            mode: 'yellow',
+            variant: 'secondary',
           },
         ],
       }}

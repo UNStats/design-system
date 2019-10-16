@@ -5,10 +5,10 @@ import { responsiveType } from '../../types';
 const CloseIcon = ({ ...props }) => (
   <Box
     {...props}
-    css={`
-      vertical-align: middle;
-      display: inline-block;
-    `}
+    css={{
+      verticalAlign: 'middle',
+      display: 'inline-block',
+    }}
   >
     <svg viewBox="0 0 12 16" width="100%" fill="currentColor" role="img">
       <title>Close icon</title>
