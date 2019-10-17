@@ -25,29 +25,28 @@
   },
   "dependencies": {
     "prop-types": "^15.7.2",
-    "styled-system": "^5.0.16"
+    "rebass": "^4.0.6"
   },
   "peerDependencies": {
     "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "styled-components": "^4.2.0"
+    "react-dom": "^16.8.4"
   },
   "devDependencies": {
     "@babel/cli": "7.6.2",
     "@babel/core": "7.6.2",
     "@babel/preset-env": "7.6.2",
     "@babel/preset-react": "7.0.0",
+    "@emotion/core": "^10.0.21",
     "@storybook/addon-actions": "5.2.1",
     "@storybook/addon-console": "1.2.1",
     "@storybook/addon-storysource": "5.2.1",
     "@storybook/react": "5.2.1",
-    "@storybook/theming": "5.2.1",
+    "@undataforum/components": "^0.42.0",
     "babel-loader": "8.0.6",
-    "babel-plugin-styled-components": "1.10.6",
     "cross-env": "6.0.3",
+    "emotion-theming": "^10.0.19",
     "react": "16.10.2",
-    "react-dom": "16.10.2",
-    "styled-components": "4.3.2"
+    "react-dom": "16.10.2"
   },
   "publishConfig": {
     "access": "public"

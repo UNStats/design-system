@@ -1,15 +1,7 @@
 import React from 'react';
 import { bool } from 'prop-types';
-import styled from 'styled-components';
-import { compose, layout, space } from 'styled-system';
+import { Box } from 'rebass';
 import { responsiveType } from '../types';
-
-const Box = styled.div(
-  compose(
-    layout,
-    space
-  )
-);
 
 const Logo = ({ monochrome, height, width, ...props }) => {
   // Determine width and height props for SVG.
@@ -52,9 +44,9 @@ const Logo = ({ monochrome, height, width, ...props }) => {
   return (
     <Box
       {...props}
-      css="
-        display: inline-block;
-      "
+      css={{
+        display: 'inline-block',
+      }}
       height={height}
       width={width}
     >

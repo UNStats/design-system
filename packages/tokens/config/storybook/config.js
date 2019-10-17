@@ -1,13 +1,30 @@
-import { configure, addParameters } from '@storybook/react';
+import React from 'react';
+import { configure, addDecorator, addParameters } from '@storybook/react';
+import { Global } from '@emotion/core';
+import { ThemeProvider } from 'emotion-theming';
 import '@storybook/addon-console';
-import storybookTheme from './theme';
+import { theme } from '@undataforum/components';
 
 addParameters({
   options: {
     panelPosition: 'bottom',
-    theme: storybookTheme,
   },
 });
+
+// Add decorators before require.context:
+// https://github.com/storybooks/storybook/issues/3246
+addDecorator(story => (
+  <ThemeProvider theme={theme}>
+    <>
+      <Global
+        styles={{
+          body: { margin: 0 },
+        }}
+      />
+      {story()}
+    </>
+  </ThemeProvider>
+));
 
 function loadStories() {
   const req = require.context('../../src', true, /\.stories\.js$/);
