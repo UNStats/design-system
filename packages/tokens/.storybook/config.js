@@ -2,14 +2,12 @@ import React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { Global } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
-import { theme } from '../../src';
 import '@storybook/addon-console';
-import storybookTheme from './theme';
+import { theme } from '@undataforum/components';
 
 addParameters({
   options: {
     panelPosition: 'bottom',
-    theme: storybookTheme,
   },
 });
 
@@ -29,12 +27,7 @@ addDecorator(story => (
 ));
 
 function loadStories() {
-  // Components.
-  let req = require.context('../../src/components', true, /\.stories\.js$/);
-  req.keys().forEach(filename => req(filename));
-
-  // Icons.
-  req = require.context('../../src/icons', true, /\.stories\.js$/);
+  const req = require.context('../src', true, /\.stories\.js$/);
   req.keys().forEach(filename => req(filename));
 }
 
