@@ -36,7 +36,7 @@
     "@babel/core": "7.6.2",
     "@babel/preset-env": "7.6.2",
     "@babel/preset-react": "7.0.0",
-    "@emotion/core": "^10.0.21",
+    "@emotion/core": "10.0.21",
     "@storybook/addon-actions": "5.2.1",
     "@storybook/addon-console": "1.2.1",
     "@storybook/addon-storysource": "5.2.1",
@@ -44,7 +44,7 @@
     "@undataforum/components": "^0.42.0",
     "babel-loader": "8.0.6",
     "cross-env": "6.0.3",
-    "emotion-theming": "^10.0.19",
+    "emotion-theming": "10.0.19",
     "react": "16.10.2",
     "react-dom": "16.10.2"
   },
