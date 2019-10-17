@@ -4,6 +4,7 @@ import { Global } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
 import '@storybook/addon-console';
 import { theme } from '@undataforum/components';
+import { withA11y } from '@storybook/addon-a11y';
 
 addParameters({
   options: {
@@ -25,6 +26,7 @@ addDecorator(story => (
     </>
   </ThemeProvider>
 ));
+addDecorator(withA11y);
 
 function loadStories() {
   const req = require.context('../src', true, /\.stories\.js$/);
