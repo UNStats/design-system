@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.5.0
+
+### Minor Changes
+
+- d8c9b47: Remove @undataforum/components dependency from @undataforum/tokens #132
+
 ## 0.4.1
 
 ### Patch Changes
