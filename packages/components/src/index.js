@@ -1,4 +1,4 @@
-export { Flex, Box, Heading, Text } from 'rebass';
+export { Box, Button, Flex, Heading, Text } from 'rebass';
 export {
   Badge,
   Container,
