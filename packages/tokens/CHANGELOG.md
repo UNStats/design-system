@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.4.1
+
+### Patch Changes
+
+- Updated dependencies [b2790d6]
+  - @undataforum/components@0.44.0
+
 ## 0.4.0
 
 ### Minor Changes
