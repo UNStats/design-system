@@ -17,7 +17,7 @@
     "styled-system"
   ],
   "scripts": {
-    "start": "start-storybook -s ./static",
+    "start": "start-storybook -p 8000 -s ./static",
     "now-build": "rm -rf ./storybook-static && build-storybook -s ./static",
     "build": "rm -rf ./dist && cross-env NODE_ENV=production babel ./src -d ./dist --ignore 'src/**/*.stories.js'",
     "purge": "rm -rf ./node_modules",
@@ -42,7 +42,6 @@
     "@storybook/addon-console": "1.2.1",
     "@storybook/addon-storysource": "5.2.4",
     "@storybook/react": "5.2.4",
-    "@undataforum/components": "^0.44.0",
     "babel-loader": "8.0.6",
     "cross-env": "6.0.3",
     "emotion-theming": "10.0.19",
