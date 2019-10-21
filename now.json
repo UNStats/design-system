@@ -1,12 +1,4 @@
 {
   "version": 2,
-  "scope": "undataforum",
-  "builds": [
-    {
-      "src": "packages/components/package.json",
-      "use": "@now/static-build",
-      "config": { "distDir": "storybook-static" }
-    }
-  ],
-  "routes": [{ "src": "/(.*)", "dest": "/packages/components/$1" }]
+  "scope": "undataforum"
 }
