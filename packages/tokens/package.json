@@ -18,10 +18,9 @@
   ],
   "scripts": {
     "start": "start-storybook -p 8000 -s ./static",
-    "now-build": "rm -rf ./storybook-static && build-storybook -s ./static",
     "build": "rm -rf ./dist && cross-env NODE_ENV=production babel ./src -d ./dist --ignore 'src/**/*.stories.js'",
     "purge": "rm -rf ./node_modules",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "yarn run build"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
