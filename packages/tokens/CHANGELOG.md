@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.5.1
+
+### Patch Changes
+
+- 1b4045a: Simplify config for deploying to Zeit Now
+
 ## 0.5.0
 
 ### Minor Changes
