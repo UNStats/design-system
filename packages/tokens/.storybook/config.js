@@ -1,7 +1,4 @@
-import React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
-import { Global } from '@emotion/core';
-import { ThemeProvider } from 'emotion-theming';
 import { withA11y } from '@storybook/addon-a11y';
 
 addParameters({

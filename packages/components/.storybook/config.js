@@ -1,9 +1,9 @@
 import React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
-import { Global } from '@emotion/core';
-import { ThemeProvider } from 'emotion-theming';
+import { ThemeProvider } from 'theme-ui';
 import { theme } from '../src';
 import { withA11y } from '@storybook/addon-a11y';
+import { Global } from '@emotion/core';
 
 addParameters({
   options: {

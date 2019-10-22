@@ -35,13 +35,11 @@
     "@babel/core": "7.6.4",
     "@babel/preset-env": "7.6.3",
     "@babel/preset-react": "7.6.3",
-    "@emotion/core": "10.0.21",
     "@storybook/addon-a11y": "5.2.5",
     "@storybook/addon-storysource": "5.2.5",
     "@storybook/react": "5.2.5",
     "babel-loader": "8.0.6",
     "cross-env": "6.0.3",
-    "emotion-theming": "10.0.19",
     "react": "16.10.2",
     "react-dom": "16.10.2"
   },

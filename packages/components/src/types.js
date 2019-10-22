@@ -1,12 +1,4 @@
-import {
-  arrayOf,
-  func,
-  number,
-  oneOf,
-  oneOfType,
-  shape,
-  string,
-} from 'prop-types';
+import { arrayOf, number, oneOf, oneOfType, shape, string } from 'prop-types';
 
 // Generic types.
 export const responsiveNumberType = oneOfType([number, arrayOf(number)]);
@@ -36,10 +28,3 @@ export const colorType = oneOf([
   'muted',
   'inherit',
 ]);
-
-export const themeType = shape({
-  links: shape({
-    internal: oneOfType([func, string]),
-    external: oneOfType([func, string]),
-  }),
-});
