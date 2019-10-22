@@ -1,21 +1,15 @@
 import React from 'react';
 import { node, oneOf, string } from 'prop-types';
 import { Link } from '@theme-ui/components';
-import { withTheme } from 'emotion-theming';
-import { themeType } from '../../types';
+import { useThemeUI } from 'theme-ui';
 
 const variants = ['branded', 'transparent', 'primary', 'secondary', 'inverse'];
 const variantType = oneOf(variants);
 
 // Default color is primary (inherited from Link).
-const SmartLink = ({
-  children,
-  href,
-  variant = 'default',
-  theme,
-  ...props
-}) => {
+const SmartLink = ({ children, href, variant = 'default', ...props }) => {
   const internal = /^\/(?!\/)/.test(href);
+  const { theme } = useThemeUI();
   if (internal) {
     return (
       <Link {...props} as={theme.link.internal} href={href} variant={variant}>
@@ -34,7 +28,6 @@ SmartLink.propTypes = {
   children: node.isRequired,
   href: string.isRequired,
   variant: variantType,
-  theme: themeType.isRequired,
 };
 
-export default withTheme(SmartLink);
+export default SmartLink;
