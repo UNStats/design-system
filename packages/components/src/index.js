@@ -1,4 +1,4 @@
-export { Box, Button, Flex, Heading, Text } from 'rebass';
+export { Box, Button, Flex, Heading, Text } from '@theme-ui/components';
 export {
   Badge,
   Container,

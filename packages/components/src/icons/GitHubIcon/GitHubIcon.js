@@ -1,13 +1,14 @@
 import React from 'react';
-import { Box } from 'rebass';
+import { Box } from '@theme-ui/components';
 import { responsiveType } from '../../types';
 
-const GitHubIcon = ({ ...props }) => (
+const GitHubIcon = ({ width, ...props }) => (
   <Box
     {...props}
-    css={{
+    sx={{
       verticalAlign: 'middle',
       display: 'inline-block',
+      width,
     }}
   >
     <svg viewBox="0 0 24 24" width="100%" fill="currentColor" role="img">

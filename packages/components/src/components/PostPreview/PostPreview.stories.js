@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Image, Text } from 'rebass';
+import { Image, Text } from '@theme-ui/components';
 import GridList from '../GridList';
 import ProfilePreview from '../ProfilePreview';
 import PostPreview from './PostPreview';

@@ -1,13 +1,14 @@
 import React from 'react';
-import { Box } from 'rebass';
+import { Box } from '@theme-ui/components';
 import { responsiveType } from '../../types';
 
-const CloseIcon = ({ ...props }) => (
+const CloseIcon = ({ width, ...props }) => (
   <Box
     {...props}
-    css={{
+    sx={{
       verticalAlign: 'middle',
       display: 'inline-block',
+      width,
     }}
   >
     <svg viewBox="0 0 12 16" width="100%" fill="currentColor" role="img">

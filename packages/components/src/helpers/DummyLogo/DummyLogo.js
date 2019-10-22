@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from 'rebass';
+import { Box } from '@theme-ui/components';
 import { responsiveType } from '../../types';
 
 const DummyLogo = ({ height, width, ...props }) => {

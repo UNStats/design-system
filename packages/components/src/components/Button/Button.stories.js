@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Button } from 'rebass';
+import { Button } from '@theme-ui/components';
 
 storiesOf('Components/Button', module)
   .add('default', () => <Button m={2}>default (primary)</Button>)

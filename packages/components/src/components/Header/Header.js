@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { arrayOf, func, string, oneOf } from 'prop-types';
-import { Box, Button, Flex, Heading } from 'rebass';
+import { Box, Button, Flex, Heading } from '@theme-ui/components';
 import { linkType, responsiveType } from '../../types';
 import { CloseIcon, MenuIcon } from '../../icons';
 import Container from '../Container';
@@ -40,8 +40,8 @@ const Header = ({
           {logo && (
             <SmartLink
               css={{ height: '100%', flexShrink: 0 }}
-              color="inherit"
               href="/"
+              variant={variant}
               mr={[2, 3]}
             >
               {logo()}
@@ -50,12 +50,12 @@ const Header = ({
           {title && (
             <SmartLink
               sx={{
-                color: 'inherit',
                 flexGrow: 0,
                 flexShrink: 0,
                 mr: [3, 4, 5],
               }}
               href="/"
+              variant={variant}
             >
               <Heading sx={{ whiteSpace: 'nowrap}', fontSize: [4, 5, 6] }}>
                 {title}
@@ -103,7 +103,6 @@ const Header = ({
               <SmartLink
                 sx={{
                   display: ['flex', 'none'],
-                  color: 'inherit',
                   fontFamily: 'body',
                   fontSize: [4, 3, 4],
                   fontWeight: 'bold',
@@ -112,6 +111,7 @@ const Header = ({
                 }}
                 href="/"
                 key="/"
+                variant={variant}
               >
                 Home
               </SmartLink>
@@ -128,6 +128,7 @@ const Header = ({
                   }}
                   key={href}
                   href={href}
+                  variant={variant}
                 >
                   {text}
                 </SmartLink>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { func, shape, string } from 'prop-types';
-import { Flex, Heading, Text } from 'rebass';
+import { Flex, Heading, Text } from '@theme-ui/components';
 import { responsiveNumberType } from '../../types';
 import SmartLink from '../SmartLink';
 
@@ -17,7 +17,7 @@ const UnlinkedPostPreview = ({ post, fontSize, ...props }) => {
   // Use flexDirection prop instead of sx prop to ensure it cannot be overridden.
   // Set m={0} in Heading due to https://github.com/styled-system/styled-system/issues/644.
   return (
-    <Flex {...props} flexDirection="column">
+    <Flex {...props} sx={{ flexDirection: 'column' }}>
       <Heading
         as="h1"
         sx={{

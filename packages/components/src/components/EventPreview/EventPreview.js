@@ -1,6 +1,6 @@
 import React from 'react';
 import { func, shape, string } from 'prop-types';
-import { Flex, Text } from 'rebass';
+import { Flex, Text } from '@theme-ui/components';
 import SmartLink from '../SmartLink';
 import Badge from '../Badge';
 
@@ -39,7 +39,7 @@ UnlinkedEventPreview.propTypes = {
 const EventPreview = ({ event, ...props }) => {
   if (event.href) {
     return (
-      <SmartLink css={{ display: 'block' }} {...props} href={event.href}>
+      <SmartLink {...props} css={{ display: 'block' }} href={event.href}>
         <UnlinkedEventPreview event={event} />
       </SmartLink>
     );
