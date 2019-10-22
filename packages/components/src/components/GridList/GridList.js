@@ -1,6 +1,6 @@
 import React from 'react';
 import { arrayOf, func, object } from 'prop-types';
-import { Box } from 'rebass';
+import { Box } from '@theme-ui/components';
 import {
   alignType,
   responsiveNumberType,
@@ -32,6 +32,8 @@ const GridList = ({
         gridGap,
         gridTemplateColumns,
         justifyContent,
+        // Stretch to full width in scenarios where GridList is used inside FlexBox.
+        alignSelf: 'stretch',
       }}
     >
       {values.map(value => render(value))}

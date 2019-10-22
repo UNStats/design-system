@@ -1,6 +1,6 @@
 import React from 'react';
 import { arrayOf, func, string, oneOf } from 'prop-types';
-import { Flex, Heading } from 'rebass';
+import { Flex, Heading, Text } from '@theme-ui/components';
 import { linkType } from '../../types';
 import Container from '../Container';
 import FlexList from '../FlexList';
@@ -18,16 +18,20 @@ const Footer = ({
     <Container {...props} maxWidth="wide" px={0}>
       <Flex
         as="footer"
-        sx={{ flexDirection: 'column', alignItems: 'center', p: [2, 3] }}
-        variant={`footer.${variant}`}
+        sx={{
+          flexDirection: 'column',
+          alignItems: 'center',
+          p: [2, 3],
+          variant: `footer.${variant}`,
+        }}
       >
         {logo && (
-          <SmartLink color="inherit" href="/" height="100%" mb={[1, 2]}>
+          <SmartLink href="/" variant={variant} height="100%" mb={[1, 2]}>
             {logo()}
           </SmartLink>
         )}
         {title && (
-          <SmartLink color="inherit" href="/">
+          <SmartLink href="/" variant={variant}>
             <Heading
               sx={{
                 whiteSpace: 'nowrap',
@@ -44,14 +48,13 @@ const Footer = ({
         <FlexList
           render={link => (
             <SmartLink
-              color="inherit"
               href={link.href}
               key={link.href}
-              fontFamily="body"
               px={[2, 3]}
               py={[1, 2]}
+              variant={variant}
             >
-              {link.text}
+              <Text sx={{ fontFamily: 'body' }}>{link.text}</Text>
             </SmartLink>
           )}
           values={links}

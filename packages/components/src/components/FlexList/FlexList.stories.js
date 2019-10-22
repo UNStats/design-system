@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Image } from 'rebass';
+import { Image } from '@theme-ui/components';
 import Badge from '../Badge';
 import ProfilePreview from '../ProfilePreview';
 import FlexList from './FlexList';

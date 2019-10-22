@@ -1,6 +1,6 @@
 import React from 'react';
 import { bool } from 'prop-types';
-import { Box } from 'rebass';
+import { Box } from '@theme-ui/components';
 import { responsiveType } from '../types';
 
 const Logo = ({ monochrome, height, width, ...props }) => {
@@ -44,11 +44,11 @@ const Logo = ({ monochrome, height, width, ...props }) => {
   return (
     <Box
       {...props}
-      css={{
+      sx={{
         display: 'inline-block',
+        height,
+        width,
       }}
-      height={height}
-      width={width}
     >
       <svg viewBox="0 0 337 192" height={svgHeight} width={svgWidth}>
         <path

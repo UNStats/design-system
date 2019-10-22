@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Text } from 'rebass';
+import { Text } from '@theme-ui/components';
 import GitHubIcon from './GitHubIcon';
 
 storiesOf('Icons/GitHubIcon', module)

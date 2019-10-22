@@ -1,11 +1,11 @@
 import React from 'react';
 import { arrayOf, func, object } from 'prop-types';
-import { Flex } from 'rebass';
+import { Flex } from '@theme-ui/components';
 
-// Use Styled System props `flexWrap` and `justifyContent` instead of `sx`.
-// See https://rebassjs.org/extending/#order-of-styles.
+// flexWrap and justifyContent cannot be overridden.
+// The underlying Box component accepts only color and space props.
 const FlexList = ({ render, values, ...props }) => (
-  <Flex {...props} flexWrap="wrap" justifyContent="center">
+  <Flex {...props} sx={{ flexWrap: 'wrap', justifyContent: 'center' }}>
     {values.map(value => render(value))}
   </Flex>
 );

@@ -1,4 +1,4 @@
-import preset from '@rebass/preset';
+import preset from '@theme-ui/preset-base';
 import merge from 'lodash.merge';
 import { NewTabLink } from './components';
 
@@ -60,10 +60,11 @@ const pairings = {
   },
 };
 
-// https://github.com/rebassjs/rebass/blob/master/packages/preset/src/index.js.
+// https://github.com/system-ui/theme-ui/tree/master/packages/preset-base
 export default merge(preset, {
   // Compatible with https://theme-ui.com/theme-spec/#color.
   colors,
+  pairings,
 
   // Layout.
   breakpoints: ['30em', '60em'],
@@ -97,12 +98,37 @@ export default merge(preset, {
     '3rem',
   ],
 
+  lineHeights: {
+    body: 1.5,
+    heading: 1.25,
+  },
+
   // Styling.
   borders: [0, '1px solid', '2px solid', '3px solid'],
 
+  radii: {
+    default: 4,
+    circle: 99999,
+  },
+
   buttons: {
+    primary: {
+      fontSize: 2,
+      fontWeight: 'bold',
+      color: 'background',
+      bg: 'primary',
+      borderRadius: 'default',
+    },
     outline: {
+      variant: 'buttons.primary',
+      color: 'primary',
+      bg: 'transparent',
       boxShadow: '0 0 0 2px inset',
+    },
+    secondary: {
+      variant: 'buttons.primary',
+      color: 'background',
+      bg: 'secondary',
     },
   },
 
@@ -125,9 +151,38 @@ export default merge(preset, {
     inverse: pairings.inverse,
   },
 
-  variants: {
-    // Default variant for Link.
-    link: {
+  link: {
+    // Default internal link: normal link element.
+    internal: 'a',
+    // Default external link: open in new tab.
+    external: NewTabLink,
+  },
+
+  links: {
+    default: {
+      variant: 'styles.a',
+      color: 'primary',
+    },
+    inverse: {
+      variant: 'styles.a',
+      color: pairings.inverse.color,
+    },
+    primary: {
+      variant: 'styles.a',
+      color: pairings.primary.color,
+    },
+    secondary: {
+      variant: 'styles.a',
+      color: pairings.secondary.color,
+    },
+    branded: {
+      variant: 'styles.a',
+      color: pairings.branded.color,
+    },
+  },
+
+  styles: {
+    a: {
       textDecoration: 'none',
       transition: 'all 0.2s ease-out',
       '&:hover': {
@@ -135,12 +190,5 @@ export default merge(preset, {
         transition: 'all 0.2s ease-in',
       },
     },
-  },
-
-  links: {
-    // Default internal links are just normal link elements.
-    internal: 'a',
-    // Default external links open in new tab.
-    external: NewTabLink,
   },
 });

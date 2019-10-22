@@ -1,6 +1,6 @@
 import React from 'react';
 import { arrayOf, func, shape, string } from 'prop-types';
-import { Flex, Text } from 'rebass';
+import { Flex, Text } from '@theme-ui/components';
 import { alignType, responsiveNumberType } from '../../types';
 import FlexList from '../FlexList';
 import SmartLink from '../SmartLink';
@@ -34,7 +34,7 @@ const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => {
   }
 
   return (
-    <Flex {...props} flexDirection="column" alignItems={alignItems}>
+    <Flex {...props} sx={{ flexDirection: 'column', alignItems }}>
       {profile.avatar()}
       {profile.honorific && (
         <Text
@@ -92,7 +92,6 @@ const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => {
       )}
       {profile.badges && (
         <FlexList
-          sx={{ mt: 3 }}
           render={badge => {
             // If entire ProfilePreview is linked already, do not link badges.
             if (profile.href || !badge.href) {
@@ -126,6 +125,7 @@ const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => {
             );
           }}
           values={profile.badges}
+          mt={3}
         />
       )}
     </Flex>

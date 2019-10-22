@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Heading, Image, Text } from 'rebass';
+import { Heading, Image, Text } from '@theme-ui/components';
 import GridList from '../GridList';
 import ProfilePreview from '../ProfilePreview';
 import EventPreview from './EventPreview';
@@ -12,7 +12,7 @@ storiesOf('Components/EventPreview', module)
         type: 'Webinar',
         title() {
           return (
-            <Heading as="h1" mb={3}>
+            <Heading as="h1" sx={{ mb: 3 }}>
               Vestibulum proin eu mi nulla ac enim in tempor turpis
             </Heading>
           );
@@ -21,7 +21,10 @@ storiesOf('Components/EventPreview', module)
         duration: '60 minutes',
         speakers() {
           return (
-            <Text as="div" fontFamily="body" lineHeight="body" mb={3}>
+            <Text
+              as="div"
+              sx={{ fontFamily: 'body', lineHeight: 'body', mb: 3 }}
+            >
               {['Willow Rangall', 'Suzy Cahan'].join(', ')}
             </Text>
           );
@@ -36,7 +39,7 @@ storiesOf('Components/EventPreview', module)
         type: 'Webinar',
         title() {
           return (
-            <Heading as="h1" color="text" mt={0} mb={3}>
+            <Heading as="h1" sx={{ color: 'text', mt: 0, mb: 3 }}>
               Vestibulum proin eu mi nulla ac enim in tempor turpis
             </Heading>
           );
@@ -46,7 +49,6 @@ storiesOf('Components/EventPreview', module)
         speakers() {
           return (
             <GridList
-              alignSelf="stretch"
               align="left"
               gridGap={2}
               gridTemplateColumns="repeat(auto-fit, 96px)"
