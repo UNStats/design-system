@@ -29,6 +29,10 @@ storiesOf('Components/EventPreview', module)
             </Text>
           );
         },
+        links: {
+          page: '/events/vestibulum-proin-eu',
+          registration: '/register',
+        },
       }}
       m={2}
     />
@@ -73,6 +77,7 @@ storiesOf('Components/EventPreview', module)
                     );
                   },
                   name: 'Willow Rangall',
+                  href: '/profiles/willow-rangall',
                 },
                 {
                   id: '561285d3-4eed-473c-baba-6b3564f4e6a7',
@@ -86,6 +91,7 @@ storiesOf('Components/EventPreview', module)
                     );
                   },
                   name: 'Suzy Cahan',
+                  href: '/profiles/suzy-cahan',
                 },
                 {
                   id: '453d9d8a-b1e6-4cac-9fdd-b6c354fa3262',
@@ -99,6 +105,7 @@ storiesOf('Components/EventPreview', module)
                     );
                   },
                   name: 'Sandra Abramovici',
+                  href: '/profiles/sandra-abramovici',
                 },
               ]}
               mb={3}
@@ -120,7 +127,9 @@ storiesOf('Components/EventPreview', module)
             </Text>
           );
         },
-        href: '/2018/05/31/slug',
+        links: {
+          registration: '/register',
+        },
       }}
       m={2}
     />
