@@ -1,32 +1,16 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
-import { colors as themeColors } from '../../theme';
-import SmartLink from './SmartLink';
-
-// Add `inherit` to colors.
-const colors = [...Object.keys(themeColors), 'inherit'];
+import SmartLink, { variants } from './SmartLink';
 
 storiesOf('Components/SmartLink', module)
   .addDecorator(withKnobs)
-  .add('default color', () => (
+  .add('internal link', () => (
     <SmartLink
       sx={{ fontFamily: 'body' }}
-      href="https://github.com/undataforum"
+      href="/internal-link"
+      variant={select('variant', variants, 'branded')}
     >
-      default color
-    </SmartLink>
-  ))
-  .add('custom color', () => (
-    <SmartLink
-      sx={{ color: select('color', colors, 'secondary'), fontFamily: 'body' }}
-      href="https://github.com/undataforum"
-    >
-      custom color
-    </SmartLink>
-  ))
-  .add('internal link', () => (
-    <SmartLink sx={{ fontFamily: 'body' }} href="/internal-link">
       internal link
     </SmartLink>
   ))
@@ -34,6 +18,7 @@ storiesOf('Components/SmartLink', module)
     <SmartLink
       sx={{ fontFamily: 'body' }}
       href="https://github.com/undataforum"
+      variant={select('variant', variants, 'branded')}
     >
       external link
     </SmartLink>

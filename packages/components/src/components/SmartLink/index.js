@@ -1,1 +1,1 @@
-export { default } from './SmartLink';
+export { default, linkType } from './SmartLink';
