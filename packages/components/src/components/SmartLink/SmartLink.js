@@ -1,13 +1,10 @@
 import React from 'react';
-import { node, oneOf, string } from 'prop-types';
+import { node, oneOf, shape, string } from 'prop-types';
 import { Link } from '@theme-ui/components';
 import { useThemeUI } from 'theme-ui';
 
-const variants = ['branded', 'transparent', 'primary', 'secondary', 'inverse'];
-const variantType = oneOf(variants);
-
 // Default color is primary (inherited from Link).
-const SmartLink = ({ children, href, variant = 'default', ...props }) => {
+const SmartLink = ({ children, href, variant = 'branded', ...props }) => {
   const internal = /^\/(?!\/)/.test(href);
   const { theme } = useThemeUI();
   if (internal) {
@@ -23,6 +20,21 @@ const SmartLink = ({ children, href, variant = 'default', ...props }) => {
     </Link>
   );
 };
+
+export const variants = [
+  'branded',
+  'transparent',
+  'primary',
+  'secondary',
+  'inverse',
+];
+
+const variantType = oneOf(variants);
+
+export const linkType = shape({
+  text: string.isRequired,
+  href: string.isRequired,
+});
 
 SmartLink.propTypes = {
   children: node.isRequired,

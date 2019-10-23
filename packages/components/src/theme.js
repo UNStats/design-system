@@ -30,10 +30,6 @@ const pairings = {
     color: 'text',
     bg: 'background',
   },
-  inverse: {
-    color: 'background',
-    bg: 'text',
-  },
   branded: {
     color: 'primary',
     bg: 'background',
@@ -50,13 +46,13 @@ const pairings = {
     color: 'background',
     bg: 'secondary',
   },
+  inverse: {
+    color: 'background',
+    bg: 'text',
+  },
   accent: {
     color: 'background',
     bg: 'accent',
-  },
-  muted: {
-    color: 'text',
-    bg: 'muted',
   },
 };
 
@@ -159,13 +155,13 @@ export default merge(preset, {
   },
 
   links: {
-    default: {
+    branded: {
       variant: 'styles.a',
-      color: 'primary',
+      color: pairings.branded.color,
     },
-    inverse: {
+    transparent: {
       variant: 'styles.a',
-      color: pairings.inverse.color,
+      color: pairings.transparent.color,
     },
     primary: {
       variant: 'styles.a',
@@ -175,9 +171,9 @@ export default merge(preset, {
       variant: 'styles.a',
       color: pairings.secondary.color,
     },
-    branded: {
+    inverse: {
       variant: 'styles.a',
-      color: pairings.branded.color,
+      color: pairings.inverse.color,
     },
   },
 

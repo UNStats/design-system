@@ -1,6 +1,7 @@
-import { arrayOf, number, oneOf, oneOfType, shape, string } from 'prop-types';
+import { arrayOf, number, oneOf, oneOfType, string } from 'prop-types';
 
-// Generic types.
+export const alignType = oneOf(['left', 'center', 'right']);
+
 export const responsiveNumberType = oneOfType([number, arrayOf(number)]);
 export const responsiveStringType = oneOfType([string, arrayOf(string)]);
 export const responsiveType = oneOfType([
@@ -8,23 +9,4 @@ export const responsiveType = oneOfType([
   arrayOf(number),
   string,
   arrayOf(string),
-]);
-
-// Specific types.
-
-export const alignType = oneOf(['left', 'center', 'right']);
-
-export const linkType = shape({
-  text: string.isRequired,
-  href: string.isRequired,
-});
-
-export const colorType = oneOf([
-  'text',
-  'background',
-  'primary',
-  'secondary',
-  'accent',
-  'muted',
-  'inherit',
 ]);

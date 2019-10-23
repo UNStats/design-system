@@ -1,10 +1,9 @@
 import React from 'react';
 import { arrayOf, func, string, oneOf } from 'prop-types';
 import { Flex, Heading, Text } from '@theme-ui/components';
-import { linkType } from '../../types';
 import Container from '../Container';
 import FlexList from '../FlexList';
-import SmartLink from '../SmartLink';
+import SmartLink, { linkType } from '../SmartLink';
 
 const Footer = ({
   logo,
