@@ -32,6 +32,9 @@ storiesOf('Components/PostPreview', module)
             </Text>
           );
         },
+        lead:
+          'Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.',
+        href: '/blog/vestibulum-proin-eu',
       }}
       m={2}
     />
@@ -68,6 +71,7 @@ storiesOf('Components/PostPreview', module)
                     );
                   },
                   name: 'Willow Rangall',
+                  href: '/profiles/willow-rangall',
                 },
                 {
                   id: '561285d3-4eed-473c-baba-6b3564f4e6a7',
@@ -81,6 +85,7 @@ storiesOf('Components/PostPreview', module)
                     );
                   },
                   name: 'Suzy Cahan',
+                  href: '/profiles/suzy-cahan',
                 },
                 {
                   id: '453d9d8a-b1e6-4cac-9fdd-b6c354fa3262',
@@ -94,6 +99,7 @@ storiesOf('Components/PostPreview', module)
                     );
                   },
                   name: 'Sandra Abramovici',
+                  href: '/profiles/sandra-abramovici',
                 },
                 {
                   id: 'dfea2476-e3de-4b63-863e-a1c69af90138',
@@ -107,6 +113,7 @@ storiesOf('Components/PostPreview', module)
                     );
                   },
                   name: 'Jan McKea',
+                  href: '/profiles/jan-mckea',
                 },
                 {
                   id: '15469d6c-cb5d-4750-8a0c-27a3b1beb187',
@@ -120,6 +127,7 @@ storiesOf('Components/PostPreview', module)
                     );
                   },
                   name: 'Ola Brunger',
+                  href: '/profiles/ola-brunger',
                 },
                 {
                   id: 'f4ee9708-9045-40e7-a899-b46841af488b',
@@ -133,6 +141,7 @@ storiesOf('Components/PostPreview', module)
                     );
                   },
                   name: 'Ivette Rowlinson',
+                  href: '/profiles/ivette-rowlinson',
                 },
                 {
                   id: '9946a2cf-0774-41da-830e-bffe1259360f',
@@ -146,6 +155,7 @@ storiesOf('Components/PostPreview', module)
                     );
                   },
                   name: 'Madeleine Stredwick',
+                  href: '/profiles/madeleine-stredwick',
                 },
                 {
                   id: 'd2e5b557-bf07-4e77-94f3-16bc1cd26a38',
@@ -159,6 +169,7 @@ storiesOf('Components/PostPreview', module)
                     );
                   },
                   name: 'Lin Billson',
+                  href: '/profiles/lin-billson',
                 },
                 {
                   id: '9008c43d-49ab-4907-bdaa-28cb59f0596b',
@@ -172,6 +183,7 @@ storiesOf('Components/PostPreview', module)
                     );
                   },
                   name: 'Alfie Piborn',
+                  href: '/profiles/alfie-piborn',
                 },
                 {
                   id: 'bfba8e8e-e052-4386-a781-5bc42eeb98b9',
@@ -185,14 +197,12 @@ storiesOf('Components/PostPreview', module)
                     );
                   },
                   name: 'Garvy Bartlomiej',
+                  href: '/profiles/garvy-bartlomiej',
                 },
               ]}
               mb={3}
             />
           ))(),
-        lead:
-          'Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.',
-        href: '/2018/05/31/slug',
       }}
       m={2}
     />
@@ -223,6 +233,7 @@ storiesOf('Components/PostPreview', module)
             </Text>
           );
         },
+        href: '/blog/vestibulum-proin-eu',
       }}
       fontSize={[5, 6]}
       m={2}
