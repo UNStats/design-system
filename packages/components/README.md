@@ -1,6 +1,6 @@
 # @undataforum/components
 
-A library of React components for the United Nations World Data Forum Website. Built with [styled-system](https://github.com/jxnblk/styled-system).
+A library of React components for the United Nations World Data Forum Website. Built with [Theme UI](https://theme-ui.com).
 
 ## Install
 
@@ -21,7 +21,7 @@ import { Header, PostPreview, ProfilePreview } from '@undataforum/components';
 You can explore all components at https://components.undataforum.org. To explore components locally run
 
 ```bash
-yarn workspace @undataforum/components start
+yarn workspace @undataforum/components develop
 ```
 
 from the repository root and launch http://localhost:8000 in your browser.

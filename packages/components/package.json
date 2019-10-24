@@ -20,11 +20,11 @@
     "styled-system"
   ],
   "scripts": {
-    "start": "start-storybook -p 8000 -s ./static",
-    "build": "rm -rf ./dist && cross-env NODE_ENV=production babel ./src -d ./dist --ignore 'src/**/*.stories.js'",
-    "build-storybook": "rm -rf ../../public && build-storybook -s ./static -o ../../public",
-    "purge": "rm -rf ./node_modules",
-    "prepublishOnly": "yarn run build"
+    "develop": "start-storybook -p 8000 -s ./static",
+    "build": "rm -rf ../../public && build-storybook -s ./static -o ../../public",
+    "babel": "rm -rf ./dist && cross-env NODE_ENV=production babel ./src -d ./dist --ignore 'src/**/*.stories.js'",
+    "prepublishOnly": "yarn run build",
+    "purge": "rm -rf ./node_modules"
   },
   "dependencies": {
     "@emotion/core": "^10.0.21",

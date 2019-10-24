@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "yarn workspace @undataforum/components run build-storybook",
+    "build": "yarn workspace @undataforum/components run build",
     "purge": "rm -rf ./node_modules && yarn workspaces run purge",
     "lint": "eslint . --ignore-path .gitignore",
     "format": "pretty-quick"
