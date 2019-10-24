@@ -32,7 +32,7 @@ storiesOf('Components/PostPreview', module)
             </Text>
           );
         },
-        lead:
+        description:
           'Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.',
         href: '/blog/vestibulum-proin-eu',
       }}
