@@ -1,5 +1,17 @@
 # Change Log
 
+## 0.6.0
+
+### Minor Changes
+
+- c5a6995: Migrate from Rebass to Theme UI components
+
+### Patch Changes
+
+- 5c6d7c7: Remove actions and console plugins from Storybook
+- 8f06ee4: Upgrade eslint-plugin-shopify to v31.0.0
+- 3effd6d: Export ThemeProvider (from theme-ui)
+
 ## 0.5.1
 
 ### Patch Changes

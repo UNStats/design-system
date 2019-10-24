@@ -1,5 +1,21 @@
 # Change Log
 
+## 0.45.0
+
+### Minor Changes
+
+- c5a6995: Migrate from Rebass to Theme UI components
+- 67765a1: Clean up types (prop-types)
+- 48d2bc1: BREAKING: Rename lead prop to description in PostPreview
+- 1b2239c: Add call to action to PostPreview
+- 3effd6d: Export ThemeProvider (from theme-ui)
+- 28f27ed: Add calls to action to EventPreview
+
+### Patch Changes
+
+- 5c6d7c7: Remove actions and console plugins from Storybook
+- 8f06ee4: Upgrade eslint-plugin-shopify to v31.0.0
+
 ## 0.44.1
 
 ### Patch Changes
