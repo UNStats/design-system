@@ -5,7 +5,7 @@ import { responsiveNumberType } from '../../types';
 import SmartLink from '../SmartLink';
 
 const PostPreview = ({ post, fontSize = [3, 4], ...props }) => {
-  const mb = post.lead ? 3 : 0;
+  const mb = post.description ? 3 : 0;
   // Use flexDirection prop instead of sx prop to ensure it cannot be overridden.
   // Set m={0} in Heading due to https://github.com/styled-system/styled-system/issues/644.
   return (
@@ -31,12 +31,12 @@ const PostPreview = ({ post, fontSize = [3, 4], ...props }) => {
       >
         {post.date}
       </Text>
-      {post.lead && (
+      {post.description && (
         <Text
           as="p"
           sx={{ color: 'text', fontFamily: 'body', lineHeight: 'body', my: 0 }}
         >
-          {post.lead}
+          {post.description}
         </Text>
       )}
       {post.href && (
@@ -62,7 +62,7 @@ export const postType = shape({
   title: string.isRequired,
   date: string.isRequired,
   authors: func.isRequired,
-  lead: string,
+  description: string,
   href: string,
 });
 
