@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.46.0
+
+### Minor Changes
+
+- 7705576: Fix prepublishOnly task in @undataforum/components
+
 ## 0.45.0
 
 ### Minor Changes
