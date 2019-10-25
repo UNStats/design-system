@@ -16,12 +16,12 @@
   "keywords": [
     "react",
     "components",
-    "styled-components",
-    "styled-system"
+    "theme-ui"
   ],
   "scripts": {
     "develop": "start-storybook -p 8000 -s ./static",
     "build": "rm -rf ../../public && build-storybook -s ./static -o ../../public",
+    "serve": "yarn run build && serve ../../public",
     "babel": "rm -rf ./dist && cross-env NODE_ENV=production babel ./src -d ./dist --ignore 'src/**/*.stories.js'",
     "prepublishOnly": "yarn run babel",
     "purge": "rm -rf ./node_modules"
@@ -51,7 +51,8 @@
     "babel-loader": "8.0.6",
     "cross-env": "6.0.3",
     "react": "16.11.0",
-    "react-dom": "16.11.0"
+    "react-dom": "16.11.0",
+    "serve": "^11.2.0"
   },
   "publishConfig": {
     "access": "public"
