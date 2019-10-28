@@ -1,5 +1,5 @@
 import preset from '@theme-ui/preset-base';
-import merge from 'lodash.merge';
+import merge from 'deepmerge';
 import { NewTabLink } from './components';
 
 // Universal colors.
