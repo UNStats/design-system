@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from '@theme-ui/components';
-import { responsiveType } from '../../types';
+import { responsiveStringType } from '../../types';
 
 const DummyLogo = ({ height, width, ...props }) => {
   const svgHeight = height ? '100%' : undefined;
@@ -20,8 +20,8 @@ const DummyLogo = ({ height, width, ...props }) => {
 };
 
 DummyLogo.propTypes = {
-  height: responsiveType,
-  width: responsiveType,
+  height: responsiveStringType,
+  width: responsiveStringType,
 };
 
 export default DummyLogo;
