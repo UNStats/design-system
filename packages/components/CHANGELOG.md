@@ -1,5 +1,16 @@
 # Change Log
 
+## 0.47.0
+
+### Minor Changes
+
+- 8a2b9cc: Change types of height and width props in DummyLogo #163
+
+### Patch Changes
+
+- 8a2b9cc: Use deepmerge instead of lodash.merge #164
+- 89fc95c: Fix horizontal padding of footer container on small screens #165
+
 ## 0.46.0
 
 ### Minor Changes
