@@ -3,5 +3,11 @@
   "automerge": false,
   "labels": ["dependencies"],
   "reviewers": ["454de6e"],
-  "semanticCommits": false
+  "semanticCommits": false,
+  "packageRules": [
+    {
+      "sourceUrlPrefixes": ["https://github.com/atlassian/changesets"],
+      "groupName": "atlassian/changesets packages"
+    }
+  ]
 }
