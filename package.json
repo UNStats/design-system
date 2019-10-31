@@ -21,8 +21,8 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@changesets/changelog-github": "0.1.0",
-    "@changesets/cli": "2.1.2",
+    "@changesets/changelog-github": "^0.1.0",
+    "@changesets/cli": "2.3.0",
     "eslint": "6.6.0",
     "eslint-plugin-shopify": "31.0.0",
     "husky": "3.0.9",
