@@ -983,7 +983,7 @@
     "@changesets/types" "^0.4.0"
     semver "^5.4.1"
 
-"@changesets/changelog-github@^0.1.0":
+"@changesets/changelog-github@0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@changesets/changelog-github/-/changelog-github-0.1.1.tgz#04f3c40de15c53eb7b6c0b870cee13e76fd91fbf"
   integrity sha512-xwwyc7nSVVEUmVCiqT1dyju1rxe2awk5XOWLEwpsez3j9gXKwixlK43daG5jP1caGuXFc9f1BOSod2oJTUbtew==
