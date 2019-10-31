@@ -63,7 +63,6 @@ const Header = ({
             </SmartLink>
           )}
           <Box
-            {...props}
             as="nav"
             sx={{
               display: [menuOpen ? 'flex' : 'none', 'flex'],
