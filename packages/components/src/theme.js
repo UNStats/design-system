@@ -180,11 +180,12 @@ export default merge(preset, {
   styles: {
     a: {
       textDecoration: 'none',
-      transition: 'all 0.2s ease-out',
-      '&:hover': {
-        opacity: '0.5',
-        transition: 'all 0.2s ease-in',
+      '@media (hover: hover)': {
+        '&:hover': {
+          textDecoration: 'underline',
+        },
       },
+      WebkitTapHighlightColor: 'transparent',
     },
   },
 });
