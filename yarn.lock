@@ -967,10 +967,10 @@
     "@changesets/types" "^0.4.0"
     dotenv "^8.1.0"
 
-"@changesets/cli@2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@changesets/cli/-/cli-2.3.0.tgz#ad7e9cd34261b8f4fd98b8f5cc47aa5d3d2b45ab"
-  integrity sha512-yo8JmZEr2FLrCsW0YBvLkigXIY+/AgpSYARx4DG5+CA1BPiT0bTtyq3JdRrZsv/9RAedUsymcSDVxwZzMh3IUQ==
+"@changesets/cli@2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@changesets/cli/-/cli-2.3.2.tgz#f21c980dc8491e6509df1cffd8083d149ba88134"
+  integrity sha512-16TMCYPr7QTvQq86rse1YIR16rtU31630EGWAPj9ifdcPnPWPCWpvsPQUtuWl0/2B35r6yIlQURB8o4mBOdAXg==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@changesets/apply-release-plan" "^0.3.0"
