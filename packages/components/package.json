@@ -14,7 +14,7 @@
   "homepage": "https://github.com/UNDataForum/design-system/tree/master/packages/components",
   "repository": {
     "type": "git",
-    "url": "https://github.com/UNDataForum/design-system.git",
+    "url": "https://github.com/undataforum/design-system.git",
     "directory": "packages/components"
   },
   "keywords": [

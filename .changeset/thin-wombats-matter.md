@@ -3,4 +3,4 @@
 '@undataforum/components': minor
 ---
 
-Make repository prop compatible with Renovate in package.json files
+Make repository prop in all package.json files compatible with Renovate
