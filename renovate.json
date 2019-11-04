@@ -6,7 +6,7 @@
   "semanticCommits": false,
   "packageRules": [
     {
-      "sourceUrlPrefixes": ["https://github.com/atlassian/changesets"],
+      "packagePatterns": ["@changesets"],
       "groupName": "atlassian/changesets packages"
     }
   ]
