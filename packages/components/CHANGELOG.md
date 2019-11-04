@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.48.0
+
+### Minor Changes
+
+- [`20e0c76`](https://github.com/UNDataForum/design-system/commit/20e0c76076b36f76dadce590c137e0d37678fc62) Thanks [@454de6e](https://github.com/454de6e)! - Make repository prop in all package.json files compatible with Renovate
+
 ## 0.47.1
 
 ### Patch Changes
