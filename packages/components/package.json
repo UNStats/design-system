@@ -11,8 +11,12 @@
   "files": [
     "dist"
   ],
-  "homepage": "https://github.com/UNDataForum/components/tree/master/packages/components#readme",
-  "repository": "https://github.com/UNDataForum/components/tree/master/packages/components",
+  "homepage": "https://github.com/UNDataForum/design-system/tree/master/packages/components",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UNDataForum/design-system.git",
+    "directory": "packages/components"
+  },
   "keywords": [
     "react",
     "components",
