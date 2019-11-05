@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box } from '@theme-ui/components';
+
 import { responsiveStringType } from '../../types';
 
 const DummyLogo = ({ height, width, ...props }) => {

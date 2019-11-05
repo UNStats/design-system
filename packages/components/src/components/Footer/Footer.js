@@ -1,6 +1,7 @@
 import React from 'react';
 import { arrayOf, func, string, oneOf } from 'prop-types';
 import { Flex, Heading, Text } from '@theme-ui/components';
+
 import Container from '../Container';
 import FlexList from '../FlexList';
 import SmartLink, { linkType } from '../SmartLink';

@@ -1,6 +1,7 @@
 import React from 'react';
 import { bool } from 'prop-types';
 import { Box } from '@theme-ui/components';
+
 import { responsiveType } from '../types';
 
 const Logo = ({ monochrome, height, width, ...props }) => {

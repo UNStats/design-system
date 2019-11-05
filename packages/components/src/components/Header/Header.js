@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { arrayOf, func, string, oneOf } from 'prop-types';
 import { Box, Button, Flex, Heading } from '@theme-ui/components';
+
 import { responsiveType } from '../../types';
 import { CloseIcon, MenuIcon } from '../../icons';
 import Container from '../Container';
 import SmartLink, { linkType } from '../SmartLink';
+
 import { Context } from './context';
 
 export const variants = ['branded', 'transparent', 'primary'];

@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Image } from '@theme-ui/components';
+
 import ProfilePreview from './ProfilePreview';
 
 storiesOf('Components/ProfilePreview', module)

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box } from '@theme-ui/components';
+
 import { responsiveType } from '../../types';
 
 const CloseIcon = ({ width, ...props }) => (

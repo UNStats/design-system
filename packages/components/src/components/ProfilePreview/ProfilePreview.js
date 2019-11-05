@@ -1,6 +1,7 @@
 import React from 'react';
 import { arrayOf, func, shape, string } from 'prop-types';
 import { Flex, Text } from '@theme-ui/components';
+
 import { alignType, responsiveNumberType } from '../../types';
 import FlexList from '../FlexList';
 import SmartLink from '../SmartLink';

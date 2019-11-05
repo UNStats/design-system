@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Text } from '@theme-ui/components';
+
 import CloseIcon from './CloseIcon';
 
 storiesOf('Icons/CloseIcon', module)

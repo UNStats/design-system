@@ -1,5 +1,6 @@
 import React from 'react';
 import { func, oneOf, string } from 'prop-types';
+
 import SmartLink from '../SmartLink';
 
 const SocialIcon = ({ render, href, variant = 'branded', ...props }) => (

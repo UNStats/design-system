@@ -1,6 +1,7 @@
 import React from 'react';
 import { arrayOf, func, object } from 'prop-types';
 import { Box } from '@theme-ui/components';
+
 import {
   alignType,
   responsiveNumberType,
