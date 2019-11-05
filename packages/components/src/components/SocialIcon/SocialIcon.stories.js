@@ -1,8 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
+
 import GitHubIcon from '../../icons/GitHubIcon';
 import TwitterIcon from '../../icons/TwitterIcon';
+
 import SocialIcon, { variants } from './SocialIcon';
 
 storiesOf('Components/SocialIcon', module)

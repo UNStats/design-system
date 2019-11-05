@@ -24,7 +24,7 @@
     "@changesets/changelog-github": "0.1.1",
     "@changesets/cli": "2.3.3",
     "eslint": "6.6.0",
-    "eslint-plugin-shopify": "31.0.0",
+    "eslint-plugin-shopify": "32.0.0",
     "husky": "3.0.9",
     "lint-staged": "9.4.2",
     "now": "16.4.4",

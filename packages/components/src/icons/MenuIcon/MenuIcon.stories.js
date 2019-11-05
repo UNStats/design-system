@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Text } from '@theme-ui/components';
+
 import MenuIcon from './MenuIcon';
 
 storiesOf('Icons/MenuIcon', module)

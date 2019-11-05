@@ -2,8 +2,10 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
 import { Box } from '@theme-ui/components';
+
 import DummyLogo from '../DummyLogo';
 import theme from '../../theme';
+
 import Header from './Header';
 
 // Extract variants.

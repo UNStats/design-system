@@ -1,10 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
+
 import DummyLogo from '../DummyLogo';
 import FlexList from '../FlexList';
 import { GitHubIcon, TwitterIcon } from '../../icons';
 import SmartLink from '../SmartLink';
+
 import Footer, { variants } from './Footer';
 
 const GitHub = () => (

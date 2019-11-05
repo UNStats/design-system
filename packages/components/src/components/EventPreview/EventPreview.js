@@ -1,6 +1,7 @@
 import React from 'react';
 import { func, shape, string } from 'prop-types';
 import { Button, Flex, Text } from '@theme-ui/components';
+
 import SmartLink from '../SmartLink';
 import Badge from '../Badge';
 
