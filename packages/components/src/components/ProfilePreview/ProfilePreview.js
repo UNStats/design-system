@@ -93,17 +93,10 @@ const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => {
       )}
       {profile.badges && (
         <FlexList
-          render={badge => {
+          render={value => {
             // If entire ProfilePreview is linked already, do not link badges.
-            if (profile.href || !badge.href) {
-              return (
-                <Badge
-                  key={badge.text}
-                  text={badge.text}
-                  variant={badge.variant}
-                  mx={1}
-                />
-              );
+            if (profile.href || !value.href) {
+              return <Badge value={value} key={value.text} mx={1} />;
             }
 
             // Margins for badges depend on alignment.
@@ -120,8 +113,8 @@ const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => {
               mr = 1;
             }
             return (
-              <SmartLink key={badge.text} href={badge.href} ml={ml} mr={mr}>
-                <Badge text={badge.text} variant={badge.variant} />
+              <SmartLink key={value.text} href={value.href} ml={ml} mr={mr}>
+                <Badge value={value} />
               </SmartLink>
             );
           }}
