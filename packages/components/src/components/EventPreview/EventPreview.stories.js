@@ -4,11 +4,12 @@ import { Heading, Image, Text } from '@theme-ui/components';
 
 import GridList from '../GridList';
 import ProfilePreview from '../ProfilePreview';
+import Names from '../Names';
 
 import EventPreview from './EventPreview';
 
 storiesOf('Components/EventPreview', module)
-  .add('render speakers with Text', () => (
+  .add('render speakers with Names', () => (
     <EventPreview
       event={{
         type: 'Webinar',
@@ -22,14 +23,7 @@ storiesOf('Components/EventPreview', module)
         date: 'October 14, 1983, 1:30 PM EDT',
         duration: '60 minutes',
         speakers() {
-          return (
-            <Text
-              as="div"
-              sx={{ fontFamily: 'body', lineHeight: 'body', mb: 3 }}
-            >
-              {['Willow Rangall', 'Suzy Cahan'].join(', ')}
-            </Text>
-          );
+          return <Names values={['Willow Rangall', 'Suzy Cahan']} mb={3} />;
         },
         links: {
           page: '/events/vestibulum-proin-eu',
