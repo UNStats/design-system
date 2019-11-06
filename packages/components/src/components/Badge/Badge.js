@@ -1,11 +1,8 @@
 import React from 'react';
-import { string, oneOf } from 'prop-types';
+import { oneOf, shape, string } from 'prop-types';
 import { Text } from '@theme-ui/components';
 
-export const variants = ['primary', 'secondary', 'accent', 'inverse'];
-export const variantType = oneOf(variants);
-
-const Badge = ({ text, variant = 'primary', ...props }) => (
+const Badge = ({ value: { text, variant = 'primary' }, ...props }) => (
   <Text
     {...props}
     sx={{
@@ -23,9 +20,16 @@ const Badge = ({ text, variant = 'primary', ...props }) => (
   </Text>
 );
 
-Badge.propTypes = {
+export const variants = ['primary', 'secondary', 'accent', 'inverse'];
+export const variantType = oneOf(variants);
+
+export const badgeType = shape({
   text: string.isRequired,
   variant: variantType,
+});
+
+Badge.propTypes = {
+  value: badgeType,
 };
 
 export default Badge;

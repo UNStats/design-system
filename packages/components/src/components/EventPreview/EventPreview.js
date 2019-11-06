@@ -22,7 +22,7 @@ const EventPreview = ({ event, ...props }) => {
   const mb = event.description ? 3 : 0;
   return (
     <Flex {...props} sx={{ flexDirection: 'column', alignItems: 'flex-start' }}>
-      <Badge text={event.type} variant="secondary" mb={2} />
+      <Badge value={{ text: event.type, variant: 'secondary' }} mb={2} />
       {event.title()}
       {event.speakers()}
       <Text

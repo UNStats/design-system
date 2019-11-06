@@ -468,16 +468,9 @@ storiesOf('Components/FlexList', module)
       ]}
     />
   ))
-  .add('badges', () => (
+  .add('a few badges', () => (
     <FlexList
-      render={value => (
-        <Badge
-          text={value.text}
-          variant={value.variant}
-          key={value.text}
-          m={1}
-        />
-      )}
+      render={value => <Badge value={value} key={value.text} m={1} />}
       values={[
         { text: 'Design Engineer' },
         { text: 'Recruiter', variant: 'secondary' },
@@ -488,14 +481,7 @@ storiesOf('Components/FlexList', module)
   ))
   .add('many badges', () => (
     <FlexList
-      render={value => (
-        <Badge
-          text={value.text}
-          variant={value.variant}
-          key={value.text}
-          m={1}
-        />
-      )}
+      render={value => <Badge value={value} key={value.text} m={1} />}
       values={[
         { text: 'Design Engineer' },
         { text: 'Recruiter', variant: 'secondary' },
