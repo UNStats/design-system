@@ -1,25 +1,23 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Image, Text } from '@theme-ui/components';
+import { Image } from '@theme-ui/components';
 
 import GridList from '../GridList';
+import Names from '../Names';
 import ProfilePreview from '../ProfilePreview';
 
 import PostPreview from './PostPreview';
 
 storiesOf('Components/PostPreview', module)
-  .add('render authors with Text', () => (
+  .add('render authors with Names', () => (
     <PostPreview
       post={{
         title: 'Vestibulum proin eu mi nulla ac enim in tempor turpis',
         date: 'May 31, 2018',
         authors: function authors() {
           return (
-            <Text
-              as="div"
-              sx={{ fontFamily: 'body', lineHeight: 'body', mb: 3 }}
-            >
-              {[
+            <Names
+              values={[
                 'Willow Rangall',
                 'Suzy Cahan',
                 'Sandra Abramovici',
@@ -30,8 +28,9 @@ storiesOf('Components/PostPreview', module)
                 'Lin Billson',
                 'Alfie Piborn',
                 'Garvy Bartlomiej',
-              ].join(', ')}
-            </Text>
+              ]}
+              mb={3}
+            />
           );
         },
         description:
@@ -216,11 +215,8 @@ storiesOf('Components/PostPreview', module)
         date: 'May 31, 2018',
         authors: function authors() {
           return (
-            <Text
-              as="div"
-              sx={{ fontFamily: 'body', lineHeight: 'body', mb: 3 }}
-            >
-              {[
+            <Names
+              values={[
                 'Willow Rangall',
                 'Suzy Cahan',
                 'Sandra Abramovici',
@@ -231,8 +227,10 @@ storiesOf('Components/PostPreview', module)
                 'Lin Billson',
                 'Alfie Piborn',
                 'Garvy Bartlomiej',
-              ].join(', ')}
-            </Text>
+              ]}
+              variant="bold"
+              mb={3}
+            />
           );
         },
         href: '/blog/vestibulum-proin-eu',
