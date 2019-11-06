@@ -178,6 +178,15 @@ export default merge(preset, {
     },
   },
 
+  names: {
+    default: {
+      fontWeight: 'body',
+    },
+    bold: {
+      fontWeight: 'bold',
+    },
+  },
+
   styles: {
     a: {
       textDecoration: 'none',
