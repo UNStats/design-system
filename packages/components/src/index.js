@@ -9,6 +9,7 @@ export {
   Footer,
   GridList,
   Header,
+  Names,
   PostPreview,
   postType,
   ProfilePreview,
