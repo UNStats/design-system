@@ -3,11 +3,15 @@ import { arrayOf, func, shape, string } from 'prop-types';
 import { Flex, Text } from '@theme-ui/components';
 
 import { alignType, responsiveNumberType } from '../../types';
-import SmartLink from '../SmartLink';
 import { badgeType } from '../Badge';
 import Badges from '../Badges';
 
-const UnlinkedProfilePreview = ({ profile, fontSize, variant, ...props }) => {
+const ProfilePreview = ({
+  profile,
+  fontSize = [3, 4],
+  variant = 'center',
+  ...props
+}) => {
   return (
     <Flex
       {...props}
@@ -82,43 +86,8 @@ export const profileType = shape({
   name: string,
   jobtitle: string,
   organization: string,
-  badges: arrayOf(shape(badgeType)),
-  href: string,
+  badges: arrayOf(badgeType),
 });
-
-// Internal component requires all props because we have control over what props it receives.
-UnlinkedProfilePreview.propTypes = {
-  profile: profileType.isRequired,
-  fontSize: responsiveNumberType.isRequired,
-  variant: alignType.isRequired,
-};
-
-const ProfilePreview = ({
-  profile,
-  fontSize = [3, 4],
-  variant = 'center',
-  ...props
-}) => {
-  if (profile.href) {
-    return (
-      <SmartLink {...props} href={profile.href}>
-        <UnlinkedProfilePreview
-          profile={profile}
-          fontSize={fontSize}
-          variant={variant}
-        />
-      </SmartLink>
-    );
-  }
-  return (
-    <UnlinkedProfilePreview
-      {...props}
-      profile={profile}
-      fontSize={fontSize}
-      variant={variant}
-    />
-  );
-};
 
 ProfilePreview.propTypes = {
   profile: profileType.isRequired,

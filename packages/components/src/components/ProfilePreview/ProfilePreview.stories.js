@@ -28,11 +28,9 @@ storiesOf('Components/ProfilePreview', module)
         badges: [
           {
             text: 'Committee Member',
-            href: '/committee',
           },
           {
             text: 'Keynote Speaker',
-            href: '/keynote-speakers',
             variant: 'secondary',
           },
         ],
@@ -58,11 +56,9 @@ storiesOf('Components/ProfilePreview', module)
         badges: [
           {
             text: 'Committee Member',
-            href: '/committee',
           },
           {
             text: 'Keynote Speaker',
-            href: '/keynote-speakers',
             variant: 'secondary',
           },
         ],
@@ -88,11 +84,9 @@ storiesOf('Components/ProfilePreview', module)
         badges: [
           {
             text: 'Committee Member',
-            href: '/committee',
           },
           {
             text: 'Keynote Speaker',
-            href: '/keynote-speakers',
             variant: 'secondary',
           },
         ],
@@ -117,11 +111,9 @@ storiesOf('Components/ProfilePreview', module)
         badges: [
           {
             text: 'Committee Member',
-            href: '/committee',
           },
           {
             text: 'Keynote Speaker',
-            href: '/keynote-speakers',
             variant: 'secondary',
           },
         ],
@@ -225,10 +217,9 @@ storiesOf('Components/ProfilePreview', module)
         organization:
           'Really really really really really really really really really really long organization',
         badges: [
-          { text: 'Committee Member', href: '/committee' },
+          { text: 'Committee Member' },
           {
             text: 'Keynote Speaker',
-            href: '/keynote-speakers',
             variant: 'secondary',
           },
         ],
