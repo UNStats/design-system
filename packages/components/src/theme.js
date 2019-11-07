@@ -136,13 +136,7 @@ export default merge(preset, {
     inverse: pairings.inverse,
   },
 
-  header: {
-    branded: pairings.branded,
-    transparent: pairings.transparent,
-    primary: pairings.primary,
-  },
-
-  flexlist: {
+  flexList: {
     left: {
       justifyContent: 'flex-start',
     },
@@ -152,6 +146,12 @@ export default merge(preset, {
     right: {
       justifyContent: 'flex-end',
     },
+  },
+
+  header: {
+    branded: pairings.branded,
+    transparent: pairings.transparent,
+    primary: pairings.primary,
   },
 
   footer: {
@@ -196,6 +196,18 @@ export default merge(preset, {
     },
     bold: {
       fontWeight: 'bold',
+    },
+  },
+
+  profilePreview: {
+    left: {
+      alignItems: 'flex-start',
+    },
+    center: {
+      alignItems: 'center',
+    },
+    right: {
+      alignItems: 'flex-end',
     },
   },
 

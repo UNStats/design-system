@@ -54,9 +54,9 @@ storiesOf('Components/PostPreview', module)
               render={({ id, ...author }) => (
                 <ProfilePreview
                   profile={author}
-                  align="left"
                   fontSize={1}
                   key={id}
+                  variant="left"
                 />
               )}
               values={[
