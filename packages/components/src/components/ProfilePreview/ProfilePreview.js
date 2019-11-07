@@ -3,9 +3,9 @@ import { arrayOf, func, shape, string } from 'prop-types';
 import { Flex, Text } from '@theme-ui/components';
 
 import { alignType, responsiveNumberType } from '../../types';
-import FlexList from '../FlexList';
 import SmartLink from '../SmartLink';
-import Badge, { variantType as badgeVariantType } from '../Badge';
+import { badgeType } from '../Badge';
+import Badges from '../Badges';
 
 export const profileType = shape({
   avatar: func.isRequired,
@@ -13,13 +13,7 @@ export const profileType = shape({
   name: string,
   jobtitle: string,
   organization: string,
-  badges: arrayOf(
-    shape({
-      text: string.isRequired,
-      href: string,
-      variant: badgeVariantType,
-    })
-  ),
+  badges: arrayOf(shape(badgeType)),
   href: string,
 });
 
@@ -92,35 +86,7 @@ const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => {
         </Text>
       )}
       {profile.badges && (
-        <FlexList
-          render={value => {
-            // If entire ProfilePreview is linked already, do not link badges.
-            if (profile.href || !value.href) {
-              return <Badge value={value} key={value.text} mx={1} />;
-            }
-
-            // Margins for badges depend on alignment.
-            let ml;
-            let mr;
-            if (align === 'left') {
-              ml = 0;
-              mr = 2;
-            } else if (align === 'right') {
-              ml = 2;
-              mr = 0;
-            } else {
-              ml = 1;
-              mr = 1;
-            }
-            return (
-              <SmartLink key={value.text} href={value.href} ml={ml} mr={mr}>
-                <Badge value={value} />
-              </SmartLink>
-            );
-          }}
-          values={profile.badges}
-          mt={3}
-        />
+        <Badges values={profile.badges} variant={align} mt={2} />
       )}
     </Flex>
   );

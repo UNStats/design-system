@@ -21,7 +21,7 @@ const Badge = ({ value: { text, variant = 'primary' }, ...props }) => (
 );
 
 export const variants = ['primary', 'secondary', 'accent', 'inverse'];
-export const variantType = oneOf(variants);
+const variantType = oneOf(variants);
 
 export const badgeType = shape({
   text: string.isRequired,

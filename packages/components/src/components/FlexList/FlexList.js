@@ -2,10 +2,12 @@ import React from 'react';
 import { arrayOf, func, object } from 'prop-types';
 import { Flex } from '@theme-ui/components';
 
-// flexWrap and justifyContent cannot be overridden.
+import { alignType } from '../../types';
+
+// sx and variant cannot be overridden.
 // The underlying Box component accepts only color and space props.
-const FlexList = ({ render, values, ...props }) => (
-  <Flex {...props} sx={{ flexWrap: 'wrap', justifyContent: 'center' }}>
+const FlexList = ({ render, values, variant = 'center', ...props }) => (
+  <Flex {...props} sx={{ flexWrap: 'wrap' }} variant={`flexlist.${variant}`}>
     {values.map(value => render(value))}
   </Flex>
 );
@@ -13,6 +15,7 @@ const FlexList = ({ render, values, ...props }) => (
 FlexList.propTypes = {
   render: func.isRequired,
   values: arrayOf(object).isRequired,
+  variant: alignType,
 };
 
 export default FlexList;
