@@ -142,6 +142,18 @@ export default merge(preset, {
     primary: pairings.primary,
   },
 
+  flexlist: {
+    left: {
+      justifyContent: 'flex-start',
+    },
+    center: {
+      justifyContent: 'center',
+    },
+    right: {
+      justifyContent: 'flex-end',
+    },
+  },
+
   footer: {
     primary: pairings.primary,
     secondary: pairings.secondary,
