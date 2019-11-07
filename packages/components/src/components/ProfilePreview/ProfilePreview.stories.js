@@ -1,10 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withKnobs, select } from '@storybook/addon-knobs';
 import { Image } from '@theme-ui/components';
+
+import { alignments } from '../../types';
 
 import ProfilePreview from './ProfilePreview';
 
 storiesOf('Components/ProfilePreview', module)
+  .addDecorator(withKnobs)
   .add('complete profile', () => (
     <ProfilePreview
       profile={{
@@ -33,6 +37,7 @@ storiesOf('Components/ProfilePreview', module)
           },
         ],
       }}
+      variant={select('variant', alignments, 'center')}
       m={2}
     />
   ))
@@ -62,6 +67,7 @@ storiesOf('Components/ProfilePreview', module)
           },
         ],
       }}
+      variant={select('variant', alignments, 'center')}
       m={2}
     />
   ))
@@ -91,6 +97,7 @@ storiesOf('Components/ProfilePreview', module)
           },
         ],
       }}
+      variant={select('variant', alignments, 'center')}
       m={2}
     />
   ))
@@ -119,62 +126,7 @@ storiesOf('Components/ProfilePreview', module)
           },
         ],
       }}
-      m={2}
-    />
-  ))
-  .add('align left', () => (
-    <ProfilePreview
-      profile={{
-        avatar() {
-          return (
-            <Image
-              alt="Clerc Edis"
-              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
-              src="/avatar1.png"
-            />
-          );
-        },
-        name: 'Clerc Edis',
-        jobtitle: 'Staff Scientist',
-        organization: 'Ritchie Inc',
-        badges: [
-          { text: 'Committee Member', href: '/committee' },
-          {
-            text: 'Keynote Speaker',
-            href: '/keynotes',
-            variant: 'secondary',
-          },
-        ],
-      }}
-      align="left"
-      m={2}
-    />
-  ))
-  .add('align right', () => (
-    <ProfilePreview
-      profile={{
-        avatar() {
-          return (
-            <Image
-              alt="Clifford Skipperbottom"
-              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
-              src="/avatar2.png"
-            />
-          );
-        },
-        name: 'Clifford Skipperbottom',
-        jobtitle: 'Senior Financial Analyst',
-        organization: 'Block, Bruen and Gerlach',
-        badges: [
-          { text: 'Committee Member', href: '/committee' },
-          {
-            text: 'Keynote Speaker',
-            href: '/keynotes',
-            variant: 'secondary',
-          },
-        ],
-      }}
-      align="right"
+      variant={select('variant', alignments, 'center')}
       m={2}
     />
   ))
@@ -191,6 +143,7 @@ storiesOf('Components/ProfilePreview', module)
           );
         },
       }}
+      variant={select('variant', alignments, 'center')}
       m={2}
     />
   ))
@@ -208,6 +161,7 @@ storiesOf('Components/ProfilePreview', module)
         },
         name: 'Suzy Cahan',
       }}
+      variant={select('variant', alignments, 'center')}
       m={2}
     />
   ))
@@ -229,6 +183,7 @@ storiesOf('Components/ProfilePreview', module)
         },
         name: 'Sandra Abramovici',
       }}
+      variant={select('variant', alignments, 'center')}
       m={2}
     />
   ))
@@ -247,6 +202,7 @@ storiesOf('Components/ProfilePreview', module)
         name: 'Jan McKea',
       }}
       fontSize={[5, 6]}
+      variant={select('variant', alignments, 'center')}
       m={2}
     />
   ))
@@ -277,6 +233,7 @@ storiesOf('Components/ProfilePreview', module)
           },
         ],
       }}
+      variant={select('variant', alignments, 'center')}
       m={2}
     />
   ));

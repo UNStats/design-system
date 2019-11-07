@@ -7,7 +7,7 @@ import { alignType } from '../../types';
 // sx and variant cannot be overridden.
 // The underlying Box component accepts only color and space props.
 const FlexList = ({ render, values, variant = 'center', ...props }) => (
-  <Flex {...props} sx={{ flexWrap: 'wrap' }} variant={`flexlist.${variant}`}>
+  <Flex {...props} sx={{ flexWrap: 'wrap' }} variant={`flexList.${variant}`}>
     {values.map(value => render(value))}
   </Flex>
 );

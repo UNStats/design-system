@@ -7,29 +7,13 @@ import SmartLink from '../SmartLink';
 import { badgeType } from '../Badge';
 import Badges from '../Badges';
 
-export const profileType = shape({
-  avatar: func.isRequired,
-  honorific: string,
-  name: string,
-  jobtitle: string,
-  organization: string,
-  badges: arrayOf(shape(badgeType)),
-  href: string,
-});
-
-const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => {
-  // Map align prop to alignItems.
-  let alignItems;
-  if (align === 'left') {
-    alignItems = 'flex-start';
-  } else if (align === 'right') {
-    alignItems = 'flex-end';
-  } else {
-    alignItems = 'center';
-  }
-
+const UnlinkedProfilePreview = ({ profile, fontSize, variant, ...props }) => {
   return (
-    <Flex {...props} sx={{ flexDirection: 'column', alignItems }}>
+    <Flex
+      {...props}
+      sx={{ flexDirection: 'column' }}
+      variant={`profilePreview.${variant}`}
+    >
       {profile.avatar()}
       {profile.honorific && (
         <Text
@@ -38,7 +22,7 @@ const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => {
             fontFamily: 'body',
             fontSize: 1,
             lineHeight: 'body',
-            textAlign: align,
+            textAlign: variant,
           }}
         >
           {profile.honorific}
@@ -51,7 +35,7 @@ const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => {
           fontFamily: 'body',
           fontSize,
           lineHeight: 'heading',
-          textAlign: align,
+          textAlign: variant,
           mt: 0,
           mb: 0,
         }}
@@ -65,7 +49,7 @@ const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => {
             fontFamily: 'body',
             fontSize: 2,
             lineHeight: 'body',
-            textAlign: align,
+            textAlign: variant,
           }}
         >
           {profile.jobtitle}
@@ -79,30 +63,40 @@ const UnlinkedProfilePreview = ({ profile, align, fontSize, ...props }) => {
             fontSize: 2,
             fontWeight: 'bold',
             lineHeight: 'body',
-            textAlign: align,
+            textAlign: variant,
           }}
         >
           {profile.organization}
         </Text>
       )}
       {profile.badges && (
-        <Badges values={profile.badges} variant={align} mt={2} />
+        <Badges values={profile.badges} variant={variant} mt={2} />
       )}
     </Flex>
   );
 };
 
+export const profileType = shape({
+  avatar: func.isRequired,
+  honorific: string,
+  name: string,
+  jobtitle: string,
+  organization: string,
+  badges: arrayOf(shape(badgeType)),
+  href: string,
+});
+
 // Internal component requires all props because we have control over what props it receives.
 UnlinkedProfilePreview.propTypes = {
   profile: profileType.isRequired,
-  align: alignType.isRequired,
   fontSize: responsiveNumberType.isRequired,
+  variant: alignType.isRequired,
 };
 
 const ProfilePreview = ({
   profile,
-  align = 'center',
   fontSize = [3, 4],
+  variant = 'center',
   ...props
 }) => {
   if (profile.href) {
@@ -110,8 +104,8 @@ const ProfilePreview = ({
       <SmartLink {...props} href={profile.href}>
         <UnlinkedProfilePreview
           profile={profile}
-          align={align}
           fontSize={fontSize}
+          variant={variant}
         />
       </SmartLink>
     );
@@ -120,16 +114,16 @@ const ProfilePreview = ({
     <UnlinkedProfilePreview
       {...props}
       profile={profile}
-      align={align}
       fontSize={fontSize}
+      variant={variant}
     />
   );
 };
 
 ProfilePreview.propTypes = {
   profile: profileType.isRequired,
-  align: alignType,
   fontSize: responsiveNumberType,
+  variant: alignType,
 };
 
 export default ProfilePreview;
