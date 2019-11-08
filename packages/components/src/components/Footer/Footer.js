@@ -3,7 +3,6 @@ import { arrayOf, func, string, oneOf } from 'prop-types';
 import { Flex, Heading, Text } from '@theme-ui/components';
 
 import Container from '../Container';
-import FlexList from '../FlexList';
 import SmartLink, { linkType } from '../SmartLink';
 
 const Footer = ({
@@ -45,8 +44,8 @@ const Footer = ({
           </SmartLink>
         )}
         {social && social()}
-        <FlexList
-          render={link => (
+        <Flex sx={{ flexWrap: 'wrap', justifyContent: 'center' }}>
+          {links.map(link => (
             <SmartLink
               href={link.href}
               key={link.href}
@@ -56,9 +55,8 @@ const Footer = ({
             >
               <Text sx={{ fontFamily: 'body' }}>{link.text}</Text>
             </SmartLink>
-          )}
-          values={links}
-        />
+          ))}
+        </Flex>
       </Flex>
     </Container>
   );
