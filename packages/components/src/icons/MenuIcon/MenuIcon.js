@@ -3,7 +3,7 @@ import { Box } from '@theme-ui/components';
 
 import { responsiveType } from '../../types';
 
-const CloseIcon = ({ width, ...props }) => (
+const MenuIcon = ({ width, ...props }) => (
   <Box
     {...props}
     sx={{
@@ -19,8 +19,8 @@ const CloseIcon = ({ width, ...props }) => (
   </Box>
 );
 
-CloseIcon.propTypes = {
+MenuIcon.propTypes = {
   width: responsiveType.isRequired,
 };
 
-export default CloseIcon;
+export default MenuIcon;
