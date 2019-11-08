@@ -43,7 +43,7 @@ const Footer = ({
             </Heading>
           </SmartLink>
         )}
-        {social && social()}
+        {social && social(variant)}
         <Flex sx={{ flexWrap: 'wrap', justifyContent: 'center' }}>
           {links.map(link => (
             <SmartLink

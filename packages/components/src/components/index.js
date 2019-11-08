@@ -11,4 +11,4 @@ export { default as NewTabLink } from './NewTabLink';
 export { default as PostPreview, postType } from './PostPreview';
 export { default as ProfilePreview, profileType } from './ProfilePreview';
 export { default as SmartLink } from './SmartLink';
-export { default as SocialIcon } from './SocialIcon';
+export { default as SocialIcons } from './SocialIcons';
