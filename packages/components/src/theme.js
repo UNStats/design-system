@@ -136,7 +136,7 @@ export default merge(preset, {
     inverse: pairings.inverse,
   },
 
-  flexList: {
+  badges: {
     left: {
       justifyContent: 'flex-start',
     },
