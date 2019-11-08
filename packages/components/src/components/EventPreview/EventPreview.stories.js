@@ -2,9 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Heading, Image, Text } from '@theme-ui/components';
 
-import GridList from '../GridList';
-import ProfilePreview from '../ProfilePreview';
 import Names from '../Names';
+import Avatars from '../Avatars';
 
 import EventPreview from './EventPreview';
 
@@ -33,7 +32,7 @@ storiesOf('Components/EventPreview', module)
       m={2}
     />
   ))
-  .add('render speakers with GridList', () => (
+  .add('render speakers with Avatars', () => (
     <EventPreview
       event={{
         type: 'Webinar',
@@ -48,25 +47,14 @@ storiesOf('Components/EventPreview', module)
         duration: '90 minutes',
         speakers() {
           return (
-            <GridList
-              align="left"
-              gridGap={2}
-              gridTemplateColumns="repeat(auto-fit, 96px)"
-              render={({ id, ...author }) => (
-                <ProfilePreview
-                  profile={author}
-                  align="left"
-                  fontSize={1}
-                  key={id}
-                />
-              )}
+            <Avatars
               values={[
                 {
                   id: 'a6b4babd-6b11-4b81-8ac0-73cefb040cb7',
                   avatar() {
                     return (
                       <Image
-                        alt="Willow Rangall"
+                        alt="Portrait of Willow Rangall"
                         sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar0.png"
                       />
@@ -80,7 +68,7 @@ storiesOf('Components/EventPreview', module)
                   avatar() {
                     return (
                       <Image
-                        alt="Suzy Cahan"
+                        alt="Portrait of Suzy Cahan"
                         sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar1.png"
                       />
@@ -94,7 +82,7 @@ storiesOf('Components/EventPreview', module)
                   avatar() {
                     return (
                       <Image
-                        alt="Sandra Abramovici"
+                        alt="Portrait of Sandra Abramovici"
                         sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar2.png"
                       />

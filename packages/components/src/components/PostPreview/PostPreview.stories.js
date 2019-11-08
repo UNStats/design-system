@@ -2,9 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Image } from '@theme-ui/components';
 
-import GridList from '../GridList';
 import Names from '../Names';
-import ProfilePreview from '../ProfilePreview';
+import Avatars from '../Avatars';
 
 import PostPreview from './PostPreview';
 
@@ -40,32 +39,21 @@ storiesOf('Components/PostPreview', module)
       m={2}
     />
   ))
-  .add('render authors with GridList', () => (
+  .add('render authors with Avatars', () => (
     <PostPreview
       post={{
         title: 'Vestibulum proin eu mi nulla ac enim in tempor turpis',
         date: 'May 31, 2018',
         authors: () =>
           (() => (
-            <GridList
-              align="left"
-              gridGap={2}
-              gridTemplateColumns="repeat(auto-fit, 96px)"
-              render={({ id, ...author }) => (
-                <ProfilePreview
-                  profile={author}
-                  fontSize={1}
-                  key={id}
-                  variant="left"
-                />
-              )}
+            <Avatars
               values={[
                 {
                   id: 'a6b4babd-6b11-4b81-8ac0-73cefb040cb7',
                   avatar() {
                     return (
                       <Image
-                        alt="Willow Rangall"
+                        alt="Portrait of Willow Rangall"
                         sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar0.png"
                       />
@@ -79,7 +67,7 @@ storiesOf('Components/PostPreview', module)
                   avatar() {
                     return (
                       <Image
-                        alt="Suzy Cahan"
+                        alt="Portrait of Suzy Cahan"
                         sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar1.png"
                       />
@@ -93,7 +81,7 @@ storiesOf('Components/PostPreview', module)
                   avatar() {
                     return (
                       <Image
-                        alt="Sandra Abramovici"
+                        alt="Portrait of Sandra Abramovici"
                         sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar2.png"
                       />
@@ -107,7 +95,7 @@ storiesOf('Components/PostPreview', module)
                   avatar() {
                     return (
                       <Image
-                        alt="Jan McKea"
+                        alt="Portrait of Jan McKea"
                         sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar3.png"
                       />
@@ -121,7 +109,7 @@ storiesOf('Components/PostPreview', module)
                   avatar() {
                     return (
                       <Image
-                        alt="Ola Brunger"
+                        alt="Portrait of Ola Brunger"
                         sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar4.png"
                       />
@@ -135,7 +123,7 @@ storiesOf('Components/PostPreview', module)
                   avatar() {
                     return (
                       <Image
-                        alt="Ivette Rowlinson"
+                        alt="Portrait of Ivette Rowlinson"
                         sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar5.png"
                       />
@@ -149,7 +137,7 @@ storiesOf('Components/PostPreview', module)
                   avatar() {
                     return (
                       <Image
-                        alt="Madeleine Stredwick"
+                        alt="Portrait of Madeleine Stredwick"
                         sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar6.png"
                       />
@@ -163,7 +151,7 @@ storiesOf('Components/PostPreview', module)
                   avatar() {
                     return (
                       <Image
-                        alt="Lin Billson"
+                        alt="Portrait of Lin Billson"
                         sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar7.png"
                       />
@@ -177,7 +165,7 @@ storiesOf('Components/PostPreview', module)
                   avatar() {
                     return (
                       <Image
-                        alt="Alfie Piborn"
+                        alt="Portrait of Alfie Piborn"
                         sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar8.png"
                       />
@@ -191,7 +179,7 @@ storiesOf('Components/PostPreview', module)
                   avatar() {
                     return (
                       <Image
-                        alt="Garvy Bartlomiej"
+                        alt="Portrait of Garvy Bartlomiej"
                         sx={{ borderRadius: 'circle', height: 64, width: 64 }}
                         src="/avatar9.png"
                       />
