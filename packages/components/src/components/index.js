@@ -1,3 +1,4 @@
+export { default as Avatars } from './Avatars';
 export { default as Badge } from './Badge';
 export { default as Container } from './Container';
 export { default as DummyLogo } from './DummyLogo';

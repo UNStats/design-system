@@ -1,5 +1,6 @@
 export { Box, Button, Flex, Heading, Text } from '@theme-ui/components';
 export {
+  Avatars,
   Badge,
   Container,
   DummyLogo,
