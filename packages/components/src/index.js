@@ -7,7 +7,6 @@ export {
   EventPreview,
   eventType,
   Footer,
-  GridList,
   Header,
   Names,
   PostPreview,

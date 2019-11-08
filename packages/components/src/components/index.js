@@ -4,7 +4,6 @@ export { default as Container } from './Container';
 export { default as DummyLogo } from './DummyLogo';
 export { default as EventPreview, eventType } from './EventPreview';
 export { default as Footer } from './Footer';
-export { default as GridList } from './GridList';
 export { default as Header } from './Header';
 export { default as Names } from './Names';
 export { default as NewTabLink } from './NewTabLink';
