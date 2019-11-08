@@ -28,8 +28,4 @@ from the repository root and launch http://localhost:8000 in your browser.
 
 ## Credits
 
-- This project uses the awesome [Storybook](https://storybook.js.org/) to develop React components in isolation.
-- Avatar images used in Storybook stories were created with [Robohash](https://robohash.org/). Licensing information is available on the [Robohash GitHub page](https://github.com/e1ven/Robohash).
-- The [Twitter icon](https://github.com/UNDataForum/components/tree/master/packages/components/src/icons/TwitterIcon) is based on [Twitter's brand resources](https://about.twitter.com/en_us/company/brand-resources.html).
-- The [GitHub icon](https://github.com/UNDataForum/components/tree/master/packages/components/src/icons/GitHubIcon) is based on [Github's logo](https://github.com/logos).
-- The [menu icon](https://github.com/UNDataForum/components/tree/master/packages/components/src/icons/MenuIcon) and [close icon](https://github.com/UNDataForum/components/tree/master/packages/components/src/icons/CloseIcon) are based on [GitHub's Octicons](https://octicons.github.com/).
+Avatar images used in Storybook stories were created with [Robohash](https://robohash.org/). Licensing information is available on the [Robohash GitHub page](https://github.com/e1ven/Robohash).

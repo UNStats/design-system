@@ -1,31 +1,21 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
-import { Flex } from '@theme-ui/components';
 
 import DummyLogo from '../DummyLogo';
-import { GitHubIcon, TwitterIcon } from '../../icons';
-import SmartLink from '../SmartLink';
+import SocialIcons from '../SocialIcons';
 
 import Footer, { variants } from './Footer';
 
-const Social = () => (
-  <Flex sx={{ flexWrap: 'wrap' }}>
-    <SmartLink
-      color="inherit"
-      href="https://twitter.com/UNDataForum"
-      key="twitter"
-    >
-      <TwitterIcon width={[32, 48]} p={[1, 2]} />
-    </SmartLink>
-    <SmartLink
-      color="inherit"
-      href="https://github.com/UNDataForum"
-      key="github"
-    >
-      <GitHubIcon width={[32, 48]} p={[1, 2]} />
-    </SmartLink>
-  </Flex>
+const social = variant => (
+  <SocialIcons
+    usernames={{
+      twitter: 'UNDataForum',
+      github: 'UNDataForum',
+      email: 'dataforum@un.org',
+    }}
+    variant={variant}
+  />
 );
 
 storiesOf('Components/Footer', module)
@@ -34,7 +24,7 @@ storiesOf('Components/Footer', module)
     <Footer
       logo={() => <DummyLogo height="logo.medium" />}
       title="Footer Title"
-      social={Social}
+      social={social}
       links={[
         { text: 'Contact', href: '/contact' },
         { text: 'Copyright', href: '/copyright' },
@@ -72,7 +62,7 @@ storiesOf('Components/Footer', module)
   ))
   .add('social only', () => (
     <Footer
-      social={Social}
+      social={social}
       links={[
         { text: 'Contact', href: '/contact' },
         { text: 'Copyright', href: '/copyright' },

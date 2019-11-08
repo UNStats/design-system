@@ -15,7 +15,7 @@ export {
   ProfilePreview,
   profileType,
   SmartLink,
-  SocialIcon,
+  SocialIcons,
 } from './components';
 export { GitHubIcon, TwitterIcon } from './icons';
 export { default as theme } from './theme';
