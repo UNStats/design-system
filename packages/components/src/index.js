@@ -6,7 +6,6 @@ export {
   DummyLogo,
   EventPreview,
   eventType,
-  FlexList,
   Footer,
   GridList,
   Header,
