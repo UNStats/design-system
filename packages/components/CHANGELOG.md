@@ -1,5 +1,33 @@
 # Change Log
 
+## 0.49.0
+
+### Minor Changes
+
+- [`c3c8850`](https://github.com/UNDataForum/design-system/commit/c3c8850ad5585b3b4c2e16a9c5c8017f977ac85a) [#196](https://github.com/UNDataForum/design-system/pull/196) Thanks [@454de6e](https://github.com/454de6e)! - Use variants for alignment in ProfilePreview (breaking)
+
+* [`45bf2ce`](https://github.com/UNDataForum/design-system/commit/45bf2ceb1c2a361081eea6f07a4ac110fe98a209) Thanks [@454de6e](https://github.com/454de6e)! - Remove FlexList (breaking)
+
+- [`5efbbb8`](https://github.com/UNDataForum/design-system/commit/5efbbb8f8c24a8589fff3c94956226c7ba356655) [#183](https://github.com/UNDataForum/design-system/pull/183) Thanks [@454de6e](https://github.com/454de6e)! - Fix links remaining in hover state on touch devices
+
+* [`8fb701a`](https://github.com/UNDataForum/design-system/commit/8fb701a1690edfd222d839b8a54e5485a9cd1cdc) [#198](https://github.com/UNDataForum/design-system/pull/198) Thanks [@454de6e](https://github.com/454de6e)! - Remove implicit link from ProfilePreview (breaking)
+
+- [`4d5b4b7`](https://github.com/UNDataForum/design-system/commit/4d5b4b70c34fc585323087e20209d7a5ed402023) [#194](https://github.com/UNDataForum/design-system/pull/194) Thanks [@454de6e](https://github.com/454de6e)! - Add Badges component
+
+* [`3b2257d`](https://github.com/UNDataForum/design-system/commit/3b2257daa150dd8bea6e137bda4a347be56a7291) [#204](https://github.com/UNDataForum/design-system/pull/204) Thanks [@454de6e](https://github.com/454de6e)! - Remove GridList component
+
+- [`411c134`](https://github.com/UNDataForum/design-system/commit/411c13459c60ad0496a0c5b2c78d35b08f427ddb) [#189](https://github.com/UNDataForum/design-system/pull/189) Thanks [@454de6e](https://github.com/454de6e)! - Add Names component
+
+* [`12db878`](https://github.com/UNDataForum/design-system/commit/12db878e5b4799e6ef3361cc03bc6e3e967c4e0c) [#200](https://github.com/UNDataForum/design-system/pull/200) Thanks [@454de6e](https://github.com/454de6e)! - Add Avatars component
+
+- [`1fb765d`](https://github.com/UNDataForum/design-system/commit/1fb765d2f0b9250a16feeba39a20964b6708caf3) [#194](https://github.com/UNDataForum/design-system/pull/194) Thanks [@454de6e](https://github.com/454de6e)! - Change API of Badge (breaking)
+
+* [`6bb8fe2`](https://github.com/UNDataForum/design-system/commit/6bb8fe286ee4089219339c53859be7adcc1725de) [#203](https://github.com/UNDataForum/design-system/pull/203) Thanks [@454de6e](https://github.com/454de6e)! - Add SocialIcons component and remove SocialIcon component
+
+### Patch Changes
+
+- [`13230ea`](https://github.com/UNDataForum/design-system/commit/13230ea9805b8b32a1c02b2d4c063af74cb17c54) [#185](https://github.com/UNDataForum/design-system/pull/185) Thanks [@454de6e](https://github.com/454de6e)! - Upgrade linting rules and fix linting errors
+
 ## 0.48.0
 
 ### Minor Changes

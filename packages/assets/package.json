@@ -1,7 +1,7 @@
 {
   "name": "@undataforum/assets",
   "description": "Assets for United Nations World Data Forum websites.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Thilo Maier <maier@un.org>",
   "license": "SEE LICENSE IN visual-guidelines.pdf",
   "main": "dist/index.js",

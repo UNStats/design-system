@@ -1,5 +1,11 @@
 # @undataforum/assets
 
+## 0.2.1
+
+### Patch Changes
+
+- [`13230ea`](https://github.com/UNDataForum/design-system/commit/13230ea9805b8b32a1c02b2d4c063af74cb17c54) [#185](https://github.com/UNDataForum/design-system/pull/185) Thanks [@454de6e](https://github.com/454de6e)! - Upgrade linting rules and fix linting errors
+
 ## 0.2.0
 
 ### Minor Changes
