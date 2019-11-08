@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.50.0
+
+### Minor Changes
+
+- [`9260843`](https://github.com/UNDataForum/design-system/commit/926084309e5cc95fe8f6d8bdcb6616b911a49a3a) [#207](https://github.com/UNDataForum/design-system/pull/207) Thanks [@454de6e](https://github.com/454de6e)! - Export Grid from @theme-ui/components to replace GridList
+
+* [`2b2899c`](https://github.com/UNDataForum/design-system/commit/2b2899c260a9c8ca5808ecf9138e60d11bcf22e4) [#206](https://github.com/UNDataForum/design-system/pull/206) Thanks [@454de6e](https://github.com/454de6e)! - Remove GitHubIcon and TwitterIcon from exports, use SocialIcons instead (breaking)
+
 ## 0.49.0
 
 ### Minor Changes
