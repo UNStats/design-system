@@ -73,7 +73,7 @@ export default merge(preset, {
       default: '64rem',
       wide: '96rem',
     },
-    logo: {
+    height: {
       small: 32,
       medium: 64,
       large: 128,

@@ -26,7 +26,6 @@
     "purge": "rm -rf ./node_modules"
   },
   "dependencies": {
-    "@theme-ui/components": "^0.2.45",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {

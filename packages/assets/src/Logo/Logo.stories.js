@@ -4,11 +4,18 @@ import { storiesOf } from '@storybook/react';
 import Logo from './Logo';
 
 storiesOf('Logo', module)
-  .add('set height only', () => <Logo height={128} m={2} />)
-  .add('set width only', () => <Logo width={128} m={2} />)
-  .add('set height and width', () => <Logo height={128} width={256} m={2} />)
+  .add('scale to height', () => (
+    <div style={{ height: '128px', margin: '8px' }}>
+      <Logo scaleTo="height" />
+    </div>
+  ))
+  .add('scale to width', () => (
+    <div style={{ width: '128px', margin: '8px' }}>
+      <Logo scaleTo="width" />
+    </div>
+  ))
   .add('monochrome', () => (
-    <div style={{ color: 'black' }}>
-      <Logo monochrome height={128} m={2} />
+    <div style={{ height: '128px', margin: '8px', color: 'green' }}>
+      <Logo scaleTo="height" monochrome />
     </div>
   ));
