@@ -11,3 +11,6 @@ export const responsiveType = oneOfType([
   string,
   arrayOf(string),
 ]);
+
+const dimensions = ['height', 'width'];
+export const scaleToType = oneOf(dimensions);
