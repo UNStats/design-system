@@ -1,27 +1,27 @@
 import React from 'react';
-import { node, oneOf } from 'prop-types';
+import { node, oneOf, string } from 'prop-types';
 import { Box } from '@theme-ui/components';
 
-// Styles are applied in the order in which they are defined.
-// px can be overridden.
-// mx cannot be overridden.
-const Container = ({ maxWidth = 'default', children, ...props }) => (
+// A Container is used as the outer most element in a layout.
+// Padding can be overridden.
+const Container = ({ children, maxWidth = 'default', variant, ...props }) => (
   <Box
-    px={[2, 3, 0]}
+    p={[2, 3]}
     {...props}
     sx={{
-      width: '100%',
       maxWidth: `width.${maxWidth}`,
+      mx: 'auto',
+      variant,
     }}
-    mx="auto"
   >
     {children}
   </Box>
 );
 
 Container.propTypes = {
-  maxWidth: oneOf(['narrow', 'default', 'wide']),
   children: node.isRequired,
+  maxWidth: oneOf(['narrow', 'default', 'wide']),
+  variant: string,
 };
 
 export default Container;
