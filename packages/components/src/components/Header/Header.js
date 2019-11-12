@@ -9,22 +9,18 @@ import SmartLink, { linkType } from '../SmartLink';
 
 import { Context } from './context';
 
-export const variants = ['branded', 'transparent', 'primary'];
-const variantType = oneOf(variants);
-
 const Header = ({
   logo,
   title,
   links,
   button,
-  height,
+  height = [48, 64, 80],
   variant = 'branded',
-  ...props
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <Context.Provider value={{ menuOpen, setMenuOpen }}>
-      <Container {...props} maxWidth="wide" variant={`header.${variant}`}>
+      <Container maxWidth="wide" variant={`header.${variant}`}>
         <Flex
           as="header"
           sx={{
@@ -32,19 +28,13 @@ const Header = ({
             justifyContent: 'flex-start',
             alignItems: 'center',
             height,
-            width: '100%',
-            px: [0, 0, 3],
-            py: [2, 3],
-            color: 'inherit',
-            bg: 'inherit',
           }}
         >
           {logo && (
             <SmartLink
-              css={{ height: '100%', flexShrink: 0 }}
+              sx={{ height: '100%', flexShrink: 0, mr: [2, 3] }}
               href="/"
               variant={variant}
-              mr={[2, 3]}
             >
               {logo()}
             </SmartLink>
@@ -54,7 +44,7 @@ const Header = ({
               sx={{
                 flexGrow: 0,
                 flexShrink: 0,
-                mr: [3, 4, 5],
+                mr: [0, 3, 4],
               }}
               href="/"
               variant={variant}
@@ -73,7 +63,6 @@ const Header = ({
               alignItems: 'center',
               flexGrow: 1,
               flexShrink: 1,
-              maxHeight: ['100vh', 80, 96],
               position: ['fixed', 'static'],
               overflow: 'auto',
               top: 0,
@@ -81,24 +70,33 @@ const Header = ({
               bottom: 0,
               left: 0,
               zIndex: 2,
-              color: 'inherit',
-              bg: [
-                variant === 'transparent' ? 'background' : 'inherit',
-                'inherit',
-              ],
+              variant: `navigation.${variant}`,
             }}
           >
+            <Box
+              aria-label="close menu"
+              sx={{
+                display: ['block', 'none'],
+                // Use maxHeight instead of height du to render bug in Chrome.
+                // Otherwise, Chrome renders height smaller than 48px.
+                maxHeight: height,
+                width: '100%',
+                textAlign: 'right',
+                p: 2,
+                my: 2,
+              }}
+              onClick={() => {
+                setMenuOpen(false);
+              }}
+            >
+              <CloseIcon scaleTo="height" />
+            </Box>
+
             <Flex
               sx={{
                 flexDirection: ['column', 'row'],
                 alignItems: 'center',
-                pt: [5, 0],
-                px: 0,
-                my: 0,
                 overflow: 'auto',
-                'a:last-child': {
-                  mr: 0,
-                },
               }}
             >
               <SmartLink
@@ -107,8 +105,8 @@ const Header = ({
                   fontFamily: 'body',
                   fontSize: [4, 3, 4],
                   fontWeight: 'bold',
-                  mb: [3, 0],
-                  mr: [0, 3, 4],
+                  mb: [4, 0],
+                  ml: [0, 3, 4],
                 }}
                 href="/"
                 key="/"
@@ -120,12 +118,11 @@ const Header = ({
                 <SmartLink
                   sx={{
                     flexShrink: 0,
-                    color: 'inherit',
                     fontFamily: 'body',
                     fontSize: [4, 3, 4],
                     fontWeight: 'bold',
-                    mb: [3, 0],
-                    mr: [0, 3, 4],
+                    mb: [4, 0],
+                    ml: [0, 3, 4],
                   }}
                   key={href}
                   href={href}
@@ -146,63 +143,46 @@ const Header = ({
                   fontSize: [4, 3, 4],
                   color: 'inherit',
                   my: [4, 0],
-                  mr: [4, 0],
-                  ml: 4,
+                  ml: [0, 3, 4],
                 }}
                 href={button.href}
               >
                 {button.text}
               </Button>
             )}
-            <Button
-              sx={{
-                display: ['inline-block', 'none'],
-                position: 'absolute',
-                color: 'inherit',
-                bg: 'transparent',
-                px: 2,
-                py: 3,
-                top: 0,
-                right: 0,
-                WebkitTapHighlightColor: 'transparent',
-              }}
-              onClick={() => {
-                setMenuOpen(false);
-              }}
-            >
-              <CloseIcon width={24} />
-            </Button>
           </Box>
-          <Button
+          <Box
+            aria-label="open menu"
             sx={{
-              display: ['inline-block', 'none'],
+              display: ['block', 'none'],
               flexGrow: 1,
               flexShrink: 1,
+              height: '100%',
               textAlign: 'right',
-              color: 'inherit',
-              bg: 'transparent',
-              p: 0,
+              py: 2,
               zIndex: 1,
-              WebkitTapHighlightColor: 'transparent',
             }}
             onClick={() => {
               setMenuOpen(true);
             }}
           >
-            <MenuIcon width={24} />
-          </Button>
+            <MenuIcon scaleTo="height" />
+          </Box>
         </Flex>
       </Container>
     </Context.Provider>
   );
 };
 
+export const variants = ['branded', 'transparent', 'primary'];
+const variantType = oneOf(variants);
+
 Header.propTypes = {
   logo: func,
   title: string,
   links: arrayOf(linkType).isRequired,
   button: linkType,
-  height: responsiveType.isRequired,
+  height: responsiveType,
   variant: variantType,
 };
 

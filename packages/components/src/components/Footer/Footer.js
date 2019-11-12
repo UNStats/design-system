@@ -14,14 +14,12 @@ const Footer = ({
   ...props
 }) => {
   return (
-    <Container {...props} maxWidth="wide" px={0}>
+    <Container {...props} maxWidth="wide" variant={`footer.${variant}`}>
       <Flex
         as="footer"
         sx={{
           flexDirection: 'column',
           alignItems: 'center',
-          p: [2, 3],
-          variant: `footer.${variant}`,
         }}
       >
         {logo && (

@@ -4,7 +4,6 @@ export const alignments = ['left', 'center', 'right'];
 export const alignType = oneOf(alignments);
 
 export const responsiveNumberType = oneOfType([number, arrayOf(number)]);
-export const responsiveStringType = oneOfType([string, arrayOf(string)]);
 export const responsiveType = oneOfType([
   number,
   arrayOf(number),

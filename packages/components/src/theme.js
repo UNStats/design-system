@@ -154,6 +154,12 @@ export default merge(preset, {
     primary: pairings.primary,
   },
 
+  navigation: {
+    branded: pairings.branded,
+    transparent: { color: 'primary', bg: 'background' },
+    primary: pairings.primary,
+  },
+
   footer: {
     primary: pairings.primary,
     secondary: pairings.secondary,
