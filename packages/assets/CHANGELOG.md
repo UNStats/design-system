@@ -1,5 +1,11 @@
 # @undataforum/assets
 
+## 0.3.0
+
+### Minor Changes
+
+- [`a696be0`](https://github.com/UNDataForum/design-system/commit/a696be0347e01a75454c5383397fe534a3dc9007) [#213](https://github.com/UNDataForum/design-system/pull/213) Thanks [@454de6e](https://github.com/454de6e)! - Refactor SVG components and use `scaleTo` prop instead of `height` and `width` props
+
 ## 0.2.1
 
 ### Patch Changes

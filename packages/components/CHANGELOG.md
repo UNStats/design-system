@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.51.0
+
+### Minor Changes
+
+- [`0900fad`](https://github.com/UNDataForum/design-system/commit/0900fade9067dc5da5fbe22a6ded8776f5ba7232) [#213](https://github.com/UNDataForum/design-system/pull/213) Thanks [@454de6e](https://github.com/454de6e)! - Change default padding behavior of Container
+
+* [`a696be0`](https://github.com/UNDataForum/design-system/commit/a696be0347e01a75454c5383397fe534a3dc9007) [#213](https://github.com/UNDataForum/design-system/pull/213) Thanks [@454de6e](https://github.com/454de6e)! - Refactor SVG components and use `scaleTo` prop instead of `height` and `width` props
+
 ## 0.50.0
 
 ### Minor Changes
