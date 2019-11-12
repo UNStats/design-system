@@ -16,7 +16,7 @@ storiesOf('Components/Header', module)
   .add('logo and title', () => (
     <Box bg="orange">
       <Header
-        logo={() => <DummyLogo height="100%" />}
+        logo={() => <DummyLogo scaleTo="height" />}
         title="Header Title"
         links={[
           {
@@ -33,7 +33,6 @@ storiesOf('Components/Header', module)
           },
         ]}
         button={{ text: 'Register', href: '/register' }}
-        height={[64, 80, 96]}
         variant={select('variant', variants, 'branded')}
       />
     </Box>
@@ -41,7 +40,7 @@ storiesOf('Components/Header', module)
   .add('logo only', () => (
     <Box bg="orange">
       <Header
-        logo={() => <DummyLogo height="100%" />}
+        logo={() => <DummyLogo scaleTo="height" />}
         links={[
           {
             href: '/about',
@@ -57,7 +56,6 @@ storiesOf('Components/Header', module)
           },
         ]}
         button={{ text: 'Register', href: '/register' }}
-        height={[64, 80, 96]}
         variant={select('variant', variants, 'branded')}
       />
     </Box>
@@ -81,7 +79,6 @@ storiesOf('Components/Header', module)
           },
         ]}
         button={{ text: 'Register', href: '/register' }}
-        height={[64, 80, 96]}
         variant={select('variant', variants, 'branded')}
       />
     </Box>
@@ -104,7 +101,6 @@ storiesOf('Components/Header', module)
           },
         ]}
         button={{ text: 'Register', href: '/register' }}
-        height={[64, 80, 96]}
         variant={select('variant', variants, 'branded')}
       />
     </Box>
@@ -112,7 +108,7 @@ storiesOf('Components/Header', module)
   .add('no button', () => (
     <Box bg="orange">
       <Header
-        logo={() => <DummyLogo height="100%" />}
+        logo={() => <DummyLogo scaleTo="height" />}
         title="Header Title"
         links={[
           {
@@ -128,7 +124,6 @@ storiesOf('Components/Header', module)
             text: '2020',
           },
         ]}
-        height={[64, 80, 96]}
         variant={select('variant', variants, 'branded')}
       />
     </Box>
@@ -136,7 +131,7 @@ storiesOf('Components/Header', module)
   .add('many links with button', () => (
     <Box bg="orange">
       <Header
-        logo={() => <DummyLogo height="100%" />}
+        logo={() => <DummyLogo scaleTo="height" />}
         title="Header Title"
         links={[
           { text: 'One', href: '/1' },
@@ -156,7 +151,6 @@ storiesOf('Components/Header', module)
           { text: 'Fifteen', href: '/15' },
         ]}
         button={{ text: 'Register', href: '/register' }}
-        height={[64, 80, 96]}
         variant={select('variant', variants, 'branded')}
       />
     </Box>
@@ -164,7 +158,7 @@ storiesOf('Components/Header', module)
   .add('many links without button', () => (
     <Box bg="orange">
       <Header
-        logo={() => <DummyLogo height="100%" />}
+        logo={() => <DummyLogo scaleTo="height" />}
         title="Header Title"
         links={[
           { text: 'One', href: '/1' },
@@ -183,7 +177,6 @@ storiesOf('Components/Header', module)
           { text: 'Fourteen', href: '/14' },
           { text: 'Fifteen', href: '/15' },
         ]}
-        height={[64, 80, 96]}
         variant={select('variant', variants, 'branded')}
       />
     </Box>
@@ -191,7 +184,7 @@ storiesOf('Components/Header', module)
   .add('adjust height', () => (
     <Box bg="orange">
       <Header
-        logo={() => <DummyLogo height="100%" />}
+        logo={() => <DummyLogo scaleTo="height" />}
         links={[
           {
             href: '/about',

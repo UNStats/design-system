@@ -1,6 +1,6 @@
 import React from 'react';
 import { oneOf, object } from 'prop-types';
-import { Flex } from '@theme-ui/components';
+import { Box, Flex } from '@theme-ui/components';
 
 import SmartLink from '../SmartLink';
 import { EmailIcon, GitHubIcon, TwitterIcon } from '../../icons';
@@ -35,7 +35,9 @@ const SocialIcons = ({ usernames, variant = 'branded', ...props }) => (
           variant={variant}
           m={[2, 3]}
         >
-          <Icon width={[32, 48]} />
+          <Box sx={{ width: [32, 48] }}>
+            <Icon scaleTo="width" />
+          </Box>
         </SmartLink>
       );
     })}

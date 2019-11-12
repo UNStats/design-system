@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
+import { Box } from '@theme-ui/components';
 
 import DummyLogo from '../DummyLogo';
 import SocialIcons from '../SocialIcons';
@@ -22,7 +23,11 @@ storiesOf('Components/Footer', module)
   .addDecorator(withKnobs)
   .add('everything', () => (
     <Footer
-      logo={() => <DummyLogo height="logo.medium" />}
+      logo={() => (
+        <Box sx={{ height: 'height.medium' }}>
+          <DummyLogo scaleTo="height" />
+        </Box>
+      )}
       title="Footer Title"
       social={social}
       links={[
@@ -36,7 +41,11 @@ storiesOf('Components/Footer', module)
   ))
   .add('logo only', () => (
     <Footer
-      logo={() => <DummyLogo height="logo.medium" />}
+      logo={() => (
+        <Box sx={{ height: 'height.medium' }}>
+          <DummyLogo scaleTo="height" />
+        </Box>
+      )}
       links={[
         { text: 'Contact', href: '/contact' },
         { text: 'Copyright', href: '/copyright' },

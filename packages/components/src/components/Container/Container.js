@@ -6,10 +6,11 @@ import { Box } from '@theme-ui/components';
 // Padding can be overridden.
 const Container = ({ children, maxWidth = 'default', variant, ...props }) => (
   <Box
-    p={[2, 3]}
+    p={[2, 3, 4]}
     {...props}
     sx={{
       maxWidth: `width.${maxWidth}`,
+      width: '100%',
       mx: 'auto',
       variant,
     }}
