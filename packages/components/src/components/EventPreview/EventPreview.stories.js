@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Heading, Image, Text } from '@theme-ui/components';
+import { Image } from '@theme-ui/components';
+import { Styled } from 'theme-ui';
 
 import Names from '../Names';
 import Avatars from '../Avatars';
@@ -14,9 +15,9 @@ storiesOf('Components/EventPreview', module)
         type: 'Webinar',
         title() {
           return (
-            <Heading as="h1" sx={{ mb: 3 }}>
+            <Styled.h1>
               Vestibulum proin eu mi nulla ac enim in tempor turpis
-            </Heading>
+            </Styled.h1>
           );
         },
         date: 'October 14, 1983, 1:30 PM EDT',
@@ -38,9 +39,9 @@ storiesOf('Components/EventPreview', module)
         type: 'Webinar',
         title() {
           return (
-            <Heading as="h1" sx={{ color: 'text', mt: 0, mb: 3 }}>
+            <Styled.h1>
               Vestibulum proin eu mi nulla ac enim in tempor turpis
-            </Heading>
+            </Styled.h1>
           );
         },
         date: 'October 14, 1983, 1:30 PM EDT',
@@ -60,7 +61,7 @@ storiesOf('Components/EventPreview', module)
                       />
                     );
                   },
-                  name: 'Willow Rangall',
+                  name: 'Willow Rangall (Moderator)',
                   href: '/profiles/willow-rangall',
                 },
                 {
@@ -98,17 +99,14 @@ storiesOf('Components/EventPreview', module)
         },
         description() {
           return (
-            <Text
-              as="p"
-              sx={{ color: 'text', fontFamily: 'body', lineHeight: 'body' }}
-            >
+            <Styled.p>
               Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed
               interdum venenatis, turpis enim blandit mi, in porttitor pede
               justo eu massa. Donec dapibus. Duis at velit eu est congue
               elementum. In hac habitasse platea dictumst. Morbi vestibulum,
               velit id pretium iaculis, diam erat fermentum justo, nec
               condimentum neque sapien placerat ante. Nulla justo.
-            </Text>
+            </Styled.p>
           );
         },
         links: {
