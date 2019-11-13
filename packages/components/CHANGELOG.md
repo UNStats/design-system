@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.51.1
+
+### Patch Changes
+
+- [`a6b68b4`](https://github.com/UNDataForum/design-system/commit/a6b68b47363f49a0776f79fd0fe28b9974077b76) [#218](https://github.com/UNDataForum/design-system/pull/218) Thanks [@454de6e](https://github.com/454de6e)! - Fix close navigation button on iPhone
+
+* [`d1d7375`](https://github.com/UNDataForum/design-system/commit/d1d737565be7de6979946d701db029b06f368a9f) [#221](https://github.com/UNDataForum/design-system/pull/221) Thanks [@454de6e](https://github.com/454de6e)! - Let render props control top and bottom margins in EventPreview
+
 ## 0.51.0
 
 ### Minor Changes
