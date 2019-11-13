@@ -77,9 +77,7 @@ const Header = ({
               aria-label="close menu"
               sx={{
                 display: ['block', 'none'],
-                // Use maxHeight instead of height du to render bug in Chrome.
-                // Otherwise, Chrome renders height smaller than 48px.
-                maxHeight: height,
+                height,
                 width: '100%',
                 textAlign: 'right',
                 p: 2,
