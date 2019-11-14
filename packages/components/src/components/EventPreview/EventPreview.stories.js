@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Image } from '@theme-ui/components';
-import { Styled } from 'theme-ui';
+import { Heading, Image, Text } from '@theme-ui/components';
 
 import Names from '../Names';
 import Avatars from '../Avatars';
@@ -15,9 +14,9 @@ storiesOf('Components/EventPreview', module)
         type: 'Webinar',
         title() {
           return (
-            <Styled.h1>
+            <Heading as="h1" sx={{ mb: 3 }}>
               Vestibulum proin eu mi nulla ac enim in tempor turpis
-            </Styled.h1>
+            </Heading>
           );
         },
         date: 'October 14, 1983, 1:30 PM EDT',
@@ -39,9 +38,9 @@ storiesOf('Components/EventPreview', module)
         type: 'Webinar',
         title() {
           return (
-            <Styled.h1>
+            <Heading as="h1" sx={{ mb: 3 }}>
               Vestibulum proin eu mi nulla ac enim in tempor turpis
-            </Styled.h1>
+            </Heading>
           );
         },
         date: 'October 14, 1983, 1:30 PM EDT',
@@ -99,14 +98,14 @@ storiesOf('Components/EventPreview', module)
         },
         description() {
           return (
-            <Styled.p>
+            <Text as="p" sx={{ fontFamily: 'body', lineHeight: 'body', mb: 3 }}>
               Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed
               interdum venenatis, turpis enim blandit mi, in porttitor pede
               justo eu massa. Donec dapibus. Duis at velit eu est congue
               elementum. In hac habitasse platea dictumst. Morbi vestibulum,
               velit id pretium iaculis, diam erat fermentum justo, nec
               condimentum neque sapien placerat ante. Nulla justo.
-            </Styled.p>
+            </Text>
           );
         },
         links: {
