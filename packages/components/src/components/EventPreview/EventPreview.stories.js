@@ -262,7 +262,7 @@ storiesOf('Components/EventPreview', module)
       },
     ];
     return (
-      <Container>
+      <Container mt={[2, 3, 4]}>
         <Grid gap={4} columns={[1, null, 2]}>
           {events.map(({ id, ...event }) => (
             <EventPreview event={{ ...event }} key={id} />

@@ -16,11 +16,18 @@ const Header = ({
   button,
   height = [48, 64, 80],
   variant = 'branded',
+  ...props
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  // py={[2, 3, 3]} and not py={[2, 3]} because we need to overwrite default pb={[3, 4, 5]}.
   return (
     <Context.Provider value={{ menuOpen, setMenuOpen }}>
-      <Container maxWidth="wide" variant={`header.${variant}`}>
+      <Container
+        {...props}
+        py={[2, 3, 3]}
+        maxWidth="wide"
+        variant={`header.${variant}`}
+      >
         <Flex
           as="header"
           sx={{
@@ -70,7 +77,7 @@ const Header = ({
               bottom: 0,
               left: 0,
               zIndex: 2,
-              variant: `navigation.${variant}`,
+              variant: [`navigation.${variant}`, `header.${variant}`],
             }}
           >
             <Box
