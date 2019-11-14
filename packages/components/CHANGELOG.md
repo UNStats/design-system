@@ -1,5 +1,15 @@
 # Change Log
 
+## 0.52.0
+
+### Minor Changes
+
+- [`559b34d`](https://github.com/UNDataForum/design-system/commit/559b34da72ca923d03128f9484b7464fca1ca592) [#225](https://github.com/UNDataForum/design-system/pull/225) Thanks [@454de6e](https://github.com/454de6e)! - Align buttons when EventPreviews are rendered with a grid
+
+### Patch Changes
+
+- [`5221ee9`](https://github.com/UNDataForum/design-system/commit/5221ee912d787096001a8cabcf4c8692eb33d054) [#223](https://github.com/UNDataForum/design-system/pull/223) Thanks [@454de6e](https://github.com/454de6e)! - Fix margins in EventPreview
+
 ## 0.51.1
 
 ### Patch Changes
