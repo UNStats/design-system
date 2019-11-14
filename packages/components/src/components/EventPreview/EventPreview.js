@@ -33,6 +33,8 @@ const EventPreview = ({ event, ...props }) => (
         sx={{
           flexDirection: 'row',
           flexWrap: 'wrap',
+          flexGrow: 1,
+          alignItems: 'flex-end',
         }}
       >
         {event.links.page && (
