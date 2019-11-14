@@ -5,14 +5,25 @@ import { Button, Flex, Text } from '@theme-ui/components';
 import SmartLink from '../SmartLink';
 import Badge from '../Badge';
 
+// How margins work in this component:
+// What the title prop renders (heading) may have no top margin, only bottom margin.
+// What the description prop renders (paragraph) may have no top margin, only bottom margin.
 const EventPreview = ({ event, ...props }) => (
   <Flex {...props} sx={{ flexDirection: 'column', alignItems: 'flex-start' }}>
-    <Badge value={{ text: event.type, variant: 'secondary' }} />
+    <Badge
+      value={{ text: event.type, variant: 'secondary' }}
+      mb={[2, null, 3]}
+    />
     {event.title()}
     {event.speakers()}
     <Text
       as="time"
-      sx={{ color: 'text', display: 'block', fontFamily: 'body' }}
+      sx={{
+        color: 'text',
+        display: 'block',
+        fontFamily: 'body',
+        mb: 3,
+      }}
     >
       {`${event.date} (${event.duration})`}
     </Text>
@@ -22,7 +33,6 @@ const EventPreview = ({ event, ...props }) => (
         sx={{
           flexDirection: 'row',
           flexWrap: 'wrap',
-          mt: event.description ? 0 : 3,
         }}
       >
         {event.links.page && (
