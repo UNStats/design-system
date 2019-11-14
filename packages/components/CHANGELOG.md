@@ -1,5 +1,15 @@
 # Change Log
 
+## 0.53.0
+
+### Minor Changes
+
+- [`d0438e9`](https://github.com/UNDataForum/design-system/commit/d0438e9baa430343619b2954c61d707446e52b95) [#229](https://github.com/UNDataForum/design-system/pull/229) Thanks [@454de6e](https://github.com/454de6e)! - Change default padding for Container
+
+### Patch Changes
+
+- [`d98bdd8`](https://github.com/UNDataForum/design-system/commit/d98bdd83f2cab1a99679ba58685ffc71db0b9e67) [#228](https://github.com/UNDataForum/design-system/pull/228) Thanks [@454de6e](https://github.com/454de6e)! - Fix bottom margin of date/time component in EventPreview
+
 ## 0.52.0
 
 ### Minor Changes
