@@ -22,7 +22,7 @@ const EventPreview = ({ event, ...props }) => (
         color: 'text',
         display: 'block',
         fontFamily: 'body',
-        mb: 3,
+        mb: event.description || event.links ? 3 : 0,
       }}
     >
       {`${event.date} (${event.duration})`}
