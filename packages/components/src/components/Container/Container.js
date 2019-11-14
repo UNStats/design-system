@@ -2,11 +2,18 @@ import React from 'react';
 import { node, oneOf, string } from 'prop-types';
 import { Box } from '@theme-ui/components';
 
-// A Container is used as the outer most element in a layout.
-// Padding can be overridden.
+/* A Container is used as the outer most element in layouts.
+ * The default padding is for page layouts:
+ * - no top padding,
+ * - left and right padding (to keep a distance form edge of screen on phones and tablets),
+ * - larger bottom padding (to keep a distance from footer).
+ * Padding can be overridden.
+ */
 const Container = ({ children, maxWidth = 'default', variant, ...props }) => (
   <Box
-    p={[2, 3, 4]}
+    pt={0}
+    pb={[3, 4, 5]}
+    px={[2, 3, 4]}
     {...props}
     sx={{
       maxWidth: `width.${maxWidth}`,

@@ -5,16 +5,9 @@ import { Flex, Heading, Text } from '@theme-ui/components';
 import Container from '../Container';
 import SmartLink, { linkType } from '../SmartLink';
 
-const Footer = ({
-  logo,
-  title,
-  social,
-  links,
-  variant = 'primary',
-  ...props
-}) => {
+const Footer = ({ logo, title, social, links, variant = 'primary' }) => {
   return (
-    <Container {...props} maxWidth="wide" variant={`footer.${variant}`}>
+    <Container p={[2, 3, 4]} maxWidth="wide" variant={`footer.${variant}`}>
       <Flex
         as="footer"
         sx={{
