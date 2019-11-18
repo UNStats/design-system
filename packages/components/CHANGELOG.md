@@ -1,5 +1,15 @@
 # Change Log
 
+## 0.56.0
+
+### Minor Changes
+
+- [`8f30975`](https://github.com/UNDataForum/design-system/commit/8f3097513641b34f6cda3d3312dc8473b5e3fcb6) [#241](https://github.com/UNDataForum/design-system/pull/241) Thanks [@454de6e](https://github.com/454de6e)! - Export Card component from @theme-ui/components
+
+### Patch Changes
+
+- [`52909fb`](https://github.com/UNDataForum/design-system/commit/52909fbed89ab4de5f979ce2230cd523bdf45d6f) [#242](https://github.com/UNDataForum/design-system/pull/242) Thanks [@454de6e](https://github.com/454de6e)! - Fix spacing in Hero
+
 ## 0.55.0
 
 ### Minor Changes
