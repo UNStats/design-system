@@ -1,5 +1,17 @@
 # Change Log
 
+## 0.55.0
+
+### Minor Changes
+
+- [`8c198a6`](https://github.com/UNDataForum/design-system/commit/8c198a6fd37ee4071f3816fb5590e01fb05344ae) [#238](https://github.com/UNDataForum/design-system/pull/238) Thanks [@454de6e](https://github.com/454de6e)! - Add promo prop to Hero
+
+### Patch Changes
+
+- [`4a5728b`](https://github.com/UNDataForum/design-system/commit/4a5728b705244afa0cc09c93e3866abe7c120010) [#234](https://github.com/UNDataForum/design-system/pull/234) Thanks [@454de6e](https://github.com/454de6e)! - Always stretch footer to edges
+
+* [`be48819`](https://github.com/UNDataForum/design-system/commit/be488191d070e4e6ca36fd69a9fb85582c1ff481) [#236](https://github.com/UNDataForum/design-system/pull/236) Thanks [@454de6e](https://github.com/454de6e)! - Constrain width of image in Hero
+
 ## 0.54.0
 
 ### Minor Changes
