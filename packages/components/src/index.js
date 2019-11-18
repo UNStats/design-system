@@ -8,6 +8,7 @@ export {
   eventType,
   Footer,
   Header,
+  Hero,
   Names,
   PostPreview,
   postType,
