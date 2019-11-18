@@ -2,16 +2,18 @@ import React from 'react';
 import { func, string, shape } from 'prop-types';
 import { Box, Button, Flex, Text } from '@theme-ui/components';
 
+import Container from '../Container';
 import SmartLink from '../SmartLink';
 
+// Any props that are not part of Container's API will be passed into its Box's sx prop.
 const Hero = ({ logo, image, text, action, ...props }) => (
-  <Box
+  <Container
     {...props}
-    sx={{
-      height: ['100vh', null, '50vh'],
-      position: 'relative',
-      maxHeight: '100vh',
-    }}
+    maxWidth="wide"
+    position="relative"
+    height={['100vh', null, '50vh']}
+    maxHeight="100vh"
+    p={[2, 3, 4]}
   >
     <Box
       sx={{
@@ -31,7 +33,6 @@ const Hero = ({ logo, image, text, action, ...props }) => (
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        p: 4,
         height: '100%',
       }}
     >
@@ -61,7 +62,7 @@ const Hero = ({ logo, image, text, action, ...props }) => (
         </Button>
       )}
     </Flex>
-  </Box>
+  </Container>
 );
 
 Hero.propTypes = {

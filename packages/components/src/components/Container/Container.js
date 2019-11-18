@@ -11,15 +11,15 @@ import { Box } from '@theme-ui/components';
  */
 const Container = ({ children, maxWidth = 'default', variant, ...props }) => (
   <Box
-    pt={0}
-    pb={[3, 4, 5]}
-    px={[2, 3, 4]}
-    {...props}
     sx={{
+      variant,
+      pt: 0,
+      pb: [3, 4, 5],
+      px: [2, 3, 4],
+      ...props,
       maxWidth: `width.${maxWidth}`,
       width: '100%',
       mx: 'auto',
-      variant,
     }}
   >
     {children}
