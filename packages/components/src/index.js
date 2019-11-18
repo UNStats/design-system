@@ -1,4 +1,12 @@
-export { Box, Button, Flex, Grid, Heading, Text } from '@theme-ui/components';
+export {
+  Box,
+  Button,
+  Card,
+  Flex,
+  Grid,
+  Heading,
+  Text,
+} from '@theme-ui/components';
 export {
   Avatars,
   Badge,
