@@ -4,12 +4,8 @@ import { withKnobs, select } from '@storybook/addon-knobs';
 import { Box } from '@theme-ui/components';
 
 import DummyLogo from '../DummyLogo';
-import theme from '../../theme';
 
-import Header from './Header';
-
-// Extract variants.
-const variants = Object.keys(theme.header);
+import Header, { variants } from './Header';
 
 storiesOf('Components/Header', module)
   .addDecorator(withKnobs)

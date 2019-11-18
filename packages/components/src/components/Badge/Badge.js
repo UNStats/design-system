@@ -11,7 +11,7 @@ const Badge = ({ value: { text, variant = 'primary' }, ...props }) => (
       fontFamily: 'body',
       fontSize: 0,
       fontWeight: 'bold',
-      variant: `badge.${variant}`,
+      variant: `pairings.${variant}`,
       px: 2,
       py: 1,
     }}
