@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.54.0
+
+### Minor Changes
+
+- [`e813fc4`](https://github.com/UNDataForum/design-system/commit/e813fc419fbaa54816955f39c5bf8ec402bb423b) [#233](https://github.com/UNDataForum/design-system/pull/233) Thanks [@454de6e](https://github.com/454de6e)! - Add Hero component
+
 ## 0.53.0
 
 ### Minor Changes
