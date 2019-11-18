@@ -56,12 +56,12 @@ const Hero = ({ logo, image, text, action, promo, ...props }) => {
         <Flex
           sx={{
             flexDirection: 'column',
-            justifyContent: 'space-around',
+            justifyContent: 'center',
             alignItems: 'center',
             height: '100%',
           }}
         >
-          <Box sx={{ height: 128 }}>{logo()}</Box>
+          <Box sx={{ height: 128, mb: 3 }}>{logo()}</Box>
           <Text
             sx={{
               fontFamily: 'heading',
@@ -77,7 +77,7 @@ const Hero = ({ logo, image, text, action, promo, ...props }) => {
           {action && (
             <Button
               as={SmartLink}
-              sx={{ fontFamily: 'body' }}
+              sx={{ fontFamily: 'body', mt: 3 }}
               href={action.href}
             >
               {action.text}
