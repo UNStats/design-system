@@ -19,7 +19,6 @@ const EventPreview = ({ event, ...props }) => (
     <Text
       as="time"
       sx={{
-        color: 'text',
         display: 'block',
         fontFamily: 'body',
         mb: event.description || event.links ? 3 : 0,
