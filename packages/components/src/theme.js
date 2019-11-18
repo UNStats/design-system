@@ -129,13 +129,6 @@ export default merge(preset, {
     },
   },
 
-  badge: {
-    primary: pairings.primary,
-    secondary: pairings.secondary,
-    accent: pairings.accent,
-    inverse: pairings.inverse,
-  },
-
   badges: {
     left: {
       justifyContent: 'flex-start',
@@ -148,22 +141,11 @@ export default merge(preset, {
     },
   },
 
-  header: {
-    branded: pairings.branded,
-    transparent: pairings.transparent,
-    primary: pairings.primary,
-  },
-
+  // Corner case: transparent variant for navigation means normal backgorund color.
   navigation: {
     branded: pairings.branded,
     transparent: { color: 'primary', bg: 'background' },
     primary: pairings.primary,
-  },
-
-  footer: {
-    primary: pairings.primary,
-    secondary: pairings.secondary,
-    inverse: pairings.inverse,
   },
 
   link: {

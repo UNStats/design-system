@@ -26,7 +26,7 @@ const Header = ({
         {...props}
         py={[2, 3, 3]}
         maxWidth="wide"
-        variant={`header.${variant}`}
+        variant={`pairings.${variant}`}
       >
         <Flex
           as="header"
@@ -77,7 +77,7 @@ const Header = ({
               bottom: 0,
               left: 0,
               zIndex: 2,
-              variant: [`navigation.${variant}`, `header.${variant}`],
+              variant: [`navigation.${variant}`, `pairings.${variant}`],
             }}
           >
             <Box
