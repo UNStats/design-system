@@ -146,6 +146,20 @@ export default merge(preset, {
     },
   },
 
+  cards: {
+    primary: {
+      padding: 2,
+      borderRadius: 4,
+      boxShadow: '0 0 8px rgba(0, 0, 0, 0.125)',
+    },
+    compact: {
+      padding: 1,
+      borderRadius: 2,
+      border: '1px solid',
+      borderColor: 'muted',
+    },
+  },
+
   // Corner case: transparent variant for navigation means normal backgorund color.
   navigation: {
     branded: pairings.branded,
