@@ -33,6 +33,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.21",
     "@mdx-js/react": "^1.5.1",
+    "@theme-ui/color": "^0.2.49",
     "@theme-ui/components": "^0.2.45",
     "@theme-ui/preset-base": "^0.2.44",
     "deepmerge": "^4.2.2",
