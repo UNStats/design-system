@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.56.1
+
+### Patch Changes
+
+- [`fa656e3`](https://github.com/UNDataForum/design-system/commit/fa656e3b401f6b91e9e548b5ac28211724931bdd) [#252](https://github.com/UNDataForum/design-system/pull/252) Thanks [@454de6e](https://github.com/454de6e)! - Remove props from theme in favor of props from preset
+
+* [`646eab9`](https://github.com/UNDataForum/design-system/commit/646eab9a2b9f0af83c92d8cdea716b5ec2dab7e2) [#253](https://github.com/UNDataForum/design-system/pull/253) Thanks [@454de6e](https://github.com/454de6e)! - Make square corners default
+
 ## 0.56.0
 
 ### Minor Changes
