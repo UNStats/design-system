@@ -93,7 +93,7 @@ export default merge(preset, {
   borders: [0, '1px solid', '2px solid', '3px solid'],
 
   radii: {
-    default: 4,
+    default: 0,
     circle: 99999,
   },
 
@@ -133,7 +133,7 @@ export default merge(preset, {
   cards: {
     primary: {
       padding: 2,
-      borderRadius: 4,
+      borderRadius: 'default',
       boxShadow: '0 0 8px rgba(0, 0, 0, 0.125)',
     },
     compact: {
