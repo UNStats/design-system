@@ -62,6 +62,7 @@ const pairings = {
   },
 };
 
+// Defaults from @theme-ui/preset-base:
 // https://github.com/system-ui/theme-ui/tree/master/packages/preset-base
 export default merge(preset, {
   // Compatible with https://theme-ui.com/theme-spec/#color.
@@ -70,8 +71,6 @@ export default merge(preset, {
 
   // Layout.
   breakpoints: ['30em', '60em'],
-  // http://tachyons.io/docs/layout/spacing/
-  space: [0, '.25rem', '.5rem', '1rem', '2rem', '4rem', '8rem', '16rem'],
   sizes: {
     width: {
       narrow: '48rem',
@@ -85,24 +84,9 @@ export default merge(preset, {
     },
   },
 
+  // Override heading: 'inherit' from preset-base.
   fonts: {
     heading: 'system-ui, sans-serif',
-  },
-
-  // http://tachyons.io/docs/typography/scale/ (reversed)
-  fontSizes: [
-    '.75rem',
-    '.875rem',
-    '1rem',
-    '1.25rem',
-    '1.5rem',
-    '2.25rem',
-    '3rem',
-  ],
-
-  lineHeights: {
-    body: 1.5,
-    heading: 1.25,
   },
 
   // Styling.
