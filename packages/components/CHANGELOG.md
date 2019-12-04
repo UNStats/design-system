@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.57.0
+
+### Minor Changes
+
+- [`735cdbd`](https://github.com/UNDataForum/design-system/commit/735cdbded3b9e36f786d26382f4fa2c7cb12eb4b) [#255](https://github.com/UNDataForum/design-system/pull/255) Thanks [@454de6e](https://github.com/454de6e)! - Export NewTabLink
+
 ## 0.56.1
 
 ### Patch Changes
