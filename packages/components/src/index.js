@@ -18,6 +18,7 @@ export {
   Header,
   Hero,
   Names,
+  NewTabLink,
   PostPreview,
   postType,
   ProfilePreview,
