@@ -1,7 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Image } from '@theme-ui/components';
+import { Grid, Image } from '@theme-ui/components';
 
+import Container from '../Container';
 import Names from '../Names';
 import Avatars from '../Avatars';
 
@@ -13,7 +14,7 @@ storiesOf('Components/PostPreview', module)
       post={{
         title: 'Vestibulum proin eu mi nulla ac enim in tempor turpis',
         date: 'May 31, 2018',
-        authors: function authors() {
+        authors() {
           return (
             <Names
               values={[
@@ -44,8 +45,8 @@ storiesOf('Components/PostPreview', module)
       post={{
         title: 'Vestibulum proin eu mi nulla ac enim in tempor turpis',
         date: 'May 31, 2018',
-        authors: () =>
-          (() => (
+        authors() {
+          return (
             <Avatars
               values={[
                 {
@@ -191,7 +192,8 @@ storiesOf('Components/PostPreview', module)
               ]}
               mb={3}
             />
-          ))(),
+          );
+        },
       }}
       m={2}
     />
@@ -201,7 +203,7 @@ storiesOf('Components/PostPreview', module)
       post={{
         title: 'Vestibulum proin eu mi nulla ac enim in tempor turpis',
         date: 'May 31, 2018',
-        authors: function authors() {
+        authors() {
           return (
             <Names
               values={[
@@ -226,4 +228,67 @@ storiesOf('Components/PostPreview', module)
       fontSize={[5, 6]}
       m={2}
     />
-  ));
+  ))
+  .add('grid of posts', () => {
+    const posts = [
+      {
+        id: 'cbdb6147-cab8-5511-a325-28d4dee7f914',
+        title: 'Et nulla in incididunt cupidatat pariatur sit sint proident',
+        date: 'Dec 9, 2019',
+        authors() {
+          return (
+            <Names
+              values={['Mildred Webb', 'Lura Day', 'Viola Carpenter']}
+              mb={3}
+            />
+          );
+        },
+        description:
+          'Deserunt id duis ea aliqua amet est veniam anim. Deserunt incididunt aute in ut id occaecat elit irure consectetur dolor in labore minim. Ad nulla fugiat ipsum irure commodo do anim duis mollit eiusmod. Dolore nulla ea aliquip esse minim sit amet reprehenderit deserunt proident culpa amet.',
+        href: '/blog/et-nulla-in-incididunt',
+      },
+      {
+        id: 'a1ca7aa8-f666-5f7b-9dd2-bac6f34ac744',
+        title: 'Dolore in eiusmod culpa duis ut aliquip et ea',
+        date: 'Dec 8, 2019',
+        authors() {
+          return <Names values={['Bertha Johnson']} mb={3} />;
+        },
+        description:
+          'Reprehenderit in aliqua sit elit mollit Lorem reprehenderit Lorem esse. Enim occaecat cupidatat do exercitation qui quis ipsum Lorem laborum deserunt ullamco proident ad. Aliqua aliquip exercitation Lorem veniam id. Anim occaecat excepteur tempor ullamco. Ad duis voluptate eu incididunt ea pariatur pariatur id ullamco do ex. Quis qui quis enim anim labore. Voluptate voluptate quis proident pariatur occaecat eiusmod consequat amet minim elit tempor esse cillum reprehenderit.',
+        href: '/blog/reprehenderit-in-aliqua-sit-elit',
+      },
+      {
+        id: '057a4af9-1e4c-5cfa-b633-237833b24ce0',
+        title:
+          'Irure aliquip ipsum eu qui cupidatat sunt cillum eu velit dolor',
+        date: 'Dec 7, 2019',
+        authors() {
+          return <Names values={['Lucy White']} mb={3} />;
+        },
+        description:
+          'Commodo sint id cillum nostrud. Excepteur aliqua incididunt anim elit esse. Fugiat sint consectetur dolore culpa officia laboris officia labore ad id esse in. Ullamco excepteur tempor veniam dolore sint.',
+        href: '/blog/irure-aliquip-ipsum',
+      },
+      {
+        id: '740f7b45-4a4a-5ba7-8b33-ce9946775a82',
+        title: 'Eu sit excepteur non cupidatat',
+        date: 'Dec 6, 2019',
+        authors() {
+          return <Names values={['Jim Russell', 'Ida Hall']} mb={3} />;
+        },
+        description:
+          'Exercitation id elit enim dolor veniam nostrud qui veniam. Cillum commodo proident aliqua magna excepteur aliqua qui ea enim duis irure labore. Enim dolore proident ipsum incididunt amet et elit nisi reprehenderit dolor anim consequat quis. Minim irure adipisicing ipsum pariatur duis. Culpa culpa tempor dolore nulla velit eu sit sunt minim esse qui deserunt elit quis. Ex Lorem in labore qui ea.',
+        href: '/blog/eu-sit-excepteur-non-cupidatat',
+      },
+    ];
+    return (
+      <Container mt={[2, 3, 4]}>
+        <Grid gap={4} columns={[1, null, 2]}>
+          {posts.map(({ id, ...post }) => (
+            <PostPreview post={{ ...post }} key={id} />
+          ))}
+        </Grid>
+      </Container>
+    );
+  });

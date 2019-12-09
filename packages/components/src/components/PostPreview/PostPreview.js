@@ -35,25 +35,38 @@ const PostPreview = ({ post, fontSize = [3, 4], ...props }) => {
       {post.description && (
         <Text
           as="p"
-          sx={{ color: 'text', fontFamily: 'body', lineHeight: 'body', my: 0 }}
+          sx={{
+            color: 'text',
+            fontFamily: 'body',
+            lineHeight: 'body',
+            my: 0,
+          }}
         >
           {post.description}
         </Text>
       )}
       {post.href && (
-        <Button
-          as={SmartLink}
+        <Flex
           sx={{
-            alignSelf: ['stretch', 'flex-start'],
-            fontFamily: 'body',
-            whiteSpace: 'nowrap',
-            mt: 3,
+            flexGrow: 1,
+            flexDirection: 'column',
+            justifyContent: 'flex-end',
           }}
-          href={post.href}
-          variant="primary"
         >
-          Read on
-        </Button>
+          <Button
+            as={SmartLink}
+            sx={{
+              alignSelf: ['stretch', 'flex-start'],
+              fontFamily: 'body',
+              whiteSpace: 'nowrap',
+              mt: 3,
+            }}
+            href={post.href}
+            variant="primary"
+          >
+            Read on
+          </Button>
+        </Flex>
       )}
     </Flex>
   );
