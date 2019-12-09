@@ -1,5 +1,15 @@
 # Change Log
 
+## 0.58.0
+
+### Minor Changes
+
+- [`58503c2`](https://github.com/UNDataForum/design-system/commit/58503c2137e6ec0c1e82d04da4156bd3e62e2e65) [#260](https://github.com/UNDataForum/design-system/pull/260) - Export Link from @theme-ui/components
+
+### Patch Changes
+
+- [`c20ec34`](https://github.com/UNDataForum/design-system/commit/c20ec3444b6f107ed1fa5bb76ba06aabfb1ad14a) [#261](https://github.com/UNDataForum/design-system/pull/261) - Align link buttons of PostPreview when rendered with Grid
+
 ## 0.57.0
 
 ### Minor Changes
