@@ -1679,19 +1679,19 @@
     "@changesets/types" "^0.4.0"
     semver "^5.4.1"
 
-"@changesets/changelog-github@0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@changesets/changelog-github/-/changelog-github-0.1.1.tgz#04f3c40de15c53eb7b6c0b870cee13e76fd91fbf"
-  integrity sha512-xwwyc7nSVVEUmVCiqT1dyju1rxe2awk5XOWLEwpsez3j9gXKwixlK43daG5jP1caGuXFc9f1BOSod2oJTUbtew==
+"@changesets/changelog-github@0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@changesets/changelog-github/-/changelog-github-0.2.0.tgz#1bb9b523a3eca6df4a4d44a035ec9764a39076a4"
+  integrity sha512-5pmDePQlx+iiXuQxo+P9hYu3K38Qz+mHi0tg4o6ezUUK7QejJKJM75dULsdVyL/GkojuXKwYIbE9UyolI2Si/w==
   dependencies:
-    "@changesets/get-github-info" "^0.3.0"
+    "@changesets/get-github-info" "^0.4.0"
     "@changesets/types" "^0.4.0"
     dotenv "^8.1.0"
 
-"@changesets/cli@2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@changesets/cli/-/cli-2.4.0.tgz#f7b6d8a7ef45d585103c5dba18361aec7f12d449"
-  integrity sha512-PL5/Ru6xCUMUQYMOjiSI/WS5t1UbAUbx9g0sKmphWbUHLMvDl4O9kR6b77345lvFHOY9Kj04aU6f82Hqhb2LwQ==
+"@changesets/cli@2.4.1":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@changesets/cli/-/cli-2.4.1.tgz#45bebcc49ff40f50e660b8ecb2ad0ea281a1cac6"
+  integrity sha512-hVBwbsMVFHpP8ryq9L8Z5fTsa+8igUCnnmxYC0YClrKUWiAWmZhO0wh7g9sU97j/Amg4Tk8gS0HGA0SaSY+f/w==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@changesets/apply-release-plan" "^0.3.1"
@@ -1739,10 +1739,10 @@
   dependencies:
     extendable-error "^0.1.5"
 
-"@changesets/get-github-info@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@changesets/get-github-info/-/get-github-info-0.3.0.tgz#1776a6b5ed2f9f1d16d076ef19acbc29003ef81c"
-  integrity sha512-PTFJk1hiMUZ1YGzULmRNo6a6w6LTV6iCY1muCBTby+k4WWGbGgAaqKfUVhpZBosd1fvFIlXl3wqxdA93PLkRaQ==
+"@changesets/get-github-info@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@changesets/get-github-info/-/get-github-info-0.4.0.tgz#30d25d18fe510c4dd8ba25f7997315f6474dedad"
+  integrity sha512-wF8cKYeulKjqgX1uRJEeD1yWF52+s13dFxFmoIy9suZdxR4n3aMrET9wJq1epIPWbLEizRJQiVY4asOhZUuoHQ==
   dependencies:
     dataloader "^1.4.0"
     node-fetch "^2.5.0"
