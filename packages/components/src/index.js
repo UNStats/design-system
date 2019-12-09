@@ -5,6 +5,7 @@ export {
   Flex,
   Grid,
   Heading,
+  Link,
   Text,
 } from '@theme-ui/components';
 export {
