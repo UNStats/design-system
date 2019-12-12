@@ -1,14 +1,13 @@
 import React from 'react';
 import { arrayOf, func, string, oneOf } from 'prop-types';
-import { Box, Flex, Heading, Text } from '@theme-ui/components';
+import { Box, Container, Flex, Heading, Text } from '@theme-ui/components';
 
-import Container from '../Container';
 import SmartLink, { linkType } from '../SmartLink';
 
 const Footer = ({ logo, title, social, links, variant = 'primary' }) => {
   return (
     <Box sx={{ variant: `pairings.${variant}` }}>
-      <Container p={[2, 3, 4]} maxWidth="wide">
+      <Container sx={{ maxWidth: 'width.wide', p: [2, 3, 4] }}>
         <Flex
           as="footer"
           sx={{

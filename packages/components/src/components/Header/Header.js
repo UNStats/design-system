@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { arrayOf, func, string, oneOf } from 'prop-types';
-import { Box, Button, Flex, Heading } from '@theme-ui/components';
+import { Box, Button, Container, Flex, Heading } from '@theme-ui/components';
 
 import { responsiveType } from '../../types';
 import { CloseIcon, MenuIcon } from '../../icons';
-import Container from '../Container';
 import SmartLink, { linkType } from '../SmartLink';
 
 import { Context } from './context';
@@ -19,14 +18,11 @@ const Header = ({
   ...props
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  // py={[2, 3, 3]} and not py={[2, 3]} because we need to overwrite default pb={[3, 4, 5]}.
   return (
     <Context.Provider value={{ menuOpen, setMenuOpen }}>
       <Container
         {...props}
-        py={[2, 3, 3]}
-        maxWidth="wide"
-        variant={`pairings.${variant}`}
+        sx={{ px: [2, 3, 4], py: [2, 3], variant: `pairings.${variant}` }}
       >
         <Flex
           as="header"

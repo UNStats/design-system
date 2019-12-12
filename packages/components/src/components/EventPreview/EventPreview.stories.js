@@ -1,8 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Grid, Heading, Image, Text } from '@theme-ui/components';
+import { Container, Grid, Heading, Image, Text } from '@theme-ui/components';
 
-import Container from '../Container';
 import Names from '../Names';
 import Avatars from '../Avatars';
 
@@ -262,7 +261,13 @@ storiesOf('Components/EventPreview', module)
       },
     ];
     return (
-      <Container mt={[2, 3, 4]}>
+      <Container
+        sx={{
+          maxWidth: 'width.default',
+          my: [2, 3, 4],
+          px: [2, 3, 4],
+        }}
+      >
         <Grid gap={4} columns={[1, null, 2]}>
           {events.map(({ id, ...event }) => (
             <EventPreview event={{ ...event }} key={id} />

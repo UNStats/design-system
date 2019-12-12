@@ -2,6 +2,7 @@ export {
   Box,
   Button,
   Card,
+  Container,
   Flex,
   Grid,
   Heading,
@@ -11,7 +12,6 @@ export {
 export {
   Avatars,
   Badge,
-  Container,
   DummyLogo,
   EventPreview,
   eventType,
