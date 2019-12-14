@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.60.0
+
+### Minor Changes
+
+- [`b12e44b`](https://github.com/UNDataForum/design-system/commit/b12e44b47785f331483201eb6be7bd46ed0895c5) [#265](https://github.com/UNDataForum/design-system/pull/265) - Add YouTube component
+
+* [`4ff771d`](https://github.com/UNDataForum/design-system/commit/4ff771de8cbd2d3edd0aebfb51f6a7778166b118) [#264](https://github.com/UNDataForum/design-system/pull/264) - Replace custom Container component with Container from @theme-ui/components
+
 ## 0.58.0
 
 ### Minor Changes
