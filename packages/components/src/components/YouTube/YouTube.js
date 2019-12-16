@@ -3,8 +3,8 @@ import { number, string } from 'prop-types';
 import { AspectRatio } from '@theme-ui/components';
 
 // Player parameters: https://developers.google.com/youtube/player_parameters.
-const YouTube = ({ id, title, ratio = 16 / 9 }) => (
-  <AspectRatio ratio={ratio}>
+const YouTube = ({ id, title, ratio = 16 / 9, ...props }) => (
+  <AspectRatio {...props} ratio={ratio}>
     <iframe
       width="100%"
       height="100%"
