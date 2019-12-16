@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.60.1
+
+### Patch Changes
+
+- [`9c7b7ee`](https://github.com/UNDataForum/design-system/commit/9c7b7eea82bc4953642ca24756d0175598e0ac8a) [#268](https://github.com/UNDataForum/design-system/pull/268) - Add support for spacing props to YouTube component
+
 ## 0.60.0
 
 ### Minor Changes
