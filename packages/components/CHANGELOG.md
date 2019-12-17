@@ -1,5 +1,17 @@
 # Change Log
 
+## 0.61.0
+
+### Minor Changes
+
+- [`740d2b6`](https://github.com/UNDataForum/design-system/commit/740d2b672d0636ac17fa0a21c11789f53b91838c) [#271](https://github.com/UNDataForum/design-system/pull/271) - Undo support for changeset props
+
+* [`9c705ce`](https://github.com/UNDataForum/design-system/commit/9c705ce65e8b2069e66e602ede2563c8e7fd962f) [#272](https://github.com/UNDataForum/design-system/pull/272) - Rename YouTube to Video
+
+### Patch Changes
+
+- [`3837577`](https://github.com/UNDataForum/design-system/commit/38375777ea9121d60ceb273fcf2c555f43eb1f16) [#274](https://github.com/UNDataForum/design-system/pull/274) - Revise player parameters
+
 ## 0.60.1
 
 ### Patch Changes
