@@ -13,6 +13,7 @@ const Video = ({ id, title, ratio = 16 / 9 }) => (
       src={`https://www.youtube-nocookie.com/embed/${id}?rel=0`}
       title={title}
       frameBorder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
     />
   </AspectRatio>
