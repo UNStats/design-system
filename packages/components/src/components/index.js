@@ -11,4 +11,4 @@ export { default as PostPreview, postType } from './PostPreview';
 export { default as ProfilePreview, profileType } from './ProfilePreview';
 export { default as SmartLink } from './SmartLink';
 export { default as SocialIcons } from './SocialIcons';
-export { default as YouTube } from './YouTube';
+export { default as Video } from './Video';
