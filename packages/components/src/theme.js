@@ -1,5 +1,4 @@
 import preset from '@theme-ui/preset-base';
-import { alpha } from '@theme-ui/color';
 import merge from 'deepmerge';
 
 import { NewTabLink } from './components';
@@ -35,10 +34,6 @@ const pairings = {
   branded: {
     color: 'primary',
     bg: 'background',
-  },
-  hero: {
-    color: 'primary',
-    bg: alpha('background', 0.6),
   },
   transparent: {
     color: 'primary',
