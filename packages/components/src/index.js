@@ -17,7 +17,6 @@ export {
   eventType,
   Footer,
   Header,
-  Hero,
   Names,
   NewTabLink,
   PostPreview,
