@@ -22,7 +22,12 @@ const Header = ({
     <Context.Provider value={{ menuOpen, setMenuOpen }}>
       <Container
         {...props}
-        sx={{ px: [2, 3, 4], py: [2, 3], variant: `pairings.${variant}` }}
+        sx={{
+          maxWidth: 'width.wide',
+          px: [2, 3, 4],
+          py: [2, 3],
+          variant: `pairings.${variant}`,
+        }}
       >
         <Flex
           as="header"
