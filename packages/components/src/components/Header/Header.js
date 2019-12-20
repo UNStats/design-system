@@ -42,6 +42,7 @@ const Header = ({
             <SmartLink
               sx={{ height: '100%', flexShrink: 0, mr: [2, 3] }}
               href="/"
+              aria-label="Back to homepage"
               variant={variant}
             >
               {logo()}
@@ -55,6 +56,7 @@ const Header = ({
                 mr: [0, 3, 4],
               }}
               href="/"
+              aria-label="Back to homepage"
               variant={variant}
             >
               <Heading sx={{ whiteSpace: 'nowrap}', fontSize: [4, 5, 6] }}>
@@ -82,7 +84,7 @@ const Header = ({
             }}
           >
             <Box
-              aria-label="close menu"
+              aria-label="Close navigation"
               sx={{
                 display: ['block', 'none'],
                 height,
@@ -106,6 +108,7 @@ const Header = ({
               }}
             >
               <SmartLink
+                key="/"
                 sx={{
                   display: ['flex', 'none'],
                   fontFamily: 'body',
@@ -115,13 +118,14 @@ const Header = ({
                   ml: [0, 3, 4],
                 }}
                 href="/"
-                key="/"
+                label="Back to homepage"
                 variant={variant}
               >
                 Home
               </SmartLink>
-              {links.map(({ href, text }) => (
+              {links.map(({ href, text, label }) => (
                 <SmartLink
+                  key={href}
                   sx={{
                     flexShrink: 0,
                     fontFamily: 'body',
@@ -130,8 +134,8 @@ const Header = ({
                     mb: [4, 0],
                     ml: [0, 3, 4],
                   }}
-                  key={href}
                   href={href}
+                  label={label}
                   variant={variant}
                 >
                   {text}
@@ -152,13 +156,14 @@ const Header = ({
                   ml: [0, 3, 4],
                 }}
                 href={button.href}
+                label={button.label}
               >
                 {button.text}
               </Button>
             )}
           </Box>
           <Box
-            aria-label="open menu"
+            aria-label="Open navigation"
             sx={{
               display: ['block', 'none'],
               flexGrow: 1,

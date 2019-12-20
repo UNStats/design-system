@@ -18,6 +18,7 @@ storiesOf('Components/Header', module)
           {
             href: '/about',
             text: 'About',
+            label: 'About the United Nations World Data Forum',
           },
           {
             href: '/blog',
@@ -26,6 +27,7 @@ storiesOf('Components/Header', module)
           {
             href: '/2020',
             text: '2020',
+            label: 'United Nations World Data Forum 2020',
           },
         ]}
         button={{ text: 'Register', href: '/register' }}
