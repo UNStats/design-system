@@ -1,5 +1,17 @@
 # Change Log
 
+## 0.62.0
+
+### Minor Changes
+
+- [`19b36f6`](https://github.com/UNDataForum/design-system/commit/19b36f689e71d9c723883617bb28250369bdd83a) [#279](https://github.com/UNDataForum/design-system/pull/279) - Remove Hero component
+
+### Patch Changes
+
+- [`55671d1`](https://github.com/UNDataForum/design-system/commit/55671d16f83bc8d0d9d556fe58c21b21671813ef) [#280](https://github.com/UNDataForum/design-system/pull/280) - Fix Header maxWidth
+
+* [`1549161`](https://github.com/UNDataForum/design-system/commit/1549161a8da525cb9e732215f326297a67800a3b) [#282](https://github.com/UNDataForum/design-system/pull/282) - Fix link text acccessibility warnings in Header
+
 ## 0.61.0
 
 ### Minor Changes
