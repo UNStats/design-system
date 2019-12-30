@@ -48,8 +48,8 @@ const pairings = {
     bg: 'secondary',
   },
   inverse: {
-    color: 'background',
-    bg: 'text',
+    color: 'transparent',
+    bg: 'background',
   },
   accent: {
     color: 'background',
@@ -114,14 +114,8 @@ export default merge(preset, {
   },
 
   badges: {
-    left: {
-      justifyContent: 'flex-start',
-    },
-    center: {
-      justifyContent: 'center',
-    },
-    right: {
-      justifyContent: 'flex-end',
+    outline: {
+      boxShadow: 'inset 0 0 0 1px',
     },
   },
 

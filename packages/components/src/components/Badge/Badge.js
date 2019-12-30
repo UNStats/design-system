@@ -1,35 +1,18 @@
 import React from 'react';
-import { oneOf, shape, string } from 'prop-types';
-import { Text } from '@theme-ui/components';
+import { string, node } from 'prop-types';
+import { Badge as ThemeUiBadge } from '@theme-ui/components';
 
-const Badge = ({ value: { text, variant = 'primary' }, ...props }) => (
-  <Text
-    {...props}
-    sx={{
-      display: 'inline-block',
-      borderRadius: 'circle',
-      fontFamily: 'body',
-      fontSize: 0,
-      fontWeight: 'bold',
-      variant: `pairings.${variant}`,
-      px: 2,
-      py: 1,
-    }}
-  >
-    {text}
-  </Text>
+// Badge is a helper component and not exported.
+const Badge = ({ children, color, bg, ...props }) => (
+  <ThemeUiBadge {...props} sx={{ color, bg }}>
+    {children}
+  </ThemeUiBadge>
 );
 
-export const variants = ['primary', 'secondary', 'accent', 'inverse'];
-const variantType = oneOf(variants);
-
-export const badgeType = shape({
-  text: string.isRequired,
-  variant: variantType,
-});
-
 Badge.propTypes = {
-  value: badgeType,
+  children: node.isRequired,
+  color: string.isRequired,
+  bg: string.isRequired,
 };
 
 export default Badge;
