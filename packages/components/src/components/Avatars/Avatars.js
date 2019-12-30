@@ -21,11 +21,7 @@ const Avatars = ({ values, ...props }) => (
         href={href}
         key={id}
       >
-        <ProfilePreview
-          profile={{ avatar, name }}
-          fontSize={1}
-          variant="left"
-        />
+        <ProfilePreview profile={{ avatar, name }} fontSize={1} align="start" />
       </SmartLink>
     ))}
   </Grid>
