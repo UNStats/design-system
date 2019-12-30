@@ -291,9 +291,53 @@ storiesOf('Components/PostPreview', module)
       >
         <Grid gap={4} columns={[1, null, 2]}>
           {posts.map(({ id, ...post }) => (
-            <PostPreview post={{ ...post }} key={id} />
+            <PostPreview
+              post={{ ...post }}
+              colors={{
+                text: 'text',
+                background: 'background',
+                accent: 'secondary',
+              }}
+              key={id}
+            />
           ))}
         </Grid>
       </Container>
     );
-  });
+  })
+  .add('custom colors', () => (
+    <PostPreview
+      post={{
+        title: 'Vestibulum proin eu mi nulla ac enim in tempor turpis',
+        date: 'May 31, 2018',
+        authors() {
+          return (
+            <Names
+              values={[
+                'Willow Rangall',
+                'Suzy Cahan',
+                'Sandra Abramovici',
+                'Jan McKea',
+                'Ola Brunger',
+                'Ivette Rowlinson',
+                'Madeleine Stredwick',
+                'Lin Billson',
+                'Alfie Piborn',
+                'Garvy Bartlomiej',
+              ]}
+              mb={3}
+            />
+          );
+        },
+        description:
+          'Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.',
+        href: '/blog/vestibulum-proin-eu',
+      }}
+      colors={{
+        text: 'background',
+        background: 'secondary',
+        accent: 'background',
+      }}
+      p={2}
+    />
+  ));
