@@ -1,5 +1,25 @@
 # Change Log
 
+## 0.63.0
+
+### Minor Changes
+
+- [`68cbed5`](https://github.com/UNDataForum/design-system/commit/68cbed54299eb17caf10e7c3ab250d422ba33aa4) [#286](https://github.com/UNDataForum/design-system/pull/286) - Refactor Badge
+
+* [`1ad756a`](https://github.com/UNDataForum/design-system/commit/1ad756ad8f065efb2a63a5a0873dc14384ab208e) [#294](https://github.com/UNDataForum/design-system/pull/294) - Clean up color pairings
+
+- [`13081d9`](https://github.com/UNDataForum/design-system/commit/13081d99d6d9aeb8c2dcbe4d20b3c54727ba4643) [#288](https://github.com/UNDataForum/design-system/pull/288) - Add custom colors support to EventPreview
+
+* [`a5327e7`](https://github.com/UNDataForum/design-system/commit/a5327e728b45c074d5125521226d75565623a1d4) [#286](https://github.com/UNDataForum/design-system/pull/286) - Refactor Badges
+
+- [`ad237ff`](https://github.com/UNDataForum/design-system/commit/ad237ff6162f9ff00fbd9c1faa4a5305fb3eb3b9) [#290](https://github.com/UNDataForum/design-system/pull/290) - Add custom colors support to PostPreview
+
+* [`54c383a`](https://github.com/UNDataForum/design-system/commit/54c383ae3a7077bab3f7b9e710b74cd5227dccd5) [#286](https://github.com/UNDataForum/design-system/pull/286) - Refactor ProfilePreview
+
+### Patch Changes
+
+- [`0b9a1f2`](https://github.com/UNDataForum/design-system/commit/0b9a1f23e8983a37668c810d70e545985eda31ae) [#292](https://github.com/UNDataForum/design-system/pull/292) - Increase Footer top and bottom padding
+
 ## 0.62.0
 
 ### Minor Changes
