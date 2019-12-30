@@ -44,13 +44,7 @@ const SocialIcons = ({ usernames, variant = 'branded', ...props }) => (
   </Flex>
 );
 
-export const variants = [
-  'branded',
-  'transparent',
-  'primary',
-  'secondary',
-  'inverse',
-];
+export const variants = ['branded', 'primary', 'secondary'];
 const variantType = oneOf(variants);
 
 SocialIcons.propTypes = {
