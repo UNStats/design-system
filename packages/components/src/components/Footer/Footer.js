@@ -7,7 +7,7 @@ import SmartLink, { linkType } from '../SmartLink';
 const Footer = ({ logo, title, social, links, variant = 'primary' }) => {
   return (
     <Box sx={{ variant: `pairings.${variant}` }}>
-      <Container sx={{ maxWidth: 'width.wide', p: [2, 3, 4] }}>
+      <Container sx={{ maxWidth: 'width.wide', px: [2, 3, 4], py: 4 }}>
         <Flex
           as="footer"
           sx={{
