@@ -53,7 +53,7 @@ storiesOf('Components/ProfilePreview', module)
         background: 'secondary',
         accent: 'background',
       }}
-      m={2}
+      p={2}
     />
   ))
   .add('no jobtitle', () => (

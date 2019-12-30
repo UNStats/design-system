@@ -5,7 +5,11 @@ import { Grid } from '@theme-ui/components';
 import ProfilePreview from '../ProfilePreview';
 import SmartLink from '../SmartLink';
 
-const Avatars = ({ values, ...props }) => (
+const Avatars = ({
+  values,
+  colors = { text: 'text', background: 'background', accent: 'primary' },
+  ...props
+}) => (
   <Grid
     {...props}
     gap={2}
@@ -21,7 +25,12 @@ const Avatars = ({ values, ...props }) => (
         href={href}
         key={id}
       >
-        <ProfilePreview profile={{ avatar, name }} fontSize={1} align="start" />
+        <ProfilePreview
+          profile={{ avatar, name }}
+          fontSize={1}
+          align="start"
+          colors={colors}
+        />
       </SmartLink>
     ))}
   </Grid>
@@ -36,6 +45,11 @@ Avatars.propTypes = {
       href: string.isRequired,
     })
   ).isRequired,
+  colors: shape({
+    text: string.isRequired,
+    background: string.isRequired,
+    accent: string.isRequired,
+  }),
 };
 
 export default Avatars;
