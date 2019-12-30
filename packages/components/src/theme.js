@@ -179,18 +179,6 @@ export default merge(preset, {
     },
   },
 
-  profilePreview: {
-    left: {
-      alignItems: 'flex-start',
-    },
-    center: {
-      alignItems: 'center',
-    },
-    right: {
-      alignItems: 'flex-end',
-    },
-  },
-
   styles: {
     a: {
       textDecoration: 'none',
