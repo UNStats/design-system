@@ -35,10 +35,6 @@ const pairings = {
     color: 'primary',
     bg: 'background',
   },
-  transparent: {
-    color: 'primary',
-    background: 'transparent',
-  },
   primary: {
     color: 'background',
     bg: 'primary',
@@ -46,10 +42,6 @@ const pairings = {
   secondary: {
     color: 'background',
     bg: 'secondary',
-  },
-  inverse: {
-    color: 'transparent',
-    bg: 'background',
   },
   accent: {
     color: 'background',
@@ -147,14 +139,11 @@ export default merge(preset, {
     external: NewTabLink,
   },
 
+  // The following styles are required for links in Header and Footer.
   links: {
     branded: {
       variant: 'styles.a',
       color: pairings.branded.color,
-    },
-    transparent: {
-      variant: 'styles.a',
-      color: pairings.transparent.color,
     },
     primary: {
       variant: 'styles.a',
@@ -163,10 +152,6 @@ export default merge(preset, {
     secondary: {
       variant: 'styles.a',
       color: pairings.secondary.color,
-    },
-    inverse: {
-      variant: 'styles.a',
-      color: pairings.inverse.color,
     },
   },
 

@@ -185,7 +185,7 @@ const Header = ({
   );
 };
 
-export const variants = ['branded', 'transparent', 'primary'];
+export const variants = ['branded', 'primary'];
 const variantType = oneOf(variants);
 
 Header.propTypes = {

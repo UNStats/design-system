@@ -56,7 +56,7 @@ const Footer = ({ logo, title, social, links, variant = 'primary' }) => {
   );
 };
 
-export const variants = ['primary', 'secondary', 'inverse'];
+export const variants = ['primary', 'secondary'];
 const variantType = oneOf(variants);
 
 Footer.propTypes = {

@@ -33,13 +33,7 @@ const SmartLink = ({
   );
 };
 
-export const variants = [
-  'branded',
-  'transparent',
-  'primary',
-  'secondary',
-  'inverse',
-];
+export const variants = ['branded', 'primary', 'secondary'];
 
 const variantType = oneOf(variants);
 
