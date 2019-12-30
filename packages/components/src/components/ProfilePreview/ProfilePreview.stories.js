@@ -3,9 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
 import { Image } from '@theme-ui/components';
 
-import { alignments } from '../../types';
-
-import ProfilePreview from './ProfilePreview';
+import ProfilePreview, { alignments } from './ProfilePreview';
 
 storiesOf('Components/ProfilePreview', module)
   .addDecorator(withKnobs)
@@ -25,17 +23,36 @@ storiesOf('Components/ProfilePreview', module)
         name: 'Nance MacFadin',
         jobtitle: 'Help Desk Operator',
         organization: 'Schuster-Senger',
-        badges: [
-          {
-            text: 'Committee Member',
-          },
-          {
-            text: 'Keynote Speaker',
-            variant: 'secondary',
-          },
-        ],
+        badges: ['Committee Member', 'Keynote Speaker'],
       }}
-      variant={select('variant', alignments, 'center')}
+      align={select('align', alignments, 'center')}
+      m={2}
+    />
+  ))
+  .add('custom colors', () => (
+    <ProfilePreview
+      profile={{
+        avatar() {
+          return (
+            <Image
+              alt="Nance MacFadin"
+              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+              src="/avatar0.png"
+            />
+          );
+        },
+        honorific: 'His Excellency',
+        name: 'Nance MacFadin',
+        jobtitle: 'Help Desk Operator',
+        organization: 'Schuster-Senger',
+        badges: ['Committee Member', 'Keynote Speaker'],
+      }}
+      align={select('align', alignments, 'center')}
+      colors={{
+        text: 'background',
+        background: 'secondary',
+        accent: 'background',
+      }}
       m={2}
     />
   ))
@@ -53,17 +70,14 @@ storiesOf('Components/ProfilePreview', module)
         },
         name: 'Nance MacFadin',
         organization: 'Schuster-Senger',
-        badges: [
-          {
-            text: 'Committee Member',
-          },
-          {
-            text: 'Keynote Speaker',
-            variant: 'secondary',
-          },
-        ],
+        badges: ['Committee Member', 'Keynote Speaker'],
       }}
-      variant={select('variant', alignments, 'center')}
+      align={select('align', alignments, 'center')}
+      colors={{
+        text: 'text',
+        background: 'background',
+        accent: 'secondary',
+      }}
       m={2}
     />
   ))
@@ -81,17 +95,14 @@ storiesOf('Components/ProfilePreview', module)
         },
         name: 'Nance MacFadin',
         jobtitle: 'Help Desk Operator',
-        badges: [
-          {
-            text: 'Committee Member',
-          },
-          {
-            text: 'Keynote Speaker',
-            variant: 'secondary',
-          },
-        ],
+        badges: ['Committee Member', 'Keynote Speaker'],
       }}
-      variant={select('variant', alignments, 'center')}
+      align={select('align', alignments, 'center')}
+      colors={{
+        text: 'text',
+        background: 'background',
+        accent: 'accent',
+      }}
       m={2}
     />
   ))
@@ -108,17 +119,9 @@ storiesOf('Components/ProfilePreview', module)
           );
         },
         name: 'Nance MacFadin',
-        badges: [
-          {
-            text: 'Committee Member',
-          },
-          {
-            text: 'Keynote Speaker',
-            variant: 'secondary',
-          },
-        ],
+        badges: ['Committee Member', 'Keynote Speaker'],
       }}
-      variant={select('variant', alignments, 'center')}
+      align={select('align', alignments, 'center')}
       m={2}
     />
   ))
@@ -135,7 +138,7 @@ storiesOf('Components/ProfilePreview', module)
           );
         },
       }}
-      variant={select('variant', alignments, 'center')}
+      align={select('align', alignments, 'center')}
       m={2}
     />
   ))
@@ -153,7 +156,7 @@ storiesOf('Components/ProfilePreview', module)
         },
         name: 'Suzy Cahan',
       }}
-      variant={select('variant', alignments, 'center')}
+      align={select('align', alignments, 'center')}
       m={2}
     />
   ))
@@ -175,7 +178,7 @@ storiesOf('Components/ProfilePreview', module)
         },
         name: 'Sandra Abramovici',
       }}
-      variant={select('variant', alignments, 'center')}
+      align={select('align', alignments, 'center')}
       m={2}
     />
   ))
@@ -194,7 +197,7 @@ storiesOf('Components/ProfilePreview', module)
         name: 'Jan McKea',
       }}
       fontSize={[5, 6]}
-      variant={select('variant', alignments, 'center')}
+      align={select('align', alignments, 'center')}
       m={2}
     />
   ))
@@ -216,15 +219,9 @@ storiesOf('Components/ProfilePreview', module)
           'Really really really really really really really really really really long jobtitle',
         organization:
           'Really really really really really really really really really really long organization',
-        badges: [
-          { text: 'Committee Member' },
-          {
-            text: 'Keynote Speaker',
-            variant: 'secondary',
-          },
-        ],
+        badges: ['Committee Member', 'Keynote Speaker'],
       }}
-      variant={select('variant', alignments, 'center')}
+      align={select('align', alignments, 'center')}
       m={2}
     />
   ));

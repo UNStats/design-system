@@ -1,32 +1,41 @@
 import React from 'react';
-import { arrayOf, func, shape, string } from 'prop-types';
+import { arrayOf, func, oneOf, shape, string } from 'prop-types';
 import { Flex, Text } from '@theme-ui/components';
 
-import { alignType, responsiveNumberType } from '../../types';
-import { badgeType } from '../Badge';
+import { responsiveNumberType } from '../../types';
 import Badges from '../Badges';
+
+const alignItems = {
+  start: 'flex-start',
+  center: 'center',
+  end: 'flex-end',
+};
 
 const ProfilePreview = ({
   profile,
   fontSize = [3, 4],
-  variant = 'center',
+  colors = { text: 'text', background: 'background', accent: 'primary' },
+  align = 'center',
   ...props
 }) => {
   return (
     <Flex
       {...props}
-      sx={{ flexDirection: 'column' }}
-      variant={`profilePreview.${variant}`}
+      sx={{
+        flexDirection: 'column',
+        alignItems: alignItems[align],
+        fontFamily: 'body',
+        color: colors.text,
+        bg: colors.background,
+      }}
     >
       {profile.avatar()}
       {profile.honorific && (
         <Text
           sx={{
-            color: 'text',
-            fontFamily: 'body',
             fontSize: 1,
             lineHeight: 'body',
-            textAlign: variant,
+            textAlign: align,
           }}
         >
           {profile.honorific}
@@ -35,11 +44,9 @@ const ProfilePreview = ({
       <Text
         as="h1"
         sx={{
-          color: 'text',
-          fontFamily: 'body',
           fontSize,
           lineHeight: 'heading',
-          textAlign: variant,
+          textAlign: align,
           mt: 0,
           mb: 0,
         }}
@@ -49,11 +56,9 @@ const ProfilePreview = ({
       {profile.jobtitle && (
         <Text
           sx={{
-            color: 'text',
-            fontFamily: 'body',
             fontSize: 2,
             lineHeight: 'body',
-            textAlign: variant,
+            textAlign: align,
           }}
         >
           {profile.jobtitle}
@@ -62,23 +67,29 @@ const ProfilePreview = ({
       {profile.organization && (
         <Text
           sx={{
-            color: 'text',
-            fontFamily: 'body',
             fontSize: 2,
             fontWeight: 'bold',
             lineHeight: 'body',
-            textAlign: variant,
+            textAlign: align,
           }}
         >
           {profile.organization}
         </Text>
       )}
       {profile.badges && (
-        <Badges values={profile.badges} variant={variant} mt={2} />
+        <Badges
+          values={profile.badges}
+          color={colors.background}
+          bg={colors.accent}
+          mt={2}
+        />
       )}
     </Flex>
   );
 };
+
+export const alignments = ['start', 'center', 'end'];
+const alignType = oneOf(alignments);
 
 export const profileType = shape({
   avatar: func.isRequired,
@@ -86,13 +97,18 @@ export const profileType = shape({
   name: string,
   jobtitle: string,
   organization: string,
-  badges: arrayOf(badgeType),
+  badges: arrayOf(string),
 });
 
 ProfilePreview.propTypes = {
   profile: profileType.isRequired,
+  colors: shape({
+    text: string.isRequired,
+    background: string.isRequired,
+    accent: string.isRequired,
+  }),
+  align: alignType,
   fontSize: responsiveNumberType,
-  variant: alignType,
 };
 
 export default ProfilePreview;
