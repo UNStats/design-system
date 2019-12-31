@@ -59,7 +59,12 @@ const Header = ({
               aria-label="Back to homepage"
               variant={variant}
             >
-              <Heading sx={{ whiteSpace: 'nowrap}', fontSize: [4, 5, 6] }}>
+              <Heading
+                sx={{
+                  whiteSpace: 'nowrap}',
+                  fontSize: [4, 5, 6],
+                }}
+              >
                 {title}
               </Heading>
             </SmartLink>
