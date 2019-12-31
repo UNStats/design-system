@@ -21,17 +21,17 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@babel/cli": "^7.7.7",
-    "@babel/core": "^7.7.7",
-    "@babel/preset-env": "^7.7.7",
-    "@babel/preset-react": "^7.7.4",
+    "@babel/cli": "7.7.7",
+    "@babel/core": "7.7.7",
+    "@babel/preset-env": "7.7.7",
+    "@babel/preset-react": "7.7.4",
     "@changesets/changelog-github": "0.2.0",
     "@changesets/cli": "2.4.1",
     "eslint": "6.8.0",
     "eslint-plugin-shopify": "33.0.0",
     "husky": "3.1.0",
     "lint-staged": "9.5.0",
-    "microbundle": "^0.11.0",
+    "microbundle": "0.11.0",
     "now": "16.7.0",
     "prettier": "1.19.1",
     "pretty-quick": "2.0.1"
