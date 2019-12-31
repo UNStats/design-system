@@ -34,10 +34,7 @@
     "@emotion/core": "^10.0.21",
     "@mdx-js/react": "^1.5.1",
     "@theme-ui/components": "^0.2.45",
-    "@theme-ui/preset-base": "^0.2.44",
-    "deepmerge": "^4.2.2",
-    "prop-types": "^15.7.2",
-    "theme-ui": "^0.2.44"
+    "prop-types": "^15.7.2"
   },
   "peerDependencies": {
     "react": "^16.8.6",
@@ -52,11 +49,14 @@
     "@storybook/addon-knobs": "5.2.8",
     "@storybook/addon-storysource": "5.2.8",
     "@storybook/react": "5.2.8",
+    "@undataforum/preset": "*",
     "babel-loader": "8.0.6",
     "cross-env": "6.0.3",
+    "deepmerge": "^4.2.2",
     "react": "16.12.0",
     "react-dom": "16.12.0",
-    "serve": "11.3.0"
+    "serve": "11.3.0",
+    "theme-ui": "^0.2.52"
   },
   "publishConfig": {
     "access": "public"
