@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
 
-import Names, { variants } from './Names';
+import Names, { alignments, variants } from './Names';
 
 storiesOf('Components/Names', module)
   .addDecorator(withKnobs)
@@ -15,6 +15,7 @@ storiesOf('Components/Names', module)
         'Mercie Kuban',
         'Candis Ruggs',
       ]}
+      align={select('align', alignments, 'start')}
       variant={select('variant', variants, 'default')}
       m={2}
     />
@@ -52,6 +53,7 @@ storiesOf('Components/Names', module)
         'Vladimir Parres',
         'Really really really really really really really really really really long name',
       ]}
+      align={select('align', alignments, 'start')}
       variant={select('variant', variants, 'default')}
       m={2}
     />
