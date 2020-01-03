@@ -1,5 +1,21 @@
 # Change Log
 
+## 0.65.0
+
+### Minor Changes
+
+- [`6c566ed`](https://github.com/UNDataForum/design-system/commit/6c566edbbbf900e0a31cf276483e5420e7c88cbb) [#304](https://github.com/UNDataForum/design-system/pull/304) - Add align prop to Avatars
+
+* [`f449813`](https://github.com/UNDataForum/design-system/commit/f449813293184b069586101a02f1ebaaec5b0930) [#304](https://github.com/UNDataForum/design-system/pull/304) - Add align prop to Names
+
+- [`d7a041c`](https://github.com/UNDataForum/design-system/commit/d7a041c2a67c4952f6b91de36f522c569927f849) [#304](https://github.com/UNDataForum/design-system/pull/304) - Add align prop to EventPreview
+
+### Patch Changes
+
+- [`b2aef36`](https://github.com/UNDataForum/design-system/commit/b2aef36dc67026d970f5b0f87abb503cd4d03a10) [#301](https://github.com/UNDataForum/design-system/pull/301) - Add spacing around type tag in EventPreview
+- Updated dependencies [[`b43c0ee`](https://github.com/UNDataForum/design-system/commit/b43c0eef5cd693871af65fb52ea2edfeb613b4d5)]:
+  - @undataforum/preset@0.1.1
+
 ## 0.64.0
 
 ### Minor Changes

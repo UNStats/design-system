@@ -1,5 +1,11 @@
 # @undataforum/preset
 
+## 0.1.1
+
+### Patch Changes
+
+- [`b43c0ee`](https://github.com/UNDataForum/design-system/commit/b43c0eef5cd693871af65fb52ea2edfeb613b4d5) Thanks [@454de6e](https://github.com/454de6e)! - Change color in Markdown paragraphs to inherit
+
 ## 0.1.0
 
 ### Minor Changes
