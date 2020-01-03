@@ -23,7 +23,7 @@ const EventPreview = ({
       bg: colors.background,
     }}
   >
-    <Badge color={colors.background} bg={colors.accent}>
+    <Badge color={colors.background} bg={colors.accent} mb={1}>
       {event.type}
     </Badge>
     {event.title()}
