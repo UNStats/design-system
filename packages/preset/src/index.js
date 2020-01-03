@@ -153,8 +153,12 @@ const theme = {
       fontWeight: 'heading',
       fontSize: 0,
     },
+    // The description in EventPreview is rendered with MDX.
+    // The result will have the styles below.
+    // If color was set to 'text' then description would render in text color in promobox on homepage.
+    // Therefore set color to 'inherit' to let parent determine color.
     p: {
-      color: 'text',
+      color: 'inherit',
       fontFamily: 'body',
       fontWeight: 'body',
       lineHeight: 'body',
