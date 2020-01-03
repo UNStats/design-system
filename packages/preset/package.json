@@ -3,10 +3,7 @@
   "version": "0.1.0",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
-  "author": {
-    "name": "Thilo Maier",
-    "email": "maier@un.org"
-  },
+  "author": "Thilo Maier <maier@un.org>",
   "license": "MIT",
   "scripts": {
     "prepare": "microbundle --no-compress",
