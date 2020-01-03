@@ -2,9 +2,10 @@
   "private": true,
   "scripts": {
     "build": "yarn workspace @undataforum/components run build",
-    "purge": "rm -rf ./node_modules && yarn workspaces run purge",
+    "prepare": "yarn workspaces run prepare",
     "lint": "eslint . --ignore-path .gitignore",
-    "format": "pretty-quick"
+    "format": "pretty-quick",
+    "purge": "rm -rf ./node_modules && yarn workspaces run purge"
   },
   "lint-staged": {
     "*.js": [
