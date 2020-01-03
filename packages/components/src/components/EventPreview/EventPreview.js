@@ -1,9 +1,15 @@
 import React from 'react';
-import { func, shape, string } from 'prop-types';
+import { func, shape, oneOf, string } from 'prop-types';
 import { Button, Flex, Text } from '@theme-ui/components';
 
 import SmartLink from '../SmartLink';
 import Badge from '../Badge';
+
+const alignItems = {
+  start: 'flex-start',
+  center: 'center',
+  end: 'flex-end',
+};
 
 // How margins work in this component:
 // What the title prop renders (heading) may have no top margin, only bottom margin.
@@ -11,33 +17,40 @@ import Badge from '../Badge';
 const EventPreview = ({
   event,
   colors = { text: 'text', background: 'background', accent: 'primary' },
+  align = 'start',
   ...props
 }) => (
   <Flex
     {...props}
     sx={{
       flexDirection: 'column',
-      alignItems: 'flex-start',
+      alignItems: alignItems[align],
       fontFamily: 'body',
       color: colors.text,
       bg: colors.background,
     }}
   >
-    <Badge color={colors.background} bg={colors.accent} mb={1}>
+    <Badge
+      color={colors.background}
+      bg={colors.accent}
+      css={{ alignSelf: alignItems[align] }}
+      mb={1}
+    >
       {event.type}
     </Badge>
-    {event.title()}
-    {event.speakers()}
+    {event.title(align)}
+    {event.speakers(align)}
     <Text
       as="time"
       sx={{
         display: 'block',
+        textAlign: align,
         mb: event.description || event.links ? 3 : 0,
       }}
     >
       {`${event.date} (${event.duration})`}
     </Text>
-    {event.description && event.description()}
+    {event.description && event.description(align)}
     {event.links && (
       <Flex
         sx={{
@@ -71,6 +84,9 @@ const EventPreview = ({
   </Flex>
 );
 
+export const alignments = ['start', 'center', 'end'];
+const alignType = oneOf(alignments);
+
 export const eventType = shape({
   type: string.isRequired,
   title: func.isRequired,
@@ -91,6 +107,7 @@ EventPreview.propTypes = {
     background: string.isRequired,
     accent: string.isRequired,
   }),
+  align: alignType,
 };
 
 export default EventPreview;

@@ -1,34 +1,43 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withKnobs, select } from '@storybook/addon-knobs';
 import { Container, Grid, Heading, Image, Text } from '@theme-ui/components';
 
 import Names from '../Names';
 import Avatars from '../Avatars';
 
-import EventPreview from './EventPreview';
+import EventPreview, { alignments } from './EventPreview';
 
 storiesOf('Components/EventPreview', module)
+  .addDecorator(withKnobs)
   .add('render speakers with Names', () => (
     <EventPreview
       event={{
         type: 'Webinar',
-        title() {
+        title(align) {
           return (
-            <Heading as="h1" sx={{ mb: 3 }}>
+            <Heading as="h1" sx={{ textAlign: align, mb: 3 }}>
               Vestibulum proin eu mi nulla ac enim in tempor turpis
             </Heading>
           );
         },
         date: 'October 14, 1983, 1:30 PM EDT',
         duration: '60 minutes',
-        speakers() {
-          return <Names values={['Willow Rangall', 'Suzy Cahan']} mb={3} />;
+        speakers(align) {
+          return (
+            <Names
+              values={['Willow Rangall', 'Suzy Cahan']}
+              align={align}
+              mb={3}
+            />
+          );
         },
         links: {
           page: '/events/vestibulum-proin-eu',
           registration: '/register',
         },
       }}
+      align={select('align', alignments, 'start')}
       m={2}
     />
   ))
@@ -36,16 +45,16 @@ storiesOf('Components/EventPreview', module)
     <EventPreview
       event={{
         type: 'Webinar',
-        title() {
+        title(align) {
           return (
-            <Heading as="h1" sx={{ mb: 3 }}>
+            <Heading as="h1" sx={{ textAlign: align, mb: 3 }}>
               Vestibulum proin eu mi nulla ac enim in tempor turpis
             </Heading>
           );
         },
         date: 'October 14, 1983, 1:30 PM EDT',
         duration: '90 minutes',
-        speakers() {
+        speakers(align) {
           return (
             <Avatars
               values={[
@@ -92,13 +101,14 @@ storiesOf('Components/EventPreview', module)
                   href: '/profiles/sandra-abramovici',
                 },
               ]}
+              align={align}
               mb={3}
             />
           );
         },
-        description() {
+        description(align) {
           return (
-            <Text as="p" sx={{ lineHeight: 'body', mb: 3 }}>
+            <Text as="p" sx={{ lineHeight: 'body', textAlign: align, mb: 3 }}>
               Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed
               interdum venenatis, turpis enim blandit mi, in porttitor pede
               justo eu massa. Donec dapibus. Duis at velit eu est congue
@@ -112,6 +122,7 @@ storiesOf('Components/EventPreview', module)
           registration: '/register',
         },
       }}
+      align={select('align', alignments, 'start')}
       m={2}
     />
   ))
