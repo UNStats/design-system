@@ -1,10 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withKnobs, select } from '@storybook/addon-knobs';
 import { Image } from '@theme-ui/components';
 
-import Avatars from './Avatars';
+import Avatars, { alignments } from './Avatars';
 
 storiesOf('Components/Avatars', module)
+  .addDecorator(withKnobs)
   .add('a few avatars', () => (
     <Avatars
       values={[
@@ -79,6 +81,7 @@ storiesOf('Components/Avatars', module)
           href: '/profiles/candis-ruggs/',
         },
       ]}
+      align={select('align', alignments, 'start')}
       m={2}
     />
   ))
@@ -366,6 +369,7 @@ storiesOf('Components/Avatars', module)
           href: '/profiles/tawsha-fruish/',
         },
       ]}
+      align={select('align', alignments, 'start')}
       m={2}
     />
   ));

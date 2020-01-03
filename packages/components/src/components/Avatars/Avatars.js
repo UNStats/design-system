@@ -1,5 +1,5 @@
 import React from 'react';
-import { arrayOf, func, shape, string } from 'prop-types';
+import { arrayOf, func, oneOf, shape, string } from 'prop-types';
 import { Grid } from '@theme-ui/components';
 
 import ProfilePreview from '../ProfilePreview';
@@ -8,6 +8,7 @@ import SmartLink from '../SmartLink';
 const Avatars = ({
   values,
   colors = { text: 'text', background: 'background', accent: 'primary' },
+  align = 'start',
   ...props
 }) => (
   <Grid
@@ -15,6 +16,8 @@ const Avatars = ({
     gap={2}
     sx={{
       gridTemplateColumns: 'repeat(auto-fit, 96px)',
+      justifyItems: align,
+      justifyContent: align,
       // Stretch to full width in scenarios where Avatars is used inside Flex.
       alignSelf: 'stretch',
     }}
@@ -28,13 +31,16 @@ const Avatars = ({
         <ProfilePreview
           profile={{ avatar, name }}
           fontSize={1}
-          align="start"
+          align={align}
           colors={colors}
         />
       </SmartLink>
     ))}
   </Grid>
 );
+
+export const alignments = ['start', 'center', 'end'];
+const alignType = oneOf(alignments);
 
 Avatars.propTypes = {
   values: arrayOf(
@@ -50,6 +56,7 @@ Avatars.propTypes = {
     background: string.isRequired,
     accent: string.isRequired,
   }),
+  align: alignType,
 };
 
 export default Avatars;
