@@ -5,9 +5,7 @@
   "author": "Thilo Maier <maier@un.org>",
   "license": "MIT",
   "main": "dist/index.js",
-  "files": [
-    "dist"
-  ],
+  "module": "dist/index.esm.js",
   "homepage": "https://github.com/UNDataForum/design-system/tree/master/packages/components",
   "repository": {
     "type": "git",
@@ -21,9 +19,9 @@
   ],
   "scripts": {
     "develop": "start-storybook -p 8000 -s ./static -c ./storybook",
-    "build": "rm -rf ../../public && build-storybook -s ./static -c ./storybook -o ../../public",
-    "serve": "yarn run build && serve ../../public",
-    "prepare": "rm -rf ./dist && cross-env NODE_ENV=production babel ./src -d ./dist --ignore 'src/**/*.stories.js'",
+    "build-storybook": "rm -rf ../../public && build-storybook -s ./static -c ./storybook -o ../../public",
+    "prepare": "rm -rf ./dist && microbundle --no-compress",
+    "watch": "microbundle watch --no-compress",
     "purge": "rm -rf ./node_modules"
   },
   "dependencies": {
@@ -37,21 +35,16 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "@babel/cli": "7.7.7",
     "@babel/core": "7.7.7",
-    "@babel/preset-env": "7.7.7",
-    "@babel/preset-react": "7.7.4",
     "@storybook/addon-a11y": "5.2.8",
     "@storybook/addon-knobs": "5.2.8",
     "@storybook/addon-storysource": "5.2.8",
     "@storybook/react": "5.2.8",
-    "@undataforum/preset": "*",
+    "@undataforum/preset": "0.1.1",
     "babel-loader": "8.0.6",
-    "cross-env": "6.0.3",
     "deepmerge": "4.2.2",
     "react": "16.12.0",
     "react-dom": "16.12.0",
-    "serve": "11.3.0",
     "theme-ui": "0.2.52"
   },
   "publishConfig": {
