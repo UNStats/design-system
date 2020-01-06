@@ -1,5 +1,11 @@
 # @undataforum/preset
 
+## 0.1.2
+
+### Patch Changes
+
+- [`97aa60b`](https://github.com/UNDataForum/design-system/commit/97aa60bdd719ad5c457d261de1f7253a0e3c6c73) [#307](https://github.com/UNDataForum/design-system/pull/307) - Fix prepare script
+
 ## 0.1.1
 
 ### Patch Changes

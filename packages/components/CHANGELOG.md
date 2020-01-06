@@ -1,5 +1,17 @@
 # Change Log
 
+## 0.66.0
+
+### Minor Changes
+
+- [`2003521`](https://github.com/UNDataForum/design-system/commit/2003521d91f6ad516a821e028acecf64ad4e0014) [#307](https://github.com/UNDataForum/design-system/pull/307) - Use microbundle to build @undataforum/components
+
+### Patch Changes
+
+- [`65fd067`](https://github.com/UNDataForum/design-system/commit/65fd0677a89f159f4a7ba00d203481602991a703) [#306](https://github.com/UNDataForum/design-system/pull/306) - Move .storybook to storybook
+- Updated dependencies [[`97aa60b`](https://github.com/UNDataForum/design-system/commit/97aa60bdd719ad5c457d261de1f7253a0e3c6c73)]:
+  - @undataforum/preset@0.1.2
+
 ## 0.65.0
 
 ### Minor Changes

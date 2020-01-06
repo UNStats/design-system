@@ -1,5 +1,15 @@
 # @undataforum/assets
 
+## 0.4.0
+
+### Minor Changes
+
+- [`546bafd`](https://github.com/UNDataForum/design-system/commit/546bafd242d53de7c23f87347846324cbe3679f9) [#307](https://github.com/UNDataForum/design-system/pull/307) - Use microbundle to build @undataforum/assets
+
+### Patch Changes
+
+- [`c9a005a`](https://github.com/UNDataForum/design-system/commit/c9a005aaf9545ca9816bb2431ba1e79cb27ec878) [#306](https://github.com/UNDataForum/design-system/pull/306) - Move .storybook to storybook
+
 ## 0.3.0
 
 ### Minor Changes
