@@ -27,8 +27,8 @@
     "purge": "rm -rf ./node_modules"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.21",
-    "@mdx-js/react": "^1.5.1",
+    "@emotion/core": "^10.0.27",
+    "@mdx-js/react": "^1.5.3",
     "@theme-ui/components": "^0.2.45",
     "prop-types": "^15.7.2"
   },
