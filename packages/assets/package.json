@@ -20,7 +20,7 @@
     "theme-ui"
   ],
   "scripts": {
-    "develop": "start-storybook -p 8000 -s ./static",
+    "develop": "start-storybook -p 8000 -s ./static -c ./storybook",
     "prepare": "rm -rf ./dist && cross-env NODE_ENV=production babel ./src -d ./dist --ignore 'src/**/*.stories.js'",
     "purge": "rm -rf ./node_modules"
   },
