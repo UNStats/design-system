@@ -6,7 +6,7 @@
   "author": "Thilo Maier <maier@un.org>",
   "license": "MIT",
   "scripts": {
-    "prepare": "microbundle --no-compress",
+    "prepare": "rm -rf ./dist && microbundle --no-compress",
     "watch": "microbundle watch --no-compress"
   },
   "publishConfig": {
