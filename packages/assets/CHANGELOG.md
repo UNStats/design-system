@@ -1,5 +1,11 @@
 # @undataforum/assets
 
+## 0.4.1
+
+### Patch Changes
+
+- [`27ca5aa`](https://github.com/UNDataForum/design-system/commit/27ca5aade1c7ee136661d840065aac2324213259) [#310](https://github.com/UNDataForum/design-system/pull/310) - Add --jsx option to microbundle scripts
+
 ## 0.4.0
 
 ### Minor Changes
