@@ -19,8 +19,8 @@
   ],
   "scripts": {
     "develop": "start-storybook -p 8000 -s ./static -c ./storybook",
-    "prepare": "rm -rf ./dist && microbundle --no-compress",
-    "watch": "microbundle watch --no-compress",
+    "prepare": "rm -rf ./dist && microbundle --no-compress --jsx React.createElement",
+    "watch": "microbundle watch --no-compress --jsx React.createElement",
     "purge": "rm -rf ./node_modules"
   },
   "dependencies": {
