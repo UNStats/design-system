@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.66.2
+
+### Patch Changes
+
+- [`08b1099`](https://github.com/UNDataForum/design-system/commit/08b1099120e4ccd88cbc5b547f78fbacd76a2afc) [#317](https://github.com/UNDataForum/design-system/pull/317) - Prevent obsolete files from being copied into package
+
+* [`9bcf13c`](https://github.com/UNDataForum/design-system/commit/9bcf13c2dca05caccfa11922e1fd9d92316b564c) [#315](https://github.com/UNDataForum/design-system/pull/315) - Add theme-ui to peerDependencies
+
 ## 0.66.1
 
 ### Patch Changes
