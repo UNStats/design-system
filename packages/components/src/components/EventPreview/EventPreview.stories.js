@@ -126,6 +126,37 @@ storiesOf('Components/EventPreview', module)
       m={2}
     />
   ))
+  .add('responsive alignment', () => (
+    <EventPreview
+      event={{
+        type: 'Webinar',
+        title(align) {
+          return (
+            <Heading as="h1" sx={{ textAlign: align, mb: 3 }}>
+              Vestibulum proin eu mi nulla ac enim in tempor turpis
+            </Heading>
+          );
+        },
+        date: 'October 14, 1983, 1:30 PM EDT',
+        duration: '60 minutes',
+        speakers(align) {
+          return (
+            <Names
+              values={['Willow Rangall', 'Suzy Cahan']}
+              align={align}
+              mb={3}
+            />
+          );
+        },
+        links: {
+          page: '/events/vestibulum-proin-eu',
+          registration: '/register',
+        },
+      }}
+      align={['center', 'start', 'end']}
+      m={2}
+    />
+  ))
   .add('grid of events', () => {
     const events = [
       {

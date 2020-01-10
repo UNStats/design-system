@@ -1,14 +1,20 @@
 import React from 'react';
-import { func, shape, oneOf, string } from 'prop-types';
+import { func, shape, oneOf, oneOfType, string, arrayOf } from 'prop-types';
 import { Button, Flex, Text } from '@theme-ui/components';
 
 import SmartLink from '../SmartLink';
 import Badge from '../Badge';
 
-const alignItems = {
-  start: 'flex-start',
-  center: 'center',
-  end: 'flex-end',
+const normalizeAlign = align => {
+  const alignments = {
+    start: 'flex-start',
+    center: 'center',
+    end: 'flex-end',
+  };
+  if (Array.isArray(align)) {
+    return align.map(alignment => alignments[alignment]);
+  }
+  return alignments[align];
 };
 
 // How margins work in this component:
@@ -24,7 +30,7 @@ const EventPreview = ({
     {...props}
     sx={{
       flexDirection: 'column',
-      alignItems: alignItems[align],
+      alignItems: normalizeAlign(align),
       fontFamily: 'body',
       color: colors.text,
       bg: colors.background,
@@ -33,8 +39,7 @@ const EventPreview = ({
     <Badge
       color={colors.background}
       bg={colors.accent}
-      css={{ alignSelf: alignItems[align] }}
-      mb={1}
+      sx={{ alignSelf: normalizeAlign(align), mb: 1 }}
     >
       {event.type}
     </Badge>
@@ -63,7 +68,12 @@ const EventPreview = ({
         {event.links.page && (
           <Button
             as={SmartLink}
-            sx={{ color: colors.background, bg: colors.accent, mr: [2, 3] }}
+            sx={{
+              color: colors.background,
+              bg: colors.accent,
+              // Right margin only if there is a registration button.
+              mr: event.links.registration ? [2, 3] : 0,
+            }}
             href={event.links.page}
           >
             Details
@@ -107,7 +117,7 @@ EventPreview.propTypes = {
     background: string.isRequired,
     accent: string.isRequired,
   }),
-  align: alignType,
+  align: oneOfType([alignType, arrayOf(alignType)]),
 };
 
 export default EventPreview;
