@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.67.0
+
+### Minor Changes
+
+- [`c24f879`](https://github.com/UNDataForum/design-system/commit/c24f8792e4bcc7045a93a575af9fee91c4949d56) [#327](https://github.com/UNDataForum/design-system/pull/327) - Make align prop in EventPreview responsive
+
 ## 0.66.4
 
 ### Patch Changes
