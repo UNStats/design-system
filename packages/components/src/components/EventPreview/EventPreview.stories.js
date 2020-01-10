@@ -131,16 +131,17 @@ storiesOf('Components/EventPreview', module)
       {
         id: '0e0dde9c-1cb3-4bbf-a070-d3b838d98398',
         type: 'Webinar',
-        title() {
+        title(align) {
           return (
-            <Heading as="h1" sx={{ mb: 3 }}>
+            <Heading as="h1" sx={{ textAlign: align, mb: 3 }}>
               Ut aut reiciendis voluptatibus maiores alias consequatur
             </Heading>
           );
         },
-        speakers() {
+        speakers(align) {
           return (
             <Names
+              align={align}
               values={[
                 'Inglebert Mc Menamin (Moderator)',
                 'Allyn Minmagh (Moderator)',
@@ -153,9 +154,9 @@ storiesOf('Components/EventPreview', module)
         },
         date: 'Display date',
         duration: 'display duration',
-        description() {
+        description(align) {
           return (
-            <Text as="p" sx={{ lineHeight: 'body', mb: 3 }}>
+            <Text as="p" sx={{ lineHeight: 'body', textAlign: align, mb: 3 }}>
               Totam rem aperiam. Inventore veritatis et quasi architecto beatae
               vitae dicta sunt explicabo. Lorem ipsum dolor sit amet,
               consectetur adipisicing elit.
@@ -170,23 +171,27 @@ storiesOf('Components/EventPreview', module)
       {
         id: 'c539b355-4729-4d8f-88eb-ee955e1ae832',
         type: 'Session',
-        title() {
+        title(align) {
           return (
-            <Heading as="h1" sx={{ mb: 3 }}>
+            <Heading as="h1" sx={{ textAlign: align, mb: 3 }}>
               Do eiusmod tempor incididunt ut labore et dolore magna aliqua
             </Heading>
           );
         },
-        speakers() {
+        speakers(align) {
           return (
-            <Names values={['Galina Misselbrook', 'Etti Clapson']} mb={3} />
+            <Names
+              align={align}
+              values={['Galina Misselbrook', 'Etti Clapson']}
+              mb={3}
+            />
           );
         },
         date: 'Display date',
         duration: 'display duration',
-        description() {
+        description(align) {
           return (
-            <Text as="p" sx={{ lineHeight: 'body', mb: 3 }}>
+            <Text as="p" sx={{ lineHeight: 'body', textAlign: align, mb: 3 }}>
               Laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim
               veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit
               amet, consectetur adipisicing elit. Do eiusmod tempor incididunt
@@ -205,21 +210,21 @@ storiesOf('Components/EventPreview', module)
       {
         id: '60b7bd4e-b6d1-4f49-8f0a-4aaff9e55015',
         type: 'Workshop',
-        title() {
+        title(align) {
           return (
-            <Heading as="h1" sx={{ mb: 3 }}>
+            <Heading as="h1" sx={{ textAlign: align, mb: 3 }}>
               Et harum quidem rerum facilis est et expedita distinctio
             </Heading>
           );
         },
-        speakers() {
-          return <Names values={['Berti Bantham']} mb={3} />;
+        speakers(align) {
+          return <Names align={align} values={['Berti Bantham']} mb={3} />;
         },
         date: 'Display date',
         duration: 'display duration',
-        description() {
+        description(align) {
           return (
-            <Text as="p" sx={{ lineHeight: 'body', mb: 3 }}>
+            <Text as="p" sx={{ lineHeight: 'body', textAlign: align, mb: 3 }}>
               Corrupti quos dolores et quas molestias excepturi sint occaecati.
               Animi, id est laborum et dolorum fuga. Temporibus autem quibusdam
               et aut officiis debitis aut rerum necessitatibus saepe eveniet ut
@@ -236,16 +241,17 @@ storiesOf('Components/EventPreview', module)
       {
         id: 'e87d27fd-53e5-438a-93c0-32ea28e91f1a',
         type: 'Panel',
-        title() {
+        title(align) {
           return (
-            <Heading as="h1" sx={{ mb: 3 }}>
+            <Heading as="h1" sx={{ textAlign: align, mb: 3 }}>
               Itaque earum rerum hic tenetur a sapiente delectus
             </Heading>
           );
         },
-        speakers() {
+        speakers(align) {
           return (
             <Names
+              align={align}
               values={[
                 'Dewitt Milliere',
                 'Sigfried Slyvester',
@@ -257,9 +263,9 @@ storiesOf('Components/EventPreview', module)
         },
         date: 'Display date',
         duration: 'display duration',
-        description() {
+        description(align) {
           return (
-            <Text as="p" sx={{ lineHeight: 'body', mb: 3 }}>
+            <Text as="p" sx={{ lineHeight: 'body', textAlign: align, mb: 3 }}>
               Nisi ut aliquid ex ea commodi consequatur? Facere possimus, omnis
               voluptas assumenda est, omnis dolor repellendus. Quis autem vel
               eum iure reprehenderit qui in ea voluptate velit esse quam.
@@ -288,6 +294,7 @@ storiesOf('Components/EventPreview', module)
                 background: 'background',
                 accent: 'secondary',
               }}
+              align={select('align', alignments, 'start')}
               key={id}
             />
           ))}
