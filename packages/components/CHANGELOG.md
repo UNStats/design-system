@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.66.4
+
+### Patch Changes
+
+- [`ade1af8`](https://github.com/UNDataForum/design-system/commit/ade1af8fca77680e7d7213dabdd6c6f66e1e4d56) [#323](https://github.com/UNDataForum/design-system/pull/323) - Fix background in Header nav on small screens
+
 ## 0.66.3
 
 ### Patch Changes
