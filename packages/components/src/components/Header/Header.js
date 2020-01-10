@@ -85,7 +85,7 @@ const Header = ({
               bottom: 0,
               left: 0,
               zIndex: 2,
-              variant: [`navigation.${variant}`, `pairings.${variant}`],
+              variant: `pairings.${variant}`,
             }}
           >
             <Box
