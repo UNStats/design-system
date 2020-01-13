@@ -16,7 +16,7 @@ storiesOf('Components/EventPreview', module)
         type: 'Webinar',
         title(align) {
           return (
-            <Heading as="h1" sx={{ textAlign: align, mb: 3 }}>
+            <Heading as="h1" sx={{ textAlign: align, mt: 1, mb: 3 }}>
               Vestibulum proin eu mi nulla ac enim in tempor turpis
             </Heading>
           );
@@ -47,7 +47,7 @@ storiesOf('Components/EventPreview', module)
         type: 'Webinar',
         title(align) {
           return (
-            <Heading as="h1" sx={{ textAlign: align, mb: 3 }}>
+            <Heading as="h1" sx={{ textAlign: align, mt: 1, mb: 3 }}>
               Vestibulum proin eu mi nulla ac enim in tempor turpis
             </Heading>
           );
@@ -132,7 +132,7 @@ storiesOf('Components/EventPreview', module)
         type: 'Webinar',
         title(align) {
           return (
-            <Heading as="h1" sx={{ textAlign: align, mb: 3 }}>
+            <Heading as="h1" sx={{ textAlign: align, mt: 1, mb: 3 }}>
               Vestibulum proin eu mi nulla ac enim in tempor turpis
             </Heading>
           );
@@ -164,7 +164,7 @@ storiesOf('Components/EventPreview', module)
         type: 'Webinar',
         title(align) {
           return (
-            <Heading as="h1" sx={{ textAlign: align, mb: 3 }}>
+            <Heading as="h1" sx={{ textAlign: align, mt: 1, mb: 3 }}>
               Ut aut reiciendis voluptatibus maiores alias consequatur
             </Heading>
           );
@@ -204,7 +204,7 @@ storiesOf('Components/EventPreview', module)
         type: 'Session',
         title(align) {
           return (
-            <Heading as="h1" sx={{ textAlign: align, mb: 3 }}>
+            <Heading as="h1" sx={{ textAlign: align, mt: 1, mb: 3 }}>
               Do eiusmod tempor incididunt ut labore et dolore magna aliqua
             </Heading>
           );
@@ -243,7 +243,7 @@ storiesOf('Components/EventPreview', module)
         type: 'Workshop',
         title(align) {
           return (
-            <Heading as="h1" sx={{ textAlign: align, mb: 3 }}>
+            <Heading as="h1" sx={{ textAlign: align, mt: 1, mb: 3 }}>
               Et harum quidem rerum facilis est et expedita distinctio
             </Heading>
           );
@@ -274,7 +274,7 @@ storiesOf('Components/EventPreview', module)
         type: 'Panel',
         title(align) {
           return (
-            <Heading as="h1" sx={{ textAlign: align, mb: 3 }}>
+            <Heading as="h1" sx={{ textAlign: align, mt: 1, mb: 3 }}>
               Itaque earum rerum hic tenetur a sapiente delectus
             </Heading>
           );
@@ -339,7 +339,7 @@ storiesOf('Components/EventPreview', module)
         type: 'Webinar',
         title() {
           return (
-            <Heading as="h1" sx={{ mb: 3 }}>
+            <Heading as="h1" sx={{ mt: 1, mb: 3 }}>
               Vestibulum proin eu mi nulla ac enim in tempor turpis
             </Heading>
           );

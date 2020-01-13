@@ -36,11 +36,7 @@ const EventPreview = ({
       bg: colors.background,
     }}
   >
-    <Badge
-      color={colors.background}
-      bg={colors.accent}
-      sx={{ alignSelf: normalizeAlign(align), mb: 1 }}
-    >
+    <Badge color={colors.background} bg={colors.accent}>
       {event.type}
     </Badge>
     {event.title(align)}
