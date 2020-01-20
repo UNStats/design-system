@@ -1,7 +1,7 @@
 {
   "extends": ["config:base"],
   "automerge": false,
-  "labels": ["dependencies"],
+  "labels": ["renovate"],
   "reviewers": ["454de6e"],
   "semanticCommits": false,
   "packageRules": [
@@ -9,5 +9,6 @@
       "packagePatterns": ["@changesets"],
       "groupName": "atlassian/changesets packages"
     }
-  ]
+  ],
+  "schedule": "every weekend"
 }
