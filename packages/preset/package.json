@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "prepare": "rm -rf ./dist && microbundle --no-compress",
-    "watch": "microbundle watch --no-compress"
+    "watch": "microbundle watch --no-compress",
+    "purge": "rm -rf ./node_modules"
   },
   "publishConfig": {
     "access": "public"
