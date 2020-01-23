@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
-import { Image } from '@theme-ui/components';
+import { Image } from 'theme-ui';
 
 import Avatars, { alignments } from './Avatars';
 

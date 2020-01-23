@@ -1,6 +1,6 @@
 import React from 'react';
 import { func, shape, oneOf, oneOfType, string, arrayOf } from 'prop-types';
-import { Button, Flex, Text } from '@theme-ui/components';
+import { Button, Flex, Text } from 'theme-ui';
 
 import SmartLink from '../SmartLink';
 import Badge from '../Badge';

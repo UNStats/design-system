@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Container, Text } from '@theme-ui/components';
+import { Container, Text } from 'theme-ui';
 
 storiesOf('Components/Container', module).add('all widths', () => (
   <>

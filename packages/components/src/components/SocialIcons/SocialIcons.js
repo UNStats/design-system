@@ -1,6 +1,6 @@
 import React from 'react';
 import { oneOf, object } from 'prop-types';
-import { Box, Flex } from '@theme-ui/components';
+import { Box, Flex } from 'theme-ui';
 
 import SmartLink from '../SmartLink';
 import { EmailIcon, GitHubIcon, TwitterIcon } from '../../icons';

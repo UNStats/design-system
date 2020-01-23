@@ -1,6 +1,6 @@
 import React from 'react';
 import { arrayOf, func, oneOf, shape, string } from 'prop-types';
-import { Flex, Text } from '@theme-ui/components';
+import { Flex, Text } from 'theme-ui';
 
 import { responsiveNumberType } from '../../types';
 import Badges from '../Badges';

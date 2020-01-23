@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Container, Grid } from '@theme-ui/components';
+import { Container, Grid } from 'theme-ui';
 
 import Video from './Video';
 

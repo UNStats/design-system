@@ -1,6 +1,6 @@
 import React from 'react';
 import { arrayOf, func, oneOf, shape, string } from 'prop-types';
-import { Grid } from '@theme-ui/components';
+import { Grid } from 'theme-ui/';
 
 import ProfilePreview from '../ProfilePreview';
 import SmartLink from '../SmartLink';

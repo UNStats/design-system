@@ -1,6 +1,6 @@
 import React from 'react';
 import { arrayOf, oneOf, string } from 'prop-types';
-import { Text } from '@theme-ui/components';
+import { Text } from 'theme-ui';
 
 const Names = ({ values, align = 'start', variant = 'body', ...props }) => (
   <Text
