@@ -1,6 +1,6 @@
 import React from 'react';
 import { string, node } from 'prop-types';
-import { Badge as ThemeUiBadge } from '@theme-ui/components';
+import { Badge as ThemeUiBadge } from 'theme-ui';
 
 // Badge is a helper component and not exported.
 const Badge = ({ children, color, bg, ...props }) => (

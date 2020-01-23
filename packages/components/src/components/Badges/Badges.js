@@ -1,6 +1,6 @@
 import React from 'react';
 import { arrayOf, oneOf, string } from 'prop-types';
-import { Box, Flex } from '@theme-ui/components';
+import { Box, Flex } from 'theme-ui';
 
 import Badge from '../Badge';
 

@@ -2,7 +2,6 @@ import React from 'react';
 import { addDecorator, addParameters } from '@storybook/react';
 import { ThemeProvider } from 'theme-ui';
 import { withA11y } from '@storybook/addon-a11y';
-import { Global } from '@emotion/core';
 import preset from '@undataforum/preset';
 import merge from 'deepmerge';
 
@@ -12,6 +11,11 @@ import { NewTabLink } from '../../src/components';
 const theme = merge(preset, {
   link: {
     external: NewTabLink,
+  },
+  styles: {
+    root: {
+      body: { margin: 0 },
+    },
   },
 });
 
@@ -27,17 +31,6 @@ addParameters({
   },
 });
 
-addDecorator(story => (
-  <ThemeProvider theme={theme}>
-    <>
-      <Global
-        styles={{
-          body: { margin: 0 },
-        }}
-      />
-      {story()}
-    </>
-  </ThemeProvider>
-));
+addDecorator(story => <ThemeProvider theme={theme}>{story()}</ThemeProvider>);
 
 addDecorator(withA11y);

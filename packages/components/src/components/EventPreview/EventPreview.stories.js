@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
-import { Container, Grid, Heading, Image, Text } from '@theme-ui/components';
+import { Container, Grid, Heading, Image, Text } from 'theme-ui';
 
 import Names from '../Names';
 import Avatars from '../Avatars';

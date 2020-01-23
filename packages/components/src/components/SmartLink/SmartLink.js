@@ -1,7 +1,6 @@
 import React from 'react';
 import { node, oneOf, shape, string } from 'prop-types';
-import { Link } from '@theme-ui/components';
-import { useThemeUI } from 'theme-ui';
+import { Link, useThemeUI } from 'theme-ui';
 
 // Default color is primary (inherited from Link).
 const SmartLink = ({

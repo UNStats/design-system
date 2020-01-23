@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
-import { Box } from '@theme-ui/components';
+import { Box } from 'theme-ui';
 
 import Badge from './Badge';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Container, Grid, Image } from '@theme-ui/components';
+import { Container, Grid, Image } from 'theme-ui';
 
 import Names from '../Names';
 import Avatars from '../Avatars';

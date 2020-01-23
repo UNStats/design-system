@@ -1,6 +1,6 @@
 import React from 'react';
 import { number, string } from 'prop-types';
-import { AspectRatio } from '@theme-ui/components';
+import { AspectRatio } from 'theme-ui';
 
 // Don't add ...props because of https://github.com/UNDataForum/design-system/issues/269.
 // To add spacing around videos use Container or Box.

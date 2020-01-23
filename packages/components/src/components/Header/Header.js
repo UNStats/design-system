@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { arrayOf, func, string, oneOf } from 'prop-types';
-import { Box, Button, Container, Flex, Heading } from '@theme-ui/components';
+import { Box, Button, Container, Flex, Heading } from 'theme-ui';
 
 import { responsiveType } from '../../types';
 import { CloseIcon, MenuIcon } from '../../icons';

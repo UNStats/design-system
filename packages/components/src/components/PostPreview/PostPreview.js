@@ -1,6 +1,6 @@
 import React from 'react';
 import { func, shape, string } from 'prop-types';
-import { Button, Flex, Heading, Text } from '@theme-ui/components';
+import { Button, Flex, Heading, Text } from 'theme-ui';
 
 import { responsiveNumberType } from '../../types';
 import SmartLink from '../SmartLink';

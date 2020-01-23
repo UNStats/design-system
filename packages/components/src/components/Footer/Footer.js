@@ -1,6 +1,6 @@
 import React from 'react';
 import { arrayOf, func, string, oneOf } from 'prop-types';
-import { Box, Container, Flex, Heading, Text } from '@theme-ui/components';
+import { Box, Container, Flex, Heading, Text } from 'theme-ui';
 
 import SmartLink, { linkType } from '../SmartLink';
 
