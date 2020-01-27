@@ -17,5 +17,5 @@ websites:
 On every push to `master` the `release` GitHub action creates a pull request
 with all files changed by `yarn changeset version`. This pull request is
 automatically updated on every push to master. Whenever you are ready to publish
-to NPM, merge the pull request and run `yarn run release` manually on the merged
-commit.
+to NPM, merge the pull request. This will trigger releasing all changed packages
+to NPM.
