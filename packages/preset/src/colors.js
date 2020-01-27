@@ -46,4 +46,8 @@ export const pairings = {
     color: 'background',
     bg: 'accent',
   },
+  muted: {
+    color: 'text',
+    bg: 'muted',
+  },
 };
