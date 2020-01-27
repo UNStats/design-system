@@ -1,7 +1,7 @@
 {
   "name": "@undataforum/components",
   "description": "React components for United Nations World Data Forum websites.",
-  "version": "0.67.0",
+  "version": "0.68.0",
   "author": "Thilo Maier <maier@un.org>",
   "license": "MIT",
   "main": "dist/index.js",
@@ -38,7 +38,7 @@
     "@storybook/addon-knobs": "5.3.9",
     "@storybook/addon-storysource": "5.3.9",
     "@storybook/react": "5.3.9",
-    "@undataforum/preset": "0.1.2",
+    "@undataforum/preset": "0.2.0",
     "babel-loader": "8.0.6",
     "deepmerge": "4.2.2",
     "react": "16.12.0",
