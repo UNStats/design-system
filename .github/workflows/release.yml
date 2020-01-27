@@ -26,6 +26,8 @@ jobs:
 
       - name: Create release pull request or publish to NPM
         uses: changesets/action@master
+        with:
+          publish: yarn run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
