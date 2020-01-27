@@ -11,6 +11,7 @@ export {
 } from '@theme-ui/components';
 export {
   Avatars,
+  ColorCard,
   DummyLogo,
   EventPreview,
   eventType,
