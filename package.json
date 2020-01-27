@@ -5,7 +5,8 @@
     "prepare": "yarn workspaces run prepare",
     "lint": "eslint . --ignore-path .gitignore",
     "format": "pretty-quick",
-    "purge": "rm -rf ./node_modules && yarn workspaces run purge"
+    "purge": "rm -rf ./node_modules && yarn workspaces run purge",
+    "release": "yarn changeset publish && git push --follow-tags"
   },
   "lint-staged": {
     "*.js": [
