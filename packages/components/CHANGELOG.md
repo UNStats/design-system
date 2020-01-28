@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.69.0
+
+### Minor Changes
+
+- [`eeb5c55`](https://github.com/UNDataForum/design-system/commit/eeb5c559d69e4aa345b768783f002c746976b585)
+  [#357](https://github.com/UNDataForum/design-system/pull/357) Thanks
+  [@454de6e](https://github.com/454de6e)! - Make align type in Names responsive
+
 ## 0.68.0
 
 ### Minor Changes
