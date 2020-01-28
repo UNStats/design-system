@@ -1,5 +1,5 @@
 import React from 'react';
-import { arrayOf, oneOf, string } from 'prop-types';
+import { arrayOf, oneOf, oneOfType, string } from 'prop-types';
 import { Text } from 'theme-ui';
 
 const Names = ({ values, align = 'start', variant = 'body', ...props }) => (
@@ -21,7 +21,7 @@ export const variantType = oneOf(variants);
 
 Names.propTypes = {
   values: arrayOf(string).isRequired,
-  align: alignType,
+  align: oneOfType([alignType, arrayOf(alignType)]),
   variant: variantType,
 };
 
