@@ -1,15 +1,4 @@
 export {
-  Box,
-  Button,
-  Card,
-  Container,
-  Flex,
-  Grid,
-  Heading,
-  Link,
-  Text,
-} from '@theme-ui/components';
-export {
   Avatars,
   ColorCard,
   DummyLogo,
