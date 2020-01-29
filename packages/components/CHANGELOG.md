@@ -1,5 +1,14 @@
 # Change Log
 
+## 0.70.0
+
+### Minor Changes
+
+- [`2ffe23d`](https://github.com/UNDataForum/design-system/commit/2ffe23d3b9496ece32767d2f92b63671ddaf80bc)
+  [#360](https://github.com/UNDataForum/design-system/pull/360) Thanks
+  [@454de6e](https://github.com/454de6e)! - Remove re-exports of theme-ui
+  components
+
 ## 0.69.0
 
 ### Minor Changes
