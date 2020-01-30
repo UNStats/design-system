@@ -1,5 +1,14 @@
 # @undataforum/preset
 
+## 0.3.0
+
+### Minor Changes
+
+- [`b8ac8ab`](https://github.com/UNDataForum/design-system/commit/b8ac8ab3693ecc927743b30d8a19b81836dd3793)
+  [#364](https://github.com/UNDataForum/design-system/pull/364) Thanks
+  [@454de6e](https://github.com/454de6e)! - Move styleguide colors and pairings
+  to preset
+
 ## 0.2.0
 
 ### Minor Changes

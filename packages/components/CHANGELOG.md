@@ -1,5 +1,17 @@
 # Change Log
 
+## 0.70.1
+
+### Patch Changes
+
+- [`63308f3`](https://github.com/UNDataForum/design-system/commit/63308f32b8cb79f584117b200b37ecc356dbff90)
+  [#364](https://github.com/UNDataForum/design-system/pull/364) Thanks
+  [@454de6e](https://github.com/454de6e)! - Clean up Storybook config
+
+- Updated dependencies
+  [[`b8ac8ab`](https://github.com/UNDataForum/design-system/commit/b8ac8ab3693ecc927743b30d8a19b81836dd3793)]:
+  - @undataforum/preset@0.3.0
+
 ## 0.70.0
 
 ### Minor Changes
