@@ -10,30 +10,29 @@ const gray = '#eee';
 const blue = '#0e6a9c';
 const green = '#266f37';
 const red = '#a21723';
-// const yellow = '#c59b25';
+const yellow = '#c59b25';
 
 // Abstractions.
 const colors = {
+  // Theme UI colors.
   text: black,
   background: white,
   primary: blue,
   secondary: green,
   accent: red,
   muted: gray,
+  // Style guide colors.
+  blue,
+  green,
+  red,
+  yellow,
 };
 
 export default colors;
 
 // Color pairings optimized for contrast.
 export const pairings = {
-  default: {
-    color: 'text',
-    bg: 'background',
-  },
-  branded: {
-    color: 'primary',
-    bg: 'background',
-  },
+  // Universal pairings with Theme UI names.
   primary: {
     color: 'background',
     bg: 'primary',
@@ -49,5 +48,31 @@ export const pairings = {
   muted: {
     color: 'text',
     bg: 'muted',
+  },
+  // Universal pairings.
+  default: {
+    color: 'text',
+    bg: 'background',
+  },
+  branded: {
+    color: 'primary',
+    bg: 'background',
+  },
+  // Pairings for styleguide colors.
+  blue: {
+    color: 'background',
+    bg: 'blue',
+  },
+  green: {
+    color: 'background',
+    bg: 'green',
+  },
+  red: {
+    color: 'background',
+    bg: 'red',
+  },
+  yellow: {
+    color: 'text',
+    bg: 'yellow',
   },
 };
