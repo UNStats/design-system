@@ -1,5 +1,13 @@
 # @undataforum/preset
 
+## 0.4.0
+
+### Minor Changes
+
+- [`b70ccd6`](https://github.com/UNDataForum/design-system/commit/b70ccd6993f2e610e670b0e8f7c97fcfafc53cfd)
+  [#367](https://github.com/UNDataForum/design-system/pull/367) Thanks
+  [@454de6e](https://github.com/454de6e)! - Update colors
+
 ## 0.3.0
 
 ### Minor Changes
