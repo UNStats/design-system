@@ -3,10 +3,10 @@
 // Universal colors.
 const black = '#000000';
 const white = '#ffffff';
-const gray = '#eee';
+const gray = '#717171';
 
 // Styleguide colors.
-// const forumBlue = '#00609d';
+const forumBlue = '#00609d';
 const blue = '#0e6a9c';
 const green = '#266f37';
 const red = '#a21723';
@@ -22,10 +22,13 @@ const colors = {
   accent: red,
   muted: gray,
   // Style guide colors.
+  forumBlue,
   blue,
   green,
   red,
   yellow,
+  // Additional colors.
+  gray,
 };
 
 export default colors;
@@ -59,6 +62,10 @@ export const pairings = {
     bg: 'background',
   },
   // Pairings for styleguide colors.
+  forumBlue: {
+    color: 'background',
+    bg: 'forumBlue',
+  },
   blue: {
     color: 'background',
     bg: 'blue',
@@ -72,7 +79,12 @@ export const pairings = {
     bg: 'red',
   },
   yellow: {
-    color: 'text',
+    color: 'background',
     bg: 'yellow',
+  },
+  // Pairings for additional colors.
+  gray: {
+    color: 'background',
+    bg: 'gray',
   },
 };
