@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.70.2
+
+### Patch Changes
+
+- Updated dependencies
+  [[`b70ccd6`](https://github.com/UNDataForum/design-system/commit/b70ccd6993f2e610e670b0e8f7c97fcfafc53cfd)]:
+  - @undataforum/preset@0.4.0
+
 ## 0.70.1
 
 ### Patch Changes
