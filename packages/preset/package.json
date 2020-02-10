@@ -1,5 +1,6 @@
 {
   "name": "@undataforum/preset",
+  "description": "Theme UI preset for the the United Nations World Data Forum website.",
   "version": "0.4.0",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

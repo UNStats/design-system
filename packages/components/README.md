@@ -1,6 +1,6 @@
 # @undataforum/components
 
-A library of React components for the United Nations World Data Forum Website.
+A library of React components for the United Nations World Data Forum website.
 Built with [Theme UI](https://theme-ui.com).
 
 ## Install
@@ -11,7 +11,10 @@ In order to install package `@undataforum/components` run
 yarn add @undataforum/components
 ```
 
-to add it to your dependencies. Import components like this
+to add it to your dependencies. Install the following peer dependencies:
+`react`, `react-dom` and `theme-ui`.
+
+Import components like this
 
 ```jsx
 import { Header, PostPreview, ProfilePreview } from '@undataforum/components';
@@ -23,13 +26,24 @@ You can explore all components at https://components.undataforum.org. To explore
 components locally run
 
 ```bash
-yarn workspace @undataforum/components develop
+yarn workspace docs start
 ```
 
-from the repository root and launch http://localhost:8000 in your browser.
+## Develop
 
-## Credits
+Work with two terminals. In the first terminal run
 
-Avatar images used in Storybook stories were created with
-[Robohash](https://robohash.org/). Licensing information is available on the
-[Robohash GitHub page](https://github.com/e1ven/Robohash).
+```bash
+yarn workspace @undataforum/components run watch
+```
+
+and in the second terminal run
+
+```bash
+yarn workspace docs start
+```
+
+The first command watches for changes in the `@undataforum/components` workspace
+and bundles the `@undataforum/components` package whenever it detects a change.
+The second command launches Storybook, which uses the local
+`@undataforum/components` package as dependency.

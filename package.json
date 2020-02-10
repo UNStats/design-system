@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "yarn workspace @undataforum/components run build-storybook",
+    "start": "yarn workspace docs run start",
     "prepare": "yarn workspaces run prepare",
     "lint": "eslint . --ignore-path .gitignore",
     "format": "pretty-quick",
@@ -20,6 +20,7 @@
     }
   },
   "workspaces": [
+    "docs",
     "packages/*"
   ],
   "devDependencies": {
