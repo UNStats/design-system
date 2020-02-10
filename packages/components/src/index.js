@@ -1,5 +1,6 @@
 export {
   Avatars,
+  Badges,
   ColorCard,
   DummyLogo,
   EventPreview,
@@ -16,3 +17,10 @@ export {
   SocialIcons,
   Video,
 } from './components';
+export {
+  CloseIcon,
+  EmailIcon,
+  GitHubIcon,
+  MenuIcon,
+  TwitterIcon,
+} from './icons';

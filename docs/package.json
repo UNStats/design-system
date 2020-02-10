@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "name": "docs",
+  "version": "0.0.0",
+  "description": "Storybook for the United Nations World Data Forum design system.",
+  "author": "Thilo Maier <maier@un.org>",
+  "scripts": {
+    "start": "start-storybook -s ./static -c ./config/storybook",
+    "build": "rm -rf public && build-storybook -s ./static -c ./config/storybook",
+    "prepare": "exit",
+    "purge": "rm -rf ./node_modules"
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.4",
+    "@storybook/addon-a11y": "^5.3.12",
+    "@storybook/addon-knobs": "^5.3.12",
+    "@storybook/addon-storysource": "^5.3.12",
+    "@storybook/react": "^5.3.12",
+    "@undataforum/assets": "*",
+    "@undataforum/components": "*",
+    "@undataforum/preset": "*",
+    "babel-loader": "^8.0.6",
+    "deepmerge": "^4.2.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "theme-ui": "^0.3.1"
+  }
+}
