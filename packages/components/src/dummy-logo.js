@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { scaleToType } from '../types';
+import { scaleToType } from './types';
 
 const DummyLogo = ({ scaleTo }) => {
   const height = scaleTo === 'height' ? '100%' : null;

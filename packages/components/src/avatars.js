@@ -2,8 +2,7 @@ import React from 'react';
 import { arrayOf, func, shape, string } from 'prop-types';
 import { Grid } from 'theme-ui';
 
-import { responsiveAlignType } from '../types';
-
+import { responsiveAlignType } from './types';
 import ProfilePreview from './profile-preview';
 import SmartLink from './smart-link';
 

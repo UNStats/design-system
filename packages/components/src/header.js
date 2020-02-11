@@ -10,8 +10,7 @@ import {
   MenuButton,
 } from 'theme-ui';
 
-import { responsiveType } from '../types';
-
+import { responsiveType } from './types';
 import SmartLink, { linkType } from './smart-link';
 
 const Context = React.createContext({});

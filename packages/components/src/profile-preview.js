@@ -2,8 +2,7 @@ import React from 'react';
 import { arrayOf, func, shape, string } from 'prop-types';
 import { Flex, Text } from 'theme-ui';
 
-import { responsiveAlignType, responsiveNumberType } from '../types';
-
+import { responsiveAlignType, responsiveNumberType } from './types';
 import Badges from './badges';
 
 const alignItems = {

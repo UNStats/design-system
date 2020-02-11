@@ -1,20 +1,17 @@
-export {
-  Avatars,
-  Badges,
-  ColorCard,
-  DummyLogo,
-  EventPreview,
-  eventType,
-  Footer,
-  Header,
-  Names,
-  NewTabLink,
-  PostPreview,
-  postType,
-  ProfilePreview,
-  profileType,
-  SmartLink,
-  SocialIcons,
-  Video,
-} from './components';
-export { EmailIcon, GitHubIcon, TwitterIcon } from './icons';
+export { default as Avatars } from './avatars';
+export { default as Badges } from './badges';
+export { default as ColorCard } from './color-card';
+export { default as DummyLogo } from './dummy-logo';
+export { default as EventPreview, eventType } from './event-preview';
+export { default as Footer } from './footer';
+export { default as Header } from './header';
+export { default as Names } from './names';
+export { default as NewTabLink } from './new-tab-link';
+export { default as PostPreview, postType } from './post-preview';
+export { default as ProfilePreview, profileType } from './profile-preview';
+export { default as SmartLink } from './smart-link';
+export { default as SocialIcons } from './social-icons';
+export { default as Video } from './video';
+export { default as EmailIcon } from './email-icon';
+export { default as GitHubIcon } from './github-icon';
+export { default as TwitterIcon } from './twitter-icon';
