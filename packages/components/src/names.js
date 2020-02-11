@@ -2,7 +2,7 @@ import React from 'react';
 import { arrayOf, oneOf, string } from 'prop-types';
 import { Text } from 'theme-ui';
 
-import { responsiveAlignType } from '../types';
+import { responsiveAlignType } from './types';
 
 const Names = ({ values, align = 'start', variant = 'body', ...props }) => (
   <Text

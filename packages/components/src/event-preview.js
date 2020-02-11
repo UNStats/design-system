@@ -2,8 +2,7 @@ import React from 'react';
 import { func, shape, string } from 'prop-types';
 import { Badge, Button, Flex, Text } from 'theme-ui';
 
-import { responsiveAlignType } from '../types';
-
+import { responsiveAlignType } from './types';
 import SmartLink from './smart-link';
 
 const normalizeAlign = align => {

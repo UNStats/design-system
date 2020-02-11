@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { scaleToType } from '../types';
+import { scaleToType } from './types';
 
 const GitHubIcon = ({ scaleTo }) => {
   const height = scaleTo === 'height' ? '100%' : null;

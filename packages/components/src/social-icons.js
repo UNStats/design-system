@@ -2,9 +2,10 @@ import React from 'react';
 import { oneOf, object } from 'prop-types';
 import { Box, Flex } from 'theme-ui';
 
-import { EmailIcon, GitHubIcon, TwitterIcon } from '../icons';
-
+import EmailIcon from './email-icon';
+import GitHubIcon from './github-icon';
 import SmartLink from './smart-link';
+import TwitterIcon from './twitter-icon';
 
 const services = [
   {
