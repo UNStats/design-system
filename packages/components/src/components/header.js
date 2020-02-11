@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
 import { arrayOf, func, string, oneOf } from 'prop-types';
-import { Box, Button, Container, Flex, Heading } from 'theme-ui';
+import {
+  Box,
+  Button,
+  Close,
+  Container,
+  Flex,
+  Heading,
+  MenuButton,
+} from 'theme-ui';
 
 import { responsiveType } from '../types';
-import { CloseIcon, MenuIcon } from '../icons';
 
 import SmartLink, { linkType } from './smart-link';
 
@@ -103,7 +110,7 @@ const Header = ({
                 setMenuOpen(false);
               }}
             >
-              <CloseIcon scaleTo="height" />
+              <Close css={{ WebkitTapHighlightColor: 'transparent' }} />
             </Box>
 
             <Flex
@@ -183,7 +190,10 @@ const Header = ({
               setMenuOpen(true);
             }}
           >
-            <MenuIcon scaleTo="height" />
+            <MenuButton
+              css={{ WebkitTapHighlightColor: 'transparent' }}
+              aria-label="Open navigation"
+            />
           </Box>
         </Flex>
       </Container>
