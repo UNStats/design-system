@@ -4,12 +4,7 @@ import { Flex, Text } from 'theme-ui';
 
 import { responsiveAlignType, responsiveNumberType } from './types';
 import Badges from './badges';
-
-const alignItems = {
-  start: 'flex-start',
-  center: 'center',
-  end: 'flex-end',
-};
+import { normalizeAlign } from './util';
 
 const ProfilePreview = ({
   profile,
@@ -17,76 +12,74 @@ const ProfilePreview = ({
   colors = { text: 'text', background: 'background', accent: 'primary' },
   align = 'center',
   ...props
-}) => {
-  return (
-    <Flex
-      {...props}
-      sx={{
-        flexDirection: 'column',
-        alignItems: alignItems[align],
-        fontFamily: 'body',
-        color: colors.text,
-        bg: colors.background,
-      }}
-    >
-      {profile.avatar()}
-      {profile.honorific && (
-        <Text
-          sx={{
-            fontSize: 1,
-            lineHeight: 'body',
-            textAlign: align,
-          }}
-        >
-          {profile.honorific}
-        </Text>
-      )}
+}) => (
+  <Flex
+    {...props}
+    sx={{
+      flexDirection: 'column',
+      alignItems: normalizeAlign(align),
+      fontFamily: 'body',
+      color: colors.text,
+      bg: colors.background,
+    }}
+  >
+    {profile.avatar()}
+    {profile.honorific && (
       <Text
-        as="h1"
         sx={{
-          fontSize,
-          lineHeight: 'heading',
+          fontSize: 1,
+          lineHeight: 'body',
           textAlign: align,
-          mt: 0,
-          mb: 0,
         }}
       >
-        {profile.name}
+        {profile.honorific}
       </Text>
-      {profile.jobtitle && (
-        <Text
-          sx={{
-            fontSize: 2,
-            lineHeight: 'body',
-            textAlign: align,
-          }}
-        >
-          {profile.jobtitle}
-        </Text>
-      )}
-      {profile.organization && (
-        <Text
-          sx={{
-            fontSize: 2,
-            fontWeight: 'bold',
-            lineHeight: 'body',
-            textAlign: align,
-          }}
-        >
-          {profile.organization}
-        </Text>
-      )}
-      {profile.badges && (
-        <Badges
-          values={profile.badges}
-          color={colors.background}
-          bg={colors.accent}
-          mt={2}
-        />
-      )}
-    </Flex>
-  );
-};
+    )}
+    <Text
+      as="h1"
+      sx={{
+        fontSize,
+        lineHeight: 'heading',
+        textAlign: align,
+        mt: 0,
+        mb: 0,
+      }}
+    >
+      {profile.name}
+    </Text>
+    {profile.jobtitle && (
+      <Text
+        sx={{
+          fontSize: 2,
+          lineHeight: 'body',
+          textAlign: align,
+        }}
+      >
+        {profile.jobtitle}
+      </Text>
+    )}
+    {profile.organization && (
+      <Text
+        sx={{
+          fontSize: 2,
+          fontWeight: 'bold',
+          lineHeight: 'body',
+          textAlign: align,
+        }}
+      >
+        {profile.organization}
+      </Text>
+    )}
+    {profile.badges && (
+      <Badges
+        values={profile.badges}
+        color={colors.background}
+        bg={colors.accent}
+        mt={2}
+      />
+    )}
+  </Flex>
+);
 
 export const profileType = shape({
   avatar: func.isRequired,
