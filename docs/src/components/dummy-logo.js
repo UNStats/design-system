@@ -1,6 +1,5 @@
 import React from 'react';
-
-import { scaleToType } from './types';
+import { scaleToType } from '@undataforum/components';
 
 const DummyLogo = ({ scaleTo }) => {
   const height = scaleTo === 'height' ? '100%' : null;

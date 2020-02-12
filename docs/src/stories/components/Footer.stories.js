@@ -2,7 +2,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
 import { Box } from 'theme-ui';
-import { DummyLogo, Footer, SocialIcons } from '@undataforum/components';
+import { Footer, SocialIcons } from '@undataforum/components';
+
+import DummyLogo from '../../components/dummy-logo';
 
 export const variants = ['primary', 'secondary'];
 

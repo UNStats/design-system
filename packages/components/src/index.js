@@ -1,7 +1,6 @@
 export { default as Avatars } from './avatars';
 export { default as Badges } from './badges';
 export { default as ColorCard } from './color-card';
-export { default as DummyLogo } from './dummy-logo';
 export { default as EventPreview, eventType } from './event-preview';
 export { default as Footer } from './footer';
 export { default as Header } from './header';
@@ -15,3 +14,4 @@ export { default as Video } from './video';
 export { default as EmailIcon } from './email-icon';
 export { default as GitHubIcon } from './github-icon';
 export { default as TwitterIcon } from './twitter-icon';
+export { scaleToType } from './types';
