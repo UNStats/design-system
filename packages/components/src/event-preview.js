@@ -4,18 +4,7 @@ import { Badge, Button, Flex, Text } from 'theme-ui';
 
 import { responsiveAlignType } from './types';
 import SmartLink from './smart-link';
-
-const normalizeAlign = align => {
-  const alignments = {
-    start: 'flex-start',
-    center: 'center',
-    end: 'flex-end',
-  };
-  if (Array.isArray(align)) {
-    return align.map(alignment => alignments[alignment]);
-  }
-  return alignments[align];
-};
+import { normalizeAlign } from './util';
 
 // How margins work in this component:
 // What the title prop renders (heading) may have no top margin, only bottom margin.

@@ -4,7 +4,7 @@ import { withKnobs, select } from '@storybook/addon-knobs';
 import { Box } from 'theme-ui';
 import { Badges } from '@undataforum/components';
 
-const alignments = ['flex-start', 'center', 'flex-end'];
+const alignments = ['start', 'center', 'end'];
 
 storiesOf('Components/Badges', module)
   .addDecorator(withKnobs)
