@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
-import { Styled, Heading } from 'theme-ui';
+import { Styled, Heading, Text } from 'theme-ui';
 import { ColorCard } from '@undataforum/components';
 
 storiesOf('Components/ColorCard', module)
@@ -11,9 +11,7 @@ storiesOf('Components/ColorCard', module)
       <ColorCard
         color={select('color', ['primary', 'secondary', 'accent', 'muted'])}
         title={() => <Heading as="h1">ColorCard with subtitle</Heading>}
-        subtitle={() => (
-          <Styled.h2>Sunt veniam commodo id est incididunt</Styled.h2>
-        )}
+        subtitle={() => <Text>Sunt veniam commodo id est incididunt</Text>}
         m={2}
       >
         {() => (
