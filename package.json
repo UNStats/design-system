@@ -6,7 +6,8 @@
     "lint": "eslint . --ignore-path .gitignore",
     "format": "pretty-quick",
     "purge": "rm -rf ./node_modules && yarn workspaces run purge",
-    "release": "yarn changeset publish && git push --follow-tags"
+    "release": "yarn changeset publish && git push --follow-tags && yarn run deploy",
+    "deploy": "now --confirm --prod --token $NOW_TOKEN"
   },
   "lint-staged": {
     "*.js": [
@@ -35,6 +36,7 @@
     "husky": "4.2.1",
     "lint-staged": "10.0.7",
     "microbundle": "0.11.0",
+    "now": "^17.0.3",
     "prettier": "1.19.1",
     "pretty-quick": "2.0.1"
   }
