@@ -6,8 +6,9 @@
     "lint": "eslint . --ignore-path .gitignore",
     "format": "pretty-quick",
     "purge": "rm -rf ./node_modules && yarn workspaces run purge",
-    "release": "yarn changeset publish && git push --follow-tags && yarn run deploy",
-    "deploy": "now --confirm --prod --token $NOW_TOKEN"
+    "release": "yarn changeset publish && git push --follow-tags && yarn run deploy:prod",
+    "deploy": "now --confirm --token $NOW_TOKEN",
+    "deploy:prod": "now --confirm --prod --token $NOW_TOKEN"
   },
   "lint-staged": {
     "*.js": [
