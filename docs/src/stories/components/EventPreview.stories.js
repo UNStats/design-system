@@ -124,6 +124,28 @@ storiesOf('Components/EventPreview', module)
       m={2}
     />
   ))
+  .add('no speakers', () => (
+    <EventPreview
+      event={{
+        type: 'Webinar',
+        title(align) {
+          return (
+            <Heading as="h1" sx={{ textAlign: align, mt: 1, mb: 3 }}>
+              Vestibulum proin eu mi nulla ac enim in tempor turpis
+            </Heading>
+          );
+        },
+        date: 'October 14, 1983, 1:30 PM EDT',
+        duration: '60 minutes',
+        links: {
+          page: '/events/vestibulum-proin-eu',
+          registration: '/register',
+        },
+      }}
+      align={select('align', alignments, 'start')}
+      m={2}
+    />
+  ))
   .add('responsive alignment', () => (
     <EventPreview
       event={{

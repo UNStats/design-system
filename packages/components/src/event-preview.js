@@ -29,7 +29,7 @@ const EventPreview = ({
       {event.type}
     </Badge>
     {event.title(align)}
-    {event.speakers(align)}
+    {event.speakers && event.speakers(align)}
     <Text
       as="time"
       sx={{
@@ -84,7 +84,7 @@ export const eventType = shape({
   title: func.isRequired,
   date: string.isRequired,
   duration: string.isRequired,
-  speakers: func.isRequired,
+  speakers: func,
   description: func,
   links: shape({
     page: string,
