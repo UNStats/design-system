@@ -1,5 +1,5 @@
 import React from 'react';
-import { arrayOf, func, shape, string } from 'prop-types';
+import { arrayOf, node, shape, string } from 'prop-types';
 import { Flex, Text } from 'theme-ui';
 
 import { responsiveAlignType, responsiveNumberType } from './types';
@@ -23,7 +23,7 @@ const ProfilePreview = ({
       bg: colors.background,
     }}
   >
-    {profile.avatar()}
+    {profile.avatar}
     {profile.honorific && (
       <Text
         sx={{
@@ -82,7 +82,7 @@ const ProfilePreview = ({
 );
 
 export const profileType = shape({
-  avatar: func.isRequired,
+  avatar: node.isRequired,
   honorific: string,
   name: string,
   jobtitle: string,

@@ -11,15 +11,13 @@ storiesOf('Components/ProfilePreview', module)
   .add('complete profile', () => (
     <ProfilePreview
       profile={{
-        avatar() {
-          return (
-            <Image
-              alt="Nance MacFadin"
-              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
-              src="/avatar0.png"
-            />
-          );
-        },
+        avatar: (
+          <Image
+            alt="Nance MacFadin"
+            sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+            src="/avatar0.png"
+          />
+        ),
         honorific: 'His Excellency',
         name: 'Nance MacFadin',
         jobtitle: 'Help Desk Operator',
@@ -33,15 +31,13 @@ storiesOf('Components/ProfilePreview', module)
   .add('custom colors', () => (
     <ProfilePreview
       profile={{
-        avatar() {
-          return (
-            <Image
-              alt="Nance MacFadin"
-              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
-              src="/avatar0.png"
-            />
-          );
-        },
+        avatar: (
+          <Image
+            alt="Nance MacFadin"
+            sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+            src="/avatar0.png"
+          />
+        ),
         honorific: 'His Excellency',
         name: 'Nance MacFadin',
         jobtitle: 'Help Desk Operator',
@@ -60,15 +56,13 @@ storiesOf('Components/ProfilePreview', module)
   .add('no jobtitle', () => (
     <ProfilePreview
       profile={{
-        avatar() {
-          return (
-            <Image
-              alt="Nance MacFadin"
-              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
-              src="/avatar0.png"
-            />
-          );
-        },
+        avatar: (
+          <Image
+            alt="Nance MacFadin"
+            sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+            src="/avatar0.png"
+          />
+        ),
         name: 'Nance MacFadin',
         organization: 'Schuster-Senger',
         badges: ['Committee Member', 'Keynote Speaker'],
@@ -85,15 +79,13 @@ storiesOf('Components/ProfilePreview', module)
   .add('no organization', () => (
     <ProfilePreview
       profile={{
-        avatar() {
-          return (
-            <Image
-              alt="Nance MacFadin"
-              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
-              src="/avatar0.png"
-            />
-          );
-        },
+        avatar: (
+          <Image
+            alt="Nance MacFadin"
+            sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+            src="/avatar0.png"
+          />
+        ),
         name: 'Nance MacFadin',
         jobtitle: 'Help Desk Operator',
         badges: ['Committee Member', 'Keynote Speaker'],
@@ -110,15 +102,13 @@ storiesOf('Components/ProfilePreview', module)
   .add('no jobtitle and no organization', () => (
     <ProfilePreview
       profile={{
-        avatar() {
-          return (
-            <Image
-              alt="Nance MacFadin"
-              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
-              src="/avatar0.png"
-            />
-          );
-        },
+        avatar: (
+          <Image
+            alt="Nance MacFadin"
+            sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+            src="/avatar0.png"
+          />
+        ),
         name: 'Nance MacFadin',
         badges: ['Committee Member', 'Keynote Speaker'],
       }}
@@ -129,15 +119,13 @@ storiesOf('Components/ProfilePreview', module)
   .add('avatar only', () => (
     <ProfilePreview
       profile={{
-        avatar() {
-          return (
-            <Image
-              alt="Willow Rangall"
-              sx={{ borderRadius: 'circle', height: 64, width: 64 }}
-              src="/avatar3.png"
-            />
-          );
-        },
+        avatar: (
+          <Image
+            alt="Willow Rangall"
+            sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+            src="/avatar3.png"
+          />
+        ),
       }}
       align={select('align', alignments, 'center')}
       m={2}
@@ -146,15 +134,13 @@ storiesOf('Components/ProfilePreview', module)
   .add('avatar and name only', () => (
     <ProfilePreview
       profile={{
-        avatar() {
-          return (
-            <Image
-              alt="Suzy Cahan"
-              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
-              src="/avatar4.png"
-            />
-          );
-        },
+        avatar: (
+          <Image
+            alt="Suzy Cahan"
+            sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+            src="/avatar4.png"
+          />
+        ),
         name: 'Suzy Cahan',
       }}
       align={select('align', alignments, 'center')}
@@ -164,19 +150,17 @@ storiesOf('Components/ProfilePreview', module)
   .add('responsive avatar', () => (
     <ProfilePreview
       profile={{
-        avatar() {
-          return (
-            <Image
-              alt="Sandra Abramovici"
-              sx={{
-                borderRadius: 'circle',
-                height: [32, 64, 128],
-                width: [32, 64, 128],
-              }}
-              src="/avatar5.png"
-            />
-          );
-        },
+        avatar: (
+          <Image
+            alt="Sandra Abramovici"
+            sx={{
+              borderRadius: 'circle',
+              height: [32, 64, 128],
+              width: [32, 64, 128],
+            }}
+            src="/avatar5.png"
+          />
+        ),
         name: 'Sandra Abramovici',
       }}
       align={select('align', alignments, 'center')}
@@ -186,15 +170,13 @@ storiesOf('Components/ProfilePreview', module)
   .add('custom font size', () => (
     <ProfilePreview
       profile={{
-        avatar() {
-          return (
-            <Image
-              alt="Jan McKea"
-              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
-              src="/avatar6.png"
-            />
-          );
-        },
+        avatar: (
+          <Image
+            alt="Jan McKea"
+            sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+            src="/avatar6.png"
+          />
+        ),
         name: 'Jan McKea',
       }}
       fontSize={[5, 6]}
@@ -205,15 +187,13 @@ storiesOf('Components/ProfilePreview', module)
   .add('really long strings', () => (
     <ProfilePreview
       profile={{
-        avatar() {
-          return (
-            <Image
-              alt="Really really really really really really really really really really long name"
-              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
-              src="/avatar7.png"
-            />
-          );
-        },
+        avatar: (
+          <Image
+            alt="Really really really really really really really really really really long name"
+            sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+            src="/avatar7.png"
+          />
+        ),
         name:
           'Really really really really really really really really really really long name',
         jobtitle:

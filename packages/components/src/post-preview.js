@@ -1,5 +1,5 @@
 import React from 'react';
-import { func, shape, string } from 'prop-types';
+import { node, shape, string } from 'prop-types';
 import { Button, Flex, Heading, Text } from 'theme-ui';
 
 import { responsiveNumberType } from './types';
@@ -36,7 +36,7 @@ const PostPreview = ({
       >
         {post.title}
       </Heading>
-      {post.authors()}
+      {post.authors}
       <Text as="time" sx={{ display: 'block', mb }}>
         {post.date}
       </Text>
@@ -82,7 +82,7 @@ const PostPreview = ({
 export const postType = shape({
   title: string.isRequired,
   date: string.isRequired,
-  authors: func.isRequired,
+  authors: node.isRequired,
   description: string,
   href: string,
 });

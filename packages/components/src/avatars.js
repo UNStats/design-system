@@ -1,5 +1,5 @@
 import React from 'react';
-import { arrayOf, func, shape, string } from 'prop-types';
+import { arrayOf, node, shape, string } from 'prop-types';
 import { Grid } from 'theme-ui';
 
 import { responsiveAlignType } from './types';
@@ -44,7 +44,7 @@ Avatars.propTypes = {
   values: arrayOf(
     shape({
       id: string.isRequired,
-      avatar: func.isRequired,
+      avatar: node.isRequired,
       name: string,
       href: string.isRequired,
     })

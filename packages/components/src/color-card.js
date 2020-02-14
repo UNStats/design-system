@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, func } from 'prop-types';
+import { node, string } from 'prop-types';
 import { Box } from 'theme-ui';
 
 const ColorCard = ({
@@ -11,19 +11,19 @@ const ColorCard = ({
 }) => (
   <Box {...props} sx={{ border: '1px solid', borderColor: color }}>
     <Box sx={{ p: [2, 3], mb: [2, 3] }} variant={`pairings.${color}`}>
-      {title()}
-      {subtitle && subtitle()}
+      {title}
+      {subtitle && subtitle}
     </Box>
-    <Box sx={{ px: [2, 3], mb: [2, 3] }}>{children()}</Box>
+    <Box sx={{ px: [2, 3], mb: [2, 3] }}>{children}</Box>
   </Box>
 );
 
 ColorCard.propTypes = {
   color: string,
   // Bring your own heading (based on the context this is rendered in).
-  title: func.isRequired,
-  subtitle: func,
-  children: func.isRequired,
+  title: node.isRequired,
+  subtitle: node,
+  children: node.isRequired,
 };
 
 export default ColorCard;

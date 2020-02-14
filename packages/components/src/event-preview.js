@@ -6,6 +6,8 @@ import { responsiveAlignType } from './types';
 import SmartLink from './smart-link';
 import { normalizeAlign } from './util';
 
+// Render props take `align` attribute and therefore cannot be converted to composition.
+
 // How margins work in this component:
 // What the title prop renders (heading) may have no top margin, only bottom margin.
 // What the description prop renders (paragraph) may have no top margin, only bottom margin.
