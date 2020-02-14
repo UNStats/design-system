@@ -49,7 +49,7 @@ export const pairings = {
     bg: 'accent',
   },
   muted: {
-    color: 'text',
+    color: 'background',
     bg: 'muted',
   },
   // Universal pairings.
