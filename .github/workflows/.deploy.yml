@@ -9,10 +9,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v1
 
-      - name: Install dependencies
-        run: yarn
-
       - name: Deploy to Zeit Now
-        run: yarn run deploy
-        env:
-          NOW_TOKEN: ${{secrets.NOW_TOKEN}}
+        uses: amondnet/now-deployment@v1
+        with:
+          zeit-token: ${{ secrets.NOW_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          zeit-team-id: team_Gi3q9d0m9gDtYn8A74EbZGnD
