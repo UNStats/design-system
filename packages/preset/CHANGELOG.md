@@ -1,5 +1,13 @@
 # @undataforum/preset
 
+## 0.5.0
+
+### Minor Changes
+
+- [`bb89005`](https://github.com/UNDataForum/design-system/commit/bb8900574ffe0a9fe28d8a7e5851e60347e84e71)
+  [#381](https://github.com/UNDataForum/design-system/pull/381) Thanks
+  [@454de6e](https://github.com/454de6e)! - Consolidate Storybooks in docs
+
 ## 0.4.0
 
 ### Minor Changes

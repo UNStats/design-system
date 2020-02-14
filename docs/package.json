@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "docs",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Storybook for the United Nations World Data Forum design system.",
   "author": "Thilo Maier <maier@un.org>",
   "scripts": {
