@@ -58,43 +58,37 @@ storiesOf('Components/EventPreview', module)
               values={[
                 {
                   id: 'a6b4babd-6b11-4b81-8ac0-73cefb040cb7',
-                  avatar() {
-                    return (
-                      <Image
-                        alt="Portrait of Willow Rangall"
-                        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
-                        src="/avatar0.png"
-                      />
-                    );
-                  },
+                  avatar: (
+                    <Image
+                      alt="Portrait of Willow Rangall"
+                      sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                      src="/avatar0.png"
+                    />
+                  ),
                   name: 'Willow Rangall (Moderator)',
                   href: '/profiles/willow-rangall',
                 },
                 {
                   id: '561285d3-4eed-473c-baba-6b3564f4e6a7',
-                  avatar() {
-                    return (
-                      <Image
-                        alt="Portrait of Suzy Cahan"
-                        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
-                        src="/avatar1.png"
-                      />
-                    );
-                  },
+                  avatar: (
+                    <Image
+                      alt="Portrait of Suzy Cahan"
+                      sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                      src="/avatar1.png"
+                    />
+                  ),
                   name: 'Suzy Cahan',
                   href: '/profiles/suzy-cahan',
                 },
                 {
                   id: '453d9d8a-b1e6-4cac-9fdd-b6c354fa3262',
-                  avatar() {
-                    return (
-                      <Image
-                        alt="Portrait of Sandra Abramovici"
-                        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
-                        src="/avatar2.png"
-                      />
-                    );
-                  },
+                  avatar: (
+                    <Image
+                      alt="Portrait of Sandra Abramovici"
+                      sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                      src="/avatar2.png"
+                    />
+                  ),
                   name: 'Sandra Abramovici',
                   href: '/profiles/sandra-abramovici',
                 },
@@ -372,43 +366,37 @@ storiesOf('Components/EventPreview', module)
               values={[
                 {
                   id: 'a6b4babd-6b11-4b81-8ac0-73cefb040cb7',
-                  avatar() {
-                    return (
-                      <Image
-                        alt="Portrait of Willow Rangall"
-                        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
-                        src="/avatar0.png"
-                      />
-                    );
-                  },
+                  avatar: (
+                    <Image
+                      alt="Portrait of Willow Rangall"
+                      sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                      src="/avatar0.png"
+                    />
+                  ),
                   name: 'Willow Rangall (Moderator)',
                   href: '/profiles/willow-rangall',
                 },
                 {
                   id: '561285d3-4eed-473c-baba-6b3564f4e6a7',
-                  avatar() {
-                    return (
-                      <Image
-                        alt="Portrait of Suzy Cahan"
-                        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
-                        src="/avatar1.png"
-                      />
-                    );
-                  },
+                  avatar: (
+                    <Image
+                      alt="Portrait of Suzy Cahan"
+                      sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                      src="/avatar1.png"
+                    />
+                  ),
                   name: 'Suzy Cahan',
                   href: '/profiles/suzy-cahan',
                 },
                 {
                   id: '453d9d8a-b1e6-4cac-9fdd-b6c354fa3262',
-                  avatar() {
-                    return (
-                      <Image
-                        alt="Portrait of Sandra Abramovici"
-                        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
-                        src="/avatar2.png"
-                      />
-                    );
-                  },
+                  avatar: (
+                    <Image
+                      alt="Portrait of Sandra Abramovici"
+                      sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                      src="/avatar2.png"
+                    />
+                  ),
                   name: 'Sandra Abramovici',
                   href: '/profiles/sandra-abramovici',
                 },

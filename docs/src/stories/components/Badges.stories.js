@@ -8,33 +8,29 @@ const alignments = ['start', 'center', 'end'];
 
 storiesOf('Components/Badges', module)
   .addDecorator(withKnobs)
-  .add('a few badges', () => {
-    return (
-      <Box sx={{ fontFamily: 'body' }}>
-        <Badges
-          values={['Design Engineer', 'Recruiter', 'Teacher', 'Scientist']}
-          color="background"
-          bg={select('bg', ['primary', 'secondary', 'accent'], 'primary')}
-          align={select('align', alignments, 'flex-start')}
-          m={2}
-        />
-      </Box>
-    );
-  })
-  .add('outline', () => {
-    return (
-      <Box sx={{ fontFamily: 'body' }}>
-        <Badges
-          values={['Design Engineer', 'Recruiter', 'Teacher', 'Scientist']}
-          color={select('color', ['primary', 'secondary', 'accent'], 'primary')}
-          bg="background"
-          align={select('align', alignments, 'flex-start')}
-          variant="outline"
-          m={2}
-        />
-      </Box>
-    );
-  })
+  .add('a few badges', () => (
+    <Box sx={{ fontFamily: 'body' }}>
+      <Badges
+        values={['Design Engineer', 'Recruiter', 'Teacher', 'Scientist']}
+        color="background"
+        bg={select('bg', ['primary', 'secondary', 'accent'], 'primary')}
+        align={select('align', alignments, 'flex-start')}
+        m={2}
+      />
+    </Box>
+  ))
+  .add('outline', () => (
+    <Box sx={{ fontFamily: 'body' }}>
+      <Badges
+        values={['Design Engineer', 'Recruiter', 'Teacher', 'Scientist']}
+        color={select('color', ['primary', 'secondary', 'accent'], 'primary')}
+        bg="background"
+        align={select('align', alignments, 'flex-start')}
+        variant="outline"
+        m={2}
+      />
+    </Box>
+  ))
   .add('many badges', () => (
     <Box sx={{ fontFamily: 'body' }}>
       <Badges
