@@ -10,8 +10,15 @@ jobs:
         uses: actions/checkout@v1
 
       - name: Deploy to Zeit Now
-        uses: amondnet/now-deployment@v1
-        with:
-          zeit-token: ${{ secrets.NOW_TOKEN }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          zeit-team-id: team_Gi3q9d0m9gDtYn8A74EbZGnD
+        env:
+          NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
+        run:
+          now --confirm --no-clipboard -t ${NOW_TOKEN} -m commit=${GITHUB_SHA}
+          -m branch=${GITHUB_REF}
+
+      - name: Add pull request comment
+        uses: iam4x/now-deploy-preview-comment@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ZEIT_TOKEN: ${{ secrets.NOW_TOKEN }}
+          ZEIT_TEAMID: team_Gi3q9d0m9gDtYn8A74EbZGnD
