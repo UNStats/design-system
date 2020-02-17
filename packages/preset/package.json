@@ -2,10 +2,20 @@
   "name": "@undataforum/preset",
   "description": "Theme UI preset for the the United Nations World Data Forum website.",
   "version": "0.5.0",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
   "author": "Thilo Maier <maier@un.org>",
   "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "homepage": "https://github.com/UNDataForum/design-system/tree/master/packages/preset",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/undataforum/design-system.git",
+    "directory": "packages/preset"
+  },
+  "keywords": [
+    "react",
+    "theme-ui"
+  ],
   "scripts": {
     "prepare": "rm -rf ./dist && microbundle --no-compress",
     "watch": "microbundle watch --no-compress",
