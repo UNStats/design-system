@@ -3,22 +3,21 @@
   "scripts": {
     "start": "yarn workspace docs run start",
     "prepare": "yarn workspaces run prepare",
-    "lint": "eslint . --ignore-path .gitignore",
-    "format": "pretty-quick",
-    "purge": "rm -rf ./node_modules && yarn workspaces run purge",
+    "lint": "yarn run lint:code && yarn run lint:other",
+    "lint:code": "eslint . --cache --ext .js,.jsx --ignore-path .gitignore",
+    "lint:other": "yarn run prettier --check",
+    "prettier": "prettier \"**/*.{md,css,yaml,yml}\"",
+    "format": "yarn run format:code && yarn run format:other",
+    "format:code": "yarn run lint:code --fix",
+    "format:other": "yarn run prettier --write",
     "release": "yarn changeset publish && git push --follow-tags && yarn run deploy:prod",
     "deploy": "now --confirm --token $NOW_TOKEN",
-    "deploy:prod": "now --confirm --prod --token $NOW_TOKEN"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
+    "deploy:prod": "now --confirm --prod --token $NOW_TOKEN",
+    "purge": "rm -rf ./node_modules && yarn workspaces run purge"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "workspaces": [
@@ -38,7 +37,6 @@
     "lint-staged": "10.0.7",
     "microbundle": "0.11.0",
     "now": "17.0.3",
-    "prettier": "1.19.1",
-    "pretty-quick": "2.0.1"
+    "prettier": "1.19.1"
   }
 }
