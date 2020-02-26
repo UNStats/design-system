@@ -1,10 +1,10 @@
 import React from 'react';
-import { arrayOf, func, string, oneOf } from 'prop-types';
+import { arrayOf, node, string, oneOf } from 'prop-types';
 import { Box, Container, Flex, Heading, Text } from 'theme-ui';
 
 import SmartLink, { linkType } from './smart-link';
 
-const Footer = ({ logo, title, social, links, variant = 'primary' }) => {
+const Footer = ({ logo, title, socialIcons, links, variant = 'primary' }) => {
   return (
     <Box sx={{ variant: `pairings.${variant}` }}>
       <Container sx={{ maxWidth: 'width.wide', px: [2, 3, 4], py: 4 }}>
@@ -16,12 +16,12 @@ const Footer = ({ logo, title, social, links, variant = 'primary' }) => {
           }}
         >
           {logo && (
-            <SmartLink href="/" variant={variant} height="100%" mb={[1, 2]}>
-              {logo()}
+            <SmartLink href="/" variant="inherit" height="100%" mb={[1, 2]}>
+              {logo}
             </SmartLink>
           )}
           {title && (
-            <SmartLink href="/" variant={variant}>
+            <SmartLink href="/" variant="inherit">
               <Heading
                 sx={{
                   whiteSpace: 'nowrap',
@@ -34,7 +34,7 @@ const Footer = ({ logo, title, social, links, variant = 'primary' }) => {
               </Heading>
             </SmartLink>
           )}
-          {social && social(variant)}
+          {socialIcons}
           <Flex sx={{ flexWrap: 'wrap', justifyContent: 'center' }}>
             {links.map(link => (
               <SmartLink
@@ -42,7 +42,7 @@ const Footer = ({ logo, title, social, links, variant = 'primary' }) => {
                 key={link.href}
                 px={[2, 3]}
                 py={[1, 2]}
-                variant={variant}
+                variant="inherit"
               >
                 <Text sx={{ fontFamily: 'body', textAlign: 'center' }}>
                   {link.text}
@@ -57,9 +57,9 @@ const Footer = ({ logo, title, social, links, variant = 'primary' }) => {
 };
 
 Footer.propTypes = {
-  logo: func,
+  logo: node,
   title: string,
-  social: func,
+  socialIcons: node,
   links: arrayOf(linkType).isRequired,
   variant: oneOf(['primary', 'secondary']),
 };

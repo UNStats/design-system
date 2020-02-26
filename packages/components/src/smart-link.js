@@ -7,7 +7,7 @@ const SmartLink = ({
   children,
   href,
   label,
-  variant = 'branded',
+  variant = 'primary',
   ...props
 }) => {
   const internal = /^\/(?!\/)/.test(href);
@@ -32,8 +32,7 @@ const SmartLink = ({
   );
 };
 
-const variants = ['branded', 'primary', 'secondary'];
-
+const variants = ['primary', 'secondary', 'inherit'];
 const variantType = oneOf(variants);
 
 export const linkType = shape({

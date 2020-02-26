@@ -79,19 +79,19 @@ const theme = {
     external: 'a',
   },
 
-  // The following styles are required for links in Header and Footer.
   links: {
-    branded: {
-      variant: 'styles.a',
-      color: pairings.branded.color,
-    },
+    // Default link styling with primary color.
     primary: {
       variant: 'styles.a',
-      color: pairings.primary.color,
+      color: 'primary',
     },
     secondary: {
       variant: 'styles.a',
-      color: pairings.secondary.color,
+      color: 'secondary',
+    },
+    inherit: {
+      variant: 'styles.a',
+      color: 'inherit',
     },
   },
 

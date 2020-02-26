@@ -6,30 +6,30 @@ import { Footer, SocialIcons } from '@undataforum/components';
 
 import DummyLogo from '../../components/dummy-logo';
 
-export const variants = ['primary', 'secondary'];
-
-const social = variant => (
+const logo = (
+  <Box sx={{ height: 'height.medium' }}>
+    <DummyLogo scaleTo="height" />
+  </Box>
+);
+const socialIcons = (
   <SocialIcons
     usernames={{
       twitter: 'UNDataForum',
       github: 'UNDataForum',
       email: 'dataforum@un.org',
     }}
-    variant={variant}
+    variant="inherit"
   />
 );
+export const variants = ['primary', 'secondary'];
 
 storiesOf('Components/Footer', module)
   .addDecorator(withKnobs)
   .add('everything', () => (
     <Footer
-      logo={() => (
-        <Box sx={{ height: 'height.medium' }}>
-          <DummyLogo scaleTo="height" />
-        </Box>
-      )}
+      logo={logo}
       title="Footer Title"
-      social={social}
+      socialIcons={socialIcons}
       links={[
         { text: 'Contact', href: '/contact' },
         { text: 'Copyright', href: '/copyright' },
@@ -41,11 +41,7 @@ storiesOf('Components/Footer', module)
   ))
   .add('logo only', () => (
     <Footer
-      logo={() => (
-        <Box sx={{ height: 'height.medium' }}>
-          <DummyLogo scaleTo="height" />
-        </Box>
-      )}
+      logo={logo}
       links={[
         { text: 'Contact', href: '/contact' },
         { text: 'Copyright', href: '/copyright' },
@@ -71,7 +67,7 @@ storiesOf('Components/Footer', module)
   ))
   .add('social only', () => (
     <Footer
-      social={social}
+      socialIcons={socialIcons}
       links={[
         { text: 'Contact', href: '/contact' },
         { text: 'Copyright', href: '/copyright' },

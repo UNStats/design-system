@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
 import { SocialIcons } from '@undataforum/components';
 
-const variants = ['branded', 'primary', 'secondary'];
+const variants = ['primary', 'secondary', 'inherit'];
 
 storiesOf('Components/SocialIcons', module)
   .addDecorator(withKnobs)
@@ -14,7 +14,7 @@ storiesOf('Components/SocialIcons', module)
         github: 'UNDataForum',
         email: 'dataforum@un.org',
       }}
-      variant={select('variant', variants, 'branded')}
+      variant={select('variant', variants, 'primary')}
     />
   ))
   .add('2 social icons', () => (
@@ -23,7 +23,7 @@ storiesOf('Components/SocialIcons', module)
         twitter: 'UNDataForum',
         email: 'dataforum@un.org',
       }}
-      variant={select('variant', variants, 'branded')}
+      variant={select('variant', variants, 'primary')}
     />
   ))
   .add('1 social icon', () => (
@@ -31,6 +31,6 @@ storiesOf('Components/SocialIcons', module)
       usernames={{
         twitter: 'UNDataForum',
       }}
-      variant={select('variant', variants, 'branded')}
+      variant={select('variant', variants, 'primary')}
     />
   ));
