@@ -21,7 +21,7 @@ const services = [
   { id: 'email', url: username => `mailto:${username}`, Icon: EmailIcon },
 ];
 
-const SocialIcons = ({ usernames, variant = 'branded', ...props }) => (
+const SocialIcons = ({ usernames, variant = 'primary', ...props }) => (
   <Flex
     {...props}
     sx={{ flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}
@@ -46,16 +46,12 @@ const SocialIcons = ({ usernames, variant = 'branded', ...props }) => (
   </Flex>
 );
 
-const variants = ['branded', 'primary', 'secondary'];
+const variants = ['primary', 'secondary', 'inherit'];
 const variantType = oneOf(variants);
 
 SocialIcons.propTypes = {
   usernames: object.isRequired,
   variant: variantType,
-};
-
-SocialIcons.defaultProps = {
-  variant: 'branded',
 };
 
 export default SocialIcons;

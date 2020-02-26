@@ -6,6 +6,7 @@ import { Header } from '@undataforum/components';
 
 import DummyLogo from '../../components/dummy-logo';
 
+const logo = <DummyLogo scaleTo="height" />;
 const variants = ['branded', 'primary'];
 
 storiesOf('Components/Header', module)
@@ -13,7 +14,7 @@ storiesOf('Components/Header', module)
   .add('logo and title', () => (
     <Box bg="orange">
       <Header
-        logo={() => <DummyLogo scaleTo="height" />}
+        logo={logo}
         title="Header Title"
         links={[
           {
@@ -39,7 +40,7 @@ storiesOf('Components/Header', module)
   .add('logo only', () => (
     <Box bg="orange">
       <Header
-        logo={() => <DummyLogo scaleTo="height" />}
+        logo={logo}
         links={[
           {
             href: '/about',
@@ -107,7 +108,7 @@ storiesOf('Components/Header', module)
   .add('no button', () => (
     <Box bg="orange">
       <Header
-        logo={() => <DummyLogo scaleTo="height" />}
+        logo={logo}
         title="Header Title"
         links={[
           {
@@ -130,7 +131,7 @@ storiesOf('Components/Header', module)
   .add('many links with button', () => (
     <Box bg="orange">
       <Header
-        logo={() => <DummyLogo scaleTo="height" />}
+        logo={logo}
         title="Header Title"
         links={[
           { text: 'One', href: '/1' },
@@ -157,7 +158,7 @@ storiesOf('Components/Header', module)
   .add('many links without button', () => (
     <Box bg="orange">
       <Header
-        logo={() => <DummyLogo scaleTo="height" />}
+        logo={logo}
         title="Header Title"
         links={[
           { text: 'One', href: '/1' },
@@ -183,7 +184,7 @@ storiesOf('Components/Header', module)
   .add('adjust height', () => (
     <Box bg="orange">
       <Header
-        logo={() => <DummyLogo scaleTo="height" />}
+        logo={logo}
         links={[
           {
             href: '/about',

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { arrayOf, func, string, oneOf } from 'prop-types';
+import { arrayOf, node, string, oneOf } from 'prop-types';
 import {
   Box,
   Button,
@@ -50,9 +50,9 @@ const Header = ({
               sx={{ height: '100%', flexShrink: 0, mr: [2, 3] }}
               href="/"
               aria-label="Back to homepage"
-              variant={variant}
+              variant="inherit"
             >
-              {logo()}
+              {logo}
             </SmartLink>
           )}
           {title && (
@@ -64,7 +64,7 @@ const Header = ({
               }}
               href="/"
               aria-label="Back to homepage"
-              variant={variant}
+              variant="inherit"
             >
               <Heading
                 sx={{
@@ -131,7 +131,7 @@ const Header = ({
                 }}
                 href="/"
                 label="Back to homepage"
-                variant={variant}
+                variant="inherit"
               >
                 Home
               </SmartLink>
@@ -148,7 +148,7 @@ const Header = ({
                   }}
                   href={href}
                   label={label}
-                  variant={variant}
+                  variant="inherit"
                 >
                   {text}
                 </SmartLink>
@@ -201,7 +201,7 @@ const Header = ({
 };
 
 Header.propTypes = {
-  logo: func,
+  logo: node,
   title: string,
   links: arrayOf(linkType).isRequired,
   button: linkType,
