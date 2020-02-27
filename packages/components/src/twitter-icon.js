@@ -1,20 +1,26 @@
 import React from 'react';
+import { arrayOf, number, oneOfType, string } from 'prop-types';
 
-import { scaleToType } from './types';
+import Icon from './icon';
 
-const TwitterIcon = ({ scaleTo }) => {
-  const height = scaleTo === 'height' ? '100%' : null;
-  const width = scaleTo === 'width' ? '100%' : null;
-  return (
-    <svg viewBox="0 0 24 20" height={height} width={width} fill="currentColor">
-      <desc>Twitter icon</desc>
+const TwitterIcon = ({ size, title, ...props }) => (
+  <Icon {...props} size={size} aria-label="Twitter icon">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="100%"
+      width="100%"
+      fill="currentColor"
+      viewBox="0 0 24 20"
+    >
+      {title && <title>{title}</title>}
       <path d="M23.954 2.56897C23.069 2.95797 22.124 3.22297 21.129 3.34397C22.143 2.73297 22.923 1.76997 23.292 0.620972C22.341 1.17597 21.287 1.57997 20.165 1.80497C19.269 0.845972 17.992 0.245972 16.574 0.245972C13.857 0.245972 11.654 2.44897 11.654 5.16297C11.654 5.55297 11.699 5.92797 11.781 6.28697C7.691 6.09397 4.066 4.12997 1.64 1.16097C1.213 1.88297 0.974 2.72197 0.974 3.63597C0.974 5.34597 1.844 6.84897 3.162 7.73197C2.355 7.70597 1.596 7.48397 0.934 7.11597V7.17697C0.934 9.56197 2.627 11.551 4.88 12.004C4.467 12.115 4.031 12.175 3.584 12.175C3.27 12.175 2.969 12.145 2.668 12.089C3.299 14.042 5.113 15.466 7.272 15.506C5.592 16.825 3.463 17.611 1.17 17.611C0.78 17.611 0.391 17.588 0 17.544C2.189 18.938 4.768 19.753 7.557 19.753C16.611 19.753 21.556 12.257 21.556 5.76697C21.556 5.55797 21.556 5.34697 21.541 5.13697C22.502 4.44797 23.341 3.57697 24.001 2.58897L23.954 2.56897Z" />
     </svg>
-  );
-};
+  </Icon>
+);
 
 TwitterIcon.propTypes = {
-  scaleTo: scaleToType.isRequired,
+  size: oneOfType([number, arrayOf(number)]),
+  title: string,
 };
 
 export default TwitterIcon;

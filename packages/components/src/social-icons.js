@@ -1,24 +1,28 @@
 import React from 'react';
 import { oneOf, object } from 'prop-types';
-import { Box, Flex } from 'theme-ui';
+import { Flex } from 'theme-ui';
 
 import EmailIcon from './email-icon';
 import GitHubIcon from './github-icon';
-import SmartLink from './smart-link';
 import TwitterIcon from './twitter-icon';
+import SmartLink from './smart-link';
 
 const services = [
   {
     id: 'twitter',
     url: username => `https://twitter.com/${username}`,
-    Icon: TwitterIcon,
+    icon: <TwitterIcon size={[24, 32, 48]} title="Follow us on Twitter" />,
   },
   {
     id: 'github',
     url: username => `https://github.com/${username}`,
-    Icon: GitHubIcon,
+    icon: <GitHubIcon size={[24, 32, 48]} title="Follow us on GitHub" />,
   },
-  { id: 'email', url: username => `mailto:${username}`, Icon: EmailIcon },
+  {
+    id: 'email',
+    url: username => `mailto:${username}`,
+    icon: <EmailIcon size={[24, 32, 48]} title="Send us an e-mail" />,
+  },
 ];
 
 const SocialIcons = ({ usernames, variant = 'primary', ...props }) => (
@@ -26,20 +30,13 @@ const SocialIcons = ({ usernames, variant = 'primary', ...props }) => (
     {...props}
     sx={{ flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}
   >
-    {services.map(({ id, url, Icon }) => {
+    {services.map(({ id, url, icon }) => {
       if (!usernames[id]) {
         return null;
       }
       return (
-        <SmartLink
-          href={url(usernames[id])}
-          key={id}
-          variant={variant}
-          m={[2, 3]}
-        >
-          <Box sx={{ width: [32, 48] }}>
-            <Icon scaleTo="width" />
-          </Box>
+        <SmartLink key={id} href={url(usernames[id])} variant={variant} m={2}>
+          {icon}
         </SmartLink>
       );
     })}
