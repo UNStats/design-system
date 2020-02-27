@@ -22,13 +22,25 @@ storiesOf('Components/ProfilePreview', module)
         name: 'Nance MacFadin',
         jobtitle: 'Help Desk Operator',
         organization: 'Schuster-Senger',
+        socialIcons: [
+          {
+            id: 'twitter',
+            username: 'nance-mcfadin',
+            title: 'Follow me on Twitter',
+          },
+          {
+            id: 'github',
+            username: 'nance-mcfadin',
+            title: 'Follow me on GitHub',
+          },
+        ],
         badges: ['Committee Member', 'Keynote Speaker'],
       }}
       align={select('align', alignments, 'center')}
       m={2}
     />
   ))
-  .add('custom colors', () => (
+  .add('custom color', () => (
     <ProfilePreview
       profile={{
         avatar: (
@@ -42,6 +54,18 @@ storiesOf('Components/ProfilePreview', module)
         name: 'Nance MacFadin',
         jobtitle: 'Help Desk Operator',
         organization: 'Schuster-Senger',
+        socialIcons: [
+          {
+            id: 'twitter',
+            username: 'nance-mcfadin',
+            title: 'Follow me on Twitter',
+          },
+          {
+            id: 'github',
+            username: 'nance-mcfadin',
+            title: 'Follow me on GitHub',
+          },
+        ],
         badges: ['Committee Member', 'Keynote Speaker'],
       }}
       align={select('align', alignments, 'center')}

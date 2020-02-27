@@ -32,7 +32,7 @@ const SocialIcons = ({ platforms, size, variant = 'primary', ...props }) => {
       {platforms.map(({ id, username, title }) => {
         const { url, Icon } = lookup[id];
         return (
-          <SmartLink key={id} href={url(username)} variant={variant} m={2}>
+          <SmartLink key={id} href={url(username)} variant={variant} mx={2}>
             <Icon size={size} title={title} />
           </SmartLink>
         );
