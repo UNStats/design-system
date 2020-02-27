@@ -11,17 +11,28 @@ const logo = (
     <DummyLogo scaleTo="height" />
   </Box>
 );
+
 const socialIcons = (
   <SocialIcons
-    usernames={{
-      twitter: 'UNDataForum',
-      github: 'UNDataForum',
-      email: 'dataforum@un.org',
-    }}
+    platforms={[
+      {
+        id: 'twitter',
+        username: 'UNDataForum',
+        title: 'Follow us on Twitter',
+      },
+      { id: 'github', username: 'UNDataForum', title: 'Follow us on GitHub' },
+      {
+        id: 'email',
+        username: 'dataforum@un.org',
+        title: 'Send us an email',
+      },
+    ]}
+    size={[24, 32, 48]}
     variant="inherit"
   />
 );
-export const variants = ['primary', 'secondary'];
+
+const variants = ['primary', 'secondary'];
 
 storiesOf('Components/Footer', module)
   .addDecorator(withKnobs)
