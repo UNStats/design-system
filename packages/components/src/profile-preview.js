@@ -4,6 +4,7 @@ import { Flex, Text } from 'theme-ui';
 
 import { responsiveAlignType, responsiveNumberType } from './types';
 import Badges from './badges';
+import SocialIcons from './social-icons';
 import { normalizeAlign } from './util';
 
 const ProfilePreview = ({
@@ -70,6 +71,13 @@ const ProfilePreview = ({
         {profile.organization}
       </Text>
     )}
+    {profile.socialIcons && (
+      <SocialIcons
+        platforms={profile.socialIcons}
+        size={32}
+        variant="inherit"
+      />
+    )}
     {profile.badges && (
       <Badges
         values={profile.badges}
@@ -87,6 +95,13 @@ export const profileType = shape({
   name: string,
   jobtitle: string,
   organization: string,
+  socialIcons: arrayOf(
+    shape({
+      id: string.isRequired,
+      username: string.isRequired,
+      title: string,
+    }).isRequired
+  ),
   badges: arrayOf(string),
 });
 
