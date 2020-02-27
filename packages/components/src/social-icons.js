@@ -1,5 +1,5 @@
 import React from 'react';
-import { oneOf, object } from 'prop-types';
+import { arrayOf, number, oneOf, oneOfType, shape, string } from 'prop-types';
 import { Flex } from 'theme-ui';
 
 import EmailIcon from './email-icon';
@@ -7,48 +7,51 @@ import GitHubIcon from './github-icon';
 import TwitterIcon from './twitter-icon';
 import SmartLink from './smart-link';
 
-const services = [
-  {
-    id: 'twitter',
+// Supported social media platforms.
+const lookup = {
+  twitter: {
     url: username => `https://twitter.com/${username}`,
-    icon: <TwitterIcon size={[24, 32, 48]} title="Follow us on Twitter" />,
+    Icon: TwitterIcon,
   },
-  {
-    id: 'github',
+  github: {
     url: username => `https://github.com/${username}`,
-    icon: <GitHubIcon size={[24, 32, 48]} title="Follow us on GitHub" />,
+    Icon: GitHubIcon,
   },
-  {
-    id: 'email',
+  email: {
     url: username => `mailto:${username}`,
-    icon: <EmailIcon size={[24, 32, 48]} title="Send us an e-mail" />,
+    Icon: EmailIcon,
   },
-];
+};
 
-const SocialIcons = ({ usernames, variant = 'primary', ...props }) => (
-  <Flex
-    {...props}
-    sx={{ flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}
-  >
-    {services.map(({ id, url, icon }) => {
-      if (!usernames[id]) {
-        return null;
-      }
-      return (
-        <SmartLink key={id} href={url(usernames[id])} variant={variant} m={2}>
-          {icon}
-        </SmartLink>
-      );
-    })}
-  </Flex>
-);
-
-const variants = ['primary', 'secondary', 'inherit'];
-const variantType = oneOf(variants);
+const SocialIcons = ({ platforms, size, variant = 'primary', ...props }) => {
+  return (
+    <Flex
+      {...props}
+      sx={{ flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}
+    >
+      {platforms.map(({ id, username, title }) => {
+        const { url, Icon } = lookup[id];
+        return (
+          <SmartLink key={id} href={url(username)} variant={variant} m={2}>
+            <Icon size={size} title={title} />
+          </SmartLink>
+        );
+      })}
+    </Flex>
+  );
+};
 
 SocialIcons.propTypes = {
-  usernames: object.isRequired,
-  variant: variantType,
+  // Array defines sequence in which social icons are displayed.
+  platforms: arrayOf(
+    shape({
+      id: string.isRequired,
+      username: string.isRequired,
+      title: string.isRequired,
+    })
+  ).isRequired,
+  size: oneOfType([number, arrayOf(number)]),
+  variant: oneOf(['primary', 'secondary', 'inherit']),
 };
 
 export default SocialIcons;

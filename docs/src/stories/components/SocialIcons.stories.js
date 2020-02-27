@@ -9,28 +9,70 @@ storiesOf('Components/SocialIcons', module)
   .addDecorator(withKnobs)
   .add('all social icons', () => (
     <SocialIcons
-      usernames={{
-        twitter: 'UNDataForum',
-        github: 'UNDataForum',
-        email: 'dataforum@un.org',
-      }}
+      platforms={[
+        {
+          id: 'twitter',
+          username: 'UNDataForum',
+          title: 'Follow us on Twitter',
+        },
+        { id: 'github', username: 'UNDataForum', title: 'Follow us on GitHub' },
+        {
+          id: 'email',
+          username: 'dataforum@un.org',
+          title: 'Send us an email',
+        },
+      ]}
+      size={[24, 32, 48]}
+      variant={select('variant', variants, 'primary')}
+    />
+  ))
+  .add('different order', () => (
+    <SocialIcons
+      platforms={[
+        {
+          id: 'email',
+          username: 'dataforum@un.org',
+          title: 'Send us an email',
+        },
+        { id: 'github', username: 'UNDataForum', title: 'Follow us on GitHub' },
+        {
+          id: 'twitter',
+          username: 'UNDataForum',
+          title: 'Follow us on Twitter',
+        },
+      ]}
+      size={[24, 32, 48]}
       variant={select('variant', variants, 'primary')}
     />
   ))
   .add('2 social icons', () => (
     <SocialIcons
-      usernames={{
-        twitter: 'UNDataForum',
-        email: 'dataforum@un.org',
-      }}
+      platforms={[
+        {
+          id: 'twitter',
+          username: 'UNDataForum',
+          title: 'Follow us on Twitter',
+        },
+        {
+          id: 'email',
+          username: 'dataforum@un.org',
+          title: 'Send us an email',
+        },
+      ]}
+      size={[24, 32, 48]}
       variant={select('variant', variants, 'primary')}
     />
   ))
   .add('1 social icon', () => (
     <SocialIcons
-      usernames={{
-        twitter: 'UNDataForum',
-      }}
+      platforms={[
+        {
+          id: 'twitter',
+          username: 'UNDataForum',
+          title: 'Follow us on Twitter',
+        },
+      ]}
+      size={[24, 32, 48]}
       variant={select('variant', variants, 'primary')}
     />
   ));
