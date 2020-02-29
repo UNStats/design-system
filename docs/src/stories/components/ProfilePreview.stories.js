@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
-import { Image } from 'theme-ui';
+import { Box, Image } from 'theme-ui';
 import { ProfilePreview } from '@undataforum/components';
 
 const alignments = ['start', 'center', 'end'];
@@ -38,43 +38,6 @@ storiesOf('Components/ProfilePreview', module)
       }}
       align={select('align', alignments, 'center')}
       m={2}
-    />
-  ))
-  .add('custom color', () => (
-    <ProfilePreview
-      profile={{
-        avatar: (
-          <Image
-            alt="Nance MacFadin"
-            sx={{ borderRadius: 'circle', height: 128, width: 128 }}
-            src="/avatar0.png"
-          />
-        ),
-        honorific: 'His Excellency',
-        name: 'Nance MacFadin',
-        jobtitle: 'Help Desk Operator',
-        organization: 'Schuster-Senger',
-        socialIcons: [
-          {
-            id: 'twitter',
-            username: 'nance-mcfadin',
-            title: 'Follow me on Twitter',
-          },
-          {
-            id: 'github',
-            username: 'nance-mcfadin',
-            title: 'Follow me on GitHub',
-          },
-        ],
-        badges: ['Committee Member', 'Keynote Speaker'],
-      }}
-      align={select('align', alignments, 'center')}
-      colors={{
-        text: 'background',
-        background: 'secondary',
-        accent: 'background',
-      }}
-      p={2}
     />
   ))
   .add('no jobtitle', () => (
@@ -229,4 +192,39 @@ storiesOf('Components/ProfilePreview', module)
       align={select('align', alignments, 'center')}
       m={2}
     />
+  ))
+  .add('render on custom background color', () => (
+    <Box sx={{ color: 'background', bg: 'primary' }}>
+      <ProfilePreview
+        align={select('align', alignments, 'center')}
+        profile={{
+          avatar: (
+            <Image
+              alt="Nance MacFadin"
+              sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+              src="/avatar0.png"
+            />
+          ),
+          honorific: 'His Excellency',
+          name: 'Nance MacFadin',
+          jobtitle: 'Help Desk Operator',
+          organization: 'Schuster-Senger',
+          socialIcons: [
+            {
+              id: 'twitter',
+              username: 'nance-mcfadin',
+              title: 'Follow me on Twitter',
+            },
+            {
+              id: 'github',
+              username: 'nance-mcfadin',
+              title: 'Follow me on GitHub',
+            },
+          ],
+          badges: ['Committee Member', 'Keynote Speaker'],
+        }}
+        variant="promobox"
+        p={2}
+      />
+    </Box>
   ));

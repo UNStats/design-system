@@ -7,6 +7,13 @@ import merge from 'deepmerge';
 import { NewTabLink } from '@undataforum/components';
 
 const theme = merge(preset, {
+  // Add custom variant for stories that use Badges component.
+  badges: {
+    promobox: {
+      color: 'primary',
+      bg: 'background',
+    },
+  },
   link: {
     external: NewTabLink,
   },
