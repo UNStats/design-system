@@ -6,12 +6,7 @@ import { responsiveAlignType } from './types';
 import ProfilePreview from './profile-preview';
 import SmartLink from './smart-link';
 
-const Avatars = ({
-  values,
-  colors = { text: 'text', background: 'background', accent: 'primary' },
-  align = 'start',
-  ...props
-}) => (
+const Avatars = ({ values, align = 'start', ...props }) => (
   <Grid
     {...props}
     gap={2}
@@ -25,16 +20,12 @@ const Avatars = ({
   >
     {values.map(({ id, avatar, name, href }) => (
       <SmartLink
+        key={id}
         css={{ ':hover': { textDecoration: 'none' } }}
         href={href}
-        key={id}
+        variant="inherit"
       >
-        <ProfilePreview
-          profile={{ avatar, name }}
-          fontSize={1}
-          align={align}
-          colors={colors}
-        />
+        <ProfilePreview profile={{ avatar, name }} fontSize={1} align={align} />
       </SmartLink>
     ))}
   </Grid>
@@ -49,11 +40,6 @@ Avatars.propTypes = {
       href: string.isRequired,
     })
   ).isRequired,
-  colors: shape({
-    text: string.isRequired,
-    background: string.isRequired,
-    accent: string.isRequired,
-  }),
   align: responsiveAlignType,
 };
 

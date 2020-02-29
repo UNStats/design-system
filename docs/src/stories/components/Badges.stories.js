@@ -5,6 +5,7 @@ import { Box } from 'theme-ui';
 import { Badges } from '@undataforum/components';
 
 const alignments = ['start', 'center', 'end'];
+const variants = ['primary', 'secondary'];
 
 storiesOf('Components/Badges', module)
   .addDecorator(withKnobs)
@@ -12,21 +13,8 @@ storiesOf('Components/Badges', module)
     <Box sx={{ fontFamily: 'body' }}>
       <Badges
         values={['Design Engineer', 'Recruiter', 'Teacher', 'Scientist']}
-        color="background"
-        bg={select('bg', ['primary', 'secondary', 'accent'], 'primary')}
         align={select('align', alignments, 'flex-start')}
-        m={2}
-      />
-    </Box>
-  ))
-  .add('outline', () => (
-    <Box sx={{ fontFamily: 'body' }}>
-      <Badges
-        values={['Design Engineer', 'Recruiter', 'Teacher', 'Scientist']}
-        color={select('color', ['primary', 'secondary', 'accent'], 'primary')}
-        bg="background"
-        align={select('align', alignments, 'flex-start')}
-        variant="outline"
+        variant={select('variant', variants, 'primary')}
         m={2}
       />
     </Box>
@@ -52,9 +40,8 @@ storiesOf('Components/Badges', module)
           'Systems Administrator',
           'Assistant Manager',
         ]}
-        color="background"
-        bg={select('bg', ['primary', 'secondary', 'accent'], 'primary')}
         align={select('align', alignments, 'flex-start')}
+        variant={select('variant', variants, 'primary')}
         m={2}
       />
     </Box>

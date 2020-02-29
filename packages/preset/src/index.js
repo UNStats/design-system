@@ -46,6 +46,17 @@ const theme = {
     circle: 99999,
   },
 
+  badges: {
+    primary: {
+      color: 'background',
+      bg: 'primary',
+    },
+    secondary: {
+      color: 'background',
+      bg: 'secondary',
+    },
+  },
+
   buttons: {
     primary: {
       fontSize: 2,
@@ -64,12 +75,6 @@ const theme = {
       variant: 'buttons.primary',
       color: 'background',
       bg: 'secondary',
-    },
-  },
-
-  badges: {
-    outline: {
-      boxShadow: 'inset 0 0 0 1px',
     },
   },
 

@@ -7,11 +7,13 @@ import Badges from './badges';
 import SocialIcons from './social-icons';
 import { normalizeAlign } from './util';
 
+// This component adapts to its parent's colors except for the badges.
+// Badges need a variant to display properly in all circumstances.
 const ProfilePreview = ({
-  profile,
-  fontSize = [3, 4],
-  colors = { text: 'text', background: 'background', accent: 'primary' },
   align = 'center',
+  fontSize = [3, 4],
+  profile,
+  variant = 'primary',
   ...props
 }) => (
   <Flex
@@ -20,8 +22,6 @@ const ProfilePreview = ({
       flexDirection: 'column',
       alignItems: normalizeAlign(align),
       fontFamily: 'body',
-      color: colors.text,
-      bg: colors.background,
     }}
   >
     {profile.avatar}
@@ -79,12 +79,7 @@ const ProfilePreview = ({
       />
     )}
     {profile.badges && (
-      <Badges
-        values={profile.badges}
-        color={colors.background}
-        bg={colors.accent}
-        mt={2}
-      />
+      <Badges values={profile.badges} variant={variant} mt={2} />
     )}
   </Flex>
 );
@@ -106,14 +101,10 @@ export const profileType = shape({
 });
 
 ProfilePreview.propTypes = {
-  profile: profileType.isRequired,
-  colors: shape({
-    text: string.isRequired,
-    background: string.isRequired,
-    accent: string.isRequired,
-  }),
   align: responsiveAlignType,
   fontSize: responsiveNumberType,
+  profile: profileType.isRequired,
+  variant: string,
 };
 
 export default ProfilePreview;
