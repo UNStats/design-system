@@ -14,6 +14,19 @@ const theme = merge(preset, {
       bg: 'background',
     },
   },
+  buttons: {
+    promobox: {
+      variant: 'buttons.default',
+      color: 'primary',
+      bg: 'background',
+    },
+    outline: {
+      promobox: {
+        variant: 'buttons.outline.default',
+        color: 'background',
+      },
+    },
+  },
   link: {
     external: NewTabLink,
   },

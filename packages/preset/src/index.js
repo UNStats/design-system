@@ -58,23 +58,36 @@ const theme = {
   },
 
   buttons: {
-    primary: {
+    default: {
       fontSize: 2,
       fontWeight: 'bold',
-      color: 'background',
-      bg: 'primary',
       borderRadius: 'default',
     },
-    outline: {
-      variant: 'buttons.primary',
-      color: 'primary',
-      bg: 'transparent',
-      boxShadow: '0 0 0 2px inset',
+    primary: {
+      variant: 'buttons.default',
+      color: 'background',
+      bg: 'primary',
     },
     secondary: {
-      variant: 'buttons.primary',
+      variant: 'buttons.default',
       color: 'background',
       bg: 'secondary',
+    },
+    outline: {
+      default: {
+        variant: 'buttons.default',
+        boxShadow: '0 0 0 2px inset',
+        // Override default `bg: 'primary'` from Theme UI's Button.
+        bg: 'inherit',
+      },
+      primary: {
+        variant: 'buttons.outline.default',
+        color: 'primary',
+      },
+      secondary: {
+        variant: 'buttons.outline.default',
+        color: 'secondary',
+      },
     },
   },
 
