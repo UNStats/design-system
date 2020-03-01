@@ -1,56 +1,28 @@
 import React from 'react';
 import { node, shape, string } from 'prop-types';
-import { Button, Flex, Heading, Text } from 'theme-ui';
+import { Button, Flex, Text } from 'theme-ui';
 
-import { responsiveNumberType } from './types';
 import SmartLink from './smart-link';
 
-const PostPreview = ({
-  post,
-  fontSize = [3, 4],
-  colors = { text: 'text', background: 'background', accent: 'primary' },
-  ...props
-}) => {
+// How margins work in this component:
+// What the title prop renders (heading) may have no top margin, only bottom margin.
+// What the description prop renders (paragraph) may have no top or bottom margin.
+const PostPreview = ({ post, variant = 'primary', ...props }) => {
   const mb = post.description ? 3 : 0;
-  // Use flexDirection prop instead of sx prop to ensure it cannot be overridden.
-  // Set m={0} in Heading due to https://github.com/styled-system/styled-system/issues/644.
   return (
     <Flex
       {...props}
       sx={{
         flexDirection: 'column',
         fontFamily: 'body',
-        color: colors.text,
-        bg: colors.background,
       }}
     >
-      <Heading
-        as="h1"
-        sx={{
-          fontSize,
-          lineHeight: 'heading',
-          m: 0,
-          mt: 0,
-          mb: 3,
-        }}
-      >
-        {post.title}
-      </Heading>
-      {post.authors}
+      {post.title}
+      {post.authors && post.authors}
       <Text as="time" sx={{ display: 'block', mb }}>
         {post.date}
       </Text>
-      {post.description && (
-        <Text
-          as="p"
-          sx={{
-            lineHeight: 'body',
-            my: 0,
-          }}
-        >
-          {post.description}
-        </Text>
-      )}
+      {post.description && post.description}
       {post.href && (
         <Flex
           sx={{
@@ -64,12 +36,10 @@ const PostPreview = ({
             sx={{
               alignSelf: ['stretch', 'flex-start'],
               whiteSpace: 'nowrap',
-              color: colors.background,
-              bg: colors.accent,
               mt: 3,
             }}
             href={post.href}
-            variant="primary"
+            variant={variant}
           >
             Read on
           </Button>
@@ -80,21 +50,16 @@ const PostPreview = ({
 };
 
 export const postType = shape({
-  title: string.isRequired,
+  title: node.isRequired,
   date: string.isRequired,
-  authors: node.isRequired,
-  description: string,
+  authors: node,
+  description: node,
   href: string,
 });
 
 PostPreview.propTypes = {
   post: postType.isRequired,
-  fontSize: responsiveNumberType,
-  colors: shape({
-    text: string.isRequired,
-    background: string.isRequired,
-    accent: string.isRequired,
-  }),
+  variant: string,
 };
 
 export default PostPreview;

@@ -1,13 +1,17 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Container, Grid, Image } from 'theme-ui';
+import { Box, Container, Grid, Heading, Image, Text } from 'theme-ui';
 import { Avatars, Names, PostPreview } from '@undataforum/components';
 
 storiesOf('Components/PostPreview', module)
   .add('render authors with Names', () => (
     <PostPreview
       post={{
-        title: 'Vestibulum proin eu mi nulla ac enim in tempor turpis',
+        title: (
+          <Heading as="h1" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+            Vestibulum proin eu mi nulla ac enim in tempor turpis
+          </Heading>
+        ),
         date: 'May 31, 2018',
         authors: (
           <Names
@@ -26,8 +30,16 @@ storiesOf('Components/PostPreview', module)
             mb={3}
           />
         ),
-        description:
-          'Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.',
+        description: (
+          <Text as="p" sx={{ lineHeight: 'body', textAlign: 'start' }}>
+            Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed
+            interdum venenatis, turpis enim blandit mi, in porttitor pede justo
+            eu massa. Donec dapibus. Duis at velit eu est congue elementum. In
+            hac habitasse platea dictumst. Morbi vestibulum, velit id pretium
+            iaculis, diam erat fermentum justo, nec condimentum neque sapien
+            placerat ante. Nulla justo.
+          </Text>
+        ),
         href: '/blog/vestibulum-proin-eu',
       }}
       m={2}
@@ -36,7 +48,11 @@ storiesOf('Components/PostPreview', module)
   .add('render authors with Avatars', () => (
     <PostPreview
       post={{
-        title: 'Vestibulum proin eu mi nulla ac enim in tempor turpis',
+        title: (
+          <Heading as="h1" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+            Vestibulum proin eu mi nulla ac enim in tempor turpis
+          </Heading>
+        ),
         date: 'May 31, 2018',
         authors: (
           <Avatars
@@ -169,32 +185,27 @@ storiesOf('Components/PostPreview', module)
       m={2}
     />
   ))
-  .add('large font size', () => (
+  .add('no authors', () => (
     <PostPreview
       post={{
-        title: 'Vestibulum proin eu mi nulla ac enim in tempor turpis',
+        title: (
+          <Heading as="h1" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+            Vestibulum proin eu mi nulla ac enim in tempor turpis
+          </Heading>
+        ),
         date: 'May 31, 2018',
-        authors: (
-          <Names
-            values={[
-              'Willow Rangall',
-              'Suzy Cahan',
-              'Sandra Abramovici',
-              'Jan McKea',
-              'Ola Brunger',
-              'Ivette Rowlinson',
-              'Madeleine Stredwick',
-              'Lin Billson',
-              'Alfie Piborn',
-              'Garvy Bartlomiej',
-            ]}
-            variant="bold"
-            mb={3}
-          />
+        description: (
+          <Text as="p" sx={{ lineHeight: 'body', textAlign: 'start' }}>
+            Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed
+            interdum venenatis, turpis enim blandit mi, in porttitor pede justo
+            eu massa. Donec dapibus. Duis at velit eu est congue elementum. In
+            hac habitasse platea dictumst. Morbi vestibulum, velit id pretium
+            iaculis, diam erat fermentum justo, nec condimentum neque sapien
+            placerat ante. Nulla justo.
+          </Text>
         ),
         href: '/blog/vestibulum-proin-eu',
       }}
-      fontSize={[5, 6]}
       m={2}
     />
   ))
@@ -202,7 +213,11 @@ storiesOf('Components/PostPreview', module)
     const posts = [
       {
         id: 'cbdb6147-cab8-5511-a325-28d4dee7f914',
-        title: 'Et nulla in incididunt cupidatat pariatur sit sint proident',
+        title: (
+          <Heading as="h2" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+            Et nulla in incididunt cupidatat pariatur sit sint proident
+          </Heading>
+        ),
         date: 'Dec 9, 2019',
         authors: (
           <Names
@@ -210,36 +225,79 @@ storiesOf('Components/PostPreview', module)
             mb={3}
           />
         ),
-        description:
-          'Deserunt id duis ea aliqua amet est veniam anim. Deserunt incididunt aute in ut id occaecat elit irure consectetur dolor in labore minim. Ad nulla fugiat ipsum irure commodo do anim duis mollit eiusmod. Dolore nulla ea aliquip esse minim sit amet reprehenderit deserunt proident culpa amet.',
+        description: (
+          <Text as="p" sx={{ lineHeight: 'body', textAlign: 'start' }}>
+            Deserunt id duis ea aliqua amet est veniam anim. Deserunt incididunt
+            aute in ut id occaecat elit irure consectetur dolor in labore minim.
+            Ad nulla fugiat ipsum irure commodo do anim duis mollit eiusmod.
+            Dolore nulla ea aliquip esse minim sit amet reprehenderit deserunt
+            proident culpa amet.
+          </Text>
+        ),
         href: '/blog/et-nulla-in-incididunt',
       },
       {
         id: 'a1ca7aa8-f666-5f7b-9dd2-bac6f34ac744',
-        title: 'Dolore in eiusmod culpa duis ut aliquip et ea',
+        title: (
+          <Heading as="h2" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+            Dolore in eiusmod culpa duis ut aliquip et ea
+          </Heading>
+        ),
         date: 'Dec 8, 2019',
         authors: <Names values={['Bertha Johnson']} mb={3} />,
-        description:
-          'Reprehenderit in aliqua sit elit mollit Lorem reprehenderit Lorem esse. Enim occaecat cupidatat do exercitation qui quis ipsum Lorem laborum deserunt ullamco proident ad. Aliqua aliquip exercitation Lorem veniam id. Anim occaecat excepteur tempor ullamco. Ad duis voluptate eu incididunt ea pariatur pariatur id ullamco do ex. Quis qui quis enim anim labore. Voluptate voluptate quis proident pariatur occaecat eiusmod consequat amet minim elit tempor esse cillum reprehenderit.',
+        description: (
+          <Text as="p" sx={{ lineHeight: 'body', textAlign: 'start' }}>
+            Reprehenderit in aliqua sit elit mollit Lorem reprehenderit Lorem
+            esse. Enim occaecat cupidatat do exercitation qui quis ipsum Lorem
+            laborum deserunt ullamco proident ad. Aliqua aliquip exercitation
+            Lorem veniam id. Anim occaecat excepteur tempor ullamco. Ad duis
+            voluptate eu incididunt ea pariatur pariatur id ullamco do ex. Quis
+            qui quis enim anim labore. Voluptate voluptate quis proident
+            pariatur occaecat eiusmod consequat amet minim elit tempor esse
+            cillum reprehenderit.
+          </Text>
+        ),
         href: '/blog/reprehenderit-in-aliqua-sit-elit',
       },
       {
         id: '057a4af9-1e4c-5cfa-b633-237833b24ce0',
-        title:
-          'Irure aliquip ipsum eu qui cupidatat sunt cillum eu velit dolor',
+        title: (
+          <Heading as="h2" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+            Irure aliquip ipsum eu qui cupidatat sunt cillum eu velit dolor
+          </Heading>
+        ),
         date: 'Dec 7, 2019',
         authors: <Names values={['Lucy White']} mb={3} />,
-        description:
-          'Commodo sint id cillum nostrud. Excepteur aliqua incididunt anim elit esse. Fugiat sint consectetur dolore culpa officia laboris officia labore ad id esse in. Ullamco excepteur tempor veniam dolore sint.',
+        description: (
+          <Text as="p" sx={{ lineHeight: 'body', textAlign: 'start' }}>
+            Commodo sint id cillum nostrud. Excepteur aliqua incididunt anim
+            elit esse. Fugiat sint consectetur dolore culpa officia laboris
+            officia labore ad id esse in. Ullamco excepteur tempor veniam dolore
+            sint.
+          </Text>
+        ),
         href: '/blog/irure-aliquip-ipsum',
       },
       {
         id: '740f7b45-4a4a-5ba7-8b33-ce9946775a82',
-        title: 'Eu sit excepteur non cupidatat',
+        title: (
+          <Heading as="h2" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+            Eu sit excepteur non cupidatat
+          </Heading>
+        ),
         date: 'Dec 6, 2019',
         authors: <Names values={['Jim Russell', 'Ida Hall']} mb={3} />,
-        description:
-          'Exercitation id elit enim dolor veniam nostrud qui veniam. Cillum commodo proident aliqua magna excepteur aliqua qui ea enim duis irure labore. Enim dolore proident ipsum incididunt amet et elit nisi reprehenderit dolor anim consequat quis. Minim irure adipisicing ipsum pariatur duis. Culpa culpa tempor dolore nulla velit eu sit sunt minim esse qui deserunt elit quis. Ex Lorem in labore qui ea.',
+        description: (
+          <Text as="p" sx={{ lineHeight: 'body', textAlign: 'start' }}>
+            Exercitation id elit enim dolor veniam nostrud qui veniam. Cillum
+            commodo proident aliqua magna excepteur aliqua qui ea enim duis
+            irure labore. Enim dolore proident ipsum incididunt amet et elit
+            nisi reprehenderit dolor anim consequat quis. Minim irure
+            adipisicing ipsum pariatur duis. Culpa culpa tempor dolore nulla
+            velit eu sit sunt minim esse qui deserunt elit quis. Ex Lorem in
+            labore qui ea.
+          </Text>
+        ),
         href: '/blog/eu-sit-excepteur-non-cupidatat',
       },
     ];
@@ -267,37 +325,47 @@ storiesOf('Components/PostPreview', module)
       </Container>
     );
   })
-  .add('custom colors', () => (
-    <PostPreview
-      post={{
-        title: 'Vestibulum proin eu mi nulla ac enim in tempor turpis',
-        date: 'May 31, 2018',
-        authors: (
-          <Names
-            values={[
-              'Willow Rangall',
-              'Suzy Cahan',
-              'Sandra Abramovici',
-              'Jan McKea',
-              'Ola Brunger',
-              'Ivette Rowlinson',
-              'Madeleine Stredwick',
-              'Lin Billson',
-              'Alfie Piborn',
-              'Garvy Bartlomiej',
-            ]}
-            mb={3}
-          />
-        ),
-        description:
-          'Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.',
-        href: '/blog/vestibulum-proin-eu',
-      }}
-      colors={{
-        text: 'background',
-        background: 'secondary',
-        accent: 'background',
-      }}
-      p={2}
-    />
+  .add('render on custom background color', () => (
+    <Box sx={{ color: 'background', bg: 'primary' }}>
+      <PostPreview
+        post={{
+          title: (
+            <Heading as="h1" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+              Vestibulum proin eu mi nulla ac enim in tempor turpis{' '}
+            </Heading>
+          ),
+          date: 'May 31, 2018',
+          authors: (
+            <Names
+              values={[
+                'Willow Rangall',
+                'Suzy Cahan',
+                'Sandra Abramovici',
+                'Jan McKea',
+                'Ola Brunger',
+                'Ivette Rowlinson',
+                'Madeleine Stredwick',
+                'Lin Billson',
+                'Alfie Piborn',
+                'Garvy Bartlomiej',
+              ]}
+              mb={3}
+            />
+          ),
+          description: (
+            <Text as="p" sx={{ lineHeight: 'body', textAlign: 'start' }}>
+              Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed
+              interdum venenatis, turpis enim blandit mi, in porttitor pede
+              justo eu massa. Donec dapibus. Duis at velit eu est congue
+              elementum. In hac habitasse platea dictumst. Morbi vestibulum,
+              velit id pretium iaculis, diam erat fermentum justo, nec
+              condimentum neque sapien placerat ante. Nulla justo.
+            </Text>
+          ),
+          href: '/blog/vestibulum-proin-eu',
+        }}
+        variant="promobox"
+        p={2}
+      />
+    </Box>
   ));
