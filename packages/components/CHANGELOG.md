@@ -1,5 +1,23 @@
 # Change Log
 
+## 0.72.0
+
+### Minor Changes
+
+- [`03f9c5d`](https://github.com/UNDataForum/design-system/commit/03f9c5d3f991642ee81812fa9d1985a735237a6c) [#424](https://github.com/UNDataForum/design-system/pull/424) Thanks [@454de6e](https://github.com/454de6e)! - Use composition instead of render props in EventPreview
+
+* [`b1435ed`](https://github.com/UNDataForum/design-system/commit/b1435edbc82a83adc1de71daf1981fd2c5160988) [#425](https://github.com/UNDataForum/design-system/pull/425) Thanks [@454de6e](https://github.com/454de6e)! - Use composition to render title and description in PostPreview
+
+- [`50529ee`](https://github.com/UNDataForum/design-system/commit/50529eee7c74850d2a9513184db18ae2a1977798) [#416](https://github.com/UNDataForum/design-system/pull/416) Thanks [@454de6e](https://github.com/454de6e)! - Refactor icons with generic Icon component
+
+* [`281da13`](https://github.com/UNDataForum/design-system/commit/281da1389467080653e5945bbd9fd8798af982e3) [#424](https://github.com/UNDataForum/design-system/pull/424) Thanks [@454de6e](https://github.com/454de6e)! - Change Badges API
+
+- [`b1435ed`](https://github.com/UNDataForum/design-system/commit/b1435edbc82a83adc1de71daf1981fd2c5160988) [#425](https://github.com/UNDataForum/design-system/pull/425) Thanks [@454de6e](https://github.com/454de6e)! - Make authors optional in PostPreview
+
+* [`ca46bd4`](https://github.com/UNDataForum/design-system/commit/ca46bd458e164147adcba8fa8fb7e155faa63d0d) [#417](https://github.com/UNDataForum/design-system/pull/417) Thanks [@454de6e](https://github.com/454de6e)! - Add support for social icons in ProfilePreview
+
+- [`5ea5eda`](https://github.com/UNDataForum/design-system/commit/5ea5edaaac6e613c5a31f86e40ff3e65ddf16624) [#415](https://github.com/UNDataForum/design-system/pull/415) Thanks [@454de6e](https://github.com/454de6e)! - Change SmartLink variants
+
 ## 0.71.0
 
 ### Minor Changes
