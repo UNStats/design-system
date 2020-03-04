@@ -16,10 +16,8 @@ storiesOf('Components/EventPreview', module)
         date: 'October 14, 1983, 1:30 PM EDT',
         duration: '60 minutes',
         speakers: <Names values={['Willow Rangall', 'Suzy Cahan']} mb={3} />,
-        links: {
-          page: '/events/vestibulum-proin-eu',
-          registration: '/register',
-        },
+        href: '/events/vestibulum-proin-eu',
+        registrationLink: '/register',
       }}
       m={2}
     />
@@ -89,9 +87,7 @@ storiesOf('Components/EventPreview', module)
             placerat ante. Nulla justo.
           </Text>
         ),
-        links: {
-          registration: '/register',
-        },
+        registrationLink: '/register',
       }}
       m={2}
     />
@@ -107,10 +103,8 @@ storiesOf('Components/EventPreview', module)
         ),
         date: 'October 14, 1983, 1:30 PM EDT',
         duration: '60 minutes',
-        links: {
-          page: '/events/vestibulum-proin-eu',
-          registration: '/register',
-        },
+        href: '/events/vestibulum-proin-eu',
+        registrationLink: '/register',
       }}
       m={2}
     />
@@ -145,10 +139,8 @@ storiesOf('Components/EventPreview', module)
             adipisicing elit.
           </Text>
         ),
-        links: {
-          page: '/events/ut-aut-reiciendis',
-          registration: '/register',
-        },
+        href: '/events/ut-aut-reiciendis',
+        registrationLink: '/register',
       },
       {
         id: 'c539b355-4729-4d8f-88eb-ee955e1ae832',
@@ -175,9 +167,7 @@ storiesOf('Components/EventPreview', module)
             ipsa quae ab illo.
           </Text>
         ),
-        links: {
-          page: '/events/do-eiusmod-tempor',
-        },
+        href: '/events/do-eiusmod-tempor',
       },
       {
         id: '60b7bd4e-b6d1-4f49-8f0a-4aaff9e55015',
@@ -199,9 +189,7 @@ storiesOf('Components/EventPreview', module)
             doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.
           </Text>
         ),
-        links: {
-          page: '/events/et-harum-quidem',
-        },
+        href: '/events/et-harum-quidem',
       },
       {
         id: 'e87d27fd-53e5-438a-93c0-32ea28e91f1a',
@@ -230,9 +218,7 @@ storiesOf('Components/EventPreview', module)
             iure reprehenderit qui in ea voluptate velit esse quam.
           </Text>
         ),
-        links: {
-          page: '/events/itaque-earum-rerum',
-        },
+        href: '/events/itaque-earum-rerum',
       },
     ];
     return (
@@ -272,10 +258,8 @@ storiesOf('Components/EventPreview', module)
           date: 'October 14, 1983, 1:30 PM EDT',
           duration: '60 minutes',
           speakers: <Names values={['Willow Rangall', 'Suzy Cahan']} mb={3} />,
-          links: {
-            page: '/events/vestibulum-proin-eu',
-            registration: '/register',
-          },
+          href: '/events/vestibulum-proin-eu',
+          registrationLink: '/register',
         }}
         variant="promobox"
         p={2}
