@@ -29,13 +29,13 @@ const EventPreview = ({ event, variant = 'primary', ...props }) => (
       sx={{
         display: 'block',
         textAlign: 'start',
-        mb: event.description || event.links ? 3 : 0,
+        mb: event.description || event.href || event.registrationLink ? 3 : 0,
       }}
     >
       {`${event.date} (${event.duration})`}
     </Text>
     {event.description && event.description}
-    {event.links && (
+    {(event.href || event.registrationLink) && (
       <Flex
         sx={{
           flexGrow: 1,
@@ -44,23 +44,23 @@ const EventPreview = ({ event, variant = 'primary', ...props }) => (
           alignItems: 'flex-end',
         }}
       >
-        {event.links.page && (
+        {event.href && (
           <Button
             as={SmartLink}
             sx={{
               // Right margin only if there is a registration button.
-              mr: event.links.registration ? [2, 3] : 0,
+              mr: event.registrationLink ? [2, 3] : 0,
             }}
-            href={event.links.page}
+            href={event.href}
             variant={variant}
           >
             Details
           </Button>
         )}
-        {event.links.registration && (
+        {event.registrationLink && (
           <Button
             as={SmartLink}
-            href={event.links.registration}
+            href={event.registrationLink}
             variant={`buttons.outline.${variant}`}
           >
             Register
@@ -78,10 +78,8 @@ export const eventType = shape({
   duration: string.isRequired,
   speakers: node,
   description: node,
-  links: shape({
-    page: string,
-    registration: string,
-  }),
+  href: string,
+  registrationLink: string,
 });
 
 EventPreview.propTypes = {
