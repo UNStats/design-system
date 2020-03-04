@@ -18,7 +18,7 @@ const EventPreview = ({ event, variant = 'primary', ...props }) => (
     }}
   >
     {event.tag && (
-      <Badges values={[event.tag]} variant={variant}>
+      <Badges values={[event.tag]} variant={variant} mb={1}>
         {event.tag}
       </Badges>
     )}

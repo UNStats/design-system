@@ -4,6 +4,8 @@ import { withKnobs, select } from '@storybook/addon-knobs';
 import { Box, Image } from 'theme-ui';
 import { Avatars } from '@undataforum/components';
 
+// Variables defined outside stories are not displayed in story source.
+// This one is for knobs select.
 const alignments = ['start', 'center', 'end'];
 
 storiesOf('Components/Avatars', module)

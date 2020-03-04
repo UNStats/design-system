@@ -22,8 +22,9 @@ storiesOf('Components/SocialIcons', module)
           title: 'Send us an email',
         },
       ]}
-      size={[24, 32, 48]}
+      size={48}
       variant={select('variant', variants, 'primary')}
+      m={2}
     />
   ))
   .add('different order', () => (
@@ -41,8 +42,9 @@ storiesOf('Components/SocialIcons', module)
           title: 'Follow us on Twitter',
         },
       ]}
-      size={[24, 32, 48]}
+      size={48}
       variant={select('variant', variants, 'primary')}
+      m={2}
     />
   ))
   .add('2 social icons', () => (
@@ -59,8 +61,9 @@ storiesOf('Components/SocialIcons', module)
           title: 'Send us an email',
         },
       ]}
-      size={[24, 32, 48]}
+      size={48}
       variant={select('variant', variants, 'primary')}
+      m={2}
     />
   ))
   .add('1 social icon', () => (
@@ -72,7 +75,8 @@ storiesOf('Components/SocialIcons', module)
           title: 'Follow us on Twitter',
         },
       ]}
-      size={[24, 32, 48]}
+      size={48}
       variant={select('variant', variants, 'primary')}
+      m={2}
     />
   ));

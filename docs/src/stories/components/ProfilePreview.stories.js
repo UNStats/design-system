@@ -55,11 +55,6 @@ storiesOf('Components/ProfilePreview', module)
         badges: ['Committee Member', 'Keynote Speaker'],
       }}
       align={select('align', alignments, 'center')}
-      colors={{
-        text: 'text',
-        background: 'background',
-        accent: 'secondary',
-      }}
       m={2}
     />
   ))
@@ -78,11 +73,6 @@ storiesOf('Components/ProfilePreview', module)
         badges: ['Committee Member', 'Keynote Speaker'],
       }}
       align={select('align', alignments, 'center')}
-      colors={{
-        text: 'text',
-        background: 'background',
-        accent: 'accent',
-      }}
       m={2}
     />
   ))

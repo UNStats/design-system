@@ -3,6 +3,8 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
 import { Names } from '@undataforum/components';
 
+// Variables defined outside stories are not displayed in story source.
+// These are for knobs select.
 const alignments = ['start', 'center', 'end'];
 const variants = ['default', 'bold'];
 

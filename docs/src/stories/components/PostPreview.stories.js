@@ -8,7 +8,7 @@ storiesOf('Components/PostPreview', module)
     <PostPreview
       post={{
         title: (
-          <Heading as="h1" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+          <Heading as="h1" sx={{ textAlign: 'start', mb: 3 }}>
             Vestibulum proin eu mi nulla ac enim in tempor turpis
           </Heading>
         ),
@@ -49,7 +49,7 @@ storiesOf('Components/PostPreview', module)
     <PostPreview
       post={{
         title: (
-          <Heading as="h1" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+          <Heading as="h1" sx={{ textAlign: 'start', mb: 3 }}>
             Vestibulum proin eu mi nulla ac enim in tempor turpis
           </Heading>
         ),
@@ -189,7 +189,7 @@ storiesOf('Components/PostPreview', module)
     <PostPreview
       post={{
         title: (
-          <Heading as="h1" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+          <Heading as="h1" sx={{ textAlign: 'start', mb: 3 }}>
             Vestibulum proin eu mi nulla ac enim in tempor turpis
           </Heading>
         ),
@@ -214,7 +214,7 @@ storiesOf('Components/PostPreview', module)
       {
         id: 'cbdb6147-cab8-5511-a325-28d4dee7f914',
         title: (
-          <Heading as="h2" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+          <Heading as="h2" sx={{ textAlign: 'start', mb: 3 }}>
             Et nulla in incididunt cupidatat pariatur sit sint proident
           </Heading>
         ),
@@ -239,7 +239,7 @@ storiesOf('Components/PostPreview', module)
       {
         id: 'a1ca7aa8-f666-5f7b-9dd2-bac6f34ac744',
         title: (
-          <Heading as="h2" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+          <Heading as="h2" sx={{ textAlign: 'start', mb: 3 }}>
             Dolore in eiusmod culpa duis ut aliquip et ea
           </Heading>
         ),
@@ -262,7 +262,7 @@ storiesOf('Components/PostPreview', module)
       {
         id: '057a4af9-1e4c-5cfa-b633-237833b24ce0',
         title: (
-          <Heading as="h2" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+          <Heading as="h2" sx={{ textAlign: 'start', mb: 3 }}>
             Irure aliquip ipsum eu qui cupidatat sunt cillum eu velit dolor
           </Heading>
         ),
@@ -281,7 +281,7 @@ storiesOf('Components/PostPreview', module)
       {
         id: '740f7b45-4a4a-5ba7-8b33-ce9946775a82',
         title: (
-          <Heading as="h2" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+          <Heading as="h2" sx={{ textAlign: 'start', mb: 3 }}>
             Eu sit excepteur non cupidatat
           </Heading>
         ),
@@ -330,7 +330,7 @@ storiesOf('Components/PostPreview', module)
       <PostPreview
         post={{
           title: (
-            <Heading as="h1" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+            <Heading as="h1" sx={{ textAlign: 'start', mb: 3 }}>
               Vestibulum proin eu mi nulla ac enim in tempor turpis{' '}
             </Heading>
           ),

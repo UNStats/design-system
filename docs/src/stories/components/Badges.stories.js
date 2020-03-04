@@ -4,6 +4,8 @@ import { withKnobs, select } from '@storybook/addon-knobs';
 import { Box } from 'theme-ui';
 import { Badges } from '@undataforum/components';
 
+// Variables defined outside stories are not displayed in story source.
+// These are for knobs select.
 const alignments = ['start', 'center', 'end'];
 const variants = ['primary', 'secondary'];
 

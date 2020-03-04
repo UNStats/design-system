@@ -9,7 +9,7 @@ storiesOf('Components/EventPreview', module)
       event={{
         tag: 'Webinar',
         title: (
-          <Heading as="h1" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+          <Heading as="h1" sx={{ textAlign: 'start', mb: 3 }}>
             Vestibulum proin eu mi nulla ac enim in tempor turpis
           </Heading>
         ),
@@ -27,7 +27,7 @@ storiesOf('Components/EventPreview', module)
       event={{
         tag: 'Webinar',
         title: (
-          <Heading as="h1" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+          <Heading as="h1" sx={{ textAlign: 'start', mb: 3 }}>
             Vestibulum proin eu mi nulla ac enim in tempor turpis
           </Heading>
         ),
@@ -97,7 +97,7 @@ storiesOf('Components/EventPreview', module)
       event={{
         tag: 'Webinar',
         title: (
-          <Heading as="h1" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+          <Heading as="h1" sx={{ textAlign: 'start', mb: 3 }}>
             Vestibulum proin eu mi nulla ac enim in tempor turpis
           </Heading>
         ),
@@ -115,7 +115,7 @@ storiesOf('Components/EventPreview', module)
         id: '0e0dde9c-1cb3-4bbf-a070-d3b838d98398',
         tag: 'Webinar',
         title: (
-          <Heading as="h1" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+          <Heading as="h1" sx={{ textAlign: 'start', mb: 3 }}>
             Ut aut reiciendis voluptatibus maiores alias consequatur
           </Heading>
         ),
@@ -146,7 +146,7 @@ storiesOf('Components/EventPreview', module)
         id: 'c539b355-4729-4d8f-88eb-ee955e1ae832',
         tag: 'Session',
         title: (
-          <Heading as="h1" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+          <Heading as="h1" sx={{ textAlign: 'start', mb: 3 }}>
             Do eiusmod tempor incididunt ut labore et dolore magna aliqua
           </Heading>
         ),
@@ -251,7 +251,7 @@ storiesOf('Components/EventPreview', module)
         event={{
           tag: 'Webinar',
           title: (
-            <Heading as="h1" sx={{ textAlign: 'start', mt: 1, mb: 3 }}>
+            <Heading as="h1" sx={{ textAlign: 'start', mb: 3 }}>
               Vestibulum proin eu mi nulla ac enim in tempor turpis
             </Heading>
           ),

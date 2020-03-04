@@ -6,7 +6,8 @@ import { Header } from '@undataforum/components';
 
 import DummyLogo from '../../components/dummy-logo';
 
-const logo = <DummyLogo scaleTo="height" />;
+// Variables defined outside stories are not displayed in story source.
+// This one is for knobs select.
 const variants = ['branded', 'primary'];
 
 storiesOf('Components/Header', module)
@@ -14,7 +15,7 @@ storiesOf('Components/Header', module)
   .add('logo and title', () => (
     <Box bg="orange">
       <Header
-        logo={logo}
+        logo={<DummyLogo scaleTo="height" />}
         title="Header Title"
         links={[
           {
@@ -40,7 +41,7 @@ storiesOf('Components/Header', module)
   .add('logo only', () => (
     <Box bg="orange">
       <Header
-        logo={logo}
+        logo={<DummyLogo scaleTo="height" />}
         links={[
           {
             href: '/about',
@@ -108,7 +109,7 @@ storiesOf('Components/Header', module)
   .add('no button', () => (
     <Box bg="orange">
       <Header
-        logo={logo}
+        logo={<DummyLogo scaleTo="height" />}
         title="Header Title"
         links={[
           {
@@ -131,7 +132,7 @@ storiesOf('Components/Header', module)
   .add('many links with button', () => (
     <Box bg="orange">
       <Header
-        logo={logo}
+        logo={<DummyLogo scaleTo="height" />}
         title="Header Title"
         links={[
           { text: 'One', href: '/1' },
@@ -158,7 +159,7 @@ storiesOf('Components/Header', module)
   .add('many links without button', () => (
     <Box bg="orange">
       <Header
-        logo={logo}
+        logo={<DummyLogo scaleTo="height" />}
         title="Header Title"
         links={[
           { text: 'One', href: '/1' },
@@ -184,7 +185,7 @@ storiesOf('Components/Header', module)
   .add('adjust height', () => (
     <Box bg="orange">
       <Header
-        logo={logo}
+        logo={<DummyLogo scaleTo="height" />}
         links={[
           {
             href: '/about',
