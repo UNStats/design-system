@@ -6,41 +6,44 @@ import { Footer, SocialIcons } from '@undataforum/components';
 
 import DummyLogo from '../../components/dummy-logo';
 
-const logo = (
-  <Box sx={{ height: 'height.medium' }}>
-    <DummyLogo scaleTo="height" />
-  </Box>
-);
-
-const socialIcons = (
-  <SocialIcons
-    platforms={[
-      {
-        id: 'twitter',
-        username: 'UNDataForum',
-        title: 'Follow us on Twitter',
-      },
-      { id: 'github', username: 'UNDataForum', title: 'Follow us on GitHub' },
-      {
-        id: 'email',
-        username: 'dataforum@un.org',
-        title: 'Send us an email',
-      },
-    ]}
-    size={[24, 32, 48]}
-    variant="inherit"
-  />
-);
-
+// Variables defined outside stories are not displayed in story source.
+// This one is for knobs select.
 const variants = ['primary', 'secondary'];
 
 storiesOf('Components/Footer', module)
   .addDecorator(withKnobs)
   .add('everything', () => (
     <Footer
-      logo={logo}
+      logo={
+        <Box sx={{ height: 'height.medium' }}>
+          <DummyLogo scaleTo="height" />
+        </Box>
+      }
       title="Footer Title"
-      socialIcons={socialIcons}
+      socialIcons={
+        <SocialIcons
+          platforms={[
+            {
+              id: 'twitter',
+              username: 'UNDataForum',
+              title: 'Follow us on Twitter',
+            },
+            {
+              id: 'github',
+              username: 'UNDataForum',
+              title: 'Follow us on GitHub',
+            },
+            {
+              id: 'email',
+              username: 'dataforum@un.org',
+              title: 'Send us an email',
+            },
+          ]}
+          size={48}
+          variant="inherit"
+          mb={3}
+        />
+      }
       links={[
         { text: 'Contact', href: '/contact' },
         { text: 'Copyright', href: '/copyright' },
@@ -52,7 +55,11 @@ storiesOf('Components/Footer', module)
   ))
   .add('logo only', () => (
     <Footer
-      logo={logo}
+      logo={
+        <Box sx={{ height: 'height.medium' }}>
+          <DummyLogo scaleTo="height" />
+        </Box>
+      }
       links={[
         { text: 'Contact', href: '/contact' },
         { text: 'Copyright', href: '/copyright' },
@@ -78,7 +85,30 @@ storiesOf('Components/Footer', module)
   ))
   .add('social only', () => (
     <Footer
-      socialIcons={socialIcons}
+      socialIcons={
+        <SocialIcons
+          platforms={[
+            {
+              id: 'twitter',
+              username: 'UNDataForum',
+              title: 'Follow us on Twitter',
+            },
+            {
+              id: 'github',
+              username: 'UNDataForum',
+              title: 'Follow us on GitHub',
+            },
+            {
+              id: 'email',
+              username: 'dataforum@un.org',
+              title: 'Send us an email',
+            },
+          ]}
+          size={48}
+          variant="inherit"
+          mb={3}
+        />
+      }
       links={[
         { text: 'Contact', href: '/contact' },
         { text: 'Copyright', href: '/copyright' },

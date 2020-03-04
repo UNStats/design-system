@@ -156,7 +156,7 @@ const Header = ({
             </Flex>
             {button && (
               <Button
-                variant="outline"
+                variant="outline.primary"
                 as={SmartLink}
                 sx={{
                   flexGrow: 0,
