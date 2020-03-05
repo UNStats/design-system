@@ -1,8 +1,15 @@
 import React from 'react';
-import { arrayOf, node, shape, string } from 'prop-types';
+import {
+  arrayOf,
+  node,
+  number,
+  oneOf,
+  oneOfType,
+  shape,
+  string,
+} from 'prop-types';
 import { Flex, Text } from 'theme-ui';
 
-import { responsiveAlignType, responsiveNumberType } from './types';
 import Badges from './badges';
 import SocialIcons from './social-icons';
 import { normalizeAlign } from './util';
@@ -84,26 +91,27 @@ const ProfilePreview = ({
   </Flex>
 );
 
-export const profileType = shape({
-  avatar: node.isRequired,
-  honorific: string,
-  name: string,
-  jobtitle: string,
-  organization: string,
-  socialIcons: arrayOf(
-    shape({
-      id: string.isRequired,
-      username: string.isRequired,
-      title: string,
-    }).isRequired
-  ),
-  badges: arrayOf(string),
-});
+const alignments = ['start', 'center', 'end'];
+const alignType = oneOf(alignments);
 
 ProfilePreview.propTypes = {
-  align: responsiveAlignType,
-  fontSize: responsiveNumberType,
-  profile: profileType.isRequired,
+  align: oneOfType([alignType, arrayOf(alignType)]),
+  fontSize: oneOfType([number, arrayOf(number)]),
+  profile: shape({
+    avatar: node.isRequired,
+    honorific: string,
+    name: string,
+    jobtitle: string,
+    organization: string,
+    socialIcons: arrayOf(
+      shape({
+        id: string.isRequired,
+        username: string.isRequired,
+        title: string,
+      }).isRequired
+    ),
+    badges: arrayOf(string),
+  }).isRequired,
   variant: string,
 };
 

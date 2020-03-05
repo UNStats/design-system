@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { arrayOf, node, string, oneOf } from 'prop-types';
+import { arrayOf, node, number, oneOfType, string, oneOf } from 'prop-types';
 import {
   Box,
   Button,
@@ -10,7 +10,6 @@ import {
   MenuButton,
 } from 'theme-ui';
 
-import { responsiveType } from './types';
 import SmartLink, { linkType } from './smart-link';
 
 const Context = React.createContext({});
@@ -205,7 +204,7 @@ Header.propTypes = {
   title: string,
   links: arrayOf(linkType).isRequired,
   button: linkType,
-  height: responsiveType,
+  height: oneOfType([number, arrayOf(number), string, arrayOf(string)]),
   variant: oneOf(['branded', 'primary']),
 };
 

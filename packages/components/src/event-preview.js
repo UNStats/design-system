@@ -71,19 +71,17 @@ const EventPreview = ({ event, variant = 'primary', ...props }) => (
   </Flex>
 );
 
-export const eventType = shape({
-  tag: string,
-  title: node.isRequired,
-  date: string.isRequired,
-  duration: string.isRequired,
-  speakers: node,
-  description: node,
-  href: string,
-  registrationLink: string,
-});
-
 EventPreview.propTypes = {
-  event: eventType.isRequired,
+  event: shape({
+    tag: string,
+    title: node.isRequired,
+    date: string.isRequired,
+    duration: string.isRequired,
+    speakers: node,
+    description: node,
+    href: string,
+    registrationLink: string,
+  }).isRequired,
   variant: string,
 };
 

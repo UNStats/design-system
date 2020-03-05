@@ -1,8 +1,7 @@
 import React from 'react';
-import { arrayOf, node, shape, string } from 'prop-types';
+import { arrayOf, node, oneOf, oneOfType, shape, string } from 'prop-types';
 import { Grid } from 'theme-ui';
 
-import { responsiveAlignType } from './types';
 import ProfilePreview from './profile-preview';
 import SmartLink from './smart-link';
 
@@ -31,6 +30,9 @@ const Avatars = ({ values, align = 'start', ...props }) => (
   </Grid>
 );
 
+const alignments = ['start', 'center', 'end'];
+const alignType = oneOf(alignments);
+
 Avatars.propTypes = {
   values: arrayOf(
     shape({
@@ -40,7 +42,7 @@ Avatars.propTypes = {
       href: string.isRequired,
     })
   ).isRequired,
-  align: responsiveAlignType,
+  align: oneOfType([alignType, arrayOf(alignType)]),
 };
 
 export default Avatars;

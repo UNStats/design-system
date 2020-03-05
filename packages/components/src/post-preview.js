@@ -49,16 +49,14 @@ const PostPreview = ({ post, variant = 'primary', ...props }) => {
   );
 };
 
-export const postType = shape({
-  title: node.isRequired,
-  date: string.isRequired,
-  authors: node,
-  description: node,
-  href: string,
-});
-
 PostPreview.propTypes = {
-  post: postType.isRequired,
+  post: shape({
+    title: node.isRequired,
+    date: string.isRequired,
+    authors: node,
+    description: node,
+    href: string,
+  }).isRequired,
   variant: string,
 };
 
