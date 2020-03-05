@@ -1,5 +1,17 @@
 # Change Log
 
+## 0.73.0
+
+### Minor Changes
+
+- [`4bee6c5`](https://github.com/UNDataForum/design-system/commit/4bee6c5d63db4ca11950041722ef20cc1166ed83) Thanks [@454de6e](https://github.com/454de6e)! - Remove prop-types from API
+
+* [`97a9ba9`](https://github.com/UNDataForum/design-system/commit/97a9ba91586550e734691852c609ef3845746d48) [#427](https://github.com/UNDataForum/design-system/pull/427) Thanks [@454de6e](https://github.com/454de6e)! - Refactor props of EventPreview
+
+### Patch Changes
+
+- [`33fa5ca`](https://github.com/UNDataForum/design-system/commit/33fa5ca221118a7a5e47c53c487fe09ae3e487eb) [#429](https://github.com/UNDataForum/design-system/pull/429) Thanks [@454de6e](https://github.com/454de6e)! - Small layout fixes
+
 ## 0.72.0
 
 ### Minor Changes
