@@ -21,7 +21,7 @@
     "@undataforum/preset": "*",
     "babel-loader": "8.0.6",
     "deepmerge": "4.2.2",
-    "prop-types": "^15.7.2",
+    "prop-types": "15.7.2",
     "react": "16.13.0",
     "react-dom": "16.13.0",
     "theme-ui": "0.3.1"
