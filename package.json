@@ -6,7 +6,7 @@
     "lint": "yarn run lint:code && yarn run lint:other",
     "lint:code": "eslint . --cache --ext .js,.jsx --ignore-path .gitignore",
     "lint:other": "yarn run prettier --check",
-    "prettier": "prettier \"**/*.{md,css,yaml,yml}\"",
+    "prettier": "prettier \"**/*.{md,mdx,css,yaml,yml}\"",
     "format": "yarn run format:code && yarn run format:other",
     "format:code": "yarn run lint:code --fix",
     "format:other": "yarn run prettier --write",
