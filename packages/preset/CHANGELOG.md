@@ -4,17 +4,28 @@
 
 ### Minor Changes
 
-- [`03f9c5d`](https://github.com/UNDataForum/design-system/commit/03f9c5d3f991642ee81812fa9d1985a735237a6c) [#424](https://github.com/UNDataForum/design-system/pull/424) Thanks [@454de6e](https://github.com/454de6e)! - Use composition instead of render props in EventPreview
+- [`03f9c5d`](https://github.com/UNDataForum/design-system/commit/03f9c5d3f991642ee81812fa9d1985a735237a6c)
+  [#424](https://github.com/UNDataForum/design-system/pull/424) Thanks
+  [@454de6e](https://github.com/454de6e)! - Use composition instead of render
+  props in EventPreview
 
-* [`4d5e0cd`](https://github.com/UNDataForum/design-system/commit/4d5e0cd3962b7786c2776b745a7f7291345f2592) Thanks [@454de6e](https://github.com/454de6e)! - Change color pairing for muted color
+* [`4d5e0cd`](https://github.com/UNDataForum/design-system/commit/4d5e0cd3962b7786c2776b745a7f7291345f2592)
+  Thanks [@454de6e](https://github.com/454de6e)! - Change color pairing for
+  muted color
 
-- [`281da13`](https://github.com/UNDataForum/design-system/commit/281da1389467080653e5945bbd9fd8798af982e3) [#424](https://github.com/UNDataForum/design-system/pull/424) Thanks [@454de6e](https://github.com/454de6e)! - Change Badges API
+- [`281da13`](https://github.com/UNDataForum/design-system/commit/281da1389467080653e5945bbd9fd8798af982e3)
+  [#424](https://github.com/UNDataForum/design-system/pull/424) Thanks
+  [@454de6e](https://github.com/454de6e)! - Change Badges API
 
-* [`5ea5eda`](https://github.com/UNDataForum/design-system/commit/5ea5edaaac6e613c5a31f86e40ff3e65ddf16624) [#415](https://github.com/UNDataForum/design-system/pull/415) Thanks [@454de6e](https://github.com/454de6e)! - Change SmartLink variants
+* [`5ea5eda`](https://github.com/UNDataForum/design-system/commit/5ea5edaaac6e613c5a31f86e40ff3e65ddf16624)
+  [#415](https://github.com/UNDataForum/design-system/pull/415) Thanks
+  [@454de6e](https://github.com/454de6e)! - Change SmartLink variants
 
 ### Patch Changes
 
-- [`647d485`](https://github.com/UNDataForum/design-system/commit/647d485e1d0bb6e037850434b82195a59f3f7524) [#405](https://github.com/UNDataForum/design-system/pull/405) Thanks [@454de6e](https://github.com/454de6e)! - Fix metadata for @undataforum/preset
+- [`647d485`](https://github.com/UNDataForum/design-system/commit/647d485e1d0bb6e037850434b82195a59f3f7524)
+  [#405](https://github.com/UNDataForum/design-system/pull/405) Thanks
+  [@454de6e](https://github.com/454de6e)! - Fix metadata for @undataforum/preset
 
 ## 0.5.0
 
