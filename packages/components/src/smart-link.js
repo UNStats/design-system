@@ -43,7 +43,9 @@ export const linkType = shape({
 
 SmartLink.propTypes = {
   children: node.isRequired,
-  href: string.isRequired,
+  // If href is omitted, link is disabled.
+  // This is useful for dynamically disable links in navigations.
+  href: string,
   label: string,
   variant: variantType,
 };

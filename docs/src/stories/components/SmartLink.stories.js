@@ -29,4 +29,14 @@ storiesOf('Components/SmartLink', module)
         external link
       </SmartLink>
     </Box>
+  ))
+  .add('disabled link', () => (
+    <Box sx={{ m: 2 }}>
+      <SmartLink
+        sx={{ fontFamily: 'body' }}
+        variant={select('variant', variants, 'primary')}
+      >
+        disabled link
+      </SmartLink>
+    </Box>
   ));
