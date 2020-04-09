@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.74.0
+
+### Minor Changes
+
+- [`a8a6719`](https://github.com/UNDataForum/design-system/commit/a8a6719e9633646c351fae990da1953ffbbb0e09)
+  [#448](https://github.com/UNDataForum/design-system/pull/448) Thanks
+  [@454de6e](https://github.com/454de6e)! - Make href prop optional in SmartLink
+
 ## 0.73.0
 
 ### Minor Changes
