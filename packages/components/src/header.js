@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { arrayOf, node, number, oneOfType, string, oneOf } from 'prop-types';
+import { arrayOf, node, number, oneOfType, shape, string } from 'prop-types';
 import {
   Box,
   Button,
@@ -10,7 +10,15 @@ import {
   MenuButton,
 } from 'theme-ui';
 
-import SmartLink, { linkType } from './smart-link';
+import Link from './link';
+
+/**
+ * There are no restrictions on what the variants can be called except that the default variant is called `primary`.
+ * If you use @undataforum/preset you can use `primary`, `primary-inverse` variants out of the box.
+ *
+ * You can define your own variants under the `pairings` key.
+ * But you should use the primary color in the header, not the secondary color.
+ */
 
 const Context = React.createContext({});
 
@@ -20,7 +28,7 @@ const Header = ({
   links,
   button,
   height = [48, 64, 80],
-  variant = 'branded',
+  variant = 'primary',
   ...props
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -45,25 +53,29 @@ const Header = ({
           }}
         >
           {logo && (
-            <SmartLink
-              sx={{ height: '100%', flexShrink: 0, mr: [2, 3] }}
+            <Link
+              sx={{
+                color: 'inherit',
+                height: '100%',
+                flexShrink: 0,
+                mr: [2, 3],
+              }}
               href="/"
               aria-label="Back to homepage"
-              variant="inherit"
             >
               {logo}
-            </SmartLink>
+            </Link>
           )}
           {title && (
-            <SmartLink
+            <Link
               sx={{
+                color: 'inherit',
                 flexGrow: 0,
                 flexShrink: 0,
                 mr: [0, 3, 4],
               }}
               href="/"
               aria-label="Back to homepage"
-              variant="inherit"
             >
               <Heading
                 sx={{
@@ -73,7 +85,7 @@ const Header = ({
               >
                 {title}
               </Heading>
-            </SmartLink>
+            </Link>
           )}
           <Box
             as="nav"
@@ -118,9 +130,10 @@ const Header = ({
                 overflow: 'auto',
               }}
             >
-              <SmartLink
+              <Link
                 key="/"
                 sx={{
+                  color: 'inherit',
                   display: ['flex', 'none'],
                   fontFamily: 'body',
                   fontSize: [4, 3, 4],
@@ -130,14 +143,14 @@ const Header = ({
                 }}
                 href="/"
                 label="Back to homepage"
-                variant="inherit"
               >
                 Home
-              </SmartLink>
+              </Link>
               {links.map(({ href, text, label }) => (
-                <SmartLink
+                <Link
                   key={href}
                   sx={{
+                    color: 'inherit',
                     flexShrink: 0,
                     fontFamily: 'body',
                     fontSize: [4, 3, 4],
@@ -147,22 +160,21 @@ const Header = ({
                   }}
                   href={href}
                   label={label}
-                  variant="inherit"
                 >
                   {text}
-                </SmartLink>
+                </Link>
               ))}
             </Flex>
             {button && (
               <Button
                 variant="outline.primary"
-                as={SmartLink}
+                as={Link}
                 sx={{
+                  color: 'inherit',
                   flexGrow: 0,
                   flexShrink: 0,
                   fontFamily: 'body',
                   fontSize: [4, 3, 4],
-                  color: 'inherit',
                   my: [4, 0],
                   ml: [0, 3, 4],
                 }}
@@ -202,10 +214,20 @@ const Header = ({
 Header.propTypes = {
   logo: node,
   title: string,
-  links: arrayOf(linkType).isRequired,
-  button: linkType,
+  links: arrayOf(
+    shape({
+      text: string.isRequired,
+      href: string,
+      label: string,
+    })
+  ).isRequired,
+  button: shape({
+    text: string.isRequired,
+    href: string,
+    label: string,
+  }),
   height: oneOfType([number, arrayOf(number), string, arrayOf(string)]),
-  variant: oneOf(['branded', 'primary']),
+  variant: string,
 };
 
 export default Header;

@@ -3,7 +3,16 @@ import { node, shape, string } from 'prop-types';
 import { Button, Flex, Text } from 'theme-ui';
 
 import Badges from './badges';
-import SmartLink from './smart-link';
+import Link from './link';
+
+/**
+ * The variant prop applies to buttons and badges only.
+ * Text and background color are done via `color` and `bg`.
+ *
+ * There are no restrictions on what the variants can be called except that the default variant is called `primary`.
+ * If you use @undataforum/preset you can use variants `primary` and `secondary` out of the box.
+ * In your project you need to add custom variants under the `badges` and `buttons` key.
+ */
 
 // How margins work in this component:
 // What the title prop renders (heading) may have no top margin, only bottom margin.
@@ -46,7 +55,7 @@ const EventPreview = ({ event, variant = 'primary', ...props }) => (
       >
         {event.href && (
           <Button
-            as={SmartLink}
+            as={Link}
             sx={{
               // Right margin only if there is a registration button.
               mr: event.registrationLink ? [2, 3] : 0,
@@ -59,7 +68,7 @@ const EventPreview = ({ event, variant = 'primary', ...props }) => (
         )}
         {event.registrationLink && (
           <Button
-            as={SmartLink}
+            as={Link}
             href={event.registrationLink}
             variant={`buttons.outline.${variant}`}
           >

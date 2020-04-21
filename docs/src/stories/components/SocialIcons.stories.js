@@ -1,9 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, select } from '@storybook/addon-knobs';
+import { withKnobs } from '@storybook/addon-knobs';
 import { SocialIcons } from '@undataforum/components';
-
-const variants = ['primary', 'secondary', 'inherit'];
+import { Box } from 'theme-ui';
 
 storiesOf('Components/SocialIcons', module)
   .addDecorator(withKnobs)
@@ -23,7 +22,6 @@ storiesOf('Components/SocialIcons', module)
         },
       ]}
       size={48}
-      variant={select('variant', variants, 'primary')}
       m={2}
     />
   ))
@@ -43,7 +41,6 @@ storiesOf('Components/SocialIcons', module)
         },
       ]}
       size={48}
-      variant={select('variant', variants, 'primary')}
       m={2}
     />
   ))
@@ -62,7 +59,6 @@ storiesOf('Components/SocialIcons', module)
         },
       ]}
       size={48}
-      variant={select('variant', variants, 'primary')}
       m={2}
     />
   ))
@@ -76,7 +72,30 @@ storiesOf('Components/SocialIcons', module)
         },
       ]}
       size={48}
-      variant={select('variant', variants, 'primary')}
       m={2}
     />
+  ))
+  .add('render on custom background color', () => (
+    <Box sx={{ color: 'background', bg: 'primary', p: 2 }}>
+      <SocialIcons
+        platforms={[
+          {
+            id: 'twitter',
+            username: 'UNDataForum',
+            title: 'Follow us on Twitter',
+          },
+          {
+            id: 'github',
+            username: 'UNDataForum',
+            title: 'Follow us on GitHub',
+          },
+          {
+            id: 'email',
+            username: 'dataforum@un.org',
+            title: 'Send us an email',
+          },
+        ]}
+        size={48}
+      />
+    </Box>
   ));

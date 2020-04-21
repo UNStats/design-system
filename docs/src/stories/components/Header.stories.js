@@ -6,9 +6,7 @@ import { Header } from '@undataforum/components';
 
 import DummyLogo from '../../components/dummy-logo';
 
-// Variables defined outside stories are not displayed in story source.
-// This one is for knobs select.
-const variants = ['branded', 'primary'];
+const variants = ['primary', 'primary-inverse'];
 
 storiesOf('Components/Header', module)
   .addDecorator(withKnobs)
@@ -34,7 +32,7 @@ storiesOf('Components/Header', module)
           },
         ]}
         button={{ text: 'Register', href: '/register' }}
-        variant={select('variant', variants, 'branded')}
+        variant={select('variant', variants, 'primary')}
       />
     </Box>
   ))
@@ -57,7 +55,7 @@ storiesOf('Components/Header', module)
           },
         ]}
         button={{ text: 'Register', href: '/register' }}
-        variant={select('variant', variants, 'branded')}
+        variant={select('variant', variants, 'primary')}
       />
     </Box>
   ))
@@ -80,7 +78,7 @@ storiesOf('Components/Header', module)
           },
         ]}
         button={{ text: 'Register', href: '/register' }}
-        variant={select('variant', variants, 'branded')}
+        variant={select('variant', variants, 'primary')}
       />
     </Box>
   ))
@@ -102,7 +100,7 @@ storiesOf('Components/Header', module)
           },
         ]}
         button={{ text: 'Register', href: '/register' }}
-        variant={select('variant', variants, 'branded')}
+        variant={select('variant', variants, 'primary')}
       />
     </Box>
   ))
@@ -125,7 +123,7 @@ storiesOf('Components/Header', module)
             text: '2020',
           },
         ]}
-        variant={select('variant', variants, 'branded')}
+        variant={select('variant', variants, 'primary')}
       />
     </Box>
   ))
@@ -152,7 +150,7 @@ storiesOf('Components/Header', module)
           { text: 'Fifteen', href: '/15' },
         ]}
         button={{ text: 'Register', href: '/register' }}
-        variant={select('variant', variants, 'branded')}
+        variant={select('variant', variants, 'primary')}
       />
     </Box>
   ))
@@ -178,7 +176,7 @@ storiesOf('Components/Header', module)
           { text: 'Fourteen', href: '/14' },
           { text: 'Fifteen', href: '/15' },
         ]}
-        variant={select('variant', variants, 'branded')}
+        variant={select('variant', variants, 'primary')}
       />
     </Box>
   ))
@@ -202,7 +200,7 @@ storiesOf('Components/Header', module)
         ]}
         button={{ text: 'Register', href: '/register' }}
         height={[64, 128, 256]}
-        variant={select('variant', variants, 'branded')}
+        variant={select('variant', variants, 'primary')}
       />
     </Box>
   ));
