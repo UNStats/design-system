@@ -3,7 +3,7 @@ import { arrayOf, node, oneOf, oneOfType, shape, string } from 'prop-types';
 import { Grid } from 'theme-ui';
 
 import ProfilePreview from './profile-preview';
-import SmartLink from './smart-link';
+import Link from './link';
 
 const Avatars = ({ values, align = 'start', ...props }) => (
   <Grid
@@ -18,14 +18,13 @@ const Avatars = ({ values, align = 'start', ...props }) => (
     }}
   >
     {values.map(({ id, avatar, name, href }) => (
-      <SmartLink
+      <Link
         key={id}
-        css={{ ':hover': { textDecoration: 'none' } }}
+        sx={{ color: 'inherit', ':hover': { textDecoration: 'none' } }}
         href={href}
-        variant="inherit"
       >
         <ProfilePreview profile={{ avatar, name }} fontSize={1} align={align} />
-      </SmartLink>
+      </Link>
     ))}
   </Grid>
 );

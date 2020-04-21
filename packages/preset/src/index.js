@@ -97,22 +97,6 @@ const theme = {
     external: 'a',
   },
 
-  links: {
-    // Default link styling with primary color.
-    primary: {
-      variant: 'styles.a',
-      color: 'primary',
-    },
-    secondary: {
-      variant: 'styles.a',
-      color: 'secondary',
-    },
-    inherit: {
-      variant: 'styles.a',
-      color: 'inherit',
-    },
-  },
-
   names: {
     default: {
       fontWeight: 'body',

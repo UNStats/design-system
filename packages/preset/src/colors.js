@@ -35,56 +35,20 @@ export default colors;
 
 // Color pairings optimized for contrast.
 export const pairings = {
-  // Universal pairings with Theme UI names.
   primary: {
+    color: 'primary',
+    bg: 'background',
+  },
+  'primary-inverse': {
     color: 'background',
     bg: 'primary',
   },
   secondary: {
+    color: 'secondary',
+    bg: 'background',
+  },
+  'secondary-inverse': {
     color: 'background',
     bg: 'secondary',
-  },
-  accent: {
-    color: 'background',
-    bg: 'accent',
-  },
-  muted: {
-    color: 'background',
-    bg: 'muted',
-  },
-  // Universal pairings.
-  default: {
-    color: 'text',
-    bg: 'background',
-  },
-  branded: {
-    color: 'primary',
-    bg: 'background',
-  },
-  // Pairings for styleguide colors.
-  forumBlue: {
-    color: 'background',
-    bg: 'forumBlue',
-  },
-  blue: {
-    color: 'background',
-    bg: 'blue',
-  },
-  green: {
-    color: 'background',
-    bg: 'green',
-  },
-  red: {
-    color: 'background',
-    bg: 'red',
-  },
-  yellow: {
-    color: 'background',
-    bg: 'yellow',
-  },
-  // Pairings for additional colors.
-  gray: {
-    color: 'background',
-    bg: 'gray',
   },
 };

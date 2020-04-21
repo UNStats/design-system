@@ -1,8 +1,8 @@
 import React from 'react';
-import { arrayOf, node, string, oneOf } from 'prop-types';
+import { arrayOf, node, shape, string, oneOf } from 'prop-types';
 import { Box, Container, Flex, Heading, Text } from 'theme-ui';
 
-import SmartLink, { linkType } from './smart-link';
+import Link from './link';
 
 const Footer = ({ logo, title, socialIcons, links, variant = 'primary' }) => {
   return (
@@ -16,12 +16,12 @@ const Footer = ({ logo, title, socialIcons, links, variant = 'primary' }) => {
           }}
         >
           {logo && (
-            <SmartLink href="/" variant="inherit" height="100%" mb={[1, 2]}>
+            <Link href="/" variant="inherit" height="100%" mb={[1, 2]}>
               {logo}
-            </SmartLink>
+            </Link>
           )}
           {title && (
-            <SmartLink href="/" variant="inherit">
+            <Link href="/" variant="inherit">
               <Heading
                 sx={{
                   whiteSpace: 'nowrap',
@@ -32,12 +32,12 @@ const Footer = ({ logo, title, socialIcons, links, variant = 'primary' }) => {
               >
                 {title}
               </Heading>
-            </SmartLink>
+            </Link>
           )}
           {socialIcons}
           <Flex sx={{ flexWrap: 'wrap', justifyContent: 'center' }}>
-            {links.map(link => (
-              <SmartLink
+            {links.map((link) => (
+              <Link
                 href={link.href}
                 key={link.href}
                 px={[2, 3]}
@@ -47,7 +47,7 @@ const Footer = ({ logo, title, socialIcons, links, variant = 'primary' }) => {
                 <Text sx={{ fontFamily: 'body', textAlign: 'center' }}>
                   {link.text}
                 </Text>
-              </SmartLink>
+              </Link>
             ))}
           </Flex>
         </Flex>
@@ -60,7 +60,13 @@ Footer.propTypes = {
   logo: node,
   title: string,
   socialIcons: node,
-  links: arrayOf(linkType).isRequired,
+  links: arrayOf(
+    shape({
+      text: string.isRequired,
+      href: string,
+      label: string,
+    })
+  ).isRequired,
   variant: oneOf(['primary', 'secondary']),
 };
 

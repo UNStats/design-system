@@ -1,29 +1,33 @@
 import React from 'react';
-import { arrayOf, number, oneOf, oneOfType, shape, string } from 'prop-types';
+import { arrayOf, number, oneOfType, shape, string } from 'prop-types';
 import { Flex } from 'theme-ui';
 
 import EmailIcon from './email-icon';
 import GitHubIcon from './github-icon';
 import TwitterIcon from './twitter-icon';
-import SmartLink from './smart-link';
+import Link from './link';
+
+/**
+ * SocialIcons are used like fonts, i.e. they use whatever the inherited color is.
+ */
 
 // Supported social media platforms.
 const lookup = {
   twitter: {
-    url: username => `https://twitter.com/${username}`,
+    url: (username) => `https://twitter.com/${username}`,
     Icon: TwitterIcon,
   },
   github: {
-    url: username => `https://github.com/${username}`,
+    url: (username) => `https://github.com/${username}`,
     Icon: GitHubIcon,
   },
   email: {
-    url: username => `mailto:${username}`,
+    url: (username) => `mailto:${username}`,
     Icon: EmailIcon,
   },
 };
 
-const SocialIcons = ({ platforms, size, variant = 'primary', ...props }) => {
+const SocialIcons = ({ platforms, size, ...props }) => {
   return (
     <Flex
       {...props}
@@ -32,9 +36,9 @@ const SocialIcons = ({ platforms, size, variant = 'primary', ...props }) => {
       {platforms.map(({ id, username, title }) => {
         const { url, Icon } = lookup[id];
         return (
-          <SmartLink key={id} href={url(username)} variant={variant} mx={2}>
+          <Link key={id} href={url(username)} sx={{ color: 'inherit', mx: 2 }}>
             <Icon size={size} title={title} />
-          </SmartLink>
+          </Link>
         );
       })}
     </Flex>
@@ -51,7 +55,6 @@ SocialIcons.propTypes = {
     })
   ).isRequired,
   size: oneOfType([number, arrayOf(number)]),
-  variant: oneOf(['primary', 'secondary', 'inherit']),
 };
 
 export default SocialIcons;
