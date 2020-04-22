@@ -9,7 +9,6 @@ const Icon = ({ size = 32, ...props }) => (
       display: 'inline-flex',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: 1,
       width: size,
       height: size,
       color: 'inherit',

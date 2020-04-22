@@ -16,12 +16,15 @@ const Footer = ({ logo, title, socialIcons, links, variant = 'primary' }) => {
           }}
         >
           {logo && (
-            <Link href="/" variant="inherit" height="100%" mb={[1, 2]}>
+            <Link
+              href="/"
+              sx={{ color: 'inherit', height: '100%', mb: [1, 2] }}
+            >
               {logo}
             </Link>
           )}
           {title && (
-            <Link href="/" variant="inherit">
+            <Link href="/" sx={{ color: 'inherit' }}>
               <Heading
                 sx={{
                   whiteSpace: 'nowrap',
@@ -40,9 +43,7 @@ const Footer = ({ logo, title, socialIcons, links, variant = 'primary' }) => {
               <Link
                 href={link.href}
                 key={link.href}
-                px={[2, 3]}
-                py={[1, 2]}
-                variant="inherit"
+                sx={{ color: 'inherit', px: [2, 3], py: [1, 2] }}
               >
                 <Text sx={{ fontFamily: 'body', textAlign: 'center' }}>
                   {link.text}

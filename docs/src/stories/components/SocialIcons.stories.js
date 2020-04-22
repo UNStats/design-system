@@ -1,8 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs';
+import { withKnobs, select } from '@storybook/addon-knobs';
 import { SocialIcons } from '@undataforum/components';
 import { Box } from 'theme-ui';
+
+const alignments = ['start', 'center', 'end'];
 
 storiesOf('Components/SocialIcons', module)
   .addDecorator(withKnobs)
@@ -21,6 +23,7 @@ storiesOf('Components/SocialIcons', module)
           title: 'Send us an email',
         },
       ]}
+      align={select('align', alignments, 'start')}
       size={48}
       m={2}
     />
@@ -40,6 +43,7 @@ storiesOf('Components/SocialIcons', module)
           title: 'Follow us on Twitter',
         },
       ]}
+      align={select('align', alignments, 'start')}
       size={48}
       m={2}
     />
@@ -58,6 +62,7 @@ storiesOf('Components/SocialIcons', module)
           title: 'Send us an email',
         },
       ]}
+      align={select('align', alignments, 'start')}
       size={48}
       m={2}
     />
@@ -71,6 +76,7 @@ storiesOf('Components/SocialIcons', module)
           title: 'Follow us on Twitter',
         },
       ]}
+      align={select('align', alignments, 'start')}
       size={48}
       m={2}
     />
@@ -95,6 +101,7 @@ storiesOf('Components/SocialIcons', module)
             title: 'Send us an email',
           },
         ]}
+        align={select('align', alignments, 'start')}
         size={48}
       />
     </Box>

@@ -81,8 +81,9 @@ const ProfilePreview = ({
     {profile.socialIcons && (
       <SocialIcons
         platforms={profile.socialIcons}
+        align={align}
         size={32}
-        variant="inherit"
+        mt={2}
       />
     )}
     {profile.badges && (

@@ -8,7 +8,7 @@ import DummyLogo from '../../components/dummy-logo';
 
 // Variables defined outside stories are not displayed in story source.
 // This one is for knobs select.
-const variants = ['primary', 'secondary'];
+const variants = ['primary-inverse', 'secondary-inverse'];
 
 storiesOf('Components/Footer', module)
   .addDecorator(withKnobs)
@@ -39,8 +39,8 @@ storiesOf('Components/Footer', module)
               title: 'Send us an email',
             },
           ]}
+          align="center"
           size={48}
-          variant="inherit"
           mb={3}
         />
       }
@@ -50,7 +50,7 @@ storiesOf('Components/Footer', module)
         { text: 'Privacy Notice', href: '/privacy' },
         { text: 'Terms of Use', href: '/terms' },
       ]}
-      variant={select('variant', variants, 'primary')}
+      variant={select('variant', variants, 'primary-inverse')}
     />
   ))
   .add('logo only', () => (
@@ -67,7 +67,7 @@ storiesOf('Components/Footer', module)
         { text: 'Privacy Notice', href: '/privacy-notice' },
         { text: 'Terms of Use', href: '/terms-of-use' },
       ]}
-      variant={select('variant', variants, 'primary')}
+      variant={select('variant', variants, 'primary-inverse')}
     />
   ))
   .add('title only', () => (
@@ -80,7 +80,7 @@ storiesOf('Components/Footer', module)
         { text: 'Privacy Notice', href: '/privacy-notice' },
         { text: 'Terms of Use', href: '/terms-of-use' },
       ]}
-      variant={select('variant', variants, 'primary')}
+      variant={select('variant', variants, 'primary-inverse')}
     />
   ))
   .add('social only', () => (
@@ -104,8 +104,8 @@ storiesOf('Components/Footer', module)
               title: 'Send us an email',
             },
           ]}
+          align="center"
           size={48}
-          variant="inherit"
           mb={3}
         />
       }
@@ -116,7 +116,7 @@ storiesOf('Components/Footer', module)
         { text: 'Privacy Notice', href: '/privacy-notice' },
         { text: 'Terms of Use', href: '/terms-of-use' },
       ]}
-      variant={select('variant', variants, 'primary')}
+      variant={select('variant', variants, 'primary-inverse')}
     />
   ))
   .add('minimalistic', () => (
@@ -128,6 +128,6 @@ storiesOf('Components/Footer', module)
         { text: 'Privacy Notice', href: '/privacy-notice' },
         { text: 'Terms of Use', href: '/terms-of-use' },
       ]}
-      variant={select('variant', variants, 'primary')}
+      variant={select('variant', variants, 'primary-inverse')}
     />
   ));
