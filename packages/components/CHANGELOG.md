@@ -1,5 +1,18 @@
 # Change Log
 
+## 0.75.0
+
+### Minor Changes
+
+- [`bd4bf7a`](https://github.com/UNDataForum/design-system/commit/bd4bf7a1bbe04ea909d64cc3ae6a30776e830a48)
+  [#456](https://github.com/UNDataForum/design-system/pull/456) Thanks
+  [@454de6e](https://github.com/454de6e)! - Change behavior of SmartLink and
+  rename to Link
+
+* [`0536777`](https://github.com/UNDataForum/design-system/commit/0536777b1676cb1c5bfe26922631b755ce38db63)
+  [#459](https://github.com/UNDataForum/design-system/pull/459) Thanks
+  [@454de6e](https://github.com/454de6e)! - Add align prop to SocialIcons
+
 ## 0.74.0
 
 ### Minor Changes
