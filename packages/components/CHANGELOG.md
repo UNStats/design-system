@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.75.1
+
+### Patch Changes
+
+- [`218ea30`](https://github.com/UNDataForum/design-system/commit/218ea3069fe311d8c43f4bc2a0797d45d2e4a75b)
+  [#460](https://github.com/UNDataForum/design-system/pull/460) Thanks
+  [@454de6e](https://github.com/454de6e)! - Make href optional in NewTabLink
+
 ## 0.75.0
 
 ### Minor Changes
