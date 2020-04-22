@@ -14,7 +14,7 @@ const NewTabLink = ({ children, href, className }) => (
 
 NewTabLink.propTypes = {
   children: node.isRequired,
-  href: string.isRequired,
+  href: string,
   className: string,
 };
 
