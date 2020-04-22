@@ -1,5 +1,14 @@
 # @undataforum/preset
 
+## 0.7.0
+
+### Minor Changes
+
+- [`bd4bf7a`](https://github.com/UNDataForum/design-system/commit/bd4bf7a1bbe04ea909d64cc3ae6a30776e830a48)
+  [#456](https://github.com/UNDataForum/design-system/pull/456) Thanks
+  [@454de6e](https://github.com/454de6e)! - Remove links from preset and change
+  default pairings
+
 ## 0.6.0
 
 ### Minor Changes

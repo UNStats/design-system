@@ -1,7 +1,7 @@
 {
   "name": "@undataforum/preset",
   "description": "Theme UI preset for the the United Nations World Data Forum website.",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "author": "Thilo Maier <maier@un.org>",
   "license": "MIT",
   "main": "dist/index.js",
