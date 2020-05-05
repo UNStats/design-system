@@ -32,6 +32,6 @@ const theme = merge(preset, {
   },
 });
 
-addDecorator(story => <ThemeProvider theme={theme}>{story()}</ThemeProvider>);
+addDecorator((story) => <ThemeProvider theme={theme}>{story()}</ThemeProvider>);
 
 addDecorator(withA11y);
