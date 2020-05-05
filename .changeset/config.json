@@ -1,10 +1,8 @@
 {
-  "$schema": "https://unpkg.com/@changesets/config@0.2.3/schema.json",
-  "changelog": [
-    "@changesets/changelog-github",
-    { "repo": "undataforum/design-system" }
-  ],
+  "$schema": "https://unpkg.com/@changesets/config@1.0.3/schema.json",
+  "changelog": "@changesets/cli/changelog",
   "commit": false,
   "linked": [],
-  "access": "restricted"
+  "access": "restricted",
+  "baseBranch": "master"
 }
