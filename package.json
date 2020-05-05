@@ -4,7 +4,7 @@
     "start": "yarn workspace docs run start",
     "prepare": "yarn workspaces run prepare",
     "lint": "yarn run lint:code && yarn run lint:other",
-    "lint:code": "eslint . --cache --ext .js,.jsx --ignore-path .gitignore",
+    "lint:code": "eslint . --ignore-path .gitignore",
     "lint:other": "yarn run prettier --check",
     "prettier": "prettier \"**/*.{md,mdx,css,yaml,yml}\"",
     "format": "yarn run format:code && yarn run format:other",
