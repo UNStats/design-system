@@ -1,14 +1,12 @@
 {
-  "extends": ["config:base"],
-  "automerge": false,
-  "labels": ["renovate"],
-  "reviewers": ["454de6e"],
-  "semanticCommits": false,
+  "extends": ["config:base", "schedule:weekly"],
+  "labels": ["dependencies"],
+  "reviewers": ["team:@UNDataForum/code-reviewers"],
+  "rebaseWhen": "never",
   "packageRules": [
     {
       "packagePatterns": ["@changesets"],
       "groupName": "atlassian/changesets packages"
     }
-  ],
-  "schedule": "every weekend"
+  ]
 }
