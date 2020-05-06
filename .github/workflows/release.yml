@@ -13,9 +13,6 @@ jobs:
       - uses: actions/checkout@master
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@master
-        with:
-          node-version: 12.x
       - run: yarn install
       - uses: changesets/action@master
         with:
