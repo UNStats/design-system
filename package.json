@@ -11,8 +11,7 @@
     "format:code": "yarn run lint:code --fix",
     "format:other": "yarn run prettier --write",
     "release": "yarn changeset publish",
-    "purge": "rm -rf ./node_modules && yarn workspaces run purge",
-    "postinstall": "yarn --check-files --ignore-scripts"
+    "purge": "rm -rf ./node_modules && yarn workspaces run purge"
   },
   "husky": {
     "hooks": {
@@ -34,7 +33,6 @@
     "husky": "4.2.5",
     "lint-staged": "10.2.2",
     "microbundle": "0.11.0",
-    "node": "12.16.2",
     "now": "18.0.0",
     "prettier": "2.0.5"
   }
