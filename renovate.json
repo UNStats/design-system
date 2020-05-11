@@ -1,7 +1,6 @@
 {
   "extends": ["config:base", "schedule:weekly"],
   "labels": ["dependencies"],
-  "reviewers": ["team:@UNDataForum/code-reviewers"],
   "rebaseWhen": "never",
   "semanticCommits": false,
   "packageRules": [
