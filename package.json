@@ -33,7 +33,7 @@
     "husky": "4.2.5",
     "lint-staged": "10.2.2",
     "microbundle": "0.11.0",
-    "now": "18.0.0",
+    "now": "19.0.1",
     "prettier": "2.0.5"
   }
 }
