@@ -8,6 +8,7 @@
     "start": "start-storybook -s ./static -c ./config/storybook",
     "build": "rm -rf public && build-storybook -s ./static -c ./config/storybook",
     "prepare": "exit",
+    "clean": "exit",
     "purge": "rm -rf ./node_modules"
   },
   "dependencies": {
