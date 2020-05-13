@@ -11,6 +11,7 @@
     "format:code": "yarn run lint:code --fix",
     "format:other": "yarn run prettier --write",
     "release": "yarn changeset publish",
+    "clean": "yarn workspaces run clean",
     "purge": "rm -rf ./node_modules && yarn workspaces run purge"
   },
   "husky": {
@@ -32,7 +33,7 @@
     "eslint-plugin-shopify": "35.1.0",
     "husky": "4.2.5",
     "lint-staged": "10.2.2",
-    "microbundle": "0.11.0",
+    "microbundle": "0.12.0",
     "prettier": "2.0.5"
   }
 }

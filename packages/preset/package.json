@@ -4,9 +4,10 @@
   "version": "0.7.0",
   "author": "Thilo Maier <maier@un.org>",
   "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
   "homepage": "https://github.com/UNDataForum/design-system/tree/master/packages/preset",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/undataforum/design-system.git",
@@ -17,8 +18,9 @@
     "theme-ui"
   ],
   "scripts": {
-    "prepare": "rm -rf ./dist && microbundle --no-compress",
-    "watch": "microbundle watch --no-compress",
+    "prepare": "microbundle --format modern,cjs",
+    "watch": "microbundle watch --format modern,cjs",
+    "clean": "rm -rf ./dist",
     "purge": "rm -rf ./node_modules"
   },
   "publishConfig": {
