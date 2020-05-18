@@ -2,7 +2,10 @@
   "private": true,
   "scripts": {
     "start": "yarn workspace docs run start",
+    "clean": "yarn workspaces run clean",
     "prepare": "yarn workspaces run prepare",
+    "version": "changeset version && yarn run format",
+    "release": "changeset publish",
     "lint": "yarn run lint:code && yarn run lint:other",
     "lint:code": "eslint . --ignore-path .gitignore",
     "lint:other": "yarn run prettier --check",
@@ -10,8 +13,6 @@
     "format": "yarn run format:code && yarn run format:other",
     "format:code": "yarn run lint:code --fix",
     "format:other": "yarn run prettier --write",
-    "release": "yarn changeset publish",
-    "clean": "yarn workspaces run clean",
     "purge": "rm -rf ./node_modules && yarn workspaces run purge"
   },
   "husky": {
