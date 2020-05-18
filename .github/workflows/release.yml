@@ -1,4 +1,4 @@
-name: Version or publish packages
+name: Release
 
 on:
   push:
@@ -9,19 +9,24 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      # Fetch entire Git history so Changesets can generate changelogs.
+      # Fetch entire Git history so changesets can generate changelogs.
       - uses: actions/checkout@master
         with:
           fetch-depth: 0
+          # Do not persist GITHUB_TOKEN.
+          # Prevent personal access token GH_TOKEN from being overridden.
+          persist-credentials: false
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - run: yarn install
+      - run: yarn install --frozen-lockfile
       - uses: changesets/action@master
         with:
+          version: yarn run version
           publish: yarn run release
-          commit: Version packages
+          commit: Publish packages
           title: Publish packages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Use personal access token GH_TOKEN to trigger workflows with changesets/action.
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
