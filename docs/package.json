@@ -5,7 +5,7 @@
   "description": "Storybook for the United Nations World Data Forum design system.",
   "author": "Thilo Maier <maier@un.org>",
   "scripts": {
-    "start": "start-storybook -s ./static -c ./config/storybook",
+    "dev": "start-storybook -s ./static -c ./config/storybook",
     "build": "rm -rf public && build-storybook -s ./static -c ./config/storybook",
     "prepare": "exit",
     "clean": "exit",

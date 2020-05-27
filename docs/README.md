@@ -11,7 +11,7 @@ You can explore the Storybook at https://components.undataforum.org or locally
 by running
 
 ```bash
-yarn workspace docs start
+yarn workspace docs dev
 ```
 
 ## Credits
