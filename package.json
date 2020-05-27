@@ -11,8 +11,7 @@
     }
   },
   "scripts": {
-    "start": "yarn workspace docs run start",
-    "clean": "yarn workspaces run clean",
+    "dev": "yarn workspace docs run start",
     "prepare": "yarn workspaces run prepare",
     "version": "changeset version && yarn run format",
     "release": "changeset publish",
@@ -23,6 +22,7 @@
     "format": "run-s format:*",
     "format:eslint": "yarn run lint:eslint --fix",
     "format:prettier": "yarn run prettier --write",
+    "clean": "yarn workspaces run clean",
     "purge": "rm -rf ./node_modules && yarn workspaces run purge"
   },
   "devDependencies": {
