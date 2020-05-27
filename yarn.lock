@@ -1709,6 +1709,11 @@
   dependencies:
     "@shopify/eslint-plugin" "37.0.0"
 
+"@maiertech/prettier-config@0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@maiertech/prettier-config/-/prettier-config-0.1.1.tgz#8f36f692cfd31b41ac2ce0300647e7f3625d58f8"
+  integrity sha512-7Um5LiJAFEdBsLnuC0WuR8mOYks2kmTOLfT9ywAwiglSI1XMRNB4JAEyArW5LRgpius8stBJC1ig8hkzMOBpeg==
+
 "@manypkg/find-root@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@manypkg/find-root/-/find-root-1.0.0.tgz#b8e96d7c24678b1b65c2057ae47df750669197d7"
