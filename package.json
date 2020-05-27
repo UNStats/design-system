@@ -1,29 +1,30 @@
 {
   "private": true,
+  "workspaces": [
+    "docs",
+    "packages/*"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run lint"
+    }
+  },
   "scripts": {
     "start": "yarn workspace docs run start",
     "clean": "yarn workspaces run clean",
     "prepare": "yarn workspaces run prepare",
     "version": "changeset version && yarn run format",
     "release": "changeset publish",
-    "lint": "yarn run lint:code && yarn run lint:other",
-    "lint:code": "eslint . --ignore-path .gitignore",
-    "lint:other": "yarn run prettier --check",
-    "prettier": "prettier \"**/*.{md,mdx,css,yaml,yml}\"",
-    "format": "yarn run format:code && yarn run format:other",
-    "format:code": "yarn run lint:code --fix",
-    "format:other": "yarn run prettier --write",
+    "prettier": "prettier . --ignore-path .gitignore",
+    "lint": "run-s lint:*",
+    "lint:eslint": "eslint . --ignore-path .gitignore",
+    "lint:prettier": "yarn run prettier --check",
+    "format": "run-s format:*",
+    "format:eslint": "yarn run lint:eslint --fix",
+    "format:prettier": "yarn run prettier --write",
     "purge": "rm -rf ./node_modules && yarn workspaces run purge"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "workspaces": [
-    "docs",
-    "packages/*"
-  ],
   "devDependencies": {
     "@babel/cli": "7.8.4",
     "@babel/core": "7.9.6",
@@ -33,8 +34,9 @@
     "eslint": "6.8.0",
     "eslint-plugin-shopify": "35.1.0",
     "husky": "4.2.5",
-    "lint-staged": "10.2.2",
+    "lint-staged": "10.2.6",
     "microbundle": "0.12.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "2.0.5"
   }
 }
