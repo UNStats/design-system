@@ -1,0 +1,61 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { Box } from 'theme-ui';
+
+import { TwitterIcon } from '@undataforum/components';
+
+<Meta
+  title="@undataforum/components/TwitterIcon"
+  component={TwitterIcon}
+  decorators={[(story) => <Box sx={{ m: 2 }}>{story()}</Box>]}
+/>
+
+# TwitterIcon
+
+A `TwitterIcon` is a square inline element. The default size is 32 pixels:
+
+<Preview>
+  <Story name="default size">
+    <TwitterIcon />
+  </Story>
+</Preview>
+
+Use the `size` prop to set a custom size:
+
+<Preview>
+  <Story name="custom size">
+    <TwitterIcon size={64} />
+  </Story>
+</Preview>
+
+The `size` prop can also take an array to make the icon's size responsive:
+
+<Preview>
+  <Story name="responsive size">
+    <TwitterIcon size={[32, 64, 128]} />
+  </Story>
+</Preview>
+
+Use the `title` prop to set a title that appears when hovering over the icon:
+
+<Preview>
+  <Story name="with title">
+    <TwitterIcon title="Follow us on Twitter" />
+  </Story>
+</Preview>
+
+Since `TwitterIcon` is an inline element, it uses the text color of its parent
+element:
+
+<Preview>
+  <Story name="set color">
+    <Box color="primary">
+      <TwitterIcon />
+    </Box>
+  </Story>
+</Preview>
+
+## Props
+
+The props table is currently broken!
+
+<Props of={TwitterIcon} />
