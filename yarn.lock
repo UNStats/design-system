@@ -2433,7 +2433,7 @@
     ts-dedent "^1.1.0"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-docs@^5.3.19":
+"@storybook/addon-docs@5.3.19":
   version "5.3.19"
   resolved "https://registry.yarnpkg.com/@storybook/addon-docs/-/addon-docs-5.3.19.tgz#571dce4bd24664e5b2ea3570ccc9e238c901611a"
   integrity sha512-lGI4fDkfbg7gjj0ZTGBpGKykYKRd8mcLXY3M8/sdpA1a53dNABqL6kHoR/rbVJlk5tvEUY44QeEPKH+sOCu50g==
@@ -2497,26 +2497,7 @@
     react-lifecycles-compat "^3.0.4"
     react-select "^3.0.8"
 
-"@storybook/addon-storysource@5.3.19":
-  version "5.3.19"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-storysource/-/addon-storysource-5.3.19.tgz#ae693e88db5d220cb256a9ef4a2366c300e8d88c"
-  integrity sha512-W7mIAHuxYT+b1huaHCHLkBAh2MbeWmF8CxeBCFiOgZaYYQUTDEh018HJF8u2AqiWSouRhcfzhTnGxOo0hNRBgw==
-  dependencies:
-    "@storybook/addons" "5.3.19"
-    "@storybook/components" "5.3.19"
-    "@storybook/router" "5.3.19"
-    "@storybook/source-loader" "5.3.19"
-    "@storybook/theming" "5.3.19"
-    core-js "^3.0.1"
-    estraverse "^4.2.0"
-    loader-utils "^1.2.3"
-    prettier "^1.16.4"
-    prop-types "^15.7.2"
-    react-syntax-highlighter "^11.0.2"
-    regenerator-runtime "^0.13.3"
-    util-deprecate "^1.0.2"
-
-"@storybook/addons@5.3.19":
+"@storybook/addons@5.3.19", "@storybook/addons@^5.3.19":
   version "5.3.19"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-5.3.19.tgz#3a7010697afd6df9a41b8c8a7351d9a06ff490a4"
   integrity sha512-Ky/k22p6i6FVNvs1VhuFyGvYJdcp+FgXqFgnPyY/OXJW/vPDapdElpTpHJZLFI9I2FQBDcygBPU5RXkumQ+KUQ==
