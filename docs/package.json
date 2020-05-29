@@ -2,32 +2,26 @@
   "private": true,
   "name": "docs",
   "version": "0.1.0",
-  "description": "Storybook for the United Nations World Data Forum design system.",
+  "description": "Docs for the @UNDataForum design system.",
   "author": "Thilo Maier <maier@un.org>",
+  "repository": "undataforum/design-system",
   "scripts": {
-    "dev": "start-storybook -s ./static",
-    "build": "rm -rf public && build-storybook -s ./static",
+    "dev": "node -r dotenv/config node_modules/.bin/gatsby develop",
+    "build": "rm -rf public && gatsby build",
+    "clean": "gatsby clean",
     "prepare": "exit",
-    "clean": "exit",
     "purge": "rm -rf ./node_modules"
   },
   "dependencies": {
-    "@babel/core": "7.9.6",
-    "@storybook/addon-a11y": "5.3.19",
-    "@storybook/addon-docs": "5.3.19",
-    "@storybook/addon-knobs": "5.3.19",
-    "@storybook/react": "5.3.19",
+    "@primer/gatsby-theme-doctocat": "0.19.0",
     "@undataforum/assets": "*",
     "@undataforum/components": "*",
     "@undataforum/preset": "*",
-    "babel-loader": "8.1.0",
-    "deepmerge": "4.2.2",
+    "dotenv": "8.2.0",
+    "gatsby": "2.22.12",
     "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "theme-ui": "0.3.1"
-  },
-  "devDependencies": {
-    "@storybook/addons": "^5.3.19"
   }
 }

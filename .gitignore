@@ -1,5 +1,8 @@
+.cache
+.env
 .eslintcache
 .now
 dist
 node_modules
-storybook-static
+public
+yarn-error.log
