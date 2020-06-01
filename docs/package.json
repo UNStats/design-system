@@ -28,6 +28,6 @@
     "theme-ui": "0.3.1"
   },
   "devDependencies": {
-    "@storybook/addons": "^5.3.19"
+    "@storybook/addons": "5.3.19"
   }
 }
