@@ -1,0 +1,53 @@
+---
+title: TwitterIcon
+status: Experimental
+source: https://github.com/UNDataForum/design-system/blob/master/packages/components/src/twitter-icon.js
+---
+
+## Examples
+
+A `TwitterIcon` is a square inline element. The default size is 32 pixels:
+
+```jsx live
+<TwitterIcon />
+```
+
+Use the `size` prop to set a custom size:
+
+```jsx live
+<TwitterIcon size={64} />
+```
+
+The `size` prop can also take an array to make the icon's size responsive:
+
+```jsx live
+<TwitterIcon size={[32, 64, 128]} />
+```
+
+Use the `title` prop to set a title that appears when hovering over the icon:
+
+```jsx live
+<TwitterIcon title="Follow us on Twitter" />
+```
+
+Since `TwitterIcon` is an inline element, it uses the text color of its parent
+element:
+
+```jsx live
+<Box color="primary">
+  <TwitterIcon />
+</Box>
+```
+
+## System props
+
+`TwitterIcon` supports [space props](https://styled-system.com/api#space) and
+[color props](https://styled-system.com/api#color) from
+[Styled System](https://styled-system.com/).
+
+## Component props
+
+| Name  | Type   | Responsive | Default | Description                                                     |
+| :---- | :----- | :--------- | :------ | :-------------------------------------------------------------- |
+| size  | Number | yes        | 32      | Size in pixels of the square within which the icon is rendered. |
+| title | String | no         |         | Optional hover title.                                           |

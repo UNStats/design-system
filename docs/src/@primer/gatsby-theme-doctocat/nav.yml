@@ -1,7 +1,11 @@
 - title: Page 1
   url: /page-1
-- title: Example
-  url: /example
+- title: Components
+  url: /components
   children:
-    - title: Page 2
-      url: /example/page-2
+    - title: EmailIcon
+      url: /components/email-icon
+    - title: GitHubIcon
+      url: /components/github-icon
+    - title: TwitterIcon
+      url: /components/twitter-icon
