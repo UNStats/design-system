@@ -5,6 +5,7 @@ module.exports = {
     description: 'Design system for @UNDataForum websites.',
   },
   plugins: [
+    'gatsby-plugin-theme-ui',
     {
       resolve: '@primer/gatsby-theme-doctocat',
       options: {

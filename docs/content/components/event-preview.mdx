@@ -1,0 +1,234 @@
+---
+title: EventPreview
+status: Experimental
+source: https://github.com/UNDataForum/design-system/blob/master/packages/components/src/event-preview.js
+---
+
+An `EventPreview` is used to display an event in a list of events, e.g., on an
+overview page, and as header of an event page.
+
+## Examples
+
+In this example we render speakers with [`Names`](/components/names):
+
+```jsx live
+<EventPreview
+  event={{
+    tag: 'Webinar',
+    title: (
+      <Heading as="h1" sx={{ textAlign: 'start', mb: 3 }}>
+        Vestibulum proin eu mi nulla ac enim in tempor turpis
+      </Heading>
+    ),
+    date: 'October 14, 1983, 1:30 PM EDT',
+    duration: '60 minutes',
+    speakers: <Names values={['Willow Rangall', 'Suzy Cahan']} mb={3} />,
+    href: '/events/vestibulum-proin-eu',
+    registrationLink: '/register',
+  }}
+/>
+```
+
+In this example we render speakers with [`Avatars`](/components/avatars) and add
+a description:
+
+```jsx live
+<EventPreview
+  event={{
+    tag: 'Webinar',
+    title: (
+      <Heading as="h1" sx={{ textAlign: 'start', mb: 3 }}>
+        Vestibulum proin eu mi nulla ac enim in tempor turpis
+      </Heading>
+    ),
+    date: 'October 14, 1983, 1:30 PM EDT',
+    duration: '90 minutes',
+    speakers: (
+      <Avatars
+        values={[
+          {
+            id: 'a6b4babd-6b11-4b81-8ac0-73cefb040cb7',
+            avatar: (
+              <Image
+                alt="Portrait of Willow Rangall"
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                src="/avatar0.png"
+              />
+            ),
+            name: 'Willow Rangall (Moderator)',
+            href: '/profiles/willow-rangall',
+          },
+          {
+            id: '561285d3-4eed-473c-baba-6b3564f4e6a7',
+            avatar: (
+              <Image
+                alt="Portrait of Suzy Cahan"
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                src="/avatar1.png"
+              />
+            ),
+            name: 'Suzy Cahan',
+            href: '/profiles/suzy-cahan',
+          },
+          {
+            id: '453d9d8a-b1e6-4cac-9fdd-b6c354fa3262',
+            avatar: (
+              <Image
+                alt="Portrait of Sandra Abramovici"
+                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                src="/avatar2.png"
+              />
+            ),
+            name: 'Sandra Abramovici',
+            href: '/profiles/sandra-abramovici',
+          },
+        ]}
+        align="start"
+        mb={3}
+      />
+    ),
+    description: (
+      <Text as="p" sx={{ lineHeight: 'body', textAlign: 'start', mb: 3 }}>
+        Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed
+        interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu
+        massa. Donec dapibus. Duis at velit eu est congue elementum. In hac
+        habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis,
+        diam erat fermentum justo, nec condimentum neque sapien placerat ante.
+        Nulla justo.
+      </Text>
+    ),
+    registrationLink: '/register',
+  }}
+/>
+```
+
+This example is an event without speakers:
+
+```jsx live
+<EventPreview
+  event={{
+    tag: 'Webinar',
+    title: (
+      <Heading as="h1" sx={{ textAlign: 'start', mb: 3 }}>
+        Vestibulum proin eu mi nulla ac enim in tempor turpis
+      </Heading>
+    ),
+    date: 'October 14, 1983, 1:30 PM EDT',
+    duration: '60 minutes',
+    href: '/events/vestibulum-proin-eu',
+    registrationLink: '/register',
+  }}
+/>
+```
+
+In this example we use custom variant `secondary`:
+
+```jsx live
+<EventPreview
+  event={{
+    tag: 'Webinar',
+    title: (
+      <Heading as="h1" sx={{ textAlign: 'start', mb: 3 }}>
+        Vestibulum proin eu mi nulla ac enim in tempor turpis
+      </Heading>
+    ),
+    date: 'October 14, 1983, 1:30 PM EDT',
+    duration: '60 minutes',
+    speakers: <Names values={['Willow Rangall', 'Suzy Cahan']} mb={3} />,
+    href: '/events/vestibulum-proin-eu',
+    registrationLink: '/register',
+  }}
+  variant="secondary"
+/>
+```
+
+The default variant is `primary`. The value of `variant` is passed on to the tag
+and buttons (if present). `@undataforum/preset` includes the following
+defintions to make variants `primary` and `secondary` work:
+
+```jsx
+badges: {
+  primary: {
+    color: 'background',
+    bg: 'primary',
+  },
+  secondary: {
+    color: 'background',
+    bg: 'secondary',
+  },
+},
+
+buttons: {
+  default: {
+    fontSize: 2,
+    fontWeight: 'bold',
+    borderRadius: 'default',
+  },
+  primary: {
+    variant: 'buttons.default',
+    color: 'background',
+    bg: 'primary',
+  },
+  secondary: {
+    variant: 'buttons.default',
+    color: 'background',
+    bg: 'secondary',
+  },
+  outline: {
+    default: {
+      variant: 'buttons.default',
+      boxShadow: '0 0 0 2px inset',
+      // Override default `bg: 'primary'` from Theme UI's Button.
+      bg: 'inherit',
+    },
+    primary: {
+      variant: 'buttons.outline.default',
+      color: 'primary',
+    },
+    secondary: {
+      variant: 'buttons.outline.default',
+      color: 'secondary',
+    },
+  },
+},
+```
+
+You can define additional variants in your theme.
+
+## System props
+
+`EventPreview` supports [space props](https://styled-system.com/api#space) and
+[color props](https://styled-system.com/api#color) from
+[Styled System](https://styled-system.com/).
+
+## Component props
+
+| Name    | Type   | Default | Required | Description                                |
+| :------ | :----- | :------ | :------- | :----------------------------------------- |
+| event   | Object |         | ✓        | See below.                                 |
+| variant | String | primary |          | Variants need to be defined in your theme. |
+
+### Event
+
+| Name             | Type   | Default | Required | Description                                                            |
+| :--------------- | :----- | :------ | :------- | ---------------------------------------------------------------------- |
+| tag              | String |         |          | Tag that is dispalyed at the top.                                      |
+| title            | Node   |         | ✓        | Component that renders a title (composition pattern).                  |
+| speakers         | Node   |         |          | Component that renders speakers (composition pattern).                 |
+| date             | String |         | ✓        | Formatted event date.                                                  |
+| duration         | String |         | ✓        | Formatted event duration.                                              |
+| description      | Node   |         |          | Component that renders a description (composition pattern).            |
+| href             | String |         |          | Link to event page. Triggers rendering of details button when present. |
+| registrationLink | String |         |          | Link to registration page. Triggers rendering of registration button.  |
+
+`title`, `speakers` and `description` are React components that give you
+flexibility in how to render an `EventPreview` without making its component API
+too complicated. But this flexibility comes with the responsiblity to manage
+margins. Generally, you should use bottom margins only and no top margins:
+
+- `title` may not have a top margin, only bottom margin. The bottom margin
+  spaces it from what follows, either `speakers` or the date.
+- `speakers` may not have a top margin, only bottom margin. The bottom margin
+  spaces it from the date.
+- `description` may not have a top margin, only bottom margin. The bottom margin
+  should be zero if it is not followed by a button.

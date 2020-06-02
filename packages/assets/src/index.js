@@ -1,1 +1,1 @@
-export { Logo } from './components';
+export { default as Logo } from './logo';
