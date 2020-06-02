@@ -5,18 +5,6 @@ import { Button, Flex, Text } from 'theme-ui';
 import Badges from './badges';
 import Link from './link';
 
-/**
- * The variant prop applies to buttons and badges only.
- * Text and background color are done via `color` and `bg`.
- *
- * There are no restrictions on what the variants can be called except that the default variant is called `primary`.
- * If you use @undataforum/preset you can use variants `primary` and `secondary` out of the box.
- * In your project you need to add custom variants under the `badges` and `buttons` key.
- */
-
-// How margins work in this component:
-// What the title prop renders (heading) may have no top margin, only bottom margin.
-// What the description prop renders (paragraph) may have no top margin, only bottom margin.
 const EventPreview = ({ event, variant = 'primary', ...props }) => (
   <Flex
     {...props}

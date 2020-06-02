@@ -16,6 +16,20 @@ const theme = {
     },
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  layout: {
+    container: {
+      px: [2, 3, 4],
+      maxWidth: '64rem',
+    },
+    narrow: {
+      variant: 'layout.container',
+      maxWidth: '48rem',
+    },
+    wide: {
+      variant: 'layout.container',
+      maxWidth: '96rem',
+    },
+  },
 
   // Typography.
   fonts: {

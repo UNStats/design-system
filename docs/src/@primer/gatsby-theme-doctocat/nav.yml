@@ -5,6 +5,8 @@
   children:
     - title: EmailIcon
       url: /components/email-icon
+    - title: EventPreview
+      url: /components/event-preview
     - title: GitHubIcon
       url: /components/github-icon
     - title: TwitterIcon
