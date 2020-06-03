@@ -17,13 +17,17 @@
     "react",
     "theme-ui"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "prepare": "microbundle --format modern,cjs",
     "watch": "microbundle watch --format modern,cjs",
     "clean": "rm -rf ./dist",
     "purge": "rm -rf ./node_modules"
   },
-  "publishConfig": {
-    "access": "public"
+  "dependencies": {
+    "@theme-ui/preset-base": "0.3.0",
+    "deepmerge": "4.2.2"
   }
 }

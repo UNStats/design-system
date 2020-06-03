@@ -1,21 +1,27 @@
-import colors, { pairings } from './colors';
+import preset from '@theme-ui/preset-base';
+import merge from 'deepmerge';
 
-const theme = {
-  // Layout.
+// Universal colors.
+const black = '#000000';
+const white = '#ffffff';
+const gray = '#717171';
+
+// Styleguide colors.
+const forumBlue = '#00609d';
+const blue = '#0e6a9c';
+const green = '#266f37';
+const red = '#a21723';
+const yellow = '#c59b25';
+
+const theme = merge(preset, {
+  // Breakpoints.
   breakpoints: ['30em', '60em'],
-  sizes: {
-    width: {
-      narrow: '48rem',
-      default: '64rem',
-      wide: '96rem',
-    },
-    height: {
-      small: 32,
-      medium: 64,
-      large: 128,
-    },
-  },
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+
+  // Layout.
+
+  // sizes: from @theme-ui/preset-base.
+
+  // Variants for Container.
   layout: {
     container: {
       px: [2, 3, 4],
@@ -31,28 +37,74 @@ const theme = {
     },
   },
 
+  sizes: {
+    // Widths are for Container and can be replaced with layout.container, layout.narrow and layout.wide variants.
+    width: {
+      narrow: '48rem',
+      default: '64rem',
+      wide: '96rem',
+    },
+    // Heights are used for boxes around logos, which adjust to size.
+    height: {
+      small: 32,
+      medium: 64,
+      large: 128,
+    },
+  },
+
   // Typography.
-  fonts: {
-    body: 'system-ui, sans-serif',
-    heading: 'system-ui, sans-serif',
-    monospace: 'Menlo, monospace',
-  },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
-  fontWeights: {
-    body: 400,
-    heading: 700,
-    bold: 700,
-  },
-  lineHeights: {
-    body: 1.5,
-    heading: 1.125,
-  },
+
+  // fonts: from @theme-ui/preset-base.
+
+  // fontSizes: from @theme-ui/preset-base.
+
+  // fontWeights: from @theme-ui/preset-base.
+
+  // lineHeights: from @theme-ui/preset-base.
 
   // Colors.
-  colors,
-  pairings,
+
+  // Color abstractions.
+  colors: {
+    // Theme UI colors.
+    text: black,
+    background: white,
+    primary: blue,
+    secondary: green,
+    accent: red,
+    muted: gray,
+    // Style guide colors.
+    forumBlue,
+    blue,
+    green,
+    red,
+    yellow,
+    // Additional colors.
+    gray,
+  },
+
+  // Pairings a hard to define in a universal way and should be defined in a Gatsby theme.
+  pairings: {
+    primary: {
+      color: 'primary',
+      bg: 'background',
+    },
+    'primary-inverse': {
+      color: 'background',
+      bg: 'primary',
+    },
+    secondary: {
+      color: 'secondary',
+      bg: 'background',
+    },
+    'secondary-inverse': {
+      color: 'background',
+      bg: 'secondary',
+    },
+  },
 
   // Styling.
+
   borders: [0, '1px solid', '2px solid', '3px solid'],
 
   radii: {
@@ -60,6 +112,7 @@ const theme = {
     circle: 99999,
   },
 
+  // Variants for Badge component: https://theme-ui.com/components/badge/.
   badges: {
     primary: {
       color: 'background',
@@ -71,6 +124,7 @@ const theme = {
     },
   },
 
+  // Variants for buttons.
   buttons: {
     default: {
       fontSize: 2,
@@ -105,12 +159,7 @@ const theme = {
     },
   },
 
-  // You can use different components to render internal and external links.
-  link: {
-    internal: 'a',
-    external: 'a',
-  },
-
+  //
   names: {
     default: {
       fontWeight: 'body',
@@ -120,69 +169,50 @@ const theme = {
     },
   },
 
+  // You can use different components to render internal and external links.
+  link: {
+    internal: 'a',
+    external: 'a',
+  },
+
   // Styles for styling Markdown and Styled from Theme UI.
   styles: {
-    root: {
-      fontFamily: 'body',
-      lineHeight: 'body',
-      fontWeight: 'body',
-    },
+    // root: from @theme-ui/preset-base.
     h1: {
-      fontFamily: 'heading',
-      lineHeight: 'heading',
-      fontWeight: 'heading',
-      fontSize: 5,
+      // Deep merge with h1 from @theme-ui/preset-base.
       mt: 0,
       mb: 4,
     },
     h2: {
-      fontFamily: 'heading',
-      lineHeight: 'heading',
-      fontWeight: 'heading',
-      fontSize: 4,
+      // Deep merge with h2 from @theme-ui/preset-base.
       mt: 0,
       mb: 3,
     },
     h3: {
-      fontFamily: 'heading',
-      lineHeight: 'heading',
-      fontWeight: 'heading',
-      fontSize: 3,
+      // Deep merge with h3 from @theme-ui/preset-base.
       mt: 0,
       mb: 2,
     },
     h4: {
-      fontFamily: 'heading',
-      lineHeight: 'heading',
-      fontWeight: 'heading',
-      fontSize: 2,
+      // Deep merge with h4 from @theme-ui/preset-base.
       mt: 0,
       mb: 2,
     },
     h5: {
-      fontFamily: 'heading',
-      lineHeight: 'heading',
-      fontWeight: 'heading',
-      fontSize: 1,
-      mt: 0,
-    },
-    h6: {
-      fontFamily: 'heading',
-      lineHeight: 'heading',
-      fontWeight: 'heading',
-      fontSize: 0,
+      // Deep merge with h5 from @theme-ui/preset-base.
       mt: 0,
       mb: 2,
     },
-    // The description in EventPreview is rendered with MDX.
-    // The result will have the styles below.
-    // If color was set to 'text' then description would render in text color in promobox on homepage.
-    // Therefore set color to 'inherit' to let parent determine color.
+    h6: {
+      // Deep merge with h6 from @theme-ui/preset-base.
+      mt: 0,
+      mb: 2,
+    },
     p: {
+      // Deep merge with p from @theme-ui/preset-base.
+      // MDX paragraphs are rendered with these styles.
+      // Set color to inherit to allow adapting to parent text color.
       color: 'inherit',
-      fontFamily: 'body',
-      fontWeight: 'body',
-      lineHeight: 'body',
       mt: 0,
       mb: 3,
       '&:last-child': {
@@ -190,6 +220,7 @@ const theme = {
       },
     },
     a: {
+      // Deep merge with a from @theme-ui/preset-base.
       textDecoration: 'none',
       '@media (hover: hover)': {
         '&:hover': {
@@ -198,34 +229,13 @@ const theme = {
       },
       WebkitTapHighlightColor: 'transparent',
     },
-    pre: {
-      fontFamily: 'monospace',
-      overflowX: 'auto',
-      code: {
-        color: 'inherit',
-      },
-    },
-    code: {
-      fontFamily: 'monospace',
-      fontSize: 'inherit',
-    },
-    table: {
-      width: '100%',
-      borderCollapse: 'separate',
-      borderSpacing: 0,
-    },
-    th: {
-      textAlign: 'left',
-      borderBottomStyle: 'solid',
-    },
-    td: {
-      textAlign: 'left',
-      borderBottomStyle: 'solid',
-    },
-    img: {
-      maxWidth: '100%',
-    },
+    // pre: from @theme-ui/preset-base.
+    // code: from @theme-ui/preset-base.
+    // table: from @theme-ui/preset-base.
+    // th: from @theme-ui/preset-base.
+    // td: from @theme-ui/preset-base.
+    // img: from @theme-ui/preset-base.
   },
-};
+});
 
 export default theme;
