@@ -5,6 +5,7 @@ import { Avatars, PostPreview } from '@undataforum/components';
 const RenderWithNames = () => (
   <PostPreview
     post={{
+      tag: 'Post',
       title: (
         <Heading as="h1" mb={3}>
           Vestibulum proin eu mi nulla ac enim in tempor turpis

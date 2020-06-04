@@ -5,6 +5,7 @@ import { Names, PostPreview } from '@undataforum/components';
 const posts = [
   {
     id: 'cbdb6147-cab8-5511-a325-28d4dee7f914',
+    tag: 'Blog',
     title: (
       <Heading as="h2" mb={3}>
         Et nulla in incididunt cupidatat pariatur sit sint proident
@@ -27,6 +28,7 @@ const posts = [
   },
   {
     id: 'a1ca7aa8-f666-5f7b-9dd2-bac6f34ac744',
+    tag: 'Article',
     title: (
       <Heading as="h2" mb={3}>
         Dolore in eiusmod culpa duis ut aliquip et ea
@@ -49,6 +51,7 @@ const posts = [
   },
   {
     id: '057a4af9-1e4c-5cfa-b633-237833b24ce0',
+    tag: 'News',
     title: (
       <Heading as="h2" mb={3}>
         Irure aliquip ipsum eu qui cupidatat sunt cillum eu velit dolor
@@ -67,6 +70,7 @@ const posts = [
   },
   {
     id: '740f7b45-4a4a-5ba7-8b33-ce9946775a82',
+    tag: 'Opinion',
     title: (
       <Heading as="h2" mb={3}>
         Eu sit excepteur non cupidatat
