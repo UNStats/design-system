@@ -16,7 +16,7 @@ In this example we render speakers with [`Names`](/components/names):
   event={{
     tag: 'Webinar',
     title: (
-      <Heading as="h1" sx={{ textAlign: 'start', mb: 3 }}>
+      <Heading as="h1" mb={3}>
         Vestibulum proin eu mi nulla ac enim in tempor turpis
       </Heading>
     ),
@@ -37,7 +37,7 @@ a description:
   event={{
     tag: 'Webinar',
     title: (
-      <Heading as="h1" sx={{ textAlign: 'start', mb: 3 }}>
+      <Heading as="h1" mb={3}>
         Vestibulum proin eu mi nulla ac enim in tempor turpis
       </Heading>
     ),
@@ -88,7 +88,7 @@ a description:
       />
     ),
     description: (
-      <Text as="p" sx={{ lineHeight: 'body', textAlign: 'start', mb: 3 }}>
+      <Text as="p" variant="text.default" mb={3}>
         Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed
         interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu
         massa. Donec dapibus. Duis at velit eu est congue elementum. In hac
@@ -109,7 +109,7 @@ This example is an event without speakers:
   event={{
     tag: 'Webinar',
     title: (
-      <Heading as="h1" sx={{ textAlign: 'start', mb: 3 }}>
+      <Heading as="h1" mb={3}>
         Vestibulum proin eu mi nulla ac enim in tempor turpis
       </Heading>
     ),
@@ -128,7 +128,7 @@ In this example we use custom variant `secondary`:
   event={{
     tag: 'Webinar',
     title: (
-      <Heading as="h1" sx={{ textAlign: 'start', mb: 3 }}>
+      <Heading as="h1" mb={3}>
         Vestibulum proin eu mi nulla ac enim in tempor turpis
       </Heading>
     ),
@@ -226,9 +226,9 @@ flexibility in how to render an `EventPreview` without making its component API
 too complicated. But this flexibility comes with the responsiblity to manage
 margins. Generally, you should use bottom margins only and no top margins:
 
-- `title` may not have a top margin, only bottom margin. The bottom margin
+- `title` may not have a top margin, only a bottom margin. The bottom margin
   spaces it from what follows, either `speakers` or the date.
-- `speakers` may not have a top margin, only bottom margin. The bottom margin
+- `speakers` may not have a top margin, only a bottom margin. The bottom margin
   spaces it from the date.
-- `description` may not have a top margin, only bottom margin. The bottom margin
-  should be zero if it is not followed by a button.
+- `description` may not have a top margin, only a bottom margin. The bottom
+  margin should be zero if it is not followed by a button.
