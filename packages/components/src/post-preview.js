@@ -45,7 +45,6 @@ const PostPreview = ({ post, variant = 'primary', ...props }) => {
             sx={{
               alignSelf: ['stretch', 'flex-start'],
               whiteSpace: 'nowrap',
-              mt: 3,
             }}
             href={post.href}
             variant={variant}

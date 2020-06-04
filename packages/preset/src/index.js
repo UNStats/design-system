@@ -62,6 +62,19 @@ const theme = merge(preset, {
 
   // lineHeights: from @theme-ui/preset-base.
 
+  // Starting with theme-ui 0.4.0, Text will support variants under text key: https://theme-ui.com/components/text.
+  // In theme-ui 0.3.x, the default variant needs to be referenced with 'text.default'.
+  // In theme-ui 0.4.0 the default variant does not need to referenced at all.
+  text: {
+    default: {
+      color: 'text',
+      fontFamily: 'body',
+      fontWeight: 'body',
+      lineHeight: 'body',
+      fontSize: 2,
+    },
+  },
+
   // Colors.
 
   // Color abstractions.
@@ -124,7 +137,7 @@ const theme = merge(preset, {
     },
   },
 
-  // Variants for buttons.
+  // Variants for Button component: https://theme-ui.com/components/button.
   buttons: {
     default: {
       fontSize: 2,
@@ -159,7 +172,7 @@ const theme = merge(preset, {
     },
   },
 
-  //
+  // Variants for Names component.
   names: {
     default: {
       fontWeight: 'body',
