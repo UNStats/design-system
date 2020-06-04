@@ -7,12 +7,11 @@ const RenderWithAvatars = () => (
     event={{
       tag: 'Webinar',
       title: (
-        <Heading as="h1" sx={{ textAlign: 'start', mb: 3 }}>
+        <Heading as="h1" mb={3}>
           Vestibulum proin eu mi nulla ac enim in tempor turpis
         </Heading>
       ),
-      date: 'October 14, 1983, 1:30 PM EDT',
-      duration: '90 minutes',
+      date: 'October 14, 1983, 1:30 PM EDT (90 minutes)',
       speakers: (
         <Avatars
           values={[
@@ -58,7 +57,7 @@ const RenderWithAvatars = () => (
         />
       ),
       description: (
-        <Text as="p" sx={{ lineHeight: 'body', textAlign: 'start', mb: 3 }}>
+        <Text as="p" variant="text.default" mb={3}>
           Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed
           interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu
           massa. Donec dapibus. Duis at velit eu est congue elementum. In hac

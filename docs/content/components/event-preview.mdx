@@ -20,8 +20,7 @@ In this example we render speakers with [`Names`](/components/names):
         Vestibulum proin eu mi nulla ac enim in tempor turpis
       </Heading>
     ),
-    date: 'October 14, 1983, 1:30 PM EDT',
-    duration: '60 minutes',
+    date: 'October 14, 1983, 1:30 PM EDT (60 minutes)',
     speakers: <Names values={['Willow Rangall', 'Suzy Cahan']} mb={3} />,
     href: '/events/vestibulum-proin-eu',
     registrationLink: '/register',
@@ -41,8 +40,7 @@ a description:
         Vestibulum proin eu mi nulla ac enim in tempor turpis
       </Heading>
     ),
-    date: 'October 14, 1983, 1:30 PM EDT',
-    duration: '90 minutes',
+    date: 'October 14, 1983, 1:30 PM EDT (90 minutes)',
     speakers: (
       <Avatars
         values={[
@@ -113,8 +111,7 @@ This example is an event without speakers:
         Vestibulum proin eu mi nulla ac enim in tempor turpis
       </Heading>
     ),
-    date: 'October 14, 1983, 1:30 PM EDT',
-    duration: '60 minutes',
+    date: '14–15 Oct 1983, 12:00–13:30 EDT',
     href: '/events/vestibulum-proin-eu',
     registrationLink: '/register',
   }}
@@ -132,8 +129,7 @@ In this example we use custom variant `secondary`:
         Vestibulum proin eu mi nulla ac enim in tempor turpis
       </Heading>
     ),
-    date: 'October 14, 1983, 1:30 PM EDT',
-    duration: '60 minutes',
+    date: 'October 14, 1983, 1:30 PM EDT (60 minutes)',
     speakers: <Names values={['Willow Rangall', 'Suzy Cahan']} mb={3} />,
     href: '/events/vestibulum-proin-eu',
     registrationLink: '/register',
@@ -216,7 +212,6 @@ You can define additional variants in your theme.
 | title            | Node   |         | ✓        | Component that renders a title (composition pattern).                  |
 | speakers         | Node   |         |          | Component that renders speakers (composition pattern).                 |
 | date             | String |         | ✓        | Formatted event date.                                                  |
-| duration         | String |         | ✓        | Formatted event duration.                                              |
 | description      | Node   |         |          | Component that renders a description (composition pattern).            |
 | href             | String |         |          | Link to event page. Triggers rendering of details button when present. |
 | registrationLink | String |         |          | Link to registration page. Triggers rendering of registration button.  |
