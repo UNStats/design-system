@@ -15,6 +15,7 @@ description:
 ```jsx live
 <PostPreview
   post={{
+    tag: 'Post',
     title: (
       <Heading as="h1" mb={3}>
         Vestibulum proin eu mi nulla ac enim in tempor turpis
@@ -54,7 +55,7 @@ description:
 ```
 
 In this example we render authors with [`Avatars`](/components/avatars) and omit
-a description:
+tag and description:
 
 ```jsx live
 <PostPreview
@@ -201,6 +202,7 @@ This example is a post without authors:
 ```jsx live
 <PostPreview
   post={{
+    tag: 'News',
     title: (
       <Heading as="h1" mb={3}>
         Vestibulum proin eu mi nulla ac enim in tempor turpis
@@ -227,6 +229,7 @@ In this example we use custom variant `secondary`:
 ```jsx live
 <PostPreview
   post={{
+    tag: 'Post',
     title: (
       <Heading as="h1" mb={3}>
         Vestibulum proin eu mi nulla ac enim in tempor turpis{' '}
@@ -309,6 +312,7 @@ You can define additional variants in your theme.
 
 | Name        | Type   | Default | Required | Description                                                           |
 | :---------- | :----- | :------ | :------- | --------------------------------------------------------------------- |
+| tag         | String |         |          | Tag that is dispalyed at the top.                                     |
 | title       | Node   |         | ✓        | Component that renders a title (composition pattern).                 |
 | date        | String |         | ✓        | Formatted event date.                                                 |
 | authors     | Node   |         |          | Component that renders authors (composition pattern).                 |
