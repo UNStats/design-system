@@ -22,8 +22,7 @@ const events = [
         mb={3}
       />
     ),
-    date: 'Display date',
-    duration: 'display duration',
+    date: 'Formatted date',
     description: (
       <Text as="p" variant="text.default" mb={3}>
         Totam rem aperiam. Inventore veritatis et quasi architecto beatae vitae
@@ -43,8 +42,7 @@ const events = [
       </Heading>
     ),
     speakers: <Names values={['Galina Misselbrook', 'Etti Clapson']} mb={3} />,
-    date: 'Display date',
-    duration: 'display duration',
+    date: 'Formatted date',
     description: (
       <Text as="p" variant="text.default" mb={3}>
         Laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim
@@ -67,8 +65,7 @@ const events = [
       </Heading>
     ),
     speakers: <Names values={['Berti Bantham']} mb={3} />,
-    date: 'Display date',
-    duration: 'display duration',
+    date: 'Formatted date',
     description: (
       <Text as="p" variant="text.default" mb={3}>
         Corrupti quos dolores et quas molestias excepturi sint occaecati. Animi,
@@ -94,8 +91,7 @@ const events = [
         mb={3}
       />
     ),
-    date: 'Display date',
-    duration: 'display duration',
+    date: 'Formatted date',
     description: (
       <Text as="p" variant="text.default" mb={3}>
         Nisi ut aliquid ex ea commodi consequatur? Facere possimus, omnis

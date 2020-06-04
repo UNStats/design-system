@@ -29,7 +29,7 @@ const EventPreview = ({ event, variant = 'primary', ...props }) => (
         mb: event.description || event.href || event.registrationLink ? 3 : 0,
       }}
     >
-      {`${event.date} (${event.duration})`}
+      {event.date}
     </Text>
     {event.description && event.description}
     {(event.href || event.registrationLink) && (
@@ -73,7 +73,6 @@ EventPreview.propTypes = {
     tag: string,
     title: node.isRequired,
     date: string.isRequired,
-    duration: string.isRequired,
     speakers: node,
     description: node,
     href: string,
