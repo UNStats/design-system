@@ -1,4 +1,6 @@
-# @undataforum/components
+---
+title: '@undataforum/components'
+---
 
 A library of React components for the United Nations World Data Forum website.
 Built with [Theme UI](https://theme-ui.com).
@@ -7,9 +9,7 @@ Built with [Theme UI](https://theme-ui.com).
 
 In order to install package `@undataforum/components` run
 
-```bash
-yarn add @undataforum/components
-```
+    yarn add @undataforum/components
 
 to add it to your dependencies. Install the following peer dependencies:
 `react`, `react-dom` and `theme-ui`.
@@ -17,33 +17,28 @@ to add it to your dependencies. Install the following peer dependencies:
 Import components like this
 
 ```jsx
-import { Header, PostPreview, ProfilePreview } from '@undataforum/components';
+import { PostPreview } from '@undataforum/components';
 ```
 
 ## Explore
 
-You can explore all components at https://components.undataforum.org. To explore
-components locally run
+You can explore all components at
+https://design-system.undataforum.org/components. To explore components locally
+run
 
-```bash
-yarn workspace docs start
-```
+    yarn workspace docs run dev
 
 ## Develop
 
 Work with two terminals. In the first terminal run
 
-```bash
-yarn workspace @undataforum/components run watch
-```
+    yarn workspace @undataforum/components run watch
 
 and in the second terminal run
 
-```bash
-yarn workspace docs start
-```
+    yarn workspace docs run dev
 
 The first command watches for changes in the `@undataforum/components` workspace
-and bundles the `@undataforum/components` package whenever it detects a change.
+and bundles the `@undataforum/components` package whenever it detects changes.
 The second command launches Storybook, which uses the local
 `@undataforum/components` package as dependency.

@@ -4,6 +4,7 @@ export { default as ColorCard } from './color-card';
 export { default as EventPreview } from './event-preview';
 export { default as Footer } from './footer';
 export { default as Header } from './header';
+export { default as Icon } from './icon';
 export { default as Names } from './names';
 export { default as NewTabLink } from './new-tab-link';
 export { default as PostPreview } from './post-preview';
