@@ -13,5 +13,7 @@
       url: /components/icon
     - title: PostPreview
       url: /components/post-preview
+    - title: ProfilePreview
+      url: /components/profile-preview
     - title: TwitterIcon
       url: /components/twitter-icon
