@@ -96,8 +96,6 @@ const alignments = ['start', 'center', 'end'];
 const alignType = oneOf(alignments);
 
 ProfilePreview.propTypes = {
-  align: oneOfType([alignType, arrayOf(alignType)]),
-  fontSize: oneOfType([number, arrayOf(number)]),
   profile: shape({
     avatar: node.isRequired,
     honorific: string,
@@ -113,6 +111,8 @@ ProfilePreview.propTypes = {
     ),
     badges: arrayOf(string),
   }).isRequired,
+  align: oneOfType([alignType, arrayOf(alignType)]),
+  fontSize: oneOfType([number, arrayOf(number)]),
   variant: string,
 };
 

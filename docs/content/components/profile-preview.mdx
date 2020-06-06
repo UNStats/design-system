@@ -1,0 +1,303 @@
+---
+title: ProfilePreview
+status: Experimental
+source: https://github.com/UNDataForum/design-system/blob/master/packages/components/src/profile-preview.js
+---
+
+A `ProfilePreview` is used to display a profile in a list of profiles, e.g., on
+an overview page, or as header of a profile page.
+
+## Examples
+
+This is a complete profile with default centered alignment:
+
+```jsx live
+<ProfilePreview
+  profile={{
+    avatar: (
+      <Image
+        alt="Nance MacFadin"
+        sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+        src="/avatar0.png"
+      />
+    ),
+    honorific: 'His Excellency',
+    name: 'Nance MacFadin',
+    jobtitle: 'Help Desk Operator',
+    organization: 'Schuster-Senger',
+    socialIcons: [
+      {
+        id: 'twitter',
+        username: 'nance-mcfadin',
+        title: 'Follow me on Twitter',
+      },
+      {
+        id: 'github',
+        username: 'nance-mcfadin',
+        title: 'Follow me on GitHub',
+      },
+    ],
+    badges: ['Committee Member', 'Keynote Speaker'],
+  }}
+/>
+```
+
+It can also be aligned left (start):
+
+```jsx live
+<ProfilePreview
+  profile={{
+    avatar: (
+      <Image
+        alt="Nance MacFadin"
+        sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+        src="/avatar0.png"
+      />
+    ),
+    honorific: 'His Excellency',
+    name: 'Nance MacFadin',
+    jobtitle: 'Help Desk Operator',
+    organization: 'Schuster-Senger',
+    socialIcons: [
+      {
+        id: 'twitter',
+        username: 'nance-mcfadin',
+        title: 'Follow me on Twitter',
+      },
+      {
+        id: 'github',
+        username: 'nance-mcfadin',
+        title: 'Follow me on GitHub',
+      },
+    ],
+    badges: ['Committee Member', 'Keynote Speaker'],
+  }}
+  align="start"
+/>
+```
+
+Or aligned right (end):
+
+```jsx live
+<ProfilePreview
+  profile={{
+    avatar: (
+      <Image
+        alt="Nance MacFadin"
+        sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+        src="/avatar0.png"
+      />
+    ),
+    honorific: 'His Excellency',
+    name: 'Nance MacFadin',
+    jobtitle: 'Help Desk Operator',
+    organization: 'Schuster-Senger',
+    socialIcons: [
+      {
+        id: 'twitter',
+        username: 'nance-mcfadin',
+        title: 'Follow me on Twitter',
+      },
+      {
+        id: 'github',
+        username: 'nance-mcfadin',
+        title: 'Follow me on GitHub',
+      },
+    ],
+    badges: ['Committee Member', 'Keynote Speaker'],
+  }}
+  align="end"
+/>
+```
+
+This is a minimal profile with avatar only:
+
+```jsx live
+<ProfilePreview
+  profile={{
+    avatar: (
+      <Image
+        alt="Willow Rangall"
+        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+        src="/avatar3.png"
+      />
+    ),
+  }}
+/>
+```
+
+This is a profile without job title:
+
+```jsx live
+<ProfilePreview
+  profile={{
+    avatar: (
+      <Image
+        alt="Nance MacFadin"
+        sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+        src="/avatar0.png"
+      />
+    ),
+    name: 'Nance MacFadin',
+    organization: 'Schuster-Senger',
+    badges: ['Committee Member', 'Keynote Speaker'],
+  }}
+/>
+```
+
+This is a profile without organization:
+
+```jsx live
+<ProfilePreview
+  profile={{
+    avatar: (
+      <Image
+        alt="Nance MacFadin"
+        sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+        src="/avatar0.png"
+      />
+    ),
+    name: 'Nance MacFadin',
+    jobtitle: 'Help Desk Operator',
+    badges: ['Committee Member', 'Keynote Speaker'],
+  }}
+/>
+```
+
+This is a profile without job title and organization:
+
+```jsx live
+<ProfilePreview
+  profile={{
+    avatar: (
+      <Image
+        alt="Nance MacFadin"
+        sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+        src="/avatar0.png"
+      />
+    ),
+    name: 'Nance MacFadin',
+    badges: ['Committee Member', 'Keynote Speaker'],
+  }}
+/>
+```
+
+This is a profile with avatar image and name only:
+
+```jsx live
+<ProfilePreview
+  profile={{
+    avatar: (
+      <Image
+        alt="Suzy Cahan"
+        sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+        src="/avatar4.png"
+      />
+    ),
+    name: 'Suzy Cahan',
+  }}
+/>
+```
+
+Since the `avatar` prop uses composition to render the avatar image, you have
+full control over how to render it. In this example we make the avatar image
+responsive:
+
+```jsx live
+<ProfilePreview
+  profile={{
+    avatar: (
+      <Image
+        alt="Sandra Abramovici"
+        sx={{
+          borderRadius: 'circle',
+          height: [32, 64, 128],
+          width: [32, 64, 128],
+        }}
+        src="/avatar5.png"
+      />
+    ),
+    name: 'Sandra Abramovici',
+  }}
+/>
+```
+
+In this example we use custom variant `secondary`:
+
+```jsx live
+<ProfilePreview
+  profile={{
+    avatar: (
+      <Image
+        alt="Nance MacFadin"
+        sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+        src="/avatar0.png"
+      />
+    ),
+    honorific: 'His Excellency',
+    name: 'Nance MacFadin',
+    jobtitle: 'Help Desk Operator',
+    organization: 'Schuster-Senger',
+    socialIcons: [
+      {
+        id: 'twitter',
+        username: 'nance-mcfadin',
+        title: 'Follow me on Twitter',
+      },
+      {
+        id: 'github',
+        username: 'nance-mcfadin',
+        title: 'Follow me on GitHub',
+      },
+    ],
+    badges: ['Committee Member', 'Keynote Speaker'],
+  }}
+  variant="secondary"
+/>
+```
+
+The default variant is `primary`. The value of `variant` is passed on to badges
+(if present). `@undataforum/preset` includes the following defintions to make
+variants `primary` and `secondary` work:
+
+```jsx
+badges: {
+    primary: {
+      color: 'background',
+      bg: 'primary',
+    },
+    secondary: {
+      color: 'background',
+      bg: 'secondary',
+    },
+  }
+```
+
+You can define additional variants in your theme under the `badges` key.
+
+## System props
+
+`ProfilePreview` supports [space props](https://styled-system.com/api#space) and
+[color props](https://styled-system.com/api#color) from
+[Styled System](https://styled-system.com/).
+
+## Component props
+
+| Name     | Type                       | Default  | Required | Description                                                    |
+| :------- | :------------------------- | :------- | :------- | :------------------------------------------------------------- |
+| profile  | Object                     |          | ✓        | See below.                                                     |
+| align    | `start`, `center` or `end` | `center` |          | Alignment of profile (responsive).                             |
+| fontSize | Number                     | `[3, 4]` |          | Font size of name (responsive).                                |
+| variant  | String                     | primary  |          | Variants apply to badges only and need to be defined in theme. |
+
+### Profile
+
+| Name         | Type            | Default | Required | Description                                      |
+| :----------- | :-------------- | :------ | :------- | ------------------------------------------------ |
+| avatar       | Node            |         | ✓        | Avatar image (composition pattern).              |
+| honorific    | String          |         |          | Honorific title.                                 |
+| name         | String          |         |          | Full name.                                       |
+| jobtitle     | String          |         |          | Job title.                                       |
+| organization | String          |         |          | Organization name.                               |
+| socialIcons  | Array of Object |         |          | Social icons for personal social media accounts. |
+| badges       | Array of String |         |          | Badges with roles.                               |
