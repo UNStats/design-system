@@ -20,6 +20,7 @@ const ReallyLongStrings = () => (
         'Really really really really really really really really really really long organization',
       badges: ['Committee Member', 'Keynote Speaker'],
     }}
+    m={2}
   />
 );
 
