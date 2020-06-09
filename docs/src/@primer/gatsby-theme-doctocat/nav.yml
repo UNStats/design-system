@@ -1,5 +1,3 @@
-- title: Page 1
-  url: /page-1
 - title: Components
   url: /components
   children:

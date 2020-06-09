@@ -11,7 +11,6 @@
     }
   },
   "scripts": {
-    "dev": "yarn workspace docs run dev",
     "prepare": "yarn workspaces run prepare",
     "version": "changeset version && yarn run format",
     "release": "changeset publish",
