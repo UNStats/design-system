@@ -1912,17 +1912,17 @@
     react-is "16.10.2"
     styled-system "5.1.2"
 
-"@primer/gatsby-theme-doctocat@0.19.0":
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/@primer/gatsby-theme-doctocat/-/gatsby-theme-doctocat-0.19.0.tgz#f27c63899846ea65d2da33d1a460ab0dce2d61ec"
-  integrity sha512-aEUOsqHnNFy/Me64AYnOf6MUSpU7iPD2zXeZL4DsHB+pfzwEcbM0+38YeN5jtFsz9tIySnA9B0F++593u4KJLg==
+"@primer/gatsby-theme-doctocat@0.21.0":
+  version "0.21.0"
+  resolved "https://registry.yarnpkg.com/@primer/gatsby-theme-doctocat/-/gatsby-theme-doctocat-0.21.0.tgz#ee91c270d078fa18abf6a92fbef449b8b27beb40"
+  integrity sha512-LdvpLdIA1tFD0Xk4SJy5bOs1NJSlBvcuNvKHFf1KS1HDI3ZJDxQV8hqN8ahf0TL+kRwSEOvY8ErB/d8Je3Tuwg==
   dependencies:
     "@babel/preset-env" "^7.5.5"
     "@babel/preset-react" "^7.0.0"
     "@mdx-js/mdx" "^1.0.21"
     "@mdx-js/react" "^1.0.21"
     "@primer/components" "^16.1.0"
-    "@primer/octicons-react" "^9.1.1"
+    "@primer/styled-octicons" "^0.0.0-0ccdd71"
     "@styled-system/theme-get" "^5.0.12"
     "@testing-library/jest-dom" "^4.1.0"
     "@testing-library/react" "^9.1.3"
@@ -1966,12 +1966,17 @@
     styled-components "^4.3.2"
     styled-system "^5.0.18"
 
-"@primer/octicons-react@^9.1.1", "@primer/octicons-react@^9.2.0":
+"@primer/octicons-react@^9.2.0":
   version "9.6.0"
   resolved "https://registry.yarnpkg.com/@primer/octicons-react/-/octicons-react-9.6.0.tgz#996f621cb063757a4985cd6b45e59ed00e3444bf"
   integrity sha512-FR0fiU1UY1ds5ZMCUY+iVkkm1Eh4yDHf2ui+cxB3VvYX23DAdUAohPGit+qaMFy2caDd7uWYGRZduKS7dW1FZQ==
   dependencies:
     prop-types "^15.6.1"
+
+"@primer/styled-octicons@^0.0.0-0ccdd71":
+  version "0.0.0-44a8bc7"
+  resolved "https://registry.yarnpkg.com/@primer/styled-octicons/-/styled-octicons-0.0.0-44a8bc7.tgz#0f509a21f9dce2fdffa431aa1fc0066e75f3b1c9"
+  integrity sha512-Tkse8+XzDLoyWi6R9wUikqM01FomLGJOAvZYPQfXu5jsFcjw5l67LWWJIHLRIre/RED0RuAoPrzR52SpJmKlAg==
 
 "@reach/component-component@^0.3.0":
   version "0.3.0"
