@@ -7,10 +7,9 @@ import {
   Container,
   Flex,
   Heading,
+  Link,
   MenuButton,
 } from 'theme-ui';
-
-import Link from './link';
 
 /**
  * There are no restrictions on what the variants can be called except that the default variant is called `primary`.
@@ -54,28 +53,28 @@ const Header = ({
         >
           {logo && (
             <Link
+              href="/"
+              aria-label="Back to homepage"
               sx={{
                 color: 'inherit',
                 height: '100%',
                 flexShrink: 0,
                 mr: [2, 3],
               }}
-              href="/"
-              aria-label="Back to homepage"
             >
               {logo}
             </Link>
           )}
           {title && (
             <Link
+              href="/"
+              aria-label="Back to homepage"
               sx={{
                 color: 'inherit',
                 flexGrow: 0,
                 flexShrink: 0,
                 mr: [0, 3, 4],
               }}
-              href="/"
-              aria-label="Back to homepage"
             >
               <Heading
                 sx={{
@@ -132,6 +131,8 @@ const Header = ({
             >
               <Link
                 key="/"
+                href="/"
+                label="Back to homepage"
                 sx={{
                   color: 'inherit',
                   display: ['flex', 'none'],
@@ -141,14 +142,14 @@ const Header = ({
                   mb: [4, 0],
                   ml: [0, 3, 4],
                 }}
-                href="/"
-                label="Back to homepage"
               >
                 Home
               </Link>
               {links.map(({ href, text, label }) => (
                 <Link
                   key={href}
+                  href={href}
+                  label={label}
                   sx={{
                     color: 'inherit',
                     flexShrink: 0,
@@ -158,8 +159,6 @@ const Header = ({
                     mb: [4, 0],
                     ml: [0, 3, 4],
                   }}
-                  href={href}
-                  label={label}
                 >
                   {text}
                 </Link>
@@ -167,8 +166,10 @@ const Header = ({
             </Flex>
             {button && (
               <Button
-                variant="outline.primary"
                 as={Link}
+                href={button.href}
+                label={button.label}
+                variant="outline.primary"
                 sx={{
                   color: 'inherit',
                   flexGrow: 0,
@@ -178,8 +179,6 @@ const Header = ({
                   my: [4, 0],
                   ml: [0, 3, 4],
                 }}
-                href={button.href}
-                label={button.label}
               >
                 {button.text}
               </Button>

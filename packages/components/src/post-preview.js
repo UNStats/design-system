@@ -1,9 +1,8 @@
 import React from 'react';
 import { node, shape, string } from 'prop-types';
-import { Button, Flex, Text } from 'theme-ui';
+import { Button, Flex, Link, Text } from 'theme-ui';
 
 import Badges from './badges';
-import Link from './link';
 
 const PostPreview = ({ post, variant = 'primary', ...props }) => {
   // If post date is last element, it should have bottom margin zero.

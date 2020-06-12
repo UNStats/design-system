@@ -1,9 +1,8 @@
 import React from 'react';
 import { arrayOf, node, oneOf, oneOfType, shape, string } from 'prop-types';
-import { Grid } from 'theme-ui';
+import { Grid, Link } from 'theme-ui';
 
 import ProfilePreview from './profile-preview';
-import Link from './link';
 
 const Avatars = ({ values, align = 'start', ...props }) => (
   <Grid
@@ -20,8 +19,8 @@ const Avatars = ({ values, align = 'start', ...props }) => (
     {values.map(({ id, avatar, name, href }) => (
       <Link
         key={id}
-        sx={{ color: 'inherit', ':hover': { textDecoration: 'none' } }}
         href={href}
+        sx={{ color: 'inherit', ':hover': { textDecoration: 'none' } }}
       >
         <ProfilePreview profile={{ avatar, name }} fontSize={1} align={align} />
       </Link>

@@ -1,11 +1,10 @@
 import React from 'react';
 import { arrayOf, number, oneOf, oneOfType, shape, string } from 'prop-types';
-import { Box, Flex } from 'theme-ui';
+import { Box, Flex, Link } from 'theme-ui';
 
 import EmailIcon from './email-icon';
 import GitHubIcon from './github-icon';
 import TwitterIcon from './twitter-icon';
-import Link from './link';
 import { normalizeAlign } from './util';
 
 /**
