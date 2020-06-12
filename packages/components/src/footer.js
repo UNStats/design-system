@@ -1,8 +1,6 @@
 import React from 'react';
 import { arrayOf, node, shape, string, oneOf } from 'prop-types';
-import { Box, Container, Flex, Heading, Text } from 'theme-ui';
-
-import Link from './link';
+import { Box, Container, Flex, Heading, Link, Text } from 'theme-ui';
 
 const Footer = ({ logo, title, socialIcons, links, variant = 'primary' }) => {
   return (
