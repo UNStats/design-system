@@ -1912,17 +1912,17 @@
     react-is "16.10.2"
     styled-system "5.1.2"
 
-"@primer/gatsby-theme-doctocat@0.19.0":
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/@primer/gatsby-theme-doctocat/-/gatsby-theme-doctocat-0.19.0.tgz#f27c63899846ea65d2da33d1a460ab0dce2d61ec"
-  integrity sha512-aEUOsqHnNFy/Me64AYnOf6MUSpU7iPD2zXeZL4DsHB+pfzwEcbM0+38YeN5jtFsz9tIySnA9B0F++593u4KJLg==
+"@primer/gatsby-theme-doctocat@0.21.0":
+  version "0.21.0"
+  resolved "https://registry.yarnpkg.com/@primer/gatsby-theme-doctocat/-/gatsby-theme-doctocat-0.21.0.tgz#ee91c270d078fa18abf6a92fbef449b8b27beb40"
+  integrity sha512-LdvpLdIA1tFD0Xk4SJy5bOs1NJSlBvcuNvKHFf1KS1HDI3ZJDxQV8hqN8ahf0TL+kRwSEOvY8ErB/d8Je3Tuwg==
   dependencies:
     "@babel/preset-env" "^7.5.5"
     "@babel/preset-react" "^7.0.0"
     "@mdx-js/mdx" "^1.0.21"
     "@mdx-js/react" "^1.0.21"
     "@primer/components" "^16.1.0"
-    "@primer/octicons-react" "^9.1.1"
+    "@primer/styled-octicons" "^0.0.0-0ccdd71"
     "@styled-system/theme-get" "^5.0.12"
     "@testing-library/jest-dom" "^4.1.0"
     "@testing-library/react" "^9.1.3"
@@ -1966,12 +1966,23 @@
     styled-components "^4.3.2"
     styled-system "^5.0.18"
 
-"@primer/octicons-react@^9.1.1", "@primer/octicons-react@^9.2.0":
+"@primer/octicons-react@^9.2.0":
   version "9.6.0"
   resolved "https://registry.yarnpkg.com/@primer/octicons-react/-/octicons-react-9.6.0.tgz#996f621cb063757a4985cd6b45e59ed00e3444bf"
   integrity sha512-FR0fiU1UY1ds5ZMCUY+iVkkm1Eh4yDHf2ui+cxB3VvYX23DAdUAohPGit+qaMFy2caDd7uWYGRZduKS7dW1FZQ==
   dependencies:
     prop-types "^15.6.1"
+
+"@primer/styled-octicons@^0.0.0-0ccdd71":
+  version "0.0.0-ff9cdef"
+  resolved "https://registry.yarnpkg.com/@primer/styled-octicons/-/styled-octicons-0.0.0-ff9cdef.tgz#ea2d2bc7d2e998c9a85918c89ea0485481163b36"
+  integrity sha512-KRkpcbbpifWnpaFb8UVhv1Yf1P8W5magjonDsvGycJEOGIn9npWULu0jjX9Lq9kNgkUh3ng/6WPtlhdgDhKpKA==
+  dependencies:
+    "@styled-system/css" "^5.1.5"
+    "@styled-system/prop-types" "^5.1.5"
+    "@types/styled-system" "^5.1.9"
+    "@types/styled-system__css" "^5.0.8"
+    styled-system "^5.1.5"
 
 "@reach/alert@0.10.3":
   version "0.10.3"
@@ -2654,6 +2665,13 @@
   dependencies:
     prop-types "^15.7.2"
 
+"@styled-system/prop-types@^5.1.5":
+  version "5.1.5"
+  resolved "https://registry.yarnpkg.com/@styled-system/prop-types/-/prop-types-5.1.5.tgz#f813b78c583f9a3a9693d5eb185c2fd3dd0448a8"
+  integrity sha512-D/0d0ltp8QGhwrRifivQeIdoKkQDpFIGi98DXdpRXOaJStYXLx6aBSfS/YYIijbF1nZs1hWlAgXxYvDhCxHLSA==
+  dependencies:
+    prop-types "^15.7.2"
+
 "@styled-system/props@5.1.4":
   version "5.1.4"
   resolved "https://registry.yarnpkg.com/@styled-system/props/-/props-5.1.4.tgz#a0b76bb3be64cb152db3db33a031f33a43977bab"
@@ -3285,7 +3303,7 @@
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
   integrity sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
 
-"@types/styled-system@*":
+"@types/styled-system@*", "@types/styled-system@^5.1.9":
   version "5.1.9"
   resolved "https://registry.yarnpkg.com/@types/styled-system/-/styled-system-5.1.9.tgz#8baac8f6eca9e0bd5768c175ca5ce1f2d6f61ade"
   integrity sha512-QlWv6tmQV8dqk8s+LSLb9QAtmuQEnfv4f8lKKZkMgDqRFVmxJDBwEw0u4zhpxp56u0hdR+TCIk9dGfOw3TkCoQ==
@@ -3299,7 +3317,7 @@
   dependencies:
     csstype "^2.6.4"
 
-"@types/styled-system__css@*":
+"@types/styled-system__css@*", "@types/styled-system__css@^5.0.8":
   version "5.0.11"
   resolved "https://registry.yarnpkg.com/@types/styled-system__css/-/styled-system__css-5.0.11.tgz#a9ff7e5d75e69a0d5ccff36acb4bbd491f1a9da9"
   integrity sha512-hUieAt4sFS7zwbdU9Vlnn/c3vkfhTMhyiccYGpUSX96nJ4BF3NjLIjMu3cQOYS5EX4gPkHJZhkfdw41ov1NjhQ==
