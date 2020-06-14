@@ -1,10 +1,13 @@
 import React from 'react';
 import { node } from 'prop-types';
-import { Box } from 'theme-ui';
+import { Box, ThemeProvider } from 'theme-ui';
+import preset from '@undataforum/preset';
 
 // No need to wrap with ThemeProvider since we already use gatsby-plugin-theme-ui.
 const LivePreviewWrapper = ({ children }) => (
-  <Box sx={{ m: 2 }}>{children}</Box>
+  <ThemeProvider theme={preset}>
+    <Box sx={{ m: 2 }}>{children}</Box>
+  </ThemeProvider>
 );
 
 LivePreviewWrapper.propTypes = {
