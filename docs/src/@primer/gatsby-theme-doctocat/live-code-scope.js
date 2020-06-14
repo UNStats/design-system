@@ -1,6 +1,6 @@
-import * as themeUi from 'theme-ui';
 import * as components from '@undataforum/components';
+import * as themeUi from 'theme-ui';
 
-const scope = { ...themeUi, ...components };
+const scope = { ...components, ...themeUi };
 
 export default scope;
