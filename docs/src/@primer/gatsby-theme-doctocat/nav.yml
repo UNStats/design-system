@@ -7,6 +7,8 @@
       url: /components/event-preview
     - title: GitHubIcon
       url: /components/github-icon
+    - title: Header
+      url: /components/header
     - title: Icon
       url: /components/icon
     - title: PostPreview
@@ -15,3 +17,5 @@
       url: /components/profile-preview
     - title: TwitterIcon
       url: /components/twitter-icon
+- title: Preset
+  url: /preset
