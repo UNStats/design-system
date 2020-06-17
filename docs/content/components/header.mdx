@@ -1,0 +1,189 @@
+---
+title: Header
+status: Experimental
+source: https://github.com/UNDataForum/design-system/blob/master/packages/components/src/header.js
+---
+
+## Examples
+
+In this example we render `Header` with logo and title:
+
+```jsx live
+<Header
+  logo={<DummyLogo scaleTo="height" />}
+  title="Title"
+  links={[
+    {
+      href: '/about',
+      text: 'About',
+    },
+    {
+      href: '/blog',
+      text: 'Blog',
+    },
+    {
+      href: '/2020',
+      text: '2020',
+    },
+  ]}
+  button={{ text: 'Register', href: '/register' }}
+/>
+```
+
+In this example we render `Header` with logo only:
+
+```jsx live
+<Header
+  logo={<DummyLogo scaleTo="height" />}
+  links={[
+    {
+      href: '/about',
+      text: 'About',
+    },
+    {
+      href: '/blog',
+      text: 'Blog',
+    },
+    {
+      href: '/2020',
+      text: '2020',
+    },
+  ]}
+  button={{ text: 'Register', href: '/register' }}
+/>
+```
+
+In this example we render `Header` with title only:
+
+```jsx live
+<Header
+  title="Title"
+  links={[
+    {
+      href: '/about',
+      text: 'About',
+    },
+    {
+      href: '/blog',
+      text: 'Blog',
+    },
+    {
+      href: '/2020',
+      text: '2020',
+    },
+  ]}
+  button={{ text: 'Register', href: '/register' }}
+/>
+```
+
+In this example we render `Header` without logo and title:
+
+```jsx live
+<Header
+  links={[
+    {
+      href: '/about',
+      text: 'About',
+    },
+    {
+      href: '/blog',
+      text: 'Blog',
+    },
+    {
+      href: '/2020',
+      text: '2020',
+    },
+  ]}
+  button={{ text: 'Register', href: '/register' }}
+/>
+```
+
+In this example `Header` has no button:
+
+```jsx live
+<Header
+  logo={<DummyLogo scaleTo="height" />}
+  title="Title"
+  links={[
+    {
+      href: '/about',
+      text: 'About',
+    },
+    {
+      href: '/blog',
+      text: 'Blog',
+    },
+    {
+      href: '/2020',
+      text: '2020',
+    },
+  ]}
+/>
+```
+
+## System props
+
+`Header` supports [space props](https://styled-system.com/api#space) and
+[color props](https://styled-system.com/api#color) from
+[Styled System](https://styled-system.com/).
+
+## Component props
+
+| Name   | Type          | Default | Required | Description                                          |
+| :----- | :------------ | :------ | :------- | :--------------------------------------------------- |
+| logo   | Node          |         |          | Component that renders a logo (composition pattern). |
+| title  | String        |         |          |                                                      |
+| links  | Array of Link |         | ✓        | Link is defined below.                               |
+| button | Link          |         |          | Link is defined below.                               |
+
+### Link type
+
+| Name | Type   | Default | Required | Description                          |
+| :--- | :----- | :------ | :------- | :----------------------------------- |
+| text | String |         | ✓        |                                      |
+| href | String |         |          | When omitted link cannot be clicked. |
+
+## Variants
+
+You can customize `Header` by defining the following variants in your theme:
+
+| Key                | Description                                                                                                                                                      |
+| :----------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `header`           | Set `color` and `bg`.                                                                                                                                            |
+| `header.container` | Set `maxWidth` and padding.                                                                                                                                      |
+| `header.nav`       | Set navigation `bg`. The navigation uses `fixed` position, which resets its `background-color` to transparent. Use this variant to override it to desired value. |
+| `header.button`    | Styles for the button.                                                                                                                                           |
+
+In this example we customize `Header` with [`@undataforum/preset`](/preset):
+
+```jsx live
+<ThemeProvider theme={preset}>
+  <Header
+    title="Title"
+    links={[
+      {
+        href: '/about',
+        text: 'About',
+      },
+      {
+        href: '/blog',
+        text: 'Blog',
+      },
+      {
+        href: '/2020',
+        text: '2020',
+      },
+    ]}
+    button={{ text: 'Register', href: '/register' }}
+  />
+</ThemeProvider>
+```
+
+## Visual regression testing
+
+The following URLs can be used for visual regression testing:
+
+- [Header with logo and title](/header/logo-and-title)
+- [Header with many links and button](/header/many-links-and-button)
+- [Header with many links and no button](/header/many-links-no-button)
+- [Customize with variants](/header/customize-with-variants)

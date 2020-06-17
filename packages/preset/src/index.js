@@ -21,22 +21,7 @@ const theme = merge(preset, {
 
   // sizes: from @theme-ui/preset-base.
 
-  // Variants for Container.
-  layout: {
-    container: {
-      px: [2, 3, 4],
-      maxWidth: '64rem',
-    },
-    narrow: {
-      variant: 'layout.container',
-      maxWidth: '48rem',
-    },
-    wide: {
-      variant: 'layout.container',
-      maxWidth: '96rem',
-    },
-  },
-
+  // To be removed.
   sizes: {
     // Widths are for Container and can be replaced with layout.container, layout.narrow and layout.wide variants.
     width: {
@@ -96,7 +81,7 @@ const theme = merge(preset, {
     gray,
   },
 
-  // Pairings a hard to define in a universal way and should be defined in a Gatsby theme.
+  // To be removed.
   pairings: {
     primary: {
       color: 'primary',
@@ -125,7 +110,9 @@ const theme = merge(preset, {
     circle: 99999,
   },
 
-  // Variants for Badge component: https://theme-ui.com/components/badge/.
+  // Variants.
+
+  // Variants for https://theme-ui.com/components/badge/.
   badges: {
     primary: {
       color: 'background',
@@ -137,7 +124,7 @@ const theme = merge(preset, {
     },
   },
 
-  // Variants for Button component: https://theme-ui.com/components/button.
+  // Variants for https://theme-ui.com/components/button.
   buttons: {
     default: {
       fontSize: 2,
@@ -172,7 +159,38 @@ const theme = merge(preset, {
     },
   },
 
-  // Variants for Names component.
+  // Variants for https://theme-ui.com/components/container.
+  layout: {
+    container: {
+      px: [2, 3, 4],
+      maxWidth: '64rem',
+    },
+    narrow: {
+      variant: 'layout.container',
+      maxWidth: '48rem',
+    },
+    wide: {
+      variant: 'layout.container',
+      maxWidth: '96rem',
+    },
+  },
+
+  // Customizations.
+
+  // Customize https://design-system.undataforum.org/components/header.
+  header: {
+    color: 'primary',
+    bg: 'background',
+    container: {
+      variant: 'layout.wide',
+    },
+    nav: {
+      bg: 'background',
+    },
+    button: { variant: 'buttons.outline.primary' },
+  },
+
+  // Variants for https://design-system.undataforum.org/components/header.
   names: {
     default: {
       fontWeight: 'body',
@@ -180,12 +198,6 @@ const theme = merge(preset, {
     bold: {
       fontWeight: 'bold',
     },
-  },
-
-  // You can use different components to render internal and external links.
-  link: {
-    internal: 'a',
-    external: 'a',
   },
 
   // Styles for styling Markdown and Styled from Theme UI.

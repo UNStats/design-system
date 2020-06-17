@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { arrayOf, node, number, oneOfType, shape, string } from 'prop-types';
+import { arrayOf, node, shape, string } from 'prop-types';
 import {
   Box,
   Button,
@@ -11,222 +11,219 @@ import {
   MenuButton,
 } from 'theme-ui';
 
-/**
- * There are no restrictions on what the variants can be called except that the default variant is called `primary`.
- * If you use @undataforum/preset you can use `primary`, `primary-inverse` variants out of the box.
- *
- * You can define your own variants under the `pairings` key.
- * But you should use the primary color in the header, not the secondary color.
- */
-
 const Context = React.createContext({});
 
-const Header = ({
-  logo,
-  title,
-  links,
-  button,
-  height = [48, 64, 80],
-  variant = 'primary',
-  ...props
-}) => {
+const height = [48, 64, 80];
+
+const Header = ({ logo, title, links, button, ...props }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <Context.Provider value={{ menuOpen, setMenuOpen }}>
-      <Container
-        {...props}
+      <Box
         sx={{
-          maxWidth: 'width.wide',
-          px: [2, 3, 4],
-          py: [2, 3],
-          variant: `pairings.${variant}`,
+          color: 'background',
+          bg: 'primary',
+          // Anything below variant cannot be overridden by this variant.
+          variant: 'header',
         }}
       >
-        <Flex
-          as="header"
+        <Container
+          {...props}
           sx={{
-            flexDirection: 'row',
-            justifyContent: 'flex-start',
-            alignItems: 'center',
-            height,
+            maxWidth: '96em',
+            px: [2, 3, 4],
+            py: [2, 3],
+            // Anything below variant cannot be overridden by this variant.
+            variant: 'header.container',
           }}
         >
-          {logo && (
-            <Link
-              href="/"
-              aria-label="Back to homepage"
-              sx={{
-                color: 'inherit',
-                height: '100%',
-                flexShrink: 0,
-                mr: [2, 3],
-              }}
-            >
-              {logo}
-            </Link>
-          )}
-          {title && (
-            <Link
-              href="/"
-              aria-label="Back to homepage"
-              sx={{
-                color: 'inherit',
-                flexGrow: 0,
-                flexShrink: 0,
-                mr: [0, 3, 4],
-              }}
-            >
-              <Heading
-                sx={{
-                  whiteSpace: 'nowrap}',
-                  fontSize: [4, 5, 6],
-                }}
-              >
-                {title}
-              </Heading>
-            </Link>
-          )}
-          <Box
-            as="nav"
+          <Flex
+            as="header"
             sx={{
-              display: [menuOpen ? 'flex' : 'none', 'flex'],
-              flexDirection: ['column', 'row'],
-              justifyContent: ['flex-start', 'flex-end'],
+              flexDirection: 'row',
+              justifyContent: 'flex-start',
               alignItems: 'center',
-              flexGrow: 1,
-              flexShrink: 1,
-              position: ['fixed', 'static'],
-              overflow: 'auto',
-              top: 0,
-              right: 0,
-              bottom: 0,
-              left: 0,
-              zIndex: 2,
-              variant: `pairings.${variant}`,
+              height,
             }}
           >
-            <Box
-              aria-label="Close navigation"
-              sx={{
-                display: ['block', 'none'],
-                height,
-                width: '100%',
-                textAlign: 'right',
-                p: 2,
-                my: 2,
-              }}
-              onClick={() => {
-                setMenuOpen(false);
-              }}
-            >
-              <Close css={{ WebkitTapHighlightColor: 'transparent' }} />
-            </Box>
-
-            <Flex
-              sx={{
-                flexDirection: ['column', 'row'],
-                alignItems: 'center',
-                overflow: 'auto',
-              }}
-            >
+            {logo && (
               <Link
-                key="/"
                 href="/"
-                label="Back to homepage"
+                aria-label="Back to homepage"
                 sx={{
                   color: 'inherit',
-                  display: ['flex', 'none'],
-                  fontFamily: 'body',
-                  fontSize: [4, 3, 4],
-                  fontWeight: 'bold',
-                  mb: [4, 0],
-                  ml: [0, 3, 4],
+                  height: '100%',
+                  flexShrink: 0,
+                  textDecoration: 'none',
+                  mr: [2, 3],
                 }}
               >
-                Home
+                {logo}
               </Link>
-              {links.map(({ href, text, label }) => (
+            )}
+            {title && (
+              <Link
+                href="/"
+                aria-label="Back to homepage"
+                sx={{
+                  color: 'inherit',
+                  flex: 'none',
+                  textDecoration: 'none',
+                  mr: [0, 3, 4],
+                }}
+              >
+                <Heading
+                  as="div"
+                  sx={{
+                    whiteSpace: 'nowrap}',
+                    fontSize: [4, 5, 6],
+                  }}
+                >
+                  {title}
+                </Heading>
+              </Link>
+            )}
+            <Box
+              as="nav"
+              sx={{
+                bg: 'primary',
+                // Anything below variant cannot be overridden by this variant.
+                variant: `header.nav`,
+                display: [menuOpen ? 'flex' : 'none', 'flex'],
+                flexDirection: ['column', 'row'],
+                justifyContent: ['flex-start', 'flex-end'],
+                alignItems: 'center',
+                flex: 1,
+                // Fixed positioning relative to viewport on small screens.
+                position: ['fixed', 'static'],
+                top: 0,
+                bottom: 0,
+                left: 0,
+                right: 0,
+                zIndex: 2,
+                // Color is inherited, but background-color is not.
+                pb: [4, 0],
+              }}
+            >
+              <Box
+                aria-label="Close navigation"
+                sx={{
+                  // Show navigation close button on small screens only.
+                  display: ['block', 'none'],
+                  height,
+                  width: '100%',
+                  textAlign: 'right',
+                  p: 2,
+                  my: 2,
+                }}
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
+                <Close css={{ WebkitTapHighlightColor: 'transparent' }} />
+              </Box>
+              <Flex
+                sx={{
+                  flexDirection: ['column', 'row'],
+                  alignItems: 'center',
+                  overflow: 'auto',
+                }}
+              >
                 <Link
-                  key={href}
-                  href={href}
-                  label={label}
+                  key="/"
+                  href="/"
+                  aria-label="Back to homepage"
                   sx={{
                     color: 'inherit',
-                    flexShrink: 0,
-                    fontFamily: 'body',
-                    fontSize: [4, 3, 4],
-                    fontWeight: 'bold',
+                    display: ['flex', 'none'],
+                    textDecoration: 'none',
                     mb: [4, 0],
                     ml: [0, 3, 4],
                   }}
                 >
-                  {text}
+                  <Heading as="div" sx={{ fontSize: [4, 3, 4] }}>
+                    Home
+                  </Heading>
                 </Link>
-              ))}
-            </Flex>
-            {button && (
-              <Button
-                as={Link}
-                href={button.href}
-                label={button.label}
-                variant="outline.primary"
-                sx={{
-                  color: 'inherit',
-                  flexGrow: 0,
-                  flexShrink: 0,
-                  fontFamily: 'body',
-                  fontSize: [4, 3, 4],
-                  my: [4, 0],
-                  ml: [0, 3, 4],
-                }}
-              >
-                {button.text}
-              </Button>
-            )}
-          </Box>
-          <Box
-            aria-label="Open navigation"
-            sx={{
-              display: ['block', 'none'],
-              flexGrow: 1,
-              flexShrink: 1,
-              height: '100%',
-              textAlign: 'right',
-              py: 2,
-              zIndex: 1,
-            }}
-            onClick={() => {
-              setMenuOpen(true);
-            }}
-          >
-            <MenuButton
-              css={{ WebkitTapHighlightColor: 'transparent' }}
+                {links.map(({ href, text }) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    sx={{
+                      color: 'inherit',
+                      flexShrink: 0,
+                      fontSize: [4, 3, 4],
+                      textDecoration: 'none',
+                      mb: [4, 0],
+                      mr: [0, 3, 4],
+                      '&:last-of-type': {
+                        mr: 0,
+                        mb: 0,
+                      },
+                    }}
+                  >
+                    <Heading as="div" sx={{ fontSize: [4, 3, 4] }}>
+                      {text}
+                    </Heading>
+                  </Link>
+                ))}
+              </Flex>
+              {button && (
+                <Button
+                  as={Link}
+                  href={button.href}
+                  sx={{
+                    color: 'primary',
+                    bg: 'background',
+                    // Anything below variant cannot be overridden by this variant.
+                    variant: 'header.button',
+                    flex: 'none',
+                    mt: [4, 0],
+                    ml: [0, 3, 4],
+                  }}
+                >
+                  <Heading as="div" sx={{ fontSize: [4, 3, 4] }}>
+                    {button.text}
+                  </Heading>
+                </Button>
+              )}
+            </Box>
+            <Box
               aria-label="Open navigation"
-            />
-          </Box>
-        </Flex>
-      </Container>
+              sx={{
+                display: ['block', 'none'],
+                flex: 1,
+                height: '100%',
+                textAlign: 'right',
+                py: 2,
+                zIndex: 1,
+              }}
+              onClick={() => {
+                setMenuOpen(true);
+              }}
+            >
+              <MenuButton
+                css={{ WebkitTapHighlightColor: 'transparent' }}
+                aria-label="Open navigation"
+              />
+            </Box>
+          </Flex>
+        </Container>
+      </Box>
     </Context.Provider>
   );
 };
 
+const linkType = shape({
+  text: string.isRequired,
+  href: string,
+});
+
 Header.propTypes = {
   logo: node,
   title: string,
-  links: arrayOf(
-    shape({
-      text: string.isRequired,
-      href: string,
-      label: string,
-    })
-  ).isRequired,
-  button: shape({
-    text: string.isRequired,
-    href: string,
-    label: string,
-  }),
-  height: oneOfType([number, arrayOf(number), string, arrayOf(string)]),
-  variant: string,
+  links: arrayOf(linkType).isRequired,
+  button: linkType,
 };
 
 export default Header;
