@@ -20,6 +20,7 @@ const Header = ({ logo, title, links, button, ...props }) => {
   return (
     <Context.Provider value={{ menuOpen, setMenuOpen }}>
       <Box
+        {...props}
         sx={{
           color: 'background',
           bg: 'primary',
@@ -28,7 +29,6 @@ const Header = ({ logo, title, links, button, ...props }) => {
         }}
       >
         <Container
-          {...props}
           sx={{
             maxWidth: '96em',
             px: [2, 3, 4],
