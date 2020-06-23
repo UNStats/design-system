@@ -1,5 +1,22 @@
 # Change Log
 
+## 0.76.0
+
+### Minor Changes
+
+- 975250e: Remove top margin from button in PostPreview and enforce top down
+  margins (bottom margins)
+- d5b8ab2: Upgrade Microbundle to v0.12.0
+- 4bc6384: Add tag to ProfilePreview
+- 2ce55ea: Eliminate Link component
+- bc54cd4: Refactor header to allow customizations via variants in theme
+- 619e8b2: Export Icon component
+- 24d4754: Remove duration from EventPreview
+
+### Patch Changes
+
+- f0ee109: Update microbundle to 0.12.2
+
 ## 0.75.1
 
 ### Patch Changes

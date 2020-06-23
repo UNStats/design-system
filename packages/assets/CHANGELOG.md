@@ -1,5 +1,15 @@
 # @undataforum/assets
 
+## 0.6.0
+
+### Minor Changes
+
+- d5b8ab2: Upgrade Microbundle to v0.12.0
+
+### Patch Changes
+
+- f0ee109: Update microbundle to 0.12.2
+
 ## 0.5.0
 
 ### Minor Changes

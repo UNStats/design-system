@@ -1,5 +1,18 @@
 # @undataforum/preset
 
+## 0.8.0
+
+### Minor Changes
+
+- d5b8ab2: Upgrade Microbundle to v0.12.0
+- 975250e: Add variants for Text
+- bc54cd4: Add customizations for Header
+
+### Patch Changes
+
+- 8c77899: Preset is now based on @theme-ui/preset-base
+- f0ee109: Update microbundle to 0.12.2
+
 ## 0.7.0
 
 ### Minor Changes
