@@ -17,7 +17,7 @@ This is a complete profile with default centered alignment:
     avatar: (
       <Image
         alt="Nance MacFadin"
-        sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+        sx={{ borderRadius: '50%', height: 128, width: 128 }}
         src="/avatar0.png"
       />
     ),
@@ -39,6 +39,7 @@ This is a complete profile with default centered alignment:
     ],
     badges: ['Committee Member', 'Keynote Speaker'],
   }}
+  m={2}
 />
 ```
 
@@ -50,7 +51,7 @@ It can also be aligned left (start):
     avatar: (
       <Image
         alt="Nance MacFadin"
-        sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+        sx={{ borderRadius: '50%', height: 128, width: 128 }}
         src="/avatar0.png"
       />
     ),
@@ -73,6 +74,7 @@ It can also be aligned left (start):
     badges: ['Committee Member', 'Keynote Speaker'],
   }}
   align="start"
+  m={2}
 />
 ```
 
@@ -84,7 +86,7 @@ Or aligned right (end):
     avatar: (
       <Image
         alt="Nance MacFadin"
-        sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+        sx={{ borderRadius: '50%', height: 128, width: 128 }}
         src="/avatar0.png"
       />
     ),
@@ -107,6 +109,7 @@ Or aligned right (end):
     badges: ['Committee Member', 'Keynote Speaker'],
   }}
   align="end"
+  m={2}
 />
 ```
 
@@ -118,11 +121,12 @@ This is a minimal profile with avatar only:
     avatar: (
       <Image
         alt="Willow Rangall"
-        sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+        sx={{ borderRadius: '50%', height: 64, width: 64 }}
         src="/avatar3.png"
       />
     ),
   }}
+  m={2}
 />
 ```
 
@@ -134,7 +138,7 @@ This is a profile without job title:
     avatar: (
       <Image
         alt="Nance MacFadin"
-        sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+        sx={{ borderRadius: '50%', height: 128, width: 128 }}
         src="/avatar0.png"
       />
     ),
@@ -142,6 +146,7 @@ This is a profile without job title:
     organization: 'Schuster-Senger',
     badges: ['Committee Member', 'Keynote Speaker'],
   }}
+  m={2}
 />
 ```
 
@@ -153,7 +158,7 @@ This is a profile without organization:
     avatar: (
       <Image
         alt="Nance MacFadin"
-        sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+        sx={{ borderRadius: '50%', height: 128, width: 128 }}
         src="/avatar0.png"
       />
     ),
@@ -161,6 +166,7 @@ This is a profile without organization:
     jobtitle: 'Help Desk Operator',
     badges: ['Committee Member', 'Keynote Speaker'],
   }}
+  m={2}
 />
 ```
 
@@ -172,13 +178,14 @@ This is a profile without job title and organization:
     avatar: (
       <Image
         alt="Nance MacFadin"
-        sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+        sx={{ borderRadius: '50%', height: 128, width: 128 }}
         src="/avatar0.png"
       />
     ),
     name: 'Nance MacFadin',
     badges: ['Committee Member', 'Keynote Speaker'],
   }}
+  m={2}
 />
 ```
 
@@ -190,12 +197,13 @@ This is a profile with avatar image and name only:
     avatar: (
       <Image
         alt="Suzy Cahan"
-        sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+        sx={{ borderRadius: '50%', height: 128, width: 128 }}
         src="/avatar4.png"
       />
     ),
     name: 'Suzy Cahan',
   }}
+  m={2}
 />
 ```
 
@@ -210,7 +218,7 @@ responsive:
       <Image
         alt="Sandra Abramovici"
         sx={{
-          borderRadius: 'circle',
+          borderRadius: '50%',
           height: [32, 64, 128],
           width: [32, 64, 128],
         }}
@@ -219,6 +227,7 @@ responsive:
     ),
     name: 'Sandra Abramovici',
   }}
+  m={2}
 />
 ```
 
@@ -230,7 +239,7 @@ In this example we use custom variant `secondary`:
     avatar: (
       <Image
         alt="Nance MacFadin"
-        sx={{ borderRadius: 'circle', height: 128, width: 128 }}
+        sx={{ borderRadius: '50%', height: 128, width: 128 }}
         src="/avatar0.png"
       />
     ),
@@ -253,6 +262,7 @@ In this example we use custom variant `secondary`:
     badges: ['Committee Member', 'Keynote Speaker'],
   }}
   variant="secondary"
+  m={2}
 />
 ```
 
@@ -306,7 +316,7 @@ You can define additional variants in your theme under the `badges` key.
 
 The following URLs can be used for visual regression testing:
 
-- [Align end](/profile-preview/align-end)
-- [Align start](/profile-preview/align-start)
 - [Complete profile](/profile-preview/complete-profile)
+- [Align start](/profile-preview/align-start)
+- [Align end](/profile-preview/align-end)
 - [Really long strings](/profile-preview/really-long-strings)
