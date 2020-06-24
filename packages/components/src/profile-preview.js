@@ -87,7 +87,7 @@ const ProfilePreview = ({
       />
     )}
     {profile.badges && (
-      <Badges values={profile.badges} variant={variant} mt={2} />
+      <Badges values={profile.badges} align={align} variant={variant} mt={2} />
     )}
   </Flex>
 );
