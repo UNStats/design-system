@@ -1,6 +1,8 @@
 - title: Components
   url: /components
   children:
+    - title: Badges
+      url: /components/badges
     - title: EmailIcon
       url: /components/email-icon
     - title: EventPreview

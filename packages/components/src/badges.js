@@ -4,14 +4,14 @@ import { Badge, Box, Flex } from 'theme-ui';
 
 import { normalizeAlign } from './util';
 
-/**
- * There are no restrictions on what the variants can be called except that the default variant is called `primary`.
- * If you use @undataforum/preset you have variants `primary` and `secondary`.
- */
-
 // Add margin around each badge.
 // Neutralize outer margins with negative margins on Flex.
-const Badges = ({ values, align = 'start', variant = 'primary', ...props }) => (
+const Badges = ({
+  values,
+  align = 'start',
+  variant = 'badges.primary',
+  ...props
+}) => (
   <Box {...props}>
     <Flex
       sx={{
@@ -38,7 +38,6 @@ const Badges = ({ values, align = 'start', variant = 'primary', ...props }) => (
 const alignments = ['start', 'center', 'end'];
 const alignType = oneOf(alignments);
 
-// You can add your own variants applications.
 Badges.propTypes = {
   values: arrayOf(string).isRequired,
   align: oneOfType([alignType, arrayOf(alignType)]),
