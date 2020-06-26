@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, ThemeProvider } from 'theme-ui';
+import { Heading, Image, ThemeProvider } from 'theme-ui';
 import preset from '@theme-ui/preset-base';
 import { ProfilePreview } from '@undataforum/components';
 
@@ -19,7 +19,11 @@ const CompleteProfile = () => (
           />
         ),
         honorific: 'His Excellency',
-        name: 'Nance MacFadin',
+        name: (
+          <Heading as="div" sx={{ fontSize: 4, textAlign: 'center' }}>
+            Nance MacFadin
+          </Heading>
+        ),
         jobtitle: 'Help Desk Operator',
         organization: 'Schuster-Senger',
         socialIcons: [

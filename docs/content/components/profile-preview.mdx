@@ -22,7 +22,11 @@ This is a complete profile with default centered alignment:
       />
     ),
     honorific: 'His Excellency',
-    name: 'Nance MacFadin',
+    name: (
+      <Heading as="div" sx={{ fontSize: 4, textAlign: 'center' }}>
+        Nance MacFadin
+      </Heading>
+    ),
     jobtitle: 'Help Desk Operator',
     organization: 'Schuster-Senger',
     socialIcons: [
@@ -43,7 +47,10 @@ This is a complete profile with default centered alignment:
 />
 ```
 
-It can also be aligned left (start):
+Note that the component passed in with the `name` prop inside the `profile`
+object sets `textAlign` to `center` to align a long name correctly.
+
+`ProfilePreview` can also be aligned left (align `start`):
 
 ```jsx live
 <ProfilePreview
@@ -56,7 +63,11 @@ It can also be aligned left (start):
       />
     ),
     honorific: 'His Excellency',
-    name: 'Nance MacFadin',
+    name: (
+      <Heading as="div" sx={{ fontSize: 4, textAlign: 'start' }}>
+        Nance MacFadin
+      </Heading>
+    ),
     jobtitle: 'Help Desk Operator',
     organization: 'Schuster-Senger',
     socialIcons: [
@@ -78,7 +89,10 @@ It can also be aligned left (start):
 />
 ```
 
-Or aligned right (end):
+Note that the component passed in with the `name` prop inside the `profile`
+object sets `textAlign` to `start` to align a long name correctly.
+
+`ProfilePreview` can also be aligned right (align `end`):
 
 ```jsx live
 <ProfilePreview
@@ -91,7 +105,11 @@ Or aligned right (end):
       />
     ),
     honorific: 'His Excellency',
-    name: 'Nance MacFadin',
+    name: (
+      <Heading as="div" sx={{ fontSize: 4, textAlign: 'end' }}>
+        Nance MacFadin
+      </Heading>
+    ),
     jobtitle: 'Help Desk Operator',
     organization: 'Schuster-Senger',
     socialIcons: [
@@ -113,7 +131,10 @@ Or aligned right (end):
 />
 ```
 
-This is a minimal profile with avatar only:
+Note that the component passed in with the `name` prop inside the `profile`
+object sets `textAlign` to `end` to align a long name correctly.
+
+In this example we render minimal profile with avatar only:
 
 ```jsx live
 <ProfilePreview
@@ -142,7 +163,11 @@ This is a profile without job title:
         src="/avatar0.png"
       />
     ),
-    name: 'Nance MacFadin',
+    name: (
+      <Heading as="div" sx={{ fontSize: 4, textAlign: 'center' }}>
+        Nance MacFadin
+      </Heading>
+    ),
     organization: 'Schuster-Senger',
     badges: ['Committee Member', 'Keynote Speaker'],
   }}
@@ -162,7 +187,11 @@ This is a profile without organization:
         src="/avatar0.png"
       />
     ),
-    name: 'Nance MacFadin',
+    name: (
+      <Heading as="div" sx={{ fontSize: 4, textAlign: 'center' }}>
+        Nance MacFadin
+      </Heading>
+    ),
     jobtitle: 'Help Desk Operator',
     badges: ['Committee Member', 'Keynote Speaker'],
   }}
@@ -182,7 +211,11 @@ This is a profile without job title and organization:
         src="/avatar0.png"
       />
     ),
-    name: 'Nance MacFadin',
+    name: (
+      <Heading as="div" sx={{ fontSize: 4, textAlign: 'center' }}>
+        Nance MacFadin
+      </Heading>
+    ),
     badges: ['Committee Member', 'Keynote Speaker'],
   }}
   m={2}
@@ -201,7 +234,11 @@ This is a profile with avatar image and name only:
         src="/avatar4.png"
       />
     ),
-    name: 'Suzy Cahan',
+    name: (
+      <Heading as="div" sx={{ fontSize: 4, textAlign: 'center' }}>
+        Suzy Cahan
+      </Heading>
+    ),
   }}
   m={2}
 />
@@ -225,50 +262,17 @@ responsive:
         src="/avatar5.png"
       />
     ),
-    name: 'Sandra Abramovici',
+    name: (
+      <Heading as="div" sx={{ fontSize: 4, textAlign: 'center' }}>
+        Sandra Abramovici
+      </Heading>
+    ),
   }}
   m={2}
 />
 ```
 
 In this example we use custom variant `secondary`:
-
-```jsx live
-<ProfilePreview
-  profile={{
-    avatar: (
-      <Image
-        alt="Nance MacFadin"
-        sx={{ borderRadius: '50%', height: 128, width: 128 }}
-        src="/avatar0.png"
-      />
-    ),
-    honorific: 'His Excellency',
-    name: 'Nance MacFadin',
-    jobtitle: 'Help Desk Operator',
-    organization: 'Schuster-Senger',
-    socialIcons: [
-      {
-        id: 'twitter',
-        username: 'nance-mcfadin',
-        title: 'Follow me on Twitter',
-      },
-      {
-        id: 'github',
-        username: 'nance-mcfadin',
-        title: 'Follow me on GitHub',
-      },
-    ],
-    badges: ['Committee Member', 'Keynote Speaker'],
-  }}
-  variant="secondary"
-  m={2}
-/>
-```
-
-The default variant is `primary`. The value of `variant` is passed on to badges
-(if present). `@undataforum/preset` includes the following defintions to make
-variants `primary` and `secondary` work:
 
 ```jsx
 badges: {
@@ -293,24 +297,85 @@ You can define additional variants in your theme under the `badges` key.
 
 ## Component props
 
-| Name     | Type                       | Default  | Required | Description                                                    |
-| :------- | :------------------------- | :------- | :------- | :------------------------------------------------------------- |
-| profile  | Object                     |          | ✓        | See below.                                                     |
-| align    | `start`, `center` or `end` | `center` |          | Alignment of profile (responsive).                             |
-| fontSize | Number                     | `[3, 4]` |          | Font size of name (responsive).                                |
-| variant  | String                     | primary  |          | Variants apply to badges only and need to be defined in theme. |
+| Name    | Type                       | Default          | Required | Description                        |
+| :------ | :------------------------- | :--------------- | :------- | :--------------------------------- |
+| profile | Object                     |                  | ✓        | See below.                         |
+| align   | `start`, `center` or `end` | `center`         |          | Alignment of profile (responsive). |
+| variant | String                     | `badges.primary` |          | Variant for optional badges.       |
 
 ### Profile
 
-| Name         | Type            | Default | Required | Description                                      |
-| :----------- | :-------------- | :------ | :------- | ------------------------------------------------ |
-| avatar       | Node            |         | ✓        | Avatar image (composition pattern).              |
-| honorific    | String          |         |          | Honorific title.                                 |
-| name         | String          |         |          | Full name.                                       |
-| jobtitle     | String          |         |          | Job title.                                       |
-| organization | String          |         |          | Organization name.                               |
-| socialIcons  | Array of Object |         |          | Social icons for personal social media accounts. |
-| badges       | Array of String |         |          | Badges with roles.                               |
+| Name         | Type            | Default | Required | Description                                                                                                |
+| :----------- | :-------------- | :------ | :------- | ---------------------------------------------------------------------------------------------------------- |
+| avatar       | Node            |         | ✓        | Avatar image (composition pattern).                                                                        |
+| honorific    | String          |         |          | Honorific title.                                                                                           |
+| name         | Node            |         |          | Full name (composition pattern). You need to make sure that this component aligns with above `align` prop. |
+| jobtitle     | String          |         |          | Job title.                                                                                                 |
+| organization | String          |         |          | Organization name.                                                                                         |
+| socialIcons  | Array of Object |         |          | Social icons for personal social media accounts.                                                           |
+| badges       | Array of String |         |          | Badges with roles.                                                                                         |
+
+## Variants
+
+`ProfilePreview` adapts to its parent's colors except for the badges. You can
+customize the badges by providing a variant to the `variant` prop. This variant
+needs to exist in your theme to take effect. The default variant is
+`badges.primary`. Even if this variant does not exist, the component renders
+with [Theme UI's `Badge`](https://theme-ui.com/components/badge/)'s defaults.
+
+In this example we render `ProfilePreview` with variant `badges.secondary`,
+which needs to be defined in your theme. You normally don't do this with an
+additional `ThemeProvider`, but in your theme file or preset. Using
+`ThemeProvider` in the example belowe allows you to play around variant
+`badges.secondary` in the source code.
+
+```jsx live
+<ThemeProvider
+  theme={{
+    badges: {
+      secondary: {
+        color: 'background',
+        bg: 'secondary',
+      },
+    },
+  }}
+>
+  <ProfilePreview
+    profile={{
+      avatar: (
+        <Image
+          alt="Nance MacFadin"
+          sx={{ borderRadius: '50%', height: 128, width: 128 }}
+          src="/avatar0.png"
+        />
+      ),
+      honorific: 'His Excellency',
+      name: (
+        <Heading as="div" sx={{ fontSize: 4, textAlign: 'center' }}>
+          Nance MacFadin
+        </Heading>
+      ),
+      jobtitle: 'Help Desk Operator',
+      organization: 'Schuster-Senger',
+      socialIcons: [
+        {
+          id: 'twitter',
+          username: 'nance-mcfadin',
+          title: 'Follow me on Twitter',
+        },
+        {
+          id: 'github',
+          username: 'nance-mcfadin',
+          title: 'Follow me on GitHub',
+        },
+      ],
+      badges: ['Committee Member', 'Keynote Speaker'],
+    }}
+    variant="badges.secondary"
+    m={2}
+  />
+</ThemeProvider>
+```
 
 ## Visual regression testing
 

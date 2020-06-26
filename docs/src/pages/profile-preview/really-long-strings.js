@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, ThemeProvider } from 'theme-ui';
+import { Heading, Image, ThemeProvider } from 'theme-ui';
 import preset from '@theme-ui/preset-base';
 import { ProfilePreview } from '@undataforum/components';
 
@@ -14,8 +14,12 @@ const ReallyLongStrings = () => (
             src="/avatar7.png"
           />
         ),
-        name:
-          'Really really really really really really really really really really long name',
+        name: (
+          <Heading as="div" sx={{ fontSize: 4, textAlign: 'center' }}>
+            Really really really really really really really really really
+            really long name
+          </Heading>
+        ),
         jobtitle:
           'Really really really really really really really really really really long jobtitle',
         organization:
