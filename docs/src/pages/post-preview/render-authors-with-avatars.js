@@ -20,7 +20,7 @@ const RenderWithNames = () => (
               avatar: (
                 <Image
                   alt="Portrait of Willow Rangall"
-                  sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                  sx={{ borderRadius: '50%', height: 64, width: 64 }}
                   src="/avatar0.png"
                 />
               ),
@@ -32,7 +32,7 @@ const RenderWithNames = () => (
               avatar: (
                 <Image
                   alt="Portrait of Suzy Cahan"
-                  sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                  sx={{ borderRadius: '50%', height: 64, width: 64 }}
                   src="/avatar1.png"
                 />
               ),
@@ -44,7 +44,7 @@ const RenderWithNames = () => (
               avatar: (
                 <Image
                   alt="Portrait of Sandra Abramovici"
-                  sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                  sx={{ borderRadius: '50%', height: 64, width: 64 }}
                   src="/avatar2.png"
                 />
               ),
@@ -56,7 +56,7 @@ const RenderWithNames = () => (
               avatar: (
                 <Image
                   alt="Portrait of Jan McKea"
-                  sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                  sx={{ borderRadius: '50%', height: 64, width: 64 }}
                   src="/avatar3.png"
                 />
               ),
@@ -68,7 +68,7 @@ const RenderWithNames = () => (
               avatar: (
                 <Image
                   alt="Portrait of Ola Brunger"
-                  sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                  sx={{ borderRadius: '50%', height: 64, width: 64 }}
                   src="/avatar4.png"
                 />
               ),
@@ -80,7 +80,7 @@ const RenderWithNames = () => (
               avatar: (
                 <Image
                   alt="Portrait of Ivette Rowlinson"
-                  sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                  sx={{ borderRadius: '50%', height: 64, width: 64 }}
                   src="/avatar5.png"
                 />
               ),
@@ -92,7 +92,7 @@ const RenderWithNames = () => (
               avatar: (
                 <Image
                   alt="Portrait of Madeleine Stredwick"
-                  sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                  sx={{ borderRadius: '50%', height: 64, width: 64 }}
                   src="/avatar6.png"
                 />
               ),
@@ -104,7 +104,7 @@ const RenderWithNames = () => (
               avatar: (
                 <Image
                   alt="Portrait of Lin Billson"
-                  sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                  sx={{ borderRadius: '50%', height: 64, width: 64 }}
                   src="/avatar7.png"
                 />
               ),
@@ -116,7 +116,7 @@ const RenderWithNames = () => (
               avatar: (
                 <Image
                   alt="Portrait of Alfie Piborn"
-                  sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                  sx={{ borderRadius: '50%', height: 64, width: 64 }}
                   src="/avatar8.png"
                 />
               ),
@@ -128,7 +128,7 @@ const RenderWithNames = () => (
               avatar: (
                 <Image
                   alt="Portrait of Garvy Bartlomiej"
-                  sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                  sx={{ borderRadius: '50%', height: 64, width: 64 }}
                   src="/avatar9.png"
                 />
               ),

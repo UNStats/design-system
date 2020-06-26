@@ -20,7 +20,7 @@ const RenderWithAvatars = () => (
               avatar: (
                 <Image
                   alt="Portrait of Willow Rangall"
-                  sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                  sx={{ borderRadius: '50%', height: 64, width: 64 }}
                   src="/avatar0.png"
                 />
               ),
@@ -32,7 +32,7 @@ const RenderWithAvatars = () => (
               avatar: (
                 <Image
                   alt="Portrait of Suzy Cahan"
-                  sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                  sx={{ borderRadius: '50%', height: 64, width: 64 }}
                   src="/avatar1.png"
                 />
               ),
@@ -44,7 +44,7 @@ const RenderWithAvatars = () => (
               avatar: (
                 <Image
                   alt="Portrait of Sandra Abramovici"
-                  sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                  sx={{ borderRadius: '50%', height: 64, width: 64 }}
                   src="/avatar2.png"
                 />
               ),
