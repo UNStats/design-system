@@ -1,6 +1,8 @@
 - title: Components
   url: /components
   children:
+    - title: Avatars
+      url: /components/avatars
     - title: Badges
       url: /components/badges
     - title: EmailIcon

@@ -20,7 +20,7 @@ const Avatars = ({ values, align = 'start', ...props }) => (
       <Link
         key={id}
         href={href}
-        sx={{ color: 'inherit', ':hover': { textDecoration: 'none' } }}
+        sx={{ color: 'inherit', textDecoration: 'none' }}
       >
         <ProfilePreview profile={{ avatar, name }} fontSize={1} align={align} />
       </Link>
