@@ -1,26 +1,15 @@
 import React from 'react';
-import {
-  arrayOf,
-  node,
-  number,
-  oneOf,
-  oneOfType,
-  shape,
-  string,
-} from 'prop-types';
+import { arrayOf, node, oneOf, oneOfType, shape, string } from 'prop-types';
 import { Flex, Text } from 'theme-ui';
 
 import Badges from './badges';
 import SocialIcons from './social-icons';
 import { normalizeAlign } from './util';
 
-// This component adapts to its parent's colors except for the badges.
-// Badges need a variant to display properly in all circumstances.
 const ProfilePreview = ({
-  align = 'center',
-  fontSize = [3, 4],
   profile,
-  variant = 'primary',
+  align = 'center',
+  variant = 'badges.primary',
   ...props
 }) => (
   <Flex
@@ -43,18 +32,7 @@ const ProfilePreview = ({
         {profile.honorific}
       </Text>
     )}
-    <Text
-      as="h1"
-      sx={{
-        fontSize,
-        lineHeight: 'heading',
-        textAlign: align,
-        mt: 0,
-        mb: 0,
-      }}
-    >
-      {profile.name}
-    </Text>
+    {profile.name}
     {profile.jobtitle && (
       <Text
         sx={{
@@ -99,7 +77,7 @@ ProfilePreview.propTypes = {
   profile: shape({
     avatar: node.isRequired,
     honorific: string,
-    name: string,
+    name: node,
     jobtitle: string,
     organization: string,
     socialIcons: arrayOf(
@@ -112,7 +90,6 @@ ProfilePreview.propTypes = {
     badges: arrayOf(string),
   }).isRequired,
   align: oneOfType([alignType, arrayOf(alignType)]),
-  fontSize: oneOfType([number, arrayOf(number)]),
   variant: string,
 };
 
