@@ -1,0 +1,197 @@
+---
+title: Badges
+status: Experimental
+source: https://github.com/UNDataForum/design-system/blob/master/packages/components/src/badges.js
+---
+
+`Badges` is used to render one or more badges or tags.
+
+## Examples
+
+Badges align start (left) by default:
+
+```jsx live
+<Badges
+  values={['Design Engineer', 'Recruiter', 'Teacher', 'Scientist']}
+  m={2}
+/>
+```
+
+You can align center:
+
+```jsx live
+<Badges
+  values={['Design Engineer', 'Recruiter', 'Teacher', 'Scientist']}
+  align="center"
+  m={2}
+/>
+```
+
+Or align end (right):
+
+```jsx live
+<Badges
+  values={['Design Engineer', 'Recruiter', 'Teacher', 'Scientist']}
+  align="end"
+  m={2}
+/>
+```
+
+When you have many badges they wrap:
+
+```jsx live
+<Badges
+  values={[
+    'Design Engineer',
+    'Recruiter',
+    'Teacher',
+    'Environmental Specialist',
+    'Nuclear Power Engineer',
+    'Cost Accountant',
+    'VP Marketing',
+    'Automation Specialist',
+    'Analog Circuit Design Manager',
+    'Senior Cost Accountant',
+    'Desktop Support Technician',
+    'Web Developer',
+    'Technical Writer',
+    'Database Administrator',
+    'Systems Administrator',
+    'Assistant Manager',
+  ]}
+  m={2}
+/>
+```
+
+You can still align center:
+
+```jsx live
+<Badges
+  values={[
+    'Design Engineer',
+    'Recruiter',
+    'Teacher',
+    'Environmental Specialist',
+    'Nuclear Power Engineer',
+    'Cost Accountant',
+    'VP Marketing',
+    'Automation Specialist',
+    'Analog Circuit Design Manager',
+    'Senior Cost Accountant',
+    'Desktop Support Technician',
+    'Web Developer',
+    'Technical Writer',
+    'Database Administrator',
+    'Systems Administrator',
+    'Assistant Manager',
+  ]}
+  align="center"
+  m={2}
+/>
+```
+
+Or align end:
+
+```jsx live
+<Badges
+  values={[
+    'Design Engineer',
+    'Recruiter',
+    'Teacher',
+    'Environmental Specialist',
+    'Nuclear Power Engineer',
+    'Cost Accountant',
+    'VP Marketing',
+    'Automation Specialist',
+    'Analog Circuit Design Manager',
+    'Senior Cost Accountant',
+    'Desktop Support Technician',
+    'Web Developer',
+    'Technical Writer',
+    'Database Administrator',
+    'Systems Administrator',
+    'Assistant Manager',
+  ]}
+  align="end"
+  m={2}
+/>
+```
+
+## System props
+
+`Badges` supports [space props](https://styled-system.com/api#space) and
+[color props](https://styled-system.com/api#color) from
+[Styled System](https://styled-system.com/).
+
+## Component props
+
+| Name    | Type                       | Default          | Required | Description                          |
+| :------ | :------------------------- | :--------------- | :------- | :----------------------------------- |
+| values  | Array of string            |                  | ✓        | Array of badge names.                |
+| align   | `start`, `center` or `end` | `start`          |          | Alignment (responsive).              |
+| variant | String                     | `badges.primary` |          | Optional variant for customizations. |
+
+## Variants
+
+If you do not provide a `variant` prop, badges are rendered with the defaults
+from Theme UI's
+[`Badge`](https://github.com/system-ui/theme-ui/blob/master/packages/components/src/Badge.js).
+Its variants are defined under the `badges` key, as explained in the
+[docs](https://theme-ui.com/components/badge/).
+
+If you define customizations for Theme Ui's `Badge`, you can make `Badges` use
+these custmoizations by providing the corresponding variant to the `variant`
+prop. You can also define you own variants under any other key and provide that
+key to `variant`.
+
+In this example we customize the corners of the badges using default variant
+`badges.primary`:
+
+```jsx live
+<ThemeProvider
+  theme={{
+    badges: {
+      default: {
+        borderRadius: 0,
+      },
+      primary: {
+        variant: 'badges.default',
+      },
+    },
+  }}
+>
+  <Badges
+    values={['Design Engineer', 'Recruiter', 'Teacher', 'Scientist']}
+    m={2}
+  />
+</ThemeProvider>
+```
+
+In this example we define variant `badges.secondary` and apply it to `Badges`:
+
+```jsx live
+<ThemeProvider
+  theme={{
+    badges: {
+      secondary: {
+        color: 'background',
+        bg: 'secondary',
+      },
+    },
+  }}
+>
+  <Badges
+    values={['Design Engineer', 'Recruiter', 'Teacher', 'Scientist']}
+    variant="badges.secondary"
+    m={2}
+  />
+</ThemeProvider>
+```
+
+## Visual regression testing
+
+The following URLs can be used for visual regression testing:
+
+- [Few badges](/badges/few-badges)
+- [Many badges](/badges/many-badges)
+- [Customized with `@undataforum/preset`](/badges/customized-with-preset)
