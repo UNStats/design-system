@@ -1,9 +1,9 @@
 import React from 'react';
 import { Heading, Text, ThemeProvider } from 'theme-ui';
-import preset from '@theme-ui/preset-base';
+import preset from '@undataforum/preset';
 import { Names, PostPreview } from '@undataforum/components';
 
-const RenderWithNames = () => (
+const CustomizeWithPreset = () => (
   <ThemeProvider theme={preset}>
     <PostPreview
       post={{
@@ -48,4 +48,4 @@ const RenderWithNames = () => (
   </ThemeProvider>
 );
 
-export default RenderWithNames;
+export default CustomizeWithPreset;

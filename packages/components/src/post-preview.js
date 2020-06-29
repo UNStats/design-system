@@ -1,10 +1,8 @@
 import React from 'react';
 import { node, shape, string } from 'prop-types';
-import { Button, Flex, Link, Text } from 'theme-ui';
+import { Badge, Box, Button, Flex, Link, Text } from 'theme-ui';
 
-import Badges from './badges';
-
-const PostPreview = ({ post, variant = 'primary', ...props }) => {
+const PostPreview = ({ post, ...props }) => {
   // If post date is last element, it should have bottom margin zero.
   const mb = post.description ? 3 : 0;
   return (
@@ -16,9 +14,16 @@ const PostPreview = ({ post, variant = 'primary', ...props }) => {
       }}
     >
       {post.tag && (
-        <Badges values={[post.tag]} variant={variant} mb={2}>
-          {post.tag}
-        </Badges>
+        <Box sx={{ mb: 2 }}>
+          <Badge
+            sx={{
+              // Anything below variant cannot be overridden by this variant.
+              variant: 'post-preview.badge',
+            }}
+          >
+            {post.tag}
+          </Badge>
+        </Box>
       )}
       {post.title}
       {post.authors && post.authors}
@@ -37,11 +42,12 @@ const PostPreview = ({ post, variant = 'primary', ...props }) => {
           <Button
             as={Link}
             sx={{
+              // Anything below variant cannot be overridden by this variant.
+              variant: `post-preview.button`,
               alignSelf: ['stretch', 'flex-start'],
               whiteSpace: 'nowrap',
             }}
             href={post.href}
-            variant={variant}
           >
             Read on
           </Button>
@@ -60,7 +66,6 @@ PostPreview.propTypes = {
     description: node,
     href: string,
   }).isRequired,
-  variant: string,
 };
 
 export default PostPreview;
