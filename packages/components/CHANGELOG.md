@@ -1,5 +1,19 @@
 # Change Log
 
+## 0.77.0
+
+### Minor Changes
+
+- 4c245dc: Refactor how variants are used to customize PostPreview
+- 84f9464: Eliminate fontSize prop from ProfilePreview
+- ffcb910: Change default variant of Badges component
+
+### Patch Changes
+
+- aa770ea: Fix alignment of badges of ProfilePreview on small screens
+- e650a0b: Change Link styles in Avatars component
+- fe32425: Fix incorrect name prop-type in Avatars
+
 ## 0.76.0
 
 ### Minor Changes

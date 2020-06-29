@@ -1,5 +1,11 @@
 # @undataforum/preset
 
+## 0.9.0
+
+### Minor Changes
+
+- 4c245dc: Add default variants for PostPreview
+
 ## 0.8.0
 
 ### Minor Changes
