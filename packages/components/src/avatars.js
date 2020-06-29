@@ -36,7 +36,7 @@ Avatars.propTypes = {
     shape({
       id: string.isRequired,
       avatar: node.isRequired,
-      name: string,
+      name: node,
       href: string.isRequired,
     })
   ).isRequired,
