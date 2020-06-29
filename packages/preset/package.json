@@ -1,7 +1,7 @@
 {
   "name": "@undataforum/preset",
   "description": "Theme UI preset for @UNDataForum websites.",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "author": "Thilo Maier <maier@un.org>",
   "license": "MIT",
   "homepage": "https://github.com/UNDataForum/design-system/tree/master/packages/preset",
