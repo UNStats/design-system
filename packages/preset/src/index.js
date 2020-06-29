@@ -114,13 +114,18 @@ const theme = merge(preset, {
 
   // Variants for https://theme-ui.com/components/badge/.
   badges: {
+    default: {
+      borderRadius: 'default',
+    },
     primary: {
       color: 'background',
       bg: 'primary',
+      variant: 'badges.default',
     },
     secondary: {
       color: 'background',
       bg: 'secondary',
+      variant: 'badges.default',
     },
   },
 
@@ -197,6 +202,15 @@ const theme = merge(preset, {
     },
     bold: {
       fontWeight: 'bold',
+    },
+  },
+
+  'post-preview': {
+    badge: {
+      variant: 'badges.primary',
+    },
+    button: {
+      variant: 'buttons.primary',
     },
   },
 

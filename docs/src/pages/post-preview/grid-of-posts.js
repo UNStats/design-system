@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Grid, Heading, Text } from 'theme-ui';
+import { Container, Grid, Heading, Text, ThemeProvider } from 'theme-ui';
+import preset from '@theme-ui/preset-base';
 import { Names, PostPreview } from '@undataforum/components';
 
 const posts = [
@@ -93,21 +94,23 @@ const posts = [
 ];
 
 const GridOfPosts = () => (
-  <Container my={3}>
-    <Grid gap={4} columns={[1, null, 2]}>
-      {posts.map(({ id, ...post }) => (
-        <PostPreview
-          post={{ ...post }}
-          colors={{
-            text: 'text',
-            background: 'background',
-            accent: 'secondary',
-          }}
-          key={id}
-        />
-      ))}
-    </Grid>
-  </Container>
+  <ThemeProvider theme={preset}>
+    <Container sx={{ maxWidth: '64rem', my: 2 }}>
+      <Grid gap={4} columns={[1, null, 2]}>
+        {posts.map(({ id, ...post }) => (
+          <PostPreview
+            post={{ ...post }}
+            colors={{
+              text: 'text',
+              background: 'background',
+              accent: 'secondary',
+            }}
+            key={id}
+          />
+        ))}
+      </Grid>
+    </Container>
+  </ThemeProvider>
 );
 
 export default GridOfPosts;

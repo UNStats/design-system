@@ -51,6 +51,7 @@ description:
     ),
     href: '/blog/vestibulum-proin-eu',
   }}
+  m={2}
 />
 ```
 
@@ -74,11 +75,15 @@ tag and description:
             avatar: (
               <Image
                 alt="Portrait of Willow Rangall"
-                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                sx={{ borderRadius: '50%', height: 64, width: 64 }}
                 src="/avatar0.png"
               />
             ),
-            name: 'Willow Rangall',
+            name: (
+              <Heading as="div" sx={{ fontSize: 2, textAlign: 'start' }}>
+                Willow Rangall
+              </Heading>
+            ),
             href: '/profiles/willow-rangall',
           },
           {
@@ -86,11 +91,15 @@ tag and description:
             avatar: (
               <Image
                 alt="Portrait of Suzy Cahan"
-                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                sx={{ borderRadius: '50%', height: 64, width: 64 }}
                 src="/avatar1.png"
               />
             ),
-            name: 'Suzy Cahan',
+            name: (
+              <Heading as="div" sx={{ fontSize: 2, textAlign: 'start' }}>
+                Suzy Cahan
+              </Heading>
+            ),
             href: '/profiles/suzy-cahan',
           },
           {
@@ -98,11 +107,15 @@ tag and description:
             avatar: (
               <Image
                 alt="Portrait of Sandra Abramovici"
-                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                sx={{ borderRadius: '50%', height: 64, width: 64 }}
                 src="/avatar2.png"
               />
             ),
-            name: 'Sandra Abramovici',
+            name: (
+              <Heading as="div" sx={{ fontSize: 2, textAlign: 'start' }}>
+                Sandra Abramovici
+              </Heading>
+            ),
             href: '/profiles/sandra-abramovici',
           },
           {
@@ -110,11 +123,15 @@ tag and description:
             avatar: (
               <Image
                 alt="Portrait of Jan McKea"
-                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                sx={{ borderRadius: '50%', height: 64, width: 64 }}
                 src="/avatar3.png"
               />
             ),
-            name: 'Jan McKea',
+            name: (
+              <Heading as="div" sx={{ fontSize: 2, textAlign: 'start' }}>
+                Jan McKea
+              </Heading>
+            ),
             href: '/profiles/jan-mckea',
           },
           {
@@ -122,11 +139,15 @@ tag and description:
             avatar: (
               <Image
                 alt="Portrait of Ola Brunger"
-                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                sx={{ borderRadius: '50%', height: 64, width: 64 }}
                 src="/avatar4.png"
               />
             ),
-            name: 'Ola Brunger',
+            name: (
+              <Heading as="div" sx={{ fontSize: 2, textAlign: 'start' }}>
+                Ola Brunger
+              </Heading>
+            ),
             href: '/profiles/ola-brunger',
           },
           {
@@ -134,11 +155,15 @@ tag and description:
             avatar: (
               <Image
                 alt="Portrait of Ivette Rowlinson"
-                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                sx={{ borderRadius: '50%', height: 64, width: 64 }}
                 src="/avatar5.png"
               />
             ),
-            name: 'Ivette Rowlinson',
+            name: (
+              <Heading as="div" sx={{ fontSize: 2, textAlign: 'start' }}>
+                Ivette Rowlinson
+              </Heading>
+            ),
             href: '/profiles/ivette-rowlinson',
           },
           {
@@ -146,11 +171,15 @@ tag and description:
             avatar: (
               <Image
                 alt="Portrait of Madeleine Stredwick"
-                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                sx={{ borderRadius: '50%', height: 64, width: 64 }}
                 src="/avatar6.png"
               />
             ),
-            name: 'Madeleine Stredwick',
+            name: (
+              <Heading as="div" sx={{ fontSize: 2, textAlign: 'start' }}>
+                Madeleine Stredwick
+              </Heading>
+            ),
             href: '/profiles/madeleine-stredwick',
           },
           {
@@ -158,11 +187,15 @@ tag and description:
             avatar: (
               <Image
                 alt="Portrait of Lin Billson"
-                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                sx={{ borderRadius: '50%', height: 64, width: 64 }}
                 src="/avatar7.png"
               />
             ),
-            name: 'Lin Billson',
+            name: (
+              <Heading as="div" sx={{ fontSize: 2, textAlign: 'start' }}>
+                Lin Billson
+              </Heading>
+            ),
             href: '/profiles/lin-billson',
           },
           {
@@ -170,11 +203,15 @@ tag and description:
             avatar: (
               <Image
                 alt="Portrait of Alfie Piborn"
-                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                sx={{ borderRadius: '50%', height: 64, width: 64 }}
                 src="/avatar8.png"
               />
             ),
-            name: 'Alfie Piborn',
+            name: (
+              <Heading as="div" sx={{ fontSize: 2, textAlign: 'start' }}>
+                Alfie Piborn
+              </Heading>
+            ),
             href: '/profiles/alfie-piborn',
           },
           {
@@ -182,11 +219,15 @@ tag and description:
             avatar: (
               <Image
                 alt="Portrait of Garvy Bartlomiej"
-                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                sx={{ borderRadius: '50%', height: 64, width: 64 }}
                 src="/avatar9.png"
               />
             ),
-            name: 'Garvy Bartlomiej',
+            name: (
+              <Heading as="div" sx={{ fontSize: 2, textAlign: 'start' }}>
+                Garvy Bartlomiej
+              </Heading>
+            ),
             href: '/profiles/garvy-bartlomiej',
           },
         ]}
@@ -194,10 +235,11 @@ tag and description:
       />
     ),
   }}
+  m={2}
 />
 ```
 
-This example is a post without authors:
+This is an example of a post without authors:
 
 ```jsx live
 <PostPreview
@@ -221,79 +263,9 @@ This example is a post without authors:
     ),
     href: '/blog/vestibulum-proin-eu',
   }}
+  m={2}
 />
 ```
-
-In this example we use custom variant `secondary`:
-
-```jsx live
-<PostPreview
-  post={{
-    tag: 'Post',
-    title: (
-      <Heading as="h1" mb={3}>
-        Vestibulum proin eu mi nulla ac enim in tempor turpis{' '}
-      </Heading>
-    ),
-    date: 'May 31, 2018',
-    authors: (
-      <Names
-        values={[
-          'Willow Rangall',
-          'Suzy Cahan',
-          'Sandra Abramovici',
-          'Jan McKea',
-          'Ola Brunger',
-          'Ivette Rowlinson',
-          'Madeleine Stredwick',
-          'Lin Billson',
-          'Alfie Piborn',
-          'Garvy Bartlomiej',
-        ]}
-        mb={3}
-      />
-    ),
-    description: (
-      <Text as="p" variant="text.default" mb={3}>
-        Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed
-        interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu
-        massa. Donec dapibus. Duis at velit eu est congue elementum. In hac
-        habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis,
-        diam erat fermentum justo, nec condimentum neque sapien placerat ante.
-        Nulla justo.
-      </Text>
-    ),
-    href: '/blog/vestibulum-proin-eu',
-  }}
-  variant="secondary"
-/>
-```
-
-The default variant is `primary`. The value of `variant` is passed on to the
-button (if present). `@undataforum/preset` includes the following defintions to
-make variants `primary` and `secondary` work:
-
-```jsx
-buttons: {
-  default: {
-    fontSize: 2,
-    fontWeight: 'bold',
-    borderRadius: 'default',
-  },
-  primary: {
-    variant: 'buttons.default',
-    color: 'background',
-    bg: 'primary',
-  },
-  secondary: {
-    variant: 'buttons.default',
-    color: 'background',
-    bg: 'secondary',
-  },
-},
-```
-
-You can define additional variants in your theme under the `buttons` key.
 
 ## System props
 
@@ -303,10 +275,9 @@ You can define additional variants in your theme under the `buttons` key.
 
 ## Component props
 
-| Name    | Type   | Default | Required | Description                                |
-| :------ | :----- | :------ | :------- | :----------------------------------------- |
-| post    | Object |         | ✓        | See below.                                 |
-| variant | String | primary |          | Variants need to be defined in your theme. |
+| Name | Type   | Default | Required | Description |
+| :--- | :----- | :------ | :------- | :---------- |
+| post | Object |         | ✓        | See below.  |
 
 ### Post
 
@@ -331,10 +302,82 @@ margins. Generally, you should use bottom margins only and no top margins:
 - `description` may not have a top margin, only a bottom margin. The bottom
   margin should be zero if it is not followed by a button.
 
+## Variants
+
+You can customize `PostPreview` by defining the following variants in your
+theme:
+
+| Key                   | Description                |
+| :-------------------- | :------------------------- |
+| `post-preview.badge`  | Customize optional tag.    |
+| `post-preview.button` | Customize optional button. |
+
+In this example we define above variants in a `ThemeProvider` to customize the
+look of the tag and button. You would normally do this in your theme:
+
+```jsx live
+<ThemeProvider
+  theme={{
+    'post-preview': {
+      badge: {
+        borderRadius: 0,
+        bg: 'secondary',
+      },
+      button: {
+        borderRadius: 0,
+        bg: 'secondary',
+      },
+    },
+  }}
+>
+  <PostPreview
+    post={{
+      tag: 'Post',
+      title: (
+        <Heading as="h1" mb={3}>
+          Vestibulum proin eu mi nulla ac enim in tempor turpis
+        </Heading>
+      ),
+      date: 'May 31, 2018',
+      authors: (
+        <Names
+          values={[
+            'Willow Rangall',
+            'Suzy Cahan',
+            'Sandra Abramovici',
+            'Jan McKea',
+            'Ola Brunger',
+            'Ivette Rowlinson',
+            'Madeleine Stredwick',
+            'Lin Billson',
+            'Alfie Piborn',
+            'Garvy Bartlomiej',
+          ]}
+          mb={3}
+        />
+      ),
+      description: (
+        <Text as="p" variant="text.default" mb={3}>
+          Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed
+          interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu
+          massa. Donec dapibus. Duis at velit eu est congue elementum. In hac
+          habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis,
+          diam erat fermentum justo, nec condimentum neque sapien placerat ante.
+          Nulla justo.
+        </Text>
+      ),
+      href: '/blog/vestibulum-proin-eu',
+    }}
+    m={2}
+  />
+</ThemeProvider>
+```
+
 ## Visual regression testing
 
 The following URLs can be used for visual regression testing:
 
-- [Grid of posts](/post-preview/grid-of-posts)
-- [Render authors with `Avatars`](/post-preview/render-authors-with-avatars)
 - [Render authors with `Names`](/post-preview/render-authors-with-names)
+- [Render authors with `Avatars`](/post-preview/render-authors-with-avatars)
+- [Grid of posts](/post-preview/grid-of-posts)
+- [Customize with `@undataforum/preset`](/post-preview/customize-with-preset)
