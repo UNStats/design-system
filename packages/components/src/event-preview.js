@@ -1,10 +1,8 @@
 import React from 'react';
 import { node, shape, string } from 'prop-types';
-import { Button, Flex, Link, Text } from 'theme-ui';
+import { Badge, Box, Button, Flex, Link, Text } from 'theme-ui';
 
-import Badges from './badges';
-
-const EventPreview = ({ event, variant = 'primary', ...props }) => (
+const EventPreview = ({ event, ...props }) => (
   <Flex
     {...props}
     sx={{
@@ -14,9 +12,16 @@ const EventPreview = ({ event, variant = 'primary', ...props }) => (
     }}
   >
     {event.tag && (
-      <Badges values={[event.tag]} variant={variant} mb={2}>
-        {event.tag}
-      </Badges>
+      <Box sx={{ mb: 2 }}>
+        <Badge
+          sx={{
+            // Anything below variant cannot be overridden by this variant.
+            variant: 'event-preview.badge',
+          }}
+        >
+          {event.tag}
+        </Badge>
+      </Box>
     )}
     {event.title}
     {event.speakers && event.speakers}
@@ -25,6 +30,7 @@ const EventPreview = ({ event, variant = 'primary', ...props }) => (
       sx={{
         display: 'block',
         textAlign: 'start',
+        // Set bottom margin based on whether this is the final element.
         mb: event.description || event.href || event.registrationLink ? 3 : 0,
       }}
     >
@@ -44,11 +50,12 @@ const EventPreview = ({ event, variant = 'primary', ...props }) => (
           <Button
             as={Link}
             sx={{
+              // Anything below variant cannot be overridden by this variant.
+              variant: 'event-preview.buttons.event',
               // Right margin only if there is a registration button.
               mr: event.registrationLink ? [2, 3] : 0,
             }}
             href={event.href}
-            variant={variant}
           >
             Details
           </Button>
@@ -57,7 +64,10 @@ const EventPreview = ({ event, variant = 'primary', ...props }) => (
           <Button
             as={Link}
             href={event.registrationLink}
-            variant={`buttons.outline.${variant}`}
+            sx={{
+              // Anything below variant cannot be overridden by this variant.
+              variant: 'event-preview.buttons.registration',
+            }}
           >
             Register
           </Button>
@@ -77,7 +87,6 @@ EventPreview.propTypes = {
     href: string,
     registrationLink: string,
   }).isRequired,
-  variant: string,
 };
 
 export default EventPreview;
