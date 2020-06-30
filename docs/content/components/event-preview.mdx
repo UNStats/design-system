@@ -5,7 +5,7 @@ source: https://github.com/UNDataForum/design-system/blob/master/packages/compon
 ---
 
 An `EventPreview` is used to display an event in a list of events, e.g., on an
-overview page, and as header of an event page.
+overview page, or as header of an event page.
 
 ## Examples
 
@@ -25,6 +25,7 @@ In this example we render speakers with [`Names`](/components/names):
     href: '/events/vestibulum-proin-eu',
     registrationLink: '/register',
   }}
+  m={2}
 />
 ```
 
@@ -49,11 +50,15 @@ a description:
             avatar: (
               <Image
                 alt="Portrait of Willow Rangall"
-                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                sx={{ borderRadius: '50%', height: 64, width: 64 }}
                 src="/avatar0.png"
               />
             ),
-            name: 'Willow Rangall (Moderator)',
+            name: (
+              <Heading as="div" sx={{ fontSize: 2, textAlign: 'start' }}>
+                Willow Rangall (Moderator)
+              </Heading>
+            ),
             href: '/profiles/willow-rangall',
           },
           {
@@ -61,11 +66,15 @@ a description:
             avatar: (
               <Image
                 alt="Portrait of Suzy Cahan"
-                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                sx={{ borderRadius: '50%', height: 64, width: 64 }}
                 src="/avatar1.png"
               />
             ),
-            name: 'Suzy Cahan',
+            name: (
+              <Heading as="div" sx={{ fontSize: 2, textAlign: 'start' }}>
+                Suzy Cahan
+              </Heading>
+            ),
             href: '/profiles/suzy-cahan',
           },
           {
@@ -73,11 +82,15 @@ a description:
             avatar: (
               <Image
                 alt="Portrait of Sandra Abramovici"
-                sx={{ borderRadius: 'circle', height: 64, width: 64 }}
+                sx={{ borderRadius: '50%', height: 64, width: 64 }}
                 src="/avatar2.png"
               />
             ),
-            name: 'Sandra Abramovici',
+            name: (
+              <Heading as="div" sx={{ fontSize: 2, textAlign: 'start' }}>
+                Sandra Abramovici
+              </Heading>
+            ),
             href: '/profiles/sandra-abramovici',
           },
         ]}
@@ -97,10 +110,11 @@ a description:
     ),
     registrationLink: '/register',
   }}
+  m={2}
 />
 ```
 
-This example is an event without speakers:
+This is an example of an event without speakers:
 
 ```jsx live
 <EventPreview
@@ -115,81 +129,9 @@ This example is an event without speakers:
     href: '/events/vestibulum-proin-eu',
     registrationLink: '/register',
   }}
+  m={2}
 />
 ```
-
-In this example we use custom variant `secondary`:
-
-```jsx live
-<EventPreview
-  event={{
-    tag: 'Webinar',
-    title: (
-      <Heading as="h1" mb={3}>
-        Vestibulum proin eu mi nulla ac enim in tempor turpis
-      </Heading>
-    ),
-    date: 'October 14, 1983, 1:30 PM EDT (60 minutes)',
-    speakers: <Names values={['Willow Rangall', 'Suzy Cahan']} mb={3} />,
-    href: '/events/vestibulum-proin-eu',
-    registrationLink: '/register',
-  }}
-  variant="secondary"
-/>
-```
-
-The default variant is `primary`. The value of `variant` is passed on to the tag
-and buttons (if present). `@undataforum/preset` includes the following
-defintions to make variants `primary` and `secondary` work:
-
-```jsx
-badges: {
-  primary: {
-    color: 'background',
-    bg: 'primary',
-  },
-  secondary: {
-    color: 'background',
-    bg: 'secondary',
-  },
-},
-
-buttons: {
-  default: {
-    fontSize: 2,
-    fontWeight: 'bold',
-    borderRadius: 'default',
-  },
-  primary: {
-    variant: 'buttons.default',
-    color: 'background',
-    bg: 'primary',
-  },
-  secondary: {
-    variant: 'buttons.default',
-    color: 'background',
-    bg: 'secondary',
-  },
-  outline: {
-    default: {
-      variant: 'buttons.default',
-      boxShadow: '0 0 0 2px inset',
-      // Override default `bg: 'primary'` from Theme UI's Button.
-      bg: 'inherit',
-    },
-    primary: {
-      variant: 'buttons.outline.default',
-      color: 'primary',
-    },
-    secondary: {
-      variant: 'buttons.outline.default',
-      color: 'secondary',
-    },
-  },
-},
-```
-
-You can define additional variants in your theme.
 
 ## System props
 
@@ -199,10 +141,9 @@ You can define additional variants in your theme.
 
 ## Component props
 
-| Name    | Type   | Default | Required | Description                                |
-| :------ | :----- | :------ | :------- | :----------------------------------------- |
-| event   | Object |         | ✓        | See below.                                 |
-| variant | String | primary |          | Variants need to be defined in your theme. |
+| Name  | Type   | Default | Required | Description |
+| :---- | :----- | :------ | :------- | :---------- |
+| event | Object |         | ✓        | See below.  |
 
 ### Event
 
@@ -228,10 +169,73 @@ margins. Generally, you should use bottom margins only and no top margins:
 - `description` may not have a top margin, only a bottom margin. The bottom
   margin should be zero if it is not followed by a button.
 
+## Variants
+
+You can customize `EventPreview` by defining the following variants in your
+theme:
+
+| Key                                  | Description                             |
+| :----------------------------------- | :-------------------------------------- |
+| `event-preview.badge`                | Customize optional tag.                 |
+| `event-preview.buttons.event`        | Customize optional event button.        |
+| `event-preview.buttons.registration` | Customize optional registration button. |
+
+In this example we define above variants in a `ThemeProvider` to customize the
+look of the tag and buttons (you would normally do this in your theme):
+
+```jsx live
+<ThemeProvider
+  theme={{
+    buttons: {
+      default: {
+        fontSize: 2,
+        fontWeight: 'bold',
+        borderRadius: 0,
+      },
+    },
+    'event-preview': {
+      badge: {
+        borderRadius: 0,
+        bg: 'secondary',
+      },
+      buttons: {
+        event: {
+          variant: 'buttons.default',
+          bg: 'secondary',
+        },
+        registration: {
+          variant: 'buttons.default',
+          boxShadow: '0 0 0 2px inset',
+          color: 'secondary',
+          bg: 'inherit',
+        },
+      },
+    },
+  }}
+>
+  <EventPreview
+    event={{
+      tag: 'Webinar',
+      title: (
+        <Heading as="h1" mb={3}>
+          Vestibulum proin eu mi nulla ac enim in tempor turpis
+        </Heading>
+      ),
+      date: 'October 14, 1983, 1:30 PM EDT (60 minutes)',
+      speakers: <Names values={['Willow Rangall', 'Suzy Cahan']} mb={3} />,
+      href: '/events/vestibulum-proin-eu',
+      registrationLink: '/register',
+    }}
+    m={2}
+  />
+</ThemeProvider>
+```
+
 ## Visual regression testing
 
 The following URLs can be used for visual regression testing:
 
-- [Grid of events](/event-preview/grid-of-events)
-- [Render speakers with `Avatars`](/event-preview/render-speakers-with-avatars)
 - [Render speakers with `Names`](/event-preview/render-speakers-with-names)
+- [Render speakers with `Avatars`](/event-preview/render-speakers-with-avatars)
+- [Grid of events](/event-preview/grid-of-events)
+- [Customize with `@undataforum/preset`](/event-preview/customize-with-preset)

@@ -164,6 +164,20 @@ const theme = merge(preset, {
     },
   },
 
+  'event-preview': {
+    badge: {
+      variant: 'badges.primary',
+    },
+    buttons: {
+      event: {
+        variant: 'buttons.primary',
+      },
+      registration: {
+        variant: 'buttons.outline.primary',
+      },
+    },
+  },
+
   // Variants for https://theme-ui.com/components/container.
   layout: {
     container: {
