@@ -3,14 +3,14 @@ updates:
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
-      interval: 'daily'
+      interval: 'weekly'
     rebase-strategy: 'disabled'
     reviewers:
       - '454de6e'
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
-      interval: 'daily'
+      interval: 'weekly'
     rebase-strategy: 'disabled'
     reviewers:
       - '454de6e'
