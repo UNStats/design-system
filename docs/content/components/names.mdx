@@ -4,4 +4,159 @@ status: Experimental
 source: https://github.com/UNDataForum/design-system/blob/master/packages/components/src/names.js
 ---
 
-Placeholder page.
+`Names` is used to render one or more names, e.g., authors of a blog post or
+speakers at an event. It is an alternative to using
+[`Avatars`](/components/avatars).
+
+## Examples
+
+In this example we render a few names with default alignment (start):
+
+```jsx live
+<Names
+  values={[
+    'Berenice Feldmus',
+    'Sidonnie Halbeard',
+    'Jacenta Busch',
+    'Mercie Kuban',
+    'Candis Ruggs',
+  ]}
+  m={2}
+/>
+```
+
+You can also align center:
+
+```jsx live
+<Names
+  values={[
+    'Berenice Feldmus',
+    'Sidonnie Halbeard',
+    'Jacenta Busch',
+    'Mercie Kuban',
+    'Candis Ruggs',
+  ]}
+  align="center"
+  m={2}
+/>
+```
+
+Or align end:
+
+```jsx live
+<Names
+  values={[
+    'Berenice Feldmus',
+    'Sidonnie Halbeard',
+    'Jacenta Busch',
+    'Mercie Kuban',
+    'Candis Ruggs',
+  ]}
+  align="end"
+  m={2}
+/>
+```
+
+Now we render many names that trigger line wraps:
+
+```jsx live
+<Names
+  values={[
+    'Nance MacFadin',
+    'Clifford Skipperbottom',
+    'Willow Rangall',
+    'Suzy Cahan',
+    'Sandra Abramovici',
+    'Jan McKea',
+    'Ola Brunger',
+    'Ivette Rowlinson',
+    'Madeleine Stredwick',
+    'Lin Billson',
+    'Alfie Piborn',
+    'Garvy Bartlomiej',
+    'Gustavus Splevings',
+    'Cristi Tale',
+    'Gae Phinn',
+    'Leoline Hacaud',
+    'Rufe Rockhill',
+    'Bernadene van der Velden',
+    'Edithe Densell',
+    'Emmalynne Sone',
+    'Ardella Sapir',
+    'Ilise Sailor',
+    'Anita Olander',
+    'Gerik Frisby',
+    'Rayshell Marmion',
+    'Brooks Grene',
+    'Bev Dorey',
+    'Vladimir Parres',
+    'Really really really really really really really really really really long name',
+  ]}
+  m={2}
+/>
+```
+
+## System props
+
+`Names` supports [space props](https://styled-system.com/api#space) and
+[color props](https://styled-system.com/api#color) from
+[Styled System](https://styled-system.com/).
+
+## Component props
+
+| Name    | Type                       | Default         | Required | Description                          |
+| :------ | :------------------------- | :-------------- | :------- | :----------------------------------- |
+| values  | Array of string            |                 | ✓        | Array with names to be rendered.     |
+| align   | `start`, `center` or `end` | `start`         |          | Alignment of names (responsive).     |
+| variant | String                     | `names.default` |          | Optional variant for customizations. |
+
+## Variants
+
+The default variant is `names.default`, which can be optionally defined in your
+theme. `Names` uses default styles if no variant is defined. You can also define
+your own variant under any key you like and provide that key to the `variant`
+prop.
+
+In this example we define default variant `names.default` to render `Names`
+bold:
+
+```jsx live
+<ThemeProvider theme={{ names: { default: { fontWeight: 'bold' } } }}>
+  <Names
+    values={[
+      'Berenice Feldmus',
+      'Sidonnie Halbeard',
+      'Jacenta Busch',
+      'Mercie Kuban',
+      'Candis Ruggs',
+    ]}
+    m={2}
+  />
+</ThemeProvider>
+```
+
+In the follwoing example we define variant `names.emphasize` to render names
+italic:
+
+```jsx live
+<ThemeProvider theme={{ names: { emphasize: { fontStyle: 'italic' } } }}>
+  <Names
+    values={[
+      'Berenice Feldmus',
+      'Sidonnie Halbeard',
+      'Jacenta Busch',
+      'Mercie Kuban',
+      'Candis Ruggs',
+    ]}
+    variant="names.emphasize"
+    m={2}
+  />
+</ThemeProvider>
+```
+
+## Visual regression testing
+
+The following URLs can be used for visual regression testing:
+
+- [Few names](/names/few-names)
+- [Many names](/names/many-names)
