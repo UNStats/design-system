@@ -1,30 +1,10 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, select } from '@storybook/addon-knobs';
+import { ThemeProvider } from 'theme-ui';
+import preset from '@theme-ui/preset-base';
 import { Names } from '@undataforum/components';
 
-// Variables defined outside stories are not displayed in story source.
-// These are for knobs select.
-const alignments = ['start', 'center', 'end'];
-const variants = ['default', 'bold'];
-
-storiesOf('Components/Names', module)
-  .addDecorator(withKnobs)
-  .add('a few names', () => (
-    <Names
-      values={[
-        'Berenice Feldmus',
-        'Sidonnie Halbeard',
-        'Jacenta Busch',
-        'Mercie Kuban',
-        'Candis Ruggs',
-      ]}
-      align={select('align', alignments, 'start')}
-      variant={select('variant', variants, 'default')}
-      m={2}
-    />
-  ))
-  .add('many names', () => (
+const ManyNames = () => (
+  <ThemeProvider theme={preset}>
     <Names
       values={[
         'Nance MacFadin',
@@ -57,8 +37,9 @@ storiesOf('Components/Names', module)
         'Vladimir Parres',
         'Really really really really really really really really really really long name',
       ]}
-      align={select('align', alignments, 'start')}
-      variant={select('variant', variants, 'default')}
       m={2}
     />
-  ));
+  </ThemeProvider>
+);
+
+export default ManyNames;

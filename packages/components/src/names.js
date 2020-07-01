@@ -2,12 +2,22 @@ import React from 'react';
 import { arrayOf, oneOf, oneOfType, string } from 'prop-types';
 import { Text } from 'theme-ui';
 
-const Names = ({ values, align = 'start', variant = 'body', ...props }) => (
+const Names = ({
+  values,
+  align = 'start',
+  variant = 'names.default',
+  ...props
+}) => (
   <Text
     as="div"
     {...props}
-    sx={{ fontFamily: 'body', lineHeight: 'body', textAlign: align }}
-    variant={`names.${variant}`}
+    sx={{
+      fontFamily: 'body',
+      lineHeight: 'body',
+      // Anything below variant cannot be overridden by this variant.
+      variant,
+      textAlign: align,
+    }}
   >
     {values.join(', ')}
   </Text>
@@ -15,12 +25,11 @@ const Names = ({ values, align = 'start', variant = 'body', ...props }) => (
 
 const alignments = ['start', 'center', 'end'];
 const alignType = oneOf(alignments);
-const variantType = oneOf(['default', 'bold']);
 
 Names.propTypes = {
   values: arrayOf(string).isRequired,
   align: oneOfType([alignType, arrayOf(alignType)]),
-  variant: variantType,
+  variant: string,
 };
 
 export default Names;

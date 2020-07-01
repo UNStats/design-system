@@ -5,7 +5,9 @@ source: https://github.com/UNDataForum/design-system/blob/master/packages/compon
 ---
 
 `Avatars` is used to render one or more
-[`ProfilePreview`](/components/profile-preview)s in a grid.
+[`ProfilePreview`](/components/profile-preview)s in a grid, e.g., authors of a
+blog posts or speakers at an event. It is an alternative to using
+[`Names`](/components/names).
 
 ## Examples
 
@@ -617,16 +619,16 @@ This is an example with many avatars:
 
 ## System props
 
-`Badges` supports [space props](https://styled-system.com/api#space) and
+`Avatars` supports [space props](https://styled-system.com/api#space) and
 [color props](https://styled-system.com/api#color) from
 [Styled System](https://styled-system.com/).
 
 ## Component props
 
-| Name   | Type                       | Default  | Required | Description                        |
-| :----- | :------------------------- | :------- | :------- | :--------------------------------- |
-| values | Array of Avatar            |          | ✓        | See below.                         |
-| align  | `start`, `center` or `end` | `center` |          | Alignment of profile (responsive). |
+| Name   | Type                       | Default | Required | Description                        |
+| :----- | :------------------------- | :------ | :------- | :--------------------------------- |
+| values | Array of Avatar            |         | ✓        | See below.                         |
+| align  | `start`, `center` or `end` | `start` |          | Alignment of profile (responsive). |
 
 ### Avatar
 
