@@ -1,0 +1,55 @@
+---
+title: Video
+status: Experimental
+source: https://github.com/UNDataForum/design-system/blob/master/packages/components/src/video.js
+---
+
+`Video` is used to embed a YouTube video.
+
+## Examples
+
+The `Video` component takes up all available space and keeps a 16:9 ratio:
+
+```jsx live
+<Video
+  id="sMbNKRyFAMY"
+  title="This title is passed through to the iframe and is required for accessibility."
+  m={2}
+/>
+```
+
+You can contain it with a `Container`:
+
+```jsx live
+<Box sx={{ m: 2 }}>
+  <Container sx={{ maxWidth: '24em' }}>
+    <Video id="sMbNKRyFAMY" title="Every iframe needs a title" />
+  </Container>
+</Box>
+```
+
+## System props
+
+`Video` supports [space props](https://styled-system.com/api#space) and
+[color props](https://styled-system.com/api#color) from
+[Styled System](https://styled-system.com/).
+
+## Component props
+
+| Name  | Type   | Default | Required | Description                            |
+| :---- | :----- | :------ | :------- | :------------------------------------- |
+| id    | String |         | ✓        | YouTube ID.                            |
+| title | String |         | ✓        | Title for the `iframe` under the hood. |
+| ratio | Number | 16/9    |          | Aspect ratio for the video.            |
+
+## Variants
+
+This component does not support variants.
+
+## Visual regression testing
+
+The following URLs can be used for visual regression testing:
+
+- [With container](/video/with-container)
+- [No container](/video/no-container)
+- [Grid of videos](/video/grid-of-videos)

@@ -23,5 +23,7 @@
       url: /components/profile-preview
     - title: TwitterIcon
       url: /components/twitter-icon
+    - title: Video
+      url: /components/video
 - title: Preset
   url: /preset
