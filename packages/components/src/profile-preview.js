@@ -3,7 +3,6 @@ import { arrayOf, node, oneOf, oneOfType, shape, string } from 'prop-types';
 import { Flex, Text } from 'theme-ui';
 
 import Badges from './badges';
-import SocialIcons from './social-icons';
 import { normalizeAlign } from './util';
 
 const ProfilePreview = ({
@@ -56,14 +55,7 @@ const ProfilePreview = ({
         {profile.organization}
       </Text>
     )}
-    {profile.socialIcons && (
-      <SocialIcons
-        platforms={profile.socialIcons}
-        align={align}
-        size={32}
-        mt={2}
-      />
-    )}
+    {profile.socialIcons}
     {profile.badges && (
       <Badges values={profile.badges} align={align} variant={variant} mt={2} />
     )}

@@ -29,18 +29,35 @@ This is a complete profile with default centered alignment:
     ),
     jobtitle: 'Help Desk Operator',
     organization: 'Schuster-Senger',
-    socialIcons: [
-      {
-        id: 'twitter',
-        username: 'nance-mcfadin',
-        title: 'Follow me on Twitter',
-      },
-      {
-        id: 'github',
-        username: 'nance-mcfadin',
-        title: 'Follow me on GitHub',
-      },
-    ],
+    socialIcons: (
+      <SocialIcons
+        values={[
+          {
+            id: 'twitter',
+            icon: (
+              <Link
+                href="https://twitter.com/nance-mcfadin"
+                sx={{ color: 'inherit' }}
+              >
+                <TwitterIcon size={24} title="Follow me on Twitter" />
+              </Link>
+            ),
+          },
+          {
+            id: 'github',
+            icon: (
+              <Link
+                href="https://github.com/nance-mcfadin"
+                sx={{ color: 'inherit' }}
+              >
+                <GitHubIcon size={24} title="Follow me on GitHub" />
+              </Link>
+            ),
+          },
+        ]}
+        m={1}
+      />
+    ),
     badges: ['Committee Member', 'Keynote Speaker'],
   }}
   m={2}
@@ -70,18 +87,35 @@ object sets `textAlign` to `center` to align a long name correctly.
     ),
     jobtitle: 'Help Desk Operator',
     organization: 'Schuster-Senger',
-    socialIcons: [
-      {
-        id: 'twitter',
-        username: 'nance-mcfadin',
-        title: 'Follow me on Twitter',
-      },
-      {
-        id: 'github',
-        username: 'nance-mcfadin',
-        title: 'Follow me on GitHub',
-      },
-    ],
+    socialIcons: (
+      <SocialIcons
+        values={[
+          {
+            id: 'twitter',
+            icon: (
+              <Link
+                href="https://twitter.com/nance-mcfadin"
+                sx={{ color: 'inherit' }}
+              >
+                <TwitterIcon size={24} title="Follow me on Twitter" />
+              </Link>
+            ),
+          },
+          {
+            id: 'github',
+            icon: (
+              <Link
+                href="https://github.com/nance-mcfadin"
+                sx={{ color: 'inherit' }}
+              >
+                <GitHubIcon size={24} title="Follow me on GitHub" />
+              </Link>
+            ),
+          },
+        ]}
+        m={1}
+      />
+    ),
     badges: ['Committee Member', 'Keynote Speaker'],
   }}
   align="start"
@@ -112,18 +146,35 @@ object sets `textAlign` to `start` to align a long name correctly.
     ),
     jobtitle: 'Help Desk Operator',
     organization: 'Schuster-Senger',
-    socialIcons: [
-      {
-        id: 'twitter',
-        username: 'nance-mcfadin',
-        title: 'Follow me on Twitter',
-      },
-      {
-        id: 'github',
-        username: 'nance-mcfadin',
-        title: 'Follow me on GitHub',
-      },
-    ],
+    socialIcons: (
+      <SocialIcons
+        values={[
+          {
+            id: 'twitter',
+            icon: (
+              <Link
+                href="https://twitter.com/nance-mcfadin"
+                sx={{ color: 'inherit' }}
+              >
+                <TwitterIcon size={24} title="Follow me on Twitter" />
+              </Link>
+            ),
+          },
+          {
+            id: 'github',
+            icon: (
+              <Link
+                href="https://github.com/nance-mcfadin"
+                sx={{ color: 'inherit' }}
+              >
+                <GitHubIcon size={24} title="Follow me on GitHub" />
+              </Link>
+            ),
+          },
+        ]}
+        m={1}
+      />
+    ),
     badges: ['Committee Member', 'Keynote Speaker'],
   }}
   align="end"
@@ -288,15 +339,15 @@ responsive:
 
 ### Profile
 
-| Name         | Type            | Default | Required | Description                                                                                                |
-| :----------- | :-------------- | :------ | :------- | ---------------------------------------------------------------------------------------------------------- |
-| avatar       | Node            |         | ✓        | Avatar image (composition pattern).                                                                        |
-| honorific    | String          |         |          | Honorific title.                                                                                           |
-| name         | Node            |         |          | Full name (composition pattern). You need to make sure that this component aligns with above `align` prop. |
-| jobtitle     | String          |         |          | Job title.                                                                                                 |
-| organization | String          |         |          | Organization name.                                                                                         |
-| socialIcons  | Array of Object |         |          | Social icons for personal social media accounts.                                                           |
-| badges       | Array of String |         |          | Badges with roles.                                                                                         |
+| Name         | Type            | Default | Required | Description                                                                                                                   |
+| :----------- | :-------------- | :------ | :------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| avatar       | Node            |         | ✓        | Avatar image (composition pattern).                                                                                           |
+| honorific    | String          |         |          | Honorific title.                                                                                                              |
+| name         | Node            |         |          | Full name (composition pattern). You need to make sure that this component aligns with above `align` prop.                    |
+| jobtitle     | String          |         |          | Job title.                                                                                                                    |
+| organization | String          |         |          | Organization name.                                                                                                            |
+| socialIcons  | Node            |         |          | Social icons (composition pattern). You can use [`SocialIcons`](/components/social-icons) for this but you can roll your own. |
+| badges       | Array of String |         |          | Badges with roles.                                                                                                            |
 
 ## Variants
 
@@ -340,18 +391,35 @@ additional `ThemeProvider`, but in your theme file or preset. Using
       ),
       jobtitle: 'Help Desk Operator',
       organization: 'Schuster-Senger',
-      socialIcons: [
-        {
-          id: 'twitter',
-          username: 'nance-mcfadin',
-          title: 'Follow me on Twitter',
-        },
-        {
-          id: 'github',
-          username: 'nance-mcfadin',
-          title: 'Follow me on GitHub',
-        },
-      ],
+      socialIcons: (
+        <SocialIcons
+          values={[
+            {
+              id: 'twitter',
+              icon: (
+                <Link
+                  href="https://twitter.com/nance-mcfadin"
+                  sx={{ color: 'inherit' }}
+                >
+                  <TwitterIcon size={24} title="Follow me on Twitter" />
+                </Link>
+              ),
+            },
+            {
+              id: 'github',
+              icon: (
+                <Link
+                  href="https://github.com/nance-mcfadin"
+                  sx={{ color: 'inherit' }}
+                >
+                  <GitHubIcon size={24} title="Follow me on GitHub" />
+                </Link>
+              ),
+            },
+          ]}
+          m={1}
+        />
+      ),
       badges: ['Committee Member', 'Keynote Speaker'],
     }}
     variant="badges.secondary"
