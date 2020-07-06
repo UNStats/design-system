@@ -1,0 +1,232 @@
+---
+title: SocialIcons
+status: Experimental
+source: https://github.com/UNDataForum/design-system/blob/master/packages/components/src/social-icons.js
+---
+
+`SocialIcons` is used to render one or more social media icons, e.g., in a
+footer or on a profile page. You can use [`EmailIcon`](/components/email-icon),
+[`GitHubIcon`](/components/github-icon) and
+[`TwitterIcon`](/components/twitter-icon) or create your own social media icon
+with [`Icon`](/components/icon).
+
+## Examples
+
+This example renders 3 social icons with default alignment (start):
+
+```jsx live
+<SocialIcons
+  values={[
+    {
+      id: 'twitter',
+      icon: (
+        <Link href="https://twitter.com/undataforum" sx={{ color: 'inherit' }}>
+          <TwitterIcon size={48} title="Follow us on Twitter" />
+        </Link>
+      ),
+    },
+    {
+      id: 'github',
+      icon: (
+        <Link href="https://github.com/undataforum" sx={{ color: 'inherit' }}>
+          <GitHubIcon size={48} title="Follow us on GitHub" />
+        </Link>
+      ),
+    },
+    {
+      id: 'email',
+      icon: (
+        <Link href="mailto:dataforum@un.org" sx={{ color: 'inherit' }}>
+          <EmailIcon size={48} title="Send us an email" />
+        </Link>
+      ),
+    },
+  ]}
+  m={2}
+/>
+```
+
+You can align center:
+
+```jsx live
+<SocialIcons
+  values={[
+    {
+      id: 'twitter',
+      icon: (
+        <Link href="https://twitter.com/undataforum" sx={{ color: 'inherit' }}>
+          <TwitterIcon size={48} title="Follow us on Twitter" />
+        </Link>
+      ),
+    },
+    {
+      id: 'github',
+      icon: (
+        <Link href="https://github.com/undataforum" sx={{ color: 'inherit' }}>
+          <GitHubIcon size={48} title="Follow us on GitHub" />
+        </Link>
+      ),
+    },
+    {
+      id: 'email',
+      icon: (
+        <Link href="mailto:dataforum@un.org" sx={{ color: 'inherit' }}>
+          <EmailIcon size={48} title="Send us an email" />
+        </Link>
+      ),
+    },
+  ]}
+  align="center"
+  m={2}
+/>
+```
+
+And align end (right):
+
+```jsx live
+<SocialIcons
+  values={[
+    {
+      id: 'twitter',
+      icon: (
+        <Link href="https://twitter.com/undataforum" sx={{ color: 'inherit' }}>
+          <TwitterIcon size={48} title="Follow us on Twitter" />
+        </Link>
+      ),
+    },
+    {
+      id: 'github',
+      icon: (
+        <Link href="https://github.com/undataforum" sx={{ color: 'inherit' }}>
+          <GitHubIcon size={48} title="Follow us on GitHub" />
+        </Link>
+      ),
+    },
+    {
+      id: 'email',
+      icon: (
+        <Link href="mailto:dataforum@un.org" sx={{ color: 'inherit' }}>
+          <EmailIcon size={48} title="Send us an email" />
+        </Link>
+      ),
+    },
+  ]}
+  align="end"
+  m={2}
+/>
+```
+
+`SocialIcons` behaves like fonts and renders with the parent element's `color`:
+
+```jsx live
+<Box color="secondary">
+  <SocialIcons
+    values={[
+      {
+        id: 'twitter',
+        icon: (
+          <Link
+            href="https://twitter.com/undataforum"
+            sx={{ color: 'inherit' }}
+          >
+            <TwitterIcon size={48} title="Follow us on Twitter" />
+          </Link>
+        ),
+      },
+      {
+        id: 'github',
+        icon: (
+          <Link href="https://github.com/undataforum" sx={{ color: 'inherit' }}>
+            <GitHubIcon size={48} title="Follow us on GitHub" />
+          </Link>
+        ),
+      },
+      {
+        id: 'email',
+        icon: (
+          <Link href="mailto:dataforum@un.org" sx={{ color: 'inherit' }}>
+            <EmailIcon size={48} title="Send us an email" />
+          </Link>
+        ),
+      },
+    ]}
+    m={2}
+  />
+</Box>
+```
+
+Another example with 2 social icons:
+
+```jsx live
+<SocialIcons
+  values={[
+    {
+      id: 'twitter',
+      icon: (
+        <Link href="https://twitter.com/undataforum" sx={{ color: 'inherit' }}>
+          <TwitterIcon size={48} title="Follow us on Twitter" />
+        </Link>
+      ),
+    },
+    {
+      id: 'github',
+      icon: (
+        <Link href="https://github.com/undataforum" sx={{ color: 'inherit' }}>
+          <GitHubIcon size={48} title="Follow us on GitHub" />
+        </Link>
+      ),
+    },
+  ]}
+  m={2}
+/>
+```
+
+And this is an example with one social icon:
+
+```jsx live
+<SocialIcons
+  values={[
+    {
+      id: 'twitter',
+      icon: (
+        <Link href="https://twitter.com/undataforum" sx={{ color: 'inherit' }}>
+          <TwitterIcon size={48} title="Follow us on Twitter" />
+        </Link>
+      ),
+    },
+  ]}
+  m={2}
+/>
+```
+
+## System props
+
+`SocialIcons` supports [space props](https://styled-system.com/api#space) and
+[color props](https://styled-system.com/api#color) from
+[Styled System](https://styled-system.com/).
+
+## Component props
+
+| Name   | Type                       | Default  | Required | Description                             |
+| :----- | :------------------------- | :------- | :------- | :-------------------------------------- |
+| values | Array of value             |          | ✓        | See below.                              |
+| align  | `start`, `center` or `end` | `center` |          | Alignment of social icons (responsive). |
+
+### Value
+
+| Name | Type   | Default | Required | Description                           |
+| :--- | :----- | :------ | :------- | ------------------------------------- |
+| id   | String |         | ✓        | Key for the underlying list in React. |
+| icon | Node   |         | ✓        | Social icon (composition pattern).    |
+
+## Variants
+
+`SocialIcons` does not support variants.
+
+## Visual regression testing
+
+The following URLs can be used for visual regression testing:
+
+- [Align start](/social-icons/align-start)
+- [Align center](/social-icons/align-center)
+- [Align end](/social-icons/align-end)

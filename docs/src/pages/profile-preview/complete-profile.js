@@ -1,7 +1,12 @@
 import React from 'react';
-import { Heading, Image, ThemeProvider } from 'theme-ui';
+import { Heading, Link, Image, ThemeProvider } from 'theme-ui';
 import preset from '@theme-ui/preset-base';
-import { ProfilePreview } from '@undataforum/components';
+import {
+  GitHubIcon,
+  ProfilePreview,
+  SocialIcons,
+  TwitterIcon,
+} from '@undataforum/components';
 
 const CompleteProfile = () => (
   <ThemeProvider theme={preset}>
@@ -26,18 +31,35 @@ const CompleteProfile = () => (
         ),
         jobtitle: 'Help Desk Operator',
         organization: 'Schuster-Senger',
-        socialIcons: [
-          {
-            id: 'twitter',
-            username: 'nance-mcfadin',
-            title: 'Follow me on Twitter',
-          },
-          {
-            id: 'github',
-            username: 'nance-mcfadin',
-            title: 'Follow me on GitHub',
-          },
-        ],
+        socialIcons: (
+          <SocialIcons
+            values={[
+              {
+                id: 'twitter',
+                icon: (
+                  <Link
+                    href="https://twitter.com/nance-mcfadin"
+                    sx={{ color: 'inherit' }}
+                  >
+                    <TwitterIcon size={24} title="Follow me on Twitter" />
+                  </Link>
+                ),
+              },
+              {
+                id: 'github',
+                icon: (
+                  <Link
+                    href="https://github.com/nance-mcfadin"
+                    sx={{ color: 'inherit' }}
+                  >
+                    <GitHubIcon size={24} title="Follow me on GitHub" />
+                  </Link>
+                ),
+              },
+            ]}
+            m={1}
+          />
+        ),
         badges: ['Committee Member', 'Keynote Speaker'],
       }}
       m={2}

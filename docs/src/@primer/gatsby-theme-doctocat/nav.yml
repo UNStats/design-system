@@ -21,6 +21,8 @@
       url: /components/post-preview
     - title: ProfilePreview
       url: /components/profile-preview
+    - title: SocialIcons
+      url: /components/social-icons
     - title: TwitterIcon
       url: /components/twitter-icon
     - title: Video
