@@ -200,7 +200,7 @@ const Logo = ({ scaleTo, monochrome }) => {
 };
 
 Logo.propTypes = {
-  scaleTo: oneOf(['height', 'width']),
+  scaleTo: oneOf(['height', 'width']).isRequired,
   monochrome: bool,
 };
 

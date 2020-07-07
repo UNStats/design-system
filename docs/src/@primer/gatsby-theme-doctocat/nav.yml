@@ -1,3 +1,8 @@
+- title: Assets
+  url: /assets
+  children:
+    - title: Logo
+      url: /assets/logo
 - title: Components
   url: /components
   children:
