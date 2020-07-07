@@ -1,0 +1,273 @@
+---
+title: Footer
+status: Experimental
+source: https://github.com/UNDataForum/design-system/blob/master/packages/components/src/footer.js
+---
+
+A `Footer` is used to render a responsive page footer.
+
+## Examples
+
+This example shows a complete footer:
+
+```jsx live
+<Footer
+  logo={
+    <Box sx={{ height: 64 }}>
+      <DummyLogo scaleTo="height" />
+    </Box>
+  }
+  title="Footer Title"
+  socialIcons={
+    <SocialIcons
+      values={[
+        {
+          id: 'twitter',
+          icon: (
+            <Link
+              href="https://twitter.com/undataforum"
+              sx={{ color: 'inherit' }}
+            >
+              <TwitterIcon size={32} title="Follow us on Twitter" />
+            </Link>
+          ),
+        },
+        {
+          id: 'github',
+          icon: (
+            <Link
+              href="https://github.com/undataforum"
+              sx={{ color: 'inherit' }}
+            >
+              <GitHubIcon size={32} title="Follow us on GitHub" />
+            </Link>
+          ),
+        },
+        {
+          id: 'email',
+          icon: (
+            <Link href="mailto:dataforum@un.org" sx={{ color: 'inherit' }}>
+              <EmailIcon size={32} title="Send us an email" />
+            </Link>
+          ),
+        },
+      ]}
+      mb={3}
+    />
+  }
+  links={[
+    { text: 'Contact', href: '/contact' },
+    { text: 'Copyright', href: '/copyright' },
+    { text: 'Privacy Notice', href: '/privacy' },
+    { text: 'Terms of Use', href: '/terms' },
+  ]}
+/>
+```
+
+This example shows a footer with logo only:
+
+```jsx live
+<Footer
+  logo={
+    <Box sx={{ height: 64 }}>
+      <DummyLogo scaleTo="height" />
+    </Box>
+  }
+  links={[
+    { text: 'Contact', href: '/contact' },
+    { text: 'Copyright', href: '/copyright' },
+    { text: 'Fraud Alert', href: '/fraud-alert' },
+    { text: 'Privacy Notice', href: '/privacy-notice' },
+    { text: 'Terms of Use', href: '/terms-of-use' },
+  ]}
+/>
+```
+
+This example shows a footer with title only:
+
+```jsx live
+<Footer
+  title="Footer Title"
+  links={[
+    { text: 'Contact', href: '/contact' },
+    { text: 'Copyright', href: '/copyright' },
+    { text: 'Fraud Alert', href: '/fraud-alert' },
+    { text: 'Privacy Notice', href: '/privacy-notice' },
+    { text: 'Terms of Use', href: '/terms-of-use' },
+  ]}
+/>
+```
+
+This example shows a footer with social icons only:
+
+```jsx live
+<Footer
+  socialIcons={
+    <SocialIcons
+      values={[
+        {
+          id: 'twitter',
+          icon: (
+            <Link
+              href="https://twitter.com/undataforum"
+              sx={{ color: 'inherit' }}
+            >
+              <TwitterIcon size={32} title="Follow us on Twitter" />
+            </Link>
+          ),
+        },
+        {
+          id: 'github',
+          icon: (
+            <Link
+              href="https://github.com/undataforum"
+              sx={{ color: 'inherit' }}
+            >
+              <GitHubIcon size={32} title="Follow us on GitHub" />
+            </Link>
+          ),
+        },
+        {
+          id: 'email',
+          icon: (
+            <Link href="mailto:dataforum@un.org" sx={{ color: 'inherit' }}>
+              <EmailIcon size={32} title="Send us an email" />
+            </Link>
+          ),
+        },
+      ]}
+      mb={3}
+    />
+  }
+  links={[
+    { text: 'Contact', href: '/contact' },
+    { text: 'Copyright', href: '/copyright' },
+    { text: 'Fraud Alert', href: '/fraud-alert' },
+    { text: 'Privacy Notice', href: '/privacy-notice' },
+    { text: 'Terms of Use', href: '/terms-of-use' },
+  ]}
+/>
+```
+
+And this example shows a minimalistic footer:
+
+```jsx live
+<Footer
+  links={[
+    { text: 'Contact', href: '/contact' },
+    { text: 'Copyright', href: '/copyright' },
+    { text: 'Fraud Alert', href: '/fraud-alert' },
+    { text: 'Privacy Notice', href: '/privacy-notice' },
+    { text: 'Terms of Use', href: '/terms-of-use' },
+  ]}
+/>
+```
+
+## System props
+
+`Footer` does not support system props from
+[Styled System](https://styled-system.com/).
+
+## Component props
+
+| Name        | Type          | Default | Required | Description                                                                                                            |
+| :---------- | :------------ | :------ | :------- | :--------------------------------------------------------------------------------------------------------------------- |
+| logo        | Node          |         |          | Component that renders a logo (composition pattern).                                                                   |
+| title       | String        |         |          |                                                                                                                        |
+| socialIcons | Node          |         |          | Social icons (composition pattern). You can use [`SocialIcons`](/components/social-icons) or build your own component. |
+| links       | Array of Link |         | ✓        | Footer links (Link is defined below).                                                                                  |
+
+### Link
+
+| Name | Type   | Default | Required | Description                          |
+| :--- | :----- | :------ | :------- | :----------------------------------- |
+| text | String |         | ✓        |                                      |
+| href | String |         |          | When omitted link cannot be clicked. |
+
+## Variants
+
+You can customize `Footer` by defining the following variants in your theme:
+
+| Key                | Description                 |
+| :----------------- | :-------------------------- |
+| `footer`           | Set `color` and `bg`.       |
+| `footer.container` | Set `maxWidth` and padding. |
+| `footer.logo`      | Set `mb` for logo.          |
+| `footer.title`     | Set `mb` for title.         |
+
+In this example we customize `Footer` just like in
+[`@undataforum/preset`](/preset). This needs to be done in your theme. In this
+example we do the customizations inside a `ThemeProvider` so they are visible in
+below source code.
+
+```jsx live
+<ThemeProvider
+  theme={{
+    colors: {
+      primary: '#0E6A9C',
+    },
+    footer: {
+      bg: 'primary',
+    },
+  }}
+>
+  <Footer
+    logo={
+      <Box sx={{ height: [96, null, 128] }}>
+        <Logo scaleTo="height" monochrome />
+      </Box>
+    }
+    socialIcons={
+      <SocialIcons
+        values={[
+          {
+            id: 'twitter',
+            icon: (
+              <Link
+                href="https://twitter.com/undataforum"
+                sx={{ color: 'inherit' }}
+              >
+                <TwitterIcon size={32} title="Follow us on Twitter" />
+              </Link>
+            ),
+          },
+          {
+            id: 'github',
+            icon: (
+              <Link
+                href="https://github.com/undataforum"
+                sx={{ color: 'inherit' }}
+              >
+                <GitHubIcon size={32} title="Follow us on GitHub" />
+              </Link>
+            ),
+          },
+          {
+            id: 'email',
+            icon: (
+              <Link href="mailto:dataforum@un.org" sx={{ color: 'inherit' }}>
+                <EmailIcon size={32} title="Send us an email" />
+              </Link>
+            ),
+          },
+        ]}
+        mb={3}
+      />
+    }
+    links={[
+      { text: 'Contact', href: '/contact' },
+      { text: 'Copyright', href: '/copyright' },
+      { text: 'Privacy Notice', href: '/privacy' },
+      { text: 'Terms of Use', href: '/terms' },
+    ]}
+  />
+</ThemeProvider>
+```
+
+## Visual regression testing
+
+The following URLs can be used for visual regression testing:
+
+- [Complete footer](/footer/complete-footer)
+- [Customize with variants](/footer/customize-with-variants)
+- [Customize with `@undataforum/preset`](/footer/customize-with-preset)

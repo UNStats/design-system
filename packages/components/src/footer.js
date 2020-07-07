@@ -1,11 +1,26 @@
 import React from 'react';
-import { arrayOf, node, shape, string, oneOf } from 'prop-types';
+import { arrayOf, node, shape, string } from 'prop-types';
 import { Box, Container, Flex, Heading, Link, Text } from 'theme-ui';
 
-const Footer = ({ logo, title, socialIcons, links, variant = 'primary' }) => {
+const Footer = ({ logo, title, socialIcons, links }) => {
   return (
-    <Box sx={{ variant: `pairings.${variant}` }}>
-      <Container sx={{ maxWidth: 'width.wide', px: [2, 3, 4], py: 4 }}>
+    <Box
+      sx={{
+        color: 'background',
+        bg: 'secondary',
+        // Anything below variant cannot be overridden by this variant.
+        variant: 'footer',
+      }}
+    >
+      <Container
+        sx={{
+          maxWidth: '96em',
+          px: [2, 3, 4],
+          py: 4,
+          // Anything below variant cannot be overridden by this variant.
+          variant: 'footer.container',
+        }}
+      >
         <Flex
           as="footer"
           sx={{
@@ -16,19 +31,33 @@ const Footer = ({ logo, title, socialIcons, links, variant = 'primary' }) => {
           {logo && (
             <Link
               href="/"
-              sx={{ color: 'inherit', height: '100%', mb: [1, 2] }}
+              sx={{
+                mb: [3, 4],
+                // Anything below variant cannot be overridden by this variant.
+                variant: 'footer.logo',
+                color: 'inherit',
+                height: '100%',
+                textDecoration: 'none',
+              }}
             >
               {logo}
             </Link>
           )}
           {title && (
-            <Link href="/" sx={{ color: 'inherit' }}>
+            <Link
+              href="/"
+              sx={{
+                mb: [2, 3],
+                // Anything below variant cannot be overridden by this variant.
+                variant: 'footer.title',
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+            >
               <Heading
                 sx={{
                   whiteSpace: 'nowrap',
-                  fontFamily: 'heading',
                   fontSize: [3, 4, 5],
-                  mb: [2, 3],
                 }}
               >
                 {title}
@@ -41,7 +70,12 @@ const Footer = ({ logo, title, socialIcons, links, variant = 'primary' }) => {
               <Link
                 href={link.href}
                 key={link.href}
-                sx={{ color: 'inherit', px: [2, 3], py: [1, 2] }}
+                sx={{
+                  color: 'inherit',
+                  textDecoration: 'none',
+                  px: [2, 3],
+                  py: [1, 2],
+                }}
               >
                 <Text sx={{ fontFamily: 'body', textAlign: 'center' }}>
                   {link.text}
@@ -66,7 +100,6 @@ Footer.propTypes = {
       label: string,
     })
   ).isRequired,
-  variant: oneOf(['primary', 'secondary']),
 };
 
 export default Footer;
