@@ -2,16 +2,16 @@ import preset from '@theme-ui/preset-base';
 import merge from 'deepmerge';
 
 // Universal colors.
-const black = '#000000';
-const white = '#ffffff';
+const black = '#000';
+const white = '#FFF';
 const gray = '#717171';
 
 // Styleguide colors.
-const forumBlue = '#00609d';
-const blue = '#0e6a9c';
-const green = '#266f37';
-const red = '#a21723';
-const yellow = '#c59b25';
+const forumBlue = '#00609D';
+const blue = '#0E6A9C';
+const green = '#266F37';
+const red = '#A21723';
+const yellow = '#C59B25';
 
 const theme = merge(preset, {
   // Breakpoints.
@@ -81,26 +81,6 @@ const theme = merge(preset, {
     gray,
   },
 
-  // To be removed.
-  pairings: {
-    primary: {
-      color: 'primary',
-      bg: 'background',
-    },
-    'primary-inverse': {
-      color: 'background',
-      bg: 'primary',
-    },
-    secondary: {
-      color: 'secondary',
-      bg: 'background',
-    },
-    'secondary-inverse': {
-      color: 'background',
-      bg: 'secondary',
-    },
-  },
-
   // Styling.
 
   borders: [0, '1px solid', '2px solid', '3px solid'],
@@ -110,7 +90,7 @@ const theme = merge(preset, {
     circle: 99999,
   },
 
-  // Variants.
+  // Variants that can be applied via variant prop.
 
   // Variants for https://theme-ui.com/components/badge/.
   badges: {
@@ -196,6 +176,11 @@ const theme = merge(preset, {
 
   // Customizations.
 
+  // Customize https://design-system.undataforum.org/components/footer.
+  footer: {
+    bg: 'primary',
+  },
+
   // Customize https://design-system.undataforum.org/components/header.
   header: {
     color: 'primary',
@@ -209,7 +194,7 @@ const theme = merge(preset, {
     button: { variant: 'buttons.outline.primary' },
   },
 
-  // Variants for https://design-system.undataforum.org/components/header.
+  // Variants for https://design-system.undataforum.org/components/names.
   names: {
     default: {
       fontWeight: 'body',
