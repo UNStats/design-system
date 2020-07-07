@@ -1,0 +1,59 @@
+---
+title: Logo
+status: Experimental
+source: https://github.com/UNDataForum/design-system/blob/master/packages/assets/src/logo.js
+---
+
+`Logo` renders the official logo for the United Nations World Data Forum.
+
+## Examples
+
+`Logo` needs to be rendered inside a container that sets height or width
+explicitly. You can scale the logo to height or to width.
+
+In this example we scale to height:
+
+```jsx live
+<Box sx={{ height: 128, m: 2 }}>
+  <Logo scaleTo="height" />
+</Box>
+```
+
+In this example we scale to width:
+
+```jsx live
+<Box sx={{ width: 128, m: 2 }}>
+  <Logo scaleTo="width" />
+</Box>
+```
+
+We can set the `monochrome` flag to render the logo with its parent's `color`:
+
+```jsx live
+<Box sx={{ color: 'primary', height: 128, m: 2 }}>
+  <Logo scaleTo="height" monochrome />
+</Box>
+```
+
+## System props
+
+`Logo` does not support system props. This is because it always needs to be
+defined in a container that defines height or width. You can use
+[`Box`](https://theme-ui.com/components/box) as container, which supports
+[space props](https://styled-system.com/api#space) and
+[color props](https://styled-system.com/api#color) from
+[Styled System](https://styled-system.com/).
+
+## Component props
+
+| Name       | Type                | Default | Required | Description                                               |
+| :--------- | :------------------ | :------ | :------- | :-------------------------------------------------------- |
+| scaleTo    | `height` or `width` |         | ✓        | Indicate whether to scale the logo to height or to width. |
+| monochrome | Boolean             | `false` |          | Render logo monochrome if `true`.                         |
+
+## Visual regression testing
+
+The following URLs can be used for visual regression testing:
+
+- [Scale to height](/logo/scale-to-height)
+- [Scale to width](/logo/scale-to-width)
