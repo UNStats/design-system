@@ -1,5 +1,11 @@
 # @undataforum/assets
 
+## 0.7.0
+
+### Minor Changes
+
+- a288f88: Make scaleTo prop required in Logo
+
 ## 0.6.0
 
 ### Minor Changes
