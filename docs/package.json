@@ -15,8 +15,6 @@
   },
   "dependencies": {
     "@primer/gatsby-theme-doctocat": "0.21.0",
-    "@storybook/addon-knobs": "5.3.19",
-    "@storybook/react": "5.3.19",
     "@theme-ui/preset-base": "0.3.0",
     "@undataforum/assets": "*",
     "@undataforum/components": "*",

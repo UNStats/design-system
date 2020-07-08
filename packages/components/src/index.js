@@ -1,6 +1,6 @@
 export { default as Avatars } from './avatars';
 export { default as Badges } from './badges';
-export { default as ColorCard } from './color-card';
+export { default as Card } from './card';
 export { default as EventPreview } from './event-preview';
 export { default as Footer } from './footer';
 export { default as Header } from './header';
