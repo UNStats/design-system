@@ -10,6 +10,8 @@
       url: /components/avatars
     - title: Badges
       url: /components/badges
+    - title: Card
+      url: /components/card
     - title: EmailIcon
       url: /components/email-icon
     - title: EventPreview

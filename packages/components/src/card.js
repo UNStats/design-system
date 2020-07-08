@@ -2,15 +2,10 @@ import React from 'react';
 import { node, string } from 'prop-types';
 import { Box } from 'theme-ui';
 
-const ColorCard = ({
-  color = 'primary',
-  title,
-  subtitle,
-  children,
-  ...props
-}) => (
+// Needs to work with background color as text.
+const Card = ({ color = 'primary', title, subtitle, children, ...props }) => (
   <Box {...props} sx={{ border: '1px solid', borderColor: color }}>
-    <Box sx={{ p: [2, 3], mb: [2, 3] }} variant={`pairings.${color}`}>
+    <Box sx={{ color: 'background', bg: color, p: [2, 3], mb: [2, 3] }}>
       {title}
       {subtitle && subtitle}
     </Box>
@@ -18,12 +13,11 @@ const ColorCard = ({
   </Box>
 );
 
-ColorCard.propTypes = {
+Card.propTypes = {
   color: string,
-  // Bring your own heading (based on the context this is rendered in).
   title: node.isRequired,
   subtitle: node,
   children: node.isRequired,
 };
 
-export default ColorCard;
+export default Card;
