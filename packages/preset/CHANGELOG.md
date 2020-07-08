@@ -1,5 +1,15 @@
 # @undataforum/preset
 
+## 0.10.0
+
+### Minor Changes
+
+- 71a0784: Add default variants for EventPreview
+
+### Patch Changes
+
+- 409fcd4: Add customizations for Footer
+
 ## 0.9.0
 
 ### Minor Changes

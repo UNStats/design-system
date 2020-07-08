@@ -1,5 +1,16 @@
 # Change Log
 
+## 0.78.0
+
+### Minor Changes
+
+- d923551: Rename ColorCard to Card and refactor how variants are used to
+  customize cards
+- 409fcd4: Refactor how variants are used to customize Footer
+- c8822f0: Change type of socialIcons prop in ProfilePreview
+- 81a23a1: Refactor how variants are used to customize Names
+- 71a0784: Refactor how variants are used to customize EventPreview
+
 ## 0.77.0
 
 ### Minor Changes
