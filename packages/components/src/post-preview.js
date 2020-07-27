@@ -4,7 +4,8 @@ import { Badge, Box, Button, Flex, Link, Text } from 'theme-ui';
 
 const PostPreview = ({ post, ...props }) => {
   // If post date is last element, it should have bottom margin zero.
-  const mb = post.description ? 3 : 0;
+  // It is the last element if there is no description and no button.
+  const mb = post.description || post.href ? 3 : 0;
   return (
     <Flex
       {...props}
