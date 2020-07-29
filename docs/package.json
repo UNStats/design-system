@@ -15,13 +15,13 @@
     "purge": "rm -rf ./node_modules"
   },
   "dependencies": {
-    "@primer/gatsby-theme-doctocat": "0.21.0",
+    "@primer/gatsby-theme-doctocat": "0.23.0",
     "@theme-ui/preset-base": "0.3.0",
     "@undataforum/assets": "*",
     "@undataforum/components": "*",
     "@undataforum/preset": "*",
     "deepmerge": "4.2.2",
-    "gatsby": "2.24.11",
+    "gatsby": "2.24.12",
     "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
