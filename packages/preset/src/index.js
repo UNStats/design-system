@@ -191,7 +191,7 @@ const theme = merge(preset, {
     nav: {
       bg: 'background',
     },
-    button: { variant: 'buttons.outline.primary' },
+    cta: { variant: 'buttons.outline.primary' },
   },
 
   // Variants for https://design-system.undataforum.org/components/names.

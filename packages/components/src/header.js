@@ -176,7 +176,7 @@ const Header = ({ logo, title, links, button, ...props }) => {
                     color: 'primary',
                     bg: 'background',
                     // Anything below variant cannot be overridden by this variant.
-                    variant: 'header.button',
+                    variant: 'header.cta',
                     flex: 'none',
                     mt: [4, 0],
                     ml: [0, 3, 4],
