@@ -156,7 +156,7 @@ You can customize `Header` by defining the following variants in your theme:
 | `header`           | Set `color` and `bg`.                                                                                                                                            |
 | `header.container` | Set `maxWidth` and padding.                                                                                                                                      |
 | `header.nav`       | Set navigation `bg`. The navigation uses `fixed` position, which resets its `background-color` to transparent. Use this variant to override it to desired value. |
-| `header.button`    | Styles for the button.                                                                                                                                           |
+| `header.cta`       | Styles for CTA button.                                                                                                                                           |
 
 In this example we customize `Header` just like in
 [`@undataforum/preset`](/preset). This needs to be done in your theme. In this
@@ -193,7 +193,7 @@ below source code.
       nav: {
         bg: 'background',
       },
-      button: { variant: 'buttons.outline.primary' },
+      cta: { variant: 'buttons.outline.primary' },
     },
   }}
 >
