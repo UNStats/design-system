@@ -1,5 +1,16 @@
 # Change Log
 
+## 0.79.0
+
+### Minor Changes
+
+- f4ff93d: Rename variant header.button to header.cta
+
+### Patch Changes
+
+- 86fbc75: Fix incorrect spacing in PostPreview when there is a button but no
+  description
+
 ## 0.78.0
 
 ### Minor Changes

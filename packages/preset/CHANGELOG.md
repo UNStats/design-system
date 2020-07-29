@@ -1,5 +1,11 @@
 # @undataforum/preset
 
+## 0.11.0
+
+### Minor Changes
+
+- f4ff93d: Rename variant header.button to header.cta
+
 ## 0.10.0
 
 ### Minor Changes
