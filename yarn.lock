@@ -1806,12 +1806,12 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@maiertech/eslint-config@0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@maiertech/eslint-config/-/eslint-config-0.12.0.tgz#d6629594f89604bba8baa00c9e9b6d0f41d7bf3c"
-  integrity sha512-+9czcpIRKF2jNSNLhL+C4kWXj4RzXYQcjOmFLe83WSKruSS6ivUzQdIiGa1472nsPcyjRKyRJDaBGMFsG0zQ8w==
+"@maiertech/eslint-config@0.12.1":
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/@maiertech/eslint-config/-/eslint-config-0.12.1.tgz#e7e853d87fb877bcb0f6d4faf9fea62fe22d1d68"
+  integrity sha512-SwIxzKD+8YeBg/GR++CdyMWKNYafRaBRGWIcSnHsxaR/jtAq5qdn5rTuGwwB+1p2VeZmf/HDTzVdIvtlmjvIng==
   dependencies:
-    "@shopify/eslint-plugin" "37.0.0"
+    "@shopify/eslint-plugin" "37.0.1"
 
 "@maiertech/prettier-config@0.2.0":
   version "0.2.0"
@@ -2173,10 +2173,10 @@
   resolved "https://registry.yarnpkg.com/@sheerun/mutationobserver-shim/-/mutationobserver-shim-0.3.3.tgz#5405ee8e444ed212db44e79351f0c70a582aae25"
   integrity sha512-DetpxZw1fzPD5xUBrIAoplLChO2VB8DlL5Gg+I1IR9b2wPqYIca2WSUxL5g1vLeR4MsQq1NeWriXAVffV+U1Fw==
 
-"@shopify/eslint-plugin@37.0.0":
-  version "37.0.0"
-  resolved "https://registry.yarnpkg.com/@shopify/eslint-plugin/-/eslint-plugin-37.0.0.tgz#ab700ce92734956f96efa58349d9850924074d8e"
-  integrity sha512-gXZylohsrO6tqffcZigwxE+5pbqpRKlyz59NOvQydLgk7LmQ+KKfuywONodHxLFyAqQO9hc8NieMPPuVJEJm1A==
+"@shopify/eslint-plugin@37.0.1":
+  version "37.0.1"
+  resolved "https://registry.yarnpkg.com/@shopify/eslint-plugin/-/eslint-plugin-37.0.1.tgz#90c46b8721d003a6583cb1535e397c1b645870b2"
+  integrity sha512-5g0/pOdF6A0lnOGxUH0jGL0aXFes1nsyRMJrOtbRO0kDCMKbcD/LFgzPqTuRITxOWqTX2VqOnBdTF9e2PjUI4Q==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^2.33.0"
     "@typescript-eslint/parser" "^2.33.0"
