@@ -1242,14 +1242,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.2.0", "@babel/runtime@^7.4.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4":
-  version "7.10.4"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.4.tgz#a6724f1a6b8d2f6ea5236dbfe58c7d7ea9c5eb99"
-  integrity sha512-UpTN5yUJr9b4EX2CnGNWIvER7Ab83ibv0pcvvHc4UOdrBI5jb8bj+32cCwPX6xu0mt2daFNjYhoi+X7beH0RSw==
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@^7.8.7":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.2.0", "@babel/runtime@^7.4.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
   version "7.10.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.5.tgz#303d8bd440ecd5a491eae6117fd3367698674c5c"
   integrity sha512-otddXKhdNn7d0ptoFRHtMLa8LqDxLYwTjB4nYgM1yy5N6gU/MUf8zqyyLltCH3yAVitBzmwK4us+DD0l/MauAg==
@@ -1329,10 +1322,10 @@
     "@manypkg/get-packages" "^1.0.1"
     semver "^5.4.1"
 
-"@changesets/cli@2.9.1":
-  version "2.9.1"
-  resolved "https://registry.yarnpkg.com/@changesets/cli/-/cli-2.9.1.tgz#d678066cffac63df8fca04798c2b358b6eb5ea35"
-  integrity sha512-xWJP0duGF72Rb/0KB99TQrdBz4VnbCxqj9/B4hPT8VFYGt/2gAeS5Y3NQLpjCv+/hNxfHjDI+svzZy6q796t6A==
+"@changesets/cli@2.9.2":
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/@changesets/cli/-/cli-2.9.2.tgz#895343c5e61ca6072d3faa3798be703ea230e518"
+  integrity sha512-1L9391G4YlofC1UbfwmBrsefwC03mJHK5Cn8oSozhQJMbRlCJLBJiOn5PHFruVMFcvACGER3R+2Yv62pGKneDw==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@changesets/apply-release-plan" "^4.0.0"
@@ -1464,12 +1457,7 @@
     fs-extra "^7.0.1"
     p-filter "^2.1.0"
 
-"@changesets/types@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@changesets/types/-/types-3.0.0.tgz#3804662aa455c1622282ec3253cf6ddd309eee65"
-  integrity sha512-9Mh/JqkX3nkjfu53ESM3UjFmR2meOo4Zw+Tp4vnon0XYtMurk7KjZG5L+J0fD3+Qx0A2FFTZrgydPwiHR4GrXQ==
-
-"@changesets/types@^3.1.0":
+"@changesets/types@^3.0.0", "@changesets/types@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@changesets/types/-/types-3.1.0.tgz#68957af45a0be29f0908e20a990ecf382282e1f1"
   integrity sha512-czOfaaxr5aGnNwVRgWr3n2CKoc3iRTfrHM4wUHQ+rBlLKKk9NzGwZ2EPsXkp4CUw4hWHGEOi8hdeIfDTWKrWgg==
