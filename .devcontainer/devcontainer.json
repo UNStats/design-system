@@ -1,5 +1,5 @@
 {
-  "name": "@undataforum/design-system",
+  "name": "gatsby",
   "build": {
     "dockerfile": "Dockerfile",
     "args": {
