@@ -1,16 +1,9 @@
 {
-  "name": "gatsby",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "args": {
-      "VARIANT": "12"
-    }
-  },
-  // Container specific settings only.
+  "name": "Gatsby on javascript-node:14",
+  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:14",
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
   },
-  // Duplicate extensions as recommended extensions in .vscode/extensions.json for local dev.
   "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"],
   "forwardPorts": [8000],
   "postCreateCommand": "yarn install",
