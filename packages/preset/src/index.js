@@ -17,26 +17,6 @@ const theme = merge(preset, {
   // Breakpoints.
   breakpoints: ['30em', '60em'],
 
-  // Layout.
-
-  // sizes: from @theme-ui/preset-base.
-
-  // To be removed.
-  sizes: {
-    // Widths are for Container and can be replaced with layout.container, layout.narrow and layout.wide variants.
-    width: {
-      narrow: '48rem',
-      default: '64rem',
-      wide: '96rem',
-    },
-    // Heights are used for boxes around logos, which adjust to size.
-    height: {
-      small: 32,
-      medium: 64,
-      large: 128,
-    },
-  },
-
   // Typography.
 
   // fonts: from @theme-ui/preset-base.
