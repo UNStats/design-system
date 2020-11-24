@@ -89,6 +89,22 @@ const theme = merge(preset, {
     },
   },
 
+  tags: {
+    default: {
+      borderRadius: 'default',
+    },
+    primary: {
+      color: 'background',
+      bg: 'primary',
+      variant: 'tags.default',
+    },
+    secondary: {
+      color: 'background',
+      bg: 'secondary',
+      variant: 'tags.default',
+    },
+  },
+
   // Variants for https://theme-ui.com/components/button.
   buttons: {
     default: {
