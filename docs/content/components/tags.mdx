@@ -1,0 +1,262 @@
+---
+title: Tags
+status: Experimental
+source: https://github.com/UNDataForum/design-system/blob/master/packages/components/src/tags.js
+---
+
+`Tags` is used to render one or more tags. Unlike
+[`Badges`](/components/badges), tags are always linked.
+
+## Examples
+
+Tags align start (left) by default:
+
+```jsx live
+<Tags
+  values={[
+    { tag: 'blue', path: '/tags/blue/' },
+    { tag: 'red', path: '/tags/red/' },
+    { tag: 'green', path: '/tags/green/' },
+    { tag: 'yellow', path: '/tags/yellow/' },
+  ]}
+  m={2}
+/>
+```
+
+You can align center:
+
+```jsx live
+<Tags
+  values={[
+    { tag: 'blue', path: '/tags/blue/' },
+    { tag: 'red', path: '/tags/red/' },
+    { tag: 'green', path: '/tags/green/' },
+    { tag: 'yellow', path: '/tags/yellow/' },
+  ]}
+  align="center"
+  m={2}
+/>
+```
+
+Or align end (right):
+
+```jsx live
+<Tags
+  values={[
+    { tag: 'blue', path: '/tags/blue/' },
+    { tag: 'red', path: '/tags/red/' },
+    { tag: 'green', path: '/tags/green/' },
+    { tag: 'yellow', path: '/tags/yellow/' },
+  ]}
+  align="end"
+  m={2}
+/>
+```
+
+When you have many tags they wrap:
+
+```jsx live
+<Tags
+  values={[
+    { tag: 'id', path: '/tags/id/' },
+    { tag: 'aliqua', path: '/tags/aliqua/' },
+    { tag: 'mollit', path: '/tags/mollit/' },
+    { tag: 'enim', path: '/tags/enim/' },
+    { tag: 'veniam', path: '/tags/veniam/' },
+    { tag: 'sit', path: '/tags/sit/' },
+    { tag: 'fugiat', path: '/tags/fugiat/' },
+    { tag: 'consequat', path: '/tags/consequat/' },
+    { tag: 'cillum', path: '/tags/cillum/' },
+    { tag: 'amet', path: '/tags/amet/' },
+    { tag: 'officia', path: '/tags/officia/' },
+    { tag: 'nostrud', path: '/tags/nostrud/' },
+    { tag: 'consectetur', path: '/tags/consectetur/' },
+    { tag: 'voluptate', path: '/tags/voluptate/' },
+    { tag: 'magna', path: '/tags/magna/' },
+    { tag: 'quis', path: '/tags/quis/' },
+    { tag: 'aliquip', path: '/tags/aliquip/' },
+    { tag: 'duis', path: '/tags/duis/' },
+    { tag: 'nulla', path: '/tags/nulla/' },
+    { tag: 'labore', path: '/tags/labore/' },
+  ]}
+  m={2}
+/>
+```
+
+You can still align center:
+
+```jsx live
+<Tags
+  values={[
+    { tag: 'id', path: '/tags/id/' },
+    { tag: 'aliqua', path: '/tags/aliqua/' },
+    { tag: 'mollit', path: '/tags/mollit/' },
+    { tag: 'enim', path: '/tags/enim/' },
+    { tag: 'veniam', path: '/tags/veniam/' },
+    { tag: 'sit', path: '/tags/sit/' },
+    { tag: 'fugiat', path: '/tags/fugiat/' },
+    { tag: 'consequat', path: '/tags/consequat/' },
+    { tag: 'cillum', path: '/tags/cillum/' },
+    { tag: 'amet', path: '/tags/amet/' },
+    { tag: 'officia', path: '/tags/officia/' },
+    { tag: 'nostrud', path: '/tags/nostrud/' },
+    { tag: 'consectetur', path: '/tags/consectetur/' },
+    { tag: 'voluptate', path: '/tags/voluptate/' },
+    { tag: 'magna', path: '/tags/magna/' },
+    { tag: 'quis', path: '/tags/quis/' },
+    { tag: 'aliquip', path: '/tags/aliquip/' },
+    { tag: 'duis', path: '/tags/duis/' },
+    { tag: 'nulla', path: '/tags/nulla/' },
+    { tag: 'labore', path: '/tags/labore/' },
+  ]}
+  align="center"
+  m={2}
+/>
+```
+
+Or align end:
+
+```jsx live
+<Tags
+  values={[
+    { tag: 'id', path: '/tags/id/' },
+    { tag: 'aliqua', path: '/tags/aliqua/' },
+    { tag: 'mollit', path: '/tags/mollit/' },
+    { tag: 'enim', path: '/tags/enim/' },
+    { tag: 'veniam', path: '/tags/veniam/' },
+    { tag: 'sit', path: '/tags/sit/' },
+    { tag: 'fugiat', path: '/tags/fugiat/' },
+    { tag: 'consequat', path: '/tags/consequat/' },
+    { tag: 'cillum', path: '/tags/cillum/' },
+    { tag: 'amet', path: '/tags/amet/' },
+    { tag: 'officia', path: '/tags/officia/' },
+    { tag: 'nostrud', path: '/tags/nostrud/' },
+    { tag: 'consectetur', path: '/tags/consectetur/' },
+    { tag: 'voluptate', path: '/tags/voluptate/' },
+    { tag: 'magna', path: '/tags/magna/' },
+    { tag: 'quis', path: '/tags/quis/' },
+    { tag: 'aliquip', path: '/tags/aliquip/' },
+    { tag: 'duis', path: '/tags/duis/' },
+    { tag: 'nulla', path: '/tags/nulla/' },
+    { tag: 'labore', path: '/tags/labore/' },
+  ]}
+  align="end"
+  m={2}
+/>
+```
+
+You can adjust the gap:
+
+```jsx live
+<Tags
+  values={[
+    { tag: 'id', path: '/tags/id/' },
+    { tag: 'aliqua', path: '/tags/aliqua/' },
+    { tag: 'mollit', path: '/tags/mollit/' },
+    { tag: 'enim', path: '/tags/enim/' },
+    { tag: 'veniam', path: '/tags/veniam/' },
+    { tag: 'sit', path: '/tags/sit/' },
+    { tag: 'fugiat', path: '/tags/fugiat/' },
+    { tag: 'consequat', path: '/tags/consequat/' },
+    { tag: 'cillum', path: '/tags/cillum/' },
+    { tag: 'amet', path: '/tags/amet/' },
+    { tag: 'officia', path: '/tags/officia/' },
+    { tag: 'nostrud', path: '/tags/nostrud/' },
+    { tag: 'consectetur', path: '/tags/consectetur/' },
+    { tag: 'voluptate', path: '/tags/voluptate/' },
+    { tag: 'magna', path: '/tags/magna/' },
+    { tag: 'quis', path: '/tags/quis/' },
+    { tag: 'aliquip', path: '/tags/aliquip/' },
+    { tag: 'duis', path: '/tags/duis/' },
+    { tag: 'nulla', path: '/tags/nulla/' },
+    { tag: 'labore', path: '/tags/labore/' },
+  ]}
+  gap={1}
+  m={2}
+/>
+```
+
+## System props
+
+`Tags` supports [space props](https://styled-system.com/api#space) and
+[color props](https://styled-system.com/api#color) from
+[Styled System](https://styled-system.com/).
+
+## Component props
+
+| Name    | Type                       | Default        | Required | Description                            |
+| :------ | :------------------------- | :------------- | :------- | :------------------------------------- |
+| values  | Array of string            |                | ✓        | Array of badge names.                  |
+| gap     | Number                     | 2              |          | Gap between badges (from space scale). |
+| align   | `start`, `center` or `end` | `start`        |          | Alignment (responsive).                |
+| variant | String                     | `tags.primary` |          | Optional variant for customizations.   |
+
+## Variants
+
+If you do not provide a `variant` prop, tags are rendered with the defaults from
+Theme UI's
+[`Badge`](https://github.com/system-ui/theme-ui/blob/master/packages/components/src/Badge.js).
+You can define your own variants under any key and provide that key to
+`variant`. But it is recommended to define custom variants under the `tags` key.
+
+In this example we customize the corners of the tags using default variant
+`tags.primary`:
+
+```jsx live
+<ThemeProvider
+  theme={{
+    tags: {
+      default: {
+        borderRadius: 0,
+      },
+      primary: {
+        variant: 'tags.default',
+      },
+    },
+  }}
+>
+  <Tags
+    values={[
+      { tag: 'blue', path: '/tags/blue/' },
+      { tag: 'red', path: '/tags/red/' },
+      { tag: 'green', path: '/tags/green/' },
+      { tag: 'yellow', path: '/tags/yellow/' },
+    ]}
+    m={2}
+  />
+</ThemeProvider>
+```
+
+In this example we define variant `tags.secondary` and apply it to `Tags`:
+
+```jsx live
+<ThemeProvider
+  theme={{
+    tags: {
+      secondary: {
+        color: 'background',
+        bg: 'secondary',
+      },
+    },
+  }}
+>
+  <Tags
+    values={[
+      { tag: 'blue', path: '/tags/blue/' },
+      { tag: 'red', path: '/tags/red/' },
+      { tag: 'green', path: '/tags/green/' },
+      { tag: 'yellow', path: '/tags/yellow/' },
+    ]}
+    variant="tags.secondary"
+    m={2}
+  />
+</ThemeProvider>
+```
+
+## Visual regression testing
+
+The following URLs can be used for visual regression testing:
+
+- [Few tags](/tags/few-tags)
+- [Many tags](/tags/many-tags)
+- [Customized with `@undataforum/preset`](/tags/customized-with-preset)
