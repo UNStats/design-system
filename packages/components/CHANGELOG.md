@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.80.0
+
+### Minor Changes
+
+- 7b8a427: Add gap prop to Badges
+- 38ad3e4: Add Tags component
+
 ## 0.79.0
 
 ### Minor Changes

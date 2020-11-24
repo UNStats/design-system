@@ -1,5 +1,12 @@
 # @undataforum/preset
 
+## 0.12.0
+
+### Minor Changes
+
+- a4496ea: Add variants for tags
+- 44903a9: Remove sizes.height and sizes.width
+
 ## 0.11.0
 
 ### Minor Changes
