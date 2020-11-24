@@ -4,7 +4,7 @@ status: Experimental
 source: https://github.com/UNDataForum/design-system/blob/master/packages/components/src/badges.js
 ---
 
-`Badges` is used to render one or more badges or tags.
+`Badges` is used to render one or more badges. Badges are not linked.
 
 ## Examples
 
@@ -117,6 +117,33 @@ Or align end:
 />
 ```
 
+You can adjust the gap:
+
+```jsx live
+<Badges
+  values={[
+    'Design Engineer',
+    'Recruiter',
+    'Teacher',
+    'Environmental Specialist',
+    'Nuclear Power Engineer',
+    'Cost Accountant',
+    'VP Marketing',
+    'Automation Specialist',
+    'Analog Circuit Design Manager',
+    'Senior Cost Accountant',
+    'Desktop Support Technician',
+    'Web Developer',
+    'Technical Writer',
+    'Database Administrator',
+    'Systems Administrator',
+    'Assistant Manager',
+  ]}
+  gap={1}
+  m={2}
+/>
+```
+
 ## System props
 
 `Badges` supports [space props](https://styled-system.com/api#space) and
@@ -125,11 +152,12 @@ Or align end:
 
 ## Component props
 
-| Name    | Type                       | Default          | Required | Description                          |
-| :------ | :------------------------- | :--------------- | :------- | :----------------------------------- |
-| values  | Array of string            |                  | ✓        | Array of badge names.                |
-| align   | `start`, `center` or `end` | `start`          |          | Alignment (responsive).              |
-| variant | String                     | `badges.primary` |          | Optional variant for customizations. |
+| Name    | Type                       | Default          | Required | Description                            |
+| :------ | :------------------------- | :--------------- | :------- | :------------------------------------- |
+| values  | Array of string            |                  | ✓        | Array of badge names.                  |
+| gap     | Number                     | 2                |          | Gap between badges (from space scale). |
+| align   | `start`, `center` or `end` | `start`          |          | Alignment (responsive).                |
+| variant | String                     | `badges.primary` |          | Optional variant for customizations.   |
 
 ## Variants
 

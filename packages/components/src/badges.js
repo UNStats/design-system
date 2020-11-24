@@ -1,5 +1,5 @@
 import React from 'react';
-import { arrayOf, oneOf, oneOfType, string } from 'prop-types';
+import { arrayOf, number, oneOf, oneOfType, string } from 'prop-types';
 import { Badge, Box, Flex } from 'theme-ui';
 
 import { normalizeAlign } from './util';
@@ -8,6 +8,7 @@ import { normalizeAlign } from './util';
 // Neutralize outer margins with negative margins on Flex.
 const Badges = ({
   values,
+  gap = 2,
   align = 'start',
   variant = 'badges.primary',
   ...props
@@ -15,18 +16,22 @@ const Badges = ({
   <Box {...props}>
     <Flex
       sx={{
-        flexWrap: 'wrap',
+        // flexDirection: 'row',
         justifyContent: normalizeAlign(align),
+        // alignItems: 'stretch',
+        flexWrap: 'wrap',
+        mr: -gap,
+        mb: -gap,
       }}
-      m={-1}
     >
       {values.map((value) => (
         <Badge
           key={value}
           sx={{
-            m: 1,
+            variant,
+            mr: gap,
+            mb: gap,
           }}
-          variant={variant}
         >
           {value}
         </Badge>
@@ -39,7 +44,8 @@ const alignments = ['start', 'center', 'end'];
 const alignType = oneOf(alignments);
 
 Badges.propTypes = {
-  values: arrayOf(string).isRequired,
+  values: arrayOf(string.isRequired).isRequired,
+  gap: number,
   align: oneOfType([alignType, arrayOf(alignType)]),
   variant: string,
 };
