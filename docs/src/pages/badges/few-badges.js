@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'theme-ui';
-import preset from '@theme-ui/preset-base';
+import preset from '@undataforum/preset';
 import { Badges } from '@undataforum/components';
 
 const FewBadges = () => (

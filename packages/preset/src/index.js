@@ -1,5 +1,4 @@
 import preset from '@theme-ui/preset-base';
-import merge from 'deepmerge';
 
 // Universal colors.
 const black = '#000';
@@ -13,44 +12,28 @@ const green = '#266F37';
 const red = '#A21723';
 const yellow = '#C59B25';
 
-const theme = merge(preset, {
-  // Breakpoints.
-  breakpoints: ['30em', '60em'],
+/**
+ * This file accomplishes 5 things:
+ * 1 - Set defaults (from @theme-ui/preset-base).
+ * 2 - Define colors.
+ * 3 - Customize theme scales.
+ * 4 - Customize variants for Theme UI components.
+ * 5 - Customize variants for @undataforum/components.
+ * 6 - Customize styles for MDX content.
+ */
 
-  // Typography.
+const theme = {
+  // 1 - Set defaults (from @theme-ui/preset-base).
+  ...preset,
 
-  // fonts: from @theme-ui/preset-base.
-
-  // fontSizes: from @theme-ui/preset-base.
-
-  // fontWeights: from @theme-ui/preset-base.
-
-  // lineHeights: from @theme-ui/preset-base.
-
-  // Starting with theme-ui 0.4.0, Text will support variants under text key: https://theme-ui.com/components/text.
-  // In theme-ui 0.3.x, the default variant needs to be referenced with 'text.default'.
-  // In theme-ui 0.4.0 the default variant does not need to referenced at all.
-  text: {
-    default: {
-      color: 'text',
-      fontFamily: 'body',
-      fontWeight: 'body',
-      lineHeight: 'body',
-      fontSize: 2,
-    },
-  },
-
-  // Colors.
-
-  // Color abstractions.
+  // 2 - Define colors.
   colors: {
+    ...preset.colors,
     // Theme UI colors.
     text: black,
     background: white,
     primary: blue,
     secondary: green,
-    accent: red,
-    muted: gray,
     // Style guide colors.
     forumBlue,
     blue,
@@ -61,18 +44,17 @@ const theme = merge(preset, {
     gray,
   },
 
-  // Styling.
-
+  // 3 - Customize theme scales.
+  breakpoints: ['30em', '60em'],
   borders: [0, '1px solid', '2px solid', '3px solid'],
-
   radii: {
     default: 0,
     circle: 99999,
   },
 
-  // Variants that can be applied via variant prop.
+  // 4 - Customize variants for Theme UI components.
 
-  // Variants for https://theme-ui.com/components/badge/.
+  // Badge.
   badges: {
     default: {
       borderRadius: 'default',
@@ -89,23 +71,7 @@ const theme = merge(preset, {
     },
   },
 
-  tags: {
-    default: {
-      borderRadius: 'default',
-    },
-    primary: {
-      color: 'background',
-      bg: 'primary',
-      variant: 'tags.default',
-    },
-    secondary: {
-      color: 'background',
-      bg: 'secondary',
-      variant: 'tags.default',
-    },
-  },
-
-  // Variants for https://theme-ui.com/components/button.
+  // Button.
   buttons: {
     default: {
       fontSize: 2,
@@ -140,21 +106,7 @@ const theme = merge(preset, {
     },
   },
 
-  'event-preview': {
-    badge: {
-      variant: 'badges.primary',
-    },
-    buttons: {
-      event: {
-        variant: 'buttons.primary',
-      },
-      registration: {
-        variant: 'buttons.outline.primary',
-      },
-    },
-  },
-
-  // Variants for https://theme-ui.com/components/container.
+  // Container.
   layout: {
     container: {
       px: [2, 3, 4],
@@ -170,14 +122,29 @@ const theme = merge(preset, {
     },
   },
 
-  // Customizations.
+  // 5 - Customize variants for @undataforum/components.
 
-  // Customize https://design-system.undataforum.org/components/footer.
+  // EventPreview.
+  'event-preview': {
+    badge: {
+      variant: 'badges.primary',
+    },
+    buttons: {
+      event: {
+        variant: 'buttons.primary',
+      },
+      registration: {
+        variant: 'buttons.outline.primary',
+      },
+    },
+  },
+
+  // Footer.
   footer: {
     bg: 'primary',
   },
 
-  // Customize https://design-system.undataforum.org/components/header.
+  // Header.
   header: {
     color: 'primary',
     bg: 'background',
@@ -190,7 +157,7 @@ const theme = merge(preset, {
     cta: { variant: 'buttons.outline.primary' },
   },
 
-  // Variants for https://design-system.undataforum.org/components/names.
+  // Names.
   names: {
     default: {
       fontWeight: 'body',
@@ -200,6 +167,7 @@ const theme = merge(preset, {
     },
   },
 
+  // PostPreview.
   'post-preview': {
     badge: {
       variant: 'badges.primary',
@@ -209,42 +177,58 @@ const theme = merge(preset, {
     },
   },
 
-  // Styles for styling Markdown and Styled from Theme UI.
+  // Tags.
+  tags: {
+    default: {
+      borderRadius: 'default',
+    },
+    primary: {
+      color: 'background',
+      bg: 'primary',
+      variant: 'tags.default',
+    },
+    secondary: {
+      color: 'background',
+      bg: 'secondary',
+      variant: 'tags.default',
+    },
+  },
+
+  // 6 - Customize styles for MDX content.
   styles: {
-    // root: from @theme-ui/preset-base.
+    ...preset.styles,
     h1: {
-      // Deep merge with h1 from @theme-ui/preset-base.
+      ...preset.styles.h1,
       mt: 0,
       mb: 4,
     },
     h2: {
-      // Deep merge with h2 from @theme-ui/preset-base.
+      ...preset.styles.h2,
       mt: 0,
       mb: 3,
     },
     h3: {
-      // Deep merge with h3 from @theme-ui/preset-base.
+      ...preset.styles.h3,
       mt: 0,
       mb: 2,
     },
     h4: {
-      // Deep merge with h4 from @theme-ui/preset-base.
+      ...preset.styles.h4,
       mt: 0,
       mb: 2,
     },
     h5: {
-      // Deep merge with h5 from @theme-ui/preset-base.
+      ...preset.styles.h5,
       mt: 0,
       mb: 2,
     },
     h6: {
-      // Deep merge with h6 from @theme-ui/preset-base.
+      ...preset.styles.h6,
       mt: 0,
       mb: 2,
     },
     p: {
-      // Deep merge with p from @theme-ui/preset-base.
-      // MDX paragraphs are rendered with these styles.
+      ...preset.styles.p,
       // Set color to inherit to allow adapting to parent text color.
       color: 'inherit',
       mt: 0,
@@ -254,7 +238,7 @@ const theme = merge(preset, {
       },
     },
     a: {
-      // Deep merge with a from @theme-ui/preset-base.
+      ...preset.styles.a,
       textDecoration: 'none',
       '@media (hover: hover)': {
         '&:hover': {
@@ -263,13 +247,7 @@ const theme = merge(preset, {
       },
       WebkitTapHighlightColor: 'transparent',
     },
-    // pre: from @theme-ui/preset-base.
-    // code: from @theme-ui/preset-base.
-    // table: from @theme-ui/preset-base.
-    // th: from @theme-ui/preset-base.
-    // td: from @theme-ui/preset-base.
-    // img: from @theme-ui/preset-base.
   },
-});
+};
 
 export default theme;

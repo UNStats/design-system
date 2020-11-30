@@ -4,54 +4,37 @@ title: '@undataforum/preset'
 
 Package
 [`@undataforum/preset`](https://github.com/UNDataForum/design-system/tree/master/packages/preset)
-is a [Theme UI](https://theme-ui.com/) preset based on
-[@theme-ui/preset-base](https://github.com/system-ui/theme-ui/tree/master/packages/preset-base).
+is a [Theme UI](https://theme-ui.com/) preset. It
 
-## Variants
+1. uses
+   [`@theme-ui/preset-base`](https://github.com/system-ui/theme-ui/tree/master/packages/preset-base)
+   for defaults,
+1. sets the colors for the
+   [Theme UI color scheme](https://theme-ui.com/theming#colors),
+1. customizes [theme scales](https://theme-ui.com/theme-spec/#theme-scales),
+1. customizes variants for
+   [Theme UI components](https://theme-ui.com/components),
+1. customizes variants for [`@undataforum/components`](/components), and
+1. customizes styles for MDX content.
 
-Variants for [Theme UI components](https://theme-ui.com/components):
+## Defaults
 
-### Badge
+You can lookup the defaults
+[here](https://github.com/system-ui/theme-ui/blob/master/packages/preset-base/src/index.ts).
 
-Variants for [Badge](https://theme-ui.com/components/badge/) are defined under
-the `badges` key:
+## Colors
 
-| Variant     | Default | Description               |
-| :---------- | :------ | :------------------------ |
-| `primary`   | ✓       | Badge in primary color.   |
-| `secondary` |         | Badge in secondary color. |
+This preset supports the following colors from the
+[Theme UI color scheme](https://theme-ui.com/theming#colors):
 
-### Button
+| Key          | Description                                                                                          |
+| :----------- | :--------------------------------------------------------------------------------------------------- |
+| `text`       | Text color. Should have AAA contrast with `background`.                                              |
+| `background` | Background color. Should have AAA contrast with `text`.                                              |
+| `primary`    | Primary brand color for links, buttons, etc. Should have at least AA contrast with `background`.     |
+| `secondary`  | A secondary brand color for alternative styling. Should have at least AA contrast with `background`. |
 
-Variants for [Button](https://theme-ui.com/components/button) are defined under
-the `buttons` key:
-
-| Variant             | Default | Description                        |
-| :------------------ | :------ | :--------------------------------- |
-| `default`           |         | Shared button styles.              |
-| `primary`           | ✓       | Button in primary color.           |
-| `secondary`         |         | Button in secondary color.         |
-| `outline.default`   |         | Shared outline button styles.      |
-| `outline.primary`   |         | Outline button in primary color.   |
-| `outline.secondary` |         | Outline button in secondary color. |
-
-### Container
-
-Variants for [Container](https://theme-ui.com/components/container) are defined
-under the `layout` key:
-
-| Variant     | Default | Description                    |
-| :---------- | :------ | :----------------------------- |
-| `container` | ✓       | Default width.                 |
-| `narrow`    |         | Reading friendly narrow width. |
-| `wide`      |         | Wide width.                    |
-
-## Customizations
-
-This preset contains the following customizations of components from
-[`@undataforum/components`](/components):
-
-- For [Header](/components/header) under the `header` key.
+You can customize these colors in your project with the `colors` key.
 
 ## Contributing
 

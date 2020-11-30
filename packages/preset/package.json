@@ -27,7 +27,6 @@
     "purge": "rm -rf ./node_modules"
   },
   "dependencies": {
-    "@theme-ui/preset-base": "0.3.0",
-    "deepmerge": "4.2.2"
+    "@theme-ui/preset-base": "^0.3.4"
   }
 }
