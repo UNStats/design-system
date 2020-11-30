@@ -1,5 +1,11 @@
 # @undataforum/preset
 
+## 0.12.1
+
+### Patch Changes
+
+- f9a2d0d: Eliminate deepmerge dependency
+
 ## 0.12.0
 
 ### Minor Changes
