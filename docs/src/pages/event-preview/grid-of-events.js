@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Container, Grid, Heading, Text, ThemeProvider } from 'theme-ui';
-import preset from '@theme-ui/preset-base';
+import preset from '@undataforum/preset';
 import { EventPreview, Names } from '@undataforum/components';
 
 const events = [
@@ -110,15 +110,7 @@ const GridOfEvents = () => (
       <Container sx={{ maxWidth: '64rem' }}>
         <Grid gap={4} columns={[1, null, 2]}>
           {events.map(({ id, ...event }) => (
-            <EventPreview
-              event={{ ...event }}
-              colors={{
-                text: 'text',
-                background: 'background',
-                accent: 'secondary',
-              }}
-              key={id}
-            />
+            <EventPreview key={id} event={{ ...event }} />
           ))}
         </Grid>
       </Container>

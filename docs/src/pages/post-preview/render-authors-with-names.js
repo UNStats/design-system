@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heading, Text, ThemeProvider } from 'theme-ui';
-import preset from '@theme-ui/preset-base';
+import preset from '@undataforum/preset';
 import { Names, PostPreview } from '@undataforum/components';
 
 const RenderWithNames = () => (

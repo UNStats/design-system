@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heading, Link, Image, ThemeProvider } from 'theme-ui';
-import preset from '@theme-ui/preset-base';
+import preset from '@undataforum/preset';
 import {
   GitHubIcon,
   ProfilePreview,

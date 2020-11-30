@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heading, Image, Text, ThemeProvider } from 'theme-ui';
-import preset from '@theme-ui/preset-base';
+import preset from '@undataforum/preset';
 import { Avatars, EventPreview } from '@undataforum/components';
 
 const RenderSpeakersWithAvatars = () => (

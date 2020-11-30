@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heading, ThemeProvider } from 'theme-ui';
-import preset from '@theme-ui/preset-base';
+import preset from '@undataforum/preset';
 import { EventPreview, Names } from '@undataforum/components';
 
 const RenderSpeakersWithNames = () => (

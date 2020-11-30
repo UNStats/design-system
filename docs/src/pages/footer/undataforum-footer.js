@@ -1,4 +1,5 @@
 import React from 'react';
+import preset from '@undataforum/preset';
 import { Box, Link, ThemeProvider } from 'theme-ui';
 import {
   EmailIcon,
@@ -8,20 +9,9 @@ import {
   TwitterIcon,
 } from '@undataforum/components';
 import { Logo } from '@undataforum/assets';
-import preset from '@theme-ui/preset-base';
-import merge from 'deepmerge';
 
-const theme = merge(preset, {
-  colors: {
-    primary: '#0E6A9C',
-  },
-  footer: {
-    bg: 'primary',
-  },
-});
-
-const CustomizeWithVariants = () => (
-  <ThemeProvider theme={theme}>
+const UNDataForumFooter = () => (
+  <ThemeProvider theme={preset}>
     <Footer
       logo={
         <Box sx={{ height: [96, null, 128] }}>
@@ -75,4 +65,4 @@ const CustomizeWithVariants = () => (
   </ThemeProvider>
 );
 
-export default CustomizeWithVariants;
+export default UNDataForumFooter;

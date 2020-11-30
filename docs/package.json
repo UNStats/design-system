@@ -15,16 +15,15 @@
     "purge": "rm -rf ./node_modules"
   },
   "dependencies": {
-    "@primer/gatsby-theme-doctocat": "1.2.0",
-    "@theme-ui/preset-base": "0.3.0",
+    "@primer/gatsby-theme-doctocat": "^1.2.0",
+    "@theme-ui/preset-base": "^0.3.0",
     "@undataforum/assets": "*",
     "@undataforum/components": "*",
     "@undataforum/preset": "*",
-    "deepmerge": "4.2.2",
-    "gatsby": "2.26.1",
-    "prop-types": "15.7.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "theme-ui": "0.3.1"
+    "gatsby": "^2.26.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "theme-ui": "^0.3.4"
   }
 }

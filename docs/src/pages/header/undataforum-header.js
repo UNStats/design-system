@@ -4,7 +4,7 @@ import { Header } from '@undataforum/components';
 import preset from '@undataforum/preset';
 import { Logo } from '@undataforum/assets';
 
-const CustomizeWithPreset = () => (
+const UNDataForumHeader = () => (
   <ThemeProvider theme={preset}>
     <Header
       logo={<Logo scaleTo="height" />}
@@ -27,4 +27,4 @@ const CustomizeWithPreset = () => (
   </ThemeProvider>
 );
 
-export default CustomizeWithPreset;
+export default UNDataForumHeader;
