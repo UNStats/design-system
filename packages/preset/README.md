@@ -1,1 +1,1 @@
-../../docs/content/preset/index.md
+../../docs/content/preset/index.mdx
