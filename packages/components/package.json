@@ -17,21 +17,21 @@
     "react",
     "theme-ui"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "prepare": "microbundle --format modern,cjs --jsx React.createElement",
     "watch": "microbundle watch --format modern,cjs --jsx React.createElement --compress false",
     "clean": "rm -rf ./dist",
     "purge": "rm -rf ./node_modules"
   },
+  "peerDependencies": {
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "theme-ui": "^0.3.4"
+  },
   "dependencies": {
     "prop-types": "^15.7.2"
-  },
-  "peerDependencies": {
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "theme-ui": "^0.3.1"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
