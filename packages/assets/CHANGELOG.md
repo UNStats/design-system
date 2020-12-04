@@ -1,5 +1,11 @@
 # @undataforum/assets
 
+## 0.8.0
+
+### Minor Changes
+
+- c48ae11: Upgrade peer dependencies
+
 ## 0.7.0
 
 ### Minor Changes
