@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.81.0
+
+### Minor Changes
+
+- c48ae11: Upgrade peer dependencies
+
 ## 0.80.0
 
 ### Minor Changes
