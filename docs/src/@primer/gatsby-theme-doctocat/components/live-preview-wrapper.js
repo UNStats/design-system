@@ -1,10 +1,12 @@
 import React from 'react';
 import { node } from 'prop-types';
-import { ThemeProvider } from 'theme-ui';
+import { Box, ThemeProvider } from 'theme-ui';
 import preset from '@theme-ui/preset-base';
 
 const LivePreviewWrapper = ({ children }) => (
-  <ThemeProvider theme={preset}>{children}</ThemeProvider>
+  <ThemeProvider theme={preset}>
+    <Box sx={{ width: '100%' }}>{children}</Box>{' '}
+  </ThemeProvider>
 );
 
 LivePreviewWrapper.propTypes = {
