@@ -75,7 +75,7 @@ const Header = ({ logo, title, links, button, ...props }) => {
                 <Heading
                   as="div"
                   sx={{
-                    whiteSpace: 'nowrap}',
+                    whiteSpace: 'nowrap',
                     fontSize: [4, 5, 6],
                   }}
                 >
