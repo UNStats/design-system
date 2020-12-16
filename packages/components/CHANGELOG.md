@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.82.0
+
+### Minor Changes
+
+- da81a49: Add support for React v17
+
 ## 0.81.0
 
 ### Minor Changes

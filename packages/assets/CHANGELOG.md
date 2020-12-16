@@ -1,5 +1,11 @@
 # @undataforum/assets
 
+## 0.9.0
+
+### Minor Changes
+
+- da81a49: Add support for React v17
+
 ## 0.8.0
 
 ### Minor Changes

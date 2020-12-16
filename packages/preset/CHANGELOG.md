@@ -1,5 +1,11 @@
 # @undataforum/preset
 
+## 0.12.2
+
+### Patch Changes
+
+- da81a49: Upgrade theme-ui to @next
+
 ## 0.12.1
 
 ### Patch Changes
