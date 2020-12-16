@@ -26,9 +26,9 @@
     "purge": "rm -rf ./node_modules"
   },
   "peerDependencies": {
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "theme-ui": "^0.3.4"
+    "react": "^16.14.0 || ^17.0.1",
+    "react-dom": "^16.14.0 || ^17.0.1",
+    "theme-ui": "^0.6.0-alpha.3"
   },
   "dependencies": {
     "prop-types": "^15.7.2"

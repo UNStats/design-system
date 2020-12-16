@@ -72,13 +72,7 @@ ProfilePreview.propTypes = {
     name: node,
     jobtitle: string,
     organization: string,
-    socialIcons: arrayOf(
-      shape({
-        id: string.isRequired,
-        username: string.isRequired,
-        title: string,
-      }).isRequired
-    ),
+    socialIcons: node,
     badges: arrayOf(string),
   }).isRequired,
   align: oneOfType([alignType, arrayOf(alignType)]),
