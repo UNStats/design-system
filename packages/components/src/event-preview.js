@@ -24,7 +24,7 @@ const EventPreview = ({ event, ...props }) => (
       </Box>
     )}
     {event.title}
-    {event.speakers && event.speakers}
+    {event.speakers}
     <Text
       as="time"
       sx={{
@@ -36,7 +36,7 @@ const EventPreview = ({ event, ...props }) => (
     >
       {event.date}
     </Text>
-    {event.description && event.description}
+    {event.description}
     {(event.href || event.registrationLink) && (
       <Flex
         sx={{
