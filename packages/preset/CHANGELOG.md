@@ -1,5 +1,11 @@
 # @undataforum/preset
 
+## 0.13.0
+
+### Minor Changes
+
+- 012cd50: Switch back to @theme-ui/preset base stable (v0.3.5)
+
 ## 0.12.2
 
 ### Patch Changes
