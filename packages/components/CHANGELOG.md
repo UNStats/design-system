@@ -1,5 +1,15 @@
 # Change Log
 
+## 0.83.0
+
+### Minor Changes
+
+- 012cd50: Switch back to theme-ui stable (v0.3.5)
+
+### Patch Changes
+
+- 60c2a65: Remove duplicate conditionals in EventPreview
+
 ## 0.82.0
 
 ### Minor Changes
