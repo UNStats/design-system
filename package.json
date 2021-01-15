@@ -4,12 +4,6 @@
     "docs",
     "packages/*"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn run lint"
-    }
-  },
   "scripts": {
     "prepare": "yarn workspaces run prepare",
     "version": "changeset version && yarn run format",
