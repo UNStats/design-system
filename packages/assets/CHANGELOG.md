@@ -1,5 +1,11 @@
 # @undataforum/assets
 
+## 0.9.1
+
+### Patch Changes
+
+- 9966ca1: Upgrade microbundle to v0.13.0 and re-release
+
 ## 0.9.0
 
 ### Minor Changes

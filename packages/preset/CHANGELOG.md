@@ -1,5 +1,11 @@
 # @undataforum/preset
 
+## 0.13.1
+
+### Patch Changes
+
+- 9966ca1: Upgrade microbundle to v0.13.0 and re-release
+
 ## 0.13.0
 
 ### Minor Changes
