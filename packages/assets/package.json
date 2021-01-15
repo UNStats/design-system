@@ -5,14 +5,21 @@
   "author": "Thilo Maier <maier@un.org>",
   "license": "SEE LICENSE IN visual-guidelines.pdf",
   "homepage": "https://github.com/UNDataForum/design-system/tree/master/packages/assets",
-  "source": "src/index.js",
-  "main": "dist/index.js",
-  "module": "dist/index.modern.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/undataforum/design-system.git",
     "directory": "packages/assets"
   },
+  "source": "./src/index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.modern.js",
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index.modern.js"
+  },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "react",
     "theme-ui"
@@ -21,8 +28,8 @@
     "access": "public"
   },
   "scripts": {
-    "prepare": "microbundle --format modern,cjs --jsx React.createElement",
-    "watch": "microbundle watch --format modern,cjs --jsx React.createElement --compress false",
+    "prepare": "microbundle --format cjs,modern --jsx React.createElement",
+    "watch": "microbundle watch --format cjs,modern --jsx React.createElement --compress false",
     "purge": "rm -rf ./node_modules"
   },
   "peerDependencies": {
