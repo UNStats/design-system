@@ -5,14 +5,21 @@
   "author": "Thilo Maier <maier@un.org>",
   "license": "MIT",
   "homepage": "https://github.com/UNDataForum/design-system/tree/master/packages/preset",
-  "source": "src/index.js",
-  "main": "dist/index.js",
-  "module": "dist/index.modern.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/undataforum/design-system.git",
     "directory": "packages/preset"
   },
+  "source": "./src/index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.modern.js",
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index.modern.js"
+  },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "react",
     "theme-ui"
