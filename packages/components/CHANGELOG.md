@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.84.0
+
+### Minor Changes
+
+- 43a70eb: Do not render Tags if values prop is empty
+
 ## 0.83.1
 
 ### Patch Changes
