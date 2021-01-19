@@ -176,6 +176,12 @@ You can adjust the gap:
 />
 ```
 
+If you provide an empty `values` array, the component will not be rendered:
+
+```jsx live
+<Tags values={[]} gap={1} m={2} />
+```
+
 ## System props
 
 `Tags` supports [space props](https://styled-system.com/api#space) and
@@ -184,12 +190,12 @@ You can adjust the gap:
 
 ## Component props
 
-| Name    | Type                       | Default        | Required | Description                            |
-| :------ | :------------------------- | :------------- | :------- | :------------------------------------- |
-| values  | Array of string            |                | ✓        | Array of badge names.                  |
-| gap     | Number                     | 2              |          | Gap between badges (from space scale). |
-| align   | `start`, `center` or `end` | `start`        |          | Alignment (responsive).                |
-| variant | String                     | `tags.primary` |          | Optional variant for customizations.   |
+| Name    | Type                       | Default        | Required | Description                                                  |
+| :------ | :------------------------- | :------------- | :------- | :----------------------------------------------------------- |
+| values  | Array of shape             |                | ✓        | Array of objects. Each object has a `tag` and a `path` prop. |
+| gap     | Number                     | 2              |          | Gap between badges (from space scale).                       |
+| align   | `start`, `center` or `end` | `start`        |          | Alignment (responsive).                                      |
+| variant | String                     | `tags.primary` |          | Optional variant for customizations.                         |
 
 ## Variants
 

@@ -12,43 +12,47 @@ const Tags = ({
   align = 'start',
   variant = 'tags.primary',
   ...props
-}) => (
-  <Box {...props}>
-    <Flex
-      sx={{
-        // flexDirection: 'row',
-        justifyContent: normalizeAlign(align),
-        // alignItems: 'stretch',
-        flexWrap: 'wrap',
-        mr: -gap,
-        mb: -gap,
-      }}
-    >
-      {values.map(({ tag, path }) => (
-        <Link
-          href={path}
-          key={tag}
-          sx={{
-            textDecoration: 'none',
-            mr: gap,
-            mb: gap,
-          }}
-        >
-          <Badge
+}) => {
+  // Do not render component if values array is empty.
+  if (values.length === 0) return null;
+  return (
+    <Box {...props}>
+      <Flex
+        sx={{
+          // flexDirection: 'row',
+          justifyContent: normalizeAlign(align),
+          // alignItems: 'stretch',
+          flexWrap: 'wrap',
+          mr: -gap,
+          mb: -gap,
+        }}
+      >
+        {values.map(({ tag, path }) => (
+          <Link
+            href={path}
+            key={tag}
             sx={{
-              // Anything below variant cannot be overridden by this variant.
-              variant,
-              display: 'block',
+              textDecoration: 'none',
+              mr: gap,
+              mb: gap,
             }}
-            variant={variant}
           >
-            {tag}
-          </Badge>
-        </Link>
-      ))}
-    </Flex>
-  </Box>
-);
+            <Badge
+              sx={{
+                // Anything below variant cannot be overridden by this variant.
+                variant,
+                display: 'block',
+              }}
+              variant={variant}
+            >
+              {tag}
+            </Badge>
+          </Link>
+        ))}
+      </Flex>
+    </Box>
+  );
+};
 
 const alignments = ['start', 'center', 'end'];
 const alignType = oneOf(alignments);
