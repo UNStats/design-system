@@ -1,7 +1,7 @@
 const micromatch = require('micromatch');
 const prettier = require('prettier');
 
-// https://coding.maier.tech/chunks/optimizing-lint-staged-config-js-for-prettier/
+// https://coding.maier.tech/posts/optimizing-lint-staged-config-js-for-prettier/
 
 const prettierSupportedExtensions = prettier
   .getSupportInfo()
@@ -11,7 +11,9 @@ const prettierSupportedExtensions = prettier
 const addQuotes = (a) => `"${a}"`;
 
 module.exports = (allStagedFiles) => {
-  const eslintFiles = micromatch(allStagedFiles, ['**/*.js'], { dot: true });
+  const eslintFiles = micromatch(allStagedFiles, ['**/*.{js,jsx,ts,tsx}'], {
+    dot: true,
+  });
   const prettierFiles = micromatch(
     allStagedFiles,
     prettierSupportedExtensions.map((extension) => `**/*${extension}`),
