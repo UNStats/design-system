@@ -27,7 +27,7 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.12.7",
     "@changesets/cli": "^2.14.0",
-    "@maiertech/eslint-config": "^0.16.0",
+    "@maiertech/eslint-config": "^0.17.1",
     "@maiertech/prettier-config": "^0.3.0",
     "@skypack/package-check": "^0.2.2",
     "eslint": "^7.19.0",
