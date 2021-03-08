@@ -1738,10 +1738,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@maiertech/eslint-config@^0.16.0":
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/@maiertech/eslint-config/-/eslint-config-0.16.0.tgz#796c145af31e2184e3961ba84ec44e9eaccd3946"
-  integrity sha512-2bz5aS2Z4FlbVeRhSKp+0FdK8ppFaxjEyk4LcjI3I4aY/LPf3p5AMQIHrlPcQfpNPJIdAFLchpI7rw8McoghaQ==
+"@maiertech/eslint-config@^0.16.1":
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/@maiertech/eslint-config/-/eslint-config-0.16.1.tgz#055c1ccf99ce1ec0aad63f65ef704b465702e9a9"
+  integrity sha512-XwsH/6bcC7qpoL6p7uQnDaDqpjHlgG1tDhOGo3XTisC3r2BnXKJqrnofJimcUE5n3KEylarfF5wzhAZ+qYWgsQ==
   dependencies:
     "@shopify/eslint-plugin" "^39.0.3"
 
