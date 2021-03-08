@@ -15,7 +15,7 @@
     "purge": "rm -rf ./node_modules"
   },
   "dependencies": {
-    "@primer/gatsby-theme-doctocat": "^1.2.0",
+    "@primer/gatsby-theme-doctocat": "^1.6.0",
     "@theme-ui/preset-base": "^0.3.5",
     "@undataforum/assets": "*",
     "@undataforum/components": "*",
