@@ -20,7 +20,7 @@
     "@undataforum/assets": "*",
     "@undataforum/components": "*",
     "@undataforum/preset": "*",
-    "gatsby": "^2.32.0",
+    "gatsby": "^3.8.1",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
