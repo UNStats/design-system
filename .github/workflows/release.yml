@@ -16,7 +16,7 @@ jobs:
           # Do not persist GITHUB_TOKEN.
           # Prevent personal access token GH_TOKEN from being overridden.
           persist-credentials: false
-      - uses: actions/setup-node@v2.1.5
+      - uses: actions/setup-node@v2.2.0
         with:
           node-version: '14'
       - run: yarn install --frozen-lockfile
